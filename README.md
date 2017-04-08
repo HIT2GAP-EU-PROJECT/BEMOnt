@@ -1,12 +1,12 @@
 # HIT2GAPOnt
 
-Hit2Gap Ontology is focused on establising a common data model and semantic knolwedge management for buildings and their interecction with the occupants. Whith this aim, the proposed ontology will take into consideration the following aspects: 
+Hit2Gap Ontology is focused on establising a common data model and semantic knolwedge management for buildings, including their interecction with the occupants. Whith this aim, the proposed ontology will take into consideration the following aspects: 
 
 - **Building infrastructure data models and semantic representation**: As mechanims to represent the different systems and infrastructure involved in BIM and required for the performance of the project tools (building simulation tols, building behaviour tools, visualization tools, etc).
 
-- **User Behaviour data models and semantic representation**: This part of the ontology is aimed at representing building occupants DNA (Drivers, Needs and Actions). This type of modelling will serve to represent the user-building interaction not only in form of actibities but also considering comfort parameters and other aspects that motivate users to perform buildign actions. 
+- **User Behaviour data models and semantic representation**: This part of the ontology is aimed at representing building occupants DNA (Drivers, Needs and Actions). This type of modelling will serve to represent the user-building interaction not only in form of activities but also considering comfort parameters and other aspects that motivate users to perform buildign actions. 
 
-Therefore and since semantic representation, HIT2GAP project will harmonise all inforamtion related to buildign monitoring and control activities (management activities), considering the 
+Therefore and since semantic representation, HIT2GAP project will harmonise all inforamtion related to buildings monitoring and control activities (management activities), considering the user as an important aspect to adjust energy according to their preferences. 
 
 ## Getting Started
 
@@ -24,19 +24,23 @@ For running the ontology, we recommend to use the IDEs mentioned in the section 
 TBD
 
 ## Contributing
-TBD
+
+Please read [CONTRIBUTING.md](https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/tags). 
 
 ## Authors
 
-- Judith Cardinale 
-- Aitor Corchero
-- Pierre 
 
-See also the list of [contributors]() who participated in this project.
+- **[Pierre Bourreau]()** - Initial author
+- **[Gulben Calis]()** - Initial author
+- **[Judith Cardinale]()** - Initial author
+- **[Richard Chbeir]()** - Initial author
+- **[Aitor Corchero](https://github.com/aolite)** - Intial author
+
+See also the list of [contributors](https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/blob/master/CONTRIBUTORS.md) who participated in this project.
 
 ## License
-This work is licensed under a [Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/). 
+This work is licensed under a [MIT License](HIT2GAPOnt/LICENSE). 
