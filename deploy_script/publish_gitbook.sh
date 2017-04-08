@@ -1,6 +1,10 @@
 # install the plugins and build the static site
 gitbook install && gitbook build
 
+#Git user configuration
+git config --global user.email "aitorcorchero@gmail.com"
+git config --global user.name "aolite"
+
 # checkout to the gh-pages branch
 git checkout gh-pages
 
