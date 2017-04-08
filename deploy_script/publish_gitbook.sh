@@ -38,7 +38,7 @@ else
 fi
 
 # copy over or recompile the new site
-cp -R ${siteSource}/docs/_book/* 
+cp -R ${siteSource}/docs/_book/* .
 
 # stage any changes and new files
 git add -A
