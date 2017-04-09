@@ -6,10 +6,13 @@ git config --global user.email "aitorcorchero@gmail.com"
 git config --global user.name "aolite"
 
 # checkout to the gh-pages branch
-git checkout gh-pages
+git checkout gh-pages #go to the gh-pages branch
 
 # pull the latest updates
-git pull origin gh-pages --rebase
+#git pull origin gh-pages --rebase
+
+#bring gh-pages up to date with master
+git rebase master
 
 # copy the static site files into the current directory.
 cp -R docs/_book/* .
@@ -24,7 +27,7 @@ git add .
 # commit
 git commit -a -m "Update docs"
 
-# push to the origin
+#Commit changes
 git push origin gh-pages
 
 # checkout to the master branch
