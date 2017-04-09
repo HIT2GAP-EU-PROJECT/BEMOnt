@@ -28,7 +28,7 @@ git add .
 git commit -a -m "Update docs"
 
 #Commit changes
-git push origin gh-pages
+git push -f origin gh-pages
 
 # checkout to the master branch
 git checkout master
