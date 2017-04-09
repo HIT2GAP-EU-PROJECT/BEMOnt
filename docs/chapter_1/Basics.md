@@ -6,7 +6,7 @@ For those contributors in the documentation, it cloud be done:
 
 - Directly from Github and making commits. Then, automatically the repository is linked with a continous integration tool ([CircleCI](https://circleci.com/)) that automatically update the gh-pages branch and the visualization
 
-- Making a clone of the repository (using for example [Github Desktop tool](https://desktop.github.com/)) an then, make your changes in a different branch that lately has to be merged with the master branch. Once in the master branch is detected a change, gh-pages is directly updated.
+- Making a clone of the repository (using for example [Github Desktop tool](https://desktop.github.com/)) an then, make your changes in a different branch that lately has to be merged with the master branch. Once in the master branch is detected a change, "gh-pages" is directly updated.
 
 ### Gitbooks Basics
 
