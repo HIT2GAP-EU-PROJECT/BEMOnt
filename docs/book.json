@@ -1,8 +1,7 @@
 {
 	"title": "HIT2GAPOnt: A Semantic data model to manage buildings information",
   "plugins": [
-    "edit-link",
-    "comment"
+    "edit-link"
   ],
   "pluginsConfig": {
             "edit-link": {
