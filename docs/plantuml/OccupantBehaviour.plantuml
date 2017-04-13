@@ -1,0 +1,349 @@
+@startuml
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+class IfcActor <<IFC>> {
+  id xsd:string
+  name xsd:string
+}
+
+class IfcOccupant <<IFC>>{
+  age xsd:double
+  gender xsd:string
+  lifestyle xsd:string
+  jobType xsd:string
+}
+
+class OccupantRole <<HIT2GAP>>{
+
+}
+
+class IfcStructureElement <<IFC>>{
+
+}
+
+class FeatureOfInterest <<SSN>>{
+
+}
+
+class Observation <<SSN>>{
+
+}
+
+class Property <<SSN>> {
+
+}
+
+class SensorOutput <<SSN>>{
+
+}
+
+class ObservationValue <<SSN>>{
+
+}
+
+
+class Instant <<Time>>{
+
+}
+
+class DateTimeInterval <<Time>>{
+
+}
+
+class IfcBuilding <<IFC>>{
+
+}
+
+class SampledFeatues <<HIT2GAP>>{
+
+}
+
+class IfcZone <<IFC>>{
+
+}
+
+class ZoneElement <<HIT2GAP>>{
+
+}
+
+class Driver <<HIT2GAP>>{
+
+}
+
+class OccupantAttitude <<HIT2GAP>>{
+
+}
+
+class OccupantEvent<<HIT2GAP>>{
+
+}
+
+class OccupantCharacteristics <<HIT2GAP>>{
+  startWorkTime xsd:DateTime
+  endWorkTime xsd:DateTime
+}
+
+class EnergyFrugal <<HIT2GAP>>{
+
+}
+
+class EnergyProfligate <<HIT2GAP>>{
+
+}
+
+class EnergyIndiferent <<HIT2GAP>>{
+
+}
+
+class EnvironmentalBuildingFactors <<HIT2GAP>>{
+
+}
+
+class System <<SSN>>{
+
+}
+
+class BuildingState <<HIT2GAP>>{
+
+}
+
+class BuildingSimpleState <<HIT2GAP>>{
+
+}
+
+class BuildingComplexState <<HIT2GAP>>{
+
+}
+
+class EnergyEfficiencyState <<HIT2GAP>>{
+
+}
+
+class Sensor <<SSN>>{
+
+}
+
+class Device <<SSN>>{
+
+}
+
+class TimeBehaviour <<HIT2GAP>>{
+
+}
+
+class Season <<HIT2GAP>>{
+
+}
+
+class Winter <<(I,orchid) HIT2GAP>>{
+
+}
+class Spring <<(I,orchid) HIT2GAP>>{
+
+}
+class Summer <<(I,orchid) HIT2GAP>>{
+
+}
+class Autum <<(I,orchid) HIT2GAP>>{
+
+}
+
+class DayOfWeek <<Time>>{
+
+}
+
+class Needs <<HIT2GAP>>{
+
+}
+
+class EnergyEfficiencyState <<HIT2GAP>>{
+
+}
+
+class ComfortState <<HIT2GAP>>{
+
+}
+
+class OccupantComfort <<HIT2GAP>>{
+
+}
+
+class OccupantDiscomfort <<HIT2GAP>>{
+
+}
+
+class PhysicalNeeds <<HIT2GAP>>{
+
+}
+
+class ThermalComfort <<HIT2GAP>>{
+
+}
+
+
+class ISOAdaptiveComfort <<HIT2GAP>>{
+
+}
+
+class ASHRAEAdaptiveComfort <<HIT2GAP>>{
+
+}
+
+class ASHRAEAdaptiveEnvelope <<HIT2GAP>>{
+
+}
+
+class OtherComfortEnvelope <<HIT2GAP>>{
+
+}
+
+class NonPhysicalNeeds <<HIT2GAP>>{
+
+}
+
+class VisualComfort <<HIT2GAP>>{
+
+}
+
+class AcousticComfort <<HIT2GAP>>{
+
+}
+
+class IAQ <<HIT2GAP>>{
+
+}
+
+class ParameterRange <<HIT2GAP>>{
+  id xsd:string
+  minValue xsd:double
+  maxValue xsd:double
+}
+
+class Actions <<HIT2GAP>>{
+
+}
+
+class SystemActions<<HIT2GAP>>{
+
+}
+
+class Inaction <<HIT2GAP>>{
+
+}
+
+note top of Driver
+stimulating factors that provoke energyrelated
+occupant behavior.
+end note
+
+note bottom of EnvironmentalBuildingFactors
+We have to restrict the observation values to those systems
+values (temperature, humidity, etc)
+end note
+
+note top of Needs
+there are certain physical needs that people must meet in order to survive. There are
+others that make people more comfortable. In the specific ways they
+strive to meet these needs, people are different
+end note
+
+note top of ThermalComfort
+combination of indoor air temperature and humidity, surrounding surface temperatures, indoor
+air velocity, activity level, incident radiation and clothing level of the occupant
+end note
+
+note top of VisualComfort
+comfort such as not being subjected to glare, excessive contrast or unacceptable levels of brightness
+end note
+
+note bottom of AcousticComfort
+With the level of background noise within an acceptable range
+end note
+
+note bottom of IAQ
+Indoor environmental health, meaning good IAQ or humidity
+end note
+
+note top of ComfortState
+Comfort state is the result from the violation of user needs measured through the
+drivers.
+end note
+
+IfcActor <|-- IfcOccupant
+FeatureOfInterest <|-- SampledFeatues
+Observation -- FeatureOfInterest: ssn_featureofinterest
+Observation-- SensorOutput: ssn_observationResult
+SensorOutput -- ObservationValue: ssn_hasValue
+Observation -- Instant: ssn_observationResultTime
+Observation -- DateTimeInterval: ssn_observationResultTime
+FeatureOfInterest -- Property: ssn_hasProperty
+FeatureOfInterest <|-- IfcBuilding
+SampledFeatues <|-- IfcStructureElement
+IfcStructureElement <|-- IfcZone
+IfcStructureElement<|-- ZoneElement
+System <|-- BuildingState
+BuildingState <|-- BuildingSimpleState
+BuildingState <|-- BuildingComplexState
+BuildingComplexState <|-- EnergyEfficiencyState
+BuildingComplexState <|-- ComfortState
+ComfortState <|-- OccupantComfort
+ComfortState <|-- OccupantDiscomfort
+Driver <|-- IfcBuilding
+Driver <|-- TimeBehaviour
+Driver <|-- OccupantEvent
+Driver <|-- EnvironmentalBuildingFactors
+
+OccupantAttitude <|-- EnergyFrugal
+OccupantAttitude <|-- EnergyProfligate
+OccupantAttitude <|-- EnergyIndiferent
+System <|-- Device
+Device <|-- Sensor
+Sensor -- Observation:ssn_observedBy
+IfcOccupant -- OccupantRole: hasOccupantRole
+IfcOccupant -- OccupantCharacteristics: hasOccupantCharacteristics
+IfcOccupant -- OccupantAttitude: hasOccupantAttitude
+IfcOccupant -- Needs: hasComfortRequirements
+Observation <|-- SystemActions
+Observation <|-- EnvironmentalBuildingFactors
+TimeBehaviour <|-- Season
+TimeBehaviour <|-- Instant
+TimeBehaviour <|-- DayOfWeek
+TimeBehaviour <|-- DateTimeInterval
+Season ..[#orchid] Winter
+Season..[#orchid] Summer
+Season..[#orchid] Spring
+Season..[#orchid] Autum
+
+Needs <|-- PhysicalNeeds
+PhysicalNeeds -- ParameterRange:hasParameterRange
+PhysicalNeeds <|-- ThermalComfort
+PhysicalNeeds<|-- VisualComfort
+PhysicalNeeds <|-- AcousticComfort
+PhysicalNeeds <|-- IAQ
+
+ThermalComfort<|-- ISOAdaptiveComfort
+ThermalComfort<|-- ASHRAEAdaptiveComfort
+ThermalComfort<|-- ASHRAEAdaptiveEnvelope
+ThermalComfort<|-- OtherComfortEnvelope
+
+Needs <|-- NonPhysicalNeeds
+
+OccupantDiscomfort -- Actions: provoke
+IfcOccupant--Actions: performActions
+IfcOccupant--Systems: interactWith
+
+Actions <|-- SystemActions
+Actions <|-- Inaction
+Actions <|-- Report
+Actions <|-- OccupantEvent
+
+
+@enduml
