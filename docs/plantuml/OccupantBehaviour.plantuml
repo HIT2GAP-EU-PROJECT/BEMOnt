@@ -21,6 +21,30 @@ class IfcOccupant <<IFC>>{
   jobType xsd:string
 }
 
+class User <<HIT2GAP>>{
+
+}
+
+class Notification <<HIT2GAP>>{
+
+}
+
+class Report <<HIT2GAP>>{
+
+}
+
+class Recommendation <<HIT2GAP>>{
+
+}
+
+class Feedback <<HIT2GAP>>{
+
+}
+
+class Alert <<HIT2GAP>>{
+
+}
+
 class OccupantRole <<HIT2GAP>>{
 
 }
@@ -239,6 +263,33 @@ class Inaction <<HIT2GAP>>{
 
 }
 
+class Modality <<HIT2GAP>>{
+
+}
+
+class SMS <<(I,orchid) HIT2GAP>>{
+
+}
+class Email <<(I,orchid) HIT2GAP>>{
+
+}
+class Phone <<(I,orchid) HIT2GAP>>{
+
+}
+
+class Role <<HIT2GAP>>{
+
+}
+class Manager <<(I,orchid) HIT2GAP>>{
+
+}
+class Owner <<(I,orchid) HIT2GAP>>{
+
+}
+class Technician <<(I,orchid) HIT2GAP>>{
+
+}
+
 note top of Driver
 stimulating factors that provoke energyrelated
 occupant behavior.
@@ -277,14 +328,30 @@ Comfort state is the result from the violation of user needs measured through th
 drivers.
 end note
 
-IfcActor <|-- IfcOccupant
+IfcActor <|-- User
+IfcActor--> Role: hit2gap_hasRole
+Role ..[#orchid] Manager
+Role ..[#orchid] Owner
+Role ..[#orchid] Technician
+User <|-- IfcOccupant
+
+Feedback <|-- Report
+Notification <|-- Alert
+Notification <|-- Recommendation
+User --> Modality: hit2gap_prefers
+Modality ..[#orchid] SMS
+Modality ..[#orchid] Email
+Modality ..[#orchid] Phone
+
+User --> Notification:hit2gap_receives
+User --> Feedback:hit2gap_concerns
 FeatureOfInterest <|-- SampledFeatues
-Observation -- FeatureOfInterest: ssn_featureofinterest
-Observation-- SensorOutput: ssn_observationResult
-SensorOutput -- ObservationValue: ssn_hasValue
-Observation -- Instant: ssn_observationResultTime
-Observation -- DateTimeInterval: ssn_observationResultTime
-FeatureOfInterest -- Property: ssn_hasProperty
+Observation --> FeatureOfInterest: ssn_featureofinterest
+Observation--> SensorOutput: ssn_observationResult
+SensorOutput --> ObservationValue: ssn_hasValue
+Observation --> Instant: ssn_observationResultTime
+Observation --> DateTimeInterval: ssn_observationResultTime
+FeatureOfInterest --> Property: ssn_hasProperty
 FeatureOfInterest <|-- IfcBuilding
 SampledFeatues <|-- IfcStructureElement
 IfcStructureElement <|-- IfcZone
