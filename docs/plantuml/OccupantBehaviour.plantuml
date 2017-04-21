@@ -102,7 +102,7 @@ class Driver <<HIT2GAP>>{
 
 }
 
-class OccupantAttitude <<HIT2GAP>>{
+class OccupantBehaviourModel <<HIT2GAP>>{
 
 }
 
@@ -245,10 +245,22 @@ class IAQ <<HIT2GAP>>{
 
 }
 
-class ParameterRange <<HIT2GAP>>{
+class OccupantPreference <<HIT2GAP>>{
   id xsd:string
   minValue xsd:double
   maxValue xsd:double
+}
+
+class Luminosity <<I,orchid) HIT2GAP>>{
+
+}
+
+class Noise <<I,orchid) HIT2GAP>>{
+
+}
+
+class Temperature <<I,orchid) HIT2GAP>>{
+
 }
 
 class Actions <<HIT2GAP>>{
@@ -287,6 +299,10 @@ class Owner <<(I,orchid) HIT2GAP>>{
 
 }
 class Technician <<(I,orchid) HIT2GAP>>{
+
+}
+
+class Privacy <<HIT2GAP>>{
 
 }
 
@@ -368,15 +384,16 @@ Driver <|-- TimeBehaviour
 Driver <|-- OccupantEvent
 Driver <|-- EnvironmentalBuildingFactors
 
-OccupantAttitude <|-- EnergyFrugal
-OccupantAttitude <|-- EnergyProfligate
-OccupantAttitude <|-- EnergyIndiferent
+OccupantBehaviourModel <|-- EnergyFrugal
+OccupantBehaviourModel <|-- EnergyProfligate
+OccupantBehaviourModel <|-- EnergyIndiferent
 System <|-- Device
 Device <|-- Sensor
 Sensor -- Observation:ssn_observedBy
+
 IfcOccupant -- OccupantRole: hasOccupantRole
 IfcOccupant -- OccupantCharacteristics: hasOccupantCharacteristics
-IfcOccupant -- OccupantAttitude: hasOccupantAttitude
+IfcOccupant -- OccupantBehaviourModel: hasBehaviourModel
 IfcOccupant -- Needs: hasComfortRequirements
 Observation <|-- SystemActions
 Observation <|-- EnvironmentalBuildingFactors
@@ -389,28 +406,29 @@ Season..[#orchid] Summer
 Season..[#orchid] Spring
 Season..[#orchid] Autum
 
-Needs <|-- PhysicalNeeds
-PhysicalNeeds -- ParameterRange:hasParameterRange
-PhysicalNeeds <|-- ThermalComfort
-PhysicalNeeds<|-- VisualComfort
-PhysicalNeeds <|-- AcousticComfort
-PhysicalNeeds <|-- IAQ
+Needs -- Privacy:hasPrivacy
+Needs -- OccupantPreference:hasPreferences
+OccupantPreference ..[#orchid] Luminosity
+OccupantPreference ..[#orchid] Noise
+OccupantPreference ..[#orchid] Temperature
+
+Needs <|-- ThermalComfort
+Needs<|-- VisualComfort
+Needs <|-- AcousticComfort
+Needs <|-- IAQ
 
 ThermalComfort<|-- ISOAdaptiveComfort
 ThermalComfort<|-- ASHRAEAdaptiveComfort
 ThermalComfort<|-- ASHRAEAdaptiveEnvelope
 ThermalComfort<|-- OtherComfortEnvelope
 
-Needs <|-- NonPhysicalNeeds
-
-OccupantDiscomfort -- Actions: provoke
-IfcOccupant--Actions: performActions
-IfcOccupant--Systems: interactWith
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
 Actions <|-- Report
 Actions <|-- OccupantEvent
+
+SystemActions -- IfcDistributionControlElement:hit2gap_changes
 
 
 @enduml
