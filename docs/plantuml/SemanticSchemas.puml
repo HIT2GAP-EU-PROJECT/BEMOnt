@@ -2,6 +2,10 @@
 
 package "HIT2GAP"{
 }
+
+package "IFC"{
+}
+
 package "SSN" {
 }
 
@@ -12,6 +16,7 @@ package "TIME" {
 }
 
 HIT2GAP -- SSN
+HIT2GAP -- IFC
 SSN--QUDT
 SSN--TIME
 
