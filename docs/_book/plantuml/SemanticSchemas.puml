@@ -1,0 +1,23 @@
+@startuml
+
+package "HIT2GAP"{
+}
+
+package "IFC"{
+}
+
+package "SSN" {
+}
+
+package "QUDT" {
+}
+
+package "TIME" {
+}
+
+HIT2GAP -- SSN
+HIT2GAP -- IFC
+SSN--QUDT
+SSN--TIME
+
+@enduml
