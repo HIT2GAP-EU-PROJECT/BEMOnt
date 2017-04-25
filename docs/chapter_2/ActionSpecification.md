@@ -1,4 +1,4 @@
-# Action Specification
+# Action and Building State Specification
 
 Actions are the specific building interactions performed by the building occupants. This actions can be caused by a initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements.
 
