@@ -1,5 +1,7 @@
 @startuml
 
+scale 0.2
+
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -148,7 +150,7 @@ class BuildingComplexState <<HIT2GAP>>{
 
 }
 
-class EnergyEfficiencyState <<HIT2GAP>>{
+class EnergyState <<HIT2GAP>>{
 
 }
 
@@ -426,7 +428,7 @@ Description of building states
 System <|-- BuildingState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState
-BuildingComplexState <|-- EnergyEfficiencyState
+BuildingComplexState <|-- EnergyState
 BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort

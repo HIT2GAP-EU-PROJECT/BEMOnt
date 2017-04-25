@@ -1,0 +1,54 @@
+@startuml
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+class Actions <<HIT2GAP>>{
+
+}
+
+class SystemActions<<HIT2GAP>>{
+
+}
+
+class Device <<SSN>>{
+
+}
+
+class Alert <<HIT2GAP>>{
+
+}
+
+class Inaction <<HIT2GAP>>{
+
+}
+
+class Report <<HIT2GAP>>{
+
+}
+
+class OccupantEvent<<HIT2GAP>>{
+
+}
+
+class OccupantDiscomfort <<HIT2GAP>>{
+
+}
+
+Actions <|-- SystemActions
+Actions <|-- Inaction
+Actions <|-- Report
+Actions <|-- OccupantEvent
+
+Actions --> OccupantDiscomfort:hit2gap_provoke
+SystemActions --> IfcDistributionControlElement:hit2gap_changes
+IfcDistributionControlElement --> Alert: hit2gap_receivesAlert
+SystemActions --> Device: hit2gap_actuateOver
+
+@enduml
