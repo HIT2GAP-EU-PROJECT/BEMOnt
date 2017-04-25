@@ -86,7 +86,11 @@ class IfcBuilding <<IFC>>{
 
 }
 
-class SampledFeatues <<HIT2GAP>>{
+class SampledFeatures <<OGC>>{
+
+}
+
+class SamplingFeatures <<OGC>>{
 
 }
 
@@ -102,9 +106,6 @@ class Driver <<HIT2GAP>>{
 
 }
 
-class OccupantBehaviourModel <<HIT2GAP>>{
-
-}
 
 class OccupantEvent<<HIT2GAP>>{
 
@@ -204,9 +205,6 @@ class OccupantDiscomfort <<HIT2GAP>>{
 
 }
 
-class PhysicalNeeds <<HIT2GAP>>{
-
-}
 
 class ThermalComfort <<HIT2GAP>>{
 
@@ -229,9 +227,6 @@ class OtherComfortEnvelope <<HIT2GAP>>{
 
 }
 
-class NonPhysicalNeeds <<HIT2GAP>>{
-
-}
 
 class VisualComfort <<HIT2GAP>>{
 
@@ -306,6 +301,29 @@ class Privacy <<HIT2GAP>>{
 
 }
 
+class OccupantAttitude <<HIT2GAP>>{
+}
+
+class BehaviourModel <<HIT2GAP>>{
+}
+
+class ActivityModel <<HIT2GAP>>{
+}
+
+class EventModel <<HIT2GAP>>{
+}
+
+class EquipementModel <<HIT2GAP>>{
+}
+
+class Unit <<QUDT>>{
+}
+
+class MechanicElement <<HIT2GAP>>{
+}
+class ElectricElement <<HIT2GAP>>{
+}
+
 note top of Driver
 stimulating factors that provoke energyrelated
 occupant behavior.
@@ -344,12 +362,22 @@ Comfort state is the result from the violation of user needs measured through th
 drivers.
 end note
 
+/'
+Description of the Ifc Actor relations
+'/
+
 IfcActor <|-- User
 IfcActor--> Role: hit2gap_hasRole
+IfcActor --> Device:hit2gap_acts
+
 Role ..[#orchid] Manager
 Role ..[#orchid] Owner
 Role ..[#orchid] Technician
 User <|-- IfcOccupant
+
+/'
+Description of Feedback and Reporting
+'/
 
 Feedback <|-- Report
 Notification <|-- Alert
@@ -361,17 +389,40 @@ Modality ..[#orchid] Phone
 
 User --> Notification:hit2gap_receives
 User --> Feedback:hit2gap_concerns
-FeatureOfInterest <|-- SampledFeatues
-Observation --> FeatureOfInterest: ssn_featureofinterest
+
+
+/'
+Description of the SSN model adapted to buildign observation
+'/
+
+FeatureOfInterest <|-- SampledFeatures
+FeatureOfInterest <|-- SamplingFeatures
+Observation --> FeatureOfInterest: ssn_featureOfInterest
 Observation--> SensorOutput: ssn_observationResult
 SensorOutput --> ObservationValue: ssn_hasValue
+ObservationValue --> Unit:qudt_unit
 Observation --> Instant: ssn_observationResultTime
 Observation --> DateTimeInterval: ssn_observationResultTime
 FeatureOfInterest --> Property: ssn_hasProperty
-FeatureOfInterest <|-- IfcBuilding
-SampledFeatues <|-- IfcStructureElement
+
+SampledFeatures <|-- IfcBuilding
+IfcBuilding <|-- IfcStructureElement
 IfcStructureElement <|-- IfcZone
 IfcStructureElement<|-- ZoneElement
+IfcBuilding <|-- MechanicElement
+IfcBuilding <|-- ElectricElement
+
+/'
+Definition of the Property subclasses
+'/
+
+Property <|-- ChemicalProperty
+Property <|-- EconomicProperty
+Property <|-- PhysicProperty
+
+/'
+Description of building states
+'/
 System <|-- BuildingState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState
@@ -379,24 +430,27 @@ BuildingComplexState <|-- EnergyEfficiencyState
 BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort
-Driver <|-- IfcBuilding
-Driver <|-- TimeBehaviour
-Driver <|-- OccupantEvent
-Driver <|-- EnvironmentalBuildingFactors
-
-OccupantBehaviourModel <|-- EnergyFrugal
-OccupantBehaviourModel <|-- EnergyProfligate
-OccupantBehaviourModel <|-- EnergyIndiferent
 System <|-- Device
+System --> System:ssn_hasSubsystem
 Device <|-- Sensor
-Sensor -- Observation:ssn_observedBy
+Sensor --> Observation:ssn_observedBy
+Sensor --> Property:ssn_observes
 
-IfcOccupant -- OccupantRole: hasOccupantRole
-IfcOccupant -- OccupantCharacteristics: hasOccupantCharacteristics
-IfcOccupant -- OccupantBehaviourModel: hasBehaviourModel
-IfcOccupant -- Needs: hasComfortRequirements
-Observation <|-- SystemActions
-Observation <|-- EnvironmentalBuildingFactors
+Observation <|-- Driver
+
+/'
+Description of driver (old SIM_MOD)
+'/
+
+Driver <|-- BehaviourModel
+Driver <|-- ActivityModel
+Driver <|-- EventModel
+Driver <|-- EquipementModel
+
+EventModel --> OccupantEvent:hit2gap_isBasedOn
+EquipementModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
+BehaviourModel <|-- TimeBehaviour: hit2gap_isBasedOn
+
 TimeBehaviour <|-- Season
 TimeBehaviour <|-- Instant
 TimeBehaviour <|-- DayOfWeek
@@ -406,8 +460,29 @@ Season..[#orchid] Summer
 Season..[#orchid] Spring
 Season..[#orchid] Autum
 
-Needs -- Privacy:hasPrivacy
-Needs -- OccupantPreference:hasPreferences
+
+/'
+Definition of occupant attitude and IfcOccupants and their
+corresponding roles.
+'/
+
+OccupantAttitude <|-- EnergyFrugal
+OccupantAttitude <|-- EnergyProfligate
+OccupantAttitude <|-- EnergyIndiferent
+
+
+IfcOccupant --> OccupantRole: hit2gap_hasOccupantRole
+IfcOccupant --> OccupantCharacteristics: hit2gap_hasOccupantCharacteristics
+IfcOccupant --> Needs: hit2gap_hasComfortRequirements
+IfcOccupant --> OccupantAttitude:hit2gap_hasOccupantAttitude
+IfcOccupant --> System:hit2gap_interactsWith
+
+
+/'
+ Definition of the occupant needs and comfort
+'/
+Needs --> Privacy:hit2gap_hasPrivacy
+Needs --> OccupantPreference:hit2gap_hasPreferences
 OccupantPreference ..[#orchid] Luminosity
 OccupantPreference ..[#orchid] Noise
 OccupantPreference ..[#orchid] Temperature
@@ -422,13 +497,18 @@ ThermalComfort<|-- ASHRAEAdaptiveComfort
 ThermalComfort<|-- ASHRAEAdaptiveEnvelope
 ThermalComfort<|-- OtherComfortEnvelope
 
+/'
+ Definition of the actions
+'/
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
 Actions <|-- Report
 Actions <|-- OccupantEvent
 
-SystemActions -- IfcDistributionControlElement:hit2gap_changes
-
+Actions --> OccupantDiscomfort:hit2gap_provoke
+SystemActions --> IfcDistributionControlElement:hit2gap_changes
+IfcDistributionControlElement --> Alert: hit2gap_receivesAlert
+SystemActions --> Device: hit2gap_actuateOver
 
 @enduml
