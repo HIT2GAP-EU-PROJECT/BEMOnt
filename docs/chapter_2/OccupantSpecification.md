@@ -1,4 +1,3 @@
-
 ## Occupant/User Specification
 
 Building Actors (IFCActors) in the building make reference to each people that take part in the building, interacting with it through configuring the devices or event to determining the occupancy of different zones.
@@ -20,6 +19,3 @@ Each of the occupants itself have several comfort needs based on the temperature
 <div style="text-align:center">
     <img src="http://www.plantuml.com/plantuml/png/VPB1Ri8m38RlVOgy01UE22516GnfOWYGE4wXDMb6cdIEgwtQUFSPgbBQ0iVw_-t_Srn_r3QJA5CH6Ucz-0s462Ewxz0PXs8gyJWnELJLcRFKKIOoEYfqkOrBwKshX2hDOGnOjymHYk0K-6ki9q1mL6GGjkVi4f1qOxqGZebGxtE26aNmKB11K6wmE4JlKPHdqf8O3XUpS3GwBoKLY1yV3sANxysPJ85bialDyqYhk6Rq0JmL1fhbJxVVCk1jyLJ5LLdCfIcFWJDV5zl-VBmwvtPiQsTQbgudJ7ZTYDz5UzAHRze5lvX4sZayRdLQCaqbmVc3HLxgldHDMGB4_X72fk1xfAnkDikcyc81LJ73N4dpgBlqhD0TZ5OS_Doti34_DyBbJYrVzrN_Uhq6mrDBZV3KLXC4GN3xt_HweyR51YBHr5So-qYalnKUThLkU7T0ozEPTRbKepDqwS4XhU4hrmWfW_k71DN2Wpl9bTPfBkz_RT6MwHZHxpGb_m00">
 </div>
-
-
-
