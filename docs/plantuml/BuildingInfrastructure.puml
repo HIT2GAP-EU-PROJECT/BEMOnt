@@ -27,6 +27,7 @@ class DateTimeInterval <<Time>>{
     time:inXSDDateTime [xsd:DateTime]
 }
 class Unit <<QUDT>>
+class Point <<Geo>>
 
 
 /'
