@@ -1,0 +1,50 @@
+@startuml
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+/'
+ Definition of the classes referring the
+'/
+class System <<SSN>>
+class Device <<SSN>>
+class Sensor <<SSN>>
+class Observation <<SSN>>
+class FeatureOfInterest <<SSN>>
+class Property <<SSN>>
+class SensorOutput <<SSN>>
+class ObservationValue <<SSN>>
+class Instant <<Time>>{
+    time:inXSDDateTime [xsd:DateTime]
+}
+class DateTimeInterval <<Time>>{
+    time:inXSDDateTime [xsd:DateTime]
+}
+class Unit <<QUDT>>
+
+
+/'
+ Definition of the SSN model to model the sensor observation of the building
+ facilities
+'/
+
+System --> System: ssn:hasSubSystem
+System <|-- Device
+Device <|-- Sensor
+Sensor --> Observation: ssn:observedBy
+Sensor --> Property: ssn:observes
+Observation --> FeatureOfInterest: ssn:featureOfInterest
+FeatureOfInterest --> Property: ssn:Property
+Observation --> SensorOutput: ssn:ObservationResult
+SensorOutput --> ObservationValue: ssn:hasValue
+ObservationValue --> Unit: qudt:unit
+Observation --> Instant: ssn:observationResultTime
+Observation --> DateTimeInterval: ssn:observationResultTime
+
+@enduml
