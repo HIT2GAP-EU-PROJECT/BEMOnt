@@ -43,6 +43,7 @@ class Building <<hit2gap>>
 class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
+class IfcZones <<ifc>>
 
 /'
   Building types class definition
@@ -57,10 +58,68 @@ class Public <<hit2gap>>
 class Transports <<hit2gap>>
 
 /'
+  Building Zones types definition
+'/
+
+class Room <<hit2gap>>
+class Floor <<hit2gap>>
+class Desk <<hit2gap>>
+class Subterranean <<hit2gap>>
+class Ground <<hit2gap>>
+
+
+/'
  Definition of Building Elements subclasses
 '/
 
 class IfcBeam <<ifc>>
+class IfcChimmey <<ifc>>
+class IfcColumn <<ifc>>
+class IfcCovering <<ifc>>
+class IfcCurtainWall <<ifc>>
+class IfcDoor <<ifc>>
+class IfcFooting <<ifc>>
+class IfcMember <<ifc>>
+class IfcPile <<ifc>>
+class IfcPlate <<ifc>>
+class IfcRailing <<ifc>>
+class IfcRamp <<ifc>>
+class IfcRampFlight <<ifc>>
+class IfcRoof <<ifc>>
+class IfcShadingDevice <<ifc>>
+class IfcSlab <<ifc>>
+class IfcStair <<ifc>>
+class IfcStairFlight <<ifc>>
+class IfcWall <<ifc>>
+class IfcWindow <<ifc>>
+class IfcSpace <<ifc>>
+
+
+/'
+ Definition of Spaces  Types
+'/
+
+class Office <<hit2gap>>
+class CirculationArea <<hit2gap>>
+class WetArea <<hit2gap>>
+class ConferenceRoom <<hit2gap>>
+class Balcony <<hit2gap>>
+class Kitchen <<hit2gap>>
+class Toilets <<hit2gap>>
+class Bathroom <<hit2gap>>
+class RestRoom <<hit2gap>>
+class Canteen <<hit2gap>>
+class Cafeteria <<hit2gap>>
+
+/'
+ Definition of IfcWindows
+'/
+
+class Curtains <<hit2gap>>
+class Blinds <<hit2gap>>
+class Shutters <<hit2gap>>
+class Shades <<hit2gap>>
+
 
 
 /'
@@ -100,7 +159,8 @@ FeatureOfInterest <|-- Building
 FeatureOfInterest <|-- BuildingInfrastructure
 FeatureOfInterest <|-- BuildingElements
 
-Building --> IfcElement: hit2gap:contains
+Building -->IfcZones: hit2gap:contains
+IfcZones --> IfcElement: hit2gap:contains
 IfcElement <|-- IfcDistributionElement
 IfcElement <|-- IfcBuildingElement
 
@@ -115,6 +175,52 @@ Building <|-- Religious
 Building <|-- Public
 Building <|-- Transports
 
+IfcZones <|-- Room
+IfcZones <|-- Floor
+IfcZones <|-- Desk
+
+Floor <|-- Subterranean
+Floor <|-- Ground
+
 IfcBuildingElement <|-- IfcBeam
+IfcBuildingElement <|-- IfcChimmey
+IfcBuildingElement <|-- IfcColumn
+IfcBuildingElement <|-- IfcCovering
+IfcBuildingElement <|-- IfcCurtainWall
+IfcBuildingElement <|-- IfcDoor
+IfcBuildingElement <|-- IfcFooting
+IfcBuildingElement <|-- IfcMember
+IfcBuildingElement <|-- IfcPile
+IfcBuildingElement <|-- IfcPlate
+IfcBuildingElement <|-- IfcRailing
+IfcBuildingElement <|-- IfcRamp
+IfcBuildingElement <|-- IfcRampFlight
+IfcBuildingElement <|-- IfcRoof
+IfcBuildingElement <|-- IfcShadingDevice
+IfcBuildingElement <|-- IfcSlab
+IfcBuildingElement <|-- IfcStair
+IfcBuildingElement <|-- IfcStairFlight
+IfcBuildingElement <|-- IfcWall
+IfcBuildingElement <|-- IfcWindow
+IfcBuildingElement <|-- IfcSpace
+
+
+IfcSpace <|-- Office
+IfcSpace <|-- CirculationArea
+IfcSpace <|-- WetArea
+IfcSpace <|-- ConferenceRoom
+IfcSpace <|-- Balcony
+IfcSpace <|-- Kitchen
+IfcSpace <|-- Toilets
+IfcSpace <|-- Bathroom
+IfcSpace <|-- RestRoom
+IfcSpace <|-- Canteen
+IfcSpace <|-- Cafeteria
+
+IfcWindow <|-- Curtains
+IfcWindow <|-- Blinds
+IfcWindow <|-- Shutters
+IfcWindow <|-- Shades
+
 
 @enduml
