@@ -10,24 +10,57 @@ skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
 /'
- Definition of the classes referring the
+ Definition of the classes referring the SSN-core part
 '/
-class System <<SSN>>
-class Device <<SSN>>
-class Sensor <<SSN>>
-class Observation <<SSN>>
-class FeatureOfInterest <<SSN>>
-class Property <<SSN>>
-class SensorOutput <<SSN>>
-class ObservationValue <<SSN>>
-class Instant <<Time>>{
+class System <<ssn>>
+class Device <<ssn>>
+class Sensor <<ssn>>
+class Observation <<ssn>>
+class FeatureOfInterest <<ssn>>
+class Property <<ssn>>
+class SensorOutput <<ssn>>
+class ObservationValue <<ssn>>
+class Instant <<time>>{
     time:inXSDDateTime [xsd:DateTime]
 }
-class DateTimeInterval <<Time>>{
+class DateTimeInterval <<time>>{
     time:inXSDDateTime [xsd:DateTime]
 }
 class Unit <<QUDT>>
-class Point <<Geo>>
+
+/'
+  Definition of the Geo-core part
+'/
+class _Feature <<geo>>
+class _Geometry <<geo>>
+class Point <<geo>>
+class Polygon <<geo>>
+
+/'
+  Definition of the Feature of interest classes
+'/
+class Building <<hit2gap>>
+class IfcElement <<ifc>>
+class IfcBuildingElement <<ifc>>
+class IfcDistirbutionElement <<ifc>>
+
+/'
+  Building types class definition
+'/
+class Agricultural <<hit2gap>>
+class Commercial <<hit2gap>>
+class Residential  <<hit2gap>>
+class Educational <<hit2gap>>
+class Industrial <<hit2gap>>
+class Religious <<hit2gap>>
+class Public <<hit2gap>>
+class Transports <<hit2gap>>
+
+/'
+ Definition of Building Elements subclasses
+'/
+
+class IfcBeam <<ifc>>
 
 
 /'
@@ -47,5 +80,41 @@ SensorOutput --> ObservationValue: ssn:hasValue
 ObservationValue --> Unit: qudt:unit
 Observation --> Instant: ssn:observationResultTime
 Observation --> DateTimeInterval: ssn:observationResultTime
+
+/'
+  Definition of the geospatial part using GeoOWL ontology
+'/
+
+_Feature --> _Geometry: geo:where
+_Geometry <|-- Point
+_Geometry <|-- Polygon
+
+_Feature <|-- FeatureOfInterest
+_Feature <|-- System
+
+/'
+  Definition of the types of FoIs
+'/
+
+FeatureOfInterest <|-- Building
+FeatureOfInterest <|-- BuildingInfrastructure
+FeatureOfInterest <|-- BuildingElements
+
+Building --> IfcElement: hit2gap:contains
+IfcElement <|-- IfcDistributionElement
+IfcElement <|-- IfcBuildingElement
+
+IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
+
+Building <|-- Agricultural
+Building <|-- Commercial
+Building <|-- Residential
+Building <|-- Educational
+Building <|-- Industrial
+Building <|-- Religious
+Building <|-- Public
+Building <|-- Transports
+
+IfcBuildingElement <|-- IfcBeam
 
 @enduml
