@@ -223,4 +223,7 @@ IfcWindow <|-- Shutters
 IfcWindow <|-- Shades
 
 
+IfcDistributionElement <|-- IfcDistributionControlElement
+
+
 @enduml
