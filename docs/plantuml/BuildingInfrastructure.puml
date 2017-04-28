@@ -28,6 +28,8 @@ class DateTimeInterval <<time>>{
 }
 class Unit <<QUDT>>
 
+
+
 /'
   Definition of the Geo-core part
 '/
@@ -114,6 +116,18 @@ class IfcWall <<ifc>>
 class IfcWindow <<ifc>>
 class IfcSpace <<ifc>>
 
+/'
+  Definition of the types of Sensors
+'/
+
+class IfcActuator <<ifc>>
+class IfcAlarm <<ifc>>
+class IfcController <<ifc>>
+class IfcFlowInstrument <<ifc>>
+class IfcProtectiveDeviceTrippingUnit <<ifc>>
+class IfcSensor <<ifc>>
+class IfcUnitaryControlElement <<ifc>>
+
 
 /'
  Definition of Spaces  Types
@@ -140,7 +154,19 @@ class Blinds <<hit2gap>>
 class Shutters <<hit2gap>>
 class Shades <<hit2gap>>
 
+/'
+  Definition of microgrid part
+'/
 
+class Microgrid <<ontomg>>
+class  Branch <<ontomg>>
+class ESBranch <<ontomg>>
+class DESBranch <<ontomg>>
+class ELBranch <<ontomg>>
+class InfraBranch <<ontomg>>
+
+class IfcDistributionCircuit <<ifc>>
+class IfcDistributionSystem <<ifc>>
 
 /'
  Definition of the SSN model to model the sensor observation of the building
@@ -254,8 +280,16 @@ IfcWindow <|-- Blinds
 IfcWindow <|-- Shutters
 IfcWindow <|-- Shades
 
-
 IfcDistributionElement <|-- IfcDistributionControlElement
+IfcDistributionControlElement <|-- IfcActuator
+IfcDistributionControlElement <|-- IfcAlarm
+IfcDistributionControlElement <|-- IfcController
+IfcDistributionControlElement <|-- IfcFlowInstrument
+IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
+IfcDistributionControlElement <|-- IfcSensor
+IfcDistributionControlElement <|-- IfcUnitaryControlElement
+
+IfcDistributionControlElement <--> Sensor: owl:equivalenClass
 
 Building --> Orientation: hit2gap:hasOrientation
 
@@ -267,6 +301,23 @@ Orientation..[#orchid] North_East
 Orientation..[#orchid] North_West
 Orientation..[#orchid] South_East
 Orientation..[#orchid] South_West
+
+/'
+    Incorporation of micro-grid description to the building
+'/
+
+Microgrid --> Branch: ontomg:hasBranch
+Branch <|-- ESBranch
+Branch <|-- DESBranch
+Branch <|-- ELBranch
+Branch <|-- InfraBranch
+
+IfcDistributionSystem<|-- IfcDistributionCircuit
+BranchController <--> IfcController: owl:equivalentClass
+InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
+DESBranch <--> IfcDistributionSystem: owl:equivalentClass
+ESBranch <--> IfcDistributionElement: owl:equivalentClass
+
 
 
 
