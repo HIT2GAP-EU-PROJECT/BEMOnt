@@ -383,6 +383,9 @@ FuelCellBranch --> Converter: ontomg:hasA
 FuelCellBranch --> DieselGenerator: ontomg:hasA
 
 System --> Microgrid: hit2gap:produceEnergy
-
+System --> Microgrid: hit2gap:consumesEnergy
+System --> Microgrid: hit2gap:storageEnergy
+System --> Microgrid: hit2gap:controlsEnergy
+System --> Microgrid: hit2gap:measuresEnergy
 
 @enduml
