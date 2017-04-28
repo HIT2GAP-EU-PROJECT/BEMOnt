@@ -184,6 +184,14 @@ class TriphasicInverter <<ontomg>>
 class ConductingEquipement <<cim>>
 class RectifierInverter <<cim>>
 
+class HydroPowerBranch <<hit2gap>>
+class GeoThermalBranch <<hit2gap>>
+class BiomassBranch <<hit2gap>>
+class OilBranch <<hit2gap>>
+class GasBranch <<hit2gap>>
+class CoalBranch <<hit2gap>>
+class NuclearBranch <<hit2gap>>
+
 class IfcDistributionCircuit <<ifc>>
 class IfcDistributionSystem <<ifc>>
 
@@ -343,6 +351,9 @@ DERBranch<|-- NonRenewableDERBranch
 
 RenewableDERBranch <|-- SolarPowerBranch
 RenewableDERBranch <|-- WindPowerBranch
+RenewableDERBranch <|-- HydroPowerBranch
+RenewableDERBranch <|-- GeoThermalBranch
+RenewableDERBranch <|-- BiomassBranch
 
 SolarPowerBranch--> SolarCell: ontomg:hasA
 WindPowerBranch --> WindTurbine: ontomg:hasA
@@ -361,11 +372,17 @@ Inverter <|-- MonophasicInverter
 Inverter <|-- TriphasicInverter
 
 
-NonRenewableDERBranch <|-- FuelCellBranch
+NonRenewableDERBranch <|-- OilBranch
+NonRenewableDERBranch <|-- GasBranch
+NonRenewableDERBranch <|-- CoalBranch
+NonRenewableDERBranch <|-- NuclearBranch
+OilBranch <|-- FuelCellBranch
 NonRenewableDERBranch <|-- CHPPPowerBranch
 
 FuelCellBranch --> Converter: ontomg:hasA
 FuelCellBranch --> DieselGenerator: ontomg:hasA
+
+System --> Microgrid: hit2gap:produceEnergy
 
 
 @enduml
