@@ -35,6 +35,16 @@ class _Feature <<geo>>
 class _Geometry <<geo>>
 class Point <<geo>>
 class Polygon <<geo>>
+class Hemisphere <<hit2gap>>
+class Climate <<hit2gap>>
+class Northerm <<(I,orchid),hit2gap>>
+class Southern <<(I,orchid),hit2gap>>
+class Tropical <<hit2gap>>
+class Arid <<hit2gap>>
+class Temperate <<hit2gap>>
+class Cold <<hit2gap>>
+class Polar <<hit2gap>>
+
 
 /'
   Definition of the Feature of interest classes
@@ -44,6 +54,16 @@ class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
 class IfcZones <<ifc>>
+class Orientation <<hit2gap>>
+
+class North <<(I,orchid),hit2gap>>
+class South <<(I,orchid),hit2gap>>
+class West <<(I,orchid),hit2gap>>
+class East <<(I,orchid),hit2gap>>
+class North_East <<(I,orchid),hit2gap>>
+class North_West <<(I,orchid),hit2gap>>
+class South_East <<(I,orchid),hit2gap>>
+class South_West <<(I,orchid),hit2gap>>
 
 /'
   Building types class definition
@@ -151,6 +171,18 @@ _Geometry <|-- Polygon
 _Feature <|-- FeatureOfInterest
 _Feature <|-- System
 
+_Feature --> Hemisphere: hit2gap:locatedInHemisphere
+_Feature --> Climate: hit2gap:locatedInClimate
+
+Hemisphere ..[#orchid] Northerm
+Hemisphere ..[#orchid] Southern
+
+Climate <|-- Tropical
+Climate <|-- Arid
+Climate <|-- Temperate
+Climate <|-- Cold
+Climate <|-- Polar
+
 /'
   Definition of the types of FoIs
 '/
@@ -224,6 +256,18 @@ IfcWindow <|-- Shades
 
 
 IfcDistributionElement <|-- IfcDistributionControlElement
+
+Building --> Orientation: hit2gap:hasOrientation
+
+Orientation..[#orchid] North
+Orientation..[#orchid] South
+Orientation..[#orchid] West
+Orientation..[#orchid] East
+Orientation..[#orchid] North_East
+Orientation..[#orchid] North_West
+Orientation..[#orchid] South_East
+Orientation..[#orchid] South_West
+
 
 
 @enduml
