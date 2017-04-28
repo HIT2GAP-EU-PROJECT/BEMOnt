@@ -161,9 +161,28 @@ class Shades <<hit2gap>>
 class Microgrid <<ontomg>>
 class  Branch <<ontomg>>
 class ESBranch <<ontomg>>
-class DESBranch <<ontomg>>
+class DERBranch <<ontomg>>
 class ELBranch <<ontomg>>
 class InfraBranch <<ontomg>>
+
+class BranchSwitch <<ontomg>>
+class NonRenewableDERBranch <<ontomg>>
+class RenewableDERBranch <<ontomg>>
+class SolarPowerBranch <<ontomg>>
+class WindPowerBranch <<ontomg>>
+class Converter <<ontomg>>
+class Inverter <<ontomg>>
+class AcDcConverter <<ontomg>>
+class WindTurbine <<ontomg>>
+class SolarCell <<ontomg>>
+class FuelCellBranch <<ontomg>>
+class CHPPPowerBranch <<ontomg>>
+class DieselGenerator <<ontomg>>
+class MonophasicInverter <<ontomg>>
+class TriphasicInverter <<ontomg>>
+
+class ConductingEquipement <<cim>>
+class RectifierInverter <<cim>>
 
 class IfcDistributionCircuit <<ifc>>
 class IfcDistributionSystem <<ifc>>
@@ -308,7 +327,7 @@ Orientation..[#orchid] South_West
 
 Microgrid --> Branch: ontomg:hasBranch
 Branch <|-- ESBranch
-Branch <|-- DESBranch
+Branch <|-- DERBranch
 Branch <|-- ELBranch
 Branch <|-- InfraBranch
 
@@ -318,7 +337,35 @@ InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
 DESBranch <--> IfcDistributionSystem: owl:equivalentClass
 ESBranch <--> IfcDistributionElement: owl:equivalentClass
 
+DERBranch --> BranchSwitch: ontomg:hasA
+DERBranch<|-- RenewableDERBranch
+DERBranch<|-- NonRenewableDERBranch
 
+RenewableDERBranch <|-- SolarPowerBranch
+RenewableDERBranch <|-- WindPowerBranch
+
+SolarPowerBranch--> SolarCell: ontomg:hasA
+WindPowerBranch --> WindTurbine: ontomg:hasA
+
+RegulatingCongEq <|-- WindTurbine
+RegulatingCongEq <|-- SolarCell
+
+SolarPowerBranch --> Converter: ontomg:hasA
+WindPowerBranch --> Converter: ontomg:hasA
+
+RectifierInverter <|-- Converter
+Converter <|-- Inverter
+Converter <|-- AcDcConverter
+
+Inverter <|-- MonophasicInverter
+Inverter <|-- TriphasicInverter
+
+
+NonRenewableDERBranch <|-- FuelCellBranch
+NonRenewableDERBranch <|-- CHPPPowerBranch
+
+FuelCellBranch --> Converter: ontomg:hasA
+FuelCellBranch --> DieselGenerator: ontomg:hasA
 
 
 @enduml
