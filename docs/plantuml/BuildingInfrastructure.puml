@@ -196,6 +196,16 @@ class IfcDistributionCircuit <<ifc>>
 class IfcDistributionSystem <<ifc>>
 
 /'
+  Definition of building elements (systems)
+'/
+
+class HVAC <<hit2gap>>
+class PlumbingFireProtection <<hit2gap>>
+class  ElectricElement <<hit2gap>>
+class MonitoringElement <<hit2gap>>
+class Wereable <<hit2gap>>
+
+/'
  Definition of the SSN model to model the sensor observation of the building
  facilities
 '/
@@ -387,5 +397,17 @@ System --> Microgrid: hit2gap:consumesEnergy
 System --> Microgrid: hit2gap:storageEnergy
 System --> Microgrid: hit2gap:controlsEnergy
 System --> Microgrid: hit2gap:measuresEnergy
+
+/'
+ Definiton of Mechanical Building Elements
+'/
+
+IfcDistributionFlowElement <|-- HVAC
+IfcDistributionFlowElement <|-- PlumbingFireProtection
+IfcDistributionFlowElement <|-- ElectricElement
+IfcDistributionFlowElement <|-- MonitoringElement
+IfcDistributionFlowElement <|-- Wereable
+
+
 
 @enduml
