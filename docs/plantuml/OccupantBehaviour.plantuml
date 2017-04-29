@@ -1,7 +1,5 @@
 @startuml
 
-scale 0.2
-
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -96,9 +94,11 @@ class SamplingFeatures <<OGC>>{
 
 }
 
-class IfcZone <<IFC>>{
+class IfcSpatial <<IFC>>{
 
 }
+class IfcSpatialStructureElement <<IFC>>
+
 
 class ZoneElement <<HIT2GAP>>{
 
@@ -326,6 +326,18 @@ class MechanicElement <<HIT2GAP>>{
 class ElectricElement <<HIT2GAP>>{
 }
 
+class Event <<HIT2GAP>>
+class ModelResult <<HIT2GAP>>
+class Indicator <<HIT2GAP>>
+class Status <<HIT2GAP>>
+class Function <<HIT2GAP>>
+class Constraints <<HIT2GAP>>
+class Probability <<HIT2GAP>>
+class Context <<HIT2GAP>>
+
+Context --> Indoor: hit2gap:isAssignedTo
+Context --> Outdoor: hit2gap:isAssignedTo
+
 note top of Driver
 stimulating factors that provoke energyrelated
 occupant behavior.
@@ -409,8 +421,9 @@ FeatureOfInterest --> Property: ssn:hasProperty
 
 SampledFeatures <|-- IfcBuilding
 IfcBuilding <|-- IfcSpatialStructureElement
-IfcSpatialStructureElement <|-- IfcZone
-IfcSpatialStructureElement<|-- ZoneElement
+IfcSpatialElement <|-- IfcSpatialZone
+IfcSpatialStructureElement <|-- IfcSpatialZone
+IfcSpatialElement<|-- ZoneElement
 IfcBuilding <|-- MechanicElement
 IfcBuilding <|-- ElectricElement
 
@@ -450,6 +463,7 @@ Driver <|-- EventModel
 Driver <|-- EquipementModel
 
 EventModel --> OccupantEvent:hit2gap:isBasedOn
+EventModel --> Event: hit2gap:isBasedOn
 EquipementModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
 BehaviourModel <|-- TimeBehaviour: hit2gap:isBasedOn
 
@@ -462,6 +476,18 @@ Season..[#orchid] Summer
 Season..[#orchid] Spring
 Season..[#orchid] Autum
 
+Event --> SensorOutput: hit2gap:associatedTo
+Driver --> ModelResult: hit2gap:ModelResult
+Driver --> Indicator: hit2gap:hasIndicator
+Driver --> Status: hit2gap:hasStatus
+Driver --> Function: hit2gap:hasFunction
+
+Event --> Constraints: hit2gap:hasContraints
+Event --> Probability: hit2gap:hasProbability
+Event --> Context: hit2gap:hasContext
+
+Context --> Indoor: hit2gap:isAssignedTo
+Context --> Outdoor: hit2gap:isAssignedTo
 
 /'
 Definition of occupant attitude and IfcOccupants and their
@@ -479,6 +505,7 @@ IfcOccupant --> Needs: hit2gap:hasComfortRequirements
 IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
 IfcOccupant --> System:hit2gap:interactsWith
 IfcOccupant --> Actions: hit2gap:performsAction
+IfcOccupant --> OccupantBehaviour: hit2gap:hasBehaviour
 
 /'
  Definition of the occupant needs and comfort
