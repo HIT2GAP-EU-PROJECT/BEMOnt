@@ -55,6 +55,9 @@ class Building <<hit2gap>>
 class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
+class IfcElementComponent <<ifc>>
+class IfcDistributionControlElement <<ifc>>
+class IfcDistributionFlowElement <<ifc>>
 class IfcZones <<ifc>>
 class Orientation <<hit2gap>>
 
@@ -66,6 +69,8 @@ class North_East <<(I,orchid),hit2gap>>
 class North_West <<(I,orchid),hit2gap>>
 class South_East <<(I,orchid),hit2gap>>
 class South_West <<(I,orchid),hit2gap>>
+
+class BuildingAppliance <<hit2gap>>
 
 /'
   Building types class definition
@@ -195,14 +200,129 @@ class NuclearBranch <<hit2gap>>
 class IfcDistributionCircuit <<ifc>>
 class IfcDistributionSystem <<ifc>>
 
+
+/'
+  Definition of DistributionFlow Element
+'/
+class PlumbingFireProtection <<hit2gap>>
+class ElectricElement <<hit2gap>>
+class MonitoringElement <<hit2gap>>
+class WereableElement <<hit2gap>>
+class IfcDistributionChamberElement <<ifc>>
+class IfcEnergyConversionDevice <<ifc>>
+class IfcFlowController <<ifc>>
+class IfcFlowFitting <<ifc>>
+class IfcFlowMovingDevice <<ifc>>
+class IfcFlowTerminal <<ifc>>
+class IfcMovingDevice <<ifc>>
+class IfcFlowStorageDevice <<ifc>>
+class IfcFlowTreatmentDevice <<ifc>>
+
+/'
+  Definition of the Energy Conversion Device
+'/
+
+class AirHandlingUnit <<hit2gap>>
+class IfcBoiler <<ifc>>
+class IfcChiller <<ifc>>
+class IfcCoil <<ifc>>
+class IfcBurner <<ifc>>
+class IfcCoil <<ifc>>
+class IfcEvaporativeCooler <<ifc>>
+class IfcEngine <<ifc>>
+class WaterPlant <<hit2gap>>
+class SteamPlant <<hit2gap>>
+class IfcHeatExchanger <<ifc>>
+class IfcAirToAirHeatRecovery <<ifc>>
+class IfcHumidifier <<ifc>>
+class IfcEvaporator <<ifc>>
+class ChilledBeams <<hit2gap>>
+class IfcCoolingTower <<ifc>>
+class IfcCondenser <<ifc>>
+class IfcTransformer <<ifc>>
+class IfcElectricGenerator <<ifc>>
+class IfcElectricMotor <<ifc>>
+class ElectricTimeControl <<hit2gap>>
+class IfcSolarDevice <<ifc>>
+
+/'
+ Definition of the Energy Conversion Device
+'/
+class AirHandlingUnit <<hit2gap>>
+class IfcBoiler <<ifc>>
+class IfcChiller <<ifc>>
+class IfcCoil <<ifc>>
+class IfcBurner <<ifc>>
+class IfcCoil <<ifc>>
+class IfcEvaporativeCooler <<ifc>>
+class IfcEngine <<ifc>>
+class WaterPlant <<hit2gap>>
+class SteamPlant <<hit2gap>>
+class IfcHeatExchanger <<ifc>>
+class IfcAirToAirHeatRecovery <<ifc>>
+class IfcHumidifier <<ifc>>
+class IfcEvaporator <<ifc>>
+class ChilledBeams <<hit2gap>>
+class IfcCoolingTower <<ifc>>
+class IfcCondenser <<ifc>>
+class IfcTransformer <<ifc>>
+class IfcElectricGenerator <<ifc>>
+class IfcElectricMotor <<ifc>>
+class ElectricTimeControl <<hit2gap>>
+class IfcSolarDevice <<ifc>>
+
+/'
+ Definition of the Element Component Devices
+'/
+class IfcVibrationIsolator <<ifc>>
+
+/'
+ Definition of the Flow Terminal Devices
+'/
+
+class IfcSpaceHeater <<ifc>>
+class IfcFireSuppressionTerminal <<ifc>>
+class IfcSanitaryTerminal <<ifc>>
+class IfcStackTerminal <<ifc>>
+class IfcWasteTerminal <<ifc>>
+class IfcAudioVisualAppliance <<ifc>>
+class IfcCommunicationAppliance <<ifc>>
+class IfcElectricAppliance <<ifc>>
+class IfcLamp <<ifc>>
+
+/'
+ Definition of the Moving Devices
+'/
+
+class IfcCompressor <<ifc>>
+class IfcFan <<ifc>>
+class FanCoilUnit <<hit2gap>>
+class IfcPump <<ifc>>
+class HeatPump <<hit2gap>>
+
+/'
+  Definition of the Flow Storage Device
+'/
+class IfcTank <<ifc>>
+class IfcElectricFlowStorage <<ifc>>
+
+/'
+ Definition of the Flow Controller
+'/
+class IfcValve <<ifc>>
+class IfcDamper <<ifc>>
+
+/'
+ Definition of the Treatment Devices
+'/
+class IfcInterceptor <<ifc>>
+
+
 /'
   Definition of building elements (systems)
 '/
 
-class HVAC <<hit2gap>>
-class PlumbingFireProtection <<hit2gap>>
-class  ElectricElement <<hit2gap>>
-class MonitoringElement <<hit2gap>>
+class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
 
 /'
@@ -252,12 +372,23 @@ Climate <|-- Polar
 
 FeatureOfInterest <|-- Building
 FeatureOfInterest <|-- BuildingInfrastructure
-FeatureOfInterest <|-- BuildingElements
+FeatureOfInterest <|-- BuildingAppliance
+FeatureOfInterest <|-- IfcBuildingElement
+
+Sensor<|-- BuildingAppliance
+
+BuildingInfrastructure --> IfcBuildingElement: hit2gap:containsElement
+BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
 
 Building -->IfcZones: hit2gap:contains
 IfcZones --> IfcElement: hit2gap:contains
+
 IfcElement <|-- IfcDistributionElement
 IfcElement <|-- IfcBuildingElement
+IfcElement <|-- IfcElementComponent
+
+IfcDistirbutionElement <|-- IfcDistributionControlElement
+IfcDistirbutionElement <|-- IfcDistributionFlowElement
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
@@ -269,6 +400,19 @@ Building <|-- Industrial
 Building <|-- Religious
 Building <|-- Public
 Building <|-- Transports
+
+BuildingAppliance <|-- IfcFlowTerminal
+BuildingAppliance <|-- Monitoring
+BuildingAppliance <|-- Wereable
+
+Wereable <|-- Smartwatch
+Wereable <|-- Smartphone
+
+Monitoring <|-- IfcSensor
+Monitoring <|-- IfcActuator
+Monitoring <|-- IfcAlarm
+Monitoring <|-- IfcController
+Monitoring <|-- Meter
 
 IfcZones <|-- Room
 IfcZones <|-- Floor
@@ -351,6 +495,7 @@ Branch <|-- InfraBranch
 
 IfcDistributionSystem<|-- IfcDistributionCircuit
 BranchController <--> IfcController: owl:equivalentClass
+ConductingEquipement <|-- BranchController
 InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
 DESBranch <--> IfcDistributionSystem: owl:equivalentClass
 ESBranch <--> IfcDistributionElement: owl:equivalentClass
@@ -402,12 +547,72 @@ System --> Microgrid: hit2gap:measuresEnergy
  Definiton of Mechanical Building Elements
 '/
 
-IfcDistributionFlowElement <|-- HVAC
 IfcDistributionFlowElement <|-- PlumbingFireProtection
 IfcDistributionFlowElement <|-- ElectricElement
 IfcDistributionFlowElement <|-- MonitoringElement
-IfcDistributionFlowElement <|-- Wereable
+IfcDistributionFlowElement <|-- WereableElement
+IfcDistributionFlowElement <|-- IfcDistributionChamberElement
+IfcDistributionFlowElement <|-- IfcEnergyConversionDevice
+IfcDistributionFlowElement <|-- IfcFlowController
+IfcDistributionFlowElement <|-- IfcFlowFitting
+IfcDistributionFlowElement <|-- IfcFlowMovingDevice
+IfcDistributionFlowElement <|-- IfcFlowTerminal
+IfcDistributionFlowElement <|-- IfcMovingDevice
+IfcDistributionFlowElement <|-- IfcFlowStorageDevice
+IfcDistributionFlowElement <|-- IfcFlowTreatmentDevice
+
+IfcEnergyConversionDevice <|-- AirHandlingUnit
+IfcEnergyConversionDevice <|-- IfcBoiler
+IfcEnergyConversionDevice <|-- IfcChiller
+IfcEnergyConversionDevice <|-- IfcCoil
+IfcEnergyConversionDevice <|-- IfcBurner
+IfcEnergyConversionDevice <|-- IfcCoil
+IfcEnergyConversionDevice <|-- IfcEvaporativeCooler
+IfcEnergyConversionDevice <|-- IfcEngine
+IfcEnergyConversionDevice <|-- WaterPlant
+IfcEnergyConversionDevice <|-- SteamPlant
+IfcEnergyConversionDevice <|-- IfcHeatExchanger
+IfcEnergyConversionDevice <|-- IfcAirToAirHeatRecovery
+IfcEnergyConversionDevice <|-- IfcHumidifier
+IfcEnergyConversionDevice <|-- IfcEvaporator
+IfcEnergyConversionDevice <|-- ChilledBeams
+IfcEnergyConversionDevice <|-- IfcCoolingTower
+IfcEnergyConversionDevice <|-- IfcCondenser
+IfcEnergyConversionDevice <|-- IfcTransformer
+IfcEnergyConversionDevice <|-- IfcElectricGenerator
+IfcEnergyConversionDevice <|-- IfcElectricMotor
+IfcEnergyConversionDevice <|-- ElectricTimeControl
+IfcEnergyConversionDevice <|-- IfcSolarDevice
+
+IfcElementComponent <|-- IfcVibrationIsolator
+
+IfcFlowTerminal <|-- IfcSpaceHeater
+IfcFlowTerminal <|-- IfcFireSuppressionTerminal
+IfcFlowTerminal <|-- IfcSanitaryTerminal
+IfcFlowTerminal <|-- IfcStackTerminal
+IfcFlowTerminal <|-- IfcWasteTerminal
+IfcFlowTerminal <|-- IfcAudioVisualAppliance
+IfcFlowTerminal <|-- IfcCommunicationAppliance
+IfcFlowTerminal <|-- IfcElectricAppliance
+IfcFlowTerminal <|-- IfcLamp
+
+IfcMovingDevice <|-- IfcCompressor
+IfcMovingDevice <|-- IfcFan
+IfcFan <|-- FanCoilUnit
+IfcMovingDevice <|-- IfcPump
+IfcPump <|-- HeatPump
+
+IfcFlowStorageDevice <|-- IfcTank
+IfcFlowStorageDevice <|-- IfcElectricFlowStorage
+
+IfcFlowController <|-- IfcValve
+IfcFlowController <|-- IfcDamper
+
+IfcFlowTreatmentDevice <|-- IfcInterceptor
 
 
+/'
+  Definition of the properties hierarchy
+'/
 
 @enduml
