@@ -76,12 +76,12 @@ Description of Feedback and Reporting
 Feedback <|-- Report
 Notification <|-- Alert
 Notification <|-- Recommendation
-User --> Modality: hit2gap_prefers
+User --> Modality: hit2gap:prefers
 Modality ..[#orchid] SMS
 Modality ..[#orchid] Email
 Modality ..[#orchid] Phone
 
-User --> Notification:hit2gap_receives
-User --> Feedback:hit2gap_concerns
+User --> Notification:hit2gap:receives
+User --> Feedback:hit2gap:concerns
 
 @enduml

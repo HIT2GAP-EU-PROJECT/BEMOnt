@@ -54,11 +54,13 @@ OccupantAttitude <|-- EnergyProfligate
 OccupantAttitude <|-- EnergyIndiferent
 
 
-IfcOccupant --> OccupantRole: hit2gap_hasOccupantRole
-IfcOccupant --> OccupantCharacteristics: hit2gap_hasOccupantCharacteristics
-IfcOccupant --> Needs: hit2gap_hasComfortRequirements
-IfcOccupant --> OccupantAttitude:hit2gap_hasOccupantAttitude
-IfcOccupant --> System:hit2gap_interactsWith
+IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
+IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
+IfcOccupant --> Needs: hit2gap:hasComfortRequirements
+IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
+IfcOccupant --> System:hit2gap:interactsWith
+IfcOccupant --> Actions: hit2gap:performsAction
+IfcOccupant --> OccupantBehaviour: hit2gap:hasBehaviour
 
 
 
