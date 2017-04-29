@@ -483,8 +483,8 @@ IfcOccupant --> Actions: hit2gap:performsAction
 /'
  Definition of the occupant needs and comfort
 '/
-Needs --> Privacy:hit2gap:hasPrivacy
-Needs --> OccupantPreference:hit2gap:hasPreferences
+Needs <|-- Privacy
+Needs <|-- OccupantPreference
 OccupantPreference ..[#orchid] Luminosity
 OccupantPreference ..[#orchid] Noise
 OccupantPreference ..[#orchid] Temperature
