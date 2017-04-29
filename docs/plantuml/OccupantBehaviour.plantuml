@@ -1,6 +1,6 @@
 @startuml
 
-
+scale 0.2
 
 skinparam class {
   ArrowColor DarkBlue
@@ -51,7 +51,7 @@ class OccupantRole <<HIT2GAP>>{
 
 }
 
-class IfcStructureElement <<IFC>>{
+class IfcSpatialStructureElement <<IFC>>{
 
 }
 
@@ -369,8 +369,8 @@ Description of the Ifc Actor relations
 '/
 
 IfcActor <|-- User
-IfcActor--> Role: hit2gap_hasRole
-IfcActor --> Device:hit2gap_acts
+IfcActor--> Role: hit2gap:hasRole
+IfcActor --> Device:hit2gap:acts
 
 Role ..[#orchid] Manager
 Role ..[#orchid] Owner
@@ -384,13 +384,13 @@ Description of Feedback and Reporting
 Feedback <|-- Report
 Notification <|-- Alert
 Notification <|-- Recommendation
-User --> Modality: hit2gap_prefers
+User --> Modality: hit2gap:prefers
 Modality ..[#orchid] SMS
 Modality ..[#orchid] Email
 Modality ..[#orchid] Phone
 
-User --> Notification:hit2gap_receives
-User --> Feedback:hit2gap_concerns
+User --> Notification:hit2gap:receives
+User --> Feedback:hit2gap:concerns
 
 
 /'
@@ -399,18 +399,18 @@ Description of the SSN model adapted to buildign observation
 
 FeatureOfInterest <|-- SampledFeatures
 FeatureOfInterest <|-- SamplingFeatures
-Observation --> FeatureOfInterest: ssn_featureOfInterest
-Observation--> SensorOutput: ssn_observationResult
+Observation --> FeatureOfInterest: ssn:featureOfInterest
+Observation--> SensorOutput: ssn:observationResult
 SensorOutput --> ObservationValue: ssn_hasValue
-ObservationValue --> Unit:qudt_unit
-Observation --> Instant: ssn_observationResultTime
-Observation --> DateTimeInterval: ssn_observationResultTime
-FeatureOfInterest --> Property: ssn_hasProperty
+ObservationValue --> Unit:qudt:unit
+Observation --> Instant: ssn:observationResultTime
+Observation --> DateTimeInterval: ssn:observationResultTime
+FeatureOfInterest --> Property: ssn:hasProperty
 
 SampledFeatures <|-- IfcBuilding
-IfcBuilding <|-- IfcStructureElement
-IfcStructureElement <|-- IfcZone
-IfcStructureElement<|-- ZoneElement
+IfcBuilding <|-- IfcSpatialStructureElement
+IfcSpatialStructureElement <|-- IfcZone
+IfcSpatialStructureElement<|-- ZoneElement
 IfcBuilding <|-- MechanicElement
 IfcBuilding <|-- ElectricElement
 
@@ -433,10 +433,10 @@ BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort
 System <|-- Device
-System --> System:ssn_hasSubsystem
+System --> System:ssn:hasSubsystem
 Device <|-- Sensor
-Sensor --> Observation:ssn_observedBy
-Sensor --> Property:ssn_observes
+Sensor --> Observation:ssn:observedBy
+Sensor --> Property:ssn:observes
 
 Observation <|-- Driver
 
@@ -449,9 +449,9 @@ Driver <|-- ActivityModel
 Driver <|-- EventModel
 Driver <|-- EquipementModel
 
-EventModel --> OccupantEvent:hit2gap_isBasedOn
-EquipementModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
-BehaviourModel <|-- TimeBehaviour: hit2gap_isBasedOn
+EventModel --> OccupantEvent:hit2gap:isBasedOn
+EquipementModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
+BehaviourModel <|-- TimeBehaviour: hit2gap:isBasedOn
 
 TimeBehaviour <|-- Season
 TimeBehaviour <|-- Instant
@@ -473,18 +473,18 @@ OccupantAttitude <|-- EnergyProfligate
 OccupantAttitude <|-- EnergyIndiferent
 
 
-IfcOccupant --> OccupantRole: hit2gap_hasOccupantRole
-IfcOccupant --> OccupantCharacteristics: hit2gap_hasOccupantCharacteristics
-IfcOccupant --> Needs: hit2gap_hasComfortRequirements
-IfcOccupant --> OccupantAttitude:hit2gap_hasOccupantAttitude
-IfcOccupant --> System:hit2gap_interactsWith
-
+IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
+IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
+IfcOccupant --> Needs: hit2gap:hasComfortRequirements
+IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
+IfcOccupant --> System:hit2gap:interactsWith
+IfcOccupant --> Actions: hit2gap:performsAction
 
 /'
  Definition of the occupant needs and comfort
 '/
-Needs --> Privacy:hit2gap_hasPrivacy
-Needs --> OccupantPreference:hit2gap_hasPreferences
+Needs --> Privacy:hit2gap:hasPrivacy
+Needs --> OccupantPreference:hit2gap:hasPreferences
 OccupantPreference ..[#orchid] Luminosity
 OccupantPreference ..[#orchid] Noise
 OccupantPreference ..[#orchid] Temperature
@@ -508,9 +508,10 @@ Actions <|-- Inaction
 Actions <|-- Feedback
 Actions <|-- OccupantEvent
 
-Actions --> OccupantDiscomfort:hit2gap_provoke
-SystemActions --> IfcDistributionControlElement:hit2gap_changes
-IfcDistributionControlElement --> Alert: hit2gap_receivesAlert
-SystemActions --> Device: hit2gap_actuateOver
+Actions --> OccupantDiscomfort:hit2gap:provoke
+SystemActions --> IfcDistributionControlElement:hit2gap:changes
+IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
+SystemActions --> Device: hit2gap:actuateOver
+Actions --> IfcSpatialStructureElement: hit2gap:change
 
 @enduml
