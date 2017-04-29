@@ -1,6 +1,6 @@
 @startuml
 
-scale 0.20
+
 
 skinparam class {
   ArrowColor DarkBlue
@@ -53,15 +53,17 @@ class Polar <<hit2gap>>
 /'
   Definition of the Feature of interest classes
 '/
-class Building <<hit2gap>>
+class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
 class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
 class IfcDistributionFlowElement <<ifc>>
-class IfcZones <<ifc>>
+class IfcZone <<ifc>>
+class IfcSpatialZone <<ifc>>
 class Orientation <<hit2gap>>
+class IfcSpatialStructureElement <<ifc>>
 
 class North <<(I,orchid),hit2gap>>
 class South <<(I,orchid),hit2gap>>
@@ -431,18 +433,23 @@ Climate <|-- Polar
   Definition of the types of FoIs
 '/
 
-FeatureOfInterest <|-- Building
+FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingInfrastructure
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcBuildingElement
 
 Sensor<|-- BuildingAppliance
 
+IfcBuilding <|-- IfcSpatialStructureElement
+IfcSpatialElement <|-- IfcSpatialZone
+IfcSpatialStructureElement <|-- IfcSpatialZone
+
 BuildingInfrastructure --> IfcBuildingElement: hit2gap:containsElement
 BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
 
-Building -->IfcZones: hit2gap:contains
-IfcZones --> IfcElement: hit2gap:contains
+IfcBuilding -->IfcSpatialZone: hit2gap:contains
+IfcBuilding -->IfcZone: hit2gap:contains
+IfcSpatialZone --> IfcElement: hit2gap:contains
 
 IfcElement <|-- IfcDistributionElement
 IfcElement <|-- IfcBuildingElement
@@ -453,14 +460,14 @@ IfcDistirbutionElement <|-- IfcDistributionFlowElement
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
-Building <|-- Agricultural
-Building <|-- Commercial
-Building <|-- Residential
-Building <|-- Educational
-Building <|-- Industrial
-Building <|-- Religious
-Building <|-- Public
-Building <|-- Transports
+IfcBuilding <|-- Agricultural
+IfcBuilding <|-- Commercial
+IfcBuilding <|-- Residential
+IfcBuilding <|-- Educational
+IfcBuilding <|-- Industrial
+IfcBuilding <|-- Religious
+IfcBuilding <|-- Public
+IfcBuilding <|-- Transports
 
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
@@ -475,9 +482,9 @@ Monitoring <|-- IfcAlarm
 Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
-IfcZones <|-- Room
-IfcZones <|-- Floor
-IfcZones <|-- Desk
+IfcZone <|-- Room
+IfcZone <|-- Floor
+IfcZone <|-- Desk
 
 Floor <|-- Subterranean
 Floor <|-- Ground
