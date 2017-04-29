@@ -505,7 +505,7 @@ ThermalComfort<|-- OtherComfortEnvelope
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
-Actions <|-- Report
+Actions <|-- Feedback
 Actions <|-- OccupantEvent
 
 Actions --> OccupantDiscomfort:hit2gap_provoke
