@@ -68,8 +68,8 @@ class Temperature <<I,orchid) HIT2GAP>>{
 
 }
 
-Needs --> Privacy:hit2gap_hasPrivacy
-Needs --> OccupantPreference:hit2gap_hasPreferences
+Needs <|-- Privacy
+Needs <|-- OccupantPreference
 OccupantPreference ..[#orchid] Luminosity
 OccupantPreference ..[#orchid] Noise
 OccupantPreference ..[#orchid] Temperature

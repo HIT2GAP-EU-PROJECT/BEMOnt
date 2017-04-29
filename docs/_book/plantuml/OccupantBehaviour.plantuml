@@ -51,7 +51,7 @@ class OccupantRole <<HIT2GAP>>{
 
 }
 
-class IfcStructureElement <<IFC>>{
+class IfcSpatialStructureElement <<IFC>>{
 
 }
 
@@ -96,9 +96,11 @@ class SamplingFeatures <<OGC>>{
 
 }
 
-class IfcZone <<IFC>>{
+class IfcSpatial <<IFC>>{
 
 }
+class IfcSpatialStructureElement <<IFC>>
+
 
 class ZoneElement <<HIT2GAP>>{
 
@@ -326,6 +328,18 @@ class MechanicElement <<HIT2GAP>>{
 class ElectricElement <<HIT2GAP>>{
 }
 
+class Event <<HIT2GAP>>
+class ModelResult <<HIT2GAP>>
+class Indicator <<HIT2GAP>>
+class Status <<HIT2GAP>>
+class Function <<HIT2GAP>>
+class Constraints <<HIT2GAP>>
+class Probability <<HIT2GAP>>
+class Context <<HIT2GAP>>
+
+Context --> Indoor: hit2gap:isAssignedTo
+Context --> Outdoor: hit2gap:isAssignedTo
+
 note top of Driver
 stimulating factors that provoke energyrelated
 occupant behavior.
@@ -369,8 +383,8 @@ Description of the Ifc Actor relations
 '/
 
 IfcActor <|-- User
-IfcActor--> Role: hit2gap_hasRole
-IfcActor --> Device:hit2gap_acts
+IfcActor--> Role: hit2gap:hasRole
+IfcActor --> Device:hit2gap:acts
 
 Role ..[#orchid] Manager
 Role ..[#orchid] Owner
@@ -384,13 +398,13 @@ Description of Feedback and Reporting
 Feedback <|-- Report
 Notification <|-- Alert
 Notification <|-- Recommendation
-User --> Modality: hit2gap_prefers
+User --> Modality: hit2gap:prefers
 Modality ..[#orchid] SMS
 Modality ..[#orchid] Email
 Modality ..[#orchid] Phone
 
-User --> Notification:hit2gap_receives
-User --> Feedback:hit2gap_concerns
+User --> Notification:hit2gap:receives
+User --> Feedback:hit2gap:concerns
 
 
 /'
@@ -399,18 +413,19 @@ Description of the SSN model adapted to buildign observation
 
 FeatureOfInterest <|-- SampledFeatures
 FeatureOfInterest <|-- SamplingFeatures
-Observation --> FeatureOfInterest: ssn_featureOfInterest
-Observation--> SensorOutput: ssn_observationResult
+Observation --> FeatureOfInterest: ssn:featureOfInterest
+Observation--> SensorOutput: ssn:observationResult
 SensorOutput --> ObservationValue: ssn_hasValue
-ObservationValue --> Unit:qudt_unit
-Observation --> Instant: ssn_observationResultTime
-Observation --> DateTimeInterval: ssn_observationResultTime
-FeatureOfInterest --> Property: ssn_hasProperty
+ObservationValue --> Unit:qudt:unit
+Observation --> Instant: ssn:observationResultTime
+Observation --> DateTimeInterval: ssn:observationResultTime
+FeatureOfInterest --> Property: ssn:hasProperty
 
 SampledFeatures <|-- IfcBuilding
-IfcBuilding <|-- IfcStructureElement
-IfcStructureElement <|-- IfcZone
-IfcStructureElement<|-- ZoneElement
+IfcBuilding <|-- IfcSpatialStructureElement
+IfcSpatialElement <|-- IfcSpatialZone
+IfcSpatialStructureElement <|-- IfcSpatialZone
+IfcSpatialElement<|-- ZoneElement
 IfcBuilding <|-- MechanicElement
 IfcBuilding <|-- ElectricElement
 
@@ -433,10 +448,10 @@ BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort
 System <|-- Device
-System --> System:ssn_hasSubsystem
+System --> System:ssn:hasSubsystem
 Device <|-- Sensor
-Sensor --> Observation:ssn_observedBy
-Sensor --> Property:ssn_observes
+Sensor --> Observation:ssn:observedBy
+Sensor --> Property:ssn:observes
 
 Observation <|-- Driver
 
@@ -449,9 +464,10 @@ Driver <|-- ActivityModel
 Driver <|-- EventModel
 Driver <|-- EquipementModel
 
-EventModel --> OccupantEvent:hit2gap_isBasedOn
-EquipementModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
-BehaviourModel <|-- TimeBehaviour: hit2gap_isBasedOn
+EventModel --> OccupantEvent:hit2gap:isBasedOn
+EventModel --> Event: hit2gap:isBasedOn
+EquipementModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
+BehaviourModel <|-- TimeBehaviour: hit2gap:isBasedOn
 
 TimeBehaviour <|-- Season
 TimeBehaviour <|-- Instant
@@ -462,6 +478,18 @@ Season..[#orchid] Summer
 Season..[#orchid] Spring
 Season..[#orchid] Autum
 
+Event --> SensorOutput: hit2gap:associatedTo
+Driver --> ModelResult: hit2gap:ModelResult
+Driver --> Indicator: hit2gap:hasIndicator
+Driver --> Status: hit2gap:hasStatus
+Driver --> Function: hit2gap:hasFunction
+
+Event --> Constraints: hit2gap:hasContraints
+Event --> Probability: hit2gap:hasProbability
+Event --> Context: hit2gap:hasContext
+
+Context --> Indoor: hit2gap:isAssignedTo
+Context --> Outdoor: hit2gap:isAssignedTo
 
 /'
 Definition of occupant attitude and IfcOccupants and their
@@ -473,18 +501,19 @@ OccupantAttitude <|-- EnergyProfligate
 OccupantAttitude <|-- EnergyIndiferent
 
 
-IfcOccupant --> OccupantRole: hit2gap_hasOccupantRole
-IfcOccupant --> OccupantCharacteristics: hit2gap_hasOccupantCharacteristics
-IfcOccupant --> Needs: hit2gap_hasComfortRequirements
-IfcOccupant --> OccupantAttitude:hit2gap_hasOccupantAttitude
-IfcOccupant --> System:hit2gap_interactsWith
-
+IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
+IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
+IfcOccupant --> Needs: hit2gap:hasComfortRequirements
+IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
+IfcOccupant --> System:hit2gap:interactsWith
+IfcOccupant --> Actions: hit2gap:performsAction
+IfcOccupant --> OccupantBehaviour: hit2gap:hasBehaviour
 
 /'
  Definition of the occupant needs and comfort
 '/
-Needs --> Privacy:hit2gap_hasPrivacy
-Needs --> OccupantPreference:hit2gap_hasPreferences
+Needs <|-- Privacy
+Needs <|-- OccupantPreference
 OccupantPreference ..[#orchid] Luminosity
 OccupantPreference ..[#orchid] Noise
 OccupantPreference ..[#orchid] Temperature
@@ -505,12 +534,13 @@ ThermalComfort<|-- OtherComfortEnvelope
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
-Actions <|-- Report
+Actions <|-- Feedback
 Actions <|-- OccupantEvent
 
-Actions --> OccupantDiscomfort:hit2gap_provoke
-SystemActions --> IfcDistributionControlElement:hit2gap_changes
-IfcDistributionControlElement --> Alert: hit2gap_receivesAlert
-SystemActions --> Device: hit2gap_actuateOver
+Actions --> OccupantDiscomfort:hit2gap:provoke
+SystemActions --> IfcDistributionControlElement:hit2gap:changes
+IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
+SystemActions --> Device: hit2gap:actuateOver
+Actions --> IfcSpatialStructureElement: hit2gap:change
 
 @enduml
