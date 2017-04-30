@@ -33,10 +33,6 @@ class Needs <<HIT2GAP>>{
 
 }
 
-class System <<SSN>>{
-
-}
-
 class EnergyFrugal <<HIT2GAP>>{
 
 }
@@ -58,7 +54,6 @@ IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
 IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
 IfcOccupant --> Needs: hit2gap:hasComfortRequirements
 IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
-IfcOccupant --> System:hit2gap:interactsWith
 IfcOccupant --> Actions: hit2gap:performsAction
 IfcOccupant --> OccupantBehaviour: hit2gap:hasBehaviour
 
