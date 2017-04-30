@@ -4,11 +4,11 @@
 
 This chapter is aimed at describing the general model referring the occupant behaviour. In that sense and according with [(Hong et.al,2015)][@Honng2015], the occupant behaviour is composed by the following main aspects:
 
-- **Drivers**: Represent the factors that stimulates occupants to accomplish their needs.
-- **Needs**: Requirements the the different occupants shall met to ensure their satisfaction in the environment which interacts.
-- **Actions**: Occupants interactions with the building to acieve the required comfort.
+- **Drivers**: Represent discrete-event simulation models for modeling occupant behavior, activities, events, and equipments, considering the factors that stimulates occupants to accomplish their needs.
+- **Needs**: Model the requirements that the different occupants shall meet to ensure their satisfaction in the environment which interacts.
+- **Actions**: Model the occupants interactions with the building to achieve the required comfort.
 
-Considering these three main aspects, the constructed semantic model relies on the combination of the Drivers, Needs and Actions with the representation of the building infrastructure (aligning the model with the IFC) and the different observations that could occur in the building (SSN ontology).
+Considering these three main aspects, the constructed semantic model relies on the combination of the Drivers, Needs, and Actions with the representation of the building infrastructure (aligning the model with the IFC) and the different observations that could occur in the building (SSN ontology).
 
 <div style="text-align:center">
 
@@ -17,9 +17,9 @@ Considering these three main aspects, the constructed semantic model relies on t
 
 In detail and for better comprehend the document, the semantic models selected based on their standards usage are: 
 
-- **Semantic Sensor Network Ontology (SSN)[(Compton et.al,2012)][@Compton2012]**: This semantic model that represents sensor information and data in form of observation. Hence, this ontology permit to contextualise sensor information being also compatible with the current standards in information exchange as SensorML.
+- **Semantic Sensor Network Ontology (SSN)[(Compton et.al,2012)][@Compton2012]**: This semantic model represents sensor information and data in form of observation. Hence, this ontology permits to contextualise sensor information being also compatible with the current standards in information exchange as SensorML.
 - **Quantities, Units, Dimensions and Time (QUDT)[(Hodgson et.al,2014)][@Hodgson2014]**: This semantic model is aimed at representing units and unit conversion for the time series and sensor outputs represented through the SSN ontology.
-- **W3C Time Ontology (TIME)[(Cox and Little,2012)][@Cox2017]**: Time ontology permit to contextualise the time measurements and time instants. This aspect will serve as a complementary semantic model for the QUDT ontology regarding time measurements.
+- **W3C Time Ontology (TIME)[(Cox and Little,2012)][@Cox2017]**: Time ontology allows to contextualise the time measurements and time instants. This aspect will serve as a complementary semantic model for the QUDT ontology regarding time measurements.
 - **Industry Foundation Classes OWL (IfcOWL)[(Pauwels,2017)][@Pauwels2017]**: This semantic model is used as a reference for modelling the building information and lifecycle. As a reference building for construction, this semantic model is one of the core ontologies to be linked with SSN and extended by HIT2GAP for considering user behaviour aspects.
 
 <div style="text-align:center">
