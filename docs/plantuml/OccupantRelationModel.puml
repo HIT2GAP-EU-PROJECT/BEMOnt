@@ -29,6 +29,12 @@ class OccupantCharacteristics <<HIT2GAP>>{
   endWorkTime xsd:DateTime
 }
 
+
+class OccupantBehaviour <<HIT2GAP>>{
+
+}
+
+
 class Needs <<HIT2GAP>>{
 
 }
