@@ -111,7 +111,7 @@ class Driver <<HIT2GAP>>{
 }
 
 
-class OccupantEvent<<HIT2GAP>>{
+class OccupantBehaviour<<HIT2GAP>>{
 
 }
 
@@ -464,10 +464,10 @@ Driver <|-- ActivityModel
 Driver <|-- EventModel
 Driver <|-- EquipementModel
 
-EventModel --> OccupantEvent:hit2gap:isBasedOn
 EventModel --> Event: hit2gap:isBasedOn
 EquipementModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
-BehaviourModel <|-- TimeBehaviour: hit2gap:isBasedOn
+BehaviourModel --> TimeBehaviour: hit2gap:isBasedOn
+BehaviourModel --> OccupantBehaviour: hit2gap:isBasedOn
 
 TimeBehaviour <|-- Season
 TimeBehaviour <|-- Instant
