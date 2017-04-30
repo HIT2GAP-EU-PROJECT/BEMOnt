@@ -29,11 +29,11 @@ class Inaction <<HIT2GAP>>{
 
 }
 
-class Report <<HIT2GAP>>{
+class Feedback <<HIT2GAP>>{
 
 }
 
-class OccupantEvent<<HIT2GAP>>{
+class OccupantBehaviour<<HIT2GAP>>{
 
 }
 
@@ -43,7 +43,7 @@ class OccupantDiscomfort <<HIT2GAP>>{
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
-Actions <|-- Report
+Actions <|-- Feedback
 Actions <|-- OccupantEvent
 
 Actions --> OccupantDiscomfort:hit2gap_provoke
