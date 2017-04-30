@@ -46,7 +46,7 @@ class Autum <<(I,orchid) HIT2GAP>>{
 class DayOfWeek <<Time>>{
 
 }
-class OccupantEvent<<HIT2GAP>>{
+class OccupantBehaviour<<HIT2GAP>>{
 
 }
 class EnvironmentalBuildingFactors <<HIT2GAP>>{
@@ -67,9 +67,10 @@ Driver <|-- ActivityModel
 Driver <|-- EventModel
 Driver <|-- EquipementModel
 
-EventModel --> OccupantEvent:hit2gap_isBasedOn
+EventModel --> Event: hit2gap_isBasedOn 
 EquipementModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
-BehaviourModel <|-- TimeBehaviour: hit2gap_isBasedOn
+BehaviourModel --> TimeBehaviour: hit2gap_isBasedOn
+BehaviourModel --> OccupantBehaviour:hit2gap_isBasedOn
 
 TimeBehaviour <|-- Season
 TimeBehaviour <|-- Instant
