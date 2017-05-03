@@ -1,7 +1,6 @@
 @startuml
 
 
-
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -561,6 +560,8 @@ Branch <|-- DERBranch
 Branch <|-- ELBranch
 Branch <|-- InfraBranch
 
+Branch --> BranchController: hit2gap:hasA
+
 IfcDistributionSystem<|-- IfcDistributionCircuit
 BranchController <--> IfcController: owl:equivalentClass
 ConductingEquipement <|-- BranchController
@@ -692,44 +693,44 @@ Cost <|-- EnergyTariffCost
 Cost <|-- WaterTariffCost
 
 PhysicProperties <|-- Air
-PhysicProperties <|--Area
-PhysicProperties <|--Capacity
-Capacity<|--ProductionCapacity
-PhysicProperties <|--Color
-PhysicProperties <|--Conductivity
-PhysicProperties <|--Density
-PhysicProperties <|--Depth
+PhysicProperties <|-- Area
+PhysicProperties <|-- Capacity
+Capacity<|-- ProductionCapacity
+PhysicProperties <|-- Color
+PhysicProperties <|-- Conductivity
+PhysicProperties <|-- Density
+PhysicProperties <|-- Depth
 PhysicProperties <|--EquivalentDepth
-PhysicProperties <|--Energy
+PhysicProperties <|-- Energy
 Energy<|-- ElectricEnergy
 Energy<|-- HeatFluxEnergy
-PhysicProperties <|--Evaporation
-PhysicProperties <|--Condensation
-PhysicProperties <|--Medium
-PhysicProperties <|--Precipitation
-PhysicProperties <|--Pressure
-PhysicProperties <|--Radiation
+PhysicProperties <|-- Evaporation
+PhysicProperties <|-- Condensation
+PhysicProperties <|-- Medium
+PhysicProperties <|-- Precipitation
+PhysicProperties <|-- Pressure
+PhysicProperties <|-- Radiation
 Radiation<|-- IncidentRadiation
 IncidentRadiation<|-- AbsorbedIncidentRadiation
 IncidentRadiation<|-- ReflectedIncidentradiation
 IncidentRadiation<|-- AbsorbedScatteredIncidentRadiation
 IncidentRadiation<|-- TransmittedIncidentRadiation
-PhysicProperties <|--Rainfall
-PhysicProperties <|--Reflectivity
-PhysicProperties <|--Shape
+PhysicProperties <|-- Rainfall
+PhysicProperties <|-- Reflectivity
+PhysicProperties <|-- Shape
 Shape<|-- CrossSection
 Shape<|-- Height
 Shape<|-- Length
 Shape<|-- Slope
 Shape<|-- Weight
 Shape<|-- Width
-PhysicProperties <|--Speed
-PhysicProperties <|--Temperature
-PhysicProperties <|--Time
-PhysicProperties <|--Transparency
-PhysicProperties <|--Velocity
-PhysicProperties <|--Visibility
-PhysicProperties <|--Volume
+PhysicProperties <|-- Speed
+PhysicProperties <|-- Temperature
+PhysicProperties <|-- Time
+PhysicProperties <|-- Transparency
+PhysicProperties <|-- Velocity
+PhysicProperties <|-- Visibility
+PhysicProperties <|-- Volume
 Volume<|-- Discharge
 Volume<|-- Flow
 Flow<|-- Inflow

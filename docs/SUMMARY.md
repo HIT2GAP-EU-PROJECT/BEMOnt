@@ -12,4 +12,6 @@
     * [Building Sensor Representation](chapter_3/Observation_Measurement.md)
     * [Geo-spatial Building Representation](chapter_3/geo.md)
     * [Building Domain Feature of Interest](chapter_3/FeaturesInterest.md)
+    * [Building Grid Description](chapter_3/GridDescription.md)
+    * [Properties (Phenomenom) representation](chapter_3/Phenomenom.md)
 
