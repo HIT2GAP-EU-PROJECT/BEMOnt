@@ -9,4 +9,5 @@
     * [Actions and Building State Definition](chapter_2/ActionSpecification.md)
 
 * [Building Infrastructure](chapter_3/IntroductionBuildingInfrastructure.md)
+    * [Building Sensor Representation](chapter_3/Observation_Measurement.md)
 
