@@ -1,0 +1,19 @@
+# Building Domain Feature of Interest
+
+As mentioned in previous sections, Feature of interest are real world representation of the building. This real world representation of the building comprise building infrastructure and the corresponding building elements (mechanical and electrical elements, furniture, etc).
+
+To adapt the SSN ontology to the building domain, the Industry Foundation Class (IFC)[(Pauwels & Terkaj, 2016)][@Pauwels2016] has been incorporated. This semantic model permit to link the proposed ontology with the Building Information Model (BIM) notation [(Volk et.al, 2014)][@Volk2014].
+
+Considering this aspects, the feature of interest class of SSN has be linked (hierarchy) with the IfcBuilding, IfcBuildingElement, and BuildingAppliance. The **IfcBuilding** class defines the building infrastructure to consider in the data model. Each building pertains to an specific type ("hasType" semantic relation) as agricultural, commercial, residential, etc. Considering their infrastructure, each building contains several real work zones (IfcZones). This zones can be rooms, floors, desk, etc. Moreover, the building contains some abstracted vision of the building (e.g mechanical view, electric view, thermal view, etc).
+
+ Over this abstracted views, the different building elements are represented. This building elements contains building systems ("Flow Instruments", "ProtectiveDevices", "Unitary Control Elements"). But also, this specific abstracted views could contain sensors and building appliance for monitoring and control of the building, incorporate occupants devices and the incorporation of building specific sensors.
+
+<div style="text-align:center">
+      <img src="http://www.plantuml.com/plantuml/png/bLTBRnen4BxxL-mj9vggKYy8HI8G8gHMZHggIBqPOy32QszjBoXg-z_hnnfxTsUJxP7vvksPRnPDCAV5nm-V4T8d9YgiS5aGZhKkVgEYc2ibBml9fIgMM9tkUKsZT2M5wI7tc9mEIjPY5w0lx70q4PDgHrKoULJq5VtDmcf35PNcjQABhf-N8yMcc-7S6CMsjQ4fbS8wfG8XT7jZ8oxfdWbcc1I5t1VcI8kLTLChwduouS9f4tnHZMvkKIXylIVtDUCx9Wx5RCRsvEuk8G-SbbIOFX1D1XMMJ1kcRBusdq6b1bZ8if9Yq8qlsxfPsCALv6-6ZBehBY-3YZzjiBxqkSA6OTu26_IP2ctxFPl9Gyl4HLaB6xM60pqfQIWnx4oNzCm8tIXMLRPhF-mx0Gd4A1svqyRgzRtoNJ8RgaecCEyM49zhNbMSOK5SXKTcFXrmbPI-IXj8gZ082GtWYnqVlEMWuNE9bRbWGuw0eGUhO-XgFoQrSma1jg0vCJKsK4Vc7AkoBsuwn6ao2Qjn7N2tRhhP-DrrNz8op0-AaPhRhV4zxDPY1xMaYZ0G_4urszcNSIW0F-ngWbqqq7WjThMRtW7Fd1sOh3M0FTLRpWW0R1GMkfBAjAqw3N7Jhfksj1iIOqjP0jxji4a5o9TKdw0XgBVsdMr650i0VlJaryvpaDL2ilR7IguzZw66vxxjrv7bPdycavocXbHwUp72LxE028Lz7V23MhpQk6We9dheIRgAxdKGwY_lP78tmB7JecdXbDXbm4peQxfvGjP1EqhV3j0VLioviqbkC26VIRVWdBkpzdJLkcy0g7HlYWy7NYCWT9jZ_ySoEpZNY9s2OcSwHK0TYYeRE-iXNCvC09oO2G0pPWBGZ9W0D14JwBWX9W0Bn0G0YPXwCrdasgalHwoT0Dg4-1JvyHjII_TjI2CUEOJIkNFoTE0Wm1ytXFBp6TVOCmI4nDi6OkwwGK2wRptKtr7Vp_3zub_7KdTRubcxBNA4RHaqqBalAQFgN1uuUd2sns_JqETSjpCZrNspnkbc_HjdqFw-6sdqraVVI1VDt8nJ1ZyFqNl6Rjj2c6aXBtnAVzNiRFyTYOMxoFy0"/>
+  </div>
+
+As a conclusion of the section, the features of interest representation of the building are performed using standard building modelling (IFC and BIM). Moreover, the proposed ontology ensures the information compatibility and sharing with these models. A part of this, the building infrastructure and their corresponding zones and devices are modelling and linked with their corresponding information, aspect that facilitates data querying based on the corresponding feature of interests.
+
+[@Pauwels2016]: http://doi.org/10.1016/j.autcon.2015.12.003 "Pauwels, P., & Terkaj, W. (2016). EXPRESS to OWL for construction industry: Towards a recommendable and usable ifcOWL ontology. Automation in Construction, 63, 100–133."
+
+ [@Volk2014]:http://doi.org/10.1016/j.autcon.2013.10.023 "Volk, R., Stengel, J., & Schultmann, F. (2014). Building Information Modeling (BIM) for existing buildings - Literature review and future needs. Automation in Construction."

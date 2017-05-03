@@ -1,7 +1,6 @@
 @startuml
 
 
-
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -53,6 +52,7 @@ class Polar <<hit2gap>>
 /'
   Definition of the Feature of interest classes
 '/
+class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
@@ -63,7 +63,6 @@ class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
 class IfcSpatialZone <<ifc>>
 class Orientation <<hit2gap>>
-class IfcSpatialStructureElement <<ifc>>
 
 class North <<(I,orchid),hit2gap>>
 class South <<(I,orchid),hit2gap>>
@@ -136,7 +135,7 @@ class IfcFlowInstrument <<ifc>>
 class IfcProtectiveDeviceTrippingUnit <<ifc>>
 class IfcSensor <<ifc>>
 class IfcUnitaryControlElement <<ifc>>
-
+class Meter <<hit2gap>>
 
 /'
  Definition of Spaces  Types
@@ -328,7 +327,8 @@ class IfcInterceptor <<ifc>>
 
 class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
-
+class Smartwatch <<hit2gap>>
+class Smartphone <<hit2gap>>
 
 /'
   Definition of the Properties Medium
@@ -434,17 +434,14 @@ Climate <|-- Polar
 '/
 
 FeatureOfInterest <|-- IfcBuilding
-FeatureOfInterest <|-- BuildingInfrastructure
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcBuildingElement
 
 Sensor<|-- BuildingAppliance
 
-IfcBuilding <|-- IfcSpatialStructureElement
+IfcBuilding <|-- IfcSpatialElement
 IfcSpatialElement <|-- IfcSpatialZone
-IfcSpatialStructureElement <|-- IfcSpatialZone
 
-BuildingInfrastructure --> IfcBuildingElement: hit2gap:containsElement
 BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
 
 IfcBuilding -->IfcSpatialZone: hit2gap:contains
@@ -460,14 +457,16 @@ IfcDistirbutionElement <|-- IfcDistributionFlowElement
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
-IfcBuilding <|-- Agricultural
-IfcBuilding <|-- Commercial
-IfcBuilding <|-- Residential
-IfcBuilding <|-- Educational
-IfcBuilding <|-- Industrial
-IfcBuilding <|-- Religious
-IfcBuilding <|-- Public
-IfcBuilding <|-- Transports
+BuildingType <|-- Agricultural
+BuildingType <|-- Commercial
+BuildingType <|-- Residential
+BuildingType <|-- Educational
+BuildingType <|-- Industrial
+BuildingType <|-- Religious
+BuildingType <|-- Public
+BuildingType <|-- Transports
+
+IfcBuilding --> BuildingType: hit2gap:hasType
 
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
@@ -560,6 +559,8 @@ Branch <|-- ESBranch
 Branch <|-- DERBranch
 Branch <|-- ELBranch
 Branch <|-- InfraBranch
+
+Branch --> BranchController: hit2gap:hasA
 
 IfcDistributionSystem<|-- IfcDistributionCircuit
 BranchController <--> IfcController: owl:equivalentClass
@@ -692,44 +693,44 @@ Cost <|-- EnergyTariffCost
 Cost <|-- WaterTariffCost
 
 PhysicProperties <|-- Air
-PhysicProperties <|--Area
-PhysicProperties <|--Capacity
-Capacity<|--ProductionCapacity
-PhysicProperties <|--Color
-PhysicProperties <|--Conductivity
-PhysicProperties <|--Density
-PhysicProperties <|--Depth
+PhysicProperties <|-- Area
+PhysicProperties <|-- Capacity
+Capacity<|-- ProductionCapacity
+PhysicProperties <|-- Color
+PhysicProperties <|-- Conductivity
+PhysicProperties <|-- Density
+PhysicProperties <|-- Depth
 PhysicProperties <|--EquivalentDepth
-PhysicProperties <|--Energy
+PhysicProperties <|-- Energy
 Energy<|-- ElectricEnergy
 Energy<|-- HeatFluxEnergy
-PhysicProperties <|--Evaporation
-PhysicProperties <|--Condensation
-PhysicProperties <|--Medium
-PhysicProperties <|--Precipitation
-PhysicProperties <|--Pressure
-PhysicProperties <|--Radiation
+PhysicProperties <|-- Evaporation
+PhysicProperties <|-- Condensation
+PhysicProperties <|-- Medium
+PhysicProperties <|-- Precipitation
+PhysicProperties <|-- Pressure
+PhysicProperties <|-- Radiation
 Radiation<|-- IncidentRadiation
 IncidentRadiation<|-- AbsorbedIncidentRadiation
 IncidentRadiation<|-- ReflectedIncidentradiation
 IncidentRadiation<|-- AbsorbedScatteredIncidentRadiation
 IncidentRadiation<|-- TransmittedIncidentRadiation
-PhysicProperties <|--Rainfall
-PhysicProperties <|--Reflectivity
-PhysicProperties <|--Shape
+PhysicProperties <|-- Rainfall
+PhysicProperties <|-- Reflectivity
+PhysicProperties <|-- Shape
 Shape<|-- CrossSection
 Shape<|-- Height
 Shape<|-- Length
 Shape<|-- Slope
 Shape<|-- Weight
 Shape<|-- Width
-PhysicProperties <|--Speed
-PhysicProperties <|--Temperature
-PhysicProperties <|--Time
-PhysicProperties <|--Transparency
-PhysicProperties <|--Velocity
-PhysicProperties <|--Visibility
-PhysicProperties <|--Volume
+PhysicProperties <|-- Speed
+PhysicProperties <|-- Temperature
+PhysicProperties <|-- Time
+PhysicProperties <|-- Transparency
+PhysicProperties <|-- Velocity
+PhysicProperties <|-- Visibility
+PhysicProperties <|-- Volume
 Volume<|-- Discharge
 Volume<|-- Flow
 Flow<|-- Inflow

@@ -1,0 +1,128 @@
+@startuml
+
+scale 0.35
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+/'
+  Definition of the Properties Medium
+'/
+
+class EconomicProperties <<hit2gap>>
+class PhysicProperties <<hit2gap>>
+
+class Cost <<hit2gap>>
+class Investment <<hit2gap>>
+class EnergyTariffCost <<hit2gap>>
+class WaterTariffCost <<hit2gap>>
+
+class Air <<hit2gap>>
+class Area <<hit2gap>>
+class Capacity <<hit2gap>>
+class ProductionCapacity <<hit2gap>>
+class Color <<hit2gap>>
+class Conductivity <<hit2gap>>
+class Density <<hit2gap>>
+class Depth <<hit2gap>>
+class EquivalentDepth <<hit2gap>>
+class Energy <<hit2gap>>
+class ElectricEnergy <<hit2gap>>
+class HeatFluxEnergy <<hit2gap>>
+class Evaporation <<hit2gap>>
+class Condensation <<hit2gap>>
+class Medium <<hit2gap>>
+class Precipitation <<hit2gap>>
+class Pressure <<hit2gap>>
+class Radiation <<hit2gap>>
+class IncidentRadiation <<hit2gap>>
+class AbsorbedIncidentRadiation <<hit2gap>>
+class ReflectedIncidentradiation <<hit2gap>>
+class AbsorbedScatteredIncidentRadiation <<hit2gap>>
+class TransmittedIncidentRadiation <<hit2gap>>
+class Rainfall <<hit2gap>>
+class Reflectivity <<hit2gap>>
+class Shape <<hit2gap>>
+class CrossSection <<hit2gap>>
+class Height <<hit2gap>>
+class Length <<hit2gap>>
+class Slope <<hit2gap>>
+class Weight <<hit2gap>>
+class Width <<hit2gap>>
+class Speed <<hit2gap>>
+class Temperature  <<hit2gap>>
+class Time <<hit2gap>>
+class Transparency <<hit2gap>>
+class Velocity <<hit2gap>>
+class Visibility <<hit2gap>>
+class Volume <<hit2gap>>
+class Discharge <<hit2gap>>
+class Flow <<hit2gap>>
+class Inflow <<hit2gap>>
+class Outflow <<hit2gap>>
+class AirMedium <<hit2gap>>
+
+/'
+  Definition of the properties hierarchy
+'/
+
+Property <|-- EconomicProperties
+Property <|-- PhysicProperties
+
+EconomicProperties <|-- Cost
+EconomicProperties <|-- Investment
+Cost <|-- EnergyTariffCost
+Cost <|-- WaterTariffCost
+
+PhysicProperties <|-- Air
+PhysicProperties <|-- Area
+PhysicProperties <|-- Capacity
+Capacity<|-- ProductionCapacity
+PhysicProperties <|-- Color
+PhysicProperties <|-- Conductivity
+PhysicProperties <|-- Density
+PhysicProperties <|-- Depth
+PhysicProperties <|--EquivalentDepth
+PhysicProperties <|-- Energy
+Energy<|-- ElectricEnergy
+Energy<|-- HeatFluxEnergy
+PhysicProperties <|-- Evaporation
+PhysicProperties <|-- Condensation
+PhysicProperties <|-- Medium
+PhysicProperties <|-- Precipitation
+PhysicProperties <|-- Pressure
+PhysicProperties <|-- Radiation
+Radiation<|-- IncidentRadiation
+IncidentRadiation<|-- AbsorbedIncidentRadiation
+IncidentRadiation<|-- ReflectedIncidentradiation
+IncidentRadiation<|-- AbsorbedScatteredIncidentRadiation
+IncidentRadiation<|-- TransmittedIncidentRadiation
+PhysicProperties <|-- Rainfall
+PhysicProperties <|-- Reflectivity
+PhysicProperties <|-- Shape
+Shape<|-- CrossSection
+Shape<|-- Height
+Shape<|-- Length
+Shape<|-- Slope
+Shape<|-- Weight
+Shape<|-- Width
+PhysicProperties <|-- Speed
+PhysicProperties <|-- Temperature
+PhysicProperties <|-- Time
+PhysicProperties <|-- Transparency
+PhysicProperties <|-- Velocity
+PhysicProperties <|-- Visibility
+PhysicProperties <|-- Volume
+Volume<|-- Discharge
+Volume<|-- Flow
+Flow<|-- Inflow
+Flow<|-- Outflow
+Medium<|-- AirMedium
+
+@enduml
