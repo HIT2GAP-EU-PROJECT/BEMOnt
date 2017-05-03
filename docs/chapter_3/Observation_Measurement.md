@@ -6,7 +6,7 @@ Sensor measurements (or Observation in the model), refer to both measurements ge
 
 Time series (specific measurements) have been represented using a combination between the classes offered by the SSN ontology and the Quantity, Units, Dimensions and Time (QUDT) ontology [(Hodgson et.al,2014)][@Hodgson2014]. SSN ontology provides the mechanisms to specify the values of the time series. As counterpart, QUDT ontology provide needed mechanisms for representing specific measures and data conversions.
 
-Time intervals and temporal parameters of the observations and time series have been represented using W3C-Time ontology [(Hobbs & Pan,2004)][@Hobbs20114]. This semantic model facilitates the representation, abstraction and conversion of temporal measurements. In detail, we have been used the "Instant" and "DateTimeInterval" to enable an observation to represent single value at certain time or to represent multiple values (time series) during certain period of time.
+Time intervals and temporal parameters of the observations and time series have been represented using W3C-Time ontology [(Hobbs & Pan,2004)][@Hobbs2014]. This semantic model facilitates the representation, abstraction and conversion of temporal measurements. In detail, we have been used the "Instant" and "DateTimeInterval" to enable an observation to represent single value at certain time or to represent multiple values (time series) during certain period of time.
 
 Thus, this way to represent semantically the sensor information facilitates data integration over different building data sources, fuse the information according for example their measurements and enable data provenance of the information based on describing sensor information (type of sensor, measurements, throughput, etc).
 
@@ -20,7 +20,7 @@ Considering this core-semantic and standard modelling of sensors based on the SS
 
 [@Compton2012]: http://doi.org/10.1016/j.websem.2012.05.003 "Compton, M., Barnaghi, P., Bermudez, L., García-Castro, R., Corcho, O., Cox, S., … Taylor, K. (2012). The SSN ontology of the W3C semantic sensor network incubator group. Web Semantics: Science, Services and Agents on the World Wide Web, 17, 25–32."
 
-[@Hobbs20114]: http://doi.org/10.1145/1017068.1017073 "Hobbs, J. R., & Pan, F. (2004). An Ontology of Time for the Semantic Web. ACM Transactions on Asian Language Information Processing, 3(1), 66–85."
+[@Hobbs2014]: http://doi.org/10.1145/1017068.1017073 "Hobbs, J. R., & Pan, F. (2004). An Ontology of Time for the Semantic Web. ACM Transactions on Asian Language Information Processing, 3(1), 66–85."
 
 [@Hodgson2014]: http://qudt.org/ "Hodgson, R., Keller, P. J., Hodges, J., & Spivak, J. (2014). QUDT - Quantities, Units, Dimensions and Data Types Ontologies."
 

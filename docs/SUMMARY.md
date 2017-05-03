@@ -10,4 +10,5 @@
 
 * [Building Infrastructure](chapter_3/IntroductionBuildingInfrastructure.md)
     * [Building Sensor Representation](chapter_3/Observation_Measurement.md)
+    * [Geo-spatial Building Representation](chapter_3/geo.md)
 
