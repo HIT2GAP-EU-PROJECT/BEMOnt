@@ -7,3 +7,6 @@
     * [Needs Definition](chapter_2/NeedsSpecification.md)
     * [Drivers Definition](chapter_2/DriverSpecification.md)
     * [Actions and Building State Definition](chapter_2/ActionSpecification.md)
+
+* [Building Infrastructure](chapter_3/IntroductionBuildingInfrastructure.md)
+
