@@ -535,7 +535,7 @@ ThermalComfort<|-- OtherComfortEnvelope
 Actions <|-- SystemActions
 Actions <|-- Inaction
 Actions <|-- Feedback
-Actions <|-- OccupantEvent
+Actions <|-- OccupantBeaviour
 
 Actions --> OccupantDiscomfort:hit2gap:provoke
 SystemActions --> IfcDistributionControlElement:hit2gap:changes
