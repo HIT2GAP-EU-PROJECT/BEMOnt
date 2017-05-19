@@ -29,16 +29,10 @@ class Inaction <<HIT2GAP>>{
 
 }
 
-class Report <<HIT2GAP>>{
+class Feedback <<HIT2GAP>>{
 
 }
 
-class IfcOccupant <<IFC>>{
-  age xsd:double
-  gender xsd:string
-  lifestyle xsd:string
-  jobType xsd:string
-}
 
 class OccupantBehaviour<<HIT2GAP>>{
 
@@ -50,8 +44,9 @@ class OccupantDiscomfort <<HIT2GAP>>{
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
-Actions <|-- Report
-Actions <|-- OccupantBehaviour
+
+Actions <|-- Feedback
+Actions <|-- OccupantEvent
 
 Actions --> OccupantDiscomfort:hit2gap_provoke
 SystemActions --> IfcDistributionControlElement:hit2gap_changes
