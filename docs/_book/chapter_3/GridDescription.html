@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Basics · HIT2GAPOnt: A Semantic data model to manage buildings information</title>
+        <title>Building Grid Description · HIT2GAPOnt: A Semantic data model to manage buildings information</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter_2/IntroOccupantBehaviour.html" />
+    <link rel="next" href="Phenomenom.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="FeaturesInterest.html" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="Basics.html">
+        <li class="chapter " data-level="1.2" data-path="../chapter_1/Basics.html">
             
-                <a href="Basics.html">
+                <a href="../chapter_1/Basics.html">
             
                     
                     Basics
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../chapter_3/IntroductionBuildingInfrastructure.html">
+        <li class="chapter " data-level="1.4" data-path="IntroductionBuildingInfrastructure.html">
             
-                <a href="../chapter_3/IntroductionBuildingInfrastructure.html">
+                <a href="IntroductionBuildingInfrastructure.html">
             
                     
                     Building Infrastructure
@@ -200,9 +200,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../chapter_3/Observation_Measurement.html">
+        <li class="chapter " data-level="1.4.1" data-path="Observation_Measurement.html">
             
-                <a href="../chapter_3/Observation_Measurement.html">
+                <a href="Observation_Measurement.html">
             
                     
                     Building Sensor Representation
@@ -213,9 +213,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../chapter_3/geo.html">
+        <li class="chapter " data-level="1.4.2" data-path="geo.html">
             
-                <a href="../chapter_3/geo.html">
+                <a href="geo.html">
             
                     
                     Geo-spatial Building Representation
@@ -226,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../chapter_3/FeaturesInterest.html">
+        <li class="chapter " data-level="1.4.3" data-path="FeaturesInterest.html">
             
-                <a href="../chapter_3/FeaturesInterest.html">
+                <a href="FeaturesInterest.html">
             
                     
                     Building Domain Feature of Interest
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../chapter_3/GridDescription.html">
+        <li class="chapter active" data-level="1.4.4" data-path="GridDescription.html">
             
-                <a href="../chapter_3/GridDescription.html">
+                <a href="GridDescription.html">
             
                     
                     Building Grid Description
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../chapter_3/Phenomenom.html">
+        <li class="chapter " data-level="1.4.5" data-path="Phenomenom.html">
             
-                <a href="../chapter_3/Phenomenom.html">
+                <a href="Phenomenom.html">
             
                     
                     Properties (Phenomenom) representation
@@ -300,7 +300,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Basics</a>
+        <a href=".." >Building Grid Description</a>
     </h1>
 </div>
 
@@ -315,36 +315,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="basics">Basics</h2>
-<h3 id="contribution-basics">Contribution Basics</h3>
-<p>For those contributors in the documentation, it cloud be done:</p>
-<ul>
-<li><p>Directly from Github and making commits. Then, automatically the repository is linked with a continous integration tool (<a href="https://circleci.com/" target="_blank">CircleCI</a>) that automatically update the gh-pages branch and the visualization</p>
-</li>
-<li><p>Making a clone of the repository (using for example <a href="https://desktop.github.com/" target="_blank">Github Desktop tool</a>) an then, make your changes in a different branch that lately has to be merged with the master branch. Once in the master branch is detected a change, &quot;gh-pages&quot; is directly updated.</p>
-</li>
-</ul>
-<h3 id="gitbooks-basics">Gitbooks Basics</h3>
-<p>Gitbooks uses markdown as an style to writing the document:</p>
-<ul>
-<li><p><a href="https://gitbookio.gitbooks.io/documentation/content/" target="_blank">Gitbook Documentation</a></p>
-</li>
-<li><p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a></p>
-</li>
-</ul>
-<p>To edit markdown files locally, you can use <a href="https://atom.io/" target="_blank">Atom</a> with the <a href="https://github.com/atom/markdown-preview" target="_blank">Markdown viewer plugin</a>. Moreover, you can also use IntelliJ with the corresponding Markdown viewer or other text editor you like.</p>
-<h3 id="graphs-basics">Graphs Basics</h3>
-<p>For easy integration and modification of the class diagrams, it is used <a href="http://plantuml.com/" target="_blank">PlantUML</a> and <a href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" target="_blank">PlantUML Server</a>.</p>
-<p>For example, given the following diagram code in plantuml:</p>
-<pre><code class="lang-plantuml">@startuml
-Bob -&gt; Alice : hello
-@enduml
-</code></pre>
-<p>Every contributor can load the respective generated image from plantuml server:</p>
-<pre><code class="lang-markdown">![<span class="hljs-string">Label</span>](<span class="hljs-link">http://www.plantuml.com/plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</span>)
-</code></pre>
-<p>Given as a result:</p>
-<p><img src="http://www.plantuml.com/plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" alt="Label"></p>
+                                <h1 id="building-grid-description">Building Grid Description</h1>
+<p>Interesting aspect of the proposed semantic model is the representation of the different grids and the energy flows. Hence, this flows representation is based on the Onto-MG model <a href="http://dx.doi.org/10.1007/978-3-319-23868-5_33" title="Salameh, K., Chbeir, R.,Camblong, H., Tekli, G., Vechiu, I. (2015): A Generic Ontology-Based Information Model for Better Management of Microgrids. Springer International Publishing, 451--466." target="_blank">(Salameh et.al,2015)</a>. In this kind of modelling, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows.</p>
+ <div style="text-align:center">
+      <img src="http://www.plantuml.com/plantuml/png/ZLR9Rjim4BtpAtZBoKqHe1SZ2E0jJe4a3U80ETFKM292aUw8Yc6q_VUIbgo58XMV3EYzsOTlN70cWNx_zeEGuaEeFKEMKovPKT0_XD8PeZuijDH8bmm_vhA4yzTxhSm0cJF-aQ8kLL91ZoBDp1dJc02s9ck48_dN2LiOGD3ck8U5x-Sz0sRy36V6eDYM1jfKg7KAYf3hAnjm2JkXX15QKRsZkU2eKnG9jIuCkRecfAhpgG5kRwqZdQTtTpL4vyWKpuR0QXD3bglNgD5Z3FcfTiY6O8rMmEOWJCZsMQjNK71WMmaZmI_XRBHa-A8FW376kr39A66XrIUW7MIeo1Wouqi-OkY2lfMu5GeYEIz0oY5qNu9qI3JNXvUNqMAM0WgGQzivP4O7CdlIIkypLWWUB-uDHPpITYqfkH4gNVqknHvoKCRIkCWxyxFuJW1st5HuJNWu9gZxvMJ2tAHit_XOWtxB07CcevIvqBdzZUA_HDnspU9s2pqIzBda4bWex_FgxFXI5DLhjyzv8P2NmdL8x7YxNttIvcZr96yujIPGkuPSurxRYNQ5ON8IW0GARiTrGeoc9WEwBOLCx61EWj5AnMHoLx_BAQscEStEvPDp8NydaqOfUX-RDzYdFWO-TgI1d84sk5qSWrfAm2cjk-Roc14Ix4RbCTXCuZkajowC9NTZw8ESWbtHJtirhEQwlfFmyhf8lalIqxdQVI2NS9nbAxe1qwh0iEMeuKgUCWvRabOjswPNIjoT-wpbdGeVYgr728es8I6HTdHVcAD4Jv-ZF5yieaHVCgB4dd0GucVikjT8TRzr_arnr8xazyasVbfAvhRDxfNTkBRkcXzXDC67kPqYDlVdw-GYL1AGQ1UvePFEZQkUTlXxxnpQbzm3XoV78mpkZPM-o7y4Hsy4VOpKAFiOgPNuCLPFwqddd3YmVx57W_LlDo7UiH-PKu3f7NflhlKbSSJc0BHokqTjvGzMrZOzVi7bMXLb3iL5vC9cmjAB7JkDlSnn3gmeyPp5Vm00">
+  </div>
+
+
 
                                 
                                 </section>
@@ -372,12 +349,12 @@ Bob -&gt; Alice : hello
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="FeaturesInterest.html" class="navigation navigation-prev " aria-label="Previous page: Building Domain Feature of Interest">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter_2/IntroOccupantBehaviour.html" class="navigation navigation-next " aria-label="Next page: Occupant Behaviour">
+                <a href="Phenomenom.html" class="navigation navigation-next " aria-label="Next page: Properties (Phenomenom) representation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -388,7 +365,7 @@ Bob -&gt; Alice : hello
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basics","level":"1.2","depth":1,"next":{"title":"Occupant Behaviour","level":"1.3","depth":1,"path":"chapter_2/IntroOccupantBehaviour.md","ref":"chapter_2/IntroOccupantBehaviour.md","articles":[{"title":"Ocupant Specification","level":"1.3.1","depth":2,"path":"chapter_2/OccupantSpecification.md","ref":"chapter_2/OccupantSpecification.md","articles":[]},{"title":"Needs Definition","level":"1.3.2","depth":2,"path":"chapter_2/NeedsSpecification.md","ref":"chapter_2/NeedsSpecification.md","articles":[]},{"title":"Drivers Definition","level":"1.3.3","depth":2,"path":"chapter_2/DriverSpecification.md","ref":"chapter_2/DriverSpecification.md","articles":[]},{"title":"Actions and Building State Definition","level":"1.3.4","depth":2,"path":"chapter_2/ActionSpecification.md","ref":"chapter_2/ActionSpecification.md","articles":[]}]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/tree/master/docs"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HIT2GAPOnt: A Semantic data model to manage buildings information","gitbook":"*"},"file":{"path":"chapter_1/Basics.md","mtime":"2017-04-11T07:59:37.711Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-03T13:47:29.052Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Building Grid Description","level":"1.4.4","depth":2,"next":{"title":"Properties (Phenomenom) representation","level":"1.4.5","depth":2,"path":"chapter_3/Phenomenom.md","ref":"chapter_3/Phenomenom.md","articles":[]},"previous":{"title":"Building Domain Feature of Interest","level":"1.4.3","depth":2,"path":"chapter_3/FeaturesInterest.md","ref":"chapter_3/FeaturesInterest.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/tree/master/docs"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HIT2GAPOnt: A Semantic data model to manage buildings information","gitbook":"*"},"file":{"path":"chapter_3/GridDescription.md","mtime":"2017-05-03T13:20:09.085Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-03T13:47:29.052Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

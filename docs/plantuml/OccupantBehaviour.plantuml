@@ -111,7 +111,7 @@ class Driver <<HIT2GAP>>{
 }
 
 
-class OccupantEvent<<HIT2GAP>>{
+class OccupantBehaviour<<HIT2GAP>>{
 
 }
 
@@ -464,10 +464,10 @@ Driver <|-- ActivityModel
 Driver <|-- EventModel
 Driver <|-- EquipementModel
 
-EventModel --> OccupantEvent:hit2gap:isBasedOn
 EventModel --> Event: hit2gap:isBasedOn
 EquipementModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
-BehaviourModel <|-- TimeBehaviour: hit2gap:isBasedOn
+BehaviourModel --> TimeBehaviour: hit2gap:isBasedOn
+BehaviourModel --> OccupantBehaviour: hit2gap:isBasedOn
 
 TimeBehaviour <|-- Season
 TimeBehaviour <|-- Instant
@@ -505,7 +505,6 @@ IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
 IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
 IfcOccupant --> Needs: hit2gap:hasComfortRequirements
 IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
-IfcOccupant --> System:hit2gap:interactsWith
 IfcOccupant --> Actions: hit2gap:performsAction
 IfcOccupant --> OccupantBehaviour: hit2gap:hasBehaviour
 
@@ -535,7 +534,7 @@ ThermalComfort<|-- OtherComfortEnvelope
 Actions <|-- SystemActions
 Actions <|-- Inaction
 Actions <|-- Feedback
-Actions <|-- OccupantEvent
+Actions <|-- OccupantBeaviour
 
 Actions --> OccupantDiscomfort:hit2gap:provoke
 SystemActions --> IfcDistributionControlElement:hit2gap:changes
