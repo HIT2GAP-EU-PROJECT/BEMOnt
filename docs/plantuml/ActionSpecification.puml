@@ -33,7 +33,14 @@ class Report <<HIT2GAP>>{
 
 }
 
-class OccupantEvent<<HIT2GAP>>{
+class IfcOccupant <<IFC>>{
+  age xsd:double
+  gender xsd:string
+  lifestyle xsd:string
+  jobType xsd:string
+}
+
+class OccupantBehaviour<<HIT2GAP>>{
 
 }
 
@@ -44,11 +51,12 @@ class OccupantDiscomfort <<HIT2GAP>>{
 Actions <|-- SystemActions
 Actions <|-- Inaction
 Actions <|-- Report
-Actions <|-- OccupantEvent
+Actions <|-- OccupantBehaviour
 
 Actions --> OccupantDiscomfort:hit2gap_provoke
 SystemActions --> IfcDistributionControlElement:hit2gap_changes
 IfcDistributionControlElement --> Alert: hit2gap_receivesAlert
 SystemActions --> Device: hit2gap_actuateOver
+IfcOccupant --> Actions: hit2gap:performsAction
 
 @enduml
