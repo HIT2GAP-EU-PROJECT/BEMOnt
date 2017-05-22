@@ -1,6 +1,5 @@
 @startuml
-
-
+scale 0.2
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -166,6 +165,7 @@ class Shades <<hit2gap>>
   Definition of microgrid part
 '/
 
+class IfcSystem <<ifc>>
 class Microgrid <<ontomg>>
 class  Branch <<ontomg>>
 class ESBranch <<ontomg>>
@@ -555,6 +555,7 @@ Orientation..[#orchid] South_West
 '/
 
 Microgrid --> Branch: ontomg:hasBranch
+Branch --> Branch: ontomg:isComposedOf
 Branch <|-- ESBranch
 Branch <|-- DERBranch
 Branch <|-- ELBranch
@@ -566,8 +567,11 @@ IfcDistributionSystem<|-- IfcDistributionCircuit
 BranchController <--> IfcController: owl:equivalentClass
 ConductingEquipement <|-- BranchController
 InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
-DESBranch <--> IfcDistributionSystem: owl:equivalentClass
+DERBranch <--> IfcDistributionSystem: owl:equivalentClass
 ESBranch <--> IfcDistributionElement: owl:equivalentClass
+ELBranch <--> IfcDistributionElement: owl:equivalentClass
+
+IfcSystem <|-- IfcDistributionElement
 
 DERBranch --> BranchSwitch: ontomg:hasA
 DERBranch<|-- RenewableDERBranch
@@ -606,11 +610,11 @@ NonRenewableDERBranch <|-- CHPPPowerBranch
 FuelCellBranch --> Converter: ontomg:hasA
 FuelCellBranch --> DieselGenerator: ontomg:hasA
 
-System --> Microgrid: hit2gap:produceEnergy
-System --> Microgrid: hit2gap:consumesEnergy
-System --> Microgrid: hit2gap:storageEnergy
-System --> Microgrid: hit2gap:controlsEnergy
-System --> Microgrid: hit2gap:measuresEnergy
+IfcSystem --> Microgrid: hit2gap:produceEnergy
+IfcSystem --> Microgrid: hit2gap:consumesEnergy
+IfcSystem --> Microgrid: hit2gap:storageEnergy
+IfcSystem --> Microgrid: hit2gap:controlsEnergy
+IfcSystem --> Microgrid: hit2gap:measuresEnergy
 
 /'
  Definiton of Mechanical Building Elements
