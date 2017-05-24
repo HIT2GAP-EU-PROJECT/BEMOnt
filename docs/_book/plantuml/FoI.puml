@@ -17,6 +17,9 @@ skinparam classAttributeFontColor  Green
 '/
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
+class IfcSpatialStructureElement <<ifc>>{
+  hasSpatialStructureCapacity: xsd:double;
+}
 class IfcBuildingElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
 class IfcElementComponent <<ifc>>
@@ -25,7 +28,6 @@ class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
 class IfcSpatialZone <<ifc>>
 
-class Sensor <<ogc>>
 class IfcFlowInstrument <<ifc>>
 class IfcProtectiveDeviceTrippingUnit <<ifc>>
 class IfcSensor <<ifc>>
@@ -68,6 +70,15 @@ class Desk <<hit2gap>>
 class Subterranean <<hit2gap>>
 class Ground <<hit2gap>>
 
+class IfcDistributionElement <<ifc>>
+class DistributionElementState <<hit2gap>>
+class DiscreteState <<hit2gap>>
+class ContinousState <<hit2gap>>
+
+class IfcBuildingStorey <<ifc>>
+class IfcSite <<ifc>>
+class IfcSpace <<ifc>>
+class SpaceCapacity <<hit2gap>>
 
 
 /'
@@ -78,10 +89,15 @@ FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcBuildingElement
 
-Sensor<|-- BuildingAppliance
-
-IfcBuilding <|-- IfcSpatialElement
+IfcSpatialStructureElement <|-- IfcBuilding
+IfcSpatialElement <|-- IfcSpatialStructureElement
 IfcSpatialElement <|-- IfcSpatialZone
+
+
+IfcSpatialStructureElement <|-- IfcBuildingStorey
+IfcSpatialStructureElement <|-- IfcSite
+IfcSpatialStructureElement <|-- IfcSpace
+
 
 BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
 
@@ -95,6 +111,10 @@ IfcElement <|-- IfcElementComponent
 
 IfcDistirbutionElement <|-- IfcDistributionControlElement
 IfcDistirbutionElement <|-- IfcDistributionFlowElement
+
+IfcDistributionElement --> DistributionElementState: hit2gap:hasState
+DistributionElementState <|-- ContinousState
+DistributionElementState <|-- DiscreteState
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
@@ -138,6 +158,5 @@ IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
 IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
-IfcDistributionControlElement <--> Sensor: owl:equivalenClass
 
 @enduml

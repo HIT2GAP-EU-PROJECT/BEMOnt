@@ -1,5 +1,7 @@
 @startuml
+
 scale 0.2
+
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -14,6 +16,7 @@ skinparam classAttributeFontColor  Green
 '/
 class System <<ssn>>
 class Device <<ssn>>
+class SensingDevice <<ssn>>
 class Sensor <<ssn>>
 class Observation <<ssn>>
 class FeatureOfInterest <<ssn>>
@@ -27,7 +30,6 @@ class DateTimeInterval <<time>>{
     time:inXSDDateTime [xsd:DateTime]
 }
 class Unit <<QUDT>>
-
 
 
 /'
@@ -55,6 +57,9 @@ class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
+class IfcSpatialStructureElement <<ifc>>{
+  hasSpatialStructureCapacity: xsd:double;
+}
 class IfcDistirbutionElement <<ifc>>
 class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
@@ -388,6 +393,15 @@ class Outflow <<hit2gap>>
 class AirMedium <<hit2gap>>
 
 
+class IfcDistributionElement <<ifc>>
+class DistributionElementState <<hit2gap>>
+class DiscreteState <<hit2gap>>
+class ContinousState <<hit2gap>>
+
+class IfcBuildingStorey <<ifc>>
+class IfcSite <<ifc>>
+class IfcSpace <<ifc>>
+
 /'
  Definition of the SSN model to model the sensor observation of the building
  facilities
@@ -395,10 +409,12 @@ class AirMedium <<hit2gap>>
 
 System --> System: ssn:hasSubSystem
 System <|-- Device
-Device <|-- Sensor
+Device <|-- SensingDevice
+Sensor <|-- SensingDevice
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
 Observation --> FeatureOfInterest: ssn:featureOfInterest
+Observation --> Property: ssn:observedProperty
 FeatureOfInterest --> Property: ssn:Property
 Observation --> SensorOutput: ssn:ObservationResult
 SensorOutput --> ObservationValue: ssn:hasValue
@@ -437,9 +453,15 @@ FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcBuildingElement
 
-Sensor<|-- BuildingAppliance
 
-IfcBuilding <|-- IfcSpatialElement
+IfcSpatialStructureElement <|-- IfcBuilding
+IfcSpatialElement <|-- IfcSpatialStructureElement
+
+IfcSpatialStructureElement <|-- IfcBuildingStorey
+IfcSpatialStructureElement <|-- IfcSite
+IfcSpatialStructureElement <|-- IfcSpace
+
+
 IfcSpatialElement <|-- IfcSpatialZone
 
 BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
@@ -454,6 +476,10 @@ IfcElement <|-- IfcElementComponent
 
 IfcDistirbutionElement <|-- IfcDistributionControlElement
 IfcDistirbutionElement <|-- IfcDistributionFlowElement
+
+IfcDistributionElement --> DistributionElementState: hit2gap:hasState
+DistributionElementState <|-- ContinousState
+DistributionElementState <|-- DiscreteState
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
@@ -537,9 +563,8 @@ IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
 IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
-IfcDistributionControlElement <--> Sensor: owl:equivalenClass
 
-Building --> Orientation: hit2gap:hasOrientation
+_Feature --> Orientation: hit2gap:hasOrientation
 
 Orientation..[#orchid] North
 Orientation..[#orchid] South
@@ -553,6 +578,8 @@ Orientation..[#orchid] South_West
 /'
     Incorporation of micro-grid description to the building
 '/
+
+Microgrid --> Property: hit2gap:hasProperty
 
 Microgrid --> Branch: ontomg:hasBranch
 Branch --> Branch: ontomg:isComposedOf

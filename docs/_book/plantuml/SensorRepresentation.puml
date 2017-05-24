@@ -16,6 +16,7 @@ skinparam classAttributeFontColor  Green
 class System <<ssn>>
 class Device <<ssn>>
 class Sensor <<ssn>>
+class SensingDevice <<ssn>>
 class Observation <<ssn>>
 class FeatureOfInterest <<ssn>>
 class Property <<ssn>>
@@ -47,10 +48,12 @@ class Polygon <<geo>>
 
 System --> System: ssn:hasSubSystem
 System <|-- Device
-Device <|-- Sensor
+Device <|-- SensingDevice
+Sensor <|-- SensingDevice
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
 Observation --> FeatureOfInterest: ssn:featureOfInterest
+Observation --> Property: ssn:observedProperty
 FeatureOfInterest --> Property: ssn:Property
 Observation --> SensorOutput: ssn:ObservationResult
 SensorOutput --> ObservationValue: ssn:hasValue

@@ -15,6 +15,7 @@ skinparam classAttributeFontColor  Green
   Definition of the Properties Medium
 '/
 
+class Property <<ssn>>
 class EconomicProperties <<hit2gap>>
 class PhysicProperties <<hit2gap>>
 
