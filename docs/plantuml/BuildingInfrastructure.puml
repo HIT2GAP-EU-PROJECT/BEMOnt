@@ -1,5 +1,7 @@
 @startuml
+
 scale 0.2
+
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -14,6 +16,7 @@ skinparam classAttributeFontColor  Green
 '/
 class System <<ssn>>
 class Device <<ssn>>
+class SensingDevice <<ssn>>
 class Sensor <<ssn>>
 class Observation <<ssn>>
 class FeatureOfInterest <<ssn>>
@@ -395,10 +398,12 @@ class AirMedium <<hit2gap>>
 
 System --> System: ssn:hasSubSystem
 System <|-- Device
-Device <|-- Sensor
+Device <|-- SensingDevice
+Sensor <|-- SensingDevice
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
 Observation --> FeatureOfInterest: ssn:featureOfInterest
+Observation --> Property: ssn:observedProperty
 FeatureOfInterest --> Property: ssn:Property
 Observation --> SensorOutput: ssn:ObservationResult
 SensorOutput --> ObservationValue: ssn:hasValue
@@ -553,6 +558,8 @@ Orientation..[#orchid] South_West
 /'
     Incorporation of micro-grid description to the building
 '/
+
+Microgrid --> Property: hit2gap:hasProperty
 
 Microgrid --> Branch: ontomg:hasBranch
 Branch --> Branch: ontomg:isComposedOf

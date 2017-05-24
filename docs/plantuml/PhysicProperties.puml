@@ -11,6 +11,7 @@ skinparam class {
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
+class Property <<ssn>>
 class PhysicProperties <<hit2gap>>
 
 class Air <<hit2gap>>
