@@ -58,6 +58,7 @@ class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
 class IfcBuildingElement <<ifc>>
+class IfcSpatialStructureElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
 class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
@@ -444,7 +445,10 @@ FeatureOfInterest <|-- IfcBuildingElement
 
 Sensor<|-- BuildingAppliance
 
-IfcBuilding <|-- IfcSpatialElement
+
+IfcSpatialStructureElement <|-- IfcBuilding
+IfcSpatialElement <|-- IfcSpatialStructureElement
+
 IfcSpatialElement <|-- IfcSpatialZone
 
 BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
