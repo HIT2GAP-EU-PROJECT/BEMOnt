@@ -17,6 +17,7 @@ skinparam classAttributeFontColor  Green
 '/
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
+class IfcSpatialStructureElement<<ifc>>
 class IfcBuildingElement <<ifc>>
 class IfcDistirbutionElement <<ifc>>
 class IfcElementComponent <<ifc>>
@@ -25,7 +26,6 @@ class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
 class IfcSpatialZone <<ifc>>
 
-class Sensor <<ogc>>
 class IfcFlowInstrument <<ifc>>
 class IfcProtectiveDeviceTrippingUnit <<ifc>>
 class IfcSensor <<ifc>>
@@ -78,9 +78,8 @@ FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcBuildingElement
 
-Sensor<|-- BuildingAppliance
-
-IfcBuilding <|-- IfcSpatialElement
+IfcSpatialStructureElement <|-- IfcBuilding
+IfcSpatialElement <|-- IfcSpatialStructureElement
 IfcSpatialElement <|-- IfcSpatialZone
 
 BuildingAppliance --> IfcDistirbutionElement: hit2gap:containsElement
@@ -138,6 +137,5 @@ IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
 IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
-IfcDistributionControlElement <--> Sensor: owl:equivalenClass
 
 @enduml

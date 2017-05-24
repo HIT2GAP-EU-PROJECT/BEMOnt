@@ -546,7 +546,6 @@ IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
 IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
-IfcDistributionControlElement <--> Sensor: owl:equivalenClass
 
 Building --> Orientation: hit2gap:hasOrientation
 
