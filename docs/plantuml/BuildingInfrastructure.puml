@@ -32,7 +32,6 @@ class DateTimeInterval <<time>>{
 class Unit <<QUDT>>
 
 
-
 /'
   Definition of the Geo-core part
 '/
