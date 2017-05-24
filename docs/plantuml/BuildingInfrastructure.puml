@@ -392,6 +392,11 @@ class Outflow <<hit2gap>>
 class AirMedium <<hit2gap>>
 
 
+class IfcDistributionElement <<ifc>>
+class DistributionElementState <<hit2gap>>
+class DiscreteState <<hit2gap>>
+class ContinousState <<hit2gap>>
+
 /'
  Definition of the SSN model to model the sensor observation of the building
  facilities
@@ -463,6 +468,10 @@ IfcElement <|-- IfcElementComponent
 
 IfcDistirbutionElement <|-- IfcDistributionControlElement
 IfcDistirbutionElement <|-- IfcDistributionFlowElement
+
+IfcDistributionElement --> DistributionElementState: hit2gap:hasState
+DistributionElementState <|-- ContinousState
+DistributionElementState <|-- DiscreteState
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
