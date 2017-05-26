@@ -53,13 +53,20 @@ class IfcDistributionCircuit <<ifc>>
 class IfcDistributionSystem <<ifc>>
 
 class Property <<ssn>>
+class FeatureOfInterest <<ssn>>
 
+EconomicProperties <<hit2gap>>
+PhysicsProperties <<hit2gap>>
 
 /'
     Incorporation of micro-grid description to the building
 '/
 
+Property <|-- EconomicProperties
+Property <|-- PhysicsProperties
+
 Microgrid --> Property: hit2gap:hasProperty
+FeatureOfInterest <|-- Microgrid
 
 Microgrid --> Branch: ontomg:hasBranch
 Branch --> Branch: ontomg:isComposedOf

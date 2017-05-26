@@ -4,7 +4,7 @@ Complementing the sensor representation of the building devices and infrastructu
 
 
 <div style="text-align:center">
-      <img src="http://www.plantuml.com/plantuml/png/ZPPDRzim38Rl-XM-zTHrwB1RK21DshL0XnLDqPmLcOw9Ef8doUc2RVzzicN7ZaDckSIntfVwO2W-SKeMa7p-zEMh4EuTTIcjt2IgaCublqMIJAqr7pDJ69lCfNs_BIheHk-DzaVAhLJlQsigdKRf2TUvxpHZKx1zo3SBE_5tiAppOC7uNGcpyJpB7AGVxt3glSLLvQ7VIX8c1It4rKLOS0uPQlHeT6AonEUGF5jJWlK8BlaEALORSN4bH3nkg-sIoSGvVNFJ3jyfeyq6rI1qCidHNwzbkJSzvpl7MbhFp3XFX3xgBJY_0Ks9TnhiUlSgBMOP4x-K8MkCexLCqHA1KmkI69x9KYfiqd1qIclIIjNvF66AlmCrhflWBHqs1-qufVGvbPkV5Mv3zMhFEfhiKK81AfIEOWqFeThkY-eNFyDMbiRAfhReiuRpS78iFJB1eB14pmK6tRdA0Y6zo1Ivi4UjCEp7d_9CLyxO5QJdU5yWgnFOc-qP4o-KzFNzFck5Lokrsw3tPsv8eivaKV1xvSfkaSkIIkVC6kSMe9W57w3kQuJm17fDrkAYCEH2Iswc9QRqH2L0IgKCDg7vI5-N1oNZ1hX4XvOAMb7fUOF2CFVy3Hski614KrJaUdDqAfTsJMdtXVaWgpUZXH-LPvJGy8Wxna6XxDjsZY65LkMxXWiz4VvSNX8W61d64122OaVjh1irA_P04B6XDukFG32GHW08spw2KMqBEU6K0096wlgywBx4WnvnW0klMS1gFGyOIyi4LWrTdzP6Q60cY3aLyH573hWmL0w1m4tOG-74eJimC9RsVmaj7W22zpIGOEHz7nNxRstPZVgiE1g9rSA1Wl7piFZF0ZmmcC1Jq62J4S71oGDuC9O68ABvZB_m01o3uGYCmK04nM2W0SJWVJcEQ830xQA60gCDmC0v0XiuQS07nj8nWfFtdE0C3Ij4VCIRtK5YE5ZJGTGVRRLc1-yj2qIyFLt3Ys__0000"/>
+      <img src="http://www.plantuml.com/plantuml/png/DSXD2i8m40RGg-W1cW6NxaIAFvk6qXuWfeCj99Cm-GRnzdNZyhtZ9Z7PmgRfi0ArdOaqVDnxmselQwon25ZWOibqVqodsyLt_TpvSNZsr-bVWu1oQ62bfSH6DGM1vKHUIsN5rzMVTW00"/>
 </div>
 
 ## Economic Properties
@@ -12,7 +12,7 @@ Complementing the sensor representation of the building devices and infrastructu
 The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology is capable of representing water-related tariffs, energy bills, building investments, etc. This specific phenomena has been subdivided into: (i) ’Costs‘ to capture the investment costs of the building; and (ii) "Investment" to represent the building investment aspects and information.
 
 <div style="text-align:center">
-      <img src="http://www.plantuml.com/plantuml/png/TOz1Ri9034NtFiLSW4tN20bIG9MwO569zJIOP9J4ZcodLTJsxWsawK18jdxVtyzQ1Agz-CgbfLTrN-3SMeG_4ovPtBENObCsE4ntJFP0DZujCk66JZrw3Lbk0sCveSILlM0BFw3_PzLGaAsjCHdt77FqTXEz6gxD9BmtXb75TQL80Fq71-4QnLgtNAhIQZNCjoaJLo7zum6rI-J1dZ9VnrJ2QdVpVln27wXM8Kt1BQ5axPkNS3xFx1zzz-PC0gBnzs8nuGamvNx9NhfcONI6_kQrVUHwWqQElm00"/>
+      <img src="http://www.plantuml.com/plantuml/png/DSix2iCm303GgxG7Y0KTkvLY-bbYGd80Ln6DmRQCBD7h9qlN1--SAcPRoIIVDjNMhm0IV-wRTBEFTHBagbJL8HTulkRBunO6lmnX6j_-Flzfh0ebTYM1bR53ox6gbGp--5mI1k56eecwQuVl"/>
 </div>
 
 ## Physic Properties
@@ -21,5 +21,5 @@ This phenomenon represents all related physical aspects that an observation coul
 This phenomenon supports the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).
 
 <div style="text-align:center">
-      <img src="http://www.plantuml.com/plantuml/png/ZPJTRjim38NlzHH-WGx3XjqL1TAaMGTqsD0CpRKYCpOHHV8eELsmxTqdMtRjn6AM6__m794I9NrEIGtP-tSVFmdXTcWgINAVAIsTotwBB9iHsTUvrPQoXQJTlQwXZowjyHFbNgfTGROsUPIUi2XzhrdAWOOXdmcEuk-ehFD0OFsnWlbvddK9qf_FSEOzuQRsC4mb2qd1215Ny9ri1UIFsUsjS-RkhW-NHuUg4n5Sa4lq7mfP1KldcI6TXBieWKo4vxAI2jiwvrAeajVAepKNJ77kgRXf1n_ImnPW7ATKlap47txMU0WxRZphC415AkM31XNQhLZ3OzYXfQv_yHaEih8acrumQmthuUIla6EzJpOO55RekO51TwucI4ZFCaTks1UZCCp7N_BCDixI1l9hlC-mRHeucEcAn2ibVNCdhghmWwHnU_J-oWb9D5kfDJzNxjYjIbcbsZadwzmA55Fm4HeM98GdC4NoBAwqJHPQSvdMcASJLG1vgcMm3mYGlZaUAHdtm3KwO0YCIhNd1RHbxlaBEjoWPaIhwsIz1JfLIYfIsbBRr-JftQQ5RxLdb02yn1qJ0qB_tDnCo1dq2KiRNqZ6AO6WZDG3KlGViUG4eDpm1gAiDe2KiNGmPTM0oxHsnbGcGQIYYAyOEG7gM3abAPTmeEc5HVT4PInnnndnXAoyfwKh8xy1IBnzjV49eCGa4ayBHrZ6prFsFmLuqZ83Bz6MRKOaBYUFgCjOMlAAzXbtU4JSKJYITXI8X1q5MhAE_jVd8rgIShDeQCfe8w9oZW1LJXg1bR7qSENaDy1oXXQo8hxYpUxfEWusM1NDepkjsvF_3g8YtfuUUF7l7m00"/>
+      <img src="http://www.plantuml.com/plantuml/png/DSXB2i8m403Gg-W1cW6NxaIAdqr3QGyGqy44aacO3-BjwyQtVCTCiTY6nkMGLBkS0JXyt3jhifS9ScoaIEfYgt1_BAVRnG_ZElXvUexNvLyJATGWYWnRYmAz15Ah1NpwIewUMqVMZEBwRtS0"/>
 </div>

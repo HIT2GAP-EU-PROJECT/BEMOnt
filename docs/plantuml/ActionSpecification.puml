@@ -34,10 +34,6 @@ class Feedback <<HIT2GAP>>{
 }
 
 
-class OccupantBehaviour<<HIT2GAP>>{
-
-}
-
 class OccupantDiscomfort <<HIT2GAP>>{
 
 }
@@ -48,10 +44,10 @@ Actions <|-- Inaction
 Actions <|-- Feedback
 Actions <|-- OccupantEvent
 
-Actions --> OccupantDiscomfort:hit2gap_provoke
+Actions --> OccupantDiscomfort: hit2gap:provoke
 SystemActions --> IfcDistributionControlElement:hit2gap_changes
-IfcDistributionControlElement --> Alert: hit2gap_receivesAlert
-SystemActions --> Device: hit2gap_actuateOver
+IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
+SystemActions --> Device: hit2gap:actuateOver
 IfcOccupant --> Actions: hit2gap:performsAction
 
 @enduml

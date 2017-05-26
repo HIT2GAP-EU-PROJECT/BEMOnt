@@ -9,12 +9,12 @@ In reference to the complex states, this refers as the states that require for t
 
 <div style="text-align:center">
 
-<img src="http://www.plantuml.com/plantuml/png/ZP91JiCm44NtFeKla0rBL5LgcbAG45GA4alaEjFKQkg9nax1AjoTn6v8Kjh0oihyD-F9_pOxfKj1Oizb8OpXHyRvZ0ZVvrWWyKJGBYugQAjtgEql9HPobnDMEWlIeygtjjMGCg2kPKdWs1SpFzSQ2mHeNGdpypclMn2sX_eDPzQIMbSMkbLuFHGqO-4FKbUFtFF994sVfjCZgsyxAN6bYapfFBN2GWtSFxpSB6UhAv3QbmNy2vrZWtwCiWiDbBl5PgEa0YtTA5mFt23PKUPPogeKZGMU_GjBb95No00cf0v0LyUi3T11M8NwahChmXB8kbRZGMoZ-8oYeVdiB8e1q1a_XlLDPvUJQF2Ble_mVUlPC8T6FdDzXEWC7zYGm459Q4jHD3szrrjZzDjMcBHQ6rzWWGnTAMY3nCBXktg1-5Rqtv35ha-rkVGHmzWWJR-L3_yR"/>
+<img src="http://www.plantuml.com/plantuml/png/DSax3i8m303Ggy016akCR0LLV9PMj1mWEAQrb3XHOelhmyBwtfu5emMo6dURQcb7WEe_RcNTx6MDAcPH4dMO4rnlo-7IJztmxAR7U1_Eovz6KKY-ALK86HkKw4KjHJWPny2opkgLvaB8RqQldCMLtty1"/>
 </div>
 
 At time of an alert or discomfort occur, this derives in an action. The actions can be occupant events, system actions, inaction, or feedbacks. Commonly, this actions try to solve or even to modify building state. So, the elaboration of actions (or no actions) within the building could derive in newer occupant discomfort (comfort anomalies).
 
  <div style="text-align:center">
 
- <img src="http://www.plantuml.com/plantuml/png/XL5BJiCm4Dtx5Bv0DbrMLQNqGuc4AA98B95nfucLn1ED9q5LuUvOITDWQChs_UrnkR6L8bLANIZdv4b86HFXnn8B9BbIb2-A6dhq3Yt_OHPAvobXRVSTzM3IZ7iEQGyqM3O4H_4btANMCH0W7ojO_ivvpK3n3scxC6Ocyrup35Ea3mKhHFU2MBD1w-HiTf-yJ3Rnqtn-4hxoJE-Elh4yYqOqAsYC1f-msps6J5m0yLXqObKREyO_GuNZxgtMTQKihnkm_8zcPPp6yd0rxVB-poWANnjI_TeGxJQ6MB1iA8YY-PL1qypm95NLMqNOO0uYcD2QaeFs-kwC7bpwGn8Mwm9Adt_nwqpP59ougMxpsgDCPMyaq60QS2ryfRwxxg3ttr0hXcq3z0q0"/>
+ <img src="http://www.plantuml.com/plantuml/png/DSan3i8m343Hgz03D9OOsIfKjR2qWdA0uBhKKk94YIsk3moC__s61OEjP2KSTjLSJm35lzsBTRUdLIgOH4dKOOemNfRZqCrj_sZdstJjpykV9b68lYeLM1DMoC6BMWpGeNAIUoRaZT7_mkNl-000"/>
  </div>
