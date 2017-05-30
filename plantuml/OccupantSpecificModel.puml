@@ -1,0 +1,87 @@
+@startuml
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+class IfcActor <<IFC>> {
+  id xsd:string
+  name xsd:string
+}
+
+class IfcOccupant <<IFC>>{
+  age xsd:double
+  gender xsd:string
+  lifestyle xsd:string
+  jobType xsd:string
+}
+
+class User <<HIT2GAP>>{
+
+}
+
+class Notification <<HIT2GAP>>{
+
+}
+
+class Report <<HIT2GAP>>{
+
+}
+
+class Recommendation <<HIT2GAP>>{
+
+}
+
+class Feedback <<HIT2GAP>>{
+
+}
+
+class Alert <<HIT2GAP>>{
+
+}
+class Device <<SSN>>{
+
+}
+
+class Role <<HIT2GAP>>{
+
+}
+class Manager <<(I,orchid) HIT2GAP>>{
+
+}
+class Owner <<(I,orchid) HIT2GAP>>{
+
+}
+class Technician <<(I,orchid) HIT2GAP>>{
+
+}
+
+IfcActor <|-- User
+IfcActor--> Role: hit2gap_hasRole
+IfcActor --> Device:hit2gap_acts
+
+Role ..[#orchid] Manager
+Role ..[#orchid] Owner
+Role ..[#orchid] Technician
+User <|-- IfcOccupant
+
+/'
+Description of Feedback and Reporting
+'/
+
+Feedback <|-- Report
+Notification <|-- Alert
+Notification <|-- Recommendation
+User --> Modality: hit2gap:prefers
+Modality ..[#orchid] SMS
+Modality ..[#orchid] Email
+Modality ..[#orchid] Phone
+
+User --> Notification:hit2gap:receives
+User --> Feedback:hit2gap:concerns
+
+@enduml
