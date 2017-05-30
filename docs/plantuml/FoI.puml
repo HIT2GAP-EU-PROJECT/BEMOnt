@@ -90,7 +90,7 @@ class SpaceCapacity <<hit2gap>>
 
 FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
-FeatureOfInterest <|-- IfcBuildingElement
+FeatureOfInterest <|-- IfcElement
 FeatureOfInterest <|-- Microgrid
 
 IfcSpatialStructureElement <|-- IfcBuilding

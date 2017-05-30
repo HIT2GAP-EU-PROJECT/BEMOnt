@@ -345,8 +345,6 @@ class PhysicProperties <<hit2gap>>
 
 class Cost <<hit2gap>>
 class Investment <<hit2gap>>
-class EnergyTariffCost <<hit2gap>>
-class WaterTariffCost <<hit2gap>>
 
 class Air <<hit2gap>>
 class Area <<hit2gap>>
@@ -454,7 +452,7 @@ Climate <|-- Polar
 
 FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
-FeatureOfInterest <|-- IfcBuildingElement
+FeatureOfInterest <|-- IfcElement
 
 
 IfcSpatialStructureElement <|-- IfcBuilding
@@ -728,8 +726,6 @@ Property <|-- PhysicProperties
 
 EconomicProperties <|-- Cost
 EconomicProperties <|-- Investment
-Cost <|-- EnergyTariffCost
-Cost <|-- WaterTariffCost
 
 PhysicProperties <|-- Air
 PhysicProperties <|-- Area
