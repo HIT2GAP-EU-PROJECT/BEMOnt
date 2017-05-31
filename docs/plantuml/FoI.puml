@@ -92,6 +92,7 @@ FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcElement
 FeatureOfInterest <|-- Microgrid
+FeatureOfInterest <|-- IfcSpatialElement
 
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement

@@ -453,7 +453,7 @@ Climate <|-- Polar
 FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcElement
-
+FeatureOfInterest <|-- IfcSpatialElement
 
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement
