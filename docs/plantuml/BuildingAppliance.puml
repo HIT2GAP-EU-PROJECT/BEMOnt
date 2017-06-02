@@ -34,10 +34,12 @@ class IfcAudioVisualAppliance <<ifc>>
 class IfcCommunicationAppliance <<ifc>>
 class IfcElectricAppliance <<ifc>>
 class IfcLamp <<ifc>>
+class IfcDistributionElement <<ifc>>
 
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
+BuildingAppliance --> IfcDistributionElement: hit2gap:containsElement
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
