@@ -24,7 +24,6 @@ class IfcAlarm <<ifc>>
 class IfcController <<ifc>>
 class IfcSensor <<ifc>>
 class Meter <<hit2gap>>
-class IfcControlElement <<ifc>>
 
 class IfcSpaceHeater <<ifc>>
 class IfcFireSuppressionTerminal <<ifc>>
@@ -39,7 +38,6 @@ class IfcDistributionElement <<ifc>>
 
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
-ifcControlElement <|-- Monitoring
 BuildingAppliance <|-- Wereable
 BuildingAppliance --> IfcDistributionElement: hit2gap:containsElement
 
