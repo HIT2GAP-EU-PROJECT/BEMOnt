@@ -412,6 +412,7 @@ System --> System: ssn:hasSubSystem
 System <|-- Device
 Device <|-- SensingDevice
 Sensor <|-- SensingDevice
+ifcSensor <|-- SensingDevice
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
 Observation --> FeatureOfInterest: ssn:featureOfInterest
