@@ -53,9 +53,9 @@ class Property <<SSN>> {
 
 }
 
-class Device <<ssn>>
-class Sensor <<ssn>>
-class SensingDevice <<ssn>>
+class Device <<SSN>>
+class Sensor <<SSN>>
+class SensingDevice <<SSN>>
 
 class IfcBuilding <<ifc>>
 
