@@ -57,6 +57,9 @@ class Device <<ssn>>
 class Sensor <<ssn>>
 class SensingDevice <<ssn>>
 
+class IfcBuilding <<ifc>>
+
+IfcBuilding --> BuildingState:hasState
 System --> BuildingState: hasState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState

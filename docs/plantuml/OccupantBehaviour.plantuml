@@ -445,6 +445,7 @@ Property <|-- PhysicProperty
 /'
 Description of building states
 '/
+IfcBuilding --> BuildingState:hasState
 System --> BuildingState: hit2gap:hasState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState
