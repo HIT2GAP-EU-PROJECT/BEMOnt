@@ -379,6 +379,7 @@ class SpaceCapacity <<hit2gap>>
  facilities
 '/
 
+System <|-- Sensor
 System --> System: ssn:hasSubSystem
 IfcSensor --> Sensor: owl:equivalentClass
 Sensor --> Observation: ssn:observedBy
@@ -402,7 +403,6 @@ _Geometry <|-- Polygon
 
 _Feature <|-- FeatureOfInterest
 _Feature <|-- System
-
 _Feature --> Hemisphere: hit2gap:locatedInHemisphere
 _Feature --> Climate: hit2gap:locatedInClimate
 
