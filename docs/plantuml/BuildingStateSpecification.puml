@@ -56,7 +56,7 @@ class Property <<SSN>> {
 class Sensor <<SSN>>
 
 class IfcBuilding <<ifc>>
-class ifcSensor <<ifc>>
+class IfcSensor <<ifc>>
 
 IfcBuilding --> BuildingState:hasState
 System --> BuildingState: hasState
@@ -69,7 +69,7 @@ ComfortState <|-- OccupantDiscomfort
 System --> System:ssn_hasSubsystem
 Sensor --> Observation:ssn_observedBy
 Sensor --> Property:ssn_observes
-ifcSensor --> Sensor: owl:equivalentClass
+IfcSensor --> Sensor: owl:equivalentClass
 
 Observation <|-- Driver
 
