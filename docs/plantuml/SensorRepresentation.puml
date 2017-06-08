@@ -46,6 +46,7 @@ class Polygon <<geo>>
 '/
 
 System --> System: ssn:hasSubSystem
+System <|-- Sensor
 IfcSensor --> Sensor: owl:equivalentClass
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
