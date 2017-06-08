@@ -453,6 +453,7 @@ BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort
 System --> System:ssn:hasSubsystem
+System <|-- Sensor
 Sensor --> Observation:ssn:observedBy
 Sensor --> Property:ssn:observes
 IfcSensor --> Sensor: owl:equivalentClass
