@@ -29,7 +29,7 @@ class DateTimeInterval <<time>>{
 }
 class Unit <<QUDT>>
 
-class ifcSensor <<ifc>>
+class IfcSensor <<ifc>>
 
 /'
   Definition of the Geo-core part
@@ -46,7 +46,7 @@ class Polygon <<geo>>
 '/
 
 System --> System: ssn:hasSubSystem
-ifcSensor --> Sensor: owl:equivalentClass
+IfcSensor --> Sensor: owl:equivalentClass
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
 Observation --> FeatureOfInterest: ssn:featureOfInterest
