@@ -25,19 +25,22 @@ class IfcController <<ifc>>
 class IfcSensor <<ifc>>
 class Meter <<hit2gap>>
 
-class IfcSpaceHeater <<ifc>>
-class IfcFireSuppressionTerminal <<ifc>>
-class IfcSanitaryTerminal <<ifc>>
-class IfcStackTerminal <<ifc>>
-class IfcWasteTerminal <<ifc>>
-class IfcAudioVisualAppliance <<ifc>>
-class IfcCommunicationAppliance <<ifc>>
-class IfcElectricAppliance <<ifc>>
-class IfcLamp <<ifc>>
+class IfcFlowStorageDevice <<ifc>>
+class IfcFlowMovingDevice <<ifc>>
+class IfcFlowController <<ifc>>
+class IfcFlowTreatmentDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>>
+
 
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
+BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
+BuildingAppliance <|-- IfcFlowStorageDevice
+BuildingAppliance <|-- IfcFlowMovingDevice
+BuildingAppliance <|-- IfcFlowController
+BuildingAppliance <|-- IfcFlowTreatmentDevice
+BuildingAppliance <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
@@ -48,15 +51,6 @@ Monitoring <|-- IfcAlarm
 Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
-IfcFlowTerminal <|-- IfcSpaceHeater
-IfcFlowTerminal <|-- IfcFireSuppressionTerminal
-IfcFlowTerminal <|-- IfcSanitaryTerminal
-IfcFlowTerminal <|-- IfcStackTerminal
-IfcFlowTerminal <|-- IfcWasteTerminal
-IfcFlowTerminal <|-- IfcAudioVisualAppliance
-IfcFlowTerminal <|-- IfcCommunicationAppliance
-IfcFlowTerminal <|-- IfcElectricAppliance
-IfcFlowTerminal <|-- IfcLamp
 
 
 @enduml

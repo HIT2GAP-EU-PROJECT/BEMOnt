@@ -56,6 +56,10 @@ class IfcSpatialStructureElement <<IFC>>{
 
 }
 
+class IfcSensor <<IFC>>{
+
+}
+
 class FeatureOfInterest <<SSN>>{
 
 }
@@ -158,10 +162,6 @@ class EnergyState <<HIT2GAP>>{
 }
 
 class Sensor <<SSN>>{
-
-}
-
-class Device <<SSN>>{
 
 }
 
@@ -339,7 +339,6 @@ class Probability <<HIT2GAP>>
 class Context <<HIT2GAP>>
 
 class IfcActuator <<ifc>>
-class SensingDevice <<ssn>>
 
 Context --> Indoor: hit2gap:isAssignedTo
 Context --> Outdoor: hit2gap:isAssignedTo
@@ -388,7 +387,7 @@ Description of the Ifc Actor relations
 
 IfcActor <|-- User
 IfcActor--> Role: hit2gap:hasRole
-IfcActor --> Device:hit2gap:acts
+IfcActor --> Sensor:hit2gap:acts
 IfcActor --> IfcActuator:hit2gap:acts
 
 Role ..[#orchid] Manager
@@ -445,6 +444,7 @@ Property <|-- PhysicProperty
 /'
 Description of building states
 '/
+IfcBuilding --> BuildingState:hasState
 System --> BuildingState: hit2gap:hasState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState
@@ -452,12 +452,11 @@ BuildingComplexState <|-- EnergyState
 BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort
-System <|-- Device
 System --> System:ssn:hasSubsystem
-Device <|-- Sensor
-Sensor <|-- SensingDevice
+System <|-- Sensor
 Sensor --> Observation:ssn:observedBy
 Sensor --> Property:ssn:observes
+IfcSensor --> Sensor: owl:equivalentClass
 
 Observation <|-- Driver
 
@@ -545,7 +544,7 @@ Actions <|-- OccupantBeaviour
 Actions --> OccupantDiscomfort:hit2gap:provoke
 SystemActions --> IfcDistributionControlElement:hit2gap:changes
 IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
-SystemActions --> Device: hit2gap:actuateOver
+SystemActions --> Sensor: hit2gap:actuateOver
 Actions --> IfcSpatialStructureElement: hit2gap:change
 
 @enduml

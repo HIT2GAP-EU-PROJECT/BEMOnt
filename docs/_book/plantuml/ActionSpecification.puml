@@ -39,6 +39,8 @@ class OccupantDiscomfort <<HIT2GAP>>{
 
 }
 
+class IfcActuator <<ifc>>
+
 Actions <|-- SystemActions
 Actions <|-- Inaction
 
@@ -49,6 +51,7 @@ Actions --> OccupantDiscomfort: hit2gap:provoke
 SystemActions --> IfcDistributionControlElement:hit2gap_changes
 IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
 SystemActions --> Device: hit2gap:actuateOver
+SystemActions --> IfcActuator: hit2gap:actuateOver
 IfcOccupant --> Actions: hit2gap:performsAction
 
 @enduml
