@@ -6,6 +6,7 @@ skinparam class {
   BackgroundColor LightBlue
   BorderColor DarkGrey
 }
+skinparam dpi 300
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
@@ -52,7 +53,11 @@ class Property <<SSN>> {
 
 }
 
-System <|-- BuildingState
+class Device <<ssn>>
+class Sensor <<ssn>>
+class SensingDevice <<ssn>>
+
+System --> BuildingState: hasState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState
 BuildingComplexState <|-- EnergyState
@@ -60,8 +65,9 @@ BuildingComplexState <|-- ComfortState
 ComfortState <|-- OccupantComfort
 ComfortState <|-- OccupantDiscomfort
 System <|-- Device
+Device <|-- SensingDevice
+Sensor <|-- SensingDevice
 System --> System:ssn_hasSubsystem
-Device <|-- Sensor
 Sensor --> Observation:ssn_observedBy
 Sensor --> Property:ssn_observes
 

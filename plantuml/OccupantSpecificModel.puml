@@ -5,6 +5,7 @@ skinparam class {
   BackgroundColor LightBlue
   BorderColor DarkGrey
 }
+skinparam dpi 300
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
@@ -59,10 +60,12 @@ class Owner <<(I,orchid) HIT2GAP>>{
 class Technician <<(I,orchid) HIT2GAP>>{
 
 }
+class IfcActuator<<ssn>>
 
 IfcActor <|-- User
 IfcActor--> Role: hit2gap_hasRole
 IfcActor --> Device:hit2gap_acts
+IfcActor --> IfcActuator:hit2gap_acts
 
 Role ..[#orchid] Manager
 Role ..[#orchid] Owner

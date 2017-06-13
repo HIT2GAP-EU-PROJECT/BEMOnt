@@ -8,6 +8,7 @@ skinparam class {
   BackgroundColor LightBlue
   BorderColor DarkGrey
 }
+skinparam dpi 300
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
@@ -181,7 +182,7 @@ class Spring <<(I,orchid) HIT2GAP>>{
 class Summer <<(I,orchid) HIT2GAP>>{
 
 }
-class Autum <<(I,orchid) HIT2GAP>>{
+class Autumn <<(I,orchid) HIT2GAP>>{
 
 }
 
@@ -317,7 +318,7 @@ class ActivityModel <<HIT2GAP>>{
 class EventModel <<HIT2GAP>>{
 }
 
-class EquipementModel <<HIT2GAP>>{
+class EquipmentModel <<HIT2GAP>>{
 }
 
 class Unit <<QUDT>>{
@@ -336,6 +337,9 @@ class Function <<HIT2GAP>>
 class Constraints <<HIT2GAP>>
 class Probability <<HIT2GAP>>
 class Context <<HIT2GAP>>
+
+class IfcActuator <<ifc>>
+class SensingDevice <<ssn>>
 
 Context --> Indoor: hit2gap:isAssignedTo
 Context --> Outdoor: hit2gap:isAssignedTo
@@ -385,6 +389,7 @@ Description of the Ifc Actor relations
 IfcActor <|-- User
 IfcActor--> Role: hit2gap:hasRole
 IfcActor --> Device:hit2gap:acts
+IfcActor --> IfcActuator:hit2gap:acts
 
 Role ..[#orchid] Manager
 Role ..[#orchid] Owner
@@ -440,7 +445,7 @@ Property <|-- PhysicProperty
 /'
 Description of building states
 '/
-System <|-- BuildingState
+System --> BuildingState: hit2gap:hasState
 BuildingState <|-- BuildingSimpleState
 BuildingState <|-- BuildingComplexState
 BuildingComplexState <|-- EnergyState
@@ -450,6 +455,7 @@ ComfortState <|-- OccupantDiscomfort
 System <|-- Device
 System --> System:ssn:hasSubsystem
 Device <|-- Sensor
+Sensor <|-- SensingDevice
 Sensor --> Observation:ssn:observedBy
 Sensor --> Property:ssn:observes
 
@@ -462,10 +468,10 @@ Description of driver (old SIM_MOD)
 Driver <|-- BehaviourModel
 Driver <|-- ActivityModel
 Driver <|-- EventModel
-Driver <|-- EquipementModel
+Driver <|-- EquipmentModel
 
 EventModel --> Event: hit2gap:isBasedOn
-EquipementModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
+EquipmentModel --> EnvironmentalBuildingFactors: hit2gap:isBasedOn
 BehaviourModel --> TimeBehaviour: hit2gap:isBasedOn
 BehaviourModel --> OccupantBehaviour: hit2gap:isBasedOn
 
@@ -476,7 +482,7 @@ TimeBehaviour <|-- DateTimeInterval
 Season ..[#orchid] Winter
 Season..[#orchid] Summer
 Season..[#orchid] Spring
-Season..[#orchid] Autum
+Season..[#orchid] Autumn
 
 Event --> SensorOutput: hit2gap:associatedTo
 Driver --> ModelResult: hit2gap:ModelResult

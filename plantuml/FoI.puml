@@ -8,6 +8,7 @@ skinparam class {
   BackgroundColor LightBlue
   BorderColor DarkGrey
 }
+skinparam dpi 300
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
@@ -15,8 +16,10 @@ skinparam classAttributeFontColor  Green
 /'
   Definition of the Feature of interest classes
 '/
+class FeatureOfInterest <<ssn>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
+class Microgrid <<ontomg>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
 }
@@ -34,6 +37,7 @@ class IfcUnitaryControlElement <<ifc>>
 class IfcFlowTerminal <<ifc>>
 
 class BuildingAppliance <<hit2gap>>
+class BuildingType <<hit2gap>>
 
 class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
@@ -86,7 +90,8 @@ class SpaceCapacity <<hit2gap>>
 
 FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
-FeatureOfInterest <|-- IfcBuildingElement
+FeatureOfInterest <|-- IfcElement
+FeatureOfInterest <|-- Microgrid
 
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement

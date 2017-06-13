@@ -6,6 +6,7 @@ skinparam class {
   BackgroundColor LightBlue
   BorderColor DarkGrey
 }
+skinparam dpi 300
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
@@ -20,7 +21,7 @@ class ActivityModel <<HIT2GAP>>{
 class EventModel <<HIT2GAP>>{
 }
 
-class EquipementModel <<HIT2GAP>>{
+class EquipmentModel <<HIT2GAP>>{
 }
 class TimeBehaviour <<HIT2GAP>>{
 
@@ -39,7 +40,7 @@ class Spring <<(I,orchid) HIT2GAP>>{
 class Summer <<(I,orchid) HIT2GAP>>{
 
 }
-class Autum <<(I,orchid) HIT2GAP>>{
+class Autumn <<(I,orchid) HIT2GAP>>{
 
 }
 
@@ -65,10 +66,10 @@ class DateTimeInterval <<Time>>{
 Driver <|-- BehaviourModel
 Driver <|-- ActivityModel
 Driver <|-- EventModel
-Driver <|-- EquipementModel
+Driver <|-- EquipmentModel
 
 EventModel --> Event: hit2gap_isBasedOn 
-EquipementModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
+EquipmentModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
 BehaviourModel --> TimeBehaviour: hit2gap_isBasedOn
 BehaviourModel --> OccupantBehaviour:hit2gap_isBasedOn
 
@@ -79,7 +80,7 @@ TimeBehaviour <|-- DateTimeInterval
 Season ..[#orchid] Winter
 Season..[#orchid] Summer
 Season..[#orchid] Spring
-Season..[#orchid] Autum
+Season..[#orchid] Autumn
 
 
 @enduml
