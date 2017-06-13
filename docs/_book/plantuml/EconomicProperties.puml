@@ -1,0 +1,25 @@
+@startuml
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam dpi 300
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+class Property <<ssn>>
+
+class EconomicProperties <<hit2gap>>
+
+class Cost <<hit2gap>>
+class Investment <<hit2gap>>
+
+Property <|-- EconomicProperties
+
+EconomicProperties <|-- Cost
+EconomicProperties <|-- Investment
+
+@enduml

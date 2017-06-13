@@ -1,0 +1,86 @@
+@startuml
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam dpi 300
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+class Driver <<HIT2GAP>>{
+
+}
+class BehaviourModel <<HIT2GAP>>{
+}
+class ActivityModel <<HIT2GAP>>{
+}
+
+class EventModel <<HIT2GAP>>{
+}
+
+class EquipmentModel <<HIT2GAP>>{
+}
+class TimeBehaviour <<HIT2GAP>>{
+
+}
+
+class Season <<HIT2GAP>>{
+
+}
+
+class Winter <<(I,orchid) HIT2GAP>>{
+
+}
+class Spring <<(I,orchid) HIT2GAP>>{
+
+}
+class Summer <<(I,orchid) HIT2GAP>>{
+
+}
+class Autumn <<(I,orchid) HIT2GAP>>{
+
+}
+
+class DayOfWeek <<Time>>{
+
+}
+class OccupantBehaviour<<HIT2GAP>>{
+
+}
+class EnvironmentalBuildingFactors <<HIT2GAP>>{
+
+}
+class Instant <<Time>>{
+
+}
+
+class DateTimeInterval <<Time>>{
+
+}
+
+
+
+Driver <|-- BehaviourModel
+Driver <|-- ActivityModel
+Driver <|-- EventModel
+Driver <|-- EquipmentModel
+
+EventModel --> Event: hit2gap_isBasedOn 
+EquipmentModel --> EnvironmentalBuildingFactors: hit2gap_isBasedOn
+BehaviourModel --> TimeBehaviour: hit2gap_isBasedOn
+BehaviourModel --> OccupantBehaviour:hit2gap_isBasedOn
+
+TimeBehaviour <|-- Season
+TimeBehaviour <|-- Instant
+TimeBehaviour <|-- DayOfWeek
+TimeBehaviour <|-- DateTimeInterval
+Season ..[#orchid] Winter
+Season..[#orchid] Summer
+Season..[#orchid] Spring
+Season..[#orchid] Autumn
+
+
+@enduml

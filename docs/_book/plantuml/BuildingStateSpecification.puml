@@ -1,0 +1,76 @@
+@startuml
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam dpi 300
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+class System <<SSN>>{
+
+}
+
+class BuildingState <<HIT2GAP>>{
+
+}
+
+class BuildingSimpleState <<HIT2GAP>>{
+
+}
+
+class BuildingComplexState <<HIT2GAP>>{
+
+}
+
+class EnergyState <<HIT2GAP>>{
+
+}
+
+class ComfortState <<HIT2GAP>>{
+
+}
+
+class OccupantComfort <<HIT2GAP>>{
+
+}
+
+class OccupantDiscomfort <<HIT2GAP>>{
+
+}
+class Driver <<HIT2GAP>>{
+
+}
+
+class Observation <<SSN>>{
+
+}
+
+class Property <<SSN>> {
+
+}
+
+class Device <<ssn>>
+class Sensor <<ssn>>
+class SensingDevice <<ssn>>
+
+System --> BuildingState: hasState
+BuildingState <|-- BuildingSimpleState
+BuildingState <|-- BuildingComplexState
+BuildingComplexState <|-- EnergyState
+BuildingComplexState <|-- ComfortState
+ComfortState <|-- OccupantComfort
+ComfortState <|-- OccupantDiscomfort
+System <|-- Device
+Device <|-- SensingDevice
+Sensor <|-- SensingDevice
+System --> System:ssn_hasSubsystem
+Sensor --> Observation:ssn_observedBy
+Sensor --> Property:ssn_observes
+
+Observation <|-- Driver
+
+@enduml

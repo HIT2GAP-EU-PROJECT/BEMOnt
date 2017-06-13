@@ -1,0 +1,80 @@
+@startuml
+scale 0.7
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam dpi 300
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+/'
+ Definition of the classes referring the SSN-core part
+'/
+class System <<ssn>>
+class FeatureOfInterest <<ssn>>
+
+/'
+  Definition of the Geo-core part
+'/
+class _Feature <<geo>>
+class _Geometry <<geo>>
+class Point <<geo>>
+class Polygon <<geo>>
+class Hemisphere <<hit2gap>>
+class Climate <<hit2gap>>
+class Northerm <<(I,orchid),hit2gap>>
+class Southern <<(I,orchid),hit2gap>>
+class Tropical <<hit2gap>>
+class Arid <<hit2gap>>
+class Temperate <<hit2gap>>
+class Cold <<hit2gap>>
+class Polar <<hit2gap>>
+
+class North <<(I,orchid),hit2gap>>
+class South <<(I,orchid),hit2gap>>
+class West <<(I,orchid),hit2gap>>
+class East <<(I,orchid),hit2gap>>
+class North_East <<(I,orchid),hit2gap>>
+class North_West <<(I,orchid),hit2gap>>
+class South_East <<(I,orchid),hit2gap>>
+class South_West <<(I,orchid),hit2gap>>
+
+/'
+  Definition of the geospatial part using GeoOWL ontology
+'/
+
+_Feature --> _Geometry: geo:where
+_Geometry <|-- Point
+_Geometry <|-- Polygon
+
+_Feature <|-- FeatureOfInterest
+_Feature <|-- System
+
+_Feature --> Hemisphere: hit2gap:locatedInHemisphere
+_Feature --> Climate: hit2gap:locatedInClimate
+
+_Feature --> Orientation: hit2gap:hasOrientation
+
+Orientation..[#orchid] North
+Orientation..[#orchid] South
+Orientation..[#orchid] West
+Orientation..[#orchid] East
+Orientation..[#orchid] North_East
+Orientation..[#orchid] North_West
+Orientation..[#orchid] South_East
+Orientation..[#orchid] South_West
+
+Hemisphere ..[#orchid] Northerm
+Hemisphere ..[#orchid] Southern
+
+Climate <|-- Tropical
+Climate <|-- Arid
+Climate <|-- Temperate
+Climate <|-- Cold
+Climate <|-- Polar
+
+@enduml

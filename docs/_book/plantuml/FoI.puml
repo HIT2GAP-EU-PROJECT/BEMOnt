@@ -1,0 +1,168 @@
+@startuml
+
+scale 0.5
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+skinparam dpi 300
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+
+/'
+  Definition of the Feature of interest classes
+'/
+class FeatureOfInterest <<ssn>>
+class IfcBuilding <<ifc>>
+class IfcElement <<ifc>>
+class Microgrid <<ontomg>>
+class IfcSpatialStructureElement <<ifc>>{
+  hasSpatialStructureCapacity: xsd:double;
+}
+class IfcBuildingElement <<ifc>>
+class IfcElementComponent <<ifc>>
+class IfcDistributionControlElement <<ifc>>
+class IfcDistributionFlowElement <<ifc>>
+class IfcZone <<ifc>>
+class IfcSpatialZone <<ifc>>
+
+class IfcFlowInstrument <<ifc>>
+class IfcProtectiveDeviceTrippingUnit <<ifc>>
+class IfcSensor <<ifc>>
+class IfcUnitaryControlElement <<ifc>>
+class IfcFlowTerminal <<ifc>>
+
+class BuildingAppliance <<hit2gap>>
+class BuildingType <<hit2gap>>
+
+class Monitoring <<hit2gap>>
+class Wereable <<hit2gap>>
+
+class Smartwatch <<hit2gap>>
+class Smartphone <<hit2gap>>
+
+class Meter <<hit2gap>>
+
+class IfcActuator <<ifc>>
+class IfcAlarm <<ifc>>
+class IfcController <<ifc>>
+
+/'
+  Building types class definition
+'/
+class Agricultural <<hit2gap>>
+class Commercial <<hit2gap>>
+class Residential  <<hit2gap>>
+class Educational <<hit2gap>>
+class Industrial <<hit2gap>>
+class Religious <<hit2gap>>
+class Public <<hit2gap>>
+class Transports <<hit2gap>>
+
+/'
+  Building Zones types definition
+'/
+
+class Room <<hit2gap>>
+class Floor <<hit2gap>>
+class Desk <<hit2gap>>
+class Subterranean <<hit2gap>>
+class Ground <<hit2gap>>
+
+class IfcDistributionElement <<ifc>>
+class DistributionElementState <<hit2gap>>
+class DiscreteState <<hit2gap>>
+class ContinousState <<hit2gap>>
+
+class IfcBuildingStorey <<ifc>>
+class IfcSite <<ifc>>
+class IfcSpace <<ifc>>
+class SpaceCapacity <<hit2gap>>
+
+
+/'
+  Definition of the types of FoIs
+'/
+
+FeatureOfInterest <|-- IfcBuilding
+FeatureOfInterest <|-- BuildingAppliance
+FeatureOfInterest <|-- IfcElement
+FeatureOfInterest <|-- Microgrid
+
+IfcSpatialStructureElement <|-- IfcBuilding
+IfcSpatialElement <|-- IfcSpatialStructureElement
+IfcSpatialElement <|-- IfcSpatialZone
+
+IfcSpatialStructureElement --> SpaceCapacity: hit2gap:hasCapacity
+
+
+IfcSpatialStructureElement <|-- IfcBuildingStorey
+IfcSpatialStructureElement <|-- IfcSite
+IfcSpatialStructureElement <|-- IfcSpace
+
+
+BuildingAppliance --> IfcDistributionElement: hit2gap:containsElement
+
+IfcBuilding -->IfcSpatialZone: hit2gap:contains
+IfcBuilding -->IfcZone: hit2gap:contains
+IfcSpatialZone --> IfcElement: hit2gap:contains
+
+IfcElement <|-- IfcDistributionElement
+IfcElement <|-- IfcBuildingElement
+IfcElement <|-- IfcElementComponent
+
+IfcDistributionElement <|-- IfcDistributionControlElement
+IfcDistributionElement <|-- IfcDistributionFlowElement
+
+IfcDistributionElement --> DistributionElementState: hit2gap:hasState
+DistributionElementState <|-- ContinousState
+DistributionElementState <|-- DiscreteState
+
+IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
+
+BuildingType <|-- Agricultural
+BuildingType <|-- Commercial
+BuildingType <|-- Residential
+BuildingType <|-- Educational
+BuildingType <|-- Industrial
+BuildingType <|-- Religious
+BuildingType <|-- Public
+BuildingType <|-- Transports
+
+IfcBuilding --> BuildingType: hit2gap:hasType
+
+BuildingAppliance <|-- IfcFlowTerminal
+BuildingAppliance <|-- Monitoring
+BuildingAppliance <|-- Wereable
+
+Wereable <|-- Smartwatch
+Wereable <|-- Smartphone
+
+Monitoring <|-- IfcSensor
+Monitoring <|-- IfcActuator
+Monitoring <|-- IfcAlarm
+Monitoring <|-- IfcController
+Monitoring <|-- Meter
+
+IfcZone <|-- Room
+IfcZone <|-- Floor
+IfcZone <|-- Desk
+
+Floor <|-- Subterranean
+Floor <|-- Ground
+
+IfcDistributionElement <|-- IfcDistributionControlElement
+IfcDistributionControlElement <|-- IfcActuator
+IfcDistributionControlElement <|-- IfcAlarm
+IfcDistributionControlElement <|-- IfcController
+IfcDistributionControlElement <|-- IfcFlowInstrument
+IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
+IfcDistributionControlElement <|-- IfcSensor
+IfcDistributionControlElement <|-- IfcUnitaryControlElement
+
+
+@enduml
