@@ -16,8 +16,6 @@ skinparam classAttributeFontColor  Green
  Definition of the classes referring the SSN-core part
 '/
 class System <<ssn>>
-class Device <<ssn>>
-class SensingDevice <<ssn>>
 class Sensor <<ssn>>
 class Observation <<ssn>>
 class FeatureOfInterest <<ssn>>
@@ -223,7 +221,6 @@ class IfcFlowController <<ifc>>
 class IfcFlowFitting <<ifc>>
 class IfcFlowMovingDevice <<ifc>>
 class IfcFlowTerminal <<ifc>>
-class IfcMovingDevice <<ifc>>
 class IfcFlowStorageDevice <<ifc>>
 class IfcFlowTreatmentDevice <<ifc>>
 
@@ -231,32 +228,6 @@ class IfcFlowTreatmentDevice <<ifc>>
   Definition of the Energy Conversion Device
 '/
 
-class AirHandlingUnit <<hit2gap>>
-class IfcBoiler <<ifc>>
-class IfcChiller <<ifc>>
-class IfcCoil <<ifc>>
-class IfcBurner <<ifc>>
-class IfcCoil <<ifc>>
-class IfcEvaporativeCooler <<ifc>>
-class IfcEngine <<ifc>>
-class WaterPlant <<hit2gap>>
-class SteamPlant <<hit2gap>>
-class IfcHeatExchanger <<ifc>>
-class IfcAirToAirHeatRecovery <<ifc>>
-class IfcHumidifier <<ifc>>
-class IfcEvaporator <<ifc>>
-class ChilledBeams <<hit2gap>>
-class IfcCoolingTower <<ifc>>
-class IfcCondenser <<ifc>>
-class IfcTransformer <<ifc>>
-class IfcElectricGenerator <<ifc>>
-class IfcElectricMotor <<ifc>>
-class ElectricTimeControl <<hit2gap>>
-class IfcSolarDevice <<ifc>>
-
-/'
- Definition of the Energy Conversion Device
-'/
 class AirHandlingUnit <<hit2gap>>
 class IfcBoiler <<ifc>>
 class IfcChiller <<ifc>>
@@ -408,11 +379,9 @@ class SpaceCapacity <<hit2gap>>
  facilities
 '/
 
+System <|-- Sensor
 System --> System: ssn:hasSubSystem
-System <|-- Device
-Device <|-- SensingDevice
-Sensor <|-- SensingDevice
-ifcSensor <|-- SensingDevice
+IfcSensor --> Sensor: owl:equivalentClass
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
 Observation --> FeatureOfInterest: ssn:featureOfInterest
@@ -434,7 +403,6 @@ _Geometry <|-- Polygon
 
 _Feature <|-- FeatureOfInterest
 _Feature <|-- System
-
 _Feature --> Hemisphere: hit2gap:locatedInHemisphere
 _Feature --> Climate: hit2gap:locatedInClimate
 
@@ -664,7 +632,6 @@ IfcDistributionFlowElement <|-- IfcFlowController
 IfcDistributionFlowElement <|-- IfcFlowFitting
 IfcDistributionFlowElement <|-- IfcFlowMovingDevice
 IfcDistributionFlowElement <|-- IfcFlowTerminal
-IfcDistributionFlowElement <|-- IfcMovingDevice
 IfcDistributionFlowElement <|-- IfcFlowStorageDevice
 IfcDistributionFlowElement <|-- IfcFlowTreatmentDevice
 
@@ -703,10 +670,10 @@ IfcFlowTerminal <|-- IfcCommunicationAppliance
 IfcFlowTerminal <|-- IfcElectricAppliance
 IfcFlowTerminal <|-- IfcLamp
 
-IfcMovingDevice <|-- IfcCompressor
-IfcMovingDevice <|-- IfcFan
+IfcFlowMovingDevice <|-- IfcCompressor
+IfcFlowMovingDevice <|-- IfcFan
 IfcFan <|-- FanCoilUnit
-IfcMovingDevice <|-- IfcPump
+IfcFlowMovingDevice <|-- IfcPump
 IfcPump <|-- HeatPump
 
 IfcFlowStorageDevice <|-- IfcTank
