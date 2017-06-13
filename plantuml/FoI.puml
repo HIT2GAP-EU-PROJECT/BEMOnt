@@ -36,6 +36,12 @@ class IfcSensor <<ifc>>
 class IfcUnitaryControlElement <<ifc>>
 class IfcFlowTerminal <<ifc>>
 
+class IfcFlowStorageDevice <<ifc>>
+class IfcFlowMonitoringDevice <<ifc>>
+class IfcFlowTreatmentDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>>
+class IfcFlowController <<ifc>>
+
 class BuildingAppliance <<hit2gap>>
 class BuildingType <<hit2gap>>
 
@@ -92,6 +98,7 @@ FeatureOfInterest <|-- IfcBuilding
 FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcElement
 FeatureOfInterest <|-- Microgrid
+FeatureOfInterest <|-- IfcSpatialElement
 
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement
@@ -117,6 +124,13 @@ IfcElement <|-- IfcElementComponent
 
 IfcDistributionElement <|-- IfcDistributionControlElement
 IfcDistributionElement <|-- IfcDistributionFlowElement
+
+IfcDistributionFlowElement <|-- IfcFlowStorageDevice
+IfcDistributionFlowElement <|-- IfcFlowMonitoringDevice
+IfcDistributionFlowElement <|-- IfcFlowController
+IfcDistributionFlowElement <|-- IfcFlowTerminal
+IfcDistributionFlowElement <|-- IfcFlowTreatmentDevice
+IfcDistributionFlowElement <|-- IfcEnergyConversionDevice
 
 IfcDistributionElement --> DistributionElementState: hit2gap:hasState
 DistributionElementState <|-- ContinousState
