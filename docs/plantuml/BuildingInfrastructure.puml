@@ -82,13 +82,58 @@ class BuildingAppliance <<hit2gap>>
   Building types class definition
 '/
 class Agricultural <<hit2gap>>
+class Barn <<(I,orchid),hit2gap>>
+class Cellar <<(I,orchid),hit2gap>>
+class Farmhouse <<(I,orchid),hit2gap>>
+class Greenhouse <<(I,orchid),hit2gap>>
+class Silo <<(I,orchid),hit2gap>>
+
 class Commercial <<hit2gap>>
+class AutomobileRepair <<(I,orchid),hit2gap>>
+class ConventionCenter <<(I,orchid),hit2gap>>
+class Drugstore <<(I,orchid),hit2gap>>
+class Hotel <<(I,orchid),hit2gap>>
+class Pharmacy <<(I,orchid),hit2gap>>
+class Office <<(I,orchid),hit2gap>>
+class MallSupermarket <<(I,orchid),hit2gap>>
+class BarRestaurant <<(I,orchid),hit2gap>>
+class Shop <<(I,orchid),hit2gap>>
+
 class Residential  <<hit2gap>>
+class Apartment <<(I,orchid),hit2gap>>
+class House <<(I,orchid),hit2gap>>
+class Bungalow <<(I,orchid),hit2gap>>
+
 class Educational <<hit2gap>>
+class University <<(I,orchid),hit2gap>>
+class Secondary <<(I,orchid),hit2gap>>
+class Primary <<(I,orchid),hit2gap>>
+
 class Industrial <<hit2gap>>
+class Factory <<(I,orchid),hit2gap>>
+class DataCenter <<(I,orchid),hit2gap>>
+class LogisticPlatform <<(I,orchid),hit2gap>>
+class PowerPlant <<(I,orchid),hit2gap>>
+class Warehouse <<(I,orchid),hit2gap>>
+
 class Religious <<hit2gap>>
+
 class Public <<hit2gap>>
+class Library <<(I,orchid),hit2gap>>
+class Nursery <<(I,orchid),hit2gap>>
+class SwimmingCenter <<(I,orchid),hit2gap>>
+class Gym <<(I,orchid),hit2gap>>
+class Administration <<(I,orchid),hit2gap>>
+class NightClubConcert <<(I,orchid),hit2gap>>
+class Cinema <<(I,orchid),hit2gap>>
+class MuseumGallery <<(I,orchid),hit2gap>>
+class Hospital <<(I,orchid),hit2gap>>
+
 class Transports <<hit2gap>>
+class Airport <<(I,orchid),hit2gap>>
+class TrainStation <<(I,orchid),hit2gap>>
+class BusStation <<(I,orchid),hit2gap>>
+class Metro <<(I,orchid),hit2gap>>
 
 /'
   Building Zones types definition
@@ -459,13 +504,58 @@ DistributionElementState <|-- DiscreteState
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
 
 BuildingType <|-- Agricultural
+Agricultural ..[#orchid] Barn
+Agricultural ..[#orchid] Cellar 
+Agricultural ..[#orchid] Farmhouse 
+Agricultural ..[#orchid] Greenhouse 
+Agricultural ..[#orchid] Silo
+
 BuildingType <|-- Commercial
+Commercial ..[#orchid] AutomobileRepair 
+Commercial ..[#orchid] ConventionCenter 
+Commercial ..[#orchid] Drugstore 
+Commercial ..[#orchid] Hotel 
+Commercial ..[#orchid] Pharmacy 
+Commercial ..[#orchid] Office 
+Commercial ..[#orchid] MallSupermarket 
+Commercial ..[#orchid] BarRestaurant 
+Commercial ..[#orchid] Shop 
+
 BuildingType <|-- Residential
+Residential ..[#orchid] Apartment 
+Residential ..[#orchid] House 
+Residential ..[#orchid] Bungalow 
+
 BuildingType <|-- Educational
+Educational ..[#orchid] University 
+Educational ..[#orchid] Secondary 
+Educational ..[#orchid] Primary 
+
 BuildingType <|-- Industrial
+Industrial ..[#orchid] Factory 
+Industrial ..[#orchid] DataCenter 
+Industrial ..[#orchid] LogisticPlatform 
+Industrial ..[#orchid] PowerPlant 
+Industrial ..[#orchid] Warehouse 
+
 BuildingType <|-- Religious
+
 BuildingType <|-- Public
+Public ..[#orchid] Library 
+Public ..[#orchid] Nursery 
+Public ..[#orchid] SwimmingCenter 
+Public ..[#orchid] Gym 
+Public ..[#orchid] Administration
+Public ..[#orchid] NightClubConcert 
+Public ..[#orchid] Cinema 
+Public ..[#orchid] MuseumGallery 
+Public ..[#orchid] Hospital 
+
 BuildingType <|-- Transports
+Transports ..[#orchid] Airport 
+Transports ..[#orchid] TrainStation 
+Transports ..[#orchid] BusStation 
+Transports ..[#orchid] Metro 
 
 IfcBuilding --> BuildingType: hit2gap:hasType
 
