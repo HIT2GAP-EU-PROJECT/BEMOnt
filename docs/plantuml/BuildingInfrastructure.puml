@@ -160,6 +160,7 @@ class Cafeteria <<hit2gap>>
  Definition of IfcWindows
 '/
 
+class WindowCoverings <<hit2gap>> 
 class Curtains <<hit2gap>>
 class Blinds <<hit2gap>>
 class Shutters <<hit2gap>>
@@ -523,10 +524,11 @@ IfcSpace <|-- RestRoom
 IfcSpace <|-- Canteen
 IfcSpace <|-- Cafeteria
 
-IfcWindow <|-- Curtains
-IfcWindow <|-- Blinds
-IfcWindow <|-- Shutters
-IfcWindow <|-- Shades
+IfcWindow --> WindowCoverings: hit2gap:hasCoverings
+WindowCoverings <|-- Curtains
+WindowCoverings <|-- Blinds
+WindowCoverings <|-- Shutters
+WindowCoverings <|-- Shades
 
 IfcDistributionElement <|-- IfcDistributionControlElement
 IfcDistributionControlElement <|-- IfcActuator
