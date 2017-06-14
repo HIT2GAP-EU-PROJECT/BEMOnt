@@ -23,13 +23,28 @@ class PhysicProperties <<hit2gap>>
 class Cost <<hit2gap>>
 class Investment <<hit2gap>>
 
+class Climate <<hit2gap>>
+class Tropical <<hit2gap>>
+class Arid <<hit2gap>>
+class Temperate <<hit2gap>>
+class Cold <<hit2gap>>
+class Polar <<hit2gap>>
+
 class Air <<hit2gap>>
+class Water <<hit2gap>>
+class Wind <<hit2gap>>
+class WindOrientation <<hit2gap>>
+class WindSpeed <<hit2gap>>
+class Steam <<hit2gap>>
+class State <<hit2gap>>
 class Area <<hit2gap>>
 class Capacity <<hit2gap>>
 class ProductionCapacity <<hit2gap>>
 class Color <<hit2gap>>
 class Conductivity <<hit2gap>>
+class Co2Rate <<hit2gap>>
 class Density <<hit2gap>>
+class Humidity <<hit2gap>>
 class Depth <<hit2gap>>
 class EquivalentDepth <<hit2gap>>
 class Energy <<hit2gap>>
@@ -40,12 +55,18 @@ class Condensation <<hit2gap>>
 class Medium <<hit2gap>>
 class Precipitation <<hit2gap>>
 class Pressure <<hit2gap>>
+class Position <<hit2gap>>
+class Longitude <<hit2gap>>
+class Latitude <<hit2gap>>
+class Altitude <<hit2gap>>
 class Radiation <<hit2gap>>
+class LightRadiation <<hit2gap>>
 class IncidentRadiation <<hit2gap>>
 class AbsorbedIncidentRadiation <<hit2gap>>
 class ReflectedIncidentradiation <<hit2gap>>
 class AbsorbedScatteredIncidentRadiation <<hit2gap>>
 class TransmittedIncidentRadiation <<hit2gap>>
+class Tension <<hit2gap>>
 class Rainfall <<hit2gap>>
 class Reflectivity <<hit2gap>>
 class Shape <<hit2gap>>
@@ -55,6 +76,7 @@ class Length <<hit2gap>>
 class Slope <<hit2gap>>
 class Weight <<hit2gap>>
 class Width <<hit2gap>>
+class Intensity <<hit2gap>>
 class Speed <<hit2gap>>
 class Temperature  <<hit2gap>>
 class Time <<hit2gap>>
@@ -67,7 +89,7 @@ class Flow <<hit2gap>>
 class Inflow <<hit2gap>>
 class Outflow <<hit2gap>>
 class AirMedium <<hit2gap>>
-
+class AirQuality <<hit2gap>>
 /'
   Definition of the properties hierarchy
 '/
@@ -79,6 +101,9 @@ EconomicProperties <|-- Cost
 EconomicProperties <|-- Investment
 
 PhysicProperties <|-- Air
+PhysicProperties <|-- Water
+PhysicProperties <|-- Steam
+PhysicProperties <|-- State
 PhysicProperties <|-- Area
 PhysicProperties <|-- Capacity
 Capacity<|-- ProductionCapacity
@@ -86,23 +111,35 @@ PhysicProperties <|-- Color
 PhysicProperties <|-- Conductivity
 PhysicProperties <|-- Density
 PhysicProperties <|-- Depth
+PhysicProperties <|-- Position
+Position <|-- Longitude
+Position <|-- Latitude
+Position <|-- Altitude
 PhysicProperties <|--EquivalentDepth
 PhysicProperties <|-- Energy
 Energy<|-- ElectricEnergy
 Energy<|-- HeatFluxEnergy
+PhysicProperties <|-- Wind
+Wind <|-- WindOrientation
+Wind <|-- WindSpeed 
 PhysicProperties <|-- Evaporation
 PhysicProperties <|-- Condensation
+PhysicProperties <|-- Co2Rate
+PhysicProperties <|-- Humidity
 PhysicProperties <|-- Medium
 PhysicProperties <|-- Precipitation
 PhysicProperties <|-- Pressure
 PhysicProperties <|-- Radiation
+PhysicProperties <|-- Tension
 Radiation<|-- IncidentRadiation
+Radiation<|-- LightRadiation
 IncidentRadiation<|-- AbsorbedIncidentRadiation
 IncidentRadiation<|-- ReflectedIncidentradiation
 IncidentRadiation<|-- AbsorbedScatteredIncidentRadiation
 IncidentRadiation<|-- TransmittedIncidentRadiation
 PhysicProperties <|-- Rainfall
 PhysicProperties <|-- Reflectivity
+PhysicProperties <|-- Intensity
 PhysicProperties <|-- Shape
 Shape<|-- CrossSection
 Shape<|-- Height
@@ -122,5 +159,13 @@ Volume<|-- Flow
 Flow<|-- Inflow
 Flow<|-- Outflow
 Medium<|-- AirMedium
+Air<|-- AirQuality
+PhysicProperties <|-- Climate
+Climate <|-- Tropical
+Climate <|-- Arid
+Climate <|-- Temperate
+Climate <|-- Cold
+Climate <|-- Polar
+
 
 @enduml
