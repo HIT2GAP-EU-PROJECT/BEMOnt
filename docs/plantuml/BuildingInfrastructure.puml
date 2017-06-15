@@ -257,7 +257,7 @@ class IfcDistributionSystem <<ifc>>
 /'
   Definition of DistributionFlow Element
 '/
-class PlumbingFireProtection <<hit2gap>>
+
 class ElectricElement <<hit2gap>>
 class MonitoringElement <<hit2gap>>
 class WereableElement <<hit2gap>>
@@ -714,7 +714,6 @@ IfcSystem --> Microgrid: hit2gap:measuresEnergy
  Definiton of Mechanical Building Elements
 '/
 
-IfcDistributionFlowElement <|-- PlumbingFireProtection
 IfcDistributionFlowElement <|-- ElectricElement
 IfcDistributionFlowElement <|-- MonitoringElement
 IfcDistributionFlowElement <|-- WereableElement
