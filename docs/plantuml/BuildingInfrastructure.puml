@@ -259,7 +259,6 @@ class IfcDistributionSystem <<ifc>>
 '/
 
 class ElectricElement <<hit2gap>>
-class MonitoringElement <<hit2gap>>
 class WereableElement <<hit2gap>>
 class IfcDistributionChamberElement <<ifc>>
 class IfcEnergyConversionDevice <<ifc>>
@@ -564,7 +563,6 @@ IfcBuilding --> BuildingType: hit2gap:hasType
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
-
 BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
 BuildingAppliance <|-- IfcFlowStorageDevice
 BuildingAppliance <|-- IfcFlowMovingDevice
