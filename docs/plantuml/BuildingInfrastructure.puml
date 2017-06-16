@@ -315,6 +315,7 @@ class IfcAudioVisualAppliance <<ifc>>
 class IfcCommunicationAppliance <<ifc>>
 class IfcElectricAppliance <<ifc>>
 class IfcLamp <<ifc>>
+class IfcOutlet <<ifc>>
 
 /'
  Definition of the Moving Devices
@@ -330,7 +331,7 @@ class HeatPump <<hit2gap>>
   Definition of the Flow Storage Device
 '/
 class IfcTank <<ifc>>
-class IfcElectricFlowStorage <<ifc>>
+class IfcElectricFlowStorageDevice <<ifc>>
 
 /'
  Definition of the Flow Controller
@@ -484,7 +485,7 @@ IfcSpatialElement <|-- IfcSpatialZone
 
 IfcSpatialStructureElement --> SpaceCapacity: hit2gap:hasCapacity
 
-BuildingAppliance --> IfcDistributionElement: hit2gap:containsElement
+
 
 IfcBuilding -->IfcSpatialZone: hit2gap:contains
 IfcBuilding -->IfcZone: hit2gap:contains
@@ -502,6 +503,7 @@ DistributionElementState <|-- ContinousState
 DistributionElementState <|-- DiscreteState
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
+
 
 BuildingType <|-- Agricultural
 Agricultural ..[#orchid] Barn
@@ -562,6 +564,13 @@ IfcBuilding --> BuildingType: hit2gap:hasType
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
+
+BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
+BuildingAppliance <|-- IfcFlowStorageDevice
+BuildingAppliance <|-- IfcFlowMovingDevice
+BuildingAppliance <|-- IfcFlowController
+BuildingAppliance <|-- IfcFlowTreatmentDevice
+BuildingAppliance <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
@@ -760,6 +769,7 @@ IfcFlowTerminal <|-- IfcAudioVisualAppliance
 IfcFlowTerminal <|-- IfcCommunicationAppliance
 IfcFlowTerminal <|-- IfcElectricAppliance
 IfcFlowTerminal <|-- IfcLamp
+IfcFlowTerminal <|-- IfcOutlet
 
 IfcFlowMovingDevice <|-- IfcCompressor
 IfcFlowMovingDevice <|-- IfcFan
@@ -768,7 +778,7 @@ IfcFlowMovingDevice <|-- IfcPump
 IfcPump <|-- HeatPump
 
 IfcFlowStorageDevice <|-- IfcTank
-IfcFlowStorageDevice <|-- IfcElectricFlowStorage
+IfcFlowStorageDevice <|-- IfcElectricFlowStorageDevice
 
 IfcFlowController <|-- IfcValve
 IfcFlowController <|-- IfcDamper
