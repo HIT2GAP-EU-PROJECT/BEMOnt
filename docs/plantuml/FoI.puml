@@ -37,10 +37,11 @@ class IfcUnitaryControlElement <<ifc>>
 class IfcFlowTerminal <<ifc>>
 
 class IfcFlowStorageDevice <<ifc>>
-class IfcFlowMonitoringDevice <<ifc>>
 class IfcFlowTreatmentDevice <<ifc>>
 class IfcEnergyConversionDevice <<ifc>>
 class IfcFlowController <<ifc>>
+
+class IfcFlowMovingDevice <<ifc>>
 
 class BuildingAppliance <<hit2gap>>
 class BuildingType <<hit2gap>>
@@ -112,7 +113,6 @@ IfcSpatialStructureElement <|-- IfcSite
 IfcSpatialStructureElement <|-- IfcSpace
 
 
-BuildingAppliance --> IfcDistributionElement: hit2gap:containsElement
 
 IfcBuilding -->IfcSpatialZone: hit2gap:contains
 IfcBuilding -->IfcZone: hit2gap:contains
@@ -126,7 +126,7 @@ IfcDistributionElement <|-- IfcDistributionControlElement
 IfcDistributionElement <|-- IfcDistributionFlowElement
 
 IfcDistributionFlowElement <|-- IfcFlowStorageDevice
-IfcDistributionFlowElement <|-- IfcFlowMonitoringDevice
+IfcDistributionFlowElement <|-- IfcFlowMovingDevice
 IfcDistributionFlowElement <|-- IfcFlowController
 IfcDistributionFlowElement <|-- IfcFlowTerminal
 IfcDistributionFlowElement <|-- IfcFlowTreatmentDevice
@@ -152,6 +152,13 @@ IfcBuilding --> BuildingType: hit2gap:hasType
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
+
+BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
+BuildingAppliance <|-- IfcFlowStorageDevice
+BuildingAppliance <|-- IfcFlowMovingDevice
+BuildingAppliance <|-- IfcFlowController
+BuildingAppliance <|-- IfcFlowTreatmentDevice
+BuildingAppliance <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
