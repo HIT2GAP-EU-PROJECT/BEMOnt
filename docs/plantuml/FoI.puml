@@ -102,6 +102,12 @@ FeatureOfInterest <|-- IfcElement
 FeatureOfInterest <|-- Microgrid
 FeatureOfInterest <|-- IfcSpatialElement
 
+BuildingAppliance --> Microgrid: hit2gap:produceEnergy
+BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
+BuildingAppliance --> Microgrid: hit2gap:storageEnergy
+BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
+BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
+
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement
 IfcSpatialElement <|-- IfcSpatialZone
