@@ -52,6 +52,7 @@ class Polar <<hit2gap>>
 /'
   Definition of the Feature of interest classes
 '/
+class BuildingAppliance <<hit2gap>>
 class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
@@ -712,11 +713,11 @@ NonRenewableDERBranch <|-- CHPPPowerBranch
 FuelCellBranch --> Converter: ontomg:hasA
 FuelCellBranch --> DieselGenerator: ontomg:hasA
 
-IfcSystem --> Microgrid: hit2gap:produceEnergy
-IfcSystem --> Microgrid: hit2gap:consumesEnergy
-IfcSystem --> Microgrid: hit2gap:storageEnergy
-IfcSystem --> Microgrid: hit2gap:controlsEnergy
-IfcSystem --> Microgrid: hit2gap:measuresEnergy
+BuildingAppliance --> Microgrid: hit2gap:produceEnergy
+BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
+BuildingAppliance --> Microgrid: hit2gap:storageEnergy
+BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
+BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
 
 /'
  Definiton of Mechanical Building Elements
