@@ -19,6 +19,7 @@ skinparam classAttributeFontColor  Green
 class FeatureOfInterest <<ssn>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
+class IfcSpatialElement <<ifc>>
 class Microgrid <<ontomg>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
