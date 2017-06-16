@@ -25,6 +25,7 @@ class IfcController <<ifc>>
 class IfcSensor <<ifc>>
 class Meter <<hit2gap>>
 
+class IfcDistributionElement <<ifc>>
 class IfcFlowStorageDevice <<ifc>>
 class IfcFlowMovingDevice <<ifc>>
 class IfcFlowController <<ifc>>
