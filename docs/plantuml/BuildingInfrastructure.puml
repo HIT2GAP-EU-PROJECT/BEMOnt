@@ -55,6 +55,7 @@ class Polar <<hit2gap>>
 class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
+class IfcSpatialElement <<ifc>>
 class IfcBuildingElement <<ifc>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
