@@ -78,7 +78,6 @@ class North_West <<(I,orchid),hit2gap>>
 class South_East <<(I,orchid),hit2gap>>
 class South_West <<(I,orchid),hit2gap>>
 
-class BuildingAppliance <<hit2gap>>
 
 /'
   Building types class definition
@@ -576,6 +575,8 @@ BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
 BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
+BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
+IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
 BuildingAppliance <|-- IfcFlowStorageDevice
 BuildingAppliance <|-- IfcFlowMovingDevice
 BuildingAppliance <|-- IfcFlowController
@@ -637,6 +638,9 @@ WindowCoverings <|-- Curtains
 WindowCoverings <|-- Blinds
 WindowCoverings <|-- Shutters
 WindowCoverings <|-- Shades
+
+IfcActuator --> IfcWindow: hit2gap:OpenClose
+IfcActuator --> IfcWindowCoverings: hit2gap:OpenClose
 
 IfcDistributionElement <|-- IfcDistributionControlElement
 IfcDistributionControlElement <|-- IfcActuator
