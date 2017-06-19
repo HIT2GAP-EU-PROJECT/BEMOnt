@@ -488,6 +488,7 @@ IfcSpatialStructureElement --> SpaceCapacity: hit2gap:hasCapacity
 
 IfcSite --> IfcSite: hit2gap:contains
 IfcSite --> IfcBuilding: hit2gap:contains
+IfcSite --> Climate: hit2gap:locatedInClimate
 IfcBuilding --> IfcBuilding: hit2gap:contains
 IfcBuildingStorey -->IfcSpace: hit2gap:contains
 IfcZone -->IfcZone: hit2gap:contains
@@ -512,8 +513,6 @@ DistributionElementState <|-- ContinousState
 DistributionElementState <|-- DiscreteState
 
 IfcDistributionElement --> IfcBuildingElement: hit2gap:contains
-
-
 
 BuildingType <|-- Agricultural
 Agricultural ..[#orchid] Barn
