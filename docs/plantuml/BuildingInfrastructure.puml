@@ -297,6 +297,8 @@ class IfcElectricGenerator <<ifc>>
 class IfcElectricMotor <<ifc>>
 class ElectricTimeControl <<hit2gap>>
 class IfcSolarDevice <<ifc>>
+class ElectricHeater <<hit2gap>>
+
 
 /'
  Definition of the Element Component Devices
@@ -777,6 +779,7 @@ IfcFlowTerminal <|-- IfcCommunicationAppliance
 IfcFlowTerminal <|-- IfcElectricAppliance
 IfcFlowTerminal <|-- IfcLamp
 IfcFlowTerminal <|-- IfcOutlet
+IfcFlowTerminal <|-- ElectricHeater
 
 IfcFlowMovingDevice <|-- IfcCompressor
 IfcFlowMovingDevice <|-- IfcFan
