@@ -44,6 +44,9 @@ class WindowCoverings <<hit2gap>>
 
 class IfcActuator <<ifc>>
 class IfcWindow <<ifc>>
+class IfcZone <<ifc>>
+class IfcEnergyConversionDevice <<ifc>>
+
 
 
 Actions <|-- SystemActions
@@ -61,6 +64,7 @@ IfcOccupant --> Actions: hit2gap:performsAction
 IfcWindow --> WindowCoverings: hit2gap:hasCoverings
 IfcActuator --> IfcWindow: hit2gap:OpenClose
 IfcActuator --> IfcWindowCoverings: hit2gap:OpenClose
+IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
 
 
 @enduml
