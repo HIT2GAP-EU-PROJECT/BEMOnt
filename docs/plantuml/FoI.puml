@@ -125,6 +125,17 @@ IfcBuilding -->IfcSpatialZone: hit2gap:contains
 IfcBuilding -->IfcZone: hit2gap:contains
 IfcSpatialZone --> IfcElement: hit2gap:contains
 
+
+IfcSite --> IfcSite: hit2gap:contains
+IfcSite --> IfcBuilding: hit2gap:contains
+IfcBuilding --> IfcBuilding: hit2gap:contains
+IfcBuildingStorey -->IfcSpace: hit2gap:contains
+IfcZone -->IfcZone: hit2gap:contains
+IfcZone -->IfcSpace: hit2gap:contains
+
+IfcBuilding -->IfcSpace: hit2gap:contains
+IfcBuilding --> IfcBuildingStorey: hit2gap:contains
+
 IfcElement <|-- IfcDistributionElement
 IfcElement <|-- IfcBuildingElement
 IfcElement <|-- IfcElementComponent
