@@ -19,6 +19,7 @@ class Wereable <<hit2gap>>
 class Smartwatch <<hit2gap>>
 class Smartphone <<hit2gap>>
 
+class IfcZone <<ifc>>
 class IfcActuator <<ifc>>
 class IfcAlarm <<ifc>>
 class IfcController <<ifc>>
@@ -38,6 +39,8 @@ BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
 BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
+BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
+IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
 BuildingAppliance <|-- IfcFlowStorageDevice
 BuildingAppliance <|-- IfcFlowMovingDevice
 BuildingAppliance <|-- IfcFlowController
