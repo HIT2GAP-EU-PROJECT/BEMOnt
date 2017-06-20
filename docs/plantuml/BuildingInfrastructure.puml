@@ -262,7 +262,9 @@ class IfcDistributionSystem <<ifc>>
 class ElectricElement <<hit2gap>>
 class WereableElement <<hit2gap>>
 class IfcDistributionChamberElement <<ifc>>
-class IfcEnergyConversionDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>> {
+  hasSetPoint xsd:boolean
+}
 class IfcFlowController <<ifc>>
 class IfcFlowFitting <<ifc>>
 class IfcFlowMovingDevice <<ifc>>
