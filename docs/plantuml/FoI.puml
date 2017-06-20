@@ -125,7 +125,6 @@ IfcSpatialStructureElement <|-- IfcSpace
 
 
 IfcBuilding -->IfcSpatialZone: hit2gap:contains
-IfcBuilding -->IfcZone: hit2gap:contains
 IfcSpatialZone --> IfcElement: hit2gap:contains
 
 
@@ -193,10 +192,22 @@ Monitoring <|-- IfcAlarm
 Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
-IfcZone <|-- Room
-IfcZone <|-- Floor
-IfcZone <|-- Desk
+IfcSpace <|-- Office
+IfcSpace <|-- CirculationArea
+IfcSpace <|-- WetArea
+IfcSpace <|-- ConferenceRoom
+IfcSpace <|-- Balcony
+IfcSpace <|-- Kitchen
+IfcSpace <|-- Toilets
+IfcSpace <|-- Bathroom
+IfcSpace <|-- RestRoom
+IfcSpace <|-- Canteen
+IfcSpace <|-- Cafeteria
+IfcSpace <|-- Room
+IfcSpace <|-- Desk
+IfcSpace <|-- OpenSpace
 
+IfcBuildingStorey <|-- Floor
 Floor <|-- Subterranean
 Floor <|-- Ground
 
