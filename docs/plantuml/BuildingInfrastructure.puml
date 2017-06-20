@@ -460,7 +460,6 @@ _Geometry <|-- Polygon
 _Feature <|-- FeatureOfInterest
 _Feature <|-- System
 _Feature --> Hemisphere: hit2gap:locatedInHemisphere
-_Feature --> Climate: hit2gap:locatedInClimate
 
 Hemisphere ..[#orchid] Northerm
 Hemisphere ..[#orchid] Southern
