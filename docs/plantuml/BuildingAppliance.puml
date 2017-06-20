@@ -31,7 +31,9 @@ class IfcFlowStorageDevice <<ifc>>
 class IfcFlowMovingDevice <<ifc>>
 class IfcFlowController <<ifc>>
 class IfcFlowTreatmentDevice <<ifc>>
-class IfcEnergyConversionDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>> {
+  hasSetPoint xsd:boolean
+}
 
 class Microgrid <<ontomg>>
 
