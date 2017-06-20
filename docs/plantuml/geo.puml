@@ -33,6 +33,7 @@ class Arid <<hit2gap>>
 class Temperate <<hit2gap>>
 class Cold <<hit2gap>>
 class Polar <<hit2gap>>
+class Orientation <<hit2gap>>
 
 class North <<(I,orchid),hit2gap>>
 class South <<(I,orchid),hit2gap>>
