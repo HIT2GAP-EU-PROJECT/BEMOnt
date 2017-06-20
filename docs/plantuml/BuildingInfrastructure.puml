@@ -142,6 +142,7 @@ class Metro <<(I,orchid),hit2gap>>
 
 class Room <<hit2gap>>
 class Floor <<hit2gap>>
+class OpenSpace <<hit2gap>>
 class Desk <<hit2gap>>
 class Subterranean <<hit2gap>>
 class Ground <<hit2gap>>
@@ -502,7 +503,6 @@ IfcZone -->IfcZone: hit2gap:contains
 IfcZone -->IfcSpace: hit2gap:contains
 
 IfcBuilding -->IfcSpatialZone: hit2gap:contains
-IfcBuilding -->IfcZone: hit2gap:contains
 IfcBuilding -->IfcSpace: hit2gap:contains
 IfcBuilding --> IfcBuildingStorey: hit2gap:contains
 IfcSpatialZone --> IfcElement: hit2gap:contains
@@ -599,13 +599,6 @@ Monitoring <|-- IfcAlarm
 Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
-IfcZone <|-- Room
-IfcZone <|-- Floor
-IfcZone <|-- Desk
-
-Floor <|-- Subterranean
-Floor <|-- Ground
-
 IfcBuildingElement <|-- IfcBeam
 IfcBuildingElement <|-- IfcChimmey
 IfcBuildingElement <|-- IfcColumn
@@ -639,6 +632,13 @@ IfcSpace <|-- Bathroom
 IfcSpace <|-- RestRoom
 IfcSpace <|-- Canteen
 IfcSpace <|-- Cafeteria
+IfcSpace <|-- Room
+IfcSpace <|-- Desk
+IfcSpace <|-- OpenSpace
+
+IfcBuildingStorey <|-- Floor
+Floor <|-- Subterranean
+Floor <|-- Ground
 
 IfcWindow --> WindowCoverings: hit2gap:hasCoverings
 WindowCoverings <|-- Curtains
