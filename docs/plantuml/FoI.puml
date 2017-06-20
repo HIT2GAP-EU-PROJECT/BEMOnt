@@ -39,7 +39,10 @@ class IfcFlowTerminal <<ifc>>
 
 class IfcFlowStorageDevice <<ifc>>
 class IfcFlowTreatmentDevice <<ifc>>
-class IfcEnergyConversionDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>> {
+  hasSetPoint xsd:boolean
+}
+
 class IfcFlowController <<ifc>>
 
 class IfcFlowMovingDevice <<ifc>>
