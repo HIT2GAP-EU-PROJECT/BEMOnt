@@ -658,8 +658,8 @@ IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
 IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
-
-_Feature --> Orientation: hit2gap:hasOrientation
+IfcSite --> Orientation: hit2gap:hasOrientation
+IfcBuilding --> Orientation: hit2gap:hasOrientation
 
 Orientation..[#orchid] North
 Orientation..[#orchid] South
