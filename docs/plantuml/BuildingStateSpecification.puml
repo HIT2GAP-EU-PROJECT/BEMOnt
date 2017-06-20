@@ -45,8 +45,8 @@ class Driver <<HIT2GAP>>{
 
 }
 
-class Observation <<SSN>>{
-
+class Observation <<SSN>> {
+  externalStorageID xsd:string
 }
 
 class Property <<SSN>> {
