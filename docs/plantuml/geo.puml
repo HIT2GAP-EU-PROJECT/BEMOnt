@@ -33,7 +33,6 @@ class Arid <<hit2gap>>
 class Temperate <<hit2gap>>
 class Cold <<hit2gap>>
 class Polar <<hit2gap>>
-class Orientation <<hit2gap>>
 
 class North <<(I,orchid),hit2gap>>
 class South <<(I,orchid),hit2gap>>
@@ -57,17 +56,6 @@ _Feature <|-- System
 
 _Feature --> Hemisphere: hit2gap:locatedInHemisphere
 _Feature --> Climate: hit2gap:locatedInClimate
-
-_Feature --> Orientation: hit2gap:hasOrientation
-
-Orientation..[#orchid] North
-Orientation..[#orchid] South
-Orientation..[#orchid] West
-Orientation..[#orchid] East
-Orientation..[#orchid] North_East
-Orientation..[#orchid] North_West
-Orientation..[#orchid] South_East
-Orientation..[#orchid] South_West
 
 Hemisphere ..[#orchid] Northerm
 Hemisphere ..[#orchid] Southern
