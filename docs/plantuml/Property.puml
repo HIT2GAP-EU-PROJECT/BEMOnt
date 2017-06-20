@@ -24,12 +24,49 @@ class Cost <<hit2gap>>
 class Investment <<hit2gap>>
 
 class Climate <<hit2gap>>
-class Tropical <<hit2gap>>
-class Arid <<hit2gap>>
-class Temperate <<hit2gap>>
-class Cold <<hit2gap>>
-class Polar <<hit2gap>>
+class Tropical <<(I,orchid),hit2gap>>
+class TropicalRainforest <<(I,orchid),hit2gap>>
+class TropicalMonsoon <<(I,orchid),hit2gap>>
+class TropicalSavanna <<(I,orchid),hit2gap>>
 
+class Arid <<(I,orchid),hit2gap>>
+class HotDesert <<(I,orchid),hit2gap>>
+class ColdDesert <<(I,orchid),hit2gap>>
+class MildDesert <<(I,orchid),hit2gap>>
+class HotSemiArid <<(I,orchid),hit2gap>>
+class ColdSemiArid <<(I,orchid),hit2gap>>
+class MildSemiArid <<(I,orchid),hit2gap>>
+
+class Temperate <<(I,orchid),hit2gap>>
+class HumidSubtropical <<(I,orchid),hit2gap>>
+class TemperateOceanic <<(I,orchid),hit2gap>>
+class SubpolarOceanic <<(I,orchid),hit2gap>>
+class MonsoonInfluencedHumidSubtropical <<(I,orchid),hit2gap>>
+class TemperateOceanicWithDryWinters <<(I,orchid),hit2gap>>
+class SubPolarOceanicWithDryWinters <<(I,orchid),hit2gap>>
+class HotSummerMediterranean <<(I,orchid),hit2gap>>
+class WarnSummerMediterranean <<(I,orchid),hit2gap>>
+class CoolSummerMediterranean <<(I,orchid),hit2gap>>
+
+
+class Continental <<(I,orchid),hit2gap>>
+class HotSummerHumidContinental <<(I,orchid),hit2gap>>
+class WarmSummerHumidContinental <<(I,orchid),hit2gap>>
+class Subartic <<(I,orchid),hit2gap>>
+class ExtremelyColdSubartic <<(I,orchid),hit2gap>>
+class MonsoonInfluencedHotSummerHumidContinental <<(I,orchid),hit2gap>>
+class MonsoonInfluencedWarmSummerHumidContinental <<(I,orchid),hit2gap>>
+class MonsoonInfluencedSubartic <<(I,orchid),hit2gap>>
+class MonsoonInfluencedExtremelyColdSubarctic <<(I,orchid),hit2gap>>
+class HotDrySummerContinental <<(I,orchid),hit2gap>>  
+class WarmDrySummerContinental <<(I,orchid),hit2gap>>  
+class DrySummerSubarctic <<(I,orchid),hit2gap>>  
+class ExtremelyColdDrySummerSubarctic <<(I,orchid),hit2gap>>  
+
+class Polar <<(I,orchid),hit2gap>>
+class MildTundra <<(I,orchid),hit2gap>>
+class FrostColdTundra <<(I,orchid),hit2gap>>
+class IceCap <<(I,orchid),hit2gap>>
 class Air <<hit2gap>>
 class Water <<hit2gap>>
 class Wind <<hit2gap>>
@@ -161,11 +198,49 @@ Flow<|-- Outflow
 Medium<|-- AirMedium
 Air<|-- AirQuality
 PhysicProperties <|-- Climate
-Climate <|-- Tropical
-Climate <|-- Arid
-Climate <|-- Temperate
-Climate <|-- Cold
-Climate <|-- Polar
 
+Climate ..[#orchid] Tropical
+Climate ..[#orchid] Arid
+Climate ..[#orchid] Temperate
+Climate ..[#orchid] Continental
+Climate ..[#orchid] Polar
+
+Tropical ..[#orchid] TropicalRainforest 
+Tropical ..[#orchid] TropicalMonsoon 
+Tropical ..[#orchid] TropicalSavanna 
+
+Arid ..[#orchid] HotDesert 
+Arid ..[#orchid] ColdDesert 
+Arid ..[#orchid] MildDesert 
+Arid ..[#orchid] HotSemiArid 
+Arid ..[#orchid] ColdSemiArid 
+Arid ..[#orchid] MildSemiArid 
+
+Temperate ..[#orchid] HumidSubtropical
+Temperate ..[#orchid] TemperateOceanic 
+Temperate ..[#orchid] SubpolarOceanic 
+Temperate ..[#orchid] MonsoonInfluencedHumidSubtropical
+Temperate ..[#orchid] TemperateOceanicWithDryWinters 
+Temperate ..[#orchid] SubPolarOceanicWithDryWinters 
+Temperate ..[#orchid] HotSummerMediterranean 
+Temperate ..[#orchid] WarnSummerMediterranean
+Temperate ..[#orchid] CoolSummerMediterranean
+
+Continental ..[#orchid] HotSummerHumidContinental 
+Continental ..[#orchid] WarmSummerHumidContinental 
+Continental ..[#orchid] Subartic 
+Continental ..[#orchid] ExtremelyColdSubartic 
+Continental ..[#orchid] MonsoonInfluencedHotSummerHumidContinental 
+Continental ..[#orchid] MonsoonInfluencedWarmSummerHumidContinental 
+Continental ..[#orchid] MonsoonInfluencedSubartic
+Continental ..[#orchid] MonsoonInfluencedExtremelyColdSubarctic 
+Continental ..[#orchid] HotDrySummerContinental 
+Continental ..[#orchid] WarmDrySummerContinental 
+Continental ..[#orchid] DrySummerSubarctic 
+Continental ..[#orchid] ExtremelyColdDrySummerSubarctic  
+
+Polar ..[#orchid] MildTundra 
+Polar ..[#orchid] FrostColdTundra 
+Polar ..[#orchid] IceCap
 
 @enduml
