@@ -45,7 +45,9 @@ class WindowCoverings <<hit2gap>>
 class IfcActuator <<ifc>>
 class IfcWindow <<ifc>>
 class IfcZone <<ifc>>
-class IfcEnergyConversionDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>> {
+  hasSetPoint xsd:boolean
+}
 
 
 
