@@ -95,6 +95,16 @@ class IfcSite <<ifc>>
 class IfcSpace <<ifc>>
 class SpaceCapacity <<hit2gap>>
 
+class Orientation <<hit2gap>>
+
+class North <<(I,orchid),hit2gap>>
+class South <<(I,orchid),hit2gap>>
+class West <<(I,orchid),hit2gap>>
+class East <<(I,orchid),hit2gap>>
+class North_East <<(I,orchid),hit2gap>>
+class North_West <<(I,orchid),hit2gap>>
+class South_East <<(I,orchid),hit2gap>>
+class South_West <<(I,orchid),hit2gap>>
 
 /'
   Definition of the types of FoIs
@@ -138,6 +148,19 @@ IfcZone -->IfcSpace: hit2gap:contains
 
 IfcBuilding -->IfcSpace: hit2gap:contains
 IfcBuilding --> IfcBuildingStorey: hit2gap:contains
+
+IfcSite --> Orientation: hit2gap:hasOrientation
+IfcBuilding --> Orientation: hit2gap:hasOrientation
+
+Orientation..[#orchid] North
+Orientation..[#orchid] South
+Orientation..[#orchid] West
+Orientation..[#orchid] East
+Orientation..[#orchid] North_East
+Orientation..[#orchid] North_West
+Orientation..[#orchid] South_East
+Orientation..[#orchid] South_West
+
 
 IfcElement <|-- IfcDistributionElement
 IfcElement <|-- IfcBuildingElement
