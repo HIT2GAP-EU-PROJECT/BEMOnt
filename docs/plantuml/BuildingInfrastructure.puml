@@ -294,7 +294,6 @@ class IfcCondenser <<ifc>>
 class IfcTransformer <<ifc>>
 class IfcElectricGenerator <<ifc>>
 class IfcElectricMotor <<ifc>>
-class ElectricTimeControl <<hit2gap>>
 class IfcSolarDevice <<ifc>>
 class ElectricHeater <<hit2gap>>
 
@@ -768,7 +767,6 @@ IfcEnergyConversionDevice <|-- IfcCondenser
 IfcEnergyConversionDevice <|-- IfcTransformer
 IfcEnergyConversionDevice <|-- IfcElectricGenerator
 IfcEnergyConversionDevice <|-- IfcElectricMotor
-IfcEnergyConversionDevice <|-- ElectricTimeControl
 IfcEnergyConversionDevice <|-- IfcSolarDevice
 
 IfcElementComponent <|-- IfcVibrationIsolator
