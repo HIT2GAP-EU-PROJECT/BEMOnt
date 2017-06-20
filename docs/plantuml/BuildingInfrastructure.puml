@@ -581,6 +581,7 @@ BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
 BuildingAppliance --> BuildingAppliance: hit2gap:contains
+Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
 BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
 BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
 IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
