@@ -16,7 +16,9 @@ skinparam classAttributeFontColor  Green
 '/
 class System <<ssn>>
 class Sensor <<ssn>>
-class Observation <<ssn>>
+class Observation <<ssn>> {
+  externalStorageID xsd:string
+}
 class FeatureOfInterest <<ssn>>
 class Property <<ssn>>
 class SensorOutput <<ssn>>
