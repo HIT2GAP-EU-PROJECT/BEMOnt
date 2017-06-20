@@ -80,6 +80,7 @@ class Transports <<hit2gap>>
 
 class Room <<hit2gap>>
 class Floor <<hit2gap>>
+class OpenSpace <<hit2gap>>
 class Desk <<hit2gap>>
 class Subterranean <<hit2gap>>
 class Ground <<hit2gap>>
