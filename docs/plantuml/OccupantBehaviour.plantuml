@@ -64,8 +64,8 @@ class FeatureOfInterest <<SSN>>{
 
 }
 
-class Observation <<SSN>>{
-
+class Observation <<SSN>> {
+  externalStorageID xsd:string
 }
 
 class Property <<SSN>> {
