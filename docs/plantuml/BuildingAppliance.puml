@@ -40,7 +40,6 @@ class Microgrid <<ontomg>>
 BuildingAppliance <|-- IfcFlowTerminal
 BuildingAppliance <|-- Monitoring
 BuildingAppliance <|-- Wereable
-BuildingAppliance --> IfcDistributionElement: hit2gap:locatedIn
 BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
 BuildingAppliance --> BuildingAppliance: hit2gap:contains
 Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
