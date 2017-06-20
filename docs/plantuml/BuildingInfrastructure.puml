@@ -297,6 +297,11 @@ class IfcElectricMotor <<ifc>>
 class IfcSolarDevice <<ifc>>
 class ElectricHeater <<hit2gap>>
 
+class SOLARCOLLECTOR <<(I,orchid),ifc>>
+class SOLARPANEL <<(I,orchid),ifc>>
+class SOLARELECTRIC <<(I,orchid),hit2gap>>
+class SOLARTHERMAL <<(I,orchid),hit2gap>>
+
 
 /'
  Definition of the Element Component Devices
@@ -768,6 +773,11 @@ IfcEnergyConversionDevice <|-- IfcTransformer
 IfcEnergyConversionDevice <|-- IfcElectricGenerator
 IfcEnergyConversionDevice <|-- IfcElectricMotor
 IfcEnergyConversionDevice <|-- IfcSolarDevice
+
+IfcSolarDevice ..[#orchid] SOLARCOLLECTOR
+IfcSolarDevice ..[#orchid] SOLARPANEL
+IfcSolarDevice ..[#orchid] SOLARELECTRIC
+IfcSolarDevice ..[#orchid] SOLARTHERMAL
 
 IfcElementComponent <|-- IfcVibrationIsolator
 
