@@ -11,6 +11,7 @@
     <Prefix name="h2g" IRI="http://hit2gap.eu/h2g#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
@@ -57,10 +58,19 @@
         <ObjectProperty IRI="receivesAlerts"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+        <Class abbreviatedIRI="ssn:System"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcSensor"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:title"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:contributor"/>
@@ -69,10 +79,10 @@
         <Class IRI="Inaction"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="externalID"/>
+        <Class IRI="OccupantBehaviour"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantBehaviour"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="Actions"/>
@@ -84,6 +94,9 @@
         <ObjectProperty IRI="changes"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:creator"/>
     </Declaration>
     <Declaration>
@@ -91,6 +104,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="performsAction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="startWorktime"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOccupantRole"/>
@@ -105,13 +124,19 @@
         <Class IRI="OccupantCharacteristics"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOccupantAttitude"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Alert"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="startWorkTime"/>
+        <ObjectProperty IRI="hasOccupantAttitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcBuilding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="externalID"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:date"/>
@@ -123,6 +148,15 @@
         <Class IRI="Feeback"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BuildingState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
     </Declaration>
     <Declaration>
@@ -132,10 +166,7 @@
         <Class IRI="EnergyProfligate"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="endWorkTime"/>
-    </Declaration>
-    <Declaration>
-        <Datatype IRI="id"/>
+        <Class abbreviatedIRI="ssn:Observation"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
@@ -144,8 +175,15 @@
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="endWorktime"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="OccupantAttitude"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+        <Class abbreviatedIRI="ifc2:IfcSensor"/>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="Actions"/>
         <ObjectSomeValuesFrom>
@@ -192,6 +230,14 @@
             <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+        <Class abbreviatedIRI="ssn:System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcBuilding"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -236,22 +282,30 @@
         <ObjectProperty IRI="receivesAlerts"/>
         <Class IRI="Alert"/>
     </ObjectPropertyRange>
-    <DatatypeDefinition>
-        <Datatype IRI="endWorkTime"/>
+    <SubDataPropertyOf>
+        <DataProperty IRI="startWorktime"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="endWorktime"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DatatypeDefinition>
-    <DatatypeDefinition>
-        <Datatype IRI="externalID"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="externalID"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
-    </DatatypeDefinition>
-    <DatatypeDefinition>
-        <Datatype IRI="id"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="id"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DatatypeDefinition>
-    <DatatypeDefinition>
-        <Datatype IRI="startWorkTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="startWorktime"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DatatypeDefinition>
+    </DataPropertyRange>
 </Ontology>
 
 
