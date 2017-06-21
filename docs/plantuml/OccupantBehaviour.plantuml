@@ -1,5 +1,8 @@
 @startuml
 skinparam dpi 600
+
+scale 0.2
+
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue

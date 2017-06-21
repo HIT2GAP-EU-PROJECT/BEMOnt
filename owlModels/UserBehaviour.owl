@@ -57,13 +57,31 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (yudith.cardinale@gmail.com)</Literal>
     </Annotation>
     <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Phone"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="TimeBehaviour"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:contributor"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="Male"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VisualComfort"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="provokes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="associatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComfortRequirements"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ssn:Sensor"/>
@@ -87,10 +105,19 @@
         <Class IRI="WindowState"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasRole"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="performsAction"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Feedback"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasOccupantRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantPreferences"/>
     </Declaration>
     <Declaration>
         <Class IRI="EnergyIndiferent"/>
@@ -108,6 +135,12 @@
         <Class IRI="OccupantRole"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="Email"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Role"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="ssn:Property"/>
     </Declaration>
     <Declaration>
@@ -115,6 +148,21 @@
     </Declaration>
     <Declaration>
         <Class IRI="DoorState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Outdoor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Needs"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="maxValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Modality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ASHRAEAdaptiveEnvelope"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Winter"/>
@@ -132,7 +180,13 @@
         <ObjectProperty IRI="receivesAlerts"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="Owner"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SMS"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasContext"/>
@@ -150,6 +204,9 @@
         <Class IRI="OccupantDiscomfort"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="acts"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="OccupantBehaviour"/>
     </Declaration>
     <Declaration>
@@ -162,10 +219,22 @@
         <Class IRI="EnergyState"/>
     </Declaration>
     <Declaration>
+        <Class IRI="ASHRAEAdaptiveComfort"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
     </Declaration>
     <Declaration>
         <Class IRI="SystemActions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Manager"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAssignedTo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OtherComfortEnvelope"/>
     </Declaration>
     <Declaration>
         <Class IRI="Report"/>
@@ -186,7 +255,7 @@
         <Class IRI="ComfortState"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Feeback"/>
+        <ObjectProperty IRI="concerns"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="time:DateTimeInterval"/>
@@ -199,6 +268,12 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ssn:Observation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasBehaviour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gender"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isProvokedBy"/>
@@ -225,6 +300,15 @@
         <Class abbreviatedIRI="ifc2:IfcSensor"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="lifestyle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Indoor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Notification"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Season"/>
     </Declaration>
     <Declaration>
@@ -237,6 +321,9 @@
         <ObjectProperty IRI="isStatedBy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="IAQ"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="EquipementModel"/>
     </Declaration>
     <Declaration>
@@ -244,6 +331,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="BuildingComplexState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ThermalComfort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Privacy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasFunction"/>
@@ -255,6 +348,12 @@
         <ObjectProperty IRI="hasIndicator"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="prefers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnvironmentalBuildingFactors"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="BehaviourModel"/>
     </Declaration>
     <Declaration>
@@ -264,7 +363,16 @@
         <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="minValue"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="EnergyFrugal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="jobType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ISOAdaptiveComfort"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
@@ -274,6 +382,12 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="assignedTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Technician"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasModelResult"/>
@@ -288,16 +402,25 @@
         <Class abbreviatedIRI="ssn:SensorOutput"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="receives"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ZoneOccupied"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="qudt:unit"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="age"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="isBasedOn"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="User"/>
     </Declaration>
     <Declaration>
         <Class IRI="Status"/>
@@ -315,6 +438,9 @@
         <Class IRI="Indicator"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="OccupantCharacteristics"/>
     </Declaration>
     <Declaration>
@@ -322,6 +448,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Function"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasGender"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="name"/>
@@ -337,6 +466,12 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AcousticComfort"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Female"/>
     </Declaration>
     <Declaration>
         <Class IRI="BuildingState"/>
@@ -357,12 +492,27 @@
         <NamedIndividual IRI="Spring"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Recommendation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Event"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="ssn:Sensor"/>
         <Class abbreviatedIRI="ifc2:IfcSensor"/>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="ASHRAEAdaptiveComfort"/>
+        <Class IRI="ThermalComfort"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ASHRAEAdaptiveEnvelope"/>
+        <Class IRI="ThermalComfort"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AcousticComfort"/>
+        <Class IRI="Needs"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="Actions"/>
         <ObjectSomeValuesFrom>
@@ -373,6 +523,10 @@
     <SubClassOf>
         <Class IRI="ActivityModel"/>
         <Class IRI="Driver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Alert"/>
+        <Class IRI="Notification"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="BehaviourModel"/>
@@ -434,6 +588,16 @@
         <Class IRI="Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Context"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isAssignedTo"/>
+            <ObjectUnionOf>
+                <Class IRI="Indoor"/>
+                <Class IRI="Outdoor"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="DoorClose"/>
         <Class IRI="DoorState"/>
     </SubClassOf>
@@ -491,6 +655,34 @@
         <Class IRI="Driver"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="EquipementModel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isBasedOn"/>
+            <Class IRI="EnvironmentalBuildingFactors"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="associatedTo"/>
+                <Class abbreviatedIRI="ssn:SensorOutput"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasConstraints"/>
+                <Class IRI="Constraints"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasContext"/>
+                <Class IRI="Context"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasProbability"/>
+                <Class IRI="Probability"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="EventModel"/>
         <Class IRI="Driver"/>
     </SubClassOf>
@@ -502,8 +694,16 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Feeback"/>
+        <Class IRI="Feedback"/>
         <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IAQ"/>
+        <Class IRI="Needs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ISOAdaptiveComfort"/>
+        <Class IRI="ThermalComfort"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Inaction"/>
@@ -521,6 +721,20 @@
         <Class IRI="Actions"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="OccupantCharacteristics"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="endWorktime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantCharacteristics"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="startWorktime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OccupantComfort"/>
         <Class IRI="ComfortState"/>
     </SubClassOf>
@@ -536,12 +750,49 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="OccupantPreferences"/>
+        <Class IRI="Needs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantPreferences"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantPreferences"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="maxValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantPreferences"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="minValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OtherComfortEnvelope"/>
+        <Class IRI="ThermalComfort"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Privacy"/>
+        <Class IRI="Needs"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Probability"/>
         <Class IRI="Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Recommendation"/>
+        <Class IRI="Notification"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Report"/>
-        <Class IRI="Feeback"/>
+        <Class IRI="Feedback"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Season"/>
@@ -557,6 +808,39 @@
             <ObjectProperty IRI="changes"/>
             <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ThermalComfort"/>
+        <Class IRI="Needs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="User"/>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="concerns"/>
+            <Class IRI="Feedback"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="prefers"/>
+            <Class IRI="Modality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="receives"/>
+            <Class IRI="Notification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VisualComfort"/>
+        <Class IRI="Needs"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WindowState"/>
@@ -604,8 +888,82 @@
         <Class abbreviatedIRI="ssn:System"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="acts"/>
+            <Class abbreviatedIRI="ifc2:IfcActuator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasRole"/>
+            <Class IRI="Role"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasGender"/>
+            <Class IRI="Gender"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
         <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+        <Class IRI="User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasBehaviour"/>
+            <Class IRI="OccupantBehaviour"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasComfortRequirements"/>
+            <Class IRI="Needs"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="age"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="jobType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="lifestyle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="time:DateTimeInterval"/>
@@ -650,12 +1008,44 @@
         <NamedIndividual IRI="Autumn"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="Modality"/>
+        <NamedIndividual IRI="Email"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Gender"/>
+        <NamedIndividual IRI="Female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Gender"/>
+        <NamedIndividual IRI="Male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Role"/>
+        <NamedIndividual IRI="Manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Role"/>
+        <NamedIndividual IRI="Owner"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Modality"/>
+        <NamedIndividual IRI="Phone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Modality"/>
+        <NamedIndividual IRI="SMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="Season"/>
         <NamedIndividual IRI="Spring"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Season"/>
         <NamedIndividual IRI="Summer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Role"/>
+        <NamedIndividual IRI="Technician"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Season"/>
@@ -666,6 +1056,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="acts"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -673,6 +1067,10 @@
         <ObjectProperty IRI="hasState"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="assignedTo"/>
+        <ObjectProperty IRI="isAssignedTo"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasState"/>
         <ObjectProperty IRI="isStatedBy"/>
@@ -726,9 +1124,21 @@
         <Class IRI="Alert"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="lifestyle"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="maxValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="startWorktime"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="age"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="endWorktime"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
@@ -740,6 +1150,22 @@
     <DataPropertyRange>
         <DataProperty IRI="id"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="jobType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="lifestyle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="maxValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="minValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="name"/>
