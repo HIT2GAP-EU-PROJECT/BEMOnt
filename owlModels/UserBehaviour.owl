@@ -55,16 +55,82 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (yudith.cardinale@gmail.com)</Literal>
     </Annotation>
     <Declaration>
-        <ObjectProperty IRI="receivesAlerts"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssn:System"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcSensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="provokes"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="changes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WindowState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BuildingComplexState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performsAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupantRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyIndiferent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BlindOpen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="externalID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BlindState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantRole"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DoorState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WindowsClose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyFrugal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="endWorktime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantAttitude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="receivesAlerts"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:System"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:title"/>
@@ -73,25 +139,31 @@
         <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <Class IRI="BuildingSimpleState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DoorOpen"/>
     </Declaration>
     <Declaration>
         <Class IRI="Inaction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantBehaviour"/>
+        <Class IRI="OccupantDiscomfort"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:Sensor"/>
+        <Class IRI="OccupantBehaviour"/>
     </Declaration>
     <Declaration>
         <Class IRI="Actions"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+        <Class IRI="DoorClose"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="changes"/>
+        <Class IRI="ZoneOccupied"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
@@ -103,22 +175,16 @@
         <Class IRI="SystemActions"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="performsAction"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="id"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="startWorktime"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOccupantRole"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Report"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyIndiferent"/>
+        <Class IRI="ZoneEmpty"/>
     </Declaration>
     <Declaration>
         <Class IRI="OccupantCharacteristics"/>
@@ -136,49 +202,43 @@
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="externalID"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:date"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantRole"/>
+        <Class IRI="BlindClose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComfortState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Feeback"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:Property"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="BuildingState"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyFrugal"/>
+        <Class IRI="EnergyProfligate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyProfligate"/>
+        <Class IRI="OccupantComfort"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ssn:Observation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="WindowsOpen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isProvokedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ZoneOccupancy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="endWorktime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OccupantAttitude"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="ssn:Sensor"/>
@@ -190,6 +250,42 @@
             <ObjectProperty IRI="changes"/>
             <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BlindClose"/>
+        <Class IRI="BlindState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BlindOpen"/>
+        <Class IRI="BlindState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BlindState"/>
+        <Class IRI="BuildingSimpleState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BuildingComplexState"/>
+        <Class IRI="BuildingState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BuildingSimpleState"/>
+        <Class IRI="BuildingState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ComfortState"/>
+        <Class IRI="BuildingComplexState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DoorClose"/>
+        <Class IRI="DoorState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DoorOpen"/>
+        <Class IRI="DoorState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DoorState"/>
+        <Class IRI="BuildingSimpleState"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="EnergyFrugal"/>
@@ -204,6 +300,10 @@
         <Class IRI="OccupantAttitude"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="EnergyState"/>
+        <Class IRI="BuildingComplexState"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Feeback"/>
         <Class IRI="Actions"/>
     </SubClassOf>
@@ -214,6 +314,21 @@
     <SubClassOf>
         <Class IRI="OccupantBehaviour"/>
         <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantComfort"/>
+        <Class IRI="ComfortState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantDiscomfort"/>
+        <Class IRI="ComfortState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantDiscomfort"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isProvokedBy"/>
+            <Class IRI="Actions"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Report"/>
@@ -231,6 +346,30 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="WindowState"/>
+        <Class IRI="BuildingSimpleState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WindowsClose"/>
+        <Class IRI="WindowState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WindowsOpen"/>
+        <Class IRI="WindowState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ZoneEmpty"/>
+        <Class IRI="ZoneOccupancy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ZoneOccupancy"/>
+        <Class IRI="BuildingSimpleState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ZoneOccupied"/>
+        <Class IRI="ZoneOccupancy"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ssn:Sensor"/>
         <Class abbreviatedIRI="ssn:System"/>
     </SubClassOf>
@@ -238,10 +377,34 @@
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
         <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="BlindClose"/>
+        <Class IRI="BlindOpen"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="DoorClose"/>
+        <Class IRI="DoorOpen"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="OccupantComfort"/>
+        <Class IRI="OccupantDiscomfort"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="WindowsClose"/>
+        <Class IRI="WindowsOpen"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="ZoneEmpty"/>
+        <Class IRI="ZoneOccupied"/>
+    </DisjointClasses>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isProvokedBy"/>
+        <ObjectProperty IRI="provokes"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasOccupantAttitude"/>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
