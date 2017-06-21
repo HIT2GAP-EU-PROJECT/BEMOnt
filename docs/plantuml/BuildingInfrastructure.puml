@@ -367,7 +367,10 @@ class IfcCommunicationAppliance <<ifc>>
 class IfcElectricAppliance <<ifc>>
 class IfcLamp <<ifc>>
 class IfcOutlet <<ifc>>
-
+class LampType <<hit2ga>>
+class CentralLight  <<(I,orchid),hit2gap>>
+class DeskLight  <<(I,orchid),hit2gap>>
+class OutdoorlLight  <<(I,orchid),hit2gap>>
 /'
  Definition of the Moving Devices
 '/
@@ -875,6 +878,11 @@ IfcFlowTerminal <|-- IfcElectricAppliance
 IfcFlowTerminal <|-- IfcLamp
 IfcFlowTerminal <|-- IfcOutlet
 IfcFlowTerminal <|-- ElectricHeater
+
+IfcLamp --> LampType: hit2gap:hasLampType
+LampType ..[#orchid] CentralLight 
+LampType ..[#orchid] DeskLight 
+LampType ..[#orchid] OutdoorlLight 
 
 IfcFlowMovingDevice <|-- IfcCompressor
 IfcFlowMovingDevice <|-- IfcFan
