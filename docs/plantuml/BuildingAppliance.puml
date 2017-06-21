@@ -13,6 +13,10 @@ skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
 class BuildingAppliance <<hit2gap>>
+
+class StaticBuildingAppliance <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
+
 class IfcFlowTerminal <<ifc>>
 class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
@@ -37,18 +41,21 @@ class IfcEnergyConversionDevice <<ifc>> {
 
 class Microgrid <<ontomg>>
 
-BuildingAppliance <|-- IfcFlowTerminal
-BuildingAppliance <|-- Monitoring
-BuildingAppliance <|-- Wereable
-BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
+BuildingAppliance <|-- StaticBuildingAppliance 
+BuildingAppliance <|-- MobileBuildingAppliance 
+
+StaticBuildingAppliance <|-- IfcFlowTerminal
+StaticBuildingAppliance <|-- Monitoring
+MobileBuildingAppliance <|-- Wereable
+StaticBuildingAppliance --> IfcZone: hit2gap:isLocatedIn
 BuildingAppliance --> BuildingAppliance: hit2gap:contains
 Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
 IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
-BuildingAppliance <|-- IfcFlowStorageDevice
-BuildingAppliance <|-- IfcFlowMovingDevice
-BuildingAppliance <|-- IfcFlowController
-BuildingAppliance <|-- IfcFlowTreatmentDevice
-BuildingAppliance <|-- IfcEnergyConversionDevice
+StaticBuildingAppliance <|-- IfcFlowStorageDevice
+StaticBuildingAppliance <|-- IfcFlowMovingDevice
+StaticBuildingAppliance <|-- IfcFlowController
+StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
+StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
