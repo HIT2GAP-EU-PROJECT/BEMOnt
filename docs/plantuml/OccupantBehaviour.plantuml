@@ -72,6 +72,10 @@ class Property <<SSN>> {
 
 }
 
+class EconomicProperties <<hit2gap>>
+class PhysicProperties <<hit2gap>>
+class OccupantProperties <<hit2gap>>
+
 class SensorOutput <<SSN>>{
 
 }
@@ -434,9 +438,9 @@ IfcBuilding <|-- ElectricElement
 Definition of the Property subclasses
 '/
 
-Property <|-- ChemicalProperty
-Property <|-- EconomicProperty
-Property <|-- PhysicProperty
+Property <|-- OccupantProperties
+Property <|-- EconomicProperties
+Property <|-- PhysicProperties
 
 /'
 Description of building states
