@@ -13,6 +13,10 @@ skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
 class BuildingAppliance <<hit2gap>>
+
+class StaticBuildingAppliance <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
+
 class IfcFlowTerminal <<ifc>>
 class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
@@ -20,10 +24,19 @@ class Smartwatch <<hit2gap>>
 class Smartphone <<hit2gap>>
 
 class IfcZone <<ifc>>
-class IfcActuator <<ifc>>
-class IfcAlarm <<ifc>>
-class IfcController <<ifc>>
-class IfcSensor <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
+
+class IfcAlarm <<ifc4>>
+class IfcAlarmType <<ifc>>
+
+class IfcController <<ifc4>>
+class IfcControllerType <<ifc>>
+
+
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
+
 class Meter <<hit2gap>>
 
 class IfcDistributionElement <<ifc>>
@@ -37,18 +50,21 @@ class IfcEnergyConversionDevice <<ifc>> {
 
 class Microgrid <<ontomg>>
 
-BuildingAppliance <|-- IfcFlowTerminal
-BuildingAppliance <|-- Monitoring
-BuildingAppliance <|-- Wereable
-BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
+BuildingAppliance <|-- StaticBuildingAppliance 
+BuildingAppliance <|-- MobileBuildingAppliance 
+
+StaticBuildingAppliance <|-- IfcFlowTerminal
+StaticBuildingAppliance <|-- Monitoring
+MobileBuildingAppliance <|-- Wereable
+StaticBuildingAppliance --> IfcZone: hit2gap:isLocatedIn
 BuildingAppliance --> BuildingAppliance: hit2gap:contains
 Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
 IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
-BuildingAppliance <|-- IfcFlowStorageDevice
-BuildingAppliance <|-- IfcFlowMovingDevice
-BuildingAppliance <|-- IfcFlowController
-BuildingAppliance <|-- IfcFlowTreatmentDevice
-BuildingAppliance <|-- IfcEnergyConversionDevice
+StaticBuildingAppliance <|-- IfcFlowStorageDevice
+StaticBuildingAppliance <|-- IfcFlowMovingDevice
+StaticBuildingAppliance <|-- IfcFlowController
+StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
+StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
@@ -64,5 +80,10 @@ BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
 BuildingAppliance --> Microgrid: hit2gap:storageEnergy
 BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
 BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
+
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+IfcAlarm --> IfcAlarmType: owl:equivalentClass
+IfcController --> IfcControllerType: owl:equivalentClass
+IfcSensor --> IfcSensorType: owl:equivalentClass
 
 @enduml

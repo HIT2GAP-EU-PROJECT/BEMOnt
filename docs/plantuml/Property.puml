@@ -19,6 +19,10 @@ skinparam classAttributeFontColor  Green
 class Property <<ssn>>
 class EconomicProperties <<hit2gap>>
 class PhysicProperties <<hit2gap>>
+class OccupantStateProperties <<hit2gap>>
+
+class Stress <<hit2gap>>
+class Pulse <<hit2gap>>
 
 class Cost <<hit2gap>>
 class Investment <<hit2gap>>
@@ -133,6 +137,7 @@ class AirQuality <<hit2gap>>
 
 Property <|-- EconomicProperties
 Property <|-- PhysicProperties
+Property <|-- OccupantStateProperties
 
 EconomicProperties <|-- Cost
 EconomicProperties <|-- Investment
@@ -198,6 +203,10 @@ Flow<|-- Outflow
 Medium<|-- AirMedium
 Air<|-- AirQuality
 PhysicProperties <|-- Climate
+
+OccupantStateProperties <|-- Stress 
+OccupantStateProperties <|-- Pulse
+
 
 Climate ..[#orchid] Tropical
 Climate ..[#orchid] Arid

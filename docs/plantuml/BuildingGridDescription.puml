@@ -50,15 +50,21 @@ class GasBranch <<hit2gap>>
 class CoalBranch <<hit2gap>>
 class NuclearBranch <<hit2gap>>
 
-class IfcDistributionCircuit <<ifc>>
-class IfcDistributionSystem <<ifc>>
+class IfcDistributionCircuit <<h2gifc4>>
+
+class IfcDistributionSystem <<h2gifc4>>
 class IfcSystem <<ifc>>
+class IfcDistributionElement <<ifc>>
+
+class IfcController <<ifc4>>
+class IfcControllerType <<ifc>>
 
 class Property <<ssn>>
 class FeatureOfInterest <<ssn>>
 
 EconomicProperties <<hit2gap>>
 PhysicsProperties <<hit2gap>>
+class OccupantStateProperties <<hit2gap>>
 
 class BuildingAppliance <<hit2gap>>
 
@@ -69,6 +75,7 @@ class BuildingAppliance <<hit2gap>>
 
 Property <|-- EconomicProperties
 Property <|-- PhysicsProperties
+Property <|-- OccupantStateProperties
 
 Microgrid --> Property: hit2gap:hasProperty
 FeatureOfInterest <|-- Microgrid
@@ -134,4 +141,7 @@ BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
 BuildingAppliance --> Microgrid: hit2gap:storageEnergy
 BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
 BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
+
+IfcController --> IfcControllerType: owl:equivalentClass
+
 @enduml

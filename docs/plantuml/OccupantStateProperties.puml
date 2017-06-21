@@ -1,0 +1,31 @@
+@startuml
+
+scale 0.35
+
+skinparam class {
+  ArrowColor DarkBlue
+  ArrowFontColor DarkBlue
+  BackgroundColor LightBlue
+  BorderColor DarkGrey
+}
+
+skinparam dpi 300
+skinparam stereotypeCBackgroundColor Wheat
+skinparam classAttributeFontColor  Green
+
+
+class Property <<ssn>>
+
+class OccupantStateProperties <<hit2gap>>
+
+class Stress <<hit2gap>>
+class Pulse <<hit2gap>>
+
+Property <|-- OccupantStateProperties
+
+
+OccupantStateProperties <|-- Stress 
+OccupantStateProperties <|-- Pulse
+
+
+@enduml
