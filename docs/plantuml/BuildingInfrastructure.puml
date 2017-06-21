@@ -101,7 +101,8 @@ class MobileBuildingAppliance <<hit2gap>>
 class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
-class IfcSpatialElement <<ifc>>
+class IfcSpatialElement <<h2gifc4>>
+
 class IfcBuildingElement <<ifc>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
@@ -111,7 +112,7 @@ class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
 class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
-class IfcSpatialZone <<ifc>>
+class IfcSpatialZone <<h2gifc4>>
 class Orientation <<hit2gap>>
 
 class North <<(I,orchid),hit2gap>>
@@ -198,7 +199,6 @@ class Ground <<hit2gap>>
 '/
 
 class IfcBeam <<ifc>>
-class IfcChimmey <<ifc>>
 class IfcColumn <<ifc>>
 class IfcCovering <<ifc>>
 class IfcCurtainWall <<ifc>>
@@ -211,7 +211,7 @@ class IfcRailing <<ifc>>
 class IfcRamp <<ifc>>
 class IfcRampFlight <<ifc>>
 class IfcRoof <<ifc>>
-class IfcShadingDevice <<ifc>>
+class IfcShadingDevice <<h2gifc4>>
 class IfcSlab <<ifc>>
 class IfcStair <<ifc>>
 class IfcStairFlight <<ifc>>
@@ -223,13 +223,24 @@ class IfcSpace <<ifc>>
   Definition of the types of Sensors
 '/
 
-class IfcActuator <<ifc>>
-class IfcAlarm <<ifc>>
-class IfcController <<ifc>>
-class IfcFlowInstrument <<ifc>>
-class IfcProtectiveDeviceTrippingUnit <<ifc>>
-class IfcSensor <<ifc>>
-class IfcUnitaryControlElement <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
+
+class IfcAlarm <<ifc4>>
+class IfcAlarmType <<ifc>>
+
+class IfcController <<ifc4>>
+class IfcControllerType <<ifc>>
+
+class IfcFlowInstrument <<ifc4>>
+class IfcFlowInstrumentType <<ifc>>
+
+class IfcProtectiveDeviceTrippingUnit <<h2gifc4>>
+
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
+
+class IfcUnitaryControlElement <<h2gifc4>>
 class Meter <<hit2gap>>
 
 /'
@@ -297,8 +308,8 @@ class GasBranch <<hit2gap>>
 class CoalBranch <<hit2gap>>
 class NuclearBranch <<hit2gap>>
 
-class IfcDistributionCircuit <<ifc>>
-class IfcDistributionSystem <<ifc>>
+class IfcDistributionCircuit <<h2gifc4>>
+class IfcDistributionSystem <<h2gifc4>>
 
 
 /'
@@ -323,30 +334,59 @@ class IfcFlowTreatmentDevice <<ifc>>
 '/
 
 class AirHandlingUnit <<hit2gap>>
-class IfcBoiler <<ifc>>
-class IfcChiller <<ifc>>
-class IfcCoil <<ifc>>
-class IfcBurner <<ifc>>
-class IfcCoil <<ifc>>
-class IfcEvaporativeCooler <<ifc>>
-class IfcEngine <<ifc>>
+class IfcBoiler <<ifc4>>
+class IfcBoilerType <<ifc>>
+
+class IfcChiller <<ifc4>>
+class IfcChillerType <<ifc>>
+
+class IfcCoil <<ifc4>>
+class IfcCoilType <<ifc>>
+
+class IfcBurner <<h2gifc4>>
+
+class IfcEvaporativeCooler <<ifc4>>
+class IfcEvaporativeCoolerType <<ifc>>
+
+class IfcEngine <<h2gifc4>>
 class WaterPlant <<hit2gap>>
 class SteamPlant <<hit2gap>>
-class IfcHeatExchanger <<ifc>>
-class IfcAirToAirHeatRecovery <<ifc>>
-class IfcHumidifier <<ifc>>
-class IfcEvaporator <<ifc>>
+
+class IfcHeatExchanger <<ifc4>>
+class IfcHeatExchangerType <<ifc>>
+
+class IfcAirToAirHeatRecovery <<ifc4>>
+class IfcAirToAirHeatRecoveryType <<ifc>>
+
+class IfcHumidifier <<ifc4>>
+class IfcHumidifierType <<ifc>>
+
+class IfcEvaporator <<ifc4>>
+class IfcEvaporatorType <<ifc>>
+
 class ChilledBeams <<hit2gap>>
-class IfcCoolingTower <<ifc>>
-class IfcCondenser <<ifc>>
-class IfcTransformer <<ifc>>
-class IfcElectricGenerator <<ifc>>
-class IfcElectricMotor <<ifc>>
-class IfcSolarDevice <<ifc>>
+
+class IfcCoolingTower <<ifc4>>
+class IfcCoolingTowerType <<ifc>>
+
+class IfcCondenser <<ifc4>>
+class IfcCondenserType <<ifc>>
+
+class IfcTransformer <<ifc4>>
+class IfcTransformerType <<ifc>>
+
+class IfcElectricGenerator <<ifc4>>
+class IfcElectricGeneratorType <<ifc>>
+
+class IfcElectricMotor <<ifc4>>
+class IfcElectricMotorType <<ifc>>
+
+class IfcSolarDevice <<h2gifc4>>
+
 class ElectricHeater <<hit2gap>>
 
-class SOLARCOLLECTOR <<(I,orchid),ifc>>
-class SOLARPANEL <<(I,orchid),ifc>>
+class SOLARCOLLECTOR <<(I,orchid),h2gifc4>>
+class SOLARPANEL <<(I,orchid),h2gifc4>>
 class SOLARELECTRIC <<(I,orchid),hit2gap>>
 class SOLARTHERMAL <<(I,orchid),hit2gap>>
 
@@ -354,52 +394,84 @@ class SOLARTHERMAL <<(I,orchid),hit2gap>>
 /'
  Definition of the Element Component Devices
 '/
-class IfcVibrationIsolator <<ifc>>
+class IfcVibrationIsolator <<ifc4>>
+class IfcVibrationIsolatorType <<ifc>>
 
 /'
  Definition of the Flow Terminal Devices
 '/
 
-class IfcSpaceHeater <<ifc>>
-class IfcFireSuppressionTerminal <<ifc>>
-class IfcSanitaryTerminal <<ifc>>
-class IfcStackTerminal <<ifc>>
-class IfcWasteTerminal <<ifc>>
-class IfcAudioVisualAppliance <<ifc>>
-class IfcCommunicationAppliance <<ifc>>
-class IfcElectricAppliance <<ifc>>
-class IfcLamp <<ifc>>
-class IfcOutlet <<ifc>>
+class IfcSpaceHeater <<ifc4>>
+class IfcSpaceHeaterType <<ifc>>
+
+class IfcFireSuppressionTerminal <<ifc4>>
+class IfcFireSuppressionTerminalType <<ifc>>
+
+class IfcSanitaryTerminal <<ifc4>>
+class IfcSanitaryTerminalType <<ifc>>
+
+class IfcStackTerminal <<ifc4>>
+class IfcStackTerminalType <<ifc>>
+
+class IfcWasteTerminal <<ifc4>>
+class IfcWasteTerminalType <<ifc>>
+
+class IfcAudioVisualAppliance <<h2gifc4>>
+class IfcCommunicationAppliance <<h2gifc4>>
+
+class IfcElectricAppliance <<ifc4>>
+class IfcElectricApplianceType <<ifc>>
+
+class IfcLamp <<ifc4>>
+class IfcLampType <<ifc>>
+
+class IfcOutlet <<ifc4>>
+class IfcOutletType <<ifc>>
+
 class LampType <<hit2ga>>
 class CentralLight  <<(I,orchid),hit2gap>>
 class DeskLight  <<(I,orchid),hit2gap>>
 class OutdoorlLight  <<(I,orchid),hit2gap>>
+
 /'
  Definition of the Moving Devices
 '/
 
-class IfcCompressor <<ifc>>
-class IfcFan <<ifc>>
+class IfcCompressor <<ifc4>>
+class IfcCompressorType <<ifc>>
+
+class IfcFan <<ifc4>>
+class IfcFanType <<ifc>>
+
+class IfcPump <<ifc4>>
+class IfcPumpType <<ifc>>
+
 class FanCoilUnit <<hit2gap>>
-class IfcPump <<ifc>>
 class HeatPump <<hit2gap>>
 
 /'
   Definition of the Flow Storage Device
 '/
-class IfcTank <<ifc>>
-class IfcElectricFlowStorageDevice <<ifc>>
+
+class IfcTank <<ifc4>>
+class IfcTankType <<ifc>>
+
+class IfcElectricFlowStorageDevice <<ifc4>>
+class IfcElectricFlowStorageDeviceType <<ifc>>
 
 /'
  Definition of the Flow Controller
 '/
-class IfcValve <<ifc>>
-class IfcDamper <<ifc>>
+class IfcValve <<ifc4>>
+class IfcValveType <<ifc>>
+
+class IfcDamper <<ifc4>>
+class IfcDamperType <<ifc>>
 
 /'
  Definition of the Treatment Devices
 '/
-class IfcInterceptor <<ifc>>
+class IfcInterceptor <<h2gifc4>>
 
 
 /'
@@ -469,7 +541,6 @@ class Flow <<hit2gap>>
 class Inflow <<hit2gap>>
 class Outflow <<hit2gap>>
 class AirMedium <<hit2gap>>
-
 
 class IfcDistributionElement <<ifc>>
 class DistributionElementState <<hit2gap>>
@@ -969,4 +1040,38 @@ PhysicProperties <|-- Climate
 OccupantStateProperties <|-- Stress 
 OccupantStateProperties <|-- Pulse
 
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+IfcAlarm --> IfcAlarmType: owl:equivalentClass
+IfcController --> IfcControllerType: owl:equivalentClass
+IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcFlowInstrument  --> IfcFlowInstrumentType: owl:equivalentClass
+IfcBoiler --> IfcBoilerType: owl:equivalentClass
+IfcChiller --> IfcChillerType: owl:equivalentClass
+IfcCoil  --> IfcCoilType: owl:equivalentClass
+IfcEvaporativeCooler --> IfcEvaporativeCoolerType: owl:equivalentClass
+IfcHeatExchanger --> IfcHeatExchangerType: owl:equivalentClass
+IfcAirToAirHeatRecovery --> IfcAirToAirHeatRecoveryType: owl:equivalentClass
+IfcHumidifier --> IfcHumidifierType: owl:equivalentClass
+IfcEvaporator --> IfcEvaporatorType: owl:equivalentClass
+IfcCoolingTower --> IfcCoolingTowerType: owl:equivalentClass
+IfcCondenser --> IfcCondenserType: owl:equivalentClass
+IfcTransformer --> IfcTransformerType: owl:equivalentClass
+IfcElectricGenerator --> IfcElectricGeneratorType: owl:equivalentClass
+IfcElectricMotor --> IfcElectricMotorType: owl:equivalentClass
+IfcVibrationIsolator --> IfcVibrationIsolatorType: owl:equivalentClass
+IfcSpaceHeater --> IfcSpaceHeaterType: owl:equivalentClass
+IfcFireSuppressionTerminal --> IfcFireSuppressionTerminalType: owl:equivalentClass
+IfcSanitaryTerminal --> IfcSanitaryTerminalType: owl:equivalentClass
+IfcStackTerminal --> IfcStackTerminalType: owl:equivalentClass
+IfcWasteTerminal --> IfcWasteTerminalType: owl:equivalentClass
+IfcElectricAppliance --> IfcElectricApplianceType: owl:equivalentClass
+IfcLamp <<ifc4>> --> IfcLampType: owl:equivalentClass
+IfcOutlet --> IfcOutletType: owl:equivalentClass
+IfcCompressor --> IfcCompressorType: owl:equivalentClass
+IfcFan --> IfcFanType: owl:equivalentClass
+IfcPump --> IfcPumpType: owl:equivalentClass
+IfcTank --> IfcTankType: owl:equivalentClass
+IfcElectricFlowStorageDevice --> IfcElectricFlowStorageDeviceType: owl:equivalentClass
+IfcValve --> IfcValveType: owl:equivalentClass
+IfcDamper --> IfcDamperType: owl:equivalentClass
 @enduml
