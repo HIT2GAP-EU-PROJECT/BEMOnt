@@ -15,7 +15,9 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
+    <Prefix name="qudt" IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This part of the general ontology describes the general model referring the occupant behaviour. In that sense and according with (Hong et.al,2015), the occupant behaviour is composed by the following main aspects:
@@ -55,10 +57,7 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (yudith.cardinale@gmail.com)</Literal>
     </Annotation>
     <Declaration>
-        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcSensor"/>
+        <Class IRI="TimeBehaviour"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:contributor"/>
@@ -70,16 +69,22 @@
         <Class abbreviatedIRI="ssn:Sensor"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+        <Class IRI="ActivityModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ModelResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:observationResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Context"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="changes"/>
     </Declaration>
     <Declaration>
         <Class IRI="WindowState"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BuildingComplexState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="performsAction"/>
@@ -106,37 +111,31 @@
         <Class abbreviatedIRI="ssn:Property"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasState"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="DoorState"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
+        <NamedIndividual IRI="Winter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowsClose"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EnergyFrugal"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="endWorktime"/>
+        <ObjectProperty abbreviatedIRI="ssn:hasValue"/>
     </Declaration>
     <Declaration>
         <Class IRI="OccupantAttitude"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="receivesAlerts"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="ssn:System"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:title"/>
+        <ObjectProperty IRI="receivesAlerts"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasContext"/>
     </Declaration>
     <Declaration>
         <Class IRI="BuildingSimpleState"/>
@@ -157,10 +156,7 @@
         <Class IRI="Actions"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DoorClose"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ZoneOccupied"/>
+        <NamedIndividual IRI="Autumn"/>
     </Declaration>
     <Declaration>
         <Class IRI="EnergyState"/>
@@ -169,43 +165,22 @@
         <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:creator"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="SystemActions"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="id"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="startWorktime"/>
     </Declaration>
     <Declaration>
         <Class IRI="Report"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ZoneEmpty"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OccupantCharacteristics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Alert"/>
+        <Class abbreviatedIRI="time:Instant"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOccupantAttitude"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="name"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcBuilding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:date"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="BlindClose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStatus"/>
     </Declaration>
     <Declaration>
         <Class IRI="ComfortState"/>
@@ -214,13 +189,10 @@
         <Class IRI="Feeback"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BuildingState"/>
+        <Class abbreviatedIRI="time:DateTimeInterval"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOccupantCharacteristics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EnergyProfligate"/>
+        <Class IRI="Constraints"/>
     </Declaration>
     <Declaration>
         <Class IRI="OccupantComfort"/>
@@ -229,16 +201,163 @@
         <Class abbreviatedIRI="ssn:Observation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowsOpen"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="isProvokedBy"/>
     </Declaration>
     <Declaration>
         <Class IRI="ZoneOccupancy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasConstraints"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProbability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Probability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Season"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Summer"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isStatedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EquipementModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EventModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BuildingComplexState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:observationResultTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasIndicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BehaviourModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WindowsClose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyFrugal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="endWorktime"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasModelResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Driver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DoorClose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:SensorOutput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ZoneOccupied"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:unit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="startWorktime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ZoneEmpty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Alert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Function"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:DayOfWeek"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcBuilding"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:Unit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BuildingState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ObservationValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyProfligate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WindowsOpen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Spring"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="ssn:Sensor"/>
@@ -250,6 +369,27 @@
             <ObjectProperty IRI="changes"/>
             <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ActivityModel"/>
+        <Class IRI="Driver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BehaviourModel"/>
+        <Class IRI="Driver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BehaviourModel"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="isBasedOn"/>
+                <Class IRI="OccupantBehaviour"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="isBasedOn"/>
+                <Class IRI="TimeBehaviour"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="BlindClose"/>
@@ -272,8 +412,26 @@
         <Class IRI="BuildingState"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="BuildingState"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isStatedBy"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="ssn:System"/>
+                <Class abbreviatedIRI="ifc2:IfcBuilding"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="ComfortState"/>
         <Class IRI="BuildingComplexState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Constraints"/>
+        <Class IRI="Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Context"/>
+        <Class IRI="Event"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DoorClose"/>
@@ -286,6 +444,31 @@
     <SubClassOf>
         <Class IRI="DoorState"/>
         <Class IRI="BuildingSimpleState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Driver"/>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Driver"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasFunction"/>
+                <Class IRI="Function"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasIndicator"/>
+                <Class IRI="Indicator"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasModelResult"/>
+                <Class IRI="ModelResult"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="hasStatus"/>
+                <Class IRI="Status"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="EnergyFrugal"/>
@@ -304,12 +487,34 @@
         <Class IRI="BuildingComplexState"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="EquipementModel"/>
+        <Class IRI="Driver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EventModel"/>
+        <Class IRI="Driver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EventModel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isBasedOn"/>
+            <Class IRI="Event"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Feeback"/>
         <Class IRI="Actions"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Inaction"/>
         <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ObservationValue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="qudt:unit"/>
+            <Class abbreviatedIRI="qudt:Unit"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OccupantBehaviour"/>
@@ -331,8 +536,16 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Probability"/>
+        <Class IRI="Event"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Report"/>
         <Class IRI="Feeback"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Season"/>
+        <Class IRI="TimeBehaviour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SystemActions"/>
@@ -370,6 +583,23 @@
         <Class IRI="ZoneOccupancy"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="ssn:Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:observationResultTime"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="time:DateTimeInterval"/>
+                <Class abbreviatedIRI="time:Instant"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="externalID"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ssn:Sensor"/>
         <Class abbreviatedIRI="ssn:System"/>
     </SubClassOf>
@@ -377,6 +607,24 @@
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
         <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="time:DateTimeInterval"/>
+        <Class IRI="TimeBehaviour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="time:DayOfWeek"/>
+        <Class IRI="TimeBehaviour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="time:Instant"/>
+        <Class IRI="TimeBehaviour"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="ActivityModel"/>
+        <Class IRI="BehaviourModel"/>
+        <Class IRI="EquipementModel"/>
+        <Class IRI="EventModel"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="BlindClose"/>
         <Class IRI="BlindOpen"/>
@@ -397,10 +645,38 @@
         <Class IRI="ZoneEmpty"/>
         <Class IRI="ZoneOccupied"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="Season"/>
+        <NamedIndividual IRI="Autumn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Season"/>
+        <NamedIndividual IRI="Spring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Season"/>
+        <NamedIndividual IRI="Summer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Season"/>
+        <NamedIndividual IRI="Winter"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="qudt:unit"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasState"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasState"/>
+        <ObjectProperty IRI="isStatedBy"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="isProvokedBy"/>
         <ObjectProperty IRI="provokes"/>
@@ -436,6 +712,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasOccupantRole"/>
         <Class IRI="OccupantRole"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasState"/>
+        <Class IRI="BuildingState"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="performsAction"/>
