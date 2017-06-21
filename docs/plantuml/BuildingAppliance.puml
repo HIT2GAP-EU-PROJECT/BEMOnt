@@ -24,10 +24,19 @@ class Smartwatch <<hit2gap>>
 class Smartphone <<hit2gap>>
 
 class IfcZone <<ifc>>
-class IfcActuator <<ifc>>
-class IfcAlarm <<ifc>>
-class IfcController <<ifc>>
-class IfcSensor <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
+
+class IfcAlarm <<ifc4>>
+class IfcAlarmType <<ifc>>
+
+class IfcController <<ifc4>>
+class IfcControllerType <<ifc>>
+
+
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
+
 class Meter <<hit2gap>>
 
 class IfcDistributionElement <<ifc>>
@@ -71,5 +80,10 @@ BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
 BuildingAppliance --> Microgrid: hit2gap:storageEnergy
 BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
 BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
+
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+IfcAlarm --> IfcAlarmType: owl:equivalentClass
+IfcController --> IfcControllerType: owl:equivalentClass
+IfcSensor --> IfcSensorType: owl:equivalentClass
 
 @enduml
