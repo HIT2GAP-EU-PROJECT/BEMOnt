@@ -55,9 +55,8 @@ class IfcSpatialStructureElement <<IFC>>{
 
 }
 
-class IfcSensor <<IFC>>{
-
-}
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
 
 class FeatureOfInterest <<SSN>>{
 
@@ -104,7 +103,7 @@ class SamplingFeatures <<OGC>>{
 
 }
 
-class IfcSpatial <<IFC>>{
+class IfcSpatialZone <<h2gifc4>>{
 
 }
 
@@ -340,7 +339,8 @@ class Constraints <<HIT2GAP>>
 class Probability <<HIT2GAP>>
 class Context <<HIT2GAP>>
 
-class IfcActuator <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
 
 Context --> Indoor: hit2gap:isAssignedTo
 Context --> Outdoor: hit2gap:isAssignedTo
@@ -546,5 +546,8 @@ SystemActions --> IfcDistributionControlElement:hit2gap:changes
 IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
 SystemActions --> Sensor: hit2gap:actuateOver
 Actions --> IfcSpatialStructureElement: hit2gap:change
+
+IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcActuator --> IfcActuatorType: owl:equivalentClass
 
 @enduml
