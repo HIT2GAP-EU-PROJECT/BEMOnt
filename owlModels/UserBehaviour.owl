@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://hit2gap.eu/h2g#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://hit2gap.eu/h2g#">
+    <Prefix name="" IRI="http://hit2gap.eu/h2g#"/>
+    <Prefix name="dce" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="h2g" IRI="http://hit2gap.eu/h2g#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This part of the general ontology describes the general model referring the occupant behaviour. In that sense and according with (Hong et.al,2015), the occupant behaviour is composed by the following main aspects:
+
+- Drivers: Represent discrete-event simulation models for modeling occupant behavior, activities, events, and equipments, considering the factors that stimulates occupants to accomplish their needs.
+
+- Needs: Model the requirements that the different occupants shall meet to ensure their satisfaction in the environment which interacts.
+
+- Actions: Model the occupants interactions with the building to achieve the required comfort.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This current version includes the initial version of the semantic model based on the diagrams generated.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aitor Corchero (aitor.corchero@eurecat.org)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pierre Bourreau (pbourreau@nobatek.com)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richard Chbeir (richard.chbeir@univ-pau.fr)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dce:title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hit2Gap Ontology-User Behavior</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gulben Calis (gulbencalis@gmail.com)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (yudith.cardinale@gmail.com)</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="receivesAlerts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Alert"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="startWorkTime"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:title"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Feeback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Inaction"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="externalID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantBehaviour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Actions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="endWorkTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="changes"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SystemActions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performsAction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Actions"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="changes"/>
+            <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Feeback"/>
+        <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Inaction"/>
+        <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OccupantBehaviour"/>
+        <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Report"/>
+        <Class IRI="Feeback"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SystemActions"/>
+        <Class IRI="Actions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SystemActions"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="changes"/>
+            <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="performsAction"/>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="receivesAlerts"/>
+        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+        <Class IRI="OccupantCharacteristics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="performsAction"/>
+        <Class IRI="Actions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="receivesAlerts"/>
+        <Class IRI="Alert"/>
+    </ObjectPropertyRange>
+    <DatatypeDefinition>
+        <Datatype IRI="endWorkTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DatatypeDefinition>
+    <DatatypeDefinition>
+        <Datatype IRI="externalID"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DatatypeDefinition>
+    <DatatypeDefinition>
+        <Datatype IRI="id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DatatypeDefinition>
+    <DatatypeDefinition>
+        <Datatype IRI="startWorkTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DatatypeDefinition>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
