@@ -414,7 +414,7 @@ class Smartphone <<hit2gap>>
 
 class EconomicProperties <<hit2gap>>
 class PhysicProperties <<hit2gap>>
-class OccupantProperties <<hit2gap>>
+class OccupantStateProperties <<hit2gap>>
 
 class Stress <<hit2gap>>
 class Pulse <<hit2gap>>
@@ -909,7 +909,7 @@ IfcFlowTreatmentDevice <|-- IfcInterceptor
 
 Property <|-- EconomicProperties
 Property <|-- PhysicProperties
-Property <|-- OccupantProperties
+Property <|-- OccupantStateProperties
 
 EconomicProperties <|-- Cost
 EconomicProperties <|-- Investment
@@ -960,7 +960,7 @@ Flow<|-- Outflow
 Medium<|-- AirMedium
 PhysicProperties <|-- Climate
 
-OccupantProperties <|-- Stress 
-OccupantProperties <|-- Pulse
+OccupantStateProperties <|-- Stress 
+OccupantStateProperties <|-- Pulse
 
 @enduml
