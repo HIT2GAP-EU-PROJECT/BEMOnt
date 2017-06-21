@@ -59,7 +59,7 @@ class FeatureOfInterest <<ssn>>
 
 EconomicProperties <<hit2gap>>
 PhysicsProperties <<hit2gap>>
-class OccupantProperties <<hit2gap>>
+class OccupantStateProperties <<hit2gap>>
 
 class BuildingAppliance <<hit2gap>>
 
@@ -70,7 +70,7 @@ class BuildingAppliance <<hit2gap>>
 
 Property <|-- EconomicProperties
 Property <|-- PhysicsProperties
-Property <|-- OccupantProperties
+Property <|-- OccupantStateProperties
 
 Microgrid --> Property: hit2gap:hasProperty
 FeatureOfInterest <|-- Microgrid
