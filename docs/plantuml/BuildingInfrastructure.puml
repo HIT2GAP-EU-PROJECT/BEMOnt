@@ -95,6 +95,9 @@ class IceCap <<(I,orchid),hit2gap>>
   Definition of the Feature of interest classes
 '/
 class BuildingAppliance <<hit2gap>>
+class StaticBuildingAppliance <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
+
 class BuildingType <<hit2gap>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
@@ -664,18 +667,21 @@ Transports ..[#orchid] Metro
 
 IfcBuilding --> BuildingType: hit2gap:hasType
 
-BuildingAppliance <|-- IfcFlowTerminal
-BuildingAppliance <|-- Monitoring
-BuildingAppliance <|-- Wereable
+BuildingAppliance <|-- StaticBuildingAppliance 
+BuildingAppliance <|-- MobileBuildingAppliance
+
+StaticBuildingAppliance <|-- IfcFlowTerminal
+StaticBuildingAppliance <|-- Monitoring
+MobileBuildingAppliance <|-- Wereable
 BuildingAppliance --> BuildingAppliance: hit2gap:contains
 Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
-BuildingAppliance --> IfcZone: hit2gap:isLocatedIn
+StaticBuildingAppliance --> IfcZone: hit2gap:isLocatedIn
 IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
-BuildingAppliance <|-- IfcFlowStorageDevice
-BuildingAppliance <|-- IfcFlowMovingDevice
-BuildingAppliance <|-- IfcFlowController
-BuildingAppliance <|-- IfcFlowTreatmentDevice
-BuildingAppliance <|-- IfcEnergyConversionDevice
+StaticBuildingAppliance <|-- IfcFlowStorageDevice
+StaticBuildingAppliance <|-- IfcFlowMovingDevice
+StaticBuildingAppliance <|-- IfcFlowController
+StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
+StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
