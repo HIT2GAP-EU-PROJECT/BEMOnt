@@ -31,7 +31,8 @@ class DateTimeInterval <<time>>{
 }
 class Unit <<QUDT>>
 
-class IfcSensor <<ifc>>
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
 
 /'
   Definition of the Geo-core part
@@ -72,6 +73,7 @@ _Geometry <|-- Polygon
 _Feature <|-- FeatureOfInterest
 _Feature <|-- System
 
+IfcSensor --> IfcSensorType: owl:equivalentClass
 
 
 @enduml
