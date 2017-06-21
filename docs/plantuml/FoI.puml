@@ -19,7 +19,7 @@ skinparam classAttributeFontColor  Green
 class FeatureOfInterest <<ssn>>
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
-class IfcSpatialElement <<ifc>>
+class IfcSpatialElement <<h2gifc4>>
 class Microgrid <<ontomg>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
@@ -29,16 +29,24 @@ class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
 class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
-class IfcSpatialZone <<ifc>>
+class IfcSpatialZone <<h2gifc4>>
 
-class IfcFlowInstrument <<ifc>>
-class IfcProtectiveDeviceTrippingUnit <<ifc>>
-class IfcSensor <<ifc>>
-class IfcUnitaryControlElement <<ifc>>
+class IfcFlowInstrument <<ifc4>>
+class IfcFlowInstrumentType <<ifc>>
+
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
+
+class IfcProtectiveDeviceTrippingUnit <<h2gifc4>>
+
+class IfcUnitaryControlElement <<h2gifc4>>
 class IfcFlowTerminal <<ifc>>
 
-class IfcFlowStorageDevice <<ifc>>
+class IfcFlowStorageDevice <<ifc4>>
+class IfcFlowStorageDeviceType <<ifc>>
+
 class IfcFlowTreatmentDevice <<ifc>>
+
 class IfcEnergyConversionDevice <<ifc>> {
   hasSetPoint xsd:boolean
 }
@@ -60,9 +68,14 @@ class Smartphone <<hit2gap>>
 
 class Meter <<hit2gap>>
 
-class IfcActuator <<ifc>>
-class IfcAlarm <<ifc>>
-class IfcController <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
+
+class IfcAlarm <<ifc4>>
+class IfcAlarmType <<ifc>>
+
+class IfcController <<ifc4>>
+class IfcControllerType <<ifc>>
 
 /'
   Building types class definition
@@ -250,4 +263,10 @@ IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
 
+IfcFlowInstrument --> IfcFlowInstrumentType: owl:equivalentClass
+IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcFlowStorageDevice --> IfcFlowStorageDeviceType: owl:equivalentClass
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+IfcAlarm --> IfcAlarmType: owl:equivalentClass
+IfcController --> IfcControllerType: owl:equivalentClass
 @enduml
