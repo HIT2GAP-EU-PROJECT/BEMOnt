@@ -325,11 +325,6 @@ class EquipmentModel <<HIT2GAP>>{
 class Unit <<QUDT>>{
 }
 
-class MechanicElement <<HIT2GAP>>{
-}
-class ElectricElement <<HIT2GAP>>{
-}
-
 class Event <<HIT2GAP>>
 class ModelResult <<HIT2GAP>>
 class Indicator <<HIT2GAP>>
@@ -430,8 +425,6 @@ FeatureOfInterest --> Property: ssn:hasProperty
 SampledFeatures <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialZone
 IfcSpatialElement<|-- ZoneElement
-IfcBuilding <|-- MechanicElement
-IfcBuilding <|-- ElectricElement
 
 /'
 Definition of the Property subclasses
