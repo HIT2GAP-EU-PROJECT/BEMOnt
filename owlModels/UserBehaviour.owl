@@ -805,6 +805,13 @@
     <SubClassOf>
         <Class IRI="SystemActions"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="acts"/>
+            <Class abbreviatedIRI="ifc2:IfcActuator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SystemActions"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="changes"/>
             <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
         </ObjectSomeValuesFrom>
