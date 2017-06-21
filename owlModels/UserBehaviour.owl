@@ -57,31 +57,13 @@
         <ObjectProperty IRI="receivesAlerts"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Report"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OccupantCharacteristics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Alert"/>
-    </Declaration>
-    <Declaration>
-        <Datatype IRI="startWorkTime"/>
+        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:title"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:contributor"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:date"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Feeback"/>
     </Declaration>
     <Declaration>
         <Class IRI="Inaction"/>
@@ -96,19 +78,10 @@
         <Class IRI="Actions"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOccupantCharacteristics"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:identifier"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="endWorkTime"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="changes"/>
-    </Declaration>
-    <Declaration>
-        <Datatype IRI="id"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dce:creator"/>
@@ -120,10 +93,58 @@
         <ObjectProperty IRI="performsAction"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasOccupantRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyIndiferent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupantAttitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Alert"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="startWorkTime"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dce:date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Feeback"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyFrugal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyProfligate"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="endWorkTime"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="id"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantAttitude"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="Actions"/>
@@ -131,6 +152,18 @@
             <ObjectProperty IRI="changes"/>
             <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EnergyFrugal"/>
+        <Class IRI="OccupantAttitude"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EnergyIndiferent"/>
+        <Class IRI="OccupantAttitude"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EnergyProfligate"/>
+        <Class IRI="OccupantAttitude"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Feeback"/>
@@ -164,7 +197,15 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOccupantAttitude"/>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
+        <Class abbreviatedIRI="ifc2:IfcOccupant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOccupantRole"/>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -176,8 +217,16 @@
         <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOccupantAttitude"/>
+        <Class IRI="OccupantAttitude"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
         <Class IRI="OccupantCharacteristics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOccupantRole"/>
+        <Class IRI="OccupantRole"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="performsAction"/>
