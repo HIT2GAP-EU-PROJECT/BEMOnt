@@ -16,16 +16,16 @@ skinparam classAttributeFontColor  Green
 
 class Property <<ssn>>
 
-class OccupantProperties <<hit2gap>>
+class OccupantStateProperties <<hit2gap>>
 
 class Stress <<hit2gap>>
 class Pulse <<hit2gap>>
 
-Property <|-- OccupantProperties
+Property <|-- OccupantStateProperties
 
 
-OccupantProperties <|-- Stress 
-OccupantProperties <|-- Pulse
+OccupantStateProperties <|-- Stress 
+OccupantStateProperties <|-- Pulse
 
 
 @enduml
