@@ -1040,5 +1040,39 @@ PhysicProperties <|-- Climate
 OccupantStateProperties <|-- Stress 
 OccupantStateProperties <|-- Pulse
 
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+IfcAlarm --> IfcAlarmType: owl:equivalentClass
+IfcController --> IfcControllerType: owl:equivalentClass
+IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcFlowInstrument  --> IfcFlowInstrumentType: owl:equivalentClass
+IfcBoiler --> IfcBoilerType: owl:equivalentClass
+IfcChiller --> IfcChillerType: owl:equivalentClass
+IfcCoil  --> IfcCoilType: owl:equivalentClass
+IfcEvaporativeCooler --> IfcEvaporativeCoolerType: owl:equivalentClass
+IfcHeatExchanger --> IfcHeatExchangerType: owl:equivalentClass
+IfcAirToAirHeatRecovery --> IfcAirToAirHeatRecoveryType: owl:equivalentClass
+IfcHumidifier --> IfcHumidifierType: owl:equivalentClass
+IfcEvaporator --> IfcEvaporatorType: owl:equivalentClass
+IfcCoolingTower --> IfcCoolingTowerType: owl:equivalentClass
+IfcCondenser --> IfcCondenserType: owl:equivalentClass
+IfcTransformer --> IfcTransformerType: owl:equivalentClass
+IfcElectricGenerator --> IfcElectricGeneratorType: owl:equivalentClass
+IfcElectricMotor --> IfcElectricMotorType: owl:equivalentClass
+IfcVibrationIsolator --> IfcVibrationIsolatorType: owl:equivalentClass
+IfcSpaceHeater --> IfcSpaceHeaterType: owl:equivalentClass
+IfcFireSuppressionTerminal --> IfcFireSuppressionTerminalType: owl:equivalentClass
+IfcSanitaryTerminal --> IfcSanitaryTerminalType: owl:equivalentClass
+IfcStackTerminal --> IfcStackTerminalType: owl:equivalentClass
+IfcWasteTerminal --> IfcWasteTerminalType: owl:equivalentClass
+IfcElectricAppliance --> IfcElectricApplianceType: owl:equivalentClass
+IfcLamp  --> IfcLampType: owl:equivalentClass
+IfcOutlet --> IfcOutletType: owl:equivalentClass
+IfcCompressor --> IfcCompressorType: owl:equivalentClass
+IfcFan --> IfcFanType: owl:equivalentClass
+IfcPump --> IfcPumpType: owl:equivalentClass
+IfcTank --> IfcTankType: owl:equivalentClass
+IfcElectricFlowStorageDevice --> IfcElectricFlowStorageDeviceType: owl:equivalentClass
+IfcValve --> IfcValveType: owl:equivalentClass
+IfcDamper --> IfcDamperType: owl:equivalentClass
 
 @enduml
