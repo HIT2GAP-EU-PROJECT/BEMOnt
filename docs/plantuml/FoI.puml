@@ -17,6 +17,13 @@ skinparam classAttributeFontColor  Green
   Definition of the Feature of interest classes
 '/
 class FeatureOfInterest <<ssn>>
+
+class Observation <<ssn>>  {
+  externalStorageID xsd:string
+}
+
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
 class IfcSpatialElement <<h2gifc4>>
@@ -224,6 +231,8 @@ StaticBuildingAppliance <|-- IfcFlowMovingDevice
 StaticBuildingAppliance <|-- IfcFlowController
 StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
 StaticBuildingAppliance <|-- IfcEnergyConversionDevice
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
