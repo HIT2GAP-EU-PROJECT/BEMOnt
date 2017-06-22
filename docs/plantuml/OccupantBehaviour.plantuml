@@ -66,6 +66,9 @@ class Observation <<SSN>> {
   externalStorageID xsd:string
 }
 
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
+
 class Property <<SSN>> {
 
 }
@@ -421,6 +424,9 @@ ObservationValue --> Unit:qudt:unit
 Observation --> Instant: ssn:observationResultTime
 Observation --> DateTimeInterval: ssn:observationResultTime
 FeatureOfInterest --> Property: ssn:hasProperty
+
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
 
 SampledFeatures <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialZone
