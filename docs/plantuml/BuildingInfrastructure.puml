@@ -21,6 +21,8 @@ class Observation <<ssn>>  {
   externalStorageID xsd:string
 }
 
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
 class FeatureOfInterest <<ssn>>
 class Property <<ssn>>
 class SensorOutput <<ssn>>
@@ -559,6 +561,9 @@ class SpaceCapacity <<hit2gap>>
 '/
 
 System <|-- Sensor
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
+
 System --> System: ssn:hasSubSystem
 IfcSensor --> Sensor: owl:equivalentClass
 Sensor --> Observation: ssn:observedBy
@@ -571,6 +576,7 @@ SensorOutput --> ObservationValue: ssn:hasValue
 ObservationValue --> Unit: qudt:unit
 Observation --> Instant: ssn:observationResultTime
 Observation --> DateTimeInterval: ssn:observationResultTime
+
 
 /'
   Definition of the geospatial part using GeoOWL ontology
