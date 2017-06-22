@@ -17,6 +17,12 @@ class BuildingAppliance <<hit2gap>>
 class StaticBuildingAppliance <<hit2gap>>
 class MobileBuildingAppliance <<hit2gap>>
 
+class Observation <<ssn>>  {
+  externalStorageID xsd:string
+}
+
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+
 class IfcFlowTerminal <<ifc>>
 class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
@@ -65,6 +71,9 @@ StaticBuildingAppliance <|-- IfcFlowMovingDevice
 StaticBuildingAppliance <|-- IfcFlowController
 StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
 StaticBuildingAppliance <|-- IfcEnergyConversionDevice
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
+
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
