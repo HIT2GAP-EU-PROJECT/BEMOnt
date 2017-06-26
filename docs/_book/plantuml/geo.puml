@@ -25,7 +25,6 @@ class _Geometry <<geo>>
 class Point <<geo>>
 class Polygon <<geo>>
 class Hemisphere <<hit2gap>>
-class Climate <<hit2gap>>
 class Northerm <<(I,orchid),hit2gap>>
 class Southern <<(I,orchid),hit2gap>>
 class Tropical <<hit2gap>>
@@ -55,26 +54,10 @@ _Feature <|-- FeatureOfInterest
 _Feature <|-- System
 
 _Feature --> Hemisphere: hit2gap:locatedInHemisphere
-_Feature --> Climate: hit2gap:locatedInClimate
-
-_Feature --> Orientation: hit2gap:hasOrientation
-
-Orientation..[#orchid] North
-Orientation..[#orchid] South
-Orientation..[#orchid] West
-Orientation..[#orchid] East
-Orientation..[#orchid] North_East
-Orientation..[#orchid] North_West
-Orientation..[#orchid] South_East
-Orientation..[#orchid] South_West
 
 Hemisphere ..[#orchid] Northerm
 Hemisphere ..[#orchid] Southern
 
-Climate <|-- Tropical
-Climate <|-- Arid
-Climate <|-- Temperate
-Climate <|-- Cold
-Climate <|-- Polar
+
 
 @enduml

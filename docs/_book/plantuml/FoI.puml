@@ -17,8 +17,16 @@ skinparam classAttributeFontColor  Green
   Definition of the Feature of interest classes
 '/
 class FeatureOfInterest <<ssn>>
+
+class Observation <<ssn>>  {
+  externalStorageID xsd:string
+}
+
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
+class IfcSpatialElement <<h2gifc4>>
 class Microgrid <<ontomg>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
@@ -28,22 +36,36 @@ class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
 class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
-class IfcSpatialZone <<ifc>>
+class IfcSpatialZone <<h2gifc4>>
 
-class IfcFlowInstrument <<ifc>>
-class IfcProtectiveDeviceTrippingUnit <<ifc>>
-class IfcSensor <<ifc>>
-class IfcUnitaryControlElement <<ifc>>
+class IfcFlowInstrument <<ifc4>>
+class IfcFlowInstrumentType <<ifc>>
+
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
+
+class IfcProtectiveDeviceTrippingUnit <<h2gifc4>>
+
+class IfcUnitaryControlElement <<h2gifc4>>
 class IfcFlowTerminal <<ifc>>
 
-class IfcFlowStorageDevice <<ifc>>
-class IfcFlowMonitoringDevice <<ifc>>
+class IfcFlowStorageDevice <<ifc4>>
+class IfcFlowStorageDeviceType <<ifc>>
+
 class IfcFlowTreatmentDevice <<ifc>>
-class IfcEnergyConversionDevice <<ifc>>
+
+class IfcEnergyConversionDevice <<ifc>> {
+  hasSetPoint xsd:boolean
+}
+
 class IfcFlowController <<ifc>>
+
+class IfcFlowMovingDevice <<ifc>>
 
 class BuildingAppliance <<hit2gap>>
 class BuildingType <<hit2gap>>
+class StaticBuildingAppliance <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
 
 class Monitoring <<hit2gap>>
 class Wereable <<hit2gap>>
@@ -53,9 +75,14 @@ class Smartphone <<hit2gap>>
 
 class Meter <<hit2gap>>
 
-class IfcActuator <<ifc>>
-class IfcAlarm <<ifc>>
-class IfcController <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
+
+class IfcAlarm <<ifc4>>
+class IfcAlarmType <<ifc>>
+
+class IfcController <<ifc4>>
+class IfcControllerType <<ifc>>
 
 /'
   Building types class definition
@@ -75,6 +102,7 @@ class Transports <<hit2gap>>
 
 class Room <<hit2gap>>
 class Floor <<hit2gap>>
+class OpenSpace <<hit2gap>>
 class Desk <<hit2gap>>
 class Subterranean <<hit2gap>>
 class Ground <<hit2gap>>
@@ -89,6 +117,16 @@ class IfcSite <<ifc>>
 class IfcSpace <<ifc>>
 class SpaceCapacity <<hit2gap>>
 
+class Orientation <<hit2gap>>
+
+class North <<(I,orchid),hit2gap>>
+class South <<(I,orchid),hit2gap>>
+class West <<(I,orchid),hit2gap>>
+class East <<(I,orchid),hit2gap>>
+class North_East <<(I,orchid),hit2gap>>
+class North_West <<(I,orchid),hit2gap>>
+class South_East <<(I,orchid),hit2gap>>
+class South_West <<(I,orchid),hit2gap>>
 
 /'
   Definition of the types of FoIs
@@ -99,6 +137,12 @@ FeatureOfInterest <|-- BuildingAppliance
 FeatureOfInterest <|-- IfcElement
 FeatureOfInterest <|-- Microgrid
 FeatureOfInterest <|-- IfcSpatialElement
+
+BuildingAppliance --> Microgrid: hit2gap:produceEnergy
+BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
+BuildingAppliance --> Microgrid: hit2gap:storageEnergy
+BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
+BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
 
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement
@@ -112,11 +156,33 @@ IfcSpatialStructureElement <|-- IfcSite
 IfcSpatialStructureElement <|-- IfcSpace
 
 
-BuildingAppliance --> IfcDistributionElement: hit2gap:containsElement
 
 IfcBuilding -->IfcSpatialZone: hit2gap:contains
-IfcBuilding -->IfcZone: hit2gap:contains
 IfcSpatialZone --> IfcElement: hit2gap:contains
+
+
+IfcSite --> IfcSite: hit2gap:contains
+IfcSite --> IfcBuilding: hit2gap:contains
+IfcBuilding --> IfcBuilding: hit2gap:contains
+IfcBuildingStorey -->IfcSpace: hit2gap:contains
+IfcZone -->IfcZone: hit2gap:contains
+IfcZone -->IfcSpace: hit2gap:contains
+
+IfcBuilding -->IfcSpace: hit2gap:contains
+IfcBuilding --> IfcBuildingStorey: hit2gap:contains
+
+IfcSite --> Orientation: hit2gap:hasOrientation
+IfcBuilding --> Orientation: hit2gap:hasOrientation
+
+Orientation..[#orchid] North
+Orientation..[#orchid] South
+Orientation..[#orchid] West
+Orientation..[#orchid] East
+Orientation..[#orchid] North_East
+Orientation..[#orchid] North_West
+Orientation..[#orchid] South_East
+Orientation..[#orchid] South_West
+
 
 IfcElement <|-- IfcDistributionElement
 IfcElement <|-- IfcBuildingElement
@@ -126,7 +192,7 @@ IfcDistributionElement <|-- IfcDistributionControlElement
 IfcDistributionElement <|-- IfcDistributionFlowElement
 
 IfcDistributionFlowElement <|-- IfcFlowStorageDevice
-IfcDistributionFlowElement <|-- IfcFlowMonitoringDevice
+IfcDistributionFlowElement <|-- IfcFlowMovingDevice
 IfcDistributionFlowElement <|-- IfcFlowController
 IfcDistributionFlowElement <|-- IfcFlowTerminal
 IfcDistributionFlowElement <|-- IfcFlowTreatmentDevice
@@ -149,9 +215,24 @@ BuildingType <|-- Transports
 
 IfcBuilding --> BuildingType: hit2gap:hasType
 
-BuildingAppliance <|-- IfcFlowTerminal
-BuildingAppliance <|-- Monitoring
-BuildingAppliance <|-- Wereable
+BuildingAppliance <|-- StaticBuildingAppliance 
+BuildingAppliance <|-- MobileBuildingAppliance
+
+StaticBuildingAppliance <|-- IfcFlowTerminal
+StaticBuildingAppliance <|-- Monitoring
+MobileBuildingAppliance <|-- Wereable
+
+BuildingAppliance --> BuildingAppliance: hit2gap:contains
+StaticBuildingAppliance --> IfcZone: hit2gap:isLocatedIn
+Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
+IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
+StaticBuildingAppliance <|-- IfcFlowStorageDevice
+StaticBuildingAppliance <|-- IfcFlowMovingDevice
+StaticBuildingAppliance <|-- IfcFlowController
+StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
+StaticBuildingAppliance <|-- IfcEnergyConversionDevice
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
@@ -162,10 +243,22 @@ Monitoring <|-- IfcAlarm
 Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
-IfcZone <|-- Room
-IfcZone <|-- Floor
-IfcZone <|-- Desk
+IfcSpace <|-- Office
+IfcSpace <|-- CirculationArea
+IfcSpace <|-- WetArea
+IfcSpace <|-- ConferenceRoom
+IfcSpace <|-- Balcony
+IfcSpace <|-- Kitchen
+IfcSpace <|-- Toilets
+IfcSpace <|-- Bathroom
+IfcSpace <|-- RestRoom
+IfcSpace <|-- Canteen
+IfcSpace <|-- Cafeteria
+IfcSpace <|-- Room
+IfcSpace <|-- Desk
+IfcSpace <|-- OpenSpace
 
+IfcBuildingStorey <|-- Floor
 Floor <|-- Subterranean
 Floor <|-- Ground
 
@@ -179,4 +272,10 @@ IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
 
+IfcFlowInstrument --> IfcFlowInstrumentType: owl:equivalentClass
+IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcFlowStorageDevice --> IfcFlowStorageDeviceType: owl:equivalentClass
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+IfcAlarm --> IfcAlarmType: owl:equivalentClass
+IfcController --> IfcControllerType: owl:equivalentClass
 @enduml

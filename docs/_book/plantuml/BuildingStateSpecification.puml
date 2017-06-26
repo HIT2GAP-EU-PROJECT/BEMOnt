@@ -45,8 +45,8 @@ class Driver <<HIT2GAP>>{
 
 }
 
-class Observation <<SSN>>{
-
+class Observation <<SSN>> {
+  externalStorageID xsd:string
 }
 
 class Property <<SSN>> {
@@ -56,7 +56,8 @@ class Property <<SSN>> {
 class Sensor <<SSN>>
 
 class IfcBuilding <<ifc>>
-class IfcSensor <<ifc>>
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
 
 IfcBuilding --> BuildingState:hasState
 System --> BuildingState: hasState
@@ -73,5 +74,7 @@ Sensor --> Property:ssn_observes
 IfcSensor --> Sensor: owl:equivalentClass
 
 Observation <|-- Driver
+
+IfcSensor --> IfcSensorType: owl:equivalentClass
 
 @enduml

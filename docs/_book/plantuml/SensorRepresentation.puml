@@ -16,7 +16,13 @@ skinparam classAttributeFontColor  Green
 '/
 class System <<ssn>>
 class Sensor <<ssn>>
-class Observation <<ssn>>
+class Observation <<ssn>> {
+  externalStorageID xsd:string
+}
+
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
+
 class FeatureOfInterest <<ssn>>
 class Property <<ssn>>
 class SensorOutput <<ssn>>
@@ -29,7 +35,8 @@ class DateTimeInterval <<time>>{
 }
 class Unit <<QUDT>>
 
-class IfcSensor <<ifc>>
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
 
 /'
   Definition of the Geo-core part
@@ -47,6 +54,10 @@ class Polygon <<geo>>
 
 System --> System: ssn:hasSubSystem
 System <|-- Sensor
+
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
+
 IfcSensor --> Sensor: owl:equivalentClass
 Sensor --> Observation: ssn:observedBy
 Sensor --> Property: ssn:observes
@@ -70,6 +81,7 @@ _Geometry <|-- Polygon
 _Feature <|-- FeatureOfInterest
 _Feature <|-- System
 
+IfcSensor --> IfcSensorType: owl:equivalentClass
 
 
 @enduml

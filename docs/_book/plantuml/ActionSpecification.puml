@@ -39,7 +39,27 @@ class OccupantDiscomfort <<HIT2GAP>>{
 
 }
 
-class IfcActuator <<ifc>>
+class WindowCoverings <<hit2gap>> 
+
+
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
+
+class IfcWindow <<ifc>>
+class IfcZone <<ifc>>
+
+class IfcDistributionControlElement <<ifc>>
+
+class IfcEnergyConversionDevice <<ifc>> {
+  hasSetPoint xsd:boolean
+}
+
+class IfcOccupant <<IFC>>{
+  age xsd:double
+  gender xsd:string
+  lifestyle xsd:string
+  jobType xsd:string
+}
 
 Actions <|-- SystemActions
 Actions <|-- Inaction
@@ -53,5 +73,12 @@ IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
 SystemActions --> Device: hit2gap:actuateOver
 SystemActions --> IfcActuator: hit2gap:actuateOver
 IfcOccupant --> Actions: hit2gap:performsAction
+IfcWindow --> WindowCoverings: hit2gap:hasCoverings
+IfcActuator --> IfcWindow: hit2gap:OpenClose
+IfcActuator --> WindowCoverings: hit2gap:OpenClose
+IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
+
+IfcActuator --> IfcActuatorType: owl:equivalentClass
+
 
 @enduml

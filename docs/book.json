@@ -1,13 +1,6 @@
 {
 	"title": "HIT2GAPOnt: A Semantic data model to manage buildings information",
   "plugins": [
-    "edit-link"
-  ],
-  "pluginsConfig": {
-            "edit-link": {
-                "base": "https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/tree/master/docs",
-                "label": "Edit This Page"
-            }
-  }
 
+  ]
 }
