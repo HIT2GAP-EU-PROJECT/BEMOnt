@@ -66,10 +66,10 @@
         <Class IRI="TimeBehaviour"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <NamedIndividual IRI="Male"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Male"/>
+        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
     </Declaration>
     <Declaration>
         <Class IRI="VisualComfort"/>
@@ -81,10 +81,10 @@
         <ObjectProperty IRI="associatedTo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasComfortRequirements"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:Sensor"/>
+        <ObjectProperty IRI="hasComfortRequirements"/>
     </Declaration>
     <Declaration>
         <Class IRI="ActivityModel"/>
@@ -111,16 +111,19 @@
         <ObjectProperty IRI="performsAction"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Feedback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyIndiferent"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOccupantRole"/>
     </Declaration>
     <Declaration>
         <Class IRI="OccupantPreferences"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EnergyIndiferent"/>
     </Declaration>
     <Declaration>
         <Class IRI="BlindOpen"/>
@@ -144,10 +147,10 @@
         <Class abbreviatedIRI="ssn:Property"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasState"/>
+        <Class IRI="DoorState"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DoorState"/>
+        <ObjectProperty IRI="hasState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Outdoor"/>
@@ -171,6 +174,9 @@
         <ObjectProperty abbreviatedIRI="ssn:hasValue"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="OccupantAttitude"/>
     </Declaration>
     <Declaration>
@@ -186,10 +192,10 @@
         <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="SMS"/>
+        <ObjectProperty IRI="hasContext"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasContext"/>
+        <NamedIndividual IRI="SMS"/>
     </Declaration>
     <Declaration>
         <Class IRI="BuildingSimpleState"/>
@@ -234,10 +240,10 @@
         <ObjectProperty IRI="isAssignedTo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OtherComfortEnvelope"/>
+        <Class IRI="Report"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Report"/>
+        <Class IRI="OtherComfortEnvelope"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="time:Instant"/>
@@ -297,10 +303,10 @@
         <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcSensor"/>
+        <DataProperty IRI="lifestyle"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="lifestyle"/>
+        <Class abbreviatedIRI="ifc2:IfcSensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="Indoor"/>
@@ -315,10 +321,10 @@
         <NamedIndividual IRI="Summer"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+        <ObjectProperty IRI="isStatedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isStatedBy"/>
+        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
     </Declaration>
     <Declaration>
         <Class IRI="IAQ"/>
@@ -330,10 +336,10 @@
         <Class IRI="EventModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BuildingComplexState"/>
+        <Class IRI="ThermalComfort"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ThermalComfort"/>
+        <Class IRI="BuildingComplexState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Privacy"/>
@@ -357,10 +363,10 @@
         <Class IRI="BehaviourModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowsClose"/>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
+        <Class IRI="WindowsClose"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="minValue"/>
@@ -384,16 +390,16 @@
         <AnnotationProperty abbreviatedIRI="dce:title"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="assignedTo"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Technician"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasModelResult"/>
+        <ObjectProperty IRI="assignedTo"/>
     </Declaration>
     <Declaration>
         <Class IRI="Driver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasModelResult"/>
     </Declaration>
     <Declaration>
         <Class IRI="DoorClose"/>
@@ -432,10 +438,10 @@
         <DataProperty IRI="startWorktime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ZoneEmpty"/>
+        <Class IRI="Indicator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Indicator"/>
+        <Class IRI="ZoneEmpty"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcActor"/>
@@ -874,6 +880,10 @@
         <Class IRI="ZoneOccupancy"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <Class abbreviatedIRI="ssn:System"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ssn:Observation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="ssn:observationResultTime"/>
@@ -891,8 +901,12 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
         <Class abbreviatedIRI="ssn:Sensor"/>
-        <Class abbreviatedIRI="ssn:System"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="ifc2:IfcActor"/>
