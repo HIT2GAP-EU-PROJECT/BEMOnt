@@ -1,0 +1,955 @@
+@prefix : <http://hit2gap.eu/h2g##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://hit2gap.eu/h2g#> .
+
+<http://hit2gap.eu/h2g#> rdf:type owl:Ontology ;
+                          <http://purl.org/dc/elements/1.1/contributor> "Gulben Calis (gulbencalis@gmail.com)"@en ,
+                                                                        "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en ;
+                          <http://purl.org/dc/elements/1.1/creator> "Aitor Corchero (aitor.corchero@eurecat.org)"@en ,
+                                                                    "Pierre Bourreau (pbourreau@nobatek.com)"@en ,
+                                                                    "Yudith Cardinale (yudith.cardinale@gmail.com)"@en ;
+                          <http://purl.org/dc/elements/1.1/description> "This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states."@en ;
+                          <http://purl.org/dc/elements/1.1/title> "Hit2Gap Ontology-User Behavior"@en ;
+                          <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"@en ;
+                          owl:versionInfo "This current version includes the initial version of the semantic model based on the diagrams generated."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/description
+<http://schema.org/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/license
+<http://schema.org/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#acts
+<http://hit2gap.eu/h2g#acts> rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#assignedTo
+<http://hit2gap.eu/h2g#assignedTo> rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf <http://hit2gap.eu/h2g#isAssignedTo> .
+
+
+###  http://hit2gap.eu/h2g#associatedTo
+<http://hit2gap.eu/h2g#associatedTo> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#changes
+<http://hit2gap.eu/h2g#changes> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#concerns
+<http://hit2gap.eu/h2g#concerns> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasBehaviour
+<http://hit2gap.eu/h2g#hasBehaviour> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasComfortRequirements
+<http://hit2gap.eu/h2g#hasComfortRequirements> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasConstraints
+<http://hit2gap.eu/h2g#hasConstraints> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasContext
+<http://hit2gap.eu/h2g#hasContext> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasFunction
+<http://hit2gap.eu/h2g#hasFunction> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasGender
+<http://hit2gap.eu/h2g#hasGender> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasIndicator
+<http://hit2gap.eu/h2g#hasIndicator> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasModelResult
+<http://hit2gap.eu/h2g#hasModelResult> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasOccupantAttitude
+<http://hit2gap.eu/h2g#hasOccupantAttitude> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> ;
+                                            rdfs:range <http://hit2gap.eu/h2g#OccupantAttitude> .
+
+
+###  http://hit2gap.eu/h2g#hasOccupantCharacteristics
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   rdfs:domain <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> ;
+                                                   rdfs:range <http://hit2gap.eu/h2g#OccupantCharacteristics> .
+
+
+###  http://hit2gap.eu/h2g#hasOccupantRole
+<http://hit2gap.eu/h2g#hasOccupantRole> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> ;
+                                        rdfs:range <http://hit2gap.eu/h2g#OccupantRole> .
+
+
+###  http://hit2gap.eu/h2g#hasProbability
+<http://hit2gap.eu/h2g#hasProbability> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasRole
+<http://hit2gap.eu/h2g#hasRole> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#hasState
+<http://hit2gap.eu/h2g#hasState> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                 owl:inverseOf <http://hit2gap.eu/h2g#isStatedBy> ;
+                                 rdfs:range <http://hit2gap.eu/h2g#BuildingState> .
+
+
+###  http://hit2gap.eu/h2g#hasStatus
+<http://hit2gap.eu/h2g#hasStatus> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#isAssignedTo
+<http://hit2gap.eu/h2g#isAssignedTo> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#isBasedOn
+<http://hit2gap.eu/h2g#isBasedOn> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#isProvokedBy
+<http://hit2gap.eu/h2g#isProvokedBy> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <http://hit2gap.eu/h2g#provokes> .
+
+
+###  http://hit2gap.eu/h2g#isStatedBy
+<http://hit2gap.eu/h2g#isStatedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#performsAction
+<http://hit2gap.eu/h2g#performsAction> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> ;
+                                       rdfs:range <http://hit2gap.eu/h2g#Actions> .
+
+
+###  http://hit2gap.eu/h2g#prefers
+<http://hit2gap.eu/h2g#prefers> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#provokes
+<http://hit2gap.eu/h2g#provokes> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#receives
+<http://hit2gap.eu/h2g#receives> rdf:type owl:ObjectProperty .
+
+
+###  http://hit2gap.eu/h2g#receivesAlerts
+<http://hit2gap.eu/h2g#receivesAlerts> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> ;
+                                       rdfs:range <http://hit2gap.eu/h2g#Alert> .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem
+<http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasValue
+<http://purl.oclc.org/NET/ssnx/ssn#hasValue> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#observationResult
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#observationResultTime
+<http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#observedBy
+<http://purl.oclc.org/NET/ssnx/ssn#observedBy> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://hit2gap.eu/h2g#age
+<http://hit2gap.eu/h2g#age> rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:double .
+
+
+###  http://hit2gap.eu/h2g#endWorktime
+<http://hit2gap.eu/h2g#endWorktime> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:dateTime .
+
+
+###  http://hit2gap.eu/h2g#externalID
+<http://hit2gap.eu/h2g#externalID> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:anyURI .
+
+
+###  http://hit2gap.eu/h2g#id
+<http://hit2gap.eu/h2g#id> rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:string .
+
+
+###  http://hit2gap.eu/h2g#jobType
+<http://hit2gap.eu/h2g#jobType> rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:string .
+
+
+###  http://hit2gap.eu/h2g#lifestyle
+<http://hit2gap.eu/h2g#lifestyle> rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                  rdfs:range xsd:string .
+
+
+###  http://hit2gap.eu/h2g#maxValue
+<http://hit2gap.eu/h2g#maxValue> rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:range xsd:double .
+
+
+###  http://hit2gap.eu/h2g#minValue
+<http://hit2gap.eu/h2g#minValue> rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:double .
+
+
+###  http://hit2gap.eu/h2g#name
+<http://hit2gap.eu/h2g#name> rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:string .
+
+
+###  http://hit2gap.eu/h2g#startWorktime
+<http://hit2gap.eu/h2g#startWorktime> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g#ThermalComfort> .
+
+
+###  http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://hit2gap.eu/h2g#ThermalComfort> .
+
+
+###  http://hit2gap.eu/h2g#AcousticComfort
+<http://hit2gap.eu/h2g#AcousticComfort> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://hit2gap.eu/h2g#Needs> .
+
+
+###  http://hit2gap.eu/h2g#Actions
+<http://hit2gap.eu/h2g#Actions> rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://hit2gap.eu/h2g#changes> ;
+                                                  owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement>
+                                                ] .
+
+
+###  http://hit2gap.eu/h2g#ActivityModel
+<http://hit2gap.eu/h2g#ActivityModel> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://hit2gap.eu/h2g#Driver> .
+
+
+###  http://hit2gap.eu/h2g#Alert
+<http://hit2gap.eu/h2g#Alert> rdf:type owl:Class ;
+                              rdfs:subClassOf <http://hit2gap.eu/h2g#Notification> .
+
+
+###  http://hit2gap.eu/h2g#BehaviourModel
+<http://hit2gap.eu/h2g#BehaviourModel> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://hit2gap.eu/h2g#Driver> ,
+                                                       [ rdf:type owl:Class ;
+                                                         owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://hit2gap.eu/h2g#isBasedOn> ;
+                                                                         owl:someValuesFrom <http://hit2gap.eu/h2g#OccupantBehaviour>
+                                                                       ]
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://hit2gap.eu/h2g#isBasedOn> ;
+                                                                         owl:someValuesFrom <http://hit2gap.eu/h2g#TimeBehaviour>
+                                                                       ]
+                                                                     )
+                                                       ] .
+
+
+###  http://hit2gap.eu/h2g#BlindClose
+<http://hit2gap.eu/h2g#BlindClose> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://hit2gap.eu/h2g#BlindState> ;
+                                   owl:disjointWith <http://hit2gap.eu/h2g#BlindOpen> .
+
+
+###  http://hit2gap.eu/h2g#BlindOpen
+<http://hit2gap.eu/h2g#BlindOpen> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://hit2gap.eu/h2g#BlindState> .
+
+
+###  http://hit2gap.eu/h2g#BlindState
+<http://hit2gap.eu/h2g#BlindState> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingSimpleState> .
+
+
+###  http://hit2gap.eu/h2g#BuildingComplexState
+<http://hit2gap.eu/h2g#BuildingComplexState> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingState> .
+
+
+###  http://hit2gap.eu/h2g#BuildingSimpleState
+<http://hit2gap.eu/h2g#BuildingSimpleState> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingState> .
+
+
+###  http://hit2gap.eu/h2g#BuildingState
+<http://hit2gap.eu/h2g#BuildingState> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://hit2gap.eu/h2g#isStatedBy> ;
+                                                        owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <http://purl.oclc.org/NET/ssnx/ssn#System>
+                                                                                           <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding>
+                                                                                         )
+                                                                           ]
+                                                      ] .
+
+
+###  http://hit2gap.eu/h2g#ComfortState
+<http://hit2gap.eu/h2g#ComfortState> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingComplexState> .
+
+
+###  http://hit2gap.eu/h2g#Constraints
+<http://hit2gap.eu/h2g#Constraints> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#Event> .
+
+
+###  http://hit2gap.eu/h2g#Context
+<http://hit2gap.eu/h2g#Context> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://hit2gap.eu/h2g#Event> ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://hit2gap.eu/h2g#isAssignedTo> ;
+                                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                       owl:unionOf ( <http://hit2gap.eu/h2g#Indoor>
+                                                                                     <http://hit2gap.eu/h2g#Outdoor>
+                                                                                   )
+                                                                     ]
+                                                ] .
+
+
+###  http://hit2gap.eu/h2g#DoorClose
+<http://hit2gap.eu/h2g#DoorClose> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://hit2gap.eu/h2g#DoorState> ;
+                                  owl:disjointWith <http://hit2gap.eu/h2g#DoorOpen> .
+
+
+###  http://hit2gap.eu/h2g#DoorOpen
+<http://hit2gap.eu/h2g#DoorOpen> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://hit2gap.eu/h2g#DoorState> .
+
+
+###  http://hit2gap.eu/h2g#DoorState
+<http://hit2gap.eu/h2g#DoorState> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingSimpleState> .
+
+
+###  http://hit2gap.eu/h2g#Driver
+<http://hit2gap.eu/h2g#Driver> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Observation> ,
+                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://hit2gap.eu/h2g#hasFunction> ;
+                                                                        owl:someValuesFrom <http://hit2gap.eu/h2g#Function>
+                                                                      ]
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://hit2gap.eu/h2g#hasIndicator> ;
+                                                                        owl:someValuesFrom <http://hit2gap.eu/h2g#Indicator>
+                                                                      ]
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://hit2gap.eu/h2g#hasModelResult> ;
+                                                                        owl:someValuesFrom <http://hit2gap.eu/h2g#ModelResult>
+                                                                      ]
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://hit2gap.eu/h2g#hasStatus> ;
+                                                                        owl:someValuesFrom <http://hit2gap.eu/h2g#Status>
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] .
+
+
+###  http://hit2gap.eu/h2g#EnergyFrugal
+<http://hit2gap.eu/h2g#EnergyFrugal> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://hit2gap.eu/h2g#OccupantAttitude> .
+
+
+###  http://hit2gap.eu/h2g#EnergyIndiferent
+<http://hit2gap.eu/h2g#EnergyIndiferent> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g#OccupantAttitude> .
+
+
+###  http://hit2gap.eu/h2g#EnergyProfligate
+<http://hit2gap.eu/h2g#EnergyProfligate> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g#OccupantAttitude> .
+
+
+###  http://hit2gap.eu/h2g#EnergyState
+<http://hit2gap.eu/h2g#EnergyState> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingComplexState> .
+
+
+###  http://hit2gap.eu/h2g#EnvironmentalBuildingFactors
+<http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#EquipementModel
+<http://hit2gap.eu/h2g#EquipementModel> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://hit2gap.eu/h2g#Driver> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://hit2gap.eu/h2g#isBasedOn> ;
+                                                          owl:someValuesFrom <http://hit2gap.eu/h2g#EnvironmentalBuildingFactors>
+                                                        ] .
+
+
+###  http://hit2gap.eu/h2g#Event
+<http://hit2gap.eu/h2g#Event> rdf:type owl:Class ;
+                              rdfs:subClassOf [ rdf:type owl:Class ;
+                                                owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://hit2gap.eu/h2g#associatedTo> ;
+                                                                owl:someValuesFrom <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput>
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://hit2gap.eu/h2g#hasConstraints> ;
+                                                                owl:someValuesFrom <http://hit2gap.eu/h2g#Constraints>
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://hit2gap.eu/h2g#hasContext> ;
+                                                                owl:someValuesFrom <http://hit2gap.eu/h2g#Context>
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://hit2gap.eu/h2g#hasProbability> ;
+                                                                owl:someValuesFrom <http://hit2gap.eu/h2g#Probability>
+                                                              ]
+                                                            )
+                                              ] .
+
+
+###  http://hit2gap.eu/h2g#EventModel
+<http://hit2gap.eu/h2g#EventModel> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://hit2gap.eu/h2g#Driver> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://hit2gap.eu/h2g#isBasedOn> ;
+                                                     owl:someValuesFrom <http://hit2gap.eu/h2g#Event>
+                                                   ] .
+
+
+###  http://hit2gap.eu/h2g#Feedback
+<http://hit2gap.eu/h2g#Feedback> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> .
+
+
+###  http://hit2gap.eu/h2g#Function
+<http://hit2gap.eu/h2g#Function> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Gender
+<http://hit2gap.eu/h2g#Gender> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#IAQ
+<http://hit2gap.eu/h2g#IAQ> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://hit2gap.eu/h2g#Needs> .
+
+
+###  http://hit2gap.eu/h2g#ISOAdaptiveComfort
+<http://hit2gap.eu/h2g#ISOAdaptiveComfort> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g#ThermalComfort> .
+
+
+###  http://hit2gap.eu/h2g#Inaction
+<http://hit2gap.eu/h2g#Inaction> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> .
+
+
+###  http://hit2gap.eu/h2g#Indicator
+<http://hit2gap.eu/h2g#Indicator> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Indoor
+<http://hit2gap.eu/h2g#Indoor> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Modality
+<http://hit2gap.eu/h2g#Modality> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#ModelResult
+<http://hit2gap.eu/h2g#ModelResult> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Needs
+<http://hit2gap.eu/h2g#Needs> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Notification
+<http://hit2gap.eu/h2g#Notification> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#ObservationValue
+<http://hit2gap.eu/h2g#ObservationValue> rdf:type owl:Class ;
+                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> ;
+                                                           owl:someValuesFrom <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit>
+                                                         ] .
+
+
+###  http://hit2gap.eu/h2g#OccupantAttitude
+<http://hit2gap.eu/h2g#OccupantAttitude> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#OccupantBehaviour
+<http://hit2gap.eu/h2g#OccupantBehaviour> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> .
+
+
+###  http://hit2gap.eu/h2g#OccupantCharacteristics
+<http://hit2gap.eu/h2g#OccupantCharacteristics> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://hit2gap.eu/h2g#endWorktime> ;
+                                                                  owl:allValuesFrom xsd:dateTime
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://hit2gap.eu/h2g#startWorktime> ;
+                                                                  owl:allValuesFrom xsd:dateTime
+                                                                ] .
+
+
+###  http://hit2gap.eu/h2g#OccupantComfort
+<http://hit2gap.eu/h2g#OccupantComfort> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://hit2gap.eu/h2g#ComfortState> ;
+                                        owl:disjointWith <http://hit2gap.eu/h2g#OccupantDiscomfort> .
+
+
+###  http://hit2gap.eu/h2g#OccupantDiscomfort
+<http://hit2gap.eu/h2g#OccupantDiscomfort> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g#ComfortState> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://hit2gap.eu/h2g#isProvokedBy> ;
+                                                             owl:someValuesFrom <http://hit2gap.eu/h2g#Actions>
+                                                           ] .
+
+
+###  http://hit2gap.eu/h2g#OccupantPreferences
+<http://hit2gap.eu/h2g#OccupantPreferences> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g#Needs> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://hit2gap.eu/h2g#id> ;
+                                                              owl:allValuesFrom xsd:string
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://hit2gap.eu/h2g#maxValue> ;
+                                                              owl:allValuesFrom xsd:double
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://hit2gap.eu/h2g#minValue> ;
+                                                              owl:allValuesFrom xsd:double
+                                                            ] .
+
+
+###  http://hit2gap.eu/h2g#OccupantRole
+<http://hit2gap.eu/h2g#OccupantRole> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#OtherComfortEnvelope
+<http://hit2gap.eu/h2g#OtherComfortEnvelope> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g#ThermalComfort> .
+
+
+###  http://hit2gap.eu/h2g#Outdoor
+<http://hit2gap.eu/h2g#Outdoor> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Privacy
+<http://hit2gap.eu/h2g#Privacy> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://hit2gap.eu/h2g#Needs> .
+
+
+###  http://hit2gap.eu/h2g#Probability
+<http://hit2gap.eu/h2g#Probability> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#Event> .
+
+
+###  http://hit2gap.eu/h2g#Recommendation
+<http://hit2gap.eu/h2g#Recommendation> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://hit2gap.eu/h2g#Notification> .
+
+
+###  http://hit2gap.eu/h2g#Report
+<http://hit2gap.eu/h2g#Report> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://hit2gap.eu/h2g#Feedback> .
+
+
+###  http://hit2gap.eu/h2g#Role
+<http://hit2gap.eu/h2g#Role> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#Season
+<http://hit2gap.eu/h2g#Season> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://hit2gap.eu/h2g#TimeBehaviour> .
+
+
+###  http://hit2gap.eu/h2g#Status
+<http://hit2gap.eu/h2g#Status> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#SystemActions
+<http://hit2gap.eu/h2g#SystemActions> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://hit2gap.eu/h2g#acts> ;
+                                                        owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://hit2gap.eu/h2g#changes> ;
+                                                        owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement>
+                                                      ] .
+
+
+###  http://hit2gap.eu/h2g#ThermalComfort
+<http://hit2gap.eu/h2g#ThermalComfort> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://hit2gap.eu/h2g#Needs> .
+
+
+###  http://hit2gap.eu/h2g#TimeBehaviour
+<http://hit2gap.eu/h2g#TimeBehaviour> rdf:type owl:Class .
+
+
+###  http://hit2gap.eu/h2g#User
+<http://hit2gap.eu/h2g#User> rdf:type owl:Class ;
+                             rdfs:subClassOf <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://hit2gap.eu/h2g#concerns> ;
+                                               owl:someValuesFrom <http://hit2gap.eu/h2g#Feedback>
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://hit2gap.eu/h2g#prefers> ;
+                                               owl:someValuesFrom <http://hit2gap.eu/h2g#Modality>
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://hit2gap.eu/h2g#receives> ;
+                                               owl:someValuesFrom <http://hit2gap.eu/h2g#Notification>
+                                             ] .
+
+
+###  http://hit2gap.eu/h2g#VisualComfort
+<http://hit2gap.eu/h2g#VisualComfort> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://hit2gap.eu/h2g#Needs> .
+
+
+###  http://hit2gap.eu/h2g#WindowState
+<http://hit2gap.eu/h2g#WindowState> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingSimpleState> .
+
+
+###  http://hit2gap.eu/h2g#WindowsClose
+<http://hit2gap.eu/h2g#WindowsClose> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://hit2gap.eu/h2g#WindowState> ;
+                                     owl:disjointWith <http://hit2gap.eu/h2g#WindowsOpen> .
+
+
+###  http://hit2gap.eu/h2g#WindowsOpen
+<http://hit2gap.eu/h2g#WindowsOpen> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#WindowState> .
+
+
+###  http://hit2gap.eu/h2g#ZoneEmpty
+<http://hit2gap.eu/h2g#ZoneEmpty> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://hit2gap.eu/h2g#ZoneOccupancy> ;
+                                  owl:disjointWith <http://hit2gap.eu/h2g#ZoneOccupied> .
+
+
+###  http://hit2gap.eu/h2g#ZoneOccupancy
+<http://hit2gap.eu/h2g#ZoneOccupancy> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingSimpleState> .
+
+
+###  http://hit2gap.eu/h2g#ZoneOccupied
+<http://hit2gap.eu/h2g#ZoneOccupied> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://hit2gap.eu/h2g#ZoneOccupancy> .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Device
+<http://purl.oclc.org/NET/ssnx/ssn#Device> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#System> .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
+<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Observation
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> ;
+                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                       owl:unionOf ( <http://www.w3.org/2006/time#DateTimeInterval>
+                                                                                                     <http://www.w3.org/2006/time#Instant>
+                                                                                                   )
+                                                                                     ]
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://hit2gap.eu/h2g#externalID> ;
+                                                                  owl:allValuesFrom xsd:anyURI
+                                                                ] .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Property
+<http://purl.oclc.org/NET/ssnx/ssn#Property> rdf:type owl:Class .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Device> ,
+                                                                  <http://purl.oclc.org/NET/ssnx/ssn#Sensor> .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Sensor
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> rdf:type owl:Class ;
+                                           owl:equivalentClass <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#SensorOutput
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> rdf:type owl:Class .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#System
+<http://purl.oclc.org/NET/ssnx/ssn#System> rdf:type owl:Class .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://hit2gap.eu/h2g#acts> ;
+                                                                                   owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://hit2gap.eu/h2g#hasRole> ;
+                                                                                   owl:someValuesFrom <http://hit2gap.eu/h2g#Role>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://hit2gap.eu/h2g#hasGender> ;
+                                                                                   owl:allValuesFrom <http://hit2gap.eu/h2g#Gender>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://hit2gap.eu/h2g#id> ;
+                                                                                   owl:someValuesFrom xsd:string
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://hit2gap.eu/h2g#name> ;
+                                                                                   owl:someValuesFrom xsd:string
+                                                                                 ] .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> rdf:type owl:Class .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> rdf:type owl:Class .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://hit2gap.eu/h2g#User> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://hit2gap.eu/h2g#hasBehaviour> ;
+                                                                                      owl:someValuesFrom <http://hit2gap.eu/h2g#OccupantBehaviour>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://hit2gap.eu/h2g#hasComfortRequirements> ;
+                                                                                      owl:someValuesFrom <http://hit2gap.eu/h2g#Needs>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://hit2gap.eu/h2g#age> ;
+                                                                                      owl:someValuesFrom xsd:string
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://hit2gap.eu/h2g#jobType> ;
+                                                                                      owl:someValuesFrom xsd:string
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://hit2gap.eu/h2g#lifestyle> ;
+                                                                                      owl:someValuesFrom xsd:string
+                                                                                    ] .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> rdf:type owl:Class .
+
+
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#DateTimeInterval
+<http://www.w3.org/2006/time#DateTimeInterval> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://hit2gap.eu/h2g#TimeBehaviour> .
+
+
+###  http://www.w3.org/2006/time#DayOfWeek
+<http://www.w3.org/2006/time#DayOfWeek> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://hit2gap.eu/h2g#TimeBehaviour> .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://hit2gap.eu/h2g#TimeBehaviour> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://hit2gap.eu/h2g#Autumn
+<http://hit2gap.eu/h2g#Autumn> rdf:type owl:NamedIndividual ,
+                                        <http://hit2gap.eu/h2g#Season> .
+
+
+###  http://hit2gap.eu/h2g#Email
+<http://hit2gap.eu/h2g#Email> rdf:type owl:NamedIndividual ,
+                                       <http://hit2gap.eu/h2g#Modality> .
+
+
+###  http://hit2gap.eu/h2g#Female
+<http://hit2gap.eu/h2g#Female> rdf:type owl:NamedIndividual ,
+                                        <http://hit2gap.eu/h2g#Gender> .
+
+
+###  http://hit2gap.eu/h2g#Male
+<http://hit2gap.eu/h2g#Male> rdf:type owl:NamedIndividual ,
+                                      <http://hit2gap.eu/h2g#Gender> .
+
+
+###  http://hit2gap.eu/h2g#Manager
+<http://hit2gap.eu/h2g#Manager> rdf:type owl:NamedIndividual ,
+                                         <http://hit2gap.eu/h2g#Role> .
+
+
+###  http://hit2gap.eu/h2g#Owner
+<http://hit2gap.eu/h2g#Owner> rdf:type owl:NamedIndividual ,
+                                       <http://hit2gap.eu/h2g#Role> .
+
+
+###  http://hit2gap.eu/h2g#Phone
+<http://hit2gap.eu/h2g#Phone> rdf:type owl:NamedIndividual ,
+                                       <http://hit2gap.eu/h2g#Modality> .
+
+
+###  http://hit2gap.eu/h2g#SMS
+<http://hit2gap.eu/h2g#SMS> rdf:type owl:NamedIndividual ,
+                                     <http://hit2gap.eu/h2g#Modality> .
+
+
+###  http://hit2gap.eu/h2g#Spring
+<http://hit2gap.eu/h2g#Spring> rdf:type owl:NamedIndividual ,
+                                        <http://hit2gap.eu/h2g#Season> .
+
+
+###  http://hit2gap.eu/h2g#Summer
+<http://hit2gap.eu/h2g#Summer> rdf:type owl:NamedIndividual ,
+                                        <http://hit2gap.eu/h2g#Season> .
+
+
+###  http://hit2gap.eu/h2g#Technician
+<http://hit2gap.eu/h2g#Technician> rdf:type owl:NamedIndividual ,
+                                            <http://hit2gap.eu/h2g#Role> .
+
+
+###  http://hit2gap.eu/h2g#Winter
+<http://hit2gap.eu/h2g#Winter> rdf:type owl:NamedIndividual ,
+                                        <http://hit2gap.eu/h2g#Season> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://hit2gap.eu/h2g#ActivityModel>
+                <http://hit2gap.eu/h2g#BehaviourModel>
+                <http://hit2gap.eu/h2g#EquipementModel>
+                <http://hit2gap.eu/h2g#EventModel>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

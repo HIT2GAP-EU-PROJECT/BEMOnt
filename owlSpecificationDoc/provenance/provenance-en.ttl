@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "Hit2Gap Ontology-User Behavior";
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Aitor Corchero (aitor.corchero@eurecat.org)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Pierre Bourreau (pbourreau@nobatek.com)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Yudith Cardinale (yudith.cardinale@gmail.com)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Gulben Calis (gulbencalis@gmail.com)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Richard Chbeir (richard.chbeir@univ-pau.fr)".];
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
