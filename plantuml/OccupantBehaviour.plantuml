@@ -1,6 +1,5 @@
 @startuml
-
-scale 0.2
+skinparam dpi 600
 
 skinparam class {
   ArrowColor DarkBlue
@@ -56,21 +55,27 @@ class IfcSpatialStructureElement <<IFC>>{
 
 }
 
-class IfcSensor <<IFC>>{
-
-}
+class IfcSensor <<ifc4>>
+class IfcSensorType <<ifc>>
 
 class FeatureOfInterest <<SSN>>{
 
 }
 
-class Observation <<SSN>>{
-
+class Observation <<SSN>> {
+  externalStorageID xsd:string
 }
+
+class MobileBuildingApplianceLocationObservation <<hit2gap>>
+class MobileBuildingAppliance <<hit2gap>>
 
 class Property <<SSN>> {
 
 }
+
+class EconomicProperties <<hit2gap>>
+class PhysicProperties <<hit2gap>>
+class OccupantStateProperties <<hit2gap>>
 
 class SensorOutput <<SSN>>{
 
@@ -101,10 +106,9 @@ class SamplingFeatures <<OGC>>{
 
 }
 
-class IfcSpatial <<IFC>>{
+class IfcSpatialZone <<h2gifc4>>{
 
 }
-class IfcSpatialStructureElement <<IFC>>
 
 
 class ZoneElement <<HIT2GAP>>{
@@ -324,11 +328,6 @@ class EquipmentModel <<HIT2GAP>>{
 class Unit <<QUDT>>{
 }
 
-class MechanicElement <<HIT2GAP>>{
-}
-class ElectricElement <<HIT2GAP>>{
-}
-
 class Event <<HIT2GAP>>
 class ModelResult <<HIT2GAP>>
 class Indicator <<HIT2GAP>>
@@ -338,7 +337,8 @@ class Constraints <<HIT2GAP>>
 class Probability <<HIT2GAP>>
 class Context <<HIT2GAP>>
 
-class IfcActuator <<ifc>>
+class IfcActuator <<ifc4>>
+class IfcActuatorType <<ifc>>
 
 Context --> Indoor: hit2gap:isAssignedTo
 Context --> Outdoor: hit2gap:isAssignedTo
@@ -425,21 +425,20 @@ Observation --> Instant: ssn:observationResultTime
 Observation --> DateTimeInterval: ssn:observationResultTime
 FeatureOfInterest --> Property: ssn:hasProperty
 
+Observation <|-- MobileBuildingApplianceLocationObservation
+MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
+
 SampledFeatures <|-- IfcBuilding
-IfcBuilding <|-- IfcSpatialStructureElement
 IfcSpatialElement <|-- IfcSpatialZone
-IfcSpatialStructureElement <|-- IfcSpatialZone
 IfcSpatialElement<|-- ZoneElement
-IfcBuilding <|-- MechanicElement
-IfcBuilding <|-- ElectricElement
 
 /'
 Definition of the Property subclasses
 '/
 
-Property <|-- ChemicalProperty
-Property <|-- EconomicProperty
-Property <|-- PhysicProperty
+Property <|-- OccupantStateProperties
+Property <|-- EconomicProperties
+Property <|-- PhysicProperties
 
 /'
 Description of building states
@@ -546,5 +545,8 @@ SystemActions --> IfcDistributionControlElement:hit2gap:changes
 IfcDistributionControlElement --> Alert: hit2gap:receivesAlert
 SystemActions --> Sensor: hit2gap:actuateOver
 Actions --> IfcSpatialStructureElement: hit2gap:change
+
+IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcActuator --> IfcActuatorType: owl:equivalentClass
 
 @enduml
