@@ -582,7 +582,9 @@
 
 ###  http://hit2gap.eu/h2g#OccupantBehaviour
 <http://hit2gap.eu/h2g#OccupantBehaviour> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> .
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> ;
+                                          rdfs:comment "Occupant behaviour influences building systems by movement or actions and further determines the building environment and energy consumption. Both the building environment and energy consumption in turn affect occupant behaviour through psychological, physiological and economic factors together with several external factors like comfort and culture."@en ;
+                                          rdfs:label "Occupant Behaviour"@en .
 
 
 ###  http://hit2gap.eu/h2g#OccupantCharacteristics
@@ -687,7 +689,9 @@
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty <http://hit2gap.eu/h2g#changes> ;
                                                         owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement>
-                                                      ] .
+                                                      ] ;
+                                      rdfs:comment "System Actions are the intereactions between the different occupants and the building using the different building systems to modify the building states towards more comfortable states."@en ;
+                                      rdfs:label "System Actions"@en .
 
 
 ###  http://hit2gap.eu/h2g#ThermalComfort

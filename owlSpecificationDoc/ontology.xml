@@ -1000,6 +1000,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#OccupantBehaviour">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Actions"/>
+        <rdfs:comment xml:lang="en">Occupant behaviour influences building systems by movement or actions and further determines the building environment and energy consumption. Both the building environment and energy consumption in turn affect occupant behaviour through psychological, physiological and economic factors together with several external factors like comfort and culture.</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant Behaviour</rdfs:label>
     </owl:Class>
     
 
@@ -1177,6 +1179,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">System Actions are the intereactions between the different occupants and the building using the different building systems to modify the building states towards more comfortable states.</rdfs:comment>
+        <rdfs:label xml:lang="en">System Actions</rdfs:label>
     </owl:Class>
     
 

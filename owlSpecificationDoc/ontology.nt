@@ -523,6 +523,8 @@ _:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://data.qudt.org/q
 # http://hit2gap.eu/h2g#OccupantBehaviour
 <http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+<http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupant behaviour influences building systems by movement or actions and further determines the building environment and energy consumption. Both the building environment and energy consumption in turn affect occupant behaviour through psychological, physiological and economic factors together with several external factors like comfort and culture."@en .
+<http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Behaviour"@en .
 # 
 # http://hit2gap.eu/h2g#OccupantCharacteristics
 <http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -613,6 +615,8 @@ _:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsma
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#changes> .
 _:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#comment> "System Actions are the intereactions between the different occupants and the building using the different building systems to modify the building states towards more comfortable states."@en .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#label> "System Actions"@en .
 # 
 # http://hit2gap.eu/h2g#ThermalComfort
 <http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
