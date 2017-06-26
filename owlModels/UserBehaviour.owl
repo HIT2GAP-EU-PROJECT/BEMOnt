@@ -7,54 +7,54 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://hit2gap.eu/h2g#">
     <Prefix name="" IRI="http://hit2gap.eu/h2g#"/>
-    <Prefix name="dce" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="h2g" IRI="http://hit2gap.eu/h2g#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
     <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
     <Prefix name="qudt" IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This part of the general ontology describes the general model referring the occupant behaviour. In that sense and according with (Hong et.al,2015), the occupant behaviour is composed by the following main aspects:
-
-- Drivers: Represent discrete-event simulation models for modeling occupant behavior, activities, events, and equipments, considering the factors that stimulates occupants to accomplish their needs.
-
-- Needs: Model the requirements that the different occupants shall meet to ensure their satisfaction in the environment which interacts.
-
-- Actions: Model the occupants interactions with the building to achieve the required comfort.</Literal>
-    </Annotation>
+    <Prefix name="schema" IRI="http://schema.org/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This current version includes the initial version of the semantic model based on the diagrams generated.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aitor Corchero (aitor.corchero@eurecat.org)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pierre Bourreau (pbourreau@nobatek.com)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richard Chbeir (richard.chbeir@univ-pau.fr)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dce:title"/>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://opensource.org/licenses/MIT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hit2Gap Ontology-User Behavior</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gulben Calis (gulbencalis@gmail.com)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (yudith.cardinale@gmail.com)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states.</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcActuator"/>
@@ -69,7 +69,7 @@
         <NamedIndividual IRI="Male"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:contributor"/>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
         <Class IRI="VisualComfort"/>
@@ -109,6 +109,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="performsAction"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="schema:license"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ssn:Device"/>
@@ -237,6 +240,9 @@
         <NamedIndividual IRI="Manager"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:abstract"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="isAssignedTo"/>
     </Declaration>
     <Declaration>
@@ -324,7 +330,7 @@
         <ObjectProperty IRI="isStatedBy"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:identifier"/>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </Declaration>
     <Declaration>
         <Class IRI="IAQ"/>
@@ -375,6 +381,9 @@
         <Class IRI="EnergyFrugal"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="jobType"/>
     </Declaration>
     <Declaration>
@@ -387,7 +396,10 @@
         <DataProperty IRI="endWorktime"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:title"/>
+        <AnnotationProperty abbreviatedIRI="schema:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Technician"/>
@@ -423,7 +435,7 @@
         <ObjectProperty IRI="isBasedOn"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:creator"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
         <Class IRI="User"/>
@@ -471,7 +483,7 @@
         <Class abbreviatedIRI="qudt:Unit"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dce:date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <Declaration>
         <Class IRI="AcousticComfort"/>
@@ -481,6 +493,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="BuildingState"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="bibo:status"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
@@ -496,6 +511,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Spring"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
         <Class IRI="Recommendation"/>
