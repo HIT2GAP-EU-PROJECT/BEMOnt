@@ -363,7 +363,9 @@
 
 ###  http://hit2gap.eu/h2g#BuildingComplexState
 <http://hit2gap.eu/h2g#BuildingComplexState> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingState> .
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingState> ;
+                                             rdfs:comment "In reference to the complex states, this refers as the states that require for the combination of different facilities to determine an overall state. For example, one complex state is the determination of the energy state of the building that can be energy efficient state or energy inefficient state considering anomalous energy consumption (e.g., thermostat on at same time as the windows are open)"@en ;
+                                             rdfs:label "Building Complex State"@en .
 
 
 ###  http://hit2gap.eu/h2g#BuildingSimpleState
@@ -381,17 +383,22 @@
                                                                                          )
                                                                            ]
                                                       ] ;
+                                      rdfs:comment "The building state allows to conextualise and determine the building facilities status. This building state determinaton has been divided into simple building states and complex building states."@en ;
                                       rdfs:label "Building State"@en .
 
 
 ###  http://hit2gap.eu/h2g#ComfortState
 <http://hit2gap.eu/h2g#ComfortState> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingComplexState> .
+                                     rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingComplexState> ;
+                                     rdfs:comment "Comfort state is defined as the ocupant state according to the current building situation."@en ;
+                                     rdfs:label "Comfort State"@en .
 
 
 ###  http://hit2gap.eu/h2g#Constraints
 <http://hit2gap.eu/h2g#Constraints> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://hit2gap.eu/h2g#Event> .
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#Event> ;
+                                    rdfs:comment "Event that limits the action of something."@en ;
+                                    rdfs:label "Constraints"@en .
 
 
 ###  http://hit2gap.eu/h2g#Context
@@ -404,7 +411,9 @@
                                                                                      <http://hit2gap.eu/h2g#Outdoor>
                                                                                    )
                                                                      ]
-                                                ] .
+                                                ] ;
+                                rdfs:comment "Context in which applies the action"@en ;
+                                rdfs:label "Context"@en .
 
 
 ###  http://hit2gap.eu/h2g#DoorClose
@@ -464,11 +473,15 @@
 
 ###  http://hit2gap.eu/h2g#EnergyState
 <http://hit2gap.eu/h2g#EnergyState> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingComplexState> .
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#BuildingComplexState> ;
+                                    rdfs:comment "Energy state is the combination of different direct measures or simple state measures to determine energy inefficiencies."@en ;
+                                    rdfs:label "Energy State"@en .
 
 
 ###  http://hit2gap.eu/h2g#EnvironmentalBuildingFactors
-<http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> rdf:type owl:Class .
+<http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> rdf:type owl:Class ;
+                                                     rdfs:comment "Environmental Building Factors refers to the building inddor and outdor fixeed conditions for comfort and discomfort."@en ;
+                                                     rdfs:label "Environmental Building Factors"@en .
 
 
 ###  http://hit2gap.eu/h2g#EquipementModel
@@ -500,7 +513,9 @@
                                                                 owl:someValuesFrom <http://hit2gap.eu/h2g#Probability>
                                                               ]
                                                             )
-                                              ] .
+                                              ] ;
+                              rdfs:comment "Circumstances that may be driving occupant actions such as waking up, sleeping, leaving for work or returning from lunch"@en ;
+                              rdfs:label "Event"@en .
 
 
 ###  http://hit2gap.eu/h2g#EventModel
@@ -520,11 +535,15 @@
 
 
 ###  http://hit2gap.eu/h2g#Function
-<http://hit2gap.eu/h2g#Function> rdf:type owl:Class .
+<http://hit2gap.eu/h2g#Function> rdf:type owl:Class ;
+                                 rdfs:comment "Is the model function to determine indoor and outdoor environmental building factors."@en ;
+                                 rdfs:label "Function"@en .
 
 
 ###  http://hit2gap.eu/h2g#Gender
-<http://hit2gap.eu/h2g#Gender> rdf:type owl:Class .
+<http://hit2gap.eu/h2g#Gender> rdf:type owl:Class ;
+                               rdfs:comment "The Gender is is the range of characteristics pertaining to, and differentiating between, masculinity and femininity"@en ;
+                               rdfs:label "Gender"@en .
 
 
 ###  http://hit2gap.eu/h2g#IAQ
@@ -602,7 +621,9 @@
 ###  http://hit2gap.eu/h2g#OccupantComfort
 <http://hit2gap.eu/h2g#OccupantComfort> rdf:type owl:Class ;
                                         rdfs:subClassOf <http://hit2gap.eu/h2g#ComfortState> ;
-                                        owl:disjointWith <http://hit2gap.eu/h2g#OccupantDiscomfort> .
+                                        owl:disjointWith <http://hit2gap.eu/h2g#OccupantDiscomfort> ;
+                                        rdfs:comment "Occupamt comfort is the occupant satisfaction with the building situation (thermal, lighting, etc) considering their specific comfrt ranges and parameters."@en ;
+                                        rdfs:label "Occupant Comfort"@en .
 
 
 ###  http://hit2gap.eu/h2g#OccupantDiscomfort
@@ -611,7 +632,9 @@
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://hit2gap.eu/h2g#isProvokedBy> ;
                                                              owl:someValuesFrom <http://hit2gap.eu/h2g#Actions>
-                                                           ] .
+                                                           ] ;
+                                           rdfs:comment "Occupamt discomfort will occur when building do not satisfy user requirements (comparison between needs and drivers)."@en ;
+                                           rdfs:label "Occupant Discomfort"@en .
 
 
 ###  http://hit2gap.eu/h2g#OccupantPreferences
@@ -651,7 +674,9 @@
 
 ###  http://hit2gap.eu/h2g#Probability
 <http://hit2gap.eu/h2g#Probability> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://hit2gap.eu/h2g#Event> .
+                                    rdfs:subClassOf <http://hit2gap.eu/h2g#Event> ;
+                                    rdfs:comment "Likelihood measure to occur certain action"@en ;
+                                    rdfs:label "Probability"@en .
 
 
 ###  http://hit2gap.eu/h2g#Recommendation
@@ -717,7 +742,9 @@
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty <http://hit2gap.eu/h2g#receives> ;
                                                owl:someValuesFrom <http://hit2gap.eu/h2g#Notification>
-                                             ] .
+                                             ] ;
+                             rdfs:comment "Type of actor that corresponds to the h2g platform user."@en ;
+                             rdfs:label "User"@en .
 
 
 ###  http://hit2gap.eu/h2g#VisualComfort
@@ -763,7 +790,10 @@
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> rdf:type owl:Class .
+<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> rdf:type owl:Class ;
+                                                      rdfs:comment "A feature is an abstraction of real world phenomena (thing, person, event, etc)."@en ;
+                                                      rdfs:label "Feature of Interest"@en ;
+                                                      rdfs:seeAlso "http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"@en .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Observation
@@ -832,20 +862,28 @@
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty <http://hit2gap.eu/h2g#name> ;
                                                                                    owl:someValuesFrom xsd:string
-                                                                                 ] .
+                                                                                 ] ;
+                                                                 rdfs:comment "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model."@en ;
+                                                                 rdfs:label "IfcActor"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> rdf:type owl:Class .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> rdf:type owl:Class ;
+                                                                    rdfs:comment "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en ;
+                                                                    rdfs:label "IfcActuator"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
+                                                                    rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> ;
+                                                                    rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+                                                                    rdfs:label "IfcBuilding"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> rdf:type owl:Class .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> rdf:type owl:Class ;
+                                                                                      rdfs:comment "IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system."@en ;
+                                                                                      rdfs:label "IfcDistributionControlElement"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant
@@ -870,15 +908,21 @@
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty <http://hit2gap.eu/h2g#lifestyle> ;
                                                                                       owl:someValuesFrom xsd:string
-                                                                                    ] .
+                                                                                    ] ;
+                                                                    rdfs:comment "IfcOccupant is a type of actor that defines the form of occupancy of a property."@en ;
+                                                                    rdfs:label "IfcOccupant"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> rdf:type owl:Class .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> rdf:type owl:Class ;
+                                                                  rdfs:comment "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en ;
+                                                                  rdfs:label "IfcSensor"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> rdf:type owl:Class .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> rdf:type owl:Class ;
+                                                                                   rdfs:comment "A spatial structure element (IfcSpatialStructureElement) is the generalization of all spatial elements that might be used to define a spatial structure. That spatial structure is often used to provide a project structure to organize a building project."@en ;
+                                                                                   rdfs:label "IfcSpatialStructureElement"@en .
 
 
 ###  http://www.w3.org/2006/time#DateTimeInterval

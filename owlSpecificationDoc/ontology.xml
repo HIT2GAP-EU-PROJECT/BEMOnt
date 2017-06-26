@@ -641,6 +641,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#BuildingComplexState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingState"/>
+        <rdfs:comment xml:lang="en">In reference to the complex states, this refers as the states that require for the combination of different facilities to determine an overall state. For example, one complex state is the determination of the energy state of the building that can be energy efficient state or energy inefficient state considering anomalous energy consumption (e.g., thermostat on at same time as the windows are open)</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Complex State</rdfs:label>
     </owl:Class>
     
 
@@ -671,6 +673,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The building state allows to conextualise and determine the building facilities status. This building state determinaton has been divided into simple building states and complex building states.</rdfs:comment>
         <rdfs:label xml:lang="en">Building State</rdfs:label>
     </owl:Class>
     
@@ -681,6 +684,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ComfortState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingComplexState"/>
+        <rdfs:comment xml:lang="en">Comfort state is defined as the ocupant state according to the current building situation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comfort State</rdfs:label>
     </owl:Class>
     
 
@@ -690,6 +695,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Constraints">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Event"/>
+        <rdfs:comment xml:lang="en">Event that limits the action of something.</rdfs:comment>
+        <rdfs:label xml:lang="en">Constraints</rdfs:label>
     </owl:Class>
     
 
@@ -712,6 +719,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Context in which applies the action</rdfs:comment>
+        <rdfs:label xml:lang="en">Context</rdfs:label>
     </owl:Class>
     
 
@@ -807,6 +816,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#EnergyState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingComplexState"/>
+        <rdfs:comment xml:lang="en">Energy state is the combination of different direct measures or simple state measures to determine energy inefficiencies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy State</rdfs:label>
     </owl:Class>
     
 
@@ -814,7 +825,10 @@
     <!-- http://hit2gap.eu/h2g#EnvironmentalBuildingFactors -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#EnvironmentalBuildingFactors"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#EnvironmentalBuildingFactors">
+        <rdfs:comment xml:lang="en">Environmental Building Factors refers to the building inddor and outdor fixeed conditions for comfort and discomfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">Environmental Building Factors</rdfs:label>
+    </owl:Class>
     
 
 
@@ -859,6 +873,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Circumstances that may be driving occupant actions such as waking up, sleeping, leaving for work or returning from lunch</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
     
 
@@ -892,14 +908,20 @@
     <!-- http://hit2gap.eu/h2g#Function -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Function"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Function">
+        <rdfs:comment xml:lang="en">Is the model function to determine indoor and outdoor environmental building factors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://hit2gap.eu/h2g#Gender -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Gender"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Gender">
+        <rdfs:comment xml:lang="en">The Gender is is the range of characteristics pertaining to, and differentiating between, masculinity and femininity</rdfs:comment>
+        <rdfs:label xml:lang="en">Gender</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1032,6 +1054,8 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g#OccupantComfort">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ComfortState"/>
         <owl:disjointWith rdf:resource="http://hit2gap.eu/h2g#OccupantDiscomfort"/>
+        <rdfs:comment xml:lang="en">Occupamt comfort is the occupant satisfaction with the building situation (thermal, lighting, etc) considering their specific comfrt ranges and parameters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant Comfort</rdfs:label>
     </owl:Class>
     
 
@@ -1047,6 +1071,8 @@
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g#Actions"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Occupamt discomfort will occur when building do not satisfy user requirements (comparison between needs and drivers).</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant Discomfort</rdfs:label>
     </owl:Class>
     
 
@@ -1115,6 +1141,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Probability">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Event"/>
+        <rdfs:comment xml:lang="en">Likelihood measure to occur certain action</rdfs:comment>
+        <rdfs:label xml:lang="en">Probability</rdfs:label>
     </owl:Class>
     
 
@@ -1224,6 +1252,8 @@
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g#Notification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Type of actor that corresponds to the h2g platform user.</rdfs:comment>
+        <rdfs:label xml:lang="en">User</rdfs:label>
     </owl:Class>
     
 
@@ -1305,7 +1335,11 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest -->
 
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
+        <rdfs:comment xml:lang="en">A feature is an abstraction of real world phenomena (thing, person, event, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">Feature of Interest</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest</rdfs:seeAlso>
+    </owl:Class>
     
 
 
@@ -1416,6 +1450,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcActor</rdfs:label>
     </owl:Class>
     
 
@@ -1423,7 +1459,10 @@
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator -->
 
 
-    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator"/>
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator">
+        <rdfs:comment xml:lang="en">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcActuator</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1432,6 +1471,8 @@
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcBuilding</rdfs:label>
     </owl:Class>
     
 
@@ -1439,7 +1480,10 @@
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement -->
 
 
-    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement">
+        <rdfs:comment xml:lang="en">IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcDistributionControlElement</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1478,6 +1522,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">IfcOccupant is a type of actor that defines the form of occupancy of a property.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcOccupant</rdfs:label>
     </owl:Class>
     
 
@@ -1485,14 +1531,20 @@
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor -->
 
 
-    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor"/>
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor">
+        <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcSensor</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement -->
 
 
-    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement">
+        <rdfs:comment xml:lang="en">A spatial structure element (IfcSpatialStructureElement) is the generalization of all spatial elements that might be used to define a spatial structure. That spatial structure is often used to provide a project structure to organize a building project.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfcSpatialStructureElement</rdfs:label>
+    </owl:Class>
     
 
 
