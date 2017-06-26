@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />   
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://hit2gap.eu/h2g#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://hit2gap.eu/h2g#","name":"Hit2Gap Ontology-User Behavior", "headline":"This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states.", "datePublished":"Mon Jun 26 15:15:01 CEST 2017", "version":"This current version includes the initial version of the semantic model based on the diagrams generated.", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Aitor Corchero (aitor.corchero@eurecat.org)"},{"@type":"Person","name":"Pierre Bourreau (pbourreau@nobatek.com)"},{"@type":"Person","name":"Yudith Cardinale (yudith.cardinale@gmail.com)"}], "contributor":[{"@type":"Person","name":"Gulben Calis (gulbencalis@gmail.com)"},{"@type":"Person","name":"Richard Chbeir (richard.chbeir@univ-pau.fr)"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://hit2gap.eu/h2g#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://hit2gap.eu/h2g#","name":"Hit2Gap Ontology-User Behavior", "headline":"This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states.", "datePublished":"Mon Jun 26 15:45:01 CEST 2017", "version":"This current version includes the initial version of the semantic model based on the diagrams generated.", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Aitor Corchero (aitor.corchero@eurecat.org)"},{"@type":"Person","name":"Pierre Bourreau (pbourreau@nobatek.com)"},{"@type":"Person","name":"Yudith Cardinale (yudith.cardinale@gmail.com)"}], "contributor":[{"@type":"Person","name":"Gulben Calis (gulbencalis@gmail.com)"},{"@type":"Person","name":"Richard Chbeir (richard.chbeir@univ-pau.fr)"}]}</script>
 
-<script src="resources/jquery.js"></script>
-<script src="resources/marked.min.js"></script>
-    <script>
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,18 +40,18 @@ function loadTOC(){
 		t = t.replace(' back to ToC','');
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t);
+	  $("#toc").html(t); 
 }
     $(function(){
-      $("#abstract").load("sections/abstract-en.html");
-      $("#introduction").load("sections/introduction-en.html");
-      $("#overview").load("sections/overview-en.html");
-      $("#description").load("sections/description-en.html");
-      $("#references").load("sections/references-en.html");
-      $("#crossref").load("sections/crossref-en.html", null, loadHash);
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
-    </script>
-  </head>
+    </script> 
+  </head> 
 
 <body>
 <div class="container"><div class="head">
@@ -65,7 +65,7 @@ function loadTOC(){
 <dl><dt>Contributors:</dt>
 <dd>Gulben Calis (gulbencalis@gmail.com)</dd><dd>Richard Chbeir (richard.chbeir@univ-pau.fr)</dd></dl>
 
-<dl><dt>Download serialization:</dt><dd><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></img></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples"></img></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></img></a> </span></dd></dl><dl><dt>License: </dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src ="https://img.shields.io/github/license/mashape/apistatus.svg" alt="https://opensource.org/licenses/MIT"></img></a>
+<dl><dt>Download serialization:</dt><dd><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></img></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples"></img></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></img></a> </span></dd></dl><dl><dt>License: </dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src ="https://img.shields.io/badge/License-license name goes here-blue.svg" alt="https://opensource.org/licenses/MIT"></img></a>
 </dd></dl><dl><a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a></dl><hr/>
 </div>
 <div class="status">
@@ -83,5 +83,5 @@ function loadTOC(){
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
-</body>
+</body> 
 </html>

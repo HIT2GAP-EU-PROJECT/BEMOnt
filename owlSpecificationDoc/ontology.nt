@@ -249,6 +249,8 @@
 # http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "The ASHRAE Adaptive Comfort is a standard that provides minimum requirements for acceptable thermal indoor environments. It establishes the ranges of indoor environmental conditions that are acceptable to achieve thermal comfort for occupants. It was first published in 1966, and since 2004 has been updated periodically by a technical committee of industry experts in ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers). The most recent version of the standard was published in 2013."@en .
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#label> "ASHRAE Adaptive Comfort"@en .
 # 
 # http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -264,6 +266,8 @@
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#changes> .
 _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> .
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions are the specific building interactions performed by the building occupants. This actions can be caused by an initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements."@en .
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#label> "Actions"@en .
 # 
 # http://hit2gap.eu/h2g#ActivityModel
 <http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -327,6 +331,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#label> "Building State"@en .
 # 
 # http://hit2gap.eu/h2g#ComfortState
 <http://hit2gap.eu/h2g#ComfortState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -464,6 +469,8 @@ _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # http://hit2gap.eu/h2g#Feedback
 <http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+<http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/2000/01/rdf-schema#comment> "In building domain, Feedback is the actor retrofit with information regarding buildn state."@en .
+<http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/2000/01/rdf-schema#label> "Feedback"@en .
 # 
 # http://hit2gap.eu/h2g#Function
 <http://hit2gap.eu/h2g#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -482,6 +489,8 @@ _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # http://hit2gap.eu/h2g#Inaction
 <http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+<http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the performance of any action in the building."@en .
+<http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/2000/01/rdf-schema#label> "Inaction"@en .
 # 
 # http://hit2gap.eu/h2g#Indicator
 <http://hit2gap.eu/h2g#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -580,6 +589,8 @@ _:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://hit2gap.eu/h2g#Report
 <http://hit2gap.eu/h2g#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Feedback> .
+<http://hit2gap.eu/h2g#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of occupant feedback based on the building actor feedback using specific documants."@en .
+<http://hit2gap.eu/h2g#Report> <http://www.w3.org/2000/01/rdf-schema#label> "Report"@en .
 # 
 # http://hit2gap.eu/h2g#Role
 <http://hit2gap.eu/h2g#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -689,10 +700,16 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Device> .
 <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Sensor> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensing device is a device that implements sensing."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"@en .
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Sensing Device"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#Sensor
 <http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> .
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.oclc.org/NET/ssnx/ssn"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#SensorOutput
 <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

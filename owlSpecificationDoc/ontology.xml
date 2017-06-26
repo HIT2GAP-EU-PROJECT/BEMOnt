@@ -527,6 +527,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ThermalComfort"/>
+        <rdfs:comment xml:lang="en">The ASHRAE Adaptive Comfort is a standard that provides minimum requirements for acceptable thermal indoor environments. It establishes the ranges of indoor environmental conditions that are acceptable to achieve thermal comfort for occupants. It was first published in 1966, and since 2004 has been updated periodically by a technical committee of industry experts in ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers). The most recent version of the standard was published in 2013.</rdfs:comment>
+        <rdfs:label xml:lang="en">ASHRAE Adaptive Comfort</rdfs:label>
     </owl:Class>
     
 
@@ -559,6 +561,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Actions are the specific building interactions performed by the building occupants. This actions can be caused by an initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actions</rdfs:label>
     </owl:Class>
     
 
@@ -667,6 +671,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Building State</rdfs:label>
     </owl:Class>
     
 
@@ -878,6 +883,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Feedback">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Actions"/>
+        <rdfs:comment xml:lang="en">In building domain, Feedback is the actor retrofit with information regarding buildn state.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feedback</rdfs:label>
     </owl:Class>
     
 
@@ -919,6 +926,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Inaction">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Actions"/>
+        <rdfs:comment xml:lang="en">Refers to the performance of any action in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inaction</rdfs:label>
     </owl:Class>
     
 
@@ -1122,6 +1131,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Report">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Feedback"/>
+        <rdfs:comment xml:lang="en">Type of occupant feedback based on the building actor feedback using specific documants.</rdfs:comment>
+        <rdfs:label xml:lang="en">Report</rdfs:label>
     </owl:Class>
     
 
@@ -1334,6 +1345,9 @@
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:comment xml:lang="en">A sensing device is a device that implements sensing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">http://purl.oclc.org/NET/ssnx/ssn#SensingDevice</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensing Device</rdfs:label>
     </owl:Class>
     
 
@@ -1343,6 +1357,9 @@
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
         <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor"/>
+        <rdfs:comment xml:lang="en">A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://purl.oclc.org/NET/ssnx/ssn</rdfs:seeAlso>
     </owl:Class>
     
 

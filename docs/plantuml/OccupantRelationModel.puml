@@ -1,6 +1,5 @@
 @startuml
 
-@startuml
 skinparam class {
   ArrowColor DarkBlue
   ArrowFontColor DarkBlue
@@ -21,9 +20,6 @@ class IfcOccupant <<IFC>>{
 class OccupantAttitude <<HIT2GAP>>{
 }
 
-class OccupantRole <<HIT2GAP>>{
-
-}
 
 class OccupantCharacteristics <<HIT2GAP>>{
   startWorkTime xsd:DateTime
@@ -57,7 +53,6 @@ OccupantAttitude <|-- EnergyProfligate
 OccupantAttitude <|-- EnergyIndiferent
 
 
-IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
 IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
 IfcOccupant --> Needs: hit2gap:hasComfortRequirements
 IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude

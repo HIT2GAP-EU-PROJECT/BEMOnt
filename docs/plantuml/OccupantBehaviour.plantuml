@@ -47,9 +47,6 @@ class Alert <<HIT2GAP>>{
 
 }
 
-class OccupantRole <<HIT2GAP>>{
-
-}
 
 class IfcSpatialStructureElement <<IFC>>{
 
@@ -505,7 +502,6 @@ OccupantAttitude <|-- EnergyProfligate
 OccupantAttitude <|-- EnergyIndiferent
 
 
-IfcOccupant --> OccupantRole: hit2gap:hasOccupantRole
 IfcOccupant --> OccupantCharacteristics: hit2gap:hasOccupantCharacteristics
 IfcOccupant --> Needs: hit2gap:hasComfortRequirements
 IfcOccupant --> OccupantAttitude:hit2gap:hasOccupantAttitude
