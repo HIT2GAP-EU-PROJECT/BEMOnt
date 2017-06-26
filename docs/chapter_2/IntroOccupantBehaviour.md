@@ -10,11 +10,6 @@ This chapter is aimed at describing the general model referring the occupant beh
 
 Considering these three main aspects, the constructed semantic model relies on the combination of the Drivers, Needs, and Actions with the representation of the building infrastructure (aligning the model with the IFC) and the different observations that could occur in the building (SSN ontology).
 
-<div style="text-align:center">
-
-<img src="http://www.plantuml.com/plantuml/png/DSWx3i8m303Ggy016akCR0XLV9PMRJb0S2qIAN6Ys1RN9mlRqpj6ncGxMKk7e5hb3D3yrtsY1dkRKCF2IgmEIuRxOplTBlCmlePvcPxZTVlNn0hPYrA3lQ10JPxLSeALSbV45KENkDhp1m00"/>
-</div>
-
 In detail and for better comprehend the document, the semantic models selected based on their standards usage are: 
 
 - **Semantic Sensor Network Ontology (SSN)[(Compton et.al,2012)][@Compton2012]**: This semantic model represents sensor information and data in form of observation. Hence, this ontology permits to contextualise sensor information being also compatible with the current standards in information exchange as SensorML.

@@ -1,0 +1,840 @@
+<http://hit2gap.eu/h2g#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/abstract> "Abstract"@en .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/contributor> "Gulben Calis (gulbencalis@gmail.com)"@en .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/contributor> "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/creator> "Aitor Corchero (aitor.corchero@eurecat.org)"@en .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/creator> "Pierre Bourreau (pbourreau@nobatek.com)"@en .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/creator> "Yudith Cardinale (yudith.cardinale@gmail.com)"@en .
+<http://hit2gap.eu/h2g#> <http://purl.org/dc/elements/1.1/title> "Hit2Gap Ontology-User Behavior"@en .
+<http://hit2gap.eu/h2g#> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract"@en .
+<http://hit2gap.eu/h2g#> <http://www.w3.org/2000/01/rdf-schema#comment> "This part of the general ontology describes the general model referring the occupant behaviour. In that sense and according with (Hong et.al,2015), the occupant behaviour is composed by the following main aspects:\n\n- Drivers: Represent discrete-event simulation models for modeling occupant behavior, activities, events, and equipments, considering the factors that stimulates occupants to accomplish their needs.\n\n- Needs: Model the requirements that the different occupants shall meet to ensure their satisfaction in the environment which interacts.\n\n- Actions: Model the occupants interactions with the building to achieve the required comfort."@en .
+<http://hit2gap.eu/h2g#> <http://www.w3.org/2002/07/owl#versionInfo> "This current version includes the initial version of the semantic model based on the diagrams generated."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#acts
+<http://hit2gap.eu/h2g#acts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#acts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#assignedTo
+<http://hit2gap.eu/h2g#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#assignedTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://hit2gap.eu/h2g#isAssignedTo> .
+# 
+# http://hit2gap.eu/h2g#associatedTo
+<http://hit2gap.eu/h2g#associatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#changes
+<http://hit2gap.eu/h2g#changes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#concerns
+<http://hit2gap.eu/h2g#concerns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasBehaviour
+<http://hit2gap.eu/h2g#hasBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasComfortRequirements
+<http://hit2gap.eu/h2g#hasComfortRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasConstraints
+<http://hit2gap.eu/h2g#hasConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasContext
+<http://hit2gap.eu/h2g#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasFunction
+<http://hit2gap.eu/h2g#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasGender
+<http://hit2gap.eu/h2g#hasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasIndicator
+<http://hit2gap.eu/h2g#hasIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasModelResult
+<http://hit2gap.eu/h2g#hasModelResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasOccupantAttitude
+<http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
+<http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#OccupantAttitude> .
+# 
+# http://hit2gap.eu/h2g#hasOccupantCharacteristics
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#OccupantCharacteristics> .
+# 
+# http://hit2gap.eu/h2g#hasOccupantRole
+<http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
+<http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#OccupantRole> .
+# 
+# http://hit2gap.eu/h2g#hasProbability
+<http://hit2gap.eu/h2g#hasProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasRole
+<http://hit2gap.eu/h2g#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#hasState
+<http://hit2gap.eu/h2g#hasState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2002/07/owl#inverseOf> <http://hit2gap.eu/h2g#isStatedBy> .
+<http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#BuildingState> .
+# 
+# http://hit2gap.eu/h2g#hasStatus
+<http://hit2gap.eu/h2g#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#isAssignedTo
+<http://hit2gap.eu/h2g#isAssignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#isBasedOn
+<http://hit2gap.eu/h2g#isBasedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#isProvokedBy
+<http://hit2gap.eu/h2g#isProvokedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#isProvokedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://hit2gap.eu/h2g#provokes> .
+# 
+# http://hit2gap.eu/h2g#isStatedBy
+<http://hit2gap.eu/h2g#isStatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#performsAction
+<http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
+<http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#Actions> .
+# 
+# http://hit2gap.eu/h2g#prefers
+<http://hit2gap.eu/h2g#prefers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#provokes
+<http://hit2gap.eu/h2g#provokes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#receives
+<http://hit2gap.eu/h2g#receives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/h2g#receivesAlerts
+<http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> .
+<http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#Alert> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem
+<http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#hasValue
+<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#observationResult
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#observationResultTime
+<http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#observedBy
+<http://purl.oclc.org/NET/ssnx/ssn#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://hit2gap.eu/h2g#age
+<http://hit2gap.eu/h2g#age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#age> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://hit2gap.eu/h2g#endWorktime
+<http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://hit2gap.eu/h2g#externalID
+<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://hit2gap.eu/h2g#id
+<http://hit2gap.eu/h2g#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://hit2gap.eu/h2g#jobType
+<http://hit2gap.eu/h2g#jobType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#jobType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://hit2gap.eu/h2g#lifestyle
+<http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://hit2gap.eu/h2g#maxValue
+<http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://hit2gap.eu/h2g#minValue
+<http://hit2gap.eu/h2g#minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#minValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://hit2gap.eu/h2g#name
+<http://hit2gap.eu/h2g#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://hit2gap.eu/h2g#startWorktime
+<http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+# 
+# http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+# 
+# http://hit2gap.eu/h2g#AcousticComfort
+<http://hit2gap.eu/h2g#AcousticComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#AcousticComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+# 
+# http://hit2gap.eu/h2g#Actions
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#changes> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> .
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions of the user behaviour"@en .
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#label> "Actions"@en .
+# 
+# http://hit2gap.eu/h2g#ActivityModel
+<http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
+# 
+# http://hit2gap.eu/h2g#Alert
+<http://hit2gap.eu/h2g#Alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Alert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Notification> .
+# 
+# http://hit2gap.eu/h2g#BehaviourModel
+<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
+<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#OccupantBehaviour> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#TimeBehaviour> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://hit2gap.eu/h2g#BlindClose
+<http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BlindState> .
+<http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#BlindOpen> .
+# 
+# http://hit2gap.eu/h2g#BlindOpen
+<http://hit2gap.eu/h2g#BlindOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BlindOpen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BlindState> .
+# 
+# http://hit2gap.eu/h2g#BlindState
+<http://hit2gap.eu/h2g#BlindState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BlindState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+# 
+# http://hit2gap.eu/h2g#BuildingComplexState
+<http://hit2gap.eu/h2g#BuildingComplexState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BuildingComplexState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingState> .
+# 
+# http://hit2gap.eu/h2g#BuildingSimpleState
+<http://hit2gap.eu/h2g#BuildingSimpleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BuildingSimpleState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingState> .
+# 
+# http://hit2gap.eu/h2g#BuildingState
+<http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isStatedBy> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.oclc.org/NET/ssnx/ssn#System> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#label> "BuildingState"@en .
+# 
+# http://hit2gap.eu/h2g#ComfortState
+<http://hit2gap.eu/h2g#ComfortState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ComfortState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingComplexState> .
+# 
+# http://hit2gap.eu/h2g#Constraints
+<http://hit2gap.eu/h2g#Constraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Constraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Event> .
+# 
+# http://hit2gap.eu/h2g#Context
+<http://hit2gap.eu/h2g#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Event> .
+<http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isAssignedTo> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Indoor> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Outdoor> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://hit2gap.eu/h2g#DoorClose
+<http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#DoorState> .
+<http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#DoorOpen> .
+# 
+# http://hit2gap.eu/h2g#DoorOpen
+<http://hit2gap.eu/h2g#DoorOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#DoorOpen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#DoorState> .
+# 
+# http://hit2gap.eu/h2g#DoorState
+<http://hit2gap.eu/h2g#DoorState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#DoorState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+# 
+# http://hit2gap.eu/h2g#Driver
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Observation> .
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasFunction> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Function> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasIndicator> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Indicator> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasModelResult> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#ModelResult> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasStatus> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Status> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#EnergyFrugal
+<http://hit2gap.eu/h2g#EnergyFrugal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#EnergyFrugal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#OccupantAttitude> .
+# 
+# http://hit2gap.eu/h2g#EnergyIndiferent
+<http://hit2gap.eu/h2g#EnergyIndiferent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#EnergyIndiferent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#OccupantAttitude> .
+# 
+# http://hit2gap.eu/h2g#EnergyProfligate
+<http://hit2gap.eu/h2g#EnergyProfligate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#EnergyProfligate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#OccupantAttitude> .
+# 
+# http://hit2gap.eu/h2g#EnergyState
+<http://hit2gap.eu/h2g#EnergyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#EnergyState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingComplexState> .
+# 
+# http://hit2gap.eu/h2g#EnvironmentalBuildingFactors
+<http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#EquipementModel
+<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
+<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> .
+# 
+# http://hit2gap.eu/h2g#Event
+<http://hit2gap.eu/h2g#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#associatedTo> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasConstraints> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Constraints> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasContext> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Context> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasProbability> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Probability> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://hit2gap.eu/h2g#EventModel
+<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
+<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Event> .
+# 
+# http://hit2gap.eu/h2g#Feedback
+<http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+# 
+# http://hit2gap.eu/h2g#Function
+<http://hit2gap.eu/h2g#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Gender
+<http://hit2gap.eu/h2g#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#IAQ
+<http://hit2gap.eu/h2g#IAQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#IAQ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+# 
+# http://hit2gap.eu/h2g#ISOAdaptiveComfort
+<http://hit2gap.eu/h2g#ISOAdaptiveComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ISOAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+# 
+# http://hit2gap.eu/h2g#Inaction
+<http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+# 
+# http://hit2gap.eu/h2g#Indicator
+<http://hit2gap.eu/h2g#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Indoor
+<http://hit2gap.eu/h2g#Indoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Modality
+<http://hit2gap.eu/h2g#Modality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#ModelResult
+<http://hit2gap.eu/h2g#ModelResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Needs
+<http://hit2gap.eu/h2g#Needs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Notification
+<http://hit2gap.eu/h2g#Notification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#ObservationValue
+<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> .
+# 
+# http://hit2gap.eu/h2g#OccupantAttitude
+<http://hit2gap.eu/h2g#OccupantAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#OccupantBehaviour
+<http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+# 
+# http://hit2gap.eu/h2g#OccupantCharacteristics
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#endWorktime> .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#startWorktime> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://hit2gap.eu/h2g#OccupantComfort
+<http://hit2gap.eu/h2g#OccupantComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ComfortState> .
+<http://hit2gap.eu/h2g#OccupantComfort> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#OccupantDiscomfort> .
+# 
+# http://hit2gap.eu/h2g#OccupantDiscomfort
+<http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ComfortState> .
+<http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isProvokedBy> .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Actions> .
+# 
+# http://hit2gap.eu/h2g#OccupantPreferences
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#id> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#maxValue> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#minValue> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://hit2gap.eu/h2g#OccupantRole
+<http://hit2gap.eu/h2g#OccupantRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#OtherComfortEnvelope
+<http://hit2gap.eu/h2g#OtherComfortEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OtherComfortEnvelope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+# 
+# http://hit2gap.eu/h2g#Outdoor
+<http://hit2gap.eu/h2g#Outdoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Privacy
+<http://hit2gap.eu/h2g#Privacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Privacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+# 
+# http://hit2gap.eu/h2g#Probability
+<http://hit2gap.eu/h2g#Probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Probability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Event> .
+# 
+# http://hit2gap.eu/h2g#Recommendation
+<http://hit2gap.eu/h2g#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Notification> .
+# 
+# http://hit2gap.eu/h2g#Report
+<http://hit2gap.eu/h2g#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Feedback> .
+# 
+# http://hit2gap.eu/h2g#Role
+<http://hit2gap.eu/h2g#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#Season
+<http://hit2gap.eu/h2g#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+# 
+# http://hit2gap.eu/h2g#Status
+<http://hit2gap.eu/h2g#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#SystemActions
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#acts> .
+_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#changes> .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> .
+# 
+# http://hit2gap.eu/h2g#ThermalComfort
+<http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+# 
+# http://hit2gap.eu/h2g#TimeBehaviour
+<http://hit2gap.eu/h2g#TimeBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://hit2gap.eu/h2g#User
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> .
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#concerns> .
+_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Feedback> .
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#prefers> .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Modality> .
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#receives> .
+_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Notification> .
+# 
+# http://hit2gap.eu/h2g#VisualComfort
+<http://hit2gap.eu/h2g#VisualComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#VisualComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+# 
+# http://hit2gap.eu/h2g#WindowState
+<http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+# 
+# http://hit2gap.eu/h2g#WindowsClose
+<http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#WindowState> .
+<http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#WindowsOpen> .
+# 
+# http://hit2gap.eu/h2g#WindowsOpen
+<http://hit2gap.eu/h2g#WindowsOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#WindowsOpen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#WindowState> .
+# 
+# http://hit2gap.eu/h2g#ZoneEmpty
+<http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ZoneOccupancy> .
+<http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#ZoneOccupied> .
+# 
+# http://hit2gap.eu/h2g#ZoneOccupancy
+<http://hit2gap.eu/h2g#ZoneOccupancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ZoneOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+# 
+# http://hit2gap.eu/h2g#ZoneOccupied
+<http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ZoneOccupancy> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
+<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#Observation
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid48 <http://www.w3.org/2002/07/owl#unionOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#DateTimeInterval> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Instant> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#externalID> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#Property
+<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#Sensor
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> .
+<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#System> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#SensorOutput
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.oclc.org/NET/ssnx/ssn#System
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#acts> .
+_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasRole> .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Role> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasGender> .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/h2g#Gender> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#id> .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#name> .
+_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#User> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasBehaviour> .
+_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#OccupantBehaviour> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasComfortRequirements> .
+_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Needs> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#age> .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#jobType> .
+_:genid60 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#lifestyle> .
+_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/time#DateTimeInterval
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+# 
+# http://www.w3.org/2006/time#DayOfWeek
+<http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://hit2gap.eu/h2g#Autumn
+<http://hit2gap.eu/h2g#Autumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Autumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Season> .
+# 
+# http://hit2gap.eu/h2g#Email
+<http://hit2gap.eu/h2g#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Modality> .
+# 
+# http://hit2gap.eu/h2g#Female
+<http://hit2gap.eu/h2g#Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Gender> .
+# 
+# http://hit2gap.eu/h2g#Male
+<http://hit2gap.eu/h2g#Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Gender> .
+# 
+# http://hit2gap.eu/h2g#Manager
+<http://hit2gap.eu/h2g#Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Role> .
+# 
+# http://hit2gap.eu/h2g#Owner
+<http://hit2gap.eu/h2g#Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Role> .
+# 
+# http://hit2gap.eu/h2g#Phone
+<http://hit2gap.eu/h2g#Phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Modality> .
+# 
+# http://hit2gap.eu/h2g#SMS
+<http://hit2gap.eu/h2g#SMS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#SMS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Modality> .
+# 
+# http://hit2gap.eu/h2g#Spring
+<http://hit2gap.eu/h2g#Spring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Spring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Season> .
+# 
+# http://hit2gap.eu/h2g#Summer
+<http://hit2gap.eu/h2g#Summer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Summer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Season> .
+# 
+# http://hit2gap.eu/h2g#Technician
+<http://hit2gap.eu/h2g#Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Role> .
+# 
+# http://hit2gap.eu/h2g#Winter
+<http://hit2gap.eu/h2g#Winter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g#Winter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g#Season> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid62 <http://www.w3.org/2002/07/owl#members> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#ActivityModel> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#BehaviourModel> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#EquipementModel> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#EventModel> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
