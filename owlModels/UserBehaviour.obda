@@ -1,0 +1,26 @@
+[PrefixDeclaration]
+:		http://hit2gap.eu/h2g#
+dc:		http://purl.org/dc/elements/1.1/
+h2g:		http://hit2gap.eu/h2g#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+ssn:		http://purl.oclc.org/NET/ssnx/ssn#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+bibo:		http://purl.org/ontology/bibo/
+ifc2:		http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#
+qudt:		http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+time:		http://www.w3.org/2006/time#
+schema:		http://schema.org/
+
+[SourceDeclaration]
+sourceUri	datasource1
+connectionUrl	
+username	
+password	
+driverClass	
+
+[MappingDeclaration] @collection [[
+]]
+
