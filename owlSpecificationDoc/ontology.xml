@@ -255,7 +255,6 @@
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasOccupantRole">
         <rdfs:domain rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"/>
-        <rdfs:range rdf:resource="http://hit2gap.eu/h2g#OccupantRole"/>
     </owl:ObjectProperty>
     
 
@@ -518,7 +517,13 @@
     <!-- http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit -->
 
 
-    <owl:Class rdf:about="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
+    <owl:Class rdf:about="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit">
+        <rdfs:comment xml:lang="en">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.
+
+More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U:
+Q = nU</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:Class>
     
 
 
@@ -538,6 +543,14 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ThermalComfort"/>
+        <rdfs:comment xml:lang="en">Standard that includes prescriptive requirements for the following:
+- Building Envelope: minimum wall insulation, minimum roof insulation, roof reflectance, minimum glazing performance
+  - HVAC: minimum equipment efficiency, minimum system features, limitation on reheat, limitation on fan power
+  - Domestic Hot Water: minimum equipment efficiency, minimum system features
+  - Power: transformer efficiency, automatic receptacle controls, energy monitoring
+  - Lighting: maximum indoor lighting power density (LPD, expressed in Watts/Sq.Ft.), minimum lighting controls, exterior lighting, parking garage lighting
+  - Other Equipment: electric motors, potable water booster pumps, elevators, and escalators</rdfs:comment>
+        <rdfs:label xml:lang="en">ASHRAE Adaptive Envelope</rdfs:label>
     </owl:Class>
     
 
@@ -547,6 +560,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#AcousticComfort">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Needs"/>
+        <rdfs:comment xml:lang="en">The acoustic comfort refers to the models to measure the level of background noise within an aceptable range.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acoustic Comfort</rdfs:label>
     </owl:Class>
     
 
@@ -572,6 +587,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ActivityModel">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Driver"/>
+        <rdfs:comment xml:lang="en">Model that consist on modelling the occupant activity inside the building</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity Model</rdfs:label>
     </owl:Class>
     
 
@@ -581,6 +598,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Alert">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Notification"/>
+        <rdfs:comment xml:lang="en">Defined as the quick to notice any unusual and potentially dangerous or difficult circumstances concerning the building state.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alert</rdfs:label>
     </owl:Class>
     
 
@@ -604,6 +623,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">As variables that serve to measure the habits and activities inside the building. Defined to register and contextualise the occupant events (building interactions with the different systems).</rdfs:comment>
+        <rdfs:label xml:lang="en">Behavioural Model</rdfs:label>
     </owl:Class>
     
 
@@ -780,6 +801,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Drivers represent the environmental factors from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need</rdfs:comment>
+        <rdfs:label xml:lang="en">Driver</rdfs:label>
     </owl:Class>
     
 
@@ -789,6 +812,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#EnergyFrugal">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#OccupantAttitude"/>
+        <rdfs:comment xml:lang="en">Is the quality of being frugal, sparing, thrifty, prudent or economical in the consumption of consumable resources such as food, time or money, and avoiding waste, lavishness or extravagance</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy Frugal</rdfs:label>
     </owl:Class>
     
 
@@ -798,6 +823,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#EnergyIndiferent">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#OccupantAttitude"/>
+        <rdfs:comment xml:lang="en">Occupant trend to have no preference or being uninterested about building energy consumption and efficiency.</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy Indiferent</rdfs:label>
     </owl:Class>
     
 
@@ -807,6 +834,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#EnergyProfligate">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#OccupantAttitude"/>
+        <rdfs:comment xml:lang="en">Occupant that is recklessly, extravagant or wasteful in the use of resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy Profligate</rdfs:label>
     </owl:Class>
     
 
@@ -843,6 +872,8 @@
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g#EnvironmentalBuildingFactors"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class for measuring the building features and the environmental factors including indoor and outdoor parameters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipement Model</rdfs:label>
     </owl:Class>
     
 
@@ -890,6 +921,8 @@
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g#Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Defined to register the events that can be detected from the sensor readings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event Model</rdfs:label>
     </owl:Class>
     
 
@@ -930,6 +963,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#IAQ">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Needs"/>
+        <rdfs:comment xml:lang="en">The IAQ corresponds to the types of measurements to determine the inddor environmental health.</rdfs:comment>
+        <rdfs:label xml:lang="en">IAQ</rdfs:label>
     </owl:Class>
     
 
@@ -939,6 +974,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ISOAdaptiveComfort">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ThermalComfort"/>
+        <rdfs:comment xml:lang="en">This International Standard covering the evaluation of moderate thermal environments was developed in parallel with the revised ASHRAE) standard 55 and is one of a series of ISO documents specifying methods for the measurement and evaluation of the moderate and extreme thermal environments to which human beings are exposed (ISO 7243, ISO 7933 and ISO/TR 11079, all three dealing with extreme environmental conditions, are others in the series).</rdfs:comment>
+        <rdfs:label xml:lang="en">ISO Adaptive Comfort</rdfs:label>
     </owl:Class>
     
 
@@ -957,42 +994,60 @@
     <!-- http://hit2gap.eu/h2g#Indicator -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Indicator"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Indicator">
+        <rdfs:comment xml:lang="en">Complementing the Driver information, the indicator refers to the optimal measure that indicates the state or level of something.</rdfs:comment>
+        <rdfs:label xml:lang="en">Indicator</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://hit2gap.eu/h2g#Indoor -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Indoor"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Indoor">
+        <rdfs:comment xml:lang="en">Considering the environmental factors and the context definition, the indoor class refers to those events that occur inside the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Indoor</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://hit2gap.eu/h2g#Modality -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Modality"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Modality">
+        <rdfs:comment xml:lang="en">Refers to the notification mode to the users. This notification could be via SMS, e-mail or telephone</rdfs:comment>
+        <rdfs:label xml:lang="en">Modality</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://hit2gap.eu/h2g#ModelResult -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#ModelResult"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#ModelResult">
+        <rdfs:comment xml:lang="en">Model result is defined by the outputs of applying several user behaviour model according to the collected data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Result</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://hit2gap.eu/h2g#Needs -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Needs"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Needs">
+        <rdfs:comment xml:lang="en">Needs represent the physical and non-physical requirements of the occupant&apos;s inside world that must be met in order to ensure the satisfaction of the occupant with their environment</rdfs:comment>
+        <rdfs:label xml:lang="en">Needs</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://hit2gap.eu/h2g#Notification -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Notification"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Notification">
+        <rdfs:comment xml:lang="en">The Notification refers to the mechanims to provide highlighted information to the building users.</rdfs:comment>
+        <rdfs:label xml:lang="en">Notification</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1006,6 +1061,8 @@
                 <owl:someValuesFrom rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation Value</rdfs:label>
     </owl:Class>
     
 
@@ -1013,7 +1070,10 @@
     <!-- http://hit2gap.eu/h2g#OccupantAttitude -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#OccupantAttitude"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#OccupantAttitude">
+        <rdfs:comment xml:lang="en">Specific occupant attitude inside the building</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant Attitude</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1044,6 +1104,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The occupant characteristics refers to the daily or most common activities that building occupants performs inside the building (e.g start or end work)</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant Characteristics</rdfs:label>
     </owl:Class>
     
 
@@ -1100,14 +1162,9 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The occupant preferences refers to the building occupants prefeerences regarding the comfort sempsation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant Preferences</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g#OccupantRole -->
-
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#OccupantRole"/>
     
 
 
@@ -1116,6 +1173,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#OtherComfortEnvelope">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ThermalComfort"/>
+        <rdfs:comment xml:lang="en">Other kind of standards that could appear or considered within the measurement and assessment of the thermal comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">Other Comfort Envelope</rdfs:label>
     </owl:Class>
     
 
@@ -1123,7 +1182,10 @@
     <!-- http://hit2gap.eu/h2g#Outdoor -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Outdoor"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Outdoor">
+        <rdfs:comment xml:lang="en">Considering the environmental factors and the context definition, the outdoor class refers to those events that occur outside the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Outdoor</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1132,6 +1194,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Privacy">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Needs"/>
+        <rdfs:comment xml:lang="en">The privacy refers to need of privacy associated to the user information and the need to maintain outside views.</rdfs:comment>
+        <rdfs:label xml:lang="en">Privacy</rdfs:label>
     </owl:Class>
     
 
@@ -1152,6 +1216,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Recommendation">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Notification"/>
+        <rdfs:comment xml:lang="en">The recomendation refers to the suggestions or proposals to improve the building efficiency or comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -1170,7 +1236,10 @@
     <!-- http://hit2gap.eu/h2g#Role -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Role"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Role">
+        <rdfs:comment xml:lang="en">Depending on the interactions and the building type, the occupants interact with the building according to their capacities to perform building actions, as for example, seeing the building thermostats (ssn:Device) or actuating over the temperature fan coils (ifc:Actuator). At this point, it is interesting to consider that the occupants only perform such interactions if building managers permit them according to the building policies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1179,6 +1248,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#Season">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#TimeBehaviour"/>
+        <rdfs:comment xml:lang="en">It represent the season</rdfs:comment>
+        <rdfs:label xml:lang="en">Season</rdfs:label>
     </owl:Class>
     
 
@@ -1186,7 +1257,10 @@
     <!-- http://hit2gap.eu/h2g#Status -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#Status"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#Status">
+        <rdfs:comment xml:lang="en">State of the driver</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1218,6 +1292,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ThermalComfort">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Needs"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermal Comfort is defined by the models to determine suitable indoor temperature associated to the user comfort.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermal Comfort</rdfs:label>
     </owl:Class>
     
 
@@ -1225,7 +1301,10 @@
     <!-- http://hit2gap.eu/h2g#TimeBehaviour -->
 
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g#TimeBehaviour"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g#TimeBehaviour">
+        <rdfs:comment xml:lang="en">The time of day and the day of the week are fundamental to the presence and location of occupants in a building. Some personal habits are time-driven, for example opening windows when first arriving at work or closing windows before leaving the office, or turning on lights when first arriving and turning off lights before leaving.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Behaviour</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1263,6 +1342,8 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#VisualComfort">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#Needs"/>
+        <rdfs:comment xml:lang="en">Visual comfort criteria measure the ability of an individual to carry out tasks comfortably in terms of their photo-sensory perception of their environment.  They are dependent on many factors including: light intensity, direction of light source, reflection of surfaces, contrast of surfaces, the nature of the task being undertaken and the photo-sensory response of the eye.  International recommendations exist that specify the minimum level of illuminance required to provide visual comfort for various tasks and locations. As with thermal comfort temperatures, these light levels were derived experimentally and reflect an average person engaged in a specific activity within a defined environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Visual Comfort</rdfs:label>
     </owl:Class>
     
 
@@ -1328,6 +1409,8 @@
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:comment xml:lang="en">A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components).</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
     </owl:Class>
     
 
@@ -1366,6 +1449,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
     
 
@@ -1373,7 +1458,10 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
 
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
+        <rdfs:comment xml:lang="en">An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL&apos;s Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1405,14 +1493,20 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#SensorOutput -->
 
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput">
+        <rdfs:comment xml:lang="en">A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor Output</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#System -->
 
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#System">
+        <rdfs:comment xml:lang="en">System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1553,6 +1647,8 @@
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#TimeBehaviour"/>
+        <rdfs:comment xml:lang="en">It enables compact representation of an interval corresponding to a single element in a date-time description (i.e. a specified year, month, week, day, hour, minute, second)</rdfs:comment>
+        <rdfs:label xml:lang="en">Date Time Interval</rdfs:label>
     </owl:Class>
     
 
@@ -1562,6 +1658,8 @@
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#TimeBehaviour"/>
+        <rdfs:comment xml:lang="en">Correpondence to the seven days used in the Gregorian calendar, and using the English names :Sunday, :Monday, :Tuesday, :Wednesday, :Thursday, :Friday, :Saturday.</rdfs:comment>
+        <rdfs:label xml:lang="en">Day Of Week</rdfs:label>
     </owl:Class>
     
 
@@ -1571,6 +1669,8 @@
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#TimeBehaviour"/>
+        <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration</rdfs:comment>
+        <rdfs:label xml:lang="en">Instant</rdfs:label>
     </owl:Class>
     
 

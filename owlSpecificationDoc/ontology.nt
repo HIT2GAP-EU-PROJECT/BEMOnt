@@ -118,7 +118,6 @@
 # http://hit2gap.eu/h2g#hasOccupantRole
 <http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
-<http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#OccupantRole> .
 # 
 # http://hit2gap.eu/h2g#hasProbability
 <http://hit2gap.eu/h2g#hasProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -245,6 +244,8 @@
 # 
 # http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit
 <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.\n\nMore formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U:\nQ = nU"@en .
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
 # 
 # http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -255,10 +256,14 @@
 # http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard that includes prescriptive requirements for the following:\n- Building Envelope: minimum wall insulation, minimum roof insulation, roof reflectance, minimum glazing performance\n  - HVAC: minimum equipment efficiency, minimum system features, limitation on reheat, limitation on fan power\n  - Domestic Hot Water: minimum equipment efficiency, minimum system features\n  - Power: transformer efficiency, automatic receptacle controls, energy monitoring\n  - Lighting: maximum indoor lighting power density (LPD, expressed in Watts/Sq.Ft.), minimum lighting controls, exterior lighting, parking garage lighting\n  - Other Equipment: electric motors, potable water booster pumps, elevators, and escalators"@en .
+<http://hit2gap.eu/h2g#ASHRAEAdaptiveEnvelope> <http://www.w3.org/2000/01/rdf-schema#label> "ASHRAE Adaptive Envelope"@en .
 # 
 # http://hit2gap.eu/h2g#AcousticComfort
 <http://hit2gap.eu/h2g#AcousticComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#AcousticComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+<http://hit2gap.eu/h2g#AcousticComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "The acoustic comfort refers to the models to measure the level of background noise within an aceptable range."@en .
+<http://hit2gap.eu/h2g#AcousticComfort> <http://www.w3.org/2000/01/rdf-schema#label> "Acoustic Comfort"@en .
 # 
 # http://hit2gap.eu/h2g#Actions
 <http://hit2gap.eu/h2g#Actions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -272,10 +277,14 @@ _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmar
 # http://hit2gap.eu/h2g#ActivityModel
 <http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
+<http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Model that consist on modelling the occupant activity inside the building"@en .
+<http://hit2gap.eu/h2g#ActivityModel> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Model"@en .
 # 
 # http://hit2gap.eu/h2g#Alert
 <http://hit2gap.eu/h2g#Alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Alert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Notification> .
+<http://hit2gap.eu/h2g#Alert> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined as the quick to notice any unusual and potentially dangerous or difficult circumstances concerning the building state."@en .
+<http://hit2gap.eu/h2g#Alert> <http://www.w3.org/2000/01/rdf-schema#label> "Alert"@en .
 # 
 # http://hit2gap.eu/h2g#BehaviourModel
 <http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -295,6 +304,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
 _:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#TimeBehaviour> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#comment> "As variables that serve to measure the habits and activities inside the building. Defined to register and contextualise the occupant events (building interactions with the different systems)."@en .
+<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural Model"@en .
 # 
 # http://hit2gap.eu/h2g#BlindClose
 <http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -409,18 +420,26 @@ _:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasS
 _:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Status> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#comment> "Drivers represent the environmental factors from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need"@en .
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#label> "Driver"@en .
 # 
 # http://hit2gap.eu/h2g#EnergyFrugal
 <http://hit2gap.eu/h2g#EnergyFrugal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#EnergyFrugal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#OccupantAttitude> .
+<http://hit2gap.eu/h2g#EnergyFrugal> <http://www.w3.org/2000/01/rdf-schema#comment> "Is the quality of being frugal, sparing, thrifty, prudent or economical in the consumption of consumable resources such as food, time or money, and avoiding waste, lavishness or extravagance"@en .
+<http://hit2gap.eu/h2g#EnergyFrugal> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Frugal"@en .
 # 
 # http://hit2gap.eu/h2g#EnergyIndiferent
 <http://hit2gap.eu/h2g#EnergyIndiferent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#EnergyIndiferent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#OccupantAttitude> .
+<http://hit2gap.eu/h2g#EnergyIndiferent> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupant trend to have no preference or being uninterested about building energy consumption and efficiency."@en .
+<http://hit2gap.eu/h2g#EnergyIndiferent> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Indiferent"@en .
 # 
 # http://hit2gap.eu/h2g#EnergyProfligate
 <http://hit2gap.eu/h2g#EnergyProfligate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#EnergyProfligate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#OccupantAttitude> .
+<http://hit2gap.eu/h2g#EnergyProfligate> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupant that is recklessly, extravagant or wasteful in the use of resources."@en .
+<http://hit2gap.eu/h2g#EnergyProfligate> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Profligate"@en .
 # 
 # http://hit2gap.eu/h2g#EnergyState
 <http://hit2gap.eu/h2g#EnergyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -440,6 +459,8 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
 _:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> .
+<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class for measuring the building features and the environmental factors including indoor and outdoor parameters."@en .
+<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#label> "Equipement Model"@en .
 # 
 # http://hit2gap.eu/h2g#Event
 <http://hit2gap.eu/h2g#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -480,6 +501,8 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
 _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Event> .
+<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined to register the events that can be detected from the sensor readings."@en .
+<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#label> "Event Model"@en .
 # 
 # http://hit2gap.eu/h2g#Feedback
 <http://hit2gap.eu/h2g#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -500,10 +523,14 @@ _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # http://hit2gap.eu/h2g#IAQ
 <http://hit2gap.eu/h2g#IAQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#IAQ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+<http://hit2gap.eu/h2g#IAQ> <http://www.w3.org/2000/01/rdf-schema#comment> "The IAQ corresponds to the types of measurements to determine the inddor environmental health."@en .
+<http://hit2gap.eu/h2g#IAQ> <http://www.w3.org/2000/01/rdf-schema#label> "IAQ"@en .
 # 
 # http://hit2gap.eu/h2g#ISOAdaptiveComfort
 <http://hit2gap.eu/h2g#ISOAdaptiveComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ISOAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+<http://hit2gap.eu/h2g#ISOAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "This International Standard covering the evaluation of moderate thermal environments was developed in parallel with the revised ASHRAE) standard 55 and is one of a series of ISO documents specifying methods for the measurement and evaluation of the moderate and extreme thermal environments to which human beings are exposed (ISO 7243, ISO 7933 and ISO/TR 11079, all three dealing with extreme environmental conditions, are others in the series)."@en .
+<http://hit2gap.eu/h2g#ISOAdaptiveComfort> <http://www.w3.org/2000/01/rdf-schema#label> "ISO Adaptive Comfort"@en .
 # 
 # http://hit2gap.eu/h2g#Inaction
 <http://hit2gap.eu/h2g#Inaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -513,21 +540,33 @@ _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # 
 # http://hit2gap.eu/h2g#Indicator
 <http://hit2gap.eu/h2g#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Complementing the Driver information, the indicator refers to the optimal measure that indicates the state or level of something."@en .
+<http://hit2gap.eu/h2g#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator"@en .
 # 
 # http://hit2gap.eu/h2g#Indoor
 <http://hit2gap.eu/h2g#Indoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Indoor> <http://www.w3.org/2000/01/rdf-schema#comment> "Considering the environmental factors and the context definition, the indoor class refers to those events that occur inside the building."@en .
+<http://hit2gap.eu/h2g#Indoor> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor"@en .
 # 
 # http://hit2gap.eu/h2g#Modality
 <http://hit2gap.eu/h2g#Modality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Modality> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the notification mode to the users. This notification could be via SMS, e-mail or telephone"@en .
+<http://hit2gap.eu/h2g#Modality> <http://www.w3.org/2000/01/rdf-schema#label> "Modality"@en .
 # 
 # http://hit2gap.eu/h2g#ModelResult
 <http://hit2gap.eu/h2g#ModelResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ModelResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Model result is defined by the outputs of applying several user behaviour model according to the collected data."@en .
+<http://hit2gap.eu/h2g#ModelResult> <http://www.w3.org/2000/01/rdf-schema#label> "Model Result"@en .
 # 
 # http://hit2gap.eu/h2g#Needs
 <http://hit2gap.eu/h2g#Needs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Needs> <http://www.w3.org/2000/01/rdf-schema#comment> "Needs represent the physical and non-physical requirements of the occupant's inside world that must be met in order to ensure the satisfaction of the occupant with their environment"@en .
+<http://hit2gap.eu/h2g#Needs> <http://www.w3.org/2000/01/rdf-schema#label> "Needs"@en .
 # 
 # http://hit2gap.eu/h2g#Notification
 <http://hit2gap.eu/h2g#Notification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Notification> <http://www.w3.org/2000/01/rdf-schema#comment> "The Notification refers to the mechanims to provide highlighted information to the building users."@en .
+<http://hit2gap.eu/h2g#Notification> <http://www.w3.org/2000/01/rdf-schema#label> "Notification"@en .
 # 
 # http://hit2gap.eu/h2g#ObservationValue
 <http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -535,9 +574,13 @@ _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> .
 _:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> .
+<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature."@en .
+<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#label> "Observation Value"@en .
 # 
 # http://hit2gap.eu/h2g#OccupantAttitude
 <http://hit2gap.eu/h2g#OccupantAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific occupant attitude inside the building"@en .
+<http://hit2gap.eu/h2g#OccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Attitude"@en .
 # 
 # http://hit2gap.eu/h2g#OccupantBehaviour
 <http://hit2gap.eu/h2g#OccupantBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -555,6 +598,8 @@ _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#startWorktime> .
 _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "The occupant characteristics refers to the daily or most common activities that building occupants performs inside the building (e.g start or end work)"@en .
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Characteristics"@en .
 # 
 # http://hit2gap.eu/h2g#OccupantComfort
 <http://hit2gap.eu/h2g#OccupantComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -588,20 +633,25 @@ _:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#minValue> .
 _:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
-# 
-# http://hit2gap.eu/h2g#OccupantRole
-<http://hit2gap.eu/h2g#OccupantRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#comment> "The occupant preferences refers to the building occupants prefeerences regarding the comfort sempsation."@en .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Preferences"@en .
 # 
 # http://hit2gap.eu/h2g#OtherComfortEnvelope
 <http://hit2gap.eu/h2g#OtherComfortEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#OtherComfortEnvelope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ThermalComfort> .
+<http://hit2gap.eu/h2g#OtherComfortEnvelope> <http://www.w3.org/2000/01/rdf-schema#comment> "Other kind of standards that could appear or considered within the measurement and assessment of the thermal comfort."@en .
+<http://hit2gap.eu/h2g#OtherComfortEnvelope> <http://www.w3.org/2000/01/rdf-schema#label> "Other Comfort Envelope"@en .
 # 
 # http://hit2gap.eu/h2g#Outdoor
 <http://hit2gap.eu/h2g#Outdoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Outdoor> <http://www.w3.org/2000/01/rdf-schema#comment> "Considering the environmental factors and the context definition, the outdoor class refers to those events that occur outside the building."@en .
+<http://hit2gap.eu/h2g#Outdoor> <http://www.w3.org/2000/01/rdf-schema#label> "Outdoor"@en .
 # 
 # http://hit2gap.eu/h2g#Privacy
 <http://hit2gap.eu/h2g#Privacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Privacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+<http://hit2gap.eu/h2g#Privacy> <http://www.w3.org/2000/01/rdf-schema#comment> "The privacy refers to need of privacy associated to the user information and the need to maintain outside views."@en .
+<http://hit2gap.eu/h2g#Privacy> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy"@en .
 # 
 # http://hit2gap.eu/h2g#Probability
 <http://hit2gap.eu/h2g#Probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -612,6 +662,8 @@ _:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://hit2gap.eu/h2g#Recommendation
 <http://hit2gap.eu/h2g#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Notification> .
+<http://hit2gap.eu/h2g#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "The recomendation refers to the suggestions or proposals to improve the building efficiency or comfort."@en .
+<http://hit2gap.eu/h2g#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
 # 
 # http://hit2gap.eu/h2g#Report
 <http://hit2gap.eu/h2g#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -621,13 +673,19 @@ _:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # http://hit2gap.eu/h2g#Role
 <http://hit2gap.eu/h2g#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Depending on the interactions and the building type, the occupants interact with the building according to their capacities to perform building actions, as for example, seeing the building thermostats (ssn:Device) or actuating over the temperature fan coils (ifc:Actuator). At this point, it is interesting to consider that the occupants only perform such interactions if building managers permit them according to the building policies."@en .
+<http://hit2gap.eu/h2g#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
 # 
 # http://hit2gap.eu/h2g#Season
 <http://hit2gap.eu/h2g#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+<http://hit2gap.eu/h2g#Season> <http://www.w3.org/2000/01/rdf-schema#comment> "It represent the season"@en .
+<http://hit2gap.eu/h2g#Season> <http://www.w3.org/2000/01/rdf-schema#label> "Season"@en .
 # 
 # http://hit2gap.eu/h2g#Status
 <http://hit2gap.eu/h2g#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "State of the driver"@en .
+<http://hit2gap.eu/h2g#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
 # 
 # http://hit2gap.eu/h2g#SystemActions
 <http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -646,9 +704,13 @@ _:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsma
 # http://hit2gap.eu/h2g#ThermalComfort
 <http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+<http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "Thermal Comfort is defined by the models to determine suitable indoor temperature associated to the user comfort." .
+<http://hit2gap.eu/h2g#ThermalComfort> <http://www.w3.org/2000/01/rdf-schema#label> "Thermal Comfort" .
 # 
 # http://hit2gap.eu/h2g#TimeBehaviour
 <http://hit2gap.eu/h2g#TimeBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#TimeBehaviour> <http://www.w3.org/2000/01/rdf-schema#comment> "The time of day and the day of the week are fundamental to the presence and location of occupants in a building. Some personal habits are time-driven, for example opening windows when first arriving at work or closing windows before leaving the office, or turning on lights when first arriving and turning off lights before leaving."@en .
+<http://hit2gap.eu/h2g#TimeBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "Time Behaviour"@en .
 # 
 # http://hit2gap.eu/h2g#User
 <http://hit2gap.eu/h2g#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -671,6 +733,8 @@ _:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # http://hit2gap.eu/h2g#VisualComfort
 <http://hit2gap.eu/h2g#VisualComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#VisualComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
+<http://hit2gap.eu/h2g#VisualComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "Visual comfort criteria measure the ability of an individual to carry out tasks comfortably in terms of their photo-sensory perception of their environment.  They are dependent on many factors including: light intensity, direction of light source, reflection of surfaces, contrast of surfaces, the nature of the task being undertaken and the photo-sensory response of the eye.  International recommendations exist that specify the minimum level of illuminance required to provide visual comfort for various tasks and locations. As with thermal comfort temperatures, these light levels were derived experimentally and reflect an average person engaged in a specific activity within a defined environment."@en .
+<http://hit2gap.eu/h2g#VisualComfort> <http://www.w3.org/2000/01/rdf-schema#label> "Visual Comfort"@en .
 # 
 # http://hit2gap.eu/h2g#WindowState
 <http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -701,6 +765,8 @@ _:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # http://purl.oclc.org/NET/ssnx/ssn#Device
 <http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#System> .
+<http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components)."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
 <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -726,9 +792,13 @@ _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#externalID> .
 _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#Property
 <http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
 <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -747,9 +817,13 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#SensorOutput
 <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor Output"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#System
 <http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -831,14 +905,20 @@ _:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # http://www.w3.org/2006/time#DateTimeInterval
 <http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "It enables compact representation of an interval corresponding to a single element in a date-time description (i.e. a specified year, month, week, day, hour, minute, second)"@en .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Date Time Interval"@en .
 # 
 # http://www.w3.org/2006/time#DayOfWeek
 <http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+<http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "Correpondence to the seven days used in the Gregorian calendar, and using the English names :Sunday, :Monday, :Tuesday, :Wednesday, :Thursday, :Friday, :Saturday."@en .
+<http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "Day Of Week"@en .
 # 
 # http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with zero extent or duration"@en .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant"@en .
 # 
 # 
 # 
