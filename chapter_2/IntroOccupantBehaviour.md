@@ -8,7 +8,7 @@ This chapter is aimed at describing the general model referring the occupant beh
 - **Needs**: Model the requirements that the different occupants shall meet to ensure their satisfaction in the environment which interacts.
 - **Actions**: Model the occupants interactions with the building to achieve the required comfort.
 
-Considering these three main aspects, the constructed [semantic model](https://cdn.rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/gh-pages/owlSpecificationDoc/index-en.html) relies on the combination of the Drivers, Needs, and Actions with the representation of the building infrastructure (aligning the model with the IFC) and the different observations that could occur in the building (SSN ontology).
+Considering these three main aspects, the constructed [semantic model](https://cdn.rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/4be8ec17/owlSpecificationDoc/index-en.html) relies on the combination of the Drivers, Needs, and Actions with the representation of the building infrastructure (aligning the model with the IFC) and the different observations that could occur in the building (SSN ontology).
 
 In detail and for better comprehend the document, the semantic models selected based on their standards usage are: 
 
