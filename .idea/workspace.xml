@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/index.html" afterPath="$PROJECT_DIR$/docs/_book/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +68,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="273">
-                <caret line="10" column="160" lean-forward="false" selection-start-line="10" selection-start-column="160" selection-end-line="10" selection-end-column="160" />
+                <caret line="10" column="166" lean-forward="false" selection-start-line="10" selection-start-column="166" selection-end-line="10" selection-end-column="166" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -763,14 +776,7 @@
       <workItem from="1497859424589" duration="297000" />
       <workItem from="1498033002668" duration="7340000" />
       <workItem from="1498461208429" duration="10216000" />
-      <workItem from="1498563323661" duration="3439000" />
-    </task>
-    <task id="LOCAL-00005" summary="Update of the server images">
-      <created>1493129208092</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1493129208092</updated>
+      <workItem from="1498563323661" duration="3748000" />
     </task>
     <task id="LOCAL-00006" summary="Definition of Building Occupants in the building.">
       <created>1493134605501</created>
@@ -1108,11 +1114,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498566036086</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Latest version of the user behaviour ontology documentation">
+      <created>1498568726325</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1498568726325</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105573000" />
+    <option name="totallyTimeSpent" value="105882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1218" extended-state="6" />
@@ -1674,7 +1687,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="273">
-            <caret line="10" column="160" lean-forward="false" selection-start-line="10" selection-start-column="160" selection-end-line="10" selection-end-column="160" />
+            <caret line="10" column="166" lean-forward="false" selection-start-line="10" selection-start-column="166" selection-end-line="10" selection-end-column="166" />
             <folding />
           </first_editor>
           <second_editor>
