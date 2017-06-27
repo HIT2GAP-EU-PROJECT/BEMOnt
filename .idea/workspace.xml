@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.nt" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.nt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.xml" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,12 +40,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index-en.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/index-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+            <state relative-caret-position="21">
+              <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntroOccupantBehaviour.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="336">
+                <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -165,6 +175,7 @@
         <option value="$PROJECT_DIR$/docs/plantuml/OccupantRelationModel.puml" />
         <option value="$PROJECT_DIR$/docs/plantuml/BuildingInfrastructure.puml" />
         <option value="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
+        <option value="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" />
       </list>
     </option>
   </component>
@@ -219,7 +230,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="owlSpecificationDoc" />
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,11 +244,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="owlSpecificationDoc" />
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sections" />
+              <option name="myItemId" value="_book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HIT2GAPOnt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HIT2GAPOnt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chapter_2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -730,14 +763,7 @@
       <workItem from="1497859424589" duration="297000" />
       <workItem from="1498033002668" duration="7340000" />
       <workItem from="1498461208429" duration="10216000" />
-      <workItem from="1498563323661" duration="2498000" />
-    </task>
-    <task id="LOCAL-00003" summary="Update of the server images">
-      <created>1493127698015</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1493127698015</updated>
+      <workItem from="1498563323661" duration="2697000" />
     </task>
     <task id="LOCAL-00004" summary="Update of the server images">
       <created>1493127943951</created>
@@ -1075,11 +1101,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498565223381</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Latest version of the user behaviour ontology documentation">
+      <created>1498565868828</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1498565868828</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104632000" />
+    <option name="totallyTimeSpent" value="104831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1218" extended-state="6" />
@@ -1151,7 +1184,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix ssn:Sensor equivalent class" />
     <MESSAGE value="Definition of IfcDistributionElementState" />
     <MESSAGE value="Definition the feedback of Yudith/Richard" />
     <MESSAGE value="Update documentation part" />
@@ -1176,27 +1208,14 @@
     <MESSAGE value="Incorporation in the documentation of some terms definition" />
     <MESSAGE value="Incorporation in the documentation of drivers definition" />
     <MESSAGE value="Documentation of all the classes of the ontology" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentation of all the classes of the ontology" />
+    <MESSAGE value="Latest version of the user behaviour ontology documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest version of the user behaviour ontology documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/chapter_2/IntroOccupantBehaviour.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="294">
-            <caret line="14" column="10" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="10" />
-          </first_editor>
-          <second_editor>
-            <js_state>
-              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:595}" />
-            </js_state>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/plantuml/NeedsSpecificationModel.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -1592,6 +1611,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="332" column="11" lean-forward="true" selection-start-line="332" selection-start-column="11" selection-end-line="332" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1642,9 +1662,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/index-en.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+        <state relative-caret-position="21">
+          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="336">
+            <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
