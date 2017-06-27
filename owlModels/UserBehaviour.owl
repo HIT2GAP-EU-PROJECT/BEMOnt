@@ -93,10 +93,10 @@
         <Class IRI="ModelResult"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:observationResult"/>
+        <Class IRI="Context"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Context"/>
+        <ObjectProperty abbreviatedIRI="ssn:observationResult"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="changes"/>
@@ -120,13 +120,13 @@
         <Class IRI="Feedback"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyIndiferent"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="hasOccupantRole"/>
     </Declaration>
     <Declaration>
         <Class IRI="OccupantPreferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyIndiferent"/>
     </Declaration>
     <Declaration>
         <Class IRI="BlindOpen"/>
@@ -144,16 +144,16 @@
         <NamedIndividual IRI="Email"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Role"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="ssn:Property"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DoorState"/>
+        <Class IRI="Role"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DoorState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Outdoor"/>
@@ -165,10 +165,10 @@
         <DataProperty IRI="maxValue"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Modality"/>
+        <Class IRI="ASHRAEAdaptiveEnvelope"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ASHRAEAdaptiveEnvelope"/>
+        <Class IRI="Modality"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Winter"/>
@@ -228,10 +228,10 @@
         <Class IRI="EnergyState"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ASHRAEAdaptiveComfort"/>
+        <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
+        <Class IRI="ASHRAEAdaptiveComfort"/>
     </Declaration>
     <Declaration>
         <Class IRI="SystemActions"/>
@@ -240,10 +240,10 @@
         <NamedIndividual IRI="Manager"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:abstract"/>
+        <ObjectProperty IRI="isAssignedTo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isAssignedTo"/>
+        <AnnotationProperty abbreviatedIRI="dc:abstract"/>
     </Declaration>
     <Declaration>
         <Class IRI="Report"/>
@@ -285,10 +285,10 @@
         <ObjectProperty IRI="hasBehaviour"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Gender"/>
+        <ObjectProperty IRI="isProvokedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isProvokedBy"/>
+        <Class IRI="Gender"/>
     </Declaration>
     <Declaration>
         <Class IRI="ZoneOccupancy"/>
@@ -327,10 +327,10 @@
         <NamedIndividual IRI="Summer"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isStatedBy"/>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <ObjectProperty IRI="isStatedBy"/>
     </Declaration>
     <Declaration>
         <Class IRI="IAQ"/>
@@ -339,13 +339,13 @@
         <Class IRI="EquipementModel"/>
     </Declaration>
     <Declaration>
+        <Class IRI="BuildingComplexState"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="EventModel"/>
     </Declaration>
     <Declaration>
         <Class IRI="ThermalComfort"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BuildingComplexState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Privacy"/>
@@ -369,10 +369,10 @@
         <Class IRI="BehaviourModel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
+        <Class IRI="WindowsClose"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowsClose"/>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="minValue"/>
@@ -402,16 +402,16 @@
         <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Technician"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="assignedTo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Driver"/>
+        <NamedIndividual IRI="Technician"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasModelResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Driver"/>
     </Declaration>
     <Declaration>
         <Class IRI="DoorClose"/>
@@ -432,10 +432,10 @@
         <DataProperty IRI="age"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isBasedOn"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <ObjectProperty IRI="isBasedOn"/>
     </Declaration>
     <Declaration>
         <Class IRI="User"/>
@@ -450,10 +450,10 @@
         <DataProperty IRI="startWorktime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Indicator"/>
+        <Class IRI="ZoneEmpty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ZoneEmpty"/>
+        <Class IRI="Indicator"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcActor"/>
@@ -474,13 +474,13 @@
         <DataProperty IRI="name"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="qudt:Unit"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="time:DayOfWeek"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:Unit"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
@@ -1226,6 +1226,32 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ASHRAEAdaptiveEnvelope</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Standard that includes prescriptive requirements for the following:
+- Building Envelope: minimum wall insulation, minimum roof insulation, roof reflectance, minimum glazing performance
+  - HVAC: minimum equipment efficiency, minimum system features, limitation on reheat, limitation on fan power
+  - Domestic Hot Water: minimum equipment efficiency, minimum system features
+  - Power: transformer efficiency, automatic receptacle controls, energy monitoring
+  - Lighting: maximum indoor lighting power density (LPD, expressed in Watts/Sq.Ft.), minimum lighting controls, exterior lighting, parking garage lighting
+  - Other Equipment: electric motors, potable water booster pumps, elevators, and escalators</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ASHRAEAdaptiveEnvelope</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ASHRAE Adaptive Envelope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AcousticComfort</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The acoustic comfort refers to the models to measure the level of background noise within an aceptable range.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AcousticComfort</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Acoustic Comfort</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Actions</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actions are the specific building interactions performed by the building occupants. This actions can be caused by an initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements.</Literal>
     </AnnotationAssertion>
@@ -1346,6 +1372,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IAQ</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The IAQ corresponds to the types of measurements to determine the inddor environmental health.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IAQ</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IAQ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ISOAdaptiveComfort</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This International Standard covering the evaluation of moderate thermal environments was developed in parallel with the revised ASHRAE) standard 55 and is one of a series of ISO documents specifying methods for the measurement and evaluation of the moderate and extreme thermal environments to which human beings are exposed (ISO 7243, ISO 7933 and ISO/TR 11079, all three dealing with extreme environmental conditions, are others in the series).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ISOAdaptiveComfort</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO Adaptive Comfort</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Inaction</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Refers to the performance of any action in the building.</Literal>
     </AnnotationAssertion>
@@ -1353,6 +1399,56 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Inaction</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Inaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Indicator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Complementing the Driver information, the indicator refers to the optimal measure that indicates the state or level of something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Indicator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indicator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Indoor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Considering the environmental factors and the context definition, the indoor class refers to those events that occur inside the building.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Indoor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indoor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Modality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Refers to the notification mode to the users. This notification could be via SMS, e-mail or telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Modality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Modality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ModelResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Model result is defined by the outputs of applying several user behaviour model according to the collected data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ModelResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Model Result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Needs</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Needs represent the physical and non-physical requirements of the occupant&apos;s inside world that must be met in order to ensure the satisfaction of the occupant with their environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Needs</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Needs</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1386,6 +1482,36 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OccupantPreferences</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The occupant preferences refers to the building occupants prefeerences regarding the comfort sempsation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OccupantPreferences</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Occupant Preferences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OtherComfortEnvelope</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Other kind of standards that could appear or considered within the measurement and assessment of the thermal comfort.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OtherComfortEnvelope</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Other Comfort Envelope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Privacy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The privacy refers to need of privacy associated to the user information and the need to maintain outside views.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Privacy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Privacy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Probability</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Likelihood measure to occur certain action</Literal>
     </AnnotationAssertion>
@@ -1413,6 +1539,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SystemActions</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System Actions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ThermalComfort</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thermal Comfort is defined by the models to determine suitable indoor temperature associated to the user comfort.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ThermalComfort</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thermal Comfort</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
