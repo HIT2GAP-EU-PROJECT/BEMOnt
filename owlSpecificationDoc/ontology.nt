@@ -62,124 +62,179 @@
 # http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit
 <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
 # 
 # http://hit2gap.eu/h2g#acts
 <http://hit2gap.eu/h2g#acts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#acts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://hit2gap.eu/h2g#acts> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to define that an iser acto ober certain device changing their behaviour."@en .
+<http://hit2gap.eu/h2g#acts> <http://www.w3.org/2000/01/rdf-schema#label> "acts"@en .
 # 
 # http://hit2gap.eu/h2g#assignedTo
 <http://hit2gap.eu/h2g#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#assignedTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://hit2gap.eu/h2g#isAssignedTo> .
+<http://hit2gap.eu/h2g#assignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the context and indoor or outddor factors."@en .
+<http://hit2gap.eu/h2g#assignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "assigned to"@en .
 # 
 # http://hit2gap.eu/h2g#associatedTo
 <http://hit2gap.eu/h2g#associatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#associatedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the context and certain sensor output"@en .
+<http://hit2gap.eu/h2g#associatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "associated to"@en .
 # 
 # http://hit2gap.eu/h2g#changes
 <http://hit2gap.eu/h2g#changes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#changes> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation to represent the result of an action in terms of changing something inside the buildign (system, sensors, etc)."@en .
+<http://hit2gap.eu/h2g#changes> <http://www.w3.org/2000/01/rdf-schema#label> "changes"@en .
 # 
 # http://hit2gap.eu/h2g#concerns
 <http://hit2gap.eu/h2g#concerns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#concerns> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation focused on depicting the link between the users and the corresponding feedback"@en .
+<http://hit2gap.eu/h2g#concerns> <http://www.w3.org/2000/01/rdf-schema#label> "concerns"@en .
 # 
 # http://hit2gap.eu/h2g#hasBehaviour
 <http://hit2gap.eu/h2g#hasBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasBehaviour> <http://www.w3.org/2000/01/rdf-schema#comment> "relation focused on indicating that certain user have defined certain behaviour"@en .
+<http://hit2gap.eu/h2g#hasBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "has behaviour"@en .
 # 
 # http://hit2gap.eu/h2g#hasComfortRequirements
 <http://hit2gap.eu/h2g#hasComfortRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasComfortRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation to represent that a user has certain comfort requirements to be satisfied"@en .
+<http://hit2gap.eu/h2g#hasComfortRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "has comfort requirements"@en .
 # 
 # http://hit2gap.eu/h2g#hasConstraints
 <http://hit2gap.eu/h2g#hasConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "the relation to represent that an event have a set of contraints"@en .
+<http://hit2gap.eu/h2g#hasConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "has constraints"@en .
 # 
 # http://hit2gap.eu/h2g#hasContext
 <http://hit2gap.eu/h2g#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the relation between an event and certain context"@en .
+<http://hit2gap.eu/h2g#hasContext> <http://www.w3.org/2000/01/rdf-schema#label> "has context"@en .
 # 
 # http://hit2gap.eu/h2g#hasFunction
 <http://hit2gap.eu/h2g#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to define in the Drivers several functions to measure the comfort."@en .
+<http://hit2gap.eu/h2g#hasFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has Function"@en .
 # 
 # http://hit2gap.eu/h2g#hasGender
 <http://hit2gap.eu/h2g#hasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasGender> <http://www.w3.org/2000/01/rdf-schema#comment> "property to associate to the users their corresponding gender"@en .
+<http://hit2gap.eu/h2g#hasGender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender"@en .
 # 
 # http://hit2gap.eu/h2g#hasIndicator
 <http://hit2gap.eu/h2g#hasIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "has indicator"@en .
+<http://hit2gap.eu/h2g#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "property to indicate to the drivers the associations to certain indicators."@en .
 # 
 # http://hit2gap.eu/h2g#hasModelResult
 <http://hit2gap.eu/h2g#hasModelResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasModelResult> <http://www.w3.org/2000/01/rdf-schema#comment> "property to link the drivers with certain model results."@en .
+<http://hit2gap.eu/h2g#hasModelResult> <http://www.w3.org/2000/01/rdf-schema#label> "has model result"@en .
 # 
 # http://hit2gap.eu/h2g#hasOccupantAttitude
 <http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
 <http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#OccupantAttitude> .
+<http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#comment> "object property to represent the occupant attitude of the building occupants."@en .
+<http://hit2gap.eu/h2g#hasOccupantAttitude> <http://www.w3.org/2000/01/rdf-schema#label> "has occupant attitude"@en .
 # 
 # http://hit2gap.eu/h2g#hasOccupantCharacteristics
 <http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
 <http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#OccupantCharacteristics> .
-# 
-# http://hit2gap.eu/h2g#hasOccupantRole
-<http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://hit2gap.eu/h2g#hasOccupantRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "property to define the association between users and their daily activities"@en .
+<http://hit2gap.eu/h2g#hasOccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "has occuant characteristics"@en .
 # 
 # http://hit2gap.eu/h2g#hasProbability
 <http://hit2gap.eu/h2g#hasProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "property to represent the probability of happen certain event"@en .
+<http://hit2gap.eu/h2g#hasProbability> <http://www.w3.org/2000/01/rdf-schema#label> "has probability"@en .
 # 
 # http://hit2gap.eu/h2g#hasRole
 <http://hit2gap.eu/h2g#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "property to associate the building occupants to certain role"@en .
+<http://hit2gap.eu/h2g#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
 # 
 # http://hit2gap.eu/h2g#hasState
 <http://hit2gap.eu/h2g#hasState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2002/07/owl#inverseOf> <http://hit2gap.eu/h2g#isStatedBy> .
 <http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#BuildingState> .
+<http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2000/01/rdf-schema#comment> "property to asign to the building systems certain associated abstract state"@en .
+<http://hit2gap.eu/h2g#hasState> <http://www.w3.org/2000/01/rdf-schema#label> "has state"@en .
 # 
 # http://hit2gap.eu/h2g#hasStatus
 <http://hit2gap.eu/h2g#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "property to represent the asignment to the driver of certain status"@en .
+<http://hit2gap.eu/h2g#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status"@en .
 # 
 # http://hit2gap.eu/h2g#isAssignedTo
 <http://hit2gap.eu/h2g#isAssignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#isAssignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "is assigned to"@en .
 # 
 # http://hit2gap.eu/h2g#isBasedOn
 <http://hit2gap.eu/h2g#isBasedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#label> "is Based on"@en .
 # 
 # http://hit2gap.eu/h2g#isProvokedBy
 <http://hit2gap.eu/h2g#isProvokedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#isProvokedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://hit2gap.eu/h2g#provokes> .
+<http://hit2gap.eu/h2g#isProvokedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is provoked by"@en .
 # 
 # http://hit2gap.eu/h2g#isStatedBy
 <http://hit2gap.eu/h2g#isStatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#isStatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is stated by"@en .
 # 
 # http://hit2gap.eu/h2g#performsAction
 <http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> .
 <http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#Actions> .
+<http://hit2gap.eu/h2g#performsAction> <http://www.w3.org/2000/01/rdf-schema#label> "perform action"@en .
 # 
 # http://hit2gap.eu/h2g#prefers
 <http://hit2gap.eu/h2g#prefers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#prefers> <http://www.w3.org/2000/01/rdf-schema#comment> "property to link user with modalitites"@en .
+<http://hit2gap.eu/h2g#prefers> <http://www.w3.org/2000/01/rdf-schema#label> "prefers"@en .
 # 
 # http://hit2gap.eu/h2g#provokes
 <http://hit2gap.eu/h2g#provokes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#provokes> <http://www.w3.org/2000/01/rdf-schema#label> "provokes"@en .
 # 
 # http://hit2gap.eu/h2g#receives
 <http://hit2gap.eu/h2g#receives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://hit2gap.eu/h2g#receives> <http://www.w3.org/2000/01/rdf-schema#comment> "property to represent the action of receiving notification from the system according t certain building anomalies"@en .
+<http://hit2gap.eu/h2g#receives> <http://www.w3.org/2000/01/rdf-schema#label> "receives"@en .
 # 
 # http://hit2gap.eu/h2g#receivesAlerts
 <http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> .
 <http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/2000/01/rdf-schema#range> <http://hit2gap.eu/h2g#Alert> .
+<http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/2000/01/rdf-schema#comment> "relation to represent the recepcion of alerts to certain users"@en .
+<http://hit2gap.eu/h2g#receivesAlerts> <http://www.w3.org/2000/01/rdf-schema#label> "receives alerts"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem
 <http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Haspart relation between a system and its parts."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> <http://www.w3.org/2000/01/rdf-schema#label> "has subsystem"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#hasValue
 <http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#observationResult
 <http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property."@en .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#label> "observation result"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#observationResultTime
 <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The result time shall describe the time when the result became available, typically when the procedure associated with the observation was completed For some observations this is identical to the phenomenonTime. However, there are important cases where they differ.[O&M]"@en .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> <http://www.w3.org/2000/01/rdf-schema#label> "observation result time"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#observedBy
 <http://purl.oclc.org/NET/ssnx/ssn#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "observed by"@en .
 # 
 # 
 # 
@@ -193,45 +248,64 @@
 # http://hit2gap.eu/h2g#age
 <http://hit2gap.eu/h2g#age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#age> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://hit2gap.eu/h2g#age> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property to define the age of certain building occupant"@en .
+<http://hit2gap.eu/h2g#age> <http://www.w3.org/2000/01/rdf-schema#label> "age"@en .
 # 
 # http://hit2gap.eu/h2g#endWorktime
 <http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#comment> "proeprty to define the date time of end of wrok"@en .
+<http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#label> "end of work time"@en .
 # 
 # http://hit2gap.eu/h2g#externalID
 <http://hit2gap.eu/h2g#externalID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proeprty to define the external ID regaring the time series stored in Mondas"@en .
+<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#label> "external ID"@en .
 # 
 # http://hit2gap.eu/h2g#id
 <http://hit2gap.eu/h2g#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://hit2gap.eu/h2g#id> <http://www.w3.org/2000/01/rdf-schema#comment> "text representation of the ids"@en .
+<http://hit2gap.eu/h2g#id> <http://www.w3.org/2000/01/rdf-schema#label> "id"@en .
 # 
 # http://hit2gap.eu/h2g#jobType
 <http://hit2gap.eu/h2g#jobType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#jobType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://hit2gap.eu/h2g#jobType> <http://www.w3.org/2000/01/rdf-schema#comment> "text definition of the job type"@en .
+<http://hit2gap.eu/h2g#jobType> <http://www.w3.org/2000/01/rdf-schema#label> "job type"@en .
 # 
 # http://hit2gap.eu/h2g#lifestyle
 <http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://hit2gap.eu/h2g#lifestyle> <http://www.w3.org/2000/01/rdf-schema#label> "lifestyle"@en .
 # 
 # http://hit2gap.eu/h2g#maxValue
 <http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/2000/01/rdf-schema#comment> "maximun value marked as an upper threshold measure"@en .
+<http://hit2gap.eu/h2g#maxValue> <http://www.w3.org/2000/01/rdf-schema#label> "maximun value"@en .
 # 
 # http://hit2gap.eu/h2g#minValue
 <http://hit2gap.eu/h2g#minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#minValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://hit2gap.eu/h2g#minValue> <http://www.w3.org/2000/01/rdf-schema#comment> "minimun value marked as the lower limit of the threshold"@en .
+<http://hit2gap.eu/h2g#minValue> <http://www.w3.org/2000/01/rdf-schema#label> "minimun value"@en .
 # 
 # http://hit2gap.eu/h2g#name
 <http://hit2gap.eu/h2g#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://hit2gap.eu/h2g#name> <http://www.w3.org/2000/01/rdf-schema#comment> "name of the instances (text field)"@en .
+<http://hit2gap.eu/h2g#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
 # http://hit2gap.eu/h2g#startWorktime
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#comment> "property to define the date time of start of wrok"@en .
+<http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#label> "start of work time"@en .
 # 
 # 
 # 

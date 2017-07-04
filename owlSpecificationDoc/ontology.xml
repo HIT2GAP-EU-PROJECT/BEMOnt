@@ -130,6 +130,7 @@
 
     <owl:ObjectProperty rdf:about="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -139,6 +140,8 @@
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#acts">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relation to define that an iser acto ober certain device changing their behaviour.</rdfs:comment>
+        <rdfs:label xml:lang="en">acts</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -148,6 +151,8 @@
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#assignedTo">
         <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g#isAssignedTo"/>
+        <rdfs:comment xml:lang="en">Relation between the context and indoor or outddor factors.</rdfs:comment>
+        <rdfs:label xml:lang="en">assigned to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -155,77 +160,110 @@
     <!-- http://hit2gap.eu/h2g#associatedTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#associatedTo"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#associatedTo">
+        <rdfs:comment xml:lang="en">Relation between the context and certain sensor output</rdfs:comment>
+        <rdfs:label xml:lang="en">associated to</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#changes -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#changes"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#changes">
+        <rdfs:comment xml:lang="en">The relation to represent the result of an action in terms of changing something inside the buildign (system, sensors, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">changes</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#concerns -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#concerns"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#concerns">
+        <rdfs:comment xml:lang="en">Relation focused on depicting the link between the users and the corresponding feedback</rdfs:comment>
+        <rdfs:label xml:lang="en">concerns</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasBehaviour -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasBehaviour"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasBehaviour">
+        <rdfs:comment xml:lang="en">relation focused on indicating that certain user have defined certain behaviour</rdfs:comment>
+        <rdfs:label xml:lang="en">has behaviour</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasComfortRequirements -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasComfortRequirements"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasComfortRequirements">
+        <rdfs:comment xml:lang="en">The relation to represent that a user has certain comfort requirements to be satisfied</rdfs:comment>
+        <rdfs:label xml:lang="en">has comfort requirements</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasConstraints -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasConstraints"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasConstraints">
+        <rdfs:comment xml:lang="en">the relation to represent that an event have a set of contraints</rdfs:comment>
+        <rdfs:label xml:lang="en">has constraints</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasContext -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasContext"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasContext">
+        <rdfs:comment xml:lang="en">Indicate the relation between an event and certain context</rdfs:comment>
+        <rdfs:label xml:lang="en">has context</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasFunction -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasFunction"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasFunction">
+        <rdfs:comment xml:lang="en">Property to define in the Drivers several functions to measure the comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Function</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasGender -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasGender"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasGender">
+        <rdfs:comment xml:lang="en">property to associate to the users their corresponding gender</rdfs:comment>
+        <rdfs:label xml:lang="en">has gender</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasIndicator -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasIndicator"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasIndicator">
+        <rdfs:label xml:lang="en">has indicator</rdfs:label>
+        <rdfs:label xml:lang="en">property to indicate to the drivers the associations to certain indicators.</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasModelResult -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasModelResult"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasModelResult">
+        <rdfs:comment xml:lang="en">property to link the drivers with certain model results.</rdfs:comment>
+        <rdfs:label xml:lang="en">has model result</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -235,6 +273,8 @@
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasOccupantAttitude">
         <rdfs:domain rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"/>
         <rdfs:range rdf:resource="http://hit2gap.eu/h2g#OccupantAttitude"/>
+        <rdfs:comment xml:lang="en">object property to represent the occupant attitude of the building occupants.</rdfs:comment>
+        <rdfs:label xml:lang="en">has occupant attitude</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -246,15 +286,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"/>
         <rdfs:range rdf:resource="http://hit2gap.eu/h2g#OccupantCharacteristics"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://hit2gap.eu/h2g#hasOccupantRole -->
-
-
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasOccupantRole">
-        <rdfs:domain rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"/>
+        <rdfs:comment xml:lang="en">property to define the association between users and their daily activities</rdfs:comment>
+        <rdfs:label xml:lang="en">has occuant characteristics</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -262,14 +295,20 @@
     <!-- http://hit2gap.eu/h2g#hasProbability -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasProbability"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasProbability">
+        <rdfs:comment xml:lang="en">property to represent the probability of happen certain event</rdfs:comment>
+        <rdfs:label xml:lang="en">has probability</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#hasRole -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasRole"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasRole">
+        <rdfs:comment xml:lang="en">property to associate the building occupants to certain role</rdfs:comment>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -280,6 +319,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g#isStatedBy"/>
         <rdfs:range rdf:resource="http://hit2gap.eu/h2g#BuildingState"/>
+        <rdfs:comment xml:lang="en">property to asign to the building systems certain associated abstract state</rdfs:comment>
+        <rdfs:label xml:lang="en">has state</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -287,21 +328,28 @@
     <!-- http://hit2gap.eu/h2g#hasStatus -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasStatus"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#hasStatus">
+        <rdfs:comment xml:lang="en">property to represent the asignment to the driver of certain status</rdfs:comment>
+        <rdfs:label xml:lang="en">has status</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#isAssignedTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isAssignedTo"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isAssignedTo">
+        <rdfs:comment xml:lang="en">is assigned to</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#isBasedOn -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isBasedOn"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isBasedOn">
+        <rdfs:label xml:lang="en">is Based on</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -310,6 +358,7 @@
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isProvokedBy">
         <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g#provokes"/>
+        <rdfs:label xml:lang="en">is provoked by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -317,7 +366,9 @@
     <!-- http://hit2gap.eu/h2g#isStatedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isStatedBy"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#isStatedBy">
+        <rdfs:label xml:lang="en">is stated by</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -327,6 +378,7 @@
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#performsAction">
         <rdfs:domain rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"/>
         <rdfs:range rdf:resource="http://hit2gap.eu/h2g#Actions"/>
+        <rdfs:label xml:lang="en">perform action</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -334,21 +386,29 @@
     <!-- http://hit2gap.eu/h2g#prefers -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#prefers"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#prefers">
+        <rdfs:comment xml:lang="en">property to link user with modalitites</rdfs:comment>
+        <rdfs:label xml:lang="en">prefers</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#provokes -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#provokes"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#provokes">
+        <rdfs:label xml:lang="en">provokes</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://hit2gap.eu/h2g#receives -->
 
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#receives"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#receives">
+        <rdfs:comment xml:lang="en">property to represent the action of receiving notification from the system according t certain building anomalies</rdfs:comment>
+        <rdfs:label xml:lang="en">receives</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -358,6 +418,8 @@
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g#receivesAlerts">
         <rdfs:domain rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
         <rdfs:range rdf:resource="http://hit2gap.eu/h2g#Alert"/>
+        <rdfs:comment xml:lang="en">relation to represent the recepcion of alerts to certain users</rdfs:comment>
+        <rdfs:label xml:lang="en">receives alerts</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -365,35 +427,48 @@
     <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem"/>
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem">
+        <rdfs:comment xml:lang="en">Haspart relation between a system and its parts.</rdfs:comment>
+        <rdfs:label xml:lang="en">has subsystem</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#hasValue -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasValue">
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observationResult -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResult"/>
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResult">
+        <rdfs:comment xml:lang="en">Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property.</rdfs:comment>
+        <rdfs:label xml:lang="en">observation result</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observationResultTime -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResultTime"/>
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResultTime">
+        <rdfs:comment xml:lang="en">The result time shall describe the time when the result became available, typically when the procedure associated with the observation was completed For some observations this is identical to the phenomenonTime. However, there are important cases where they differ.[O&amp;M]</rdfs:comment>
+        <rdfs:label xml:lang="en">observation result time</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy">
+        <rdfs:label xml:lang="en">observed by</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -414,6 +489,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#age">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property to define the age of certain building occupant</rdfs:comment>
+        <rdfs:label xml:lang="en">age</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -423,6 +500,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#endWorktime">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">proeprty to define the date time of end of wrok</rdfs:comment>
+        <rdfs:label xml:lang="en">end of work time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -432,6 +511,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#externalID">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Data proeprty to define the external ID regaring the time series stored in Mondas</rdfs:comment>
+        <rdfs:label xml:lang="en">external ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -441,6 +522,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#id">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">text representation of the ids</rdfs:comment>
+        <rdfs:label xml:lang="en">id</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -450,6 +533,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#jobType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">text definition of the job type</rdfs:comment>
+        <rdfs:label xml:lang="en">job type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -460,6 +545,7 @@
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#lifestyle">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">lifestyle</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -470,6 +556,8 @@
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#maxValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">maximun value marked as an upper threshold measure</rdfs:comment>
+        <rdfs:label xml:lang="en">maximun value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -479,6 +567,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#minValue">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">minimun value marked as the lower limit of the threshold</rdfs:comment>
+        <rdfs:label xml:lang="en">minimun value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -488,6 +578,8 @@
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#name">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">name of the instances (text field)</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -498,6 +590,8 @@
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g#startWorktime">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">property to define the date time of start of wrok</rdfs:comment>
+        <rdfs:label xml:lang="en">start of work time</rdfs:label>
     </owl:DatatypeProperty>
     
 

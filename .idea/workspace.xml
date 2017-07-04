@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlModels/UserBehaviour.owl" afterPath="$PROJECT_DIR$/owlModels/UserBehaviour.owl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlModels/catalog-v001.xml" afterPath="$PROJECT_DIR$/owlModels/catalog-v001.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.nt" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.nt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.xml" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,12 +51,12 @@
             <state relative-caret-position="1113">
               <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
               <folding>
-                <marker date="1499161791321" expanded="true" signature="4178:4241" ph="..." />
-                <marker date="1499161791321" expanded="true" signature="4178:4246" ph="..." />
-                <marker date="1499161791321" expanded="true" signature="4371:4433" ph="..." />
-                <marker date="1499161791321" expanded="true" signature="4377:4426" ph="..." />
-                <marker date="1499161791321" expanded="true" signature="4675:5272" ph="..." />
-                <marker date="1499161791321" expanded="true" signature="4789:5265" ph="..." />
+                <marker date="1499166086442" expanded="true" signature="4178:4241" ph="..." />
+                <marker date="1499166086442" expanded="true" signature="4178:4246" ph="..." />
+                <marker date="1499166086442" expanded="true" signature="4371:4433" ph="..." />
+                <marker date="1499166086442" expanded="true" signature="4377:4426" ph="..." />
+                <marker date="1499166086442" expanded="true" signature="4675:5272" ph="..." />
+                <marker date="1499166086442" expanded="true" signature="4789:5265" ph="..." />
               </folding>
             </state>
           </provider>
@@ -62,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="756">
+              <first_editor relative-caret-position="805">
                 <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
                 <folding />
               </first_editor>
@@ -194,10 +198,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="1911" />
     <option name="y" value="-9" />
-    <option name="width" value="1864" />
-    <option name="height" value="1098" />
+    <option name="width" value="1938" />
+    <option name="height" value="1218" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -773,14 +777,7 @@
       <workItem from="1498461208429" duration="10216000" />
       <workItem from="1498563323661" duration="3802000" />
       <workItem from="1499077798473" duration="16000" />
-      <workItem from="1499161519870" duration="2323000" />
-    </task>
-    <task id="LOCAL-00009" summary="O&amp;M version of the builsing infrastructure">
-      <created>1493220870659</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1493220870659</updated>
+      <workItem from="1499161519870" duration="2417000" />
     </task>
     <task id="LOCAL-00010" summary="O&amp;M version of the builsing infrastructure">
       <created>1493221350884</created>
@@ -1118,14 +1115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1499165612371</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Definition of the documentation of the data properties">
+      <created>1499166039476</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1499166039476</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108275000" />
+    <option name="totallyTimeSpent" value="108369000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-9" width="1864" height="1098" extended-state="6" />
+    <frame x="1911" y="-9" width="1938" height="1218" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46455425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1140,10 +1144,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04064171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.036018956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20917226" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2008593" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1194,7 +1198,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update documentation part" />
     <MESSAGE value="Update HTML files" />
     <MESSAGE value="Stablish image quality to 300dpi" />
     <MESSAGE value="Update the models according to the Pierre document. Moreover, we have inclded a new version of the ssn being SensingDevice isA Device and SensingDevice isA Sensor" />
@@ -1219,7 +1222,8 @@
     <MESSAGE value="Latest version of the user behaviour ontology documentation" />
     <MESSAGE value="Updated version of the ontology documentation including classes description and detailed user behaviour model graph" />
     <MESSAGE value="Definition of the object properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Definition of the object properties" />
+    <MESSAGE value="Definition of the documentation of the data properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Definition of the documentation of the data properties" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1670,12 +1674,12 @@
         <state relative-caret-position="1113">
           <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           <folding>
-            <marker date="1499161791321" expanded="true" signature="4178:4241" ph="..." />
-            <marker date="1499161791321" expanded="true" signature="4178:4246" ph="..." />
-            <marker date="1499161791321" expanded="true" signature="4371:4433" ph="..." />
-            <marker date="1499161791321" expanded="true" signature="4377:4426" ph="..." />
-            <marker date="1499161791321" expanded="true" signature="4675:5272" ph="..." />
-            <marker date="1499161791321" expanded="true" signature="4789:5265" ph="..." />
+            <marker date="1499166086442" expanded="true" signature="4178:4241" ph="..." />
+            <marker date="1499166086442" expanded="true" signature="4178:4246" ph="..." />
+            <marker date="1499166086442" expanded="true" signature="4371:4433" ph="..." />
+            <marker date="1499166086442" expanded="true" signature="4377:4426" ph="..." />
+            <marker date="1499166086442" expanded="true" signature="4675:5272" ph="..." />
+            <marker date="1499166086442" expanded="true" signature="4789:5265" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1683,7 +1687,7 @@
     <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="756">
+          <first_editor relative-caret-position="805">
             <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
             <folding />
           </first_editor>
