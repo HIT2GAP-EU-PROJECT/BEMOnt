@@ -635,6 +635,8 @@ Q = nU</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g#BlindClose">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BlindState"/>
         <owl:disjointWith rdf:resource="http://hit2gap.eu/h2g#BlindOpen"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding blind is close</rdfs:comment>
+        <rdfs:label xml:lang="en">Blind Close</rdfs:label>
     </owl:Class>
     
 
@@ -644,6 +646,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#BlindOpen">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BlindState"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding blind is open</rdfs:comment>
+        <rdfs:label xml:lang="en">Blind Open</rdfs:label>
     </owl:Class>
     
 
@@ -653,6 +657,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#BlindState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingSimpleState"/>
+        <rdfs:comment xml:lang="en">Refers to the state that a blind could achieve (Open or Closed)</rdfs:comment>
+        <rdfs:label xml:lang="en">Blind State</rdfs:label>
     </owl:Class>
     
 
@@ -673,6 +679,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#BuildingSimpleState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingState"/>
+        <rdfs:comment xml:lang="en">The building simple state refers to specific status of some building elements that highly impacts in the detection of building anomalies even related with energy or user comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Simple State</rdfs:label>
     </owl:Class>
     
 
@@ -752,6 +760,8 @@ Q = nU</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g#DoorClose">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#DoorState"/>
         <owl:disjointWith rdf:resource="http://hit2gap.eu/h2g#DoorOpen"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding door is close</rdfs:comment>
+        <rdfs:label xml:lang="en">Door Close</rdfs:label>
     </owl:Class>
     
 
@@ -761,6 +771,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#DoorOpen">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#DoorState"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding door is open</rdfs:comment>
+        <rdfs:label xml:lang="en">Door Open</rdfs:label>
     </owl:Class>
     
 
@@ -770,6 +782,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#DoorState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingSimpleState"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding state of the Door (Open or Close)</rdfs:comment>
+        <rdfs:label xml:lang="en">Door State</rdfs:label>
     </owl:Class>
     
 
@@ -1353,6 +1367,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#WindowState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingSimpleState"/>
+        <rdfs:comment xml:lang="en">Determines the state of the specific window (Open or Close)</rdfs:comment>
+        <rdfs:label xml:lang="en">Window State</rdfs:label>
     </owl:Class>
     
 
@@ -1363,6 +1379,8 @@ Q = nU</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g#WindowsClose">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#WindowState"/>
         <owl:disjointWith rdf:resource="http://hit2gap.eu/h2g#WindowsOpen"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding Window is close</rdfs:comment>
+        <rdfs:label xml:lang="en">Windows Close</rdfs:label>
     </owl:Class>
     
 
@@ -1372,6 +1390,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#WindowsOpen">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#WindowState"/>
+        <rdfs:comment xml:lang="en">Determines that the corresponding windows is open</rdfs:comment>
+        <rdfs:label xml:lang="en">Windows Open</rdfs:label>
     </owl:Class>
     
 
@@ -1382,6 +1402,8 @@ Q = nU</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ZoneEmpty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ZoneOccupancy"/>
         <owl:disjointWith rdf:resource="http://hit2gap.eu/h2g#ZoneOccupied"/>
+        <rdfs:comment xml:lang="en">Determines the corrresponding building space have nobody inside (empty room)</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone Empty</rdfs:label>
     </owl:Class>
     
 
@@ -1391,6 +1413,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ZoneOccupancy">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#BuildingSimpleState"/>
+        <rdfs:comment xml:lang="en">Determines the number of people that are in a specific building space. In an abstract way, it determines wether the building space is empty or occupied.</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone Occupancy</rdfs:label>
     </owl:Class>
     
 
@@ -1400,6 +1424,8 @@ Q = nU</rdfs:comment>
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g#ZoneOccupied">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g#ZoneOccupancy"/>
+        <rdfs:comment xml:lang="en">Determines the corresponding building space have someone inside. Thus, the specific building space have one or more people inside.</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone Occupied</rdfs:label>
     </owl:Class>
     
 

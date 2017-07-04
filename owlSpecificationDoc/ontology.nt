@@ -311,14 +311,20 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BlindState> .
 <http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#BlindOpen> .
+<http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding blind is close"@en .
+<http://hit2gap.eu/h2g#BlindClose> <http://www.w3.org/2000/01/rdf-schema#label> "Blind Close"@en .
 # 
 # http://hit2gap.eu/h2g#BlindOpen
 <http://hit2gap.eu/h2g#BlindOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#BlindOpen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BlindState> .
+<http://hit2gap.eu/h2g#BlindOpen> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding blind is open"@en .
+<http://hit2gap.eu/h2g#BlindOpen> <http://www.w3.org/2000/01/rdf-schema#label> "Blind Open"@en .
 # 
 # http://hit2gap.eu/h2g#BlindState
 <http://hit2gap.eu/h2g#BlindState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#BlindState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+<http://hit2gap.eu/h2g#BlindState> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the state that a blind could achieve (Open or Closed)"@en .
+<http://hit2gap.eu/h2g#BlindState> <http://www.w3.org/2000/01/rdf-schema#label> "Blind State"@en .
 # 
 # http://hit2gap.eu/h2g#BuildingComplexState
 <http://hit2gap.eu/h2g#BuildingComplexState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -329,6 +335,8 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://hit2gap.eu/h2g#BuildingSimpleState
 <http://hit2gap.eu/h2g#BuildingSimpleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#BuildingSimpleState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingState> .
+<http://hit2gap.eu/h2g#BuildingSimpleState> <http://www.w3.org/2000/01/rdf-schema#comment> "The building simple state refers to specific status of some building elements that highly impacts in the detection of building anomalies even related with energy or user comfort."@en .
+<http://hit2gap.eu/h2g#BuildingSimpleState> <http://www.w3.org/2000/01/rdf-schema#label> "Building Simple State"@en .
 # 
 # http://hit2gap.eu/h2g#BuildingState
 <http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -381,14 +389,20 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#DoorState> .
 <http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#DoorOpen> .
+<http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding door is close"@en .
+<http://hit2gap.eu/h2g#DoorClose> <http://www.w3.org/2000/01/rdf-schema#label> "Door Close"@en .
 # 
 # http://hit2gap.eu/h2g#DoorOpen
 <http://hit2gap.eu/h2g#DoorOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#DoorOpen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#DoorState> .
+<http://hit2gap.eu/h2g#DoorOpen> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding door is open"@en .
+<http://hit2gap.eu/h2g#DoorOpen> <http://www.w3.org/2000/01/rdf-schema#label> "Door Open"@en .
 # 
 # http://hit2gap.eu/h2g#DoorState
 <http://hit2gap.eu/h2g#DoorState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#DoorState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+<http://hit2gap.eu/h2g#DoorState> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding state of the Door (Open or Close)"@en .
+<http://hit2gap.eu/h2g#DoorState> <http://www.w3.org/2000/01/rdf-schema#label> "Door State"@en .
 # 
 # http://hit2gap.eu/h2g#Driver
 <http://hit2gap.eu/h2g#Driver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -739,28 +753,40 @@ _:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 # http://hit2gap.eu/h2g#WindowState
 <http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+<http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the state of the specific window (Open or Close)"@en .
+<http://hit2gap.eu/h2g#WindowState> <http://www.w3.org/2000/01/rdf-schema#label> "Window State"@en .
 # 
 # http://hit2gap.eu/h2g#WindowsClose
 <http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#WindowState> .
 <http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#WindowsOpen> .
+<http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding Window is close"@en .
+<http://hit2gap.eu/h2g#WindowsClose> <http://www.w3.org/2000/01/rdf-schema#label> "Windows Close"@en .
 # 
 # http://hit2gap.eu/h2g#WindowsOpen
 <http://hit2gap.eu/h2g#WindowsOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#WindowsOpen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#WindowState> .
+<http://hit2gap.eu/h2g#WindowsOpen> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines that the corresponding windows is open"@en .
+<http://hit2gap.eu/h2g#WindowsOpen> <http://www.w3.org/2000/01/rdf-schema#label> "Windows Open"@en .
 # 
 # http://hit2gap.eu/h2g#ZoneEmpty
 <http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ZoneOccupancy> .
 <http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/2002/07/owl#disjointWith> <http://hit2gap.eu/h2g#ZoneOccupied> .
+<http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the corrresponding building space have nobody inside (empty room)"@en .
+<http://hit2gap.eu/h2g#ZoneEmpty> <http://www.w3.org/2000/01/rdf-schema#label> "Zone Empty"@en .
 # 
 # http://hit2gap.eu/h2g#ZoneOccupancy
 <http://hit2gap.eu/h2g#ZoneOccupancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ZoneOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#BuildingSimpleState> .
+<http://hit2gap.eu/h2g#ZoneOccupancy> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the number of people that are in a specific building space. In an abstract way, it determines wether the building space is empty or occupied."@en .
+<http://hit2gap.eu/h2g#ZoneOccupancy> <http://www.w3.org/2000/01/rdf-schema#label> "Zone Occupancy"@en .
 # 
 # http://hit2gap.eu/h2g#ZoneOccupied
 <http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ZoneOccupancy> .
+<http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the corresponding building space have someone inside. Thus, the specific building space have one or more people inside."@en .
+<http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/2000/01/rdf-schema#label> "Zone Occupied"@en .
 # 
 # http://purl.oclc.org/NET/ssnx/ssn#Device
 <http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
