@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="Latest version of the user behaviour ontology documentation">
+    <list default="true" id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlModels/UserBehaviour.owl" afterPath="$PROJECT_DIR$/owlModels/UserBehaviour.owl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlModels/catalog-v001.xml" afterPath="$PROJECT_DIR$/owlModels/catalog-v001.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.nt" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.nt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/ontology.xml" afterPath="$PROJECT_DIR$/owlSpecificationDoc/ontology.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/description-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/description-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/sections/references-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/sections/references-en.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,8 +62,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="462">
-                <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="59" />
+              <first_editor relative-caret-position="756">
+                <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -202,10 +194,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-9" />
-    <option name="width" value="1864" />
-    <option name="height" value="1098" />
+    <option name="x" value="1731" />
+    <option name="y" value="61" />
+    <option name="width" value="1863" />
+    <option name="height" value="1091" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -781,14 +773,7 @@
       <workItem from="1498461208429" duration="10216000" />
       <workItem from="1498563323661" duration="3802000" />
       <workItem from="1499077798473" duration="16000" />
-      <workItem from="1499161519870" duration="610000" />
-    </task>
-    <task id="LOCAL-00007" summary="Specification of occupants and needs definition">
-      <created>1493138261005</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1493138261005</updated>
+      <workItem from="1499161519870" duration="1896000" />
     </task>
     <task id="LOCAL-00008" summary="Initial definition of the &quot;Building infrastructure semantic model&quot;">
       <created>1493217485549</created>
@@ -1126,14 +1111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1498569040764</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Updated version of the ontology documentation including classes description and detailed user behaviour model graph">
+      <created>1499162220613</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1499162220616</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106562000" />
+    <option name="totallyTimeSpent" value="107848000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-9" width="1864" height="1098" extended-state="6" />
+    <frame x="1731" y="61" width="1863" height="1091" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46455425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1148,10 +1140,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04064171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.040948275" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20917226" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20928931" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1202,7 +1194,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Definition of IfcDistributionElementState" />
     <MESSAGE value="Definition the feedback of Yudith/Richard" />
     <MESSAGE value="Update documentation part" />
     <MESSAGE value="Update HTML files" />
@@ -1227,7 +1218,8 @@
     <MESSAGE value="Incorporation in the documentation of drivers definition" />
     <MESSAGE value="Documentation of all the classes of the ontology" />
     <MESSAGE value="Latest version of the user behaviour ontology documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Latest version of the user behaviour ontology documentation" />
+    <MESSAGE value="Updated version of the ontology documentation including classes description and detailed user behaviour model graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated version of the ontology documentation including classes description and detailed user behaviour model graph" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1691,8 +1683,8 @@
     <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="462">
-            <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="59" />
+          <first_editor relative-caret-position="756">
+            <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor>
