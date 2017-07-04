@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/owlSpecificationDoc/img/h2geu_emblem.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/owlSpecificationDoc/img/Figura3.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" afterPath="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,12 +41,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index-en.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/index-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+            <state relative-caret-position="1491">
+              <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="777">
+                <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -54,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="805">
+              <first_editor relative-caret-position="714">
                 <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
                 <folding />
               </first_editor>
@@ -68,7 +84,7 @@
       <file leaf-file-name="description-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/sections/description-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="210">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="6" />
               <folding />
             </state>
@@ -97,7 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>BuildingAppliance</find>
       <find>IfcDistributionElement</find>
       <find>Capacity</find>
       <find>IfcSpatialStructureElement</find>
@@ -127,6 +142,7 @@
       <find>OccupantRole</find>
       <find>actions</find>
       <find>Status</find>
+      <find>Ontology Spe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,6 +225,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,7 +272,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -743,14 +759,8 @@
       <workItem from="1498461208429" duration="10216000" />
       <workItem from="1498563323661" duration="3802000" />
       <workItem from="1499077798473" duration="16000" />
-      <workItem from="1499161519870" duration="2926000" />
-    </task>
-    <task id="LOCAL-00011" summary="Buillding and Building Types definition">
-      <created>1493303417790</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1493303417790</updated>
+      <workItem from="1499161519870" duration="3076000" />
+      <workItem from="1499170973194" duration="13000" />
     </task>
     <task id="LOCAL-00012" summary="Building Infrastructure Types">
       <created>1493306199345</created>
@@ -1088,15 +1098,21 @@
       <option name="project" value="LOCAL" />
       <updated>1499166144683</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Finalising the documentation with the static parts">
+      <created>1499166646610</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1499166646610</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108878000" />
+    <option name="totallyTimeSpent" value="109041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1218" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46455425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1113,7 +1129,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.036018956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2008593" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20354457" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1164,7 +1180,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Stablish image quality to 300dpi" />
     <MESSAGE value="Update the models according to the Pierre document. Moreover, we have inclded a new version of the ssn being SensingDevice isA Device and SensingDevice isA Sensor" />
     <MESSAGE value="Update the models according to the Pierre document. Revision of the D4.1" />
     <MESSAGE value="OWL model referring the IfcOccupant of the Occupant Behaviour Model" />
@@ -1189,20 +1204,14 @@
     <MESSAGE value="Definition of the object properties" />
     <MESSAGE value="Definition of the documentation of the data properties" />
     <MESSAGE value="Generation of the documentation with corresponding classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generation of the documentation with corresponding classes" />
+    <MESSAGE value="Finalising the documentation with the static parts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalising the documentation with the static parts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/plantuml/OccupantBehaviour.plantuml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5418">
-          <caret line="258" column="1" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="258" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter_2/NeedsSpecification.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1623,7 +1632,7 @@
     <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="805">
+          <first_editor relative-caret-position="714">
             <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
             <folding />
           </first_editor>
@@ -1635,7 +1644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/sections/description-en.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="210">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
@@ -1648,9 +1657,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/index-en.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="1491">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="777">
+            <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
