@@ -51,10 +51,10 @@ class IfcEnergyConversionDevice <<ifc>> {
   hasSetPoint xsd:boolean
 }
 
-IfcElectricalFlowStorageDevice <<ifc4>>
-IfcElectricalFlowStorageDeviceType <<ifc>>
-IfcTank <<ifc4>>
-IfcTankType <<ifc>>
+class IfcElectricalFlowStorageDevice <<ifc4>>
+class IfcElectricalFlowStorageDeviceType <<ifc>>
+class IfcTank <<ifc4>>
+class IfcTankType <<ifc>>
 
 
 class ELBranch <<ontomg>>
