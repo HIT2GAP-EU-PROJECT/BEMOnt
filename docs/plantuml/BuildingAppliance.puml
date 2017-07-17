@@ -54,8 +54,6 @@ class IfcEnergyConversionDevice <<ifc>> {
   hasSetPoint xsd:boolean
 }
 
-class Microgrid <<ontomg>>
-
 class PhysicalMedium <<hit2gap>>
 class Oil <<hit2gap>>
 class Gas <<hit2gap>>
