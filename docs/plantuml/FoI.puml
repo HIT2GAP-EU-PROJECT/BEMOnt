@@ -41,10 +41,10 @@ class IfcSpatialZone <<h2gifc4>>
 class IfcFlowInstrument <<ifc4>>
 class IfcFlowInstrumentType <<ifc>>
 
-IfcElectricalFlowStorageDevice <<ifc4>>
-IfcElectricalFlowStorageDeviceType <<ifc>>
-IfcTank <<ifc4>>
-IfcTankType <<ifc>>
+class IfcElectricalFlowStorageDevice <<ifc4>>
+class IfcElectricalFlowStorageDeviceType <<ifc>>
+class IfcTank <<ifc4>>
+class IfcTankType <<ifc>>
 
 class IfcSensor <<ifc4>>
 class IfcSensorType <<ifc>>
