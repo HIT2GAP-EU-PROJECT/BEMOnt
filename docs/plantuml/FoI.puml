@@ -41,6 +41,11 @@ class IfcSpatialZone <<h2gifc4>>
 class IfcFlowInstrument <<ifc4>>
 class IfcFlowInstrumentType <<ifc>>
 
+IfcElectricalFlowStorageDevice <<ifc4>>
+IfcElectricalFlowStorageDeviceType <<ifc>>
+IfcTank <<ifc4>>
+IfcTankType <<ifc>>
+
 class IfcSensor <<ifc4>>
 class IfcSensorType <<ifc>>
 
@@ -239,12 +244,15 @@ StaticBuildingAppliance --> IfcZone: hit2gap:isLocatedIn
 Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
 IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
 StaticBuildingAppliance <|-- IfcFlowStorageDevice
+IfcFlowStorageDevice <|-- IfcElectricalFlowStorageDevice
+IfcFlowStorageDevice <|-- IfcTank
 StaticBuildingAppliance <|-- IfcFlowMovingDevice
 StaticBuildingAppliance <|-- IfcFlowController
 StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
 StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 Observation <|-- MobileBuildingApplianceLocationObservation
 MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
+
 
 BranchController <|-- IfcFlowController
 EnergyStorage <|-- IfcElectricalFlowStorageDevice
@@ -308,4 +316,6 @@ IfcFlowStorageDevice --> IfcFlowStorageDeviceType: owl:equivalentClass
 IfcActuator --> IfcActuatorType: owl:equivalentClass
 IfcAlarm --> IfcAlarmType: owl:equivalentClass
 IfcController --> IfcControllerType: owl:equivalentClass
+IfcElectricalFlowStorageDevice --> IfcElectricalFlowStorageDeviceType: owl:equivalentClass
+IfcTank --> IfcTankType: owl:equivalentClass
 @enduml
