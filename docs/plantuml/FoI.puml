@@ -84,6 +84,10 @@ class IfcAlarmType <<ifc>>
 class IfcController <<ifc4>>
 class IfcControllerType <<ifc>>
 
+class ELBranch <<ontomg>>
+class EnergyStorage <<ontomg>>
+class BranchController <<ontomg>>
+
 /'
   Building types class definition
 '/
@@ -242,13 +246,18 @@ StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 Observation <|-- MobileBuildingApplianceLocationObservation
 MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
 
+BranchController <|-- IfcFlowController
+EnergyStorage <|-- IfcElectricalFlowStorageDevice
+ELBranch <|-- IfcFlowMovingDevice
+ELBranch <|-- IfcEnergyConversionDevice
+
+
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
 
 Monitoring <|-- IfcSensor
 Monitoring <|-- IfcActuator
 Monitoring <|-- IfcAlarm
-Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
 IfcSpace <|-- Office
