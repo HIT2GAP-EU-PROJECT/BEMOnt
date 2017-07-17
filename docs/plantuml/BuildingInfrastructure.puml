@@ -283,6 +283,9 @@ class DERBranch <<ontomg>>
 class ELBranch <<ontomg>>
 class InfraBranch <<ontomg>>
 
+class EnergyStorage <<ontomg>>
+class BranchController <<ontomg>>
+
 class BranchSwitch <<ontomg>>
 class NonRenewableDERBranch <<ontomg>>
 class RenewableDERBranch <<ontomg>>
@@ -777,7 +780,6 @@ Wereable <|-- Smartphone
 Monitoring <|-- IfcSensor
 Monitoring <|-- IfcActuator
 Monitoring <|-- IfcAlarm
-Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
 IfcBuildingElement <|-- IfcBeam
@@ -867,13 +869,15 @@ Branch <|-- InfraBranch
 
 Branch --> BranchController: hit2gap:hasA
 
-IfcDistributionSystem<|-- IfcDistributionCircuit
-BranchController <--> IfcController: owl:equivalentClass
+IfcDistributionSystem <|-- IfcDistributionCircuit
+BranchController <|-- IfcFlowController
 ConductingEquipement <|-- BranchController
-InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
-DERBranch <--> IfcDistributionSystem: owl:equivalentClass
-ESBranch <--> IfcDistributionElement: owl:equivalentClass
-ELBranch <--> IfcDistributionElement: owl:equivalentClass
+InfraBranch <|-- IfcDistributionCircuit
+ESBranch <|-- IfcDistributionElement
+ELBranch <|-- IfcDistributionElement
+EnergyStorage <|-- IfcElectricalFlowStorageDevice
+ELBranch <|-- IfcFlowMovingDevice
+ELBranch <|-- IfcEnergyConversionDevice
 
 IfcSystem <|-- IfcDistributionElement
 
