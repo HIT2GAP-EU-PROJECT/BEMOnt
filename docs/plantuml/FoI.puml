@@ -128,6 +128,19 @@ class North_West <<(I,orchid),hit2gap>>
 class South_East <<(I,orchid),hit2gap>>
 class South_West <<(I,orchid),hit2gap>>
 
+
+/'
+  Definition of the types of Physical Medium
+'/
+
+class PhysicalMedium <<hit2gap>>
+class Oil <<hit2gap>>
+class Gas <<hit2gap>>
+class Water <<hit2gap>>
+class Air <<hit2gap>>
+class Steam <<hit2gap>>
+class Radiation <<hit2gap>>
+
 /'
   Definition of the types of FoIs
 '/
@@ -138,11 +151,6 @@ FeatureOfInterest <|-- IfcElement
 FeatureOfInterest <|-- Microgrid
 FeatureOfInterest <|-- IfcSpatialElement
 
-BuildingAppliance --> Microgrid: hit2gap:produceEnergy
-BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
-BuildingAppliance --> Microgrid: hit2gap:storageEnergy
-BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
-BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
 
 IfcSpatialStructureElement <|-- IfcBuilding
 IfcSpatialElement <|-- IfcSpatialStructureElement
@@ -271,6 +279,19 @@ IfcDistributionControlElement <|-- IfcProtectiveDeviceTrippingUnit
 IfcDistributionControlElement <|-- IfcSensor
 IfcDistributionControlElement <|-- IfcUnitaryControlElement
 
+PhysicalMedium <|-- Oil
+PhysicalMedium <|-- Gas
+PhysicalMedium <|-- Water
+PhysicalMedium <|-- Air
+PhysicalMedium <|-- Steam
+PhysicalMedium <|-- Radiation
+
+IfcFlowMovingDevice --> PhysicalMedium: hit2gap:transports
+IfcEnergyConversionDevice --> PhysicalMedium: hit2gap:consumes
+IfcEnergyConversionDevice --> PhysicalMedium: hit2gap:produces
+IfcFlowStorageDevice --> PhysicalMedium: hit2gap:stores
+IfcFlowController --> PhysicalMedium: hit2gap:controls
+IfcFlowTerminal --> PhysicalMedium: hit2gap:consumes
 
 IfcFlowInstrument --> IfcFlowInstrumentType: owl:equivalentClass
 IfcSensor --> IfcSensorType: owl:equivalentClass
