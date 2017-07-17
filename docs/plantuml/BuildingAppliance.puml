@@ -56,6 +56,14 @@ class IfcEnergyConversionDevice <<ifc>> {
 
 class Microgrid <<ontomg>>
 
+class PhysicalMedium <<hit2gap>>
+class Oil <<hit2gap>>
+class Gas <<hit2gap>>
+class Water <<hit2gap>>
+class Air <<hit2gap>>
+class Steam <<hit2gap>>
+class Radiation <<hit2gap>>
+
 BuildingAppliance <|-- StaticBuildingAppliance 
 BuildingAppliance <|-- MobileBuildingAppliance 
 
@@ -84,11 +92,19 @@ Monitoring <|-- IfcAlarm
 Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
-BuildingAppliance --> Microgrid: hit2gap:produceEnergy
-BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
-BuildingAppliance --> Microgrid: hit2gap:storageEnergy
-BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
-BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
+PhysicalMedium <|-- Oil
+PhysicalMedium <|-- Gas
+PhysicalMedium <|-- Water
+PhysicalMedium <|-- Air
+PhysicalMedium <|-- Steam
+PhysicalMedium <|-- Radiation
+
+IfcFlowMovingDevice --> PhysicalMedium: hit2gap:transports
+IfcEnergyConversionDevice --> PhysicalMedium: hit2gap:consumes
+IfcEnergyConversionDevice --> PhysicalMedium: hit2gap:produces
+IfcFlowStorageDevice --> PhysicalMedium: hit2gap:stores
+IfcFlowController --> PhysicalMedium: hit2gap:controls
+IfcFlowTerminal --> PhysicalMedium: hit2gap:consumes
 
 IfcActuator --> IfcActuatorType: owl:equivalentClass
 IfcAlarm --> IfcAlarmType: owl:equivalentClass
