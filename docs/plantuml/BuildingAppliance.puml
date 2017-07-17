@@ -36,9 +36,6 @@ class IfcActuatorType <<ifc>>
 class IfcAlarm <<ifc4>>
 class IfcAlarmType <<ifc>>
 
-class IfcController <<ifc4>>
-class IfcControllerType <<ifc>>
-
 
 class IfcSensor <<ifc4>>
 class IfcSensorType <<ifc>>
@@ -53,6 +50,17 @@ class IfcFlowTreatmentDevice <<ifc>>
 class IfcEnergyConversionDevice <<ifc>> {
   hasSetPoint xsd:boolean
 }
+
+IfcElectricalFlowStorageDevice <<ifc4>>
+IfcElectricalFlowStorageDeviceType <<ifc>>
+IfcTank <<ifc4>>
+IfcTankType <<ifc>>
+
+
+class ELBranch <<ontomg>>
+class EnergyStorage <<ontomg>>
+class BranchController <<ontomg>>
+
 
 class PhysicalMedium <<hit2gap>>
 class Oil <<hit2gap>>
@@ -73,13 +81,18 @@ BuildingAppliance --> BuildingAppliance: hit2gap:contains
 Monitoring --> BuildingAppliance: hit2gap:MeasureInputOutput
 IfcEnergyConversionDevice --> IfcZone: hit2gap:InputOutput
 StaticBuildingAppliance <|-- IfcFlowStorageDevice
+IfcFlowStorageDevice <|-- IfcElectricalFlowStorageDevice
+IfcFlowStorageDevice <|-- IfcTank
 StaticBuildingAppliance <|-- IfcFlowMovingDevice
 StaticBuildingAppliance <|-- IfcFlowController
 StaticBuildingAppliance <|-- IfcFlowTreatmentDevice
 StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 Observation <|-- MobileBuildingApplianceLocationObservation
 MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
-
+BranchController <|-- IfcFlowController
+EnergyStorage <|-- IfcElectricalFlowStorageDevice
+ELBranch <|-- IfcFlowMovingDevice
+ELBranch <|-- IfcEnergyConversionDevice
 
 Wereable <|-- Smartwatch
 Wereable <|-- Smartphone
@@ -87,7 +100,6 @@ Wereable <|-- Smartphone
 Monitoring <|-- IfcSensor
 Monitoring <|-- IfcActuator
 Monitoring <|-- IfcAlarm
-Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
 PhysicalMedium <|-- Oil
@@ -106,7 +118,9 @@ IfcFlowTerminal --> PhysicalMedium: hit2gap:consumes
 
 IfcActuator --> IfcActuatorType: owl:equivalentClass
 IfcAlarm --> IfcAlarmType: owl:equivalentClass
-IfcController --> IfcControllerType: owl:equivalentClass
 IfcSensor --> IfcSensorType: owl:equivalentClass
+IfcElectricalFlowStorageDevice --> IfcElectricalFlowStorageDeviceType: owl:equivalentClass
+IfcTank --> IfcTankType: owl:equivalentClass
+
 
 @enduml
