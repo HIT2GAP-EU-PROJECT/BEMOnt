@@ -23,11 +23,19 @@ class DERBranch <<ontomg>>
 class ELBranch <<ontomg>>
 class InfraBranch <<ontomg>>
 
+class EnergyStorage <<ontomg>>
+
 class BranchSwitch <<ontomg>>
 class NonRenewableDERBranch <<ontomg>>
 class RenewableDERBranch <<ontomg>>
 class SolarPowerBranch <<ontomg>>
-class WindPowerBranch <<ontomg>>
+class SmallWindPowerBranch <<ontomg>>
+class MicroturbinesBranch <<hit2gap>>
+class SolarHybridBranch <<hit2gap>>
+class WindHybridBranch <<hit2gap>>
+class PhotovoltaicBranch <<hit2gap>>
+
+
 class Converter <<ontomg>>
 class Inverter <<ontomg>>
 class AcDcConverter <<ontomg>>
@@ -49,15 +57,20 @@ class OilBranch <<hit2gap>>
 class GasBranch <<hit2gap>>
 class CoalBranch <<hit2gap>>
 class NuclearBranch <<hit2gap>>
+class MicroCHPPPowerBranch <<hit2gap>>
+class ReciprocatingBranch <<hit2gap>>
+class StirlingBranch <<hit2gap>>
 
 class IfcDistributionCircuit <<h2gifc4>>
 
 class IfcDistributionSystem <<h2gifc4>>
 class IfcSystem <<ifc>>
 class IfcDistributionElement <<ifc>>
-
-class IfcController <<ifc4>>
-class IfcControllerType <<ifc>>
+class IfcFlowController <<ifc>>
+class IfcElectricalFlowStorageDevice <<ifc4>>
+class IfcElectricalFlowStorageDeviceType <<ifc>>
+class IfcFlowMovingDevice <<ifc>>
+class IfcEnergyConversionDevice <<ifc>>
 
 class Property <<ssn>>
 class FeatureOfInterest <<ssn>>
@@ -65,8 +78,6 @@ class FeatureOfInterest <<ssn>>
 EconomicProperties <<hit2gap>>
 PhysicsProperties <<hit2gap>>
 class OccupantStateProperties <<hit2gap>>
-
-class BuildingAppliance <<hit2gap>>
 
 /'
     Incorporation of micro-grid description to the building
@@ -89,13 +100,15 @@ Branch <|-- InfraBranch
 
 Branch --> BranchController: hit2gap:hasA
 
-IfcDistributionSystem<|-- IfcDistributionCircuit
-BranchController <--> IfcController: owl:equivalentClass
+IfcDistributionSystem <|-- IfcDistributionCircuit
+BranchController <|-- IfcFlowController
 ConductingEquipement <|-- BranchController
-InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
-DERBranch <--> IfcDistributionSystem: owl:equivalentClass
-ESBranch <--> IfcDistributionElement: owl:equivalentClass
-ELBranch <--> IfcDistributionElement: owl:equivalentClass
+InfraBranch <|-- IfcDistributionCircuit
+ESBranch <|-- IfcDistributionElement
+ELBranch <|-- IfcDistributionElement
+EnergyStorage <|-- IfcElectricalFlowStorageDevice
+ELBranch <|-- IfcFlowMovingDevice
+ELBranch <|-- IfcEnergyConversionDevice
 
 IfcSystem <|-- IfcDistributionElement
 
@@ -104,19 +117,23 @@ DERBranch<|-- RenewableDERBranch
 DERBranch<|-- NonRenewableDERBranch
 
 RenewableDERBranch <|-- SolarPowerBranch
-RenewableDERBranch <|-- WindPowerBranch
+RenewableDERBranch <|-- SmallWindPowerBranch
 RenewableDERBranch <|-- HydroPowerBranch
 RenewableDERBranch <|-- GeoThermalBranch
 RenewableDERBranch <|-- BiomassBranch
+RenewableDERBranch <|-- MicroturbinesBranch
+RenewableDERBranch <|-- SolarHybridBranch
+RenewableDERBranch <|-- WindHybridBranch
+RenewableDERBranch <|-- PhotovoltaicBranch
 
 SolarPowerBranch--> SolarCell: ontomg:hasA
-WindPowerBranch --> WindTurbine: ontomg:hasA
+SmallWindPowerBranch --> WindTurbine: ontomg:hasA
 
 RegulatingCongEq <|-- WindTurbine
 RegulatingCongEq <|-- SolarCell
 
 SolarPowerBranch --> Converter: ontomg:hasA
-WindPowerBranch --> Converter: ontomg:hasA
+SmallWindPowerBranch --> Converter: ontomg:hasA
 
 RectifierInverter <|-- Converter
 Converter <|-- Inverter
@@ -132,16 +149,15 @@ NonRenewableDERBranch <|-- CoalBranch
 NonRenewableDERBranch <|-- NuclearBranch
 OilBranch <|-- FuelCellBranch
 NonRenewableDERBranch <|-- CHPPPowerBranch
+NonRenewableDERBranch <|-- MicroCHPPPowerBranch
+NonRenewableDERBranch <|-- ReciprocatingBranch
+NonRenewableDERBranch <|-- StirlingBranch
+
 
 FuelCellBranch --> Converter: ontomg:hasA
 FuelCellBranch --> DieselGenerator: ontomg:hasA
 
-BuildingAppliance --> Microgrid: hit2gap:produceEnergy
-BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
-BuildingAppliance --> Microgrid: hit2gap:storageEnergy
-BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
-BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
+IfcElectricalFlowStorageDevice --> IfcElectricalFlowStorageDeviceType: owl:equivalentClass
 
-IfcController --> IfcControllerType: owl:equivalentClass
 
 @enduml
