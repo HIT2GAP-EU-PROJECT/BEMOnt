@@ -70,6 +70,7 @@ class IfcDistributionElement <<ifc>>
 class IfcFlowController <<ifc>>
 class IfcElectricalFlowStorageDevice <<ifc4>>
 class IfcElectricalFlowStorageDeviceType <<ifc>>
+
 class IfcFlowMovingDevice <<ifc>>
 class IfcEnergyConversionDevice <<ifc>>
 
@@ -100,6 +101,7 @@ Branch <|-- ELBranch
 Branch <|-- InfraBranch
 
 Branch --> BranchController: hit2gap:hasA
+
 
 IfcDistributionSystem <|-- IfcDistributionCircuit
 BranchController <|-- IfcFlowController
