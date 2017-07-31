@@ -57,7 +57,7 @@ class IfcTankType <<ifc>>
 
 
 class ELBranch <<ontomg>>
-class EnergyStorage <<ontomg>>
+class ESBranch <<ontomg>>
 class BranchController <<ontomg>>
 
 
@@ -89,7 +89,7 @@ StaticBuildingAppliance <|-- IfcEnergyConversionDevice
 Observation <|-- MobileBuildingApplianceLocationObservation
 MobileBuildingAppliance --> MobileBuildingApplianceLocationObservation: hit2gap:wasLocated
 BranchController <|-- IfcFlowController
-EnergyStorage <|-- IfcElectricalFlowStorageDevice
+ESBranch <|-- IfcElectricalFlowStorageDevice
 ELBranch <|-- IfcFlowMovingDevice
 ELBranch <|-- IfcEnergyConversionDevice
 
