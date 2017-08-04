@@ -54,8 +54,7 @@ class IfcProtectiveDeviceTrippingUnit <<h2gifc4>>
 class IfcUnitaryControlElement <<h2gifc4>>
 class IfcFlowTerminal <<ifc>>
 
-class IfcFlowStorageDevice <<ifc4>>
-class IfcFlowStorageDeviceType <<ifc>>
+class IfcFlowStorageDevice <<ifc>>
 
 class IfcFlowTreatmentDevice <<ifc>>
 
@@ -312,7 +311,6 @@ IfcFlowTerminal --> PhysicalMedium: hit2gap:consumes
 
 IfcFlowInstrument --> IfcFlowInstrumentType: owl:equivalentClass
 IfcSensor --> IfcSensorType: owl:equivalentClass
-IfcFlowStorageDevice --> IfcFlowStorageDeviceType: owl:equivalentClass
 IfcActuator --> IfcActuatorType: owl:equivalentClass
 IfcAlarm --> IfcAlarmType: owl:equivalentClass
 IfcController --> IfcControllerType: owl:equivalentClass
