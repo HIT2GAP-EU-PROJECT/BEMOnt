@@ -104,9 +104,6 @@
         <DataProperty IRI="#&apos;external_ID&apos;"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Wereable"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#contains"/>
     </Declaration>
     <Declaration>
@@ -218,6 +215,9 @@
         <Class IRI="#StaticBuildingAppliance"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Wearable"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="ifc4:IfcAlarm"/>
     </Declaration>
     <Declaration>
@@ -268,6 +268,10 @@
         <Class abbreviatedIRI="ifc4:IfcTank"/>
         <Class abbreviatedIRI="ifc2:IfcTankType"/>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Wearable"/>
+        <Class IRI="#MobileBuildingAppliance"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Air"/>
         <Class IRI="#PhysicalMedium"/>
@@ -335,10 +339,6 @@
     <SubClassOf>
         <Class IRI="#Water"/>
         <Class IRI="#PhysicalMedium"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Wereable"/>
-        <Class IRI="#MobileBuildingAppliance"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#MobileBuildingApplianceLocationObservation"/>
@@ -496,11 +496,11 @@
         <Class abbreviatedIRI="ifc2:IfcFlowStorageDevice"/>
     </SubClassOf>
     <ClassAssertion>
-        <Class IRI="#Wereable"/>
+        <Class IRI="Wearable"/>
         <NamedIndividual IRI="#Smartphone"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Wereable"/>
+        <Class IRI="Wearable"/>
         <NamedIndividual IRI="#Smartwatch"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
@@ -519,6 +519,16 @@
         <DataProperty IRI="#hasSetPoint"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Wearable</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wearable is a building appliance representing a wereable device such as smartwatches and smartphones.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Wearable</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wearable</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Air</IRI>
@@ -641,16 +651,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Wereable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wearable is a building appliance representing a wereable device such as smartwatches and smartphones.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Wereable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wearable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#age</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data property to define the age of certain building occupant</Literal>
     </AnnotationAssertion>
@@ -687,7 +687,8 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents.
+An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
