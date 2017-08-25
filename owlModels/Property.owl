@@ -63,10 +63,16 @@
         <Class IRI="AirQuality"/>
     </Declaration>
     <Declaration>
+        <Class IRI="DistributionElementState"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="WarmDrySummerContinental"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DiscreteState"/>
     </Declaration>
     <Declaration>
         <Class IRI="WindOrientation"/>
@@ -75,10 +81,10 @@
         <Class IRI="Color"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Capacity"/>
+        <NamedIndividual IRI="DrySummerSubarctic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="DrySummerSubarctic"/>
+        <Class IRI="Capacity"/>
     </Declaration>
     <Declaration>
         <Class IRI="Pulse"/>
@@ -117,13 +123,13 @@
         <NamedIndividual IRI="HotSummerMediterranean"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedExtremelyColdSubarctic"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="LightRadiation"/>
     </Declaration>
     <Declaration>
         <Class IRI="Velocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MonsoonInfluencedExtremelyColdSubarctic"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="HumidSubtropical"/>
@@ -138,10 +144,10 @@
         <NamedIndividual IRI="Subartic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedWarmSummerHumidContinental"/>
+        <Class IRI="Conductivity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Conductivity"/>
+        <NamedIndividual IRI="MonsoonInfluencedWarmSummerHumidContinental"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="HotDesert"/>
@@ -174,10 +180,10 @@
         <Class IRI="Length"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PhysicalProperties"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="PhysicalProperties"/>
     </Declaration>
     <Declaration>
         <Class IRI="Latitude"/>
@@ -187,6 +193,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Radiation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSpaceCapacity"/>
     </Declaration>
     <Declaration>
         <Class IRI="Cost"/>
@@ -231,10 +240,10 @@
         <NamedIndividual IRI="FrostColdTundra"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedHotSummerHumidContinental"/>
+        <NamedIndividual IRI="SubpolarOceanic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="SubpolarOceanic"/>
+        <NamedIndividual IRI="MonsoonInfluencedHotSummerHumidContinental"/>
     </Declaration>
     <Declaration>
         <Class IRI="Depth"/>
@@ -294,10 +303,13 @@
         <Class IRI="Position"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="TropicalRainforest"/>
+        <Class IRI="SpaceCapacity"/>
     </Declaration>
     <Declaration>
         <Class IRI="Volume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="TropicalRainforest"/>
     </Declaration>
     <Declaration>
         <Class IRI="Longitude"/>
@@ -312,10 +324,10 @@
         <NamedIndividual IRI="CoolSummerMediterranean"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Tension"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Class IRI="Tension"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="ColdDesert"/>
@@ -334,6 +346,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="ReflectedIncidentradiation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ContinousState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Density"/>
@@ -415,6 +430,10 @@
         <Class IRI="Climate"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="ContinousState"/>
+        <Class IRI="DistributionElementState"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Cost"/>
         <Class IRI="EconomicProperties"/>
     </SubClassOf>
@@ -433,6 +452,14 @@
     <SubClassOf>
         <Class IRI="Discharge"/>
         <Class IRI="Volume"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DiscreteState"/>
+        <Class IRI="DistributionElementState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DistributionElementState"/>
+        <Class IRI="State"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="EconomicProperties"/>
@@ -541,6 +568,10 @@
     <SubClassOf>
         <Class IRI="Slope"/>
         <Class IRI="Shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SpaceCapacity"/>
+        <Class IRI="Capacity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Speed"/>
@@ -874,6 +905,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ContinousState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents an observation of a continuous state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Cost</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Costs captures the investment costs of the building.</Literal>
     </AnnotationAssertion>
@@ -921,6 +957,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Discharge</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Discharge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DiscreteState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents an observation of a discrete state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DistributionElementState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistributionElementState represents an observation of the  state of a distribution element in the building.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1191,6 +1237,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Slope</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Slope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SpaceCapacity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceCapacity represents an observation of the  measure of the capacity of the space  in the building.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SpaceCapacity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceCapacity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
