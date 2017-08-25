@@ -246,6 +246,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="DieselGenerator"/>
+        <Class IRI="NonRenewableDERBranch"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="ELBranch"/>
         <Class IRI="Branch"/>
     </SubClassOf>
