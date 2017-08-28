@@ -158,6 +158,16 @@
         <Class IRI="Observation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasObservationResultTime"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="time:DateTimeInterval"/>
+                <Class abbreviatedIRI="time:Instant"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ifc4:IfcSensor"/>
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
     </SubClassOf>
@@ -199,6 +209,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasObservationResultTime"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="time:DateTimeInterval"/>
+                <Class abbreviatedIRI="time:Instant"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="hasObservationResultTime"/>
             <Class abbreviatedIRI="time:DateTimeInterval"/>
@@ -237,6 +257,10 @@
         <Class IRI="Hemisphere"/>
         <NamedIndividual IRI="Southern"/>
     </ClassAssertion>
+    <DataPropertyRange>
+        <DataProperty IRI="&apos;external_ID&apos;"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit</IRI>
