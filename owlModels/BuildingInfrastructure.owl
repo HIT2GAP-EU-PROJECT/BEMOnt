@@ -41,13 +41,13 @@
         <NamedIndividual IRI="PowerPlant"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="MeasureInputOutput"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Public"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#ReciprocatingBranch"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="MeasureInputOutput"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcDamper"/>
@@ -68,10 +68,10 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricFlowStorageDevice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
+        <Class IRI="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/h2g/h2gBA#MobileBuildingAppliance"/>
@@ -95,16 +95,16 @@
         <NamedIndividual IRI="BarRestaurant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="HeatPump"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Industrial"/>
+        <Class IRI="HeatPump"/>
     </Declaration>
     <Declaration>
         <Class IRI="Canteen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Industrial"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTreatmentDevice"/>
@@ -158,13 +158,13 @@
         <ObjectProperty IRI="wasLocated"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowCoverings"/>
+        <Class IRI="Bathroom"/>
     </Declaration>
     <Declaration>
         <Class IRI="Commercial"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Bathroom"/>
+        <Class IRI="WindowCoverings"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#MicroturbinesBranch"/>
@@ -182,19 +182,19 @@
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARTHERMAL"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindow"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://hit2gap.eu/ontomg#hasBranch"/>
+        <NamedIndividual IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARTHERMAL"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2006/time#Instant"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasLampType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://hit2gap.eu/ontomg#hasBranch"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSanitaryTerminalType"/>
@@ -233,10 +233,10 @@
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.opengis/net/gml/Point"/>
+        <NamedIndividual IRI="Cellar"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Cellar"/>
+        <Class IRI="http://www.opengis/net/gml/Point"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
@@ -245,22 +245,22 @@
         <Class IRI="Subterranean"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDamperType"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Gym"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDamperType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="DataCenter"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTankType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Gym"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="South"/>
@@ -314,10 +314,10 @@
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAirToAirHeatRecoveryType"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRamp"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRamp"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAirToAirHeatRecoveryType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Administration"/>
@@ -341,19 +341,19 @@
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+        <Class IRI="http://www.opengis/net/gml/_Feature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.opengis/net/gml/_Feature"/>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCurtainWall"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Air"/>
+        <Class IRI="http://hit2gap.eu/ontomg#OilBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#OilBranch"/>
+        <Class IRI="Air"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#locatedInHemisphere"/>
@@ -371,10 +371,10 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcInterceptor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcStackTerminalType"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcVibrationIsolatorType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcVibrationIsolatorType"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcStackTerminalType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="LogisticPlatform"/>
@@ -383,13 +383,13 @@
         <Class IRI="http://hit2gap.eu/ontomg#CHPBranch"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="consumes"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="House"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="University"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="consumes"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity"/>
@@ -446,10 +446,10 @@
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Ground"/>
+        <NamedIndividual IRI="DeskLight"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="DeskLight"/>
+        <Class IRI="Ground"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Pharmacy"/>
@@ -458,19 +458,19 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSolarDevice"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Drugstore"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionFlowElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionFlowElement"/>
+        <NamedIndividual IRI="Drugstore"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/h2g/h2gProperty#ContinousState"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcColumn"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcColumn"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCoilType"/>
@@ -500,10 +500,10 @@
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <Class IRI="http://hit2gap.eu/ontomg#Branch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#Branch"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFanType"/>
@@ -524,13 +524,16 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricMotor"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://hit2gap.eu/h2g/h2gSensor#externalID"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcPumpType"/>
+        <Class IRI="PhysicalMedium"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PhysicalMedium"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcPumpType"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="OpenClose"/>
@@ -539,13 +542,13 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTransformer"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#DiscreteState"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#DiscreteState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Desk"/>
@@ -563,22 +566,22 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcValve"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCompressorType"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.opengis/net/gml/Polygon"/>
     </Declaration>
     <Declaration>
         <Class IRI="Residential"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCompressorType"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="ConventionCenter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Secondary"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Meter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Meter"/>
+        <NamedIndividual IRI="Secondary"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="West"/>
@@ -608,10 +611,10 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcHumidifier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCovering"/>
+        <ObjectProperty IRI="hasSpaceCapacity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSpaceCapacity"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCovering"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://hit2gap.eu/ontomg#hasA"/>
@@ -650,16 +653,16 @@
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCoolingTower"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Cafeteria"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Cinema"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ChilledBeams"/>
+        <Class IRI="Cafeteria"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#GasBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ChilledBeams"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCondenser"/>
@@ -686,10 +689,10 @@
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowMovingDevice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <Class IRI="http://hit2gap.eu/ontomg#TriphasicInverter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#TriphasicInverter"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
     </Declaration>
     <Declaration>
         <Class IRI="Blinds"/>
@@ -713,10 +716,10 @@
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#Inverter"/>
+        <NamedIndividual IRI="CentralLight"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="CentralLight"/>
+        <Class IRI="http://hit2gap.eu/ontomg#Inverter"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcFan"/>
@@ -749,10 +752,10 @@
         <Class IRI="http://hit2gap.eu/ontomg#StirlingBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRampFlight"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRampFlight"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Nursery"/>
@@ -806,10 +809,10 @@
         <Class IRI="ElectricHeater"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.georss.org/georss/where"/>
+        <Class IRI="http://hit2gap.eu/ontomg#NuclearBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#NuclearBranch"/>
+        <ObjectProperty IRI="http://www.georss.org/georss/where"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARPANEL"/>
@@ -869,16 +872,16 @@
         <Class IRI="http://www.opengis/net/gml/_Geometry"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDoor"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcUnitaryControlElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEvaporatorType"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDoor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="NightClubConcert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEvaporatorType"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#SolarPowerBranch"/>
@@ -893,16 +896,16 @@
         <ObjectProperty IRI="hasState"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcLampType"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcChiller"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcLampType"/>
     </Declaration>
     <Declaration>
         <Class IRI="RestRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
@@ -917,43 +920,43 @@
         <NamedIndividual IRI="Office"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="controls"/>
+        <Class IRI="Room"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Room"/>
+        <ObjectProperty IRI="controls"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="transports"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Balcony"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAirToAirHeatRecover"/>
     </Declaration>
     <Declaration>
-        <Class IRI="FanCoilUnit"/>
+        <Class IRI="Balcony"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Warehouse"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#SmallWindPowerBranch"/>
+        <Class IRI="FanCoilUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcWasteTerminal"/>
+        <Class IRI="http://hit2gap.eu/ontomg#SmallWindPowerBranch"/>
     </Declaration>
     <Declaration>
         <Class IRI="Educational"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcWasteTerminal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#RegulatingCondEq"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
+        <Class IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSanitaryTerminal"/>
@@ -962,10 +965,10 @@
         <NamedIndividual IRI="Hospital"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTransformerType"/>
+        <NamedIndividual IRI="Metro"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Metro"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTransformerType"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#CIMRectifierInverter"/>
@@ -995,10 +998,10 @@
         <DataProperty IRI="http://www.w3.org/2006/time#inXSDDateTime"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <Class IRI="http://www.opengis/net/gml/Envelope"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.opengis/net/gml/Envelope"/>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#GeoThermalBranch"/>
@@ -1451,6 +1454,16 @@
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+                <Class IRI="http://www.w3.org/2006/time#Instant"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
             <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
         </ObjectSomeValuesFrom>
@@ -1482,6 +1495,13 @@
             <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
             <Class IRI="http://www.w3.org/ns/sosa/Result"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://hit2gap.eu/h2g/h2gSensor#externalID"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/ontomg#AcDcConverter"/>
@@ -2758,6 +2778,10 @@
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
     </SubObjectPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="http://hit2gap.eu/h2g/h2gSensor#externalID"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit</IRI>
@@ -2864,6 +2888,11 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gProperty#Streess</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A feature is an abstraction of real world phenomena (thing, person, event, etc).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest</Literal>
@@ -2879,14 +2908,39 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Northerm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Observation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://hit2gap.eu/h2g/h2gSensor#Southerm</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Southerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#externalID</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data proeprty to define the external ID regaring the time series stored in Mondas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#externalID</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#externalID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#externalID</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">externalID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -3339,6 +3393,11 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARTHERMAL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcActuatorType is defined in IFC2X3. We made it equivalent to IfcActuator defined in IFC4.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAirToAirHeatRecoveryType</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAirToAirHeatRecoveryType</Literal>
@@ -3357,6 +3416,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBoilerType</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBoilerType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -3437,6 +3501,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement</IRI>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcDistributionControlElement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3604,9 +3678,19 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSanitaryTerminalType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcSensorType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -3764,9 +3848,19 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/Result</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
