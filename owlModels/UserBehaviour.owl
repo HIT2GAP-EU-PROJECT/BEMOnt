@@ -15,8 +15,9 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
-    <Prefix name="qudt" IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"/>
+    <Prefix name="qudt" IRI="http://data.nasa.gov/qudt/owl/qudt#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Prefix name="schema" IRI="http://schema.org/"/>
@@ -57,13 +58,13 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states.</Literal>
     </Annotation>
     <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcActuator"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Phone"/>
     </Declaration>
     <Declaration>
         <Class IRI="TimeBehaviour"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://hit2gap.eu/h2g/h2gSensor#externalID"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Male"/>
@@ -72,16 +73,19 @@
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="VisualComfort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/ActuableProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="provokes"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="associatedTo"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssn:Sensor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasComfortRequirements"/>
@@ -114,9 +118,6 @@
         <AnnotationProperty abbreviatedIRI="schema:license"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:Device"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Feedback"/>
     </Declaration>
     <Declaration>
@@ -129,16 +130,13 @@
         <Class IRI="BlindOpen"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="externalID"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="BlindState"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Email"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:Property"/>
+        <NamedIndividual IRI="Email"/>
     </Declaration>
     <Declaration>
         <Class IRI="Role"/>
@@ -156,6 +154,9 @@
         <Class IRI="Needs"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="maxValue"/>
     </Declaration>
     <Declaration>
@@ -168,16 +169,7 @@
         <NamedIndividual IRI="Winter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="ssn:hasValue"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssn:SensingDevice"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="OccupantAttitude"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssn:System"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="receivesAlerts"/>
@@ -222,6 +214,9 @@
         <Class IRI="EnergyState"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
     </Declaration>
     <Declaration>
@@ -229,6 +224,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="SystemActions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Manager"/>
@@ -249,7 +250,13 @@
         <Class abbreviatedIRI="time:Instant"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasOccupantAttitude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
     </Declaration>
     <Declaration>
         <Class IRI="BlindClose"/>
@@ -264,6 +271,9 @@
         <ObjectProperty IRI="concerns"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="time:DateTimeInterval"/>
     </Declaration>
     <Declaration>
@@ -271,9 +281,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="OccupantComfort"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssn:Observation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasBehaviour"/>
@@ -288,6 +295,12 @@
         <Class IRI="ZoneOccupancy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasConstraints"/>
     </Declaration>
     <Declaration>
@@ -300,13 +313,13 @@
         <Class IRI="Probability"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="lifestyle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcSensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="Indoor"/>
@@ -318,13 +331,22 @@
         <Class IRI="Season"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="Summer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isStatedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcActuatorType"/>
     </Declaration>
     <Declaration>
         <Class IRI="IAQ"/>
@@ -345,19 +367,34 @@
         <Class IRI="Privacy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:unit"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:observationResultTime"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasIndicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ObservableProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="prefers"/>
     </Declaration>
     <Declaration>
         <Class IRI="EnvironmentalBuildingFactors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
     </Declaration>
     <Declaration>
         <Class IRI="BehaviourModel"/>
@@ -369,7 +406,16 @@
         <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="minValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/isPropertyOf"/>
     </Declaration>
     <Declaration>
         <Class IRI="EnergyFrugal"/>
@@ -378,7 +424,13 @@
         <AnnotationProperty abbreviatedIRI="dc:description"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="jobType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
     </Declaration>
     <Declaration>
         <Class IRI="ISOAdaptiveComfort"/>
@@ -396,31 +448,28 @@
         <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="assignedTo"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Technician"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasModelResult"/>
+        <ObjectProperty IRI="assignedTo"/>
     </Declaration>
     <Declaration>
         <Class IRI="Driver"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DoorClose"/>
+        <ObjectProperty IRI="hasModelResult"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssn:SensorOutput"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DoorClose"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="receives"/>
     </Declaration>
     <Declaration>
         <Class IRI="ZoneOccupied"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:unit"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="age"/>
@@ -436,6 +485,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="id"/>
@@ -459,6 +511,15 @@
         <Class IRI="Alert"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="numericValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="resultTime"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Function"/>
     </Declaration>
     <Declaration>
@@ -468,10 +529,10 @@
         <DataProperty IRI="name"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:Unit"/>
+        <Class abbreviatedIRI="time:DayOfWeek"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="time:DayOfWeek"/>
+        <Class abbreviatedIRI="ifc2:IfcSensorType"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
@@ -495,9 +556,6 @@
         <ObjectProperty IRI="hasOccupantCharacteristics"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ObservationValue"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="EnergyProfligate"/>
     </Declaration>
     <Declaration>
@@ -510,15 +568,56 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="qudt:Unit"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Recommendation"/>
     </Declaration>
     <Declaration>
         <Class IRI="Event"/>
     </Declaration>
     <EquivalentClasses>
-        <Class abbreviatedIRI="ssn:Sensor"/>
-        <Class abbreviatedIRI="ifc2:IfcSensor"/>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
+        <Class abbreviatedIRI="ifc2:IfcActuatorType"/>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
+        <Class abbreviatedIRI="ifc2:IfcSensorType"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ifc2:IfcActor"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="qudt:unit"/>
+            <Class abbreviatedIRI="qudt:Unit"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="qudt:unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="numericValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="numericValue"/>
+        </DataExactCardinality>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="ASHRAEAdaptiveComfort"/>
         <Class IRI="ThermalComfort"/>
@@ -533,10 +632,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Actions"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="changes"/>
-            <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ActivityModel"/>
@@ -588,8 +684,8 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="isStatedBy"/>
             <ObjectUnionOf>
-                <Class abbreviatedIRI="ssn:System"/>
                 <Class abbreviatedIRI="ifc2:IfcBuilding"/>
+                <Class IRI="http://www.w3.org/ns/ssn/System"/>
             </ObjectUnionOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -629,7 +725,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Driver"/>
-        <Class abbreviatedIRI="ssn:Observation"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Driver"/>
@@ -684,7 +780,7 @@
         <ObjectUnionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="associatedTo"/>
-                <Class abbreviatedIRI="ssn:SensorOutput"/>
+                <Class IRI="http://www.w3.org/ns/sosa/Result"/>
             </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="hasConstraints"/>
@@ -728,11 +824,8 @@
         <Class IRI="Actions"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="ObservationValue"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="qudt:unit"/>
-            <Class abbreviatedIRI="qudt:Unit"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="ObservableProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OccupantBehaviour"/>
@@ -823,15 +916,15 @@
     <SubClassOf>
         <Class IRI="SystemActions"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="acts"/>
-            <Class abbreviatedIRI="ifc2:IfcActuator"/>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+            <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SystemActions"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="changes"/>
-            <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+            <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -892,39 +985,58 @@
         <Class IRI="ZoneOccupancy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="ssn:Device"/>
-        <Class abbreviatedIRI="ssn:System"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="ssn:Observation"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="ssn:observationResultTime"/>
-            <ObjectUnionOf>
-                <Class abbreviatedIRI="time:DateTimeInterval"/>
-                <Class abbreviatedIRI="time:Instant"/>
-            </ObjectUnionOf>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="ssn:Observation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="externalID"/>
-            <Datatype abbreviatedIRI="xsd:anyURI"/>
-        </DataAllValuesFrom>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="ssn:SensingDevice"/>
-        <Class abbreviatedIRI="ssn:Device"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="ssn:SensingDevice"/>
-        <Class abbreviatedIRI="ssn:Sensor"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+            <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="resultTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="ifc2:IfcActor"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="acts"/>
-            <Class abbreviatedIRI="ifc2:IfcActuator"/>
+            <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -956,8 +1068,16 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcActuatorType"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
-        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
@@ -1009,6 +1129,119 @@
     <SubClassOf>
         <Class abbreviatedIRI="time:Instant"/>
         <Class IRI="TimeBehaviour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/ActuableProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+            <Class IRI="http://www.w3.org/ns/sosa/ActuableProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="resultTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/isPropertyOf"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+            <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <ObjectAllValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+            </ObjectInverseOf>
+            <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+            <ObjectUnionOf>
+                <Class IRI="Feedback"/>
+                <Class IRI="OccupantBehaviour"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="ActivityModel"/>
@@ -1112,6 +1345,22 @@
         <ObjectProperty IRI="isProvokedBy"/>
         <ObjectProperty IRI="provokes"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasOccupantAttitude"/>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
@@ -1169,10 +1418,6 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="externalID"/>
-        <Datatype abbreviatedIRI="xsd:anyURI"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="id"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -1197,9 +1442,27 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="numericValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="startWorktime"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://hit2gap.eu/h2g/h2gSensor#externalID"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>qudt:QuantityValue</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck&apos;s constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>qudt:QuantityValue</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quantity value</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>qudt:Unit</AbbreviatedIRI>
@@ -1217,6 +1480,11 @@ Q = nU</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>qudt:unit</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1626,13 +1894,18 @@ Q = nU</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ObservationValue</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature.</Literal>
+        <IRI>ObservableProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An observable quality (property, characteristic) of a FeatureOfInterest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ObservableProperty</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ObservationValue</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation Value</Literal>
+        <IRI>ObservableProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observable Property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1966,16 +2239,6 @@ Q = nU</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>externalID</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data proeprty to define the external ID regaring the time series stored in Mondas</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>externalID</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">external ID</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasBehaviour</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">relation focused on indicating that certain user have defined certain behaviour</Literal>
     </AnnotationAssertion>
@@ -2191,6 +2454,11 @@ Q = nU</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>numericValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">numeric value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>performsAction</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">perform action</Literal>
     </AnnotationAssertion>
@@ -2231,6 +2499,21 @@ Q = nU</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>resultTime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>resultTime</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>resultTime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">result time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>startWorktime</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">property to define the date time of start of wrok</Literal>
     </AnnotationAssertion>
@@ -2241,98 +2524,78 @@ Q = nU</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:Device</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:Device</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Device</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:FeatureOfInterest</AbbreviatedIRI>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A feature is an abstraction of real world phenomena (thing, person, event, etc).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:FeatureOfInterest</AbbreviatedIRI>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Feature of Interest</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <AbbreviatedIRI>ssn:FeatureOfInterest</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:Observation</AbbreviatedIRI>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:Observation</AbbreviatedIRI>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Observation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:Property</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL&apos;s Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor.</Literal>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#externalID</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data proeprty to define the external ID regaring the time series stored in Mondas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#externalID</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#externalID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:Property</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Property</Literal>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#externalID</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">externalID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:SensingDevice</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A sensing device is a device that implements sensing.</Literal>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:SensingDevice</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://purl.oclc.org/NET/ssnx/ssn#SensingDevice</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator</IRI>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:SensingDevice</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensing Device</Literal>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcActuator</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property.</Literal>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://purl.oclc.org/NET/ssnx/ssn</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:SensorOutput</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:SensorOutput</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensor Output</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:System</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:System</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System</Literal>
+        <IRI>http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcSensor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2343,11 +2606,6 @@ Q = nU</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>ssn:hasSubsystem</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has subsystem</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:hasValue</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2380,24 +2638,39 @@ Q = nU</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ifc2:IfcActor</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>ifc2:IfcActor</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcActor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ifc2:IfcActuator</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</Literal>
+        <AbbreviatedIRI>ifc2:IfcActuatorType</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcActuatorType is defined in IFC2X3. We made it equivalent to IfcActuator defined in IFC4.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ifc2:IfcActuatorType</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ifc2:IfcActuator</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcActuator</Literal>
+        <AbbreviatedIRI>ifc2:IfcActuatorType</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcActuatorType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>ifc2:IfcBuilding</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ifc2:IfcBuilding</AbbreviatedIRI>
+        <AbbreviatedIRI>ifc2:IfcBuilding</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2410,6 +2683,11 @@ Q = nU</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ifc2:IfcDistributionControlElement</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>ifc2:IfcDistributionControlElement</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcDistributionControlElement</Literal>
@@ -2420,19 +2698,24 @@ Q = nU</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcOccupant is a type of actor that defines the form of occupancy of a property.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ifc2:IfcOccupant</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>ifc2:IfcOccupant</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcOccupant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ifc2:IfcSensor</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</Literal>
+        <AbbreviatedIRI>ifc2:IfcSensorType</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ifc2:IfcSensor</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcSensor</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ifc2:IfcSensorType</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2467,12 +2750,334 @@ Q = nU</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>time:Instant</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A temporal entity with zero extent or duration</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A temporal entity with zero extent or duration.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>time:Instant</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Instant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/ActuableProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An actuatable quality (property, characteristic) of a FeatureOfInterest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/ActuableProperty</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/ActuableProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuable Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/Actuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/Actuation</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/Actuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/Actuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/Actuator</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/Actuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/Result</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/Result</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/Result</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/Result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/Result</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/actsOnProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/actsOnProperty</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/actsOnProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">acts on property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/hasFeatureOfInterest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/hasFeatureOfInterest</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/hasFeatureOfInterest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has feature of interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/hasResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/hasResult</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/hasResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/isActedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/isActedBy</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/isActedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is acted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/isResultOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/isResultOf</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/isResultOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is result of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/madeActuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an Actuator and the Actuation it has made.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/madeActuation</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/madeActuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">made actuation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/madeByActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation linking an Actuation to the Actuator that made that Actuation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/madeByActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/madeByActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">made by actuator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/madeBySensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an Observation and the Sensor which made the Observation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/madeBySensor</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/madeBySensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/madeBySensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/madeBySensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">made by Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/madeObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a Sensor and an Observation made by the Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/madeObservation</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/madeObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">made by observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/observedProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/observedProperty</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/observedProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/observedProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/ssn/Property</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.
+
+An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL&apos;s Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/Property</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/ssn/Property</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/ssn/System</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/System</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/ssn/System</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation between some aspect of an entity and a Property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/ssn/hasSubSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a System and its component parts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/hasSubSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/hasSubSystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/ssn/hasSubSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSubSystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/isPropertyOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/isPropertyOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://xmlns.com/foaf/0.1/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Person</Literal>
     </AnnotationAssertion>
 </Ontology>
 
