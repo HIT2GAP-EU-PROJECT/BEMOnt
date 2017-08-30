@@ -59,10 +59,14 @@
 # #################################################################
 # 
 # 
-# http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
+# http://data.nasa.gov/qudt/owl/qudt#unit
+<http://data.nasa.gov/qudt/owl/qudt#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.nasa.gov/qudt/owl/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://data.nasa.gov/qudt/owl/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
+# 
+# http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"@en .
 # 
 # http://hit2gap.eu/h2g#acts
 <http://hit2gap.eu/h2g#acts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -218,10 +222,6 @@
 <http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Haspart relation between a system and its parts."@en .
 <http://purl.oclc.org/NET/ssnx/ssn#hasSubsystem> <http://www.w3.org/2000/01/rdf-schema#label> "has subsystem"@en .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#hasValue
-<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
-# 
 # http://purl.oclc.org/NET/ssnx/ssn#observationResult
 <http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property."@en .
@@ -235,6 +235,87 @@
 # http://purl.oclc.org/NET/ssnx/ssn#observedBy
 <http://purl.oclc.org/NET/ssnx/ssn#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.oclc.org/NET/ssnx/ssn#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "observed by"@en .
+# 
+# http://www.w3.org/ns/sosa/actsOnProperty
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isActedBy> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#label> "acts on property"@en .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
+# 
+# http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isResultOf> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+# 
+# http://www.w3.org/ns/sosa/isActedBy
+<http://www.w3.org/ns/sosa/isActedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isActedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."@en .
+<http://www.w3.org/ns/sosa/isActedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isActedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is acted by"@en .
+# 
+# http://www.w3.org/ns/sosa/isResultOf
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."@en .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#label> "is result of"@en .
+# 
+# http://www.w3.org/ns/sosa/madeActuation
+<http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/madeByActuator> .
+<http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Actuator and the Actuation it has made."@en .
+<http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/2000/01/rdf-schema#label> "made actuation"@en .
+# 
+# http://www.w3.org/ns/sosa/madeByActuator
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Actuation to the Actuator that made that Actuation."@en .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/"@en .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#label> "made by actuator"@en .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/madeObservation> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Sensor which made the Observation."@en .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/madeBySensor"@en .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by Sensor"@en .
+# 
+# http://www.w3.org/ns/sosa/madeObservation
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor and an Observation made by the Sensor"@en .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#label> "made by observation"@en .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/observedProperty"@en .
+# 
+# http://www.w3.org/ns/ssn/forProperty
+<http://www.w3.org/ns/ssn/forProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/forProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between some aspect of an entity and a Property."@en .
+<http://www.w3.org/ns/ssn/forProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/ssn/"@en .
+<http://www.w3.org/ns/ssn/forProperty> <http://www.w3.org/2000/01/rdf-schema#label> "for property"@en .
+# 
+# http://www.w3.org/ns/ssn/hasSubSystem
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a System and its component parts."@en .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/ssn/hasSubSystem"@en .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#label> "hasSubSystem"@en .
+# 
+# http://www.w3.org/ns/ssn/isPropertyOf
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/ssn/isPropertyOf"@en .
 # 
 # 
 # 
@@ -256,12 +337,6 @@
 <http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#comment> "proeprty to define the date time of end of wrok"@en .
 <http://hit2gap.eu/h2g#endWorktime> <http://www.w3.org/2000/01/rdf-schema#label> "end of work time"@en .
-# 
-# http://hit2gap.eu/h2g#externalID
-<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proeprty to define the external ID regaring the time series stored in Mondas"@en .
-<http://hit2gap.eu/h2g#externalID> <http://www.w3.org/2000/01/rdf-schema#label> "external ID"@en .
 # 
 # http://hit2gap.eu/h2g#id
 <http://hit2gap.eu/h2g#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -300,12 +375,30 @@
 <http://hit2gap.eu/h2g#name> <http://www.w3.org/2000/01/rdf-schema#comment> "name of the instances (text field)"@en .
 <http://hit2gap.eu/h2g#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
+# http://hit2gap.eu/h2g#numericValue
+<http://hit2gap.eu/h2g#numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#numericValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://hit2gap.eu/h2g#numericValue> <http://www.w3.org/2000/01/rdf-schema#label> "numeric value"@en .
+# 
+# http://hit2gap.eu/h2g#resultTime
+<http://hit2gap.eu/h2g#resultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g#resultTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed." .
+<http://hit2gap.eu/h2g#resultTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://hit2gap.eu/h2g#resultTime> <http://www.w3.org/2000/01/rdf-schema#label> "result time" .
+# 
 # http://hit2gap.eu/h2g#startWorktime
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#comment> "property to define the date time of start of wrok"@en .
 <http://hit2gap.eu/h2g#startWorktime> <http://www.w3.org/2000/01/rdf-schema#label> "start of work time"@en .
+# 
+# http://hit2gap.eu/h2g/h2gSensor#externalID
+<http://hit2gap.eu/h2g/h2gSensor#externalID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://hit2gap.eu/h2g/h2gSensor#externalID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://hit2gap.eu/h2g/h2gSensor#externalID> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proeprty to define the external ID regaring the time series stored in Mondas"@en .
+<http://hit2gap.eu/h2g/h2gSensor#externalID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://hit2gap.eu/h2g/h2gSensor#externalID"@en .
+<http://hit2gap.eu/h2g/h2gSensor#externalID> <http://www.w3.org/2000/01/rdf-schema#label> "externalID"@en .
 # 
 # 
 # 
@@ -316,10 +409,31 @@
 # #################################################################
 # 
 # 
-# http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.\n\nMore formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U:\nQ = nU"@en .
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
+# http://data.nasa.gov/qudt/owl/qudt#QuantityValue
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://data.nasa.gov/qudt/owl/qudt#unit> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://data.nasa.gov/qudt/owl/qudt#Unit> .
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://data.nasa.gov/qudt/owl/qudt#unit> .
+_:genid2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#numericValue> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#numericValue> .
+_:genid4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck's constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27."@en .
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity value"@en .
+# 
+# http://data.nasa.gov/qudt/owl/qudt#Unit
+<http://data.nasa.gov/qudt/owl/qudt#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.nasa.gov/qudt/owl/qudt#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.\n\nMore formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U:\nQ = nU"@en .
+<http://data.nasa.gov/qudt/owl/qudt#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
 # 
 # http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort
 <http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -341,10 +455,7 @@
 # 
 # http://hit2gap.eu/h2g#Actions
 <http://hit2gap.eu/h2g#Actions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#changes> .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> .
+<http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuation> .
 <http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions are the specific building interactions performed by the building occupants. This actions can be caused by an initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements."@en .
 <http://hit2gap.eu/h2g#Actions> <http://www.w3.org/2000/01/rdf-schema#label> "Actions"@en .
 # 
@@ -363,21 +474,21 @@ _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmar
 # http://hit2gap.eu/h2g#BehaviourModel
 <http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
-<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid2 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
-_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#OccupantBehaviour> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#TimeBehaviour> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#OccupantBehaviour> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#TimeBehaviour> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#comment> "As variables that serve to measure the habits and activities inside the building. Defined to register and contextualise the occupant events (building interactions with the different systems)."@en .
 <http://hit2gap.eu/h2g#BehaviourModel> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural Model"@en .
 # 
@@ -414,18 +525,18 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://hit2gap.eu/h2g#BuildingState
 <http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isStatedBy> .
-_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.oclc.org/NET/ssnx/ssn#System> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isStatedBy> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/ssn/System> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#comment> "The building state allows to conextualise and determine the building facilities status. This building state determinaton has been divided into simple building states and complex building states."@en .
 <http://hit2gap.eu/h2g#BuildingState> <http://www.w3.org/2000/01/rdf-schema#label> "Building State"@en .
 # 
@@ -444,18 +555,18 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://hit2gap.eu/h2g#Context
 <http://hit2gap.eu/h2g#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Event> .
-<http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isAssignedTo> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Indoor> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Outdoor> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isAssignedTo> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Indoor> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Outdoor> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#comment> "Context in which applies the action"@en .
 <http://hit2gap.eu/h2g#Context> <http://www.w3.org/2000/01/rdf-schema#label> "Context"@en .
 # 
@@ -480,34 +591,34 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://hit2gap.eu/h2g#Driver
 <http://hit2gap.eu/h2g#Driver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Observation> .
-<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasFunction> .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Function> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasIndicator> .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Indicator> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasModelResult> .
-_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#ModelResult> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasStatus> .
-_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Status> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g/h2gSensor#Observation> .
+<http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasFunction> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Function> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasIndicator> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Indicator> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasModelResult> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#ModelResult> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasStatus> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Status> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#comment> "Drivers represent the environmental factors from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need"@en .
 <http://hit2gap.eu/h2g#Driver> <http://www.w3.org/2000/01/rdf-schema#label> "Driver"@en .
 # 
@@ -543,52 +654,52 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://hit2gap.eu/h2g#EquipementModel
 <http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
-<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> .
+<http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#EnvironmentalBuildingFactors> .
 <http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class for measuring the building features and the environmental factors including indoor and outdoor parameters."@en .
 <http://hit2gap.eu/h2g#EquipementModel> <http://www.w3.org/2000/01/rdf-schema#label> "Equipement Model"@en .
 # 
 # http://hit2gap.eu/h2g#Event
 <http://hit2gap.eu/h2g#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://hit2gap.eu/h2g#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#associatedTo> .
-_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasConstraints> .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Constraints> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasContext> .
-_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Context> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasProbability> .
-_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Probability> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://hit2gap.eu/h2g#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#associatedTo> .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/sosa/Result> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasConstraints> .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Constraints> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasContext> .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Context> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasProbability> .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Probability> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://hit2gap.eu/h2g#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Circumstances that may be driving occupant actions such as waking up, sleeping, leaving for work or returning from lunch"@en .
 <http://hit2gap.eu/h2g#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
 # 
 # http://hit2gap.eu/h2g#EventModel
 <http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Driver> .
-<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
-_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Event> .
+<http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isBasedOn> .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Event> .
 <http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined to register the events that can be detected from the sensor readings."@en .
 <http://hit2gap.eu/h2g#EventModel> <http://www.w3.org/2000/01/rdf-schema#label> "Event Model"@en .
 # 
@@ -656,14 +767,12 @@ _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 <http://hit2gap.eu/h2g#Notification> <http://www.w3.org/2000/01/rdf-schema#comment> "The Notification refers to the mechanims to provide highlighted information to the building users."@en .
 <http://hit2gap.eu/h2g#Notification> <http://www.w3.org/2000/01/rdf-schema#label> "Notification"@en .
 # 
-# http://hit2gap.eu/h2g#ObservationValue
-<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> .
-_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> .
-<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature."@en .
-<http://hit2gap.eu/h2g#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#label> "Observation Value"@en .
+# http://hit2gap.eu/h2g#ObservableProperty
+<http://hit2gap.eu/h2g#ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g#ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://hit2gap.eu/h2g#ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://hit2gap.eu/h2g#ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://hit2gap.eu/h2g#ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable Property"@en .
 # 
 # http://hit2gap.eu/h2g#OccupantAttitude
 <http://hit2gap.eu/h2g#OccupantAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -678,14 +787,14 @@ _:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://data.qudt.org/q
 # 
 # http://hit2gap.eu/h2g#OccupantCharacteristics
 <http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#endWorktime> .
-_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#startWorktime> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#endWorktime> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#startWorktime> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "The occupant characteristics refers to the daily or most common activities that building occupants performs inside the building (e.g start or end work)"@en .
 <http://hit2gap.eu/h2g#OccupantCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Characteristics"@en .
 # 
@@ -699,28 +808,28 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://hit2gap.eu/h2g#OccupantDiscomfort
 <http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#ComfortState> .
-<http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isProvokedBy> .
-_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Actions> .
+<http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#isProvokedBy> .
+_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Actions> .
 <http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupamt discomfort will occur when building do not satisfy user requirements (comparison between needs and drivers)."@en .
 <http://hit2gap.eu/h2g#OccupantDiscomfort> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Discomfort"@en .
 # 
 # http://hit2gap.eu/h2g#OccupantPreferences
 <http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Needs> .
-<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#id> .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#maxValue> .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
 <http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#minValue> .
-_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#id> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#maxValue> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#minValue> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
 <http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#comment> "The occupant preferences refers to the building occupants prefeerences regarding the comfort sempsation."@en .
 <http://hit2gap.eu/h2g#OccupantPreferences> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant Preferences"@en .
 # 
@@ -778,14 +887,14 @@ _:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://hit2gap.eu/h2g#SystemActions
 <http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#Actions> .
-<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#acts> .
-_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> .
-<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#changes> .
-_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeActuation> .
+_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> .
+<http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeActuation> .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> .
 <http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#comment> "System Actions are the intereactions between the different occupants and the building using the different building systems to modify the building states towards more comfortable states."@en .
 <http://hit2gap.eu/h2g#SystemActions> <http://www.w3.org/2000/01/rdf-schema#label> "System Actions"@en .
 # 
@@ -803,18 +912,18 @@ _:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsma
 # http://hit2gap.eu/h2g#User
 <http://hit2gap.eu/h2g#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> .
-<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#concerns> .
-_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Feedback> .
-<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#prefers> .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Modality> .
 <http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#receives> .
-_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Notification> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#concerns> .
+_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Feedback> .
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#prefers> .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Modality> .
+<http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#receives> .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Notification> .
 <http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of actor that corresponds to the h2g platform user."@en .
 <http://hit2gap.eu/h2g#User> <http://www.w3.org/2000/01/rdf-schema#label> "User"@en .
 # 
@@ -862,140 +971,138 @@ _:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#
 <http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the corresponding building space have someone inside. Thus, the specific building space have one or more people inside."@en .
 <http://hit2gap.eu/h2g#ZoneOccupied> <http://www.w3.org/2000/01/rdf-schema#label> "Zone Occupied"@en .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#Device
-<http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#System> .
-<http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components)."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+# http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest
+<http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature is an abstraction of real world phenomena (thing, person, event, etc)."@en .
+<http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of Interest"@en .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature is an abstraction of real world phenomena (thing, person, event, etc)."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of Interest"@en .
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"@en .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Observation
-<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> .
-_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid48 <http://www.w3.org/2002/07/owl#unionOf> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#DateTimeInterval> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Instant> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+# http://hit2gap.eu/h2g/h2gSensor#Observation
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Result> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#externalID> .
-_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeBySensor> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sensor> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Property> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid53 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#resultTime> .
+_:genid54 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc."@en .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents."@en .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://hit2gap.eu/h2g/h2gSensor#Observation"@en .
+<http://hit2gap.eu/h2g/h2gSensor#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#Property
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuator> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/2000/01/rdf-schema#label> "IfcActuator"@en .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Device> .
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Sensor> .
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensing device is a device that implements sensing."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"@en .
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Sensing Device"@en .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Sensor
-<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.oclc.org/NET/ssnx/ssn"@en .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#SensorOutput
-<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor Output"@en .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#System
-<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems."@en .
-<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+# http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/sosa/Sensor> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"@en .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#label> "IfcSensor"@en .
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#acts> .
-_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasRole> .
-_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Role> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasGender> .
-_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/h2g#Gender> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#id> .
-_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#acts> .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#name> .
-_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasRole> .
+_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Role> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasGender> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/h2g#Gender> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#id> .
+_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#name> .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#comment> "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor"@en .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> <http://www.w3.org/2000/01/rdf-schema#label> "IfcActor"@en .
 # 
-# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> <http://www.w3.org/2000/01/rdf-schema#label> "IfcActuator"@en .
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuator> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcActuatorType is defined in IFC2X3. We made it equivalent to IfcActuator defined in IFC4."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType"@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> <http://www.w3.org/2000/01/rdf-schema#label> "IfcActuatorType"@en .
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "IfcBuilding"@en .
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuator> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"@en .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> <http://www.w3.org/2000/01/rdf-schema#label> "IfcDistributionControlElement"@en .
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#User> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasBehaviour> .
-_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#OccupantBehaviour> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasComfortRequirements> .
-_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Needs> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#age> .
-_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
 _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#jobType> .
-_:genid60 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasBehaviour> .
+_:genid60 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#OccupantBehaviour> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#lifestyle> .
-_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#hasComfortRequirements> .
+_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/h2g#Needs> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#age> .
+_:genid62 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#jobType> .
+_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#lifestyle> .
+_:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcOccupant is a type of actor that defines the form of occupancy of a property."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"@en .
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant> <http://www.w3.org/2000/01/rdf-schema#label> "IfcOccupant"@en .
 # 
-# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en .
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#label> "IfcSensor"@en .
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"@en .
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1017,8 +1124,127 @@ _:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/h2g#TimeBehaviour> .
-<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with zero extent or duration"@en .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with zero extent or duration."@en .
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant"@en .
+# 
+# http://www.w3.org/ns/sosa/ActuableProperty
+<http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Actuable Property"@en .
+# 
+# http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/actsOnProperty> .
+_:genid65 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/ActuableProperty> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid66 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Result> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeByActuator> .
+_:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Actuator> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/actsOnProperty> .
+_:genid69 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid70 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid71 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeByActuator> .
+_:genid72 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/h2g#resultTime> .
+_:genid73 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation"@en .
+# 
+# http://www.w3.org/ns/sosa/Actuator
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."@en .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@en .
+# 
+# http://www.w3.org/ns/sosa/Result
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+_:genid74 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#comment> "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/Result"@en .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#label> "Result"@en .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/Sensor"@en .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+# 
+# http://www.w3.org/ns/ssn/Property
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
+_:genid75 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.\n\nAn observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."@en .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/ssn/Property"@en .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# 
+# http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasSubSystem> .
+_:genid76 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> _:genid78 .
+_:genid78 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasSubSystem> .
+_:genid77 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/ssn/System"@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuator> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeActuation> .
+_:genid79 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid80 <http://www.w3.org/2002/07/owl#unionOf> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#Feedback> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#OccupantBehaviour> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person"@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/"@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 # 
 # 
 # 
@@ -1086,19 +1312,19 @@ _:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # #################################################################
 # 
 # 
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid62 <http://www.w3.org/2002/07/owl#members> _:genid66 .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#ActivityModel> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#BehaviourModel> .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#EquipementModel> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#EventModel> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid83 <http://www.w3.org/2002/07/owl#members> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#ActivityModel> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#BehaviourModel> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#EquipementModel> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://hit2gap.eu/h2g#EventModel> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

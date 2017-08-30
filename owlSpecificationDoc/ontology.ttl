@@ -69,10 +69,15 @@
 #    Object Properties
 #################################################################
 
-###  http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> rdf:type owl:ObjectProperty ;
-                                                    rdfs:subPropertyOf owl:topObjectProperty ;
-                                                    rdfs:label "unit"@en .
+###  http://data.nasa.gov/qudt/owl/qudt#unit
+<http://data.nasa.gov/qudt/owl/qudt#unit> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                          rdfs:label "unit"@en .
+
+
+###  http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> rdf:type owl:ObjectProperty ;
+                                                       rdfs:isDefinedBy "http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"@en .
 
 
 ###  http://hit2gap.eu/h2g#acts
@@ -258,11 +263,6 @@
                                                  rdfs:label "has subsystem"@en .
 
 
-###  http://purl.oclc.org/NET/ssnx/ssn#hasValue
-<http://purl.oclc.org/NET/ssnx/ssn#hasValue> rdf:type owl:ObjectProperty ;
-                                             rdfs:label "has value"@en .
-
-
 ###  http://purl.oclc.org/NET/ssnx/ssn#observationResult
 <http://purl.oclc.org/NET/ssnx/ssn#observationResult> rdf:type owl:ObjectProperty ;
                                                       rdfs:comment "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property."@en ;
@@ -278,6 +278,100 @@
 ###  http://purl.oclc.org/NET/ssnx/ssn#observedBy
 <http://purl.oclc.org/NET/ssnx/ssn#observedBy> rdf:type owl:ObjectProperty ;
                                                rdfs:label "observed by"@en .
+
+
+###  http://www.w3.org/ns/sosa/actsOnProperty
+<http://www.w3.org/ns/sosa/actsOnProperty> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <http://www.w3.org/ns/sosa/isActedBy> ;
+                                           rdfs:comment "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                           rdfs:label "acts on property"@en .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                                 rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                                 rdfs:label "has feature of interest"@en .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <http://www.w3.org/ns/sosa/isResultOf> ;
+                                      rdfs:comment "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                      rdfs:label "has result"@en .
+
+
+###  http://www.w3.org/ns/sosa/isActedBy
+<http://www.w3.org/ns/sosa/isActedBy> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                      rdfs:label "is acted by"@en .
+
+
+###  http://www.w3.org/ns/sosa/isResultOf
+<http://www.w3.org/ns/sosa/isResultOf> rdf:type owl:ObjectProperty ;
+                                       rdfs:comment "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."@en ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                       rdfs:label "is result of"@en .
+
+
+###  http://www.w3.org/ns/sosa/madeActuation
+<http://www.w3.org/ns/sosa/madeActuation> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <http://www.w3.org/ns/sosa/madeByActuator> ;
+                                          rdfs:comment "Relation between an Actuator and the Actuation it has made."@en ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                          rdfs:label "made actuation"@en .
+
+
+###  http://www.w3.org/ns/sosa/madeByActuator
+<http://www.w3.org/ns/sosa/madeByActuator> rdf:type owl:ObjectProperty ;
+                                           rdfs:comment "Relation linking an Actuation to the Actuator that made that Actuation."@en ;
+                                           rdfs:isDefinedBy "http://www.w3.org/ns/sosa/"@en ;
+                                           rdfs:label "made by actuator"@en .
+
+
+###  http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://www.w3.org/ns/sosa/madeObservation> ;
+                                         rdfs:comment "Relation between an Observation and the Sensor which made the Observation."@en ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
+                                                          "http://www.w3.org/ns/sosa/madeBySensor"@en ;
+                                         rdfs:label "made by Sensor"@en .
+
+
+###  http://www.w3.org/ns/sosa/madeObservation
+<http://www.w3.org/ns/sosa/madeObservation> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "Relation between a Sensor and an Observation made by the Sensor"@en ;
+                                            rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                            rdfs:label "made by observation"@en .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty ;
+                                             rdfs:comment "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
+                                                              "http://www.w3.org/ns/sosa/observedProperty"@en .
+
+
+###  http://www.w3.org/ns/ssn/forProperty
+<http://www.w3.org/ns/ssn/forProperty> rdf:type owl:ObjectProperty ;
+                                       rdfs:comment "A relation between some aspect of an entity and a Property."@en ;
+                                       rdfs:isDefinedBy "http://www.w3.org/ns/ssn/"@en ;
+                                       rdfs:label "for property"@en .
+
+
+###  http://www.w3.org/ns/ssn/hasSubSystem
+<http://www.w3.org/ns/ssn/hasSubSystem> rdf:type owl:ObjectProperty ;
+                                        rdfs:comment "Relation between a System and its component parts."@en ;
+                                        rdfs:isDefinedBy "http://www.w3.org/ns/ssn/hasSubSystem"@en ;
+                                        rdfs:label "hasSubSystem"@en .
+
+
+###  http://www.w3.org/ns/ssn/isPropertyOf
+<http://www.w3.org/ns/ssn/isPropertyOf> rdf:type owl:ObjectProperty ;
+                                        rdfs:isDefinedBy "http://www.w3.org/ns/ssn/isPropertyOf"@en .
 
 
 #################################################################
@@ -296,13 +390,6 @@
                                     rdfs:range xsd:dateTime ;
                                     rdfs:comment "proeprty to define the date time of end of wrok"@en ;
                                     rdfs:label "end of work time"@en .
-
-
-###  http://hit2gap.eu/h2g#externalID
-<http://hit2gap.eu/h2g#externalID> rdf:type owl:DatatypeProperty ;
-                                   rdfs:range xsd:anyURI ;
-                                   rdfs:comment "Data proeprty to define the external ID regaring the time series stored in Mondas"@en ;
-                                   rdfs:label "external ID"@en .
 
 
 ###  http://hit2gap.eu/h2g#id
@@ -348,6 +435,19 @@
                              rdfs:label "name"@en .
 
 
+###  http://hit2gap.eu/h2g#numericValue
+<http://hit2gap.eu/h2g#numericValue> rdf:type owl:DatatypeProperty ;
+                                     rdfs:range xsd:double ;
+                                     rdfs:label "numeric value"@en .
+
+
+###  http://hit2gap.eu/h2g#resultTime
+<http://hit2gap.eu/h2g#resultTime> rdf:type owl:DatatypeProperty ;
+                                   rdfs:comment "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."^^xsd:string ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                   rdfs:label "result time"^^xsd:string .
+
+
 ###  http://hit2gap.eu/h2g#startWorktime
 <http://hit2gap.eu/h2g#startWorktime> rdf:type owl:DatatypeProperty ;
                                       rdfs:subPropertyOf owl:topDataProperty ;
@@ -356,17 +456,47 @@
                                       rdfs:label "start of work time"@en .
 
 
+###  http://hit2gap.eu/h2g/h2gSensor#externalID
+<http://hit2gap.eu/h2g/h2gSensor#externalID> rdf:type owl:DatatypeProperty ;
+                                             rdfs:range xsd:anyURI ;
+                                             rdfs:comment "Data proeprty to define the external ID regaring the time series stored in Mondas"@en ;
+                                             rdfs:isDefinedBy "http://hit2gap.eu/h2g/h2gSensor#externalID"@en ;
+                                             rdfs:label "externalID"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
 
-###  http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit
-<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit> rdf:type owl:Class ;
-                                                    rdfs:comment """A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.
+###  http://data.nasa.gov/qudt/owl/qudt#QuantityValue
+<http://data.nasa.gov/qudt/owl/qudt#QuantityValue> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://data.nasa.gov/qudt/owl/qudt#unit> ;
+                                                                     owl:allValuesFrom <http://data.nasa.gov/qudt/owl/qudt#Unit>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://data.nasa.gov/qudt/owl/qudt#unit> ;
+                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://hit2gap.eu/h2g#numericValue> ;
+                                                                     owl:allValuesFrom xsd:double
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://hit2gap.eu/h2g#numericValue> ;
+                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                   ] ;
+                                                   rdfs:comment "A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck's constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27."@en ;
+                                                   rdfs:label "Quantity value"@en .
+
+
+###  http://data.nasa.gov/qudt/owl/qudt#Unit
+<http://data.nasa.gov/qudt/owl/qudt#Unit> rdf:type owl:Class ;
+                                          rdfs:comment """A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.
 
 More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U:
 Q = nU"""@en ;
-                                                    rdfs:label "Unit"@en .
+                                          rdfs:label "Unit"@en .
 
 
 ###  http://hit2gap.eu/h2g#ASHRAEAdaptiveComfort
@@ -398,10 +528,7 @@ Q = nU"""@en ;
 
 ###  http://hit2gap.eu/h2g#Actions
 <http://hit2gap.eu/h2g#Actions> rdf:type owl:Class ;
-                                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://hit2gap.eu/h2g#changes> ;
-                                                  owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement>
-                                                ] ;
+                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuation> ;
                                 rdfs:comment "Actions are the specific building interactions performed by the building occupants. This actions can be caused by an initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements."@en ;
                                 rdfs:label "Actions"@en .
 
@@ -479,8 +606,8 @@ Q = nU"""@en ;
                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                         owl:onProperty <http://hit2gap.eu/h2g#isStatedBy> ;
                                                         owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                             owl:unionOf ( <http://purl.oclc.org/NET/ssnx/ssn#System>
-                                                                                           <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding>
+                                                                             owl:unionOf ( <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding>
+                                                                                           <http://www.w3.org/ns/ssn/System>
                                                                                          )
                                                                            ]
                                                       ] ;
@@ -541,7 +668,7 @@ Q = nU"""@en ;
 
 ###  http://hit2gap.eu/h2g#Driver
 <http://hit2gap.eu/h2g#Driver> rdf:type owl:Class ;
-                               rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Observation> ,
+                               rdfs:subClassOf <http://hit2gap.eu/h2g/h2gSensor#Observation> ,
                                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                         owl:onProperty <http://hit2gap.eu/h2g#hasFunction> ;
                                                                         owl:someValuesFrom <http://hit2gap.eu/h2g#Function>
@@ -615,7 +742,7 @@ Q = nU"""@en ;
                               rdfs:subClassOf [ rdf:type owl:Class ;
                                                 owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://hit2gap.eu/h2g#associatedTo> ;
-                                                                owl:someValuesFrom <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput>
+                                                                owl:someValuesFrom <http://www.w3.org/ns/sosa/Result>
                                                               ]
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://hit2gap.eu/h2g#hasConstraints> ;
@@ -722,14 +849,12 @@ Q = nU"""@en ;
                                      rdfs:label "Notification"@en .
 
 
-###  http://hit2gap.eu/h2g#ObservationValue
-<http://hit2gap.eu/h2g#ObservationValue> rdf:type owl:Class ;
-                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#unit> ;
-                                                           owl:someValuesFrom <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit>
-                                                         ] ;
-                                         rdfs:comment "The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature."@en ;
-                                         rdfs:label "Observation Value"@en .
+###  http://hit2gap.eu/h2g#ObservableProperty
+<http://hit2gap.eu/h2g#ObservableProperty> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                           rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                           rdfs:label "Observable Property"@en .
 
 
 ###  http://hit2gap.eu/h2g#OccupantAttitude
@@ -861,12 +986,12 @@ Q = nU"""@en ;
 <http://hit2gap.eu/h2g#SystemActions> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://hit2gap.eu/h2g#Actions> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://hit2gap.eu/h2g#acts> ;
-                                                        owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator>
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/madeActuation> ;
+                                                        owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement>
                                                       ] ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://hit2gap.eu/h2g#changes> ;
-                                                        owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement>
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/madeActuation> ;
+                                                        owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement>
                                                       ] ;
                                       rdfs:comment "System Actions are the intereactions between the different occupants and the building using the different building systems to modify the building states towards more comfortable states."@en ;
                                       rdfs:label "System Actions"@en .
@@ -955,78 +1080,69 @@ Q = nU"""@en ;
                                      rdfs:label "Zone Occupied"@en .
 
 
-###  http://purl.oclc.org/NET/ssnx/ssn#Device
-<http://purl.oclc.org/NET/ssnx/ssn#Device> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#System> ;
-                                           rdfs:comment "A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components)."@en ;
-                                           rdfs:label "Device"@en .
+###  http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest
+<http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> rdf:type owl:Class ;
+                                                    rdfs:comment "A feature is an abstraction of real world phenomena (thing, person, event, etc)."@en ;
+                                                    rdfs:label "Feature of Interest"@en .
 
 
-###  http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> rdf:type owl:Class ;
-                                                      rdfs:comment "A feature is an abstraction of real world phenomena (thing, person, event, etc)."@en ;
-                                                      rdfs:label "Feature of Interest"@en ;
-                                                      rdfs:seeAlso "http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"@en .
+###  http://hit2gap.eu/h2g/h2gSensor#Observation
+<http://hit2gap.eu/h2g/h2gSensor#Observation> rdf:type owl:Class ;
+                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                                owl:someValuesFrom <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                owl:allValuesFrom <http://www.w3.org/ns/sosa/Result>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> ;
+                                                                owl:allValuesFrom <http://www.w3.org/ns/sosa/Sensor>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://hit2gap.eu/h2g#resultTime> ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ;
+                                              rdfs:comment "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc."@en ,
+                                                           "Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents."@en ;
+                                              rdfs:isDefinedBy "http://hit2gap.eu/h2g/h2gSensor#Observation"@en ;
+                                              rdfs:label "Observation"@en .
 
 
-###  http://purl.oclc.org/NET/ssnx/ssn#Observation
-<http://purl.oclc.org/NET/ssnx/ssn#Observation> rdf:type owl:Class ;
-                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> ;
-                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                       owl:unionOf ( <http://www.w3.org/2006/time#DateTimeInterval>
-                                                                                                     <http://www.w3.org/2006/time#Instant>
-                                                                                                   )
-                                                                                     ]
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://hit2gap.eu/h2g#externalID> ;
-                                                                  owl:allValuesFrom xsd:anyURI
-                                                                ] ;
-                                                rdfs:comment "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc."@en ;
-                                                rdfs:label "Observation"@en .
+###  http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> rdf:type owl:Class ;
+                                                                      owl:equivalentClass <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> ;
+                                                                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuator> ;
+                                                                      rdfs:comment "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en ;
+                                                                      rdfs:isDefinedBy <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> ;
+                                                                      rdfs:label "IfcActuator"@en .
 
 
-###  http://purl.oclc.org/NET/ssnx/ssn#Property
-<http://purl.oclc.org/NET/ssnx/ssn#Property> rdf:type owl:Class ;
-                                             rdfs:comment "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."@en ;
-                                             rdfs:label "Property"@en .
-
-
-###  http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Device> ,
-                                                                  <http://purl.oclc.org/NET/ssnx/ssn#Sensor> ;
-                                                  rdfs:comment "A sensing device is a device that implements sensing."@en ,
-                                                               "http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"@en ;
-                                                  rdfs:label "Sensing Device"@en .
-
-
-###  http://purl.oclc.org/NET/ssnx/ssn#Sensor
-<http://purl.oclc.org/NET/ssnx/ssn#Sensor> rdf:type owl:Class ;
-                                           owl:equivalentClass <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> ;
-                                           rdfs:comment "A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property."@en ;
-                                           rdfs:label "Sensor"@en ;
-                                           rdfs:seeAlso "http://purl.oclc.org/NET/ssnx/ssn"@en .
-
-
-###  http://purl.oclc.org/NET/ssnx/ssn#SensorOutput
-<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> rdf:type owl:Class ;
-                                                 rdfs:comment "A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue."@en ;
-                                                 rdfs:label "Sensor Output"@en .
-
-
-###  http://purl.oclc.org/NET/ssnx/ssn#System
-<http://purl.oclc.org/NET/ssnx/ssn#System> rdf:type owl:Class ;
-                                           rdfs:comment "System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems."@en ;
-                                           rdfs:label "System"@en .
+###  http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> rdf:type owl:Class ;
+                                                                    owl:equivalentClass <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> ,
+                                                                                        <http://www.w3.org/ns/sosa/Sensor> ;
+                                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+                                                                    rdfs:comment "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en ;
+                                                                    rdfs:isDefinedBy "http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"@en ;
+                                                                    rdfs:label "IfcSensor"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor> rdf:type owl:Class ;
+                                                                 owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> ;
                                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty <http://hit2gap.eu/h2g#acts> ;
-                                                                                   owl:someValuesFrom <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator>
+                                                                                   owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator>
                                                                                  ] ,
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty <http://hit2gap.eu/h2g#hasRole> ;
@@ -1045,25 +1161,31 @@ Q = nU"""@en ;
                                                                                    owl:someValuesFrom xsd:string
                                                                                  ] ;
                                                                  rdfs:comment "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model."@en ;
+                                                                 rdfs:isDefinedBy "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor"@en ;
                                                                  rdfs:label "IfcActor"@en .
 
 
-###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuator> rdf:type owl:Class ;
-                                                                    rdfs:comment "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en ;
-                                                                    rdfs:label "IfcActuator"@en .
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuator> ;
+                                                                        rdfs:comment "IfcActuatorType is defined in IFC2X3. We made it equivalent to IfcActuator defined in IFC4."@en ;
+                                                                        rdfs:isDefinedBy "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType"@en ;
+                                                                        rdfs:label "IfcActuatorType"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> ;
+                                                                    rdfs:subClassOf <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest> ;
                                                                     rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+                                                                    rdfs:isDefinedBy <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding> ;
                                                                     rdfs:label "IfcBuilding"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuator> ;
                                                                                       rdfs:comment "IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system."@en ;
+                                                                                      rdfs:isDefinedBy "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"@en ;
                                                                                       rdfs:label "IfcDistributionControlElement"@en .
 
 
@@ -1091,13 +1213,14 @@ Q = nU"""@en ;
                                                                                       owl:someValuesFrom xsd:string
                                                                                     ] ;
                                                                     rdfs:comment "IfcOccupant is a type of actor that defines the form of occupancy of a property."@en ;
+                                                                    rdfs:isDefinedBy "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"@en ;
                                                                     rdfs:label "IfcOccupant"@en .
 
 
-###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor
-<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensor> rdf:type owl:Class ;
-                                                                  rdfs:comment "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en ;
-                                                                  rdfs:label "IfcSensor"@en .
+###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> rdf:type owl:Class ;
+                                                                      rdfs:comment "IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4."@en ;
+                                                                      rdfs:isDefinedBy "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"@en .
 
 
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement
@@ -1123,8 +1246,133 @@ Q = nU"""@en ;
 ###  http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://hit2gap.eu/h2g#TimeBehaviour> ;
-                                      rdfs:comment "A temporal entity with zero extent or duration"@en ;
+                                      rdfs:comment "A temporal entity with zero extent or duration."@en ;
                                       rdfs:label "Instant"@en .
+
+
+###  http://www.w3.org/ns/sosa/ActuableProperty
+<http://www.w3.org/ns/sosa/ActuableProperty> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                             rdfs:comment "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                             rdfs:label "Actuable Property"@en .
+
+
+###  http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/actsOnProperty> ;
+                                                        owl:allValuesFrom <http://www.w3.org/ns/sosa/ActuableProperty>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                        owl:allValuesFrom <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                        owl:allValuesFrom <http://www.w3.org/ns/sosa/Result>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/madeByActuator> ;
+                                                        owl:allValuesFrom <http://www.w3.org/ns/sosa/Actuator>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/actsOnProperty> ;
+                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/sosa/madeByActuator> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://hit2gap.eu/h2g#resultTime> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                      rdfs:label "Actuation"@en .
+
+
+###  http://www.w3.org/ns/sosa/Actuator
+<http://www.w3.org/ns/sosa/Actuator> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                                     rdfs:comment "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."@en ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                     rdfs:label "Actuator"@en .
+
+
+###  http://www.w3.org/ns/sosa/Result
+<http://www.w3.org/ns/sosa/Result> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/sosa/isResultOf> ;
+                                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                   rdfs:comment "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
+                                                    "http://www.w3.org/ns/sosa/Result"@en ;
+                                   rdfs:label "Result"@en .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                                   rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
+                                                    "http://www.w3.org/ns/sosa/Sensor"@en ;
+                                   rdfs:label "Sensor"@en .
+
+
+###  http://www.w3.org/ns/ssn/Property
+<http://www.w3.org/ns/ssn/Property> rdf:type owl:Class ;
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
+                                                      owl:allValuesFrom <http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest>
+                                                    ] ;
+                                    rdfs:comment """A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.
+
+An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."""@en ;
+                                    rdfs:isDefinedBy "http://www.w3.org/ns/ssn/Property"@en ;
+                                    rdfs:label "Property"@en .
+
+
+###  http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/ssn/hasSubSystem> ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/ssn/System>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty [ owl:inverseOf <http://www.w3.org/ns/ssn/hasSubSystem>
+                                                                   ] ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/ssn/System>
+                                                  ] ;
+                                  rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en ;
+                                  rdfs:isDefinedBy "http://www.w3.org/ns/ssn/System"@en ;
+                                  rdfs:label "System"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuator> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/sosa/madeActuation> ;
+                                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://hit2gap.eu/h2g#Feedback>
+                                                                                       <http://hit2gap.eu/h2g#OccupantBehaviour>
+                                                                                     )
+                                                                       ]
+                                                   ] ;
+                                   rdfs:comment "A person"@en ;
+                                   rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"@en ;
+                                   rdfs:label "Person"@en .
 
 
 #################################################################
