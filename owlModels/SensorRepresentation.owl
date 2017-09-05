@@ -126,6 +126,15 @@
     <Declaration>
         <ObjectProperty IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
     </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.georss.org/georss/where"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.opengis.net/gml/_Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.opengis.net/gml/_Feature"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="FeatureOfInterest"/>
         <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
@@ -300,14 +309,14 @@ Q = nU.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MobileBuildingAppliance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>FeatureOfInterest</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureOfInterest is an extension of ssn#FeatureOfInterest  defined in SSN. We have extended it and made them equivalents.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>FeatureOfInterest</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureOfInterest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>FeatureOfInterest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureOfInterest is an extension of ssn#FeatureOfInterest  defined in SSN. We have extended it and made them equivalents.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -392,7 +401,7 @@ Q = nU.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/gml/LineString</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LinearString</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LineString</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -437,7 +446,7 @@ Q = nU.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/gml/_Feature</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Geo_Feature is taken from  the GeoRSS Feature Model. The model provides a general feature property which can be used to characterize any appropriate content as a geographic feature. Specific subproperties such as &lt;where&gt; associate the discerned feature with one of a limited number of  geometry types which provide a numerical representation for analysis and visualization. Other subproperties describe additional commonly used feature attributes such as feature name and feature type.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">_Feature is taken from  the GeoRSS Feature Model. The model provides a general feature property which can be used to characterize any appropriate content as a geographic feature. Specific subproperties such as &lt;where&gt; associate the discerned feature with one of a limited number of  geometry types which provide a numerical representation for analysis and visualization. Other subproperties describe additional commonly used feature attributes such as feature name and feature type.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
