@@ -866,6 +866,11 @@ An Observation is a Situation in which a Sensing method has been used to estimat
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAlarmType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ifc2:IfcAlarmType</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcAlarmType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>ifc2:IfcElectricFlowStorageDeviceType</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcElectricFlowStorageDeviceType is defined in IFC2X3. We made it equivalent to IfcElectricFlowStorageDevice defined in IFC4.</Literal>
