@@ -11,3 +11,22 @@ Hit2Gap Ontology is focused on establishing a common data model and semantic kno
 - **User Behaviour data models and semantic representation**: this part of the ontology is aimed at representing building occupants DNA (Drivers, Needs, and Actions). This type of modelling will serve to represent the user-building interaction not only in form of activities but also considering comfort parameters and other aspects that motivate users to perform building actions.
 
 Therefore and since semantic representation, HIT2GAP project will harmonise all inforamtion related to buildings monitoring and control activities (management activities), considering the user as an important aspect to adjust energy according to their preferences.
+
+Hit2Gap Ontology is based on various ontologies that can be considered as standard in the domain:
+
+- **Industry Foundation Classes OWL (IfcOWL)[(Pauwels,2017)][@Pauwels2017]**: This semantic model is used as a reference for modelling the building information and lifecycle. As a reference building for construction, this semantic model is one of the core ontologies to be linked with SSN and extended in HIT2GAP by several concepts (orientation, capacity, etc.) and user behaviour aspects to cope with the project requirements.
+- **Semantic Sensor Network Ontology (SSN)[(Compton et al.,2012)][@Compton2012]**: This semantic model represents sensor information and data in form of observation. Hence, this ontology permits to contextualise sensor information being also compatible with the current standards in information exchange as SensorML.
+- **Quantities, Units, Dimensions and Time (QUDT)[(Hodgson et al.,2014)][@Hodgson2014]**: This semantic model is aimed at representing units and unit conversion for the time series and sensor outputs represented through the SSN ontology.
+- **W3C Time Ontology (TIME)[(Cox and Little,2012)][@Cox2017]**: Time ontology allows to contextualise the time measurements and time instants. This aspect will serve as a complementary semantic model for the QUDT ontology regarding time measurements.
+- **W3C Geospatial Ontology (W3CGeo)[(Lieberman et al.,2007)][@Lieberman2007]**: This semantic model will serve to represent
+ geospatial capabilities;
+
+[@Compton2012]: http://doi.org/10.1016/j.websem.2012.05.003 "Compton, M., Barnaghi, P., Bermudez, L., García-Castro, R., Corcho, O., Cox, S., … Taylor, K. (2012). The SSN ontology of the W3C semantic sensor network incubator group. Web Semantics: Science, Services and Agents on the World Wide Web, 17, 25–32." 
+
+[@Hodgson2014]: http://qudt.org/ "Hodgson, R., Keller, P. J., Hodges, J., & Spivak, J. (2014). QUDT - Quantities, Units, Dimensions and Data Types Ontologies." 
+
+[@Cox2017]: https://www.w3.org/TR/owl-time/ "Cox, S., Little, Chris. (2017). Time Ontology in OWL- W3C Working Draft 02 February 2017."
+
+[@Pauwels2017]: http://openbimstandards.org/standards/ifcowl/ "Pauwels, P. IfcOWL Web Page"
+
+[@Lieberman2007]: https://www.w3.org/2005/Incubator/geo/XGR-geo-ont-20071023/ "Joshua Lieberman, Raj Singh, Chris Goad, W3C Geospatial Ontologies, 2007"
