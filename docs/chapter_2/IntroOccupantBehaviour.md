@@ -2,7 +2,7 @@
 
 ## Introduction and Overall Overview of the Occupant Behaviour Ontology
 
-This chapter is aimed at describing the general model referring the occupant behaviour. In that sense and according with [(Hong et.al,2015)][@Honng2015], the occupant behaviour is composed by the following main aspects:
+This chapter is aimed at describing the general model referring the occupant behaviour. In that sense and according with [(Hong et al.,2015)][@Honng2015], the occupant behaviour is composed by the following main aspects:
 
 - **Drivers**: Represent discrete-event simulation models for modeling occupant behavior, activities, events, and equipments, considering the factors that stimulate occupants in accomplishing some actions to reach their needs.
 - **Needs**: Model the requirements that the different occupants shall meet to ensure their satisfaction in their environments.
