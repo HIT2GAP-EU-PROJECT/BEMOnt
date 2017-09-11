@@ -15,7 +15,7 @@ Building users can be refined; in particular occupants need to be distinguished 
 
 - **A specific attitude** (h2g:Attitude) inside the building corresponding with the energy awareness (e.g., Energy Frugal, Energy Profligate, Energy Indifferent).
 
-- Depending on the interactions and the building type, the occupants interact with the building according to ** a role** (h2g:Role) inside a company that allows them to do some action.
+- Depending on the interactions and the building type, the occupants interact with the building according to **a role** (h2g:Role) inside a company that allows them to do some action.
 
 - **Habits and a behaviour** inside the building (time to start working or end working, etc.) under the class h2g:OccupantCharacteristics.
 
