@@ -1,10 +1,11 @@
 ## Driver Specification
 
-Drivers represent the stimulating factors that provoke energy occupant behavior. Hence, the drivers corresponds with the measurements of building systems that interacts with the different occupants. Therefore, Drivers are the middleware between the actions and these actions are reflected in the user satisfaction (needs).
+Drivers represent the stimulating factors that provoke energy occupant behavior. Hence, the drivers corresponds with the measurements of building systems that interacts with the different occupants. Therefore, h2g:Drivers are the glue between actions and an occupant needs.
 
-Considering the driver definition, the defined class is a member of observation (ssn:Obsevation). Indeed, driver class is composed by each of the observation required for simulating the user behaviour. Based on that, this class considers:
+The corresponding class in the data model is a member of observation (ssn:Observation), as it is made of each of the observations required for simulating a user behaviour. Four different kind of drivers are considered:
 
-* _Behaviour Model_: As variables that serve to measure the habits and activities inside the building. Defined to register and contextualise the occupant events (building interactions with the different systems).
+
+* _Behaviour Model_: As variables that serve to measure the habits and activities inside the building. It is defined to register and contextualise the occupant events (building interactions with the different systems).
 * _Activity Model_: As a class for registering the the occupants activities (relate to occupancy) inside the building.
 * _Event Model_: Defined to register the events that can be detected from the sensor readings.
 * _Equipement Model_: As a class for measuring the building features and the environmental factors including indoor and outdoor parameters.
