@@ -13,7 +13,7 @@ Nevertheless, IFC proposes different categories (called domains) that group elem
 - the **IfcHvacDomain** (for elements that are used to describe heat, ventilation and air- conditioning systems), **IfcElectricalDomain** (for elements related with electricity production/consumption/storage). All the elements of interest are accessible under the **IfcFlowStorageDevice, IfcFlowMovingDevice, IfcFlowController, IfcFlowTerminal,
 IfcFlowTreatmentDevice** and **IfcEnergyConversionDevice** classes.
 
-Additionally, the Haystack[@Haystack2017] data model has been identified as a high-potential model to develop a common vocabulary for the monitoring of buildings. While this model is not presented as a web semantic ontology, it has been integrated as a complement of the ifcOwl model.
+Additionally, the Haystack[(Haystack,2017)][@Haystack2017] data model has been identified as a high-potential model to develop a common vocabulary for the monitoring of buildings. While this model is not presented as a web semantic ontology, it has been integrated as a complement of the ifcOwl model.
 
 The original ifcOwl has also been enhanced with additional information:
 
