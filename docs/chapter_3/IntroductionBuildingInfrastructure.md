@@ -13,7 +13,7 @@ Nevertheless, IFC proposes different categories (called domains) that group elem
 - the **IfcHvacDomain** (for elements that are used to describe heat, ventilation and air- conditioning systems), **IfcElectricalDomain** (for elements related with electricity production/consumption/storage). All the elements of interest are accessible under the **IfcFlowStorageDevice, IfcFlowMovingDevice, IfcFlowController, IfcFlowTerminal,
 IfcFlowTreatmentDevice** and **IfcEnergyConversionDevice** classes.
 
-Additionally, the Haystack (http://project-haystack.org) data model has been identified as a high-potential model to develop a common vocabulary for the monitoring of buildings. While this model is not presented as a web semantic ontology, it has been integrated as a complement of the ifcOwl model.
+Additionally, the Haystack[@Haystack2017] data model has been identified as a high-potential model to develop a common vocabulary for the monitoring of buildings. While this model is not presented as a web semantic ontology, it has been integrated as a complement of the ifcOwl model.
 
 The original ifcOwl has also been enhanced with additional information:
 
@@ -39,3 +39,4 @@ The features of interest representation of the building are performed using stan
 
 [@Volk2014]: http://www.sciencedirect.com/science/article/pii/S092658051300191X "Volk, R., Stengel, J., & Schultmann, F. (2014). Building Information Modeling (BIM) for existing buildings—Literature review and future needs. Automation in construction, 38, 109-127."
 
+[@Haystack2017]: http://project-haystack.org/doc
