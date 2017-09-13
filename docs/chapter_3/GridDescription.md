@@ -1,6 +1,14 @@
 # Building Grid Description
 
-Interesting aspect of the proposed semantic model is the representation of the different grids and the energy flows. Hence, this flows representation is based on the Onto-MG model [(Salameh et.al,2015)][@Salameh2015]. In this kind of modelling, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows.
+
+The HIT2GAP data model propose an energetic contextualization of a building within a micro grid through the integration of the OntoMG ontology [(Salameh et.al,2015)][@Salameh2015]. In this kind of modelling (see Figure 10), the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows.
+
+It was aligned to IFC through several concepts:
+- **<Onto_MG:BranchController, isA, ifc:Controller>**
+- **<Onto_MG:InfraBranch, isA, ifc:DistributionCircuit>**
+- **<Onto_MG:DERBranch, isA, ifc:DistributionCircuit>**
+- **<Onto_MG:ESBranch, isA, ifc:DistributionElement>**
+- **<Onto_MG:ELBranch “isA” ifc:DistributionElement>**.
 
 
  <div style="text-align:center">
