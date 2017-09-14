@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="Insert FeatureOfInterest isA IfcSpatialElement">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.md" afterPath="" />
+    <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/index.html" afterPath="$PROJECT_DIR$/docs/_book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingAppliance.puml" afterPath="$PROJECT_DIR$/docs/_book/plantuml/BuildingAppliance.puml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingGridDescription.puml" afterPath="$PROJECT_DIR$/docs/_book/plantuml/BuildingGridDescription.puml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingInfrastructure.puml" afterPath="$PROJECT_DIR$/docs/_book/plantuml/BuildingInfrastructure.puml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/plantuml/FoI.puml" afterPath="$PROJECT_DIR$/docs/_book/plantuml/FoI.puml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/plantuml/Property.puml" afterPath="$PROJECT_DIR$/docs/_book/plantuml/Property.puml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/plantuml/geo.puml" afterPath="$PROJECT_DIR$/docs/_book/plantuml/geo.puml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/search_index.json" afterPath="$PROJECT_DIR$/docs/_book/search_index.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" afterPath="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,12 +14,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="0">
                 <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridDescription.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="225">
+                <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -125,7 +109,6 @@
         <option value="$PROJECT_DIR$/docs/chapter_2/OccupantSpecification.md" />
         <option value="$PROJECT_DIR$/docs/chapter_2/NeedsSpecification.md" />
         <option value="$PROJECT_DIR$/docs/SUMMARY.md" />
-        <option value="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" />
         <option value="$PROJECT_DIR$/docs/chapter_3/Phenomenom.md" />
         <option value="$PROJECT_DIR$/docs/chapter_3/Observation_Measurement.md" />
         <option value="$PROJECT_DIR$/docs/chapter_3/FeaturesInterest.md" />
@@ -151,6 +134,7 @@
         <option value="$PROJECT_DIR$/docs/plantuml/BuildingInfrastructure.puml" />
         <option value="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" />
         <option value="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
+        <option value="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" />
       </list>
     </option>
   </component>
@@ -160,11 +144,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1687" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="1194" />
     <option name="y" value="102" />
-    <option name="width" value="1938" />
-    <option name="height" value="1218" />
+    <option name="width" value="91" />
+    <option name="height" value="161" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,9 +167,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,10 +180,18 @@
               <item name="HIT2GAPOnt" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HIT2GAPOnt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HIT2GAPOnt" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter_3" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,233 +209,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aitor.corchero\Documents\GitLab\Proyectos\HIT2GAPOnt\owlSpecificationDoc" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_1/Basics.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/geo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/ActionSpecification.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/BuildingAppliance.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/BuildingGridDescription.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/BuildingInfrastructure.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/BuildingStateSpecification.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/FoI.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/OccupantBehaviour.plantuml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/OccupantRelationModel.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/OccupantSpecificModel.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/Property.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/SensorRepresentation.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/geo.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/search_index.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/book.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_2/ActionSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_2/DriverSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_2/IntroOccupantBehaviour.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_2/NeedsSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_2/OccupantSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_3/GridDescription.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_3/IntroductionBuildingInfrastructure.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_3/Observation_Measurement.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_3/Phenomenom.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/chapter_3/geo.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/ActionSpecification.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/BuildingAppliance.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/BuildingGridDescription.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/BuildingInfrastructure.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/BuildingStateSpecification.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/FoI.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/OccupantBehaviour.plantuml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/OccupantRelationModel.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/OccupantSpecificModel.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/Property.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/SensorRepresentation.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/geo.puml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/HIT2GAPOnt.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_1/Basics.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/chapter_3/geo.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/plantuml/OccupantStateProperties.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/plantuml/OccupantStateProperties.puml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/BuildingInfrastructure.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/OntoMG.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/Property.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/SensorRepresentation.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/UserBehaviour.obda</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/UserBehaviour.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/buildingappliance.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/catalog-v001.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/sosa.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/ssn.owl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlModels/ssn.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/doc.sh</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/img/Figura2.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/img/Figura3.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/img/h2geu_emblem.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/index-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/ontology.nt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/ontology.ttl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/ontology.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/provenance/provenance-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/provenance/provenance-en.ttl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/readme.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/resources/extra.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/resources/jquery.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/resources/marked.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/resources/owl.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/resources/primer.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/resources/rec.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/OntIntro.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/OntologyDescription.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/abstract-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/crossref-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/description-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/introduction-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/overview-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/owlSpecificationDoc/sections/references-en.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/widoco-1.4.1-jar-with-dependencies.jar</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-edit-link/plugin.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/.eslintrc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/.npmignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/assets/plugin.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/assets/plugin.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/index.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-comment/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-edit-link/.npmignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-edit-link/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-edit-link/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-edit-link/book/plugin.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-edit-link/index.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docs/node_modules/gitbook-plugin-edit-link/package.json</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -875,7 +638,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="668a7e24-0c24-4f42-b8a7-97debd14de2d" name="Default" comment="" />
+      <changelist id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="" />
       <created>1493104438608</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -912,13 +675,7 @@
       <workItem from="1503557193344" duration="662000" />
       <workItem from="1503558114857" duration="64000" />
       <workItem from="1503558206338" duration="679000" />
-    </task>
-    <task id="LOCAL-00013" summary="Building Infrastructure Types">
-      <created>1493306515658</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1493306515658</updated>
+      <workItem from="1505380623147" duration="103000" />
     </task>
     <task id="LOCAL-00014" summary="Definition of Observation and measurement description (text and UML diagram)">
       <created>1493797290892</created>
@@ -1256,11 +1013,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499171003781</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Upload the written information into the gh-pages">
+      <created>1505379510050</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1505379510051</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111473000" />
+    <option name="totallyTimeSpent" value="111653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1273,60 +1037,39 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36187398" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28060523" sideWeight="0.52907914" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23246217" sideWeight="0.46849757" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28060523" sideWeight="0.47092083" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23990306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46455425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18820679" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985783" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20359848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19172932" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985783" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1362,7 +1105,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update the models according to the Pierre document. Revision of the D4.1" />
     <MESSAGE value="OWL model referring the IfcOccupant of the Occupant Behaviour Model" />
     <MESSAGE value="OWL incorporation of the OccupantAttitude and th eOccupantRole" />
     <MESSAGE value="OWL implementation of the general schema of the SSN model" />
@@ -1387,7 +1129,8 @@
     <MESSAGE value="Generation of the documentation with corresponding classes" />
     <MESSAGE value="Finalising the documentation with the static parts" />
     <MESSAGE value="Adding missing images in the documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding missing images in the documentation" />
+    <MESSAGE value="Upload the written information into the gh-pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload the written information into the gh-pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1494,18 +1237,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="336">
             <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="525">
-            <caret line="6" column="1141" lean-forward="false" selection-start-line="6" selection-start-column="1141" selection-end-line="6" selection-end-column="1141" />
           </first_editor>
           <second_editor>
             <js_state />
@@ -1763,7 +1494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10164">
           <caret line="484" column="17" lean-forward="false" selection-start-line="484" selection-start-column="11" selection-end-line="484" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1786,18 +1516,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="714">
-            <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" />
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/sections/description-en.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1847,6 +1566,19 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
             <folding />
           </first_editor>
           <second_editor>
