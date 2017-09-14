@@ -283,15 +283,25 @@ class DERBranch <<ontomg>>
 class ELBranch <<ontomg>>
 class InfraBranch <<ontomg>>
 
+class EnergyStorage <<ontomg>>
+class BranchController <<ontomg>>
+
 class BranchSwitch <<ontomg>>
 class NonRenewableDERBranch <<ontomg>>
 class RenewableDERBranch <<ontomg>>
 class SolarPowerBranch <<ontomg>>
 class WindPowerBranch <<ontomg>>
+
 class Converter <<ontomg>>
 class Inverter <<ontomg>>
 class AcDcConverter <<ontomg>>
-class WindTurbine <<ontomg>>
+class SmallWindTurbine <<ontomg>>
+class MicroturbinesBranch <<hit2gap>>
+class SolarHybridBranch <<hit2gap>>
+class WindHybridBranch <<hit2gap>>
+class PhotovoltaicBranch <<hit2gap>>
+
+
 class SolarCell <<ontomg>>
 class FuelCellBranch <<ontomg>>
 class CHPPPowerBranch <<ontomg>>
@@ -309,6 +319,9 @@ class OilBranch <<hit2gap>>
 class GasBranch <<hit2gap>>
 class CoalBranch <<hit2gap>>
 class NuclearBranch <<hit2gap>>
+class MicroCHPPPowerBranch <<hit2gap>>
+class ReciprocatingBranch <<hit2gap>>
+class StirlingBranch <<hit2gap>>
 
 class IfcDistributionCircuit <<h2gifc4>>
 class IfcDistributionSystem <<h2gifc4>>
@@ -475,6 +488,17 @@ class IfcDamperType <<ifc>>
 '/
 class IfcInterceptor <<h2gifc4>>
 
+/'
+ Definition of the Physical Medium
+'/
+
+class PhysicalMedium <<hit2gap>>
+class Oil <<hit2gap>>
+class Gas <<hit2gap>>
+class Water <<hit2gap>>
+class Air <<hit2gap>>
+class Steam <<hit2gap>>
+class Radiation <<hit2gap>>
 
 /'
   Definition of building elements (systems)
@@ -766,7 +790,6 @@ Wereable <|-- Smartphone
 Monitoring <|-- IfcSensor
 Monitoring <|-- IfcActuator
 Monitoring <|-- IfcAlarm
-Monitoring <|-- IfcController
 Monitoring <|-- Meter
 
 IfcBuildingElement <|-- IfcBeam
@@ -856,13 +879,15 @@ Branch <|-- InfraBranch
 
 Branch --> BranchController: hit2gap:hasA
 
-IfcDistributionSystem<|-- IfcDistributionCircuit
-BranchController <--> IfcController: owl:equivalentClass
+IfcDistributionSystem <|-- IfcDistributionCircuit
+BranchController <|-- IfcFlowController
 ConductingEquipement <|-- BranchController
-InfraBranch <--> IfcDistributionCircuit: owl:equivalentClass
-DERBranch <--> IfcDistributionSystem: owl:equivalentClass
-ESBranch <--> IfcDistributionElement: owl:equivalentClass
-ELBranch <--> IfcDistributionElement: owl:equivalentClass
+InfraBranch <|-- IfcDistributionCircuit
+ESBranch <|-- IfcDistributionElement
+ELBranch <|-- IfcDistributionElement
+EnergyStorage <|-- IfcElectricalFlowStorageDevice
+ELBranch <|-- IfcFlowMovingDevice
+ELBranch <|-- IfcEnergyConversionDevice
 
 IfcSystem <|-- IfcDistributionElement
 
@@ -871,10 +896,14 @@ DERBranch<|-- RenewableDERBranch
 DERBranch<|-- NonRenewableDERBranch
 
 RenewableDERBranch <|-- SolarPowerBranch
-RenewableDERBranch <|-- WindPowerBranch
+RenewableDERBranch <|-- SmallWindPowerBranch
 RenewableDERBranch <|-- HydroPowerBranch
 RenewableDERBranch <|-- GeoThermalBranch
 RenewableDERBranch <|-- BiomassBranch
+RenewableDERBranch <|-- MicroturbinesBranch
+RenewableDERBranch <|-- SolarHybridBranch
+RenewableDERBranch <|-- WindHybridBranch
+RenewableDERBranch <|-- PhotovoltaicBranch
 
 SolarPowerBranch--> SolarCell: ontomg:hasA
 WindPowerBranch --> WindTurbine: ontomg:hasA
@@ -899,15 +928,12 @@ NonRenewableDERBranch <|-- CoalBranch
 NonRenewableDERBranch <|-- NuclearBranch
 OilBranch <|-- FuelCellBranch
 NonRenewableDERBranch <|-- CHPPPowerBranch
+NonRenewableDERBranch <|-- MicroCHPPPowerBranch
+NonRenewableDERBranch <|-- ReciprocatingBranch
+NonRenewableDERBranch <|-- StirlingBranch
 
 FuelCellBranch --> Converter: ontomg:hasA
 FuelCellBranch --> DieselGenerator: ontomg:hasA
-
-BuildingAppliance --> Microgrid: hit2gap:produceEnergy
-BuildingAppliance --> Microgrid: hit2gap:consumesEnergy
-BuildingAppliance --> Microgrid: hit2gap:storageEnergy
-BuildingAppliance --> Microgrid: hit2gap:controlsEnergy
-BuildingAppliance --> Microgrid: hit2gap:measuresEnergy
 
 /'
  Definiton of Mechanical Building Elements
@@ -1042,6 +1068,21 @@ Flow<|-- Inflow
 Flow<|-- Outflow
 Medium<|-- AirMedium
 PhysicProperties <|-- Climate
+
+PhysicalMedium <|-- Oil
+PhysicalMedium <|-- Gas
+PhysicalMedium <|-- Water
+PhysicalMedium <|-- Air
+PhysicalMedium <|-- Steam
+PhysicalMedium <|-- Radiation
+
+IfcFlowMovingDevice --> PhysicalMedium: hit2gap:transports
+IfcEnergyConversionDevice --> PhysicalMedium: hit2gap:consumes
+IfcEnergyConversionDevice --> PhysicalMedium: hit2gap:produces
+IfcFlowStorageDevice --> PhysicalMedium: hit2gap:stores
+IfcFlowController --> PhysicalMedium: hit2gap:controls
+IfcFlowTerminal --> PhysicalMedium: hit2gap:consumes
+
 
 OccupantStateProperties <|-- Stress 
 OccupantStateProperties <|-- Pulse

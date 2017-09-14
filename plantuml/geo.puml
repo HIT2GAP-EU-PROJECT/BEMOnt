@@ -27,20 +27,7 @@ class Polygon <<geo>>
 class Hemisphere <<hit2gap>>
 class Northerm <<(I,orchid),hit2gap>>
 class Southern <<(I,orchid),hit2gap>>
-class Tropical <<hit2gap>>
-class Arid <<hit2gap>>
-class Temperate <<hit2gap>>
-class Cold <<hit2gap>>
-class Polar <<hit2gap>>
 
-class North <<(I,orchid),hit2gap>>
-class South <<(I,orchid),hit2gap>>
-class West <<(I,orchid),hit2gap>>
-class East <<(I,orchid),hit2gap>>
-class North_East <<(I,orchid),hit2gap>>
-class North_West <<(I,orchid),hit2gap>>
-class South_East <<(I,orchid),hit2gap>>
-class South_West <<(I,orchid),hit2gap>>
 
 /'
   Definition of the geospatial part using GeoOWL ontology
