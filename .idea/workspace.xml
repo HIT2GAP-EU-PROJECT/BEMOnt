@@ -33,8 +33,8 @@
         <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+              <first_editor relative-caret-position="195">
+                <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -675,14 +675,7 @@
       <workItem from="1503557193344" duration="662000" />
       <workItem from="1503558114857" duration="64000" />
       <workItem from="1503558206338" duration="679000" />
-      <workItem from="1505380623147" duration="103000" />
-    </task>
-    <task id="LOCAL-00014" summary="Definition of Observation and measurement description (text and UML diagram)">
-      <created>1493797290892</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1493797290892</updated>
+      <workItem from="1505380623147" duration="309000" />
     </task>
     <task id="LOCAL-00015" summary="Description of Time and QUDT usage in the semantic model">
       <created>1493799065955</created>
@@ -1020,11 +1013,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505379510051</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Upload the written information into the gh-pages">
+      <created>1505380733782</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1505380733783</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111653000" />
+    <option name="totallyTimeSpent" value="111859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1577,8 +1577,8 @@
     <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <first_editor relative-caret-position="195">
+            <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor>
