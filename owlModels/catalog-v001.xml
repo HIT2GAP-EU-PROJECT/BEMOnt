@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1504081039692" name="http://hit2gap.eu/h2g#" uri="UserBehaviour.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1504081039692" name="http://hit2gap.eu/h2g/h2gBA#" uri="buildingappliance.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1504081039692" name="http://hit2gap.eu/h2g/h2gBI#" uri="BuildingInfrastructure.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1504081039692" name="http://hit2gap.eu/h2g/h2gProperty#" uri="Property.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1504081039692" name="http://hit2gap.eu/h2g/h2gSensor#" uri="SensorRepresentation.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1504081039692" name="http://hit2gap.eu/ontomg#" uri="OntoMG.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506324940600" name="http://hit2gap.eu/h2g#" uri="UserBehaviour.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506324940600" name="http://hit2gap.eu/h2g/h2gBA#" uri="buildingappliance.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506324940600" name="http://hit2gap.eu/h2g/h2gBI#" uri="BuildingInfrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506324940600" name="http://hit2gap.eu/h2g/h2gProperty#" uri="Property.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506324940600" name="http://hit2gap.eu/h2g/h2gSensor#" uri="SensorRepresentation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506324940600" name="http://hit2gap.eu/ontomg#" uri="OntoMG.owl"/>
     </group>
 </catalog>
