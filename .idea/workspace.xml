@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="">
+    <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="Update the documentation">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/README.md" afterPath="$PROJECT_DIR$/docs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/index.html" afterPath="$PROJECT_DIR$/docs/_book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/search_index.json" afterPath="$PROJECT_DIR$/docs/_book/search_index.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,29 +32,12 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="525">
-                <caret line="10" column="505" lean-forward="true" selection-start-line="10" selection-start-column="505" selection-end-line="10" selection-end-column="505" />
+              <first_editor relative-caret-position="399">
+                <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="185" />
                 <folding />
               </first_editor>
               <second_editor>
                 <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntroOccupantBehaviour.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/chapter_2/IntroOccupantBehaviour.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
-                <caret line="10" column="167" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="167" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state>
-                  <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:694}" />
-                </js_state>
               </second_editor>
             </state>
           </provider>
@@ -138,6 +135,7 @@
         <option value="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
         <option value="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/README.md" />
       </list>
     </option>
   </component>
@@ -180,12 +178,6 @@
               <item name="HIT2GAPOnt" type="b2602c69:ProjectViewProjectNode" />
               <item name="HIT2GAPOnt" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HIT2GAPOnt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HIT2GAPOnt" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter_2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -680,14 +672,7 @@
       <workItem from="1503558206338" duration="679000" />
       <workItem from="1505380623147" duration="309000" />
       <workItem from="1506324149314" duration="798000" />
-      <workItem from="1506330815322" duration="222000" />
-    </task>
-    <task id="LOCAL-00015" summary="Description of Time and QUDT usage in the semantic model">
-      <created>1493799065955</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1493799065955</updated>
+      <workItem from="1506330815322" duration="425000" />
     </task>
     <task id="LOCAL-00016" summary="Description of the geospatial model and some reference update over the observation and measurement">
       <created>1493803361100</created>
@@ -1025,11 +1010,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505380733783</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Update documentation with the ontology docs">
+      <created>1506331052864</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1506331052865</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112879000" />
+    <option name="totallyTimeSpent" value="113082000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1054,7 +1046,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21401516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21401516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1933405" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -1110,7 +1102,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OWL model referring the IfcOccupant of the Occupant Behaviour Model" />
     <MESSAGE value="OWL incorporation of the OccupantAttitude and th eOccupantRole" />
     <MESSAGE value="OWL implementation of the general schema of the SSN model" />
     <MESSAGE value="OWL implementation of the BuildingState" />
@@ -1135,7 +1126,8 @@
     <MESSAGE value="Finalising the documentation with the static parts" />
     <MESSAGE value="Adding missing images in the documentation" />
     <MESSAGE value="Upload the written information into the gh-pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload the written information into the gh-pages" />
+    <MESSAGE value="Update documentation with the ontology docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update documentation with the ontology docs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1524,19 +1516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-446">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1578,11 +1557,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="336">
+            <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="185" selection-end-line="10" selection-end-column="185" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="525">
-            <caret line="10" column="505" lean-forward="true" selection-start-line="10" selection-start-column="505" selection-end-line="10" selection-end-column="505" />
+          <first_editor relative-caret-position="399">
+            <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="185" />
             <folding />
           </first_editor>
           <second_editor>
