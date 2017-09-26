@@ -4,11 +4,13 @@
 
 Hit2Gap Ontology is focused on establishing a common data model and semantic knowledge management for buildings and their sensor networks, including their interaction with the occupants. With this aim, the proposed ontology will take into consideration the following aspects:
 
-- **Building infrastructure data models and semantic representation** ([Building Infrastructure Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/BuildingInfraestructure/index-en.html)): as mechanims to represent the different systems and infrastructure involved in Building Information Modelling (BIM) and required for the performance of the project tools (building simulation tools, building monitoring tools, visualization tools, etc.).
+- **Building infrastructure data models and semantic representation** ([Building Infrastructure Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/BuildingInfraestructure/index-en.html) & [Building Appliance Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/buildingappliance/index-en.html)): as mechanims to represent the different systems and infrastructure involved in Building Information Modelling (BIM) and required for the performance of the project tools (building simulation tools, building monitoring tools, visualization tools, etc.).
 
-- **Sensor data and sensor network infrastructure models and semantic representation**: as a mechanism to represent sensor data and sensor network infrastructures that are supported in the BIM.
+- **Sensor data and sensor network infrastructure models and semantic representation** ([Sensor Representation Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/SensorRepresentation/index-en.html) & [Property Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/Property/index-en.html)): as a mechanism to represent sensor data and sensor network infrastructures that are supported in the BIM.
 
 - **User Behaviour data models and semantic representation** ([User Behaviour Ontology](https://cdn.rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/gh-pages/owlSpecificationDoc/index-en.html)): this part of the ontology is aimed at representing building occupants DNA (Drivers, Needs, and Actions). This type of modelling will serve to represent the user-building interaction not only in form of activities but also considering comfort parameters and other aspects that motivate users to perform building actions.
+
+- **Building Grid Representation** ([OntoMG Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/OntoMG/index-en.html)):this specific part of the ontology is focused on describing energetic contextualization of a building within a micro grid.
 
 Therefore and since semantic representation, HIT2GAP project will harmonise all inforamtion related to buildings monitoring and control activities (management activities), considering the user as an important aspect to adjust energy according to their preferences.
 
@@ -18,8 +20,7 @@ Hit2Gap Ontology is based on various ontologies that can be considered as standa
 - **Semantic Sensor Network Ontology (SSN)[(Compton et al.,2012)][@Compton2012]**: This semantic model represents sensor information and data in form of observation. Hence, this ontology permits to contextualise sensor information being also compatible with the current standards in information exchange as SensorML.
 - **Quantities, Units, Dimensions and Time (QUDT)[(Hodgson et al.,2014)][@Hodgson2014]**: This semantic model is aimed at representing units and unit conversion for the time series and sensor outputs represented through the SSN ontology.
 - **W3C Time Ontology (TIME)[(Cox and Little,2012)][@Cox2017]**: Time ontology allows to contextualise the time measurements and time instants. This aspect will serve as a complementary semantic model for the QUDT ontology regarding time measurements.
-- **W3C Geospatial Ontology (W3CGeo)[(Lieberman et al.,2007)][@Lieberman2007]**: This semantic model will serve to represent
- geospatial capabilities;
+- **W3C Geospatial Ontology (W3CGeo)[(Lieberman et al.,2007)][@Lieberman2007]**: This semantic model will serve to represent geospatial capabilities;
 
 [@Compton2012]: http://doi.org/10.1016/j.websem.2012.05.003 "Compton, M., Barnaghi, P., Bermudez, L., García-Castro, R., Corcho, O., Cox, S., … Taylor, K. (2012). The SSN ontology of the W3C semantic sensor network incubator group. Web Semantics: Science, Services and Agents on the World Wide Web, 17, 25–32." 
 
