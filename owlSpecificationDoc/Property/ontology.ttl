@@ -1,0 +1,697 @@
+@prefix : <http://hit2gap.eu/h2g/h2gProperty##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://hit2gap.eu/h2g/h2gProperty#> .
+
+<http://hit2gap.eu/h2g/h2gProperty#> rdf:type owl:Ontology ;
+                                      <http://purl.org/dc/elements/1.1/creator> "Aitor Corchero (aitor.corchero@eurecat.org)"@en ,
+                                                                                "Pierre Bourreau (pbourreau@nobatek.com)"@en ,
+                                                                                "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en ,
+                                                                                "Yudith Cardinale (ycardinale@usb.ve)"@en ;
+                                      <http://purl.org/dc/elements/1.1/description> "This semantic model is focused on representing the phenomenon (or property), which provides a common vision about the general characteristics to be considered in the building. This model is an extension of the “ssn:Property” representation. Two main families of characteristics were considered: economic and physical properties."@en ;
+                                      <http://purl.org/dc/elements/1.1/title> "Hit2Gap Ontology-Property"@en ;
+                                      <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"@en ;
+                                      owl:versionInfo "This current version includes the initial version of the semantic model based on the diagrams generated."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://hit2gap.eu/h2g/h2gProperty#hasSpaceCapacity
+<http://hit2gap.eu/h2g/h2gProperty#hasSpaceCapacity> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://hit2gap.eu/h2g/h2gProperty#AbsorbedIncidentRadiation
+<http://hit2gap.eu/h2g/h2gProperty#AbsorbedIncidentRadiation> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation> ;
+                                                              rdfs:comment "AbsorbedIncidentRadiation represents an observation of the  measure of the absorbed incident radiation  in a specific time."@en ;
+                                                              rdfs:label "AbsorbedIncidentRadiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#AbsorbedScatteredIncidentRadiation
+<http://hit2gap.eu/h2g/h2gProperty#AbsorbedScatteredIncidentRadiation> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation> ;
+                                                                       rdfs:comment "AbsorbedScatteredIncidentRadiation represents an observation of the  measure of the absorbed scattered incident radiation  in a specific time."@en ;
+                                                                       rdfs:label "AbsorbedScatteredIncidentRadiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#AirQuality
+<http://hit2gap.eu/h2g/h2gProperty#AirQuality> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                               rdfs:comment "AirQuality represents an observation of the  measure of the air quality in a specific time."@en ;
+                                               rdfs:label "AirQuality"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Altitude
+<http://hit2gap.eu/h2g/h2gProperty#Altitude> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Position> ;
+                                             rdfs:comment "Altitude represents an observation of the  measure of the position altitude  of an element in the building  in a specific time."@en ;
+                                             rdfs:label "Altitude"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Area
+<http://hit2gap.eu/h2g/h2gProperty#Area> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                         rdfs:comment "Area represents an observation of the  measure of the area."@en ;
+                                         rdfs:label "Area"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Arid
+<http://hit2gap.eu/h2g/h2gProperty#Arid> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Climate> ;
+                                         rdfs:comment "Arid represents an observation of the arid climate in a specific time."@en ;
+                                         rdfs:label "Arid"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Capacity
+<http://hit2gap.eu/h2g/h2gProperty#Capacity> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                             rdfs:comment "Capacity represents an observation of the  measure of the capacity of an elment in the building."@en ;
+                                             rdfs:label "Capacity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Climate
+<http://hit2gap.eu/h2g/h2gProperty#Climate> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                            rdfs:comment "Climate represents an observation of the climate  in a specific time."@en ;
+                                            rdfs:label "Climate"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Co2Rate
+<http://hit2gap.eu/h2g/h2gProperty#Co2Rate> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                            rdfs:comment "Co2Rate represents an observation of the  measure of the Co2 in the building in a specific time."@en ;
+                                            rdfs:label "Co2Rate"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Color
+<http://hit2gap.eu/h2g/h2gProperty#Color> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                          rdfs:comment "Color represents an observation of the  value of the color of an elment in the building in a specific time."@en ;
+                                          rdfs:label "Color"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Condensation
+<http://hit2gap.eu/h2g/h2gProperty#Condensation> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                 rdfs:comment "Condensation represents an observation of the  measure of the condensation  in a specific time."@en ;
+                                                 rdfs:label "Condensation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Conductivity
+<http://hit2gap.eu/h2g/h2gProperty#Conductivity> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                 rdfs:comment "Conductivity represents an observation of the  measure of the conductivity of an element  in the building in a specific time."@en ;
+                                                 rdfs:label "Conductivity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Continental
+<http://hit2gap.eu/h2g/h2gProperty#Continental> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Climate> ;
+                                                rdfs:comment "Continental represents an observation of the continental climate in a specific time."@en ;
+                                                rdfs:label "Continental"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#ContinousState
+<http://hit2gap.eu/h2g/h2gProperty#ContinousState> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#DistributionElementState> ;
+                                                   rdfs:comment "Represents an observation of a continuous state."@en ;
+                                                   rdfs:label "ContinousState"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Cost
+<http://hit2gap.eu/h2g/h2gProperty#Cost> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#EconomicProperties> ;
+                                         rdfs:comment "Costs captures the investment costs of the building."@en ;
+                                         rdfs:label "Cost"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#CrossSection
+<http://hit2gap.eu/h2g/h2gProperty#CrossSection> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Shape> ;
+                                                 rdfs:comment "CrossSection represents an observation of the  cross section of an elment in the building."@en ;
+                                                 rdfs:label "CrossSection"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Density
+<http://hit2gap.eu/h2g/h2gProperty#Density> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                            rdfs:comment "Density represents an observation of the  measure of the density of an element  in the building in a specific time."@en ;
+                                            rdfs:label "Density"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Depth
+<http://hit2gap.eu/h2g/h2gProperty#Depth> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                          rdfs:comment "Depth represents an observation of the  measure of the depth of an element  in the building in a specific time."@en ;
+                                          rdfs:label "Depth"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Discharge
+<http://hit2gap.eu/h2g/h2gProperty#Discharge> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Volume> ;
+                                              rdfs:comment "Discharge represents an observation of the  measure of the volume of a discharge in the building in a specific time."@en ;
+                                              rdfs:label "Discharge"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#DiscreteState
+<http://hit2gap.eu/h2g/h2gProperty#DiscreteState> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#DistributionElementState> ;
+                                                  rdfs:comment "Represents an observation of a discrete state."@en ;
+                                                  rdfs:label "DiscreteState"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#DistributionElementState
+<http://hit2gap.eu/h2g/h2gProperty#DistributionElementState> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#State> ;
+                                                             rdfs:comment "DistributionElementState represents an observation of the  state of a distribution element in the building."@en ;
+                                                             rdfs:label "DistributionElementState"^^xsd:string .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#EconomicProperties
+<http://hit2gap.eu/h2g/h2gProperty#EconomicProperties> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Property> ;
+                                                       rdfs:comment "The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology allows one to represent water-related prices, energy bills, building investments, etc. These specific phenomena has been subdivided into: Cost and Investment."@en ;
+                                                       rdfs:label "EconomicProperties"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Evaporation
+<http://hit2gap.eu/h2g/h2gProperty#Evaporation> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                rdfs:comment "Evaporation represents an observation of the  measure of the evaporation in a specific time."@en ;
+                                                rdfs:label "Evaporation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Flow
+<http://hit2gap.eu/h2g/h2gProperty#Flow> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Volume> ;
+                                         rdfs:comment "Flow represents an observation of the  measure of the volume of a flow in the building in a specific time."@en ;
+                                         rdfs:label "Flow"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Height
+<http://hit2gap.eu/h2g/h2gProperty#Height> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Shape> ;
+                                           rdfs:comment "Height represents an observation of the  height of an elment in the building."@en ;
+                                           rdfs:label "Height"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Humidity
+<http://hit2gap.eu/h2g/h2gProperty#Humidity> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                             rdfs:comment "Humidity represents an observation of the  measure of the humidity in a specific time."@en ;
+                                             rdfs:label "Humidity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation
+<http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Radiation> ;
+                                                      rdfs:comment "IncidentRadiation represents an observation of the  measure of the incident radiation  in a specific time."@en ;
+                                                      rdfs:label "IncidentRadiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Inflow
+<http://hit2gap.eu/h2g/h2gProperty#Inflow> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Flow> ;
+                                           rdfs:comment "Inflow represents an observation of the  measure of the volume of an input flow in the building in a specific time."@en ;
+                                           rdfs:label "Inflow"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Intensity
+<http://hit2gap.eu/h2g/h2gProperty#Intensity> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                              rdfs:comment "Intensity represents an observation of the  measure of the intensity in a specific time."@en ;
+                                              rdfs:label "Intensity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Investment
+<http://hit2gap.eu/h2g/h2gProperty#Investment> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#EconomicProperties> ;
+                                               rdfs:comment "Investment represents the building investment aspects and information."@en ;
+                                               rdfs:label "Investment"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Latitude
+<http://hit2gap.eu/h2g/h2gProperty#Latitude> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Position> ;
+                                             rdfs:comment "Latitude represents an observation of the  measure of the position latitude  of an element in the building  in a specific time."@en ;
+                                             rdfs:label "Latitude"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Length
+<http://hit2gap.eu/h2g/h2gProperty#Length> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Shape> ;
+                                           rdfs:comment "Length represents an observation of the  length of an elment in the building."@en ;
+                                           rdfs:label "Length"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#LightRadiation
+<http://hit2gap.eu/h2g/h2gProperty#LightRadiation> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Radiation> ;
+                                                   rdfs:comment "LightRadiation represents an observation of the  measure of the light radiation  in a specific time."@en ;
+                                                   rdfs:label "LightRadiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Longitude
+<http://hit2gap.eu/h2g/h2gProperty#Longitude> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Position> ;
+                                              rdfs:comment "longitude represents an observation of the  measure of the position longitude  of an element in the building  in a specific time."@en ;
+                                              rdfs:label "Longitude"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties
+<http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Property> ;
+                                                            rdfs:comment "The occupant Properties describes the state of an occupant of the building. For example, this part of the ontology allows to represent the pulse and stress of an occupant."@en ;
+                                                            rdfs:label "OccupantStateProperties"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Outflow
+<http://hit2gap.eu/h2g/h2gProperty#Outflow> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Flow> ;
+                                            rdfs:comment "Outflow represents an observation of the  measure of the volume of an output flow in the building in a specific time."@en ;
+                                            rdfs:label "Outflow"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties
+<http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Property> ;
+                                                       rdfs:comment "Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.)."@en ;
+                                                       rdfs:label "PhysicProperties"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Polar
+<http://hit2gap.eu/h2g/h2gProperty#Polar> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Climate> ;
+                                          rdfs:comment "Polar represents an observation of the polar climate in a specific time."@en ;
+                                          rdfs:label "Polar"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Position
+<http://hit2gap.eu/h2g/h2gProperty#Position> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                             rdfs:comment "Position represents an observation of the  measure of the position of an element in the building  in a specific time."@en ;
+                                             rdfs:label "Position"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Pressure
+<http://hit2gap.eu/h2g/h2gProperty#Pressure> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                             rdfs:comment "Pressure represents an observation of the  measure of the pressure in a specific time."@en ;
+                                             rdfs:label "Pressure"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity
+<http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Capacity> ;
+                                                       rdfs:comment "ProductionCapacity represents an observation of the  measure of the capacity of production of an elment in the building."@en ;
+                                                       rdfs:label "ProductionCapacity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Pulse
+<http://hit2gap.eu/h2g/h2gProperty#Pulse> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties> ;
+                                          rdfs:comment "Pulse represents an observation of the  measure of the pulse of an occupant of the building in a specific time."@en ;
+                                          rdfs:label "Pulse"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Radiation
+<http://hit2gap.eu/h2g/h2gProperty#Radiation> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                              rdfs:comment "Radiation represents an observation of the  measure of the radiation  in a specific time."@en ;
+                                              rdfs:label "Radiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Rainfall
+<http://hit2gap.eu/h2g/h2gProperty#Rainfall> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                             rdfs:comment "Rainfall represents an observation of the  measure of the rainfall."@en ;
+                                             rdfs:label "Rainfall"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#ReflectedIncidentradiation
+<http://hit2gap.eu/h2g/h2gProperty#ReflectedIncidentradiation> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation> ;
+                                                               rdfs:comment "ReflectedIncidentRadiation represents an observation of the  measure of the reflected incident radiation  in a specific time."@en ;
+                                                               rdfs:label "ReflectedIncidentRadiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Reflectivity
+<http://hit2gap.eu/h2g/h2gProperty#Reflectivity> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                 rdfs:comment "Reflectivity represents an observation of the  reflectivity of an elment in the building."@en ;
+                                                 rdfs:label "Reflectivity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Shape
+<http://hit2gap.eu/h2g/h2gProperty#Shape> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                          rdfs:comment "Shape represents an observation of the  measure of the shape of an elment in the building."@en ;
+                                          rdfs:label "Shape"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Slope
+<http://hit2gap.eu/h2g/h2gProperty#Slope> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Shape> ;
+                                          rdfs:comment "Slope represents an observation of the  slope of an elment in the building."@en ;
+                                          rdfs:label "Slope"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity
+<http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Capacity> ;
+                                                  rdfs:comment "SpaceCapacity represents an observation of the  measure of the capacity of the space  in the building."@en ;
+                                                  rdfs:label "SpaceCapacity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Speed
+<http://hit2gap.eu/h2g/h2gProperty#Speed> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                          rdfs:comment "Speed represents an observation of the  measure of the speed of an elment in the building in a specific time."@en ;
+                                          rdfs:label "Speed"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#State
+<http://hit2gap.eu/h2g/h2gProperty#State> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                          rdfs:comment "State represents an observation of the  state of an element in the building."@en ;
+                                          rdfs:label "State"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Streess
+<http://hit2gap.eu/h2g/h2gProperty#Streess> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties> ;
+                                            rdfs:comment "Stress represents an observation of the  measure of the stress of an occupant of the building in a specific time."@en ;
+                                            rdfs:label "Stress"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Temperate
+<http://hit2gap.eu/h2g/h2gProperty#Temperate> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Climate> ;
+                                              rdfs:comment "Temperate represents an observation of the temperate climate in a specific time."@en ;
+                                              rdfs:label "Temperate"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Temperature
+<http://hit2gap.eu/h2g/h2gProperty#Temperature> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                rdfs:comment "Temperature represents an observation of the  measure of the temperature  in a specific time."@en ;
+                                                rdfs:label "Temperature"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Tension
+<http://hit2gap.eu/h2g/h2gProperty#Tension> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                            rdfs:comment "Tension represents an observation of the  measure of the tension of an element in the building."@en ;
+                                            rdfs:label "Tension"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Time
+<http://hit2gap.eu/h2g/h2gProperty#Time> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                         rdfs:comment "Time represents an observation of the  measure of the time."@en ;
+                                         rdfs:label "Time"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#TransmittedIncidentRadiation
+<http://hit2gap.eu/h2g/h2gProperty#TransmittedIncidentRadiation> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation> ;
+                                                                 rdfs:comment "TransmittedIncidentRadiation represents an observation of the  measure of the transmittedincident radiation  in a specific time."@en ;
+                                                                 rdfs:label "TransmittedIncidentRadiation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Transparency
+<http://hit2gap.eu/h2g/h2gProperty#Transparency> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                 rdfs:comment "Transparency represents an observation of the  measure of the transparence of an elment in the building in a specific time."@en ;
+                                                 rdfs:label "Transparency"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Tropical
+<http://hit2gap.eu/h2g/h2gProperty#Tropical> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Climate> ;
+                                             rdfs:comment "Tropical represents an observation of the tropical climate in a specific time."@en ;
+                                             rdfs:label "Tropical"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Velocity
+<http://hit2gap.eu/h2g/h2gProperty#Velocity> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                             rdfs:comment "Velocity represents an observation of the  measure of the velocity of an elment in the building in a specific time."@en ;
+                                             rdfs:label "Velocity"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Visibility
+<http://hit2gap.eu/h2g/h2gProperty#Visibility> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                               rdfs:comment "Visibility represents an observation of the  measure of the visibility of an elment in the building in a specific time."@en ;
+                                               rdfs:label "Visibility"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Volume
+<http://hit2gap.eu/h2g/h2gProperty#Volume> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                           rdfs:comment "Volume represents an observation of the  measure of the volume of an elment in the building in a specific time."@en ;
+                                           rdfs:label "Volume"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Weight
+<http://hit2gap.eu/h2g/h2gProperty#Weight> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Shape> ;
+                                           rdfs:comment "Weight represents an observation of the  weight of an elment in the building."@en ;
+                                           rdfs:label "Weight"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Width
+<http://hit2gap.eu/h2g/h2gProperty#Width> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#Shape> ;
+                                          rdfs:comment "Width represents an observation of the  width of an elment in the building."@en ;
+                                          rdfs:label "Width"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#WindOrientation
+<http://hit2gap.eu/h2g/h2gProperty#WindOrientation> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                                    rdfs:comment "WindOrientation represents an observation of the  measure of the wind orientation in a specific time."@en ;
+                                                    rdfs:label "WindOrientation"@en .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#WindSpeed
+<http://hit2gap.eu/h2g/h2gProperty#WindSpeed> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties> ;
+                                              rdfs:comment "WindSpeed represents an observation of the  measure of the wind speed  in a specific time."@en ;
+                                              rdfs:label "WindSpeed"@en .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Property
+<http://purl.oclc.org/NET/ssnx/ssn#Property> rdf:type owl:Class ;
+                                             rdfs:comment "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
+                                             rdfs:label "Property"@en .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://hit2gap.eu/h2g/h2gProperty#ColdDesert
+<http://hit2gap.eu/h2g/h2gProperty#ColdDesert> rdf:type owl:NamedIndividual ,
+                                                        <http://hit2gap.eu/h2g/h2gProperty#Arid> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid
+<http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid> rdf:type owl:NamedIndividual ,
+                                                          <http://hit2gap.eu/h2g/h2gProperty#Arid> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean
+<http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean> rdf:type owl:NamedIndividual ,
+                                                                     <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic
+<http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic> rdf:type owl:NamedIndividual ,
+                                                                <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic
+<http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic> rdf:type owl:NamedIndividual ,
+                                                                             <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic
+<http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic> rdf:type owl:NamedIndividual ,
+                                                                   <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra
+<http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra> rdf:type owl:NamedIndividual ,
+                                                             <http://hit2gap.eu/h2g/h2gProperty#Polar> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#HotDesert
+<http://hit2gap.eu/h2g/h2gProperty#HotDesert> rdf:type owl:NamedIndividual ,
+                                                       <http://hit2gap.eu/h2g/h2gProperty#Arid> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental
+<http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental> rdf:type owl:NamedIndividual ,
+                                                                     <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#HotSemiArid
+<http://hit2gap.eu/h2g/h2gProperty#HotSemiArid> rdf:type owl:NamedIndividual ,
+                                                         <http://hit2gap.eu/h2g/h2gProperty#Arid> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental
+<http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental> rdf:type owl:NamedIndividual ,
+                                                                       <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean
+<http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean> rdf:type owl:NamedIndividual ,
+                                                                    <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical
+<http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical> rdf:type owl:NamedIndividual ,
+                                                              <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#IceCap
+<http://hit2gap.eu/h2g/h2gProperty#IceCap> rdf:type owl:NamedIndividual ,
+                                                    <http://hit2gap.eu/h2g/h2gProperty#Polar> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MildDesert
+<http://hit2gap.eu/h2g/h2gProperty#MildDesert> rdf:type owl:NamedIndividual ,
+                                                        <http://hit2gap.eu/h2g/h2gProperty#Arid> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MildSemiArid
+<http://hit2gap.eu/h2g/h2gProperty#MildSemiArid> rdf:type owl:NamedIndividual ,
+                                                          <http://hit2gap.eu/h2g/h2gProperty#Arid> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MildTundra
+<http://hit2gap.eu/h2g/h2gProperty#MildTundra> rdf:type owl:NamedIndividual ,
+                                                        <http://hit2gap.eu/h2g/h2gProperty#Polar> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic
+<http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic> rdf:type owl:NamedIndividual ,
+                                                                                     <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental
+<http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental> rdf:type owl:NamedIndividual ,
+                                                                                        <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical
+<http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical> rdf:type owl:NamedIndividual ,
+                                                                               <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic
+<http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic> rdf:type owl:NamedIndividual ,
+                                                                       <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental
+<http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental> rdf:type owl:NamedIndividual ,
+                                                                                         <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters
+<http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters> rdf:type owl:NamedIndividual ,
+                                                                           <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#Subartic
+<http://hit2gap.eu/h2g/h2gProperty#Subartic> rdf:type owl:NamedIndividual ,
+                                                      <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic
+<http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic> rdf:type owl:NamedIndividual ,
+                                                             <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic
+<http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic> rdf:type owl:NamedIndividual ,
+                                                              <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters
+<http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters> rdf:type owl:NamedIndividual ,
+                                                                            <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon
+<http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon> rdf:type owl:NamedIndividual ,
+                                                             <http://hit2gap.eu/h2g/h2gProperty#Tropical> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest
+<http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest> rdf:type owl:NamedIndividual ,
+                                                                <http://hit2gap.eu/h2g/h2gProperty#Tropical> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna
+<http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna> rdf:type owl:NamedIndividual ,
+                                                             <http://hit2gap.eu/h2g/h2gProperty#Tropical> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental
+<http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental> rdf:type owl:NamedIndividual ,
+                                                                      <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental
+<http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental> rdf:type owl:NamedIndividual ,
+                                                                        <http://hit2gap.eu/h2g/h2gProperty#Continental> .
+
+
+###  http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean
+<http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean> rdf:type owl:NamedIndividual ,
+                                                                     <http://hit2gap.eu/h2g/h2gProperty#Temperate> .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
