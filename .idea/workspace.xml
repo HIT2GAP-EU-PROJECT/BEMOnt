@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-highlight/ebook.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-highlight/website.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-livereload/plugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/lunr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/search-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/search.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/ActionSpecification.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingAppliance.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingGridDescription.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingInfrastructure.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/BuildingStateSpecification.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/DriversSpecificationModel.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/EconomicProperties.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/FoI.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/NeedsSpecificationModel.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/OccupantBehaviour.plantuml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/OccupantRelationModel.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/OccupantSpecificModel.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/OccupantStateProperties.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/PhysicProperties.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/Property.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/SemanticSchemas.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/SensorRepresentation.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/plantuml/geo.puml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_book/search_index.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-lunr/lunr.min.js" afterPath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-lunr/lunr.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -808,14 +756,7 @@
       <workItem from="1505380623147" duration="309000" />
       <workItem from="1506324149314" duration="798000" />
       <workItem from="1506330815322" duration="506000" />
-      <workItem from="1506409796061" duration="611000" />
-    </task>
-    <task id="LOCAL-00018" summary="Description of the properties and summary update">
-      <created>1493817518222</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1493817518222</updated>
+      <workItem from="1506409796061" duration="697000" />
     </task>
     <task id="LOCAL-00019" summary="Merge branch Building Infrastructure">
       <created>1493818201132</created>
@@ -1153,11 +1094,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506410281562</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Update documentation with images">
+      <created>1506410490270</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1506410490270</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113774000" />
+    <option name="totallyTimeSpent" value="113860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1237,7 +1185,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OWL implementation of the BuildingState" />
     <MESSAGE value="OWL implementation Drivers part (initial version)" />
     <MESSAGE value="OWL implementation Drivers part (defined version) and the incorporation of the User and IfcActor part" />
     <MESSAGE value="Initial version of the OWL User Behaviour Ontology" />
@@ -1262,7 +1209,8 @@
     <MESSAGE value="Update documentation with the ontology docs" />
     <MESSAGE value="Update the Gitbook documentation with the generated ontology html docs" />
     <MESSAGE value="Update the Gitbook documentation images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the Gitbook documentation images" />
+    <MESSAGE value="Update documentation with images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update documentation with images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
