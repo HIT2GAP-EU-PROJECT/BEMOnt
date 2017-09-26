@@ -1,0 +1,326 @@
+<http://hit2gap.eu/ontomg#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/contributor> "Aitor Corchero (aitor.corchero@eurecat.org)"@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/contributor> "Pierre Bourreau (pbourreau@nobatek.com)"@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/contributor> "Yudith Cardinale (ycardinale@usb.ve)"@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/creator> "Khouloud Salameh (khouloud.salameh@gmail.com)"@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/creator> "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/description> "This semantic model is focused on describing microgrid elements.  In this model, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows, and the different building systems linked with that flows."@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/elements/1.1/title> "Hit2Gap Ontology-OntoMG"@en .
+<http://hit2gap.eu/ontomg#> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://hit2gap.eu/ontomg#hasA
+<http://hit2gap.eu/ontomg#hasA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/ontomg#hasBranch
+<http://hit2gap.eu/ontomg#hasBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://hit2gap.eu/ontomg#isComposedOf
+<http://hit2gap.eu/ontomg#isComposedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://hit2gap.eu/ontomg#AcDcConverter
+<http://hit2gap.eu/ontomg#AcDcConverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#AcDcConverter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Converter> .
+<http://hit2gap.eu/ontomg#AcDcConverter> <http://www.w3.org/2000/01/rdf-schema#comment> "An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC."@en .
+<http://hit2gap.eu/ontomg#AcDcConverter> <http://www.w3.org/2000/01/rdf-schema#label> "AcDcConverter"@en .
+# 
+# http://hit2gap.eu/ontomg#BiomassBranch
+<http://hit2gap.eu/ontomg#BiomassBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#BiomassBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#BiomassBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "BiomassBranch represents a  branch which produces energy by burning wood and other organic matter."@en .
+<http://hit2gap.eu/ontomg#BiomassBranch> <http://www.w3.org/2000/01/rdf-schema#label> "BiomassBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#Branch
+<http://hit2gap.eu/ontomg#Branch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#Branch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/ontomg#BranchController> .
+<http://hit2gap.eu/ontomg#Branch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#isComposedOf> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/ontomg#Branch> .
+<http://hit2gap.eu/ontomg#Branch> <http://www.w3.org/2000/01/rdf-schema#comment> "A branch is an energy consumer or producer that has a specific energy load over a certain time span (called energyprofile)."@en .
+<http://hit2gap.eu/ontomg#Branch> <http://www.w3.org/2000/01/rdf-schema#label> "Branch"@en .
+# 
+# http://hit2gap.eu/ontomg#BranchController
+<http://hit2gap.eu/ontomg#BranchController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#BranchController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#CIMConductingEquipement> .
+<http://hit2gap.eu/ontomg#BranchController> <http://www.w3.org/2000/01/rdf-schema#comment> "A Branch Controller is the manager of  branch operations."@en .
+<http://hit2gap.eu/ontomg#BranchController> <http://www.w3.org/2000/01/rdf-schema#label> "BranchController"@en .
+# 
+# http://hit2gap.eu/ontomg#BranchSwitch
+<http://hit2gap.eu/ontomg#BranchSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#BranchSwitch> <http://www.w3.org/2000/01/rdf-schema#comment> "The Branch Switch is responsible of turning on/off a branch."@en .
+<http://hit2gap.eu/ontomg#BranchSwitch> <http://www.w3.org/2000/01/rdf-schema#label> "BranchSwitch"@en .
+# 
+# http://hit2gap.eu/ontomg#CHPBranch
+<http://hit2gap.eu/ontomg#CHPBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#CHPBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#CHPBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "CHPBranch represents a combined heat and power (CHP) branch, which uses  a heat engine or power station to generate electricity and useful heat at the same time."@en .
+<http://hit2gap.eu/ontomg#CHPBranch> <http://www.w3.org/2000/01/rdf-schema#label> "CHPBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#CIMConductingEquipement
+<http://hit2gap.eu/ontomg#CIMConductingEquipement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#CIMConductingEquipement> <http://www.w3.org/2000/01/rdf-schema#comment> "A ConductingEquipment concept, represents the parts of the power system that are designed to carry current. This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information\nmodel being part of the IEC 61970 standards."@en .
+<http://hit2gap.eu/ontomg#CIMConductingEquipement> <http://www.w3.org/2000/01/rdf-schema#label> "CIMConductingEquipement"@en .
+# 
+# http://hit2gap.eu/ontomg#CIMRectifierInverter
+<http://hit2gap.eu/ontomg#CIMRectifierInverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#CIMRectifierInverter> <http://www.w3.org/2000/01/rdf-schema#comment> "A CIMRectifierInverter concept, represents the parts of the power system that are designed to inverte/rectify current.  \nAn inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.\nThis concepts is from the  Common Information Model (CIM), which is a widely accepted energy information model being part of the IEC 61970 standards."@en .
+<http://hit2gap.eu/ontomg#CIMRectifierInverter> <http://www.w3.org/2000/01/rdf-schema#label> "CIMRectifierInverter"@en .
+# 
+# http://hit2gap.eu/ontomg#CoalBranch
+<http://hit2gap.eu/ontomg#CoalBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#CoalBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#CoalBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "CoalBranch represents a  branch which uses coal  to generate energy."@en .
+<http://hit2gap.eu/ontomg#CoalBranch> <http://www.w3.org/2000/01/rdf-schema#label> "CoalBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#Converter
+<http://hit2gap.eu/ontomg#Converter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#Converter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#CIMRectifierInverter> .
+<http://hit2gap.eu/ontomg#Converter> <http://www.w3.org/2000/01/rdf-schema#comment> "An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC."@en .
+<http://hit2gap.eu/ontomg#Converter> <http://www.w3.org/2000/01/rdf-schema#label> "Converter"@en .
+# 
+# http://hit2gap.eu/ontomg#DERBranch
+<http://hit2gap.eu/ontomg#DERBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#DERBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Branch> .
+<http://hit2gap.eu/ontomg#DERBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/ontomg#BranchSwitch> .
+<http://hit2gap.eu/ontomg#DERBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "DERBranch represents a distributed energy resource branch, which consists of renewable or nonrenewable energy sources."@en .
+<http://hit2gap.eu/ontomg#DERBranch> <http://www.w3.org/2000/01/rdf-schema#label> "DERBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#DieselGenerator
+<http://hit2gap.eu/ontomg#DieselGenerator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#DieselGenerator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#DieselGenerator> <http://www.w3.org/2000/01/rdf-schema#comment> "A DieselGenerator is the combination of a diesel engine with an electric generator (often an alternator) to generate electrical energy."@en .
+<http://hit2gap.eu/ontomg#DieselGenerator> <http://www.w3.org/2000/01/rdf-schema#label> "DieselGenerator"@en .
+# 
+# http://hit2gap.eu/ontomg#ELBranch
+<http://hit2gap.eu/ontomg#ELBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#ELBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Branch> .
+<http://hit2gap.eu/ontomg#ELBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "An Electrical Load Branch is an electrical component or branch that consumes electric power. It mainly consists of electrical appliance components."@en .
+<http://hit2gap.eu/ontomg#ELBranch> <http://www.w3.org/2000/01/rdf-schema#label> "ELBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#ESBranch
+<http://hit2gap.eu/ontomg#ESBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#ESBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Branch> .
+<http://hit2gap.eu/ontomg#ESBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy storage systems play an essential role in stabilizing the power system, improving the quality of power supply, and achieving power peak shaving. The energy storage branch consists mainly of the energy storage device (e.g., flywheel, super-capacitor) and a converter."@en .
+<http://hit2gap.eu/ontomg#ESBranch> <http://www.w3.org/2000/01/rdf-schema#label> "ESBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#FuelCellBranch
+<http://hit2gap.eu/ontomg#FuelCellBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#FuelCellBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#OilBranch> .
+<http://hit2gap.eu/ontomg#FuelCellBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/ontomg#Converter> .
+<http://hit2gap.eu/ontomg#FuelCellBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/ontomg#DieselGenerator> .
+<http://hit2gap.eu/ontomg#FuelCellBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "FuelCellBranch is an electrochemical energy conversion device. It produces electricity from external supplies of fuel (on the anode side) and oxidant (on the cathode side). These reacts in the presence of an electrolyte."@en .
+<http://hit2gap.eu/ontomg#FuelCellBranch> <http://www.w3.org/2000/01/rdf-schema#label> "FuelCellBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#GasBranch
+<http://hit2gap.eu/ontomg#GasBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#GasBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#GasBranch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GasBranch represents a  branch which uses gas  to generate energy."@en .
+<http://hit2gap.eu/ontomg#GasBranch> <http://www.w3.org/2000/01/rdf-schema#label> "GasBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#GeoThermalBranch
+<http://hit2gap.eu/ontomg#GeoThermalBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#GeoThermalBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#GeoThermalBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "GeoThermalBranch represents a  branch which produces geothermal energy.\nGeothermal resources are reservoirs of hot water that exist at varying temperatures and depths below the Earth's surface."@en .
+<http://hit2gap.eu/ontomg#GeoThermalBranch> <http://www.w3.org/2000/01/rdf-schema#label> "GeoThermalBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#HydroPowerBranch
+<http://hit2gap.eu/ontomg#HydroPowerBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#HydroPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#HydroPowerBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "HydroPowerBranch represents a  branch which produces energy derived from the energy of falling water or fast running water."@en .
+<http://hit2gap.eu/ontomg#HydroPowerBranch> <http://www.w3.org/2000/01/rdf-schema#label> "HydroPowerBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#InfraBranch
+<http://hit2gap.eu/ontomg#InfraBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#InfraBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Branch> .
+<http://hit2gap.eu/ontomg#InfraBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "An InfraBranch represents an infrastructure branch, where each has its own Branch Switch and Branch Controller."@en .
+<http://hit2gap.eu/ontomg#InfraBranch> <http://www.w3.org/2000/01/rdf-schema#label> "InfraBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#Inverter
+<http://hit2gap.eu/ontomg#Inverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#Inverter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Converter> .
+<http://hit2gap.eu/ontomg#Inverter> <http://www.w3.org/2000/01/rdf-schema#comment> "An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC. An inverter can be a Monophasic  or a Triphasic."@en .
+<http://hit2gap.eu/ontomg#Inverter> <http://www.w3.org/2000/01/rdf-schema#label> "Inverter"@en .
+# 
+# http://hit2gap.eu/ontomg#MicroCHPBranch
+<http://hit2gap.eu/ontomg#MicroCHPBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#MicroCHPBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#MicroCHPBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "MicroCHPBranch represents a micro combined heat and power (CHP) branch, which uses  a heat engine or power station to generate electricity and useful heat at the same time."@en .
+<http://hit2gap.eu/ontomg#MicroCHPBranch> <http://www.w3.org/2000/01/rdf-schema#label> "MicroCHPBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#Microgrid
+<http://hit2gap.eu/ontomg#Microgrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#Microgrid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasBranch> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/ontomg#Branch> .
+<http://hit2gap.eu/ontomg#Microgrid> <http://www.w3.org/2000/01/rdf-schema#comment> "A microgrid is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows."@en .
+<http://hit2gap.eu/ontomg#Microgrid> <http://www.w3.org/2000/01/rdf-schema#label> "Microgrid"@en .
+# 
+# http://hit2gap.eu/ontomg#MicroturbinesBranch
+<http://hit2gap.eu/ontomg#MicroturbinesBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#MicroturbinesBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#MicroturbinesBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "MicroturbinesBranch represents a  branch with a type of combustion turbine that produces both heat and electricity on a relatively small scale."@en .
+<http://hit2gap.eu/ontomg#MicroturbinesBranch> <http://www.w3.org/2000/01/rdf-schema#label> "MicroturbinesBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#MonophasicInverter
+<http://hit2gap.eu/ontomg#MonophasicInverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#MonophasicInverter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Inverter> .
+<http://hit2gap.eu/ontomg#MonophasicInverter> <http://www.w3.org/2000/01/rdf-schema#comment> "An Inverter can be a Monophasic  or a Triphasic."@en .
+<http://hit2gap.eu/ontomg#MonophasicInverter> <http://www.w3.org/2000/01/rdf-schema#label> "MonophasicInverter"@en .
+# 
+# http://hit2gap.eu/ontomg#NonRenewableDERBranch
+<http://hit2gap.eu/ontomg#NonRenewableDERBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#NonRenewableDERBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#DERBranch> .
+<http://hit2gap.eu/ontomg#NonRenewableDERBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "NonRenewableDERBranch represents the non-renewable distributed energy resource branches."@en .
+<http://hit2gap.eu/ontomg#NonRenewableDERBranch> <http://www.w3.org/2000/01/rdf-schema#label> "NonRenewableDERBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#NuclearBranch
+<http://hit2gap.eu/ontomg#NuclearBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#NuclearBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#NuclearBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "NuclearBranch represents a  branch, which uses nuclear energy to generate energy."@en .
+<http://hit2gap.eu/ontomg#NuclearBranch> <http://www.w3.org/2000/01/rdf-schema#label> "NuclearBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#OilBranch
+<http://hit2gap.eu/ontomg#OilBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#OilBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#OilBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "OilBranch represents a  branch which uses oil to generate energy."@en .
+<http://hit2gap.eu/ontomg#OilBranch> <http://www.w3.org/2000/01/rdf-schema#label> "OilBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#PhotovoltaicBranch
+<http://hit2gap.eu/ontomg#PhotovoltaicBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#PhotovoltaicBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#PhotovoltaicBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "A PhotovoltaicBranch represents a photovoltaic power system that directly converts solar energy into electricity."@en .
+<http://hit2gap.eu/ontomg#PhotovoltaicBranch> <http://www.w3.org/2000/01/rdf-schema#label> "PhotovoltaicBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#ReciprocatingBranch
+<http://hit2gap.eu/ontomg#ReciprocatingBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#ReciprocatingBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#ReciprocatingBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "ReciprocatingBranch is an engine that utilizes one or more pressure-driven pistons in order to convert back-and-forth motion into a rotating motion. The most common form of reciprocating engine used to generate electricity is the diesel engine, which is used in combination with an electric generator to form a diesel generator."@en .
+<http://hit2gap.eu/ontomg#ReciprocatingBranch> <http://www.w3.org/2000/01/rdf-schema#label> "ReciprocatingBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#RegulatingCondEq
+<http://hit2gap.eu/ontomg#RegulatingCondEq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#RegulatingCondEq> <http://www.w3.org/2000/01/rdf-schema#label> "RegulatingCondEq"@en .
+# 
+# http://hit2gap.eu/ontomg#RenewableDERBranch
+<http://hit2gap.eu/ontomg#RenewableDERBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#RenewableDERBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#DERBranch> .
+<http://hit2gap.eu/ontomg#RenewableDERBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "RenewableDERBranch represents the renewable distributed energy resource branches."@en .
+<http://hit2gap.eu/ontomg#RenewableDERBranch> <http://www.w3.org/2000/01/rdf-schema#label> "RenewableDERBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#SmallWindPowerBranch
+<http://hit2gap.eu/ontomg#SmallWindPowerBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#SmallWindPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#SmallWindPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/ontomg#SmallWindTurbine> .
+<http://hit2gap.eu/ontomg#SmallWindPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/ontomg#Converter> .
+<http://hit2gap.eu/ontomg#SmallWindPowerBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "SmallWindPowerBranch represents a branch that uses air flow through wind turbines to mechanically generate electric power."@en .
+<http://hit2gap.eu/ontomg#SmallWindPowerBranch> <http://www.w3.org/2000/01/rdf-schema#label> "SmallWindPowerBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#SmallWindTurbine
+<http://hit2gap.eu/ontomg#SmallWindTurbine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#SmallWindTurbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RegulatingCondEq> .
+<http://hit2gap.eu/ontomg#SmallWindTurbine> <http://www.w3.org/2000/01/rdf-schema#label> "SmallWindTurbine"@en .
+# 
+# http://hit2gap.eu/ontomg#SolarCell
+<http://hit2gap.eu/ontomg#SolarCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#SolarCell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RegulatingCondEq> .
+<http://hit2gap.eu/ontomg#SolarCell> <http://www.w3.org/2000/01/rdf-schema#label> "SolarCell"@en .
+# 
+# http://hit2gap.eu/ontomg#SolarHybridBranch
+<http://hit2gap.eu/ontomg#SolarHybridBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#SolarHybridBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#SolarHybridBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "A SolarHybridBranch represents a power system that the transforms  energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination."@en .
+<http://hit2gap.eu/ontomg#SolarHybridBranch> <http://www.w3.org/2000/01/rdf-schema#label> "SolarHybridBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#SolarPowerBranch
+<http://hit2gap.eu/ontomg#SolarPowerBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#SolarPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#SolarPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://hit2gap.eu/ontomg#SolarCell> .
+<http://hit2gap.eu/ontomg#SolarPowerBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://hit2gap.eu/ontomg#hasA> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://hit2gap.eu/ontomg#Converter> .
+<http://hit2gap.eu/ontomg#SolarPowerBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "A SolarPowerBranch represents a power system that directly converts solar energy into electricity."@en .
+<http://hit2gap.eu/ontomg#SolarPowerBranch> <http://www.w3.org/2000/01/rdf-schema#label> "SolarPowerBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#StirlingBranch
+<http://hit2gap.eu/ontomg#StirlingBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#StirlingBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#NonRenewableDERBranch> .
+<http://hit2gap.eu/ontomg#StirlingBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "A StirlingBranch represents a heat engine that operates by cyclic compression and expansion of air or other gas (the working fluid) at different temperatures, such that there is a net conversion of heat energy to mechanical work. More specifically, the Stirling engine is a closed-cycle regenerative heat engine with a permanently gaseous working fluid."@en .
+<http://hit2gap.eu/ontomg#StirlingBranch> <http://www.w3.org/2000/01/rdf-schema#label> "StirlingBranch"@en .
+# 
+# http://hit2gap.eu/ontomg#TriphasicInverter
+<http://hit2gap.eu/ontomg#TriphasicInverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#TriphasicInverter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#Inverter> .
+<http://hit2gap.eu/ontomg#TriphasicInverter> <http://www.w3.org/2000/01/rdf-schema#comment> "An Inverter can be a Monophasic  or a Triphasic."@en .
+<http://hit2gap.eu/ontomg#TriphasicInverter> <http://www.w3.org/2000/01/rdf-schema#label> "TriphasicInverter"@en .
+# 
+# http://hit2gap.eu/ontomg#WindHybridBranch
+<http://hit2gap.eu/ontomg#WindHybridBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://hit2gap.eu/ontomg#WindHybridBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://hit2gap.eu/ontomg#RenewableDERBranch> .
+<http://hit2gap.eu/ontomg#WindHybridBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "WindHybridBranch represents the use of air flow through wind turbines to mechanically power generators for electric power."@en .
+<http://hit2gap.eu/ontomg#WindHybridBranch> <http://www.w3.org/2000/01/rdf-schema#label> "WindHybridBranch"@en .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

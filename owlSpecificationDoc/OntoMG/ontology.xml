@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://hit2gap.eu/ontomg#"
+     xml:base="http://hit2gap.eu/ontomg"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://hit2gap.eu/ontomg#">
+        <dc:contributor xml:lang="en">Aitor Corchero (aitor.corchero@eurecat.org)</dc:contributor>
+        <dc:contributor xml:lang="en">Pierre Bourreau (pbourreau@nobatek.com)</dc:contributor>
+        <dc:contributor xml:lang="en">Yudith Cardinale (ycardinale@usb.ve)</dc:contributor>
+        <dc:creator xml:lang="en">Khouloud Salameh (khouloud.salameh@gmail.com)</dc:creator>
+        <dc:creator xml:lang="en">Richard Chbeir (richard.chbeir@univ-pau.fr)</dc:creator>
+        <dc:description xml:lang="en">This semantic model is focused on describing microgrid elements.  In this model, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows, and the different building systems linked with that flows.</dc:description>
+        <dc:title xml:lang="en">Hit2Gap Ontology-OntoMG</dc:title>
+        <terms:license xml:lang="en">https://opensource.org/licenses/MIT</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#hasA -->
+
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/ontomg#hasA"/>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#hasBranch -->
+
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/ontomg#hasBranch"/>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#isComposedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/ontomg#isComposedOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#AcDcConverter -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#AcDcConverter">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Converter"/>
+        <rdfs:comment xml:lang="en">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.</rdfs:comment>
+        <rdfs:label xml:lang="en">AcDcConverter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#BiomassBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#BiomassBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">BiomassBranch represents a  branch which produces energy by burning wood and other organic matter.</rdfs:comment>
+        <rdfs:label xml:lang="en">BiomassBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#Branch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#Branch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#BranchController"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Branch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A branch is an energy consumer or producer that has a specific energy load over a certain time span (called energyprofile).</rdfs:comment>
+        <rdfs:label xml:lang="en">Branch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#BranchController -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#BranchController">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#CIMConductingEquipement"/>
+        <rdfs:comment xml:lang="en">A Branch Controller is the manager of  branch operations.</rdfs:comment>
+        <rdfs:label xml:lang="en">BranchController</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#BranchSwitch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#BranchSwitch">
+        <rdfs:comment xml:lang="en">The Branch Switch is responsible of turning on/off a branch.</rdfs:comment>
+        <rdfs:label xml:lang="en">BranchSwitch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#CHPBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#CHPBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">CHPBranch represents a combined heat and power (CHP) branch, which uses  a heat engine or power station to generate electricity and useful heat at the same time.</rdfs:comment>
+        <rdfs:label xml:lang="en">CHPBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#CIMConductingEquipement -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#CIMConductingEquipement">
+        <rdfs:comment xml:lang="en">A ConductingEquipment concept, represents the parts of the power system that are designed to carry current. This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information
+model being part of the IEC 61970 standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">CIMConductingEquipement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#CIMRectifierInverter -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#CIMRectifierInverter">
+        <rdfs:comment xml:lang="en">A CIMRectifierInverter concept, represents the parts of the power system that are designed to inverte/rectify current.  
+An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.
+This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information model being part of the IEC 61970 standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">CIMRectifierInverter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#CoalBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#CoalBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">CoalBranch represents a  branch which uses coal  to generate energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">CoalBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#Converter -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#Converter">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#CIMRectifierInverter"/>
+        <rdfs:comment xml:lang="en">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.</rdfs:comment>
+        <rdfs:label xml:lang="en">Converter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#DERBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#DERBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Branch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#BranchSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">DERBranch represents a distributed energy resource branch, which consists of renewable or nonrenewable energy sources.</rdfs:comment>
+        <rdfs:label xml:lang="en">DERBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#DieselGenerator -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#DieselGenerator">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">A DieselGenerator is the combination of a diesel engine with an electric generator (often an alternator) to generate electrical energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">DieselGenerator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#ELBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#ELBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Branch"/>
+        <rdfs:comment xml:lang="en">An Electrical Load Branch is an electrical component or branch that consumes electric power. It mainly consists of electrical appliance components.</rdfs:comment>
+        <rdfs:label xml:lang="en">ELBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#ESBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#ESBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Branch"/>
+        <rdfs:comment xml:lang="en">Energy storage systems play an essential role in stabilizing the power system, improving the quality of power supply, and achieving power peak shaving. The energy storage branch consists mainly of the energy storage device (e.g., flywheel, super-capacitor) and a converter.</rdfs:comment>
+        <rdfs:label xml:lang="en">ESBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#FuelCellBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#FuelCellBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#OilBranch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Converter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/ontomg#DieselGenerator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">FuelCellBranch is an electrochemical energy conversion device. It produces electricity from external supplies of fuel (on the anode side) and oxidant (on the cathode side). These reacts in the presence of an electrolyte.</rdfs:comment>
+        <rdfs:label xml:lang="en">FuelCellBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#GasBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#GasBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:isDefinedBy xml:lang="en">GasBranch represents a  branch which uses gas  to generate energy.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">GasBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#GeoThermalBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#GeoThermalBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">GeoThermalBranch represents a  branch which produces geothermal energy.
+Geothermal resources are reservoirs of hot water that exist at varying temperatures and depths below the Earth&apos;s surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeoThermalBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#HydroPowerBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#HydroPowerBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">HydroPowerBranch represents a  branch which produces energy derived from the energy of falling water or fast running water.</rdfs:comment>
+        <rdfs:label xml:lang="en">HydroPowerBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#InfraBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#InfraBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Branch"/>
+        <rdfs:comment xml:lang="en">An InfraBranch represents an infrastructure branch, where each has its own Branch Switch and Branch Controller.</rdfs:comment>
+        <rdfs:label xml:lang="en">InfraBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#Inverter -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#Inverter">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Converter"/>
+        <rdfs:comment xml:lang="en">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC. An inverter can be a Monophasic  or a Triphasic.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inverter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#MicroCHPBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#MicroCHPBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">MicroCHPBranch represents a micro combined heat and power (CHP) branch, which uses  a heat engine or power station to generate electricity and useful heat at the same time.</rdfs:comment>
+        <rdfs:label xml:lang="en">MicroCHPBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#Microgrid -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#Microgrid">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Branch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A microgrid is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microgrid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#MicroturbinesBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#MicroturbinesBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">MicroturbinesBranch represents a  branch with a type of combustion turbine that produces both heat and electricity on a relatively small scale.</rdfs:comment>
+        <rdfs:label xml:lang="en">MicroturbinesBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#MonophasicInverter -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#MonophasicInverter">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Inverter"/>
+        <rdfs:comment xml:lang="en">An Inverter can be a Monophasic  or a Triphasic.</rdfs:comment>
+        <rdfs:label xml:lang="en">MonophasicInverter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#NonRenewableDERBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#NonRenewableDERBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#DERBranch"/>
+        <rdfs:comment xml:lang="en">NonRenewableDERBranch represents the non-renewable distributed energy resource branches.</rdfs:comment>
+        <rdfs:label xml:lang="en">NonRenewableDERBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#NuclearBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#NuclearBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">NuclearBranch represents a  branch, which uses nuclear energy to generate energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">NuclearBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#OilBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#OilBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">OilBranch represents a  branch which uses oil to generate energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">OilBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#PhotovoltaicBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#PhotovoltaicBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">A PhotovoltaicBranch represents a photovoltaic power system that directly converts solar energy into electricity.</rdfs:comment>
+        <rdfs:label xml:lang="en">PhotovoltaicBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#ReciprocatingBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#ReciprocatingBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">ReciprocatingBranch is an engine that utilizes one or more pressure-driven pistons in order to convert back-and-forth motion into a rotating motion. The most common form of reciprocating engine used to generate electricity is the diesel engine, which is used in combination with an electric generator to form a diesel generator.</rdfs:comment>
+        <rdfs:label xml:lang="en">ReciprocatingBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#RegulatingCondEq -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#RegulatingCondEq">
+        <rdfs:label xml:lang="en">RegulatingCondEq</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#RenewableDERBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#RenewableDERBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#DERBranch"/>
+        <rdfs:comment xml:lang="en">RenewableDERBranch represents the renewable distributed energy resource branches.</rdfs:comment>
+        <rdfs:label xml:lang="en">RenewableDERBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#SmallWindPowerBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#SmallWindPowerBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#SmallWindTurbine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Converter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">SmallWindPowerBranch represents a branch that uses air flow through wind turbines to mechanically generate electric power.</rdfs:comment>
+        <rdfs:label xml:lang="en">SmallWindPowerBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#SmallWindTurbine -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#SmallWindTurbine">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RegulatingCondEq"/>
+        <rdfs:label xml:lang="en">SmallWindTurbine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#SolarCell -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#SolarCell">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RegulatingCondEq"/>
+        <rdfs:label xml:lang="en">SolarCell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#SolarHybridBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#SolarHybridBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">A SolarHybridBranch represents a power system that the transforms  energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination.</rdfs:comment>
+        <rdfs:label xml:lang="en">SolarHybridBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#SolarPowerBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#SolarPowerBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#SolarCell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Converter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A SolarPowerBranch represents a power system that directly converts solar energy into electricity.</rdfs:comment>
+        <rdfs:label xml:lang="en">SolarPowerBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#StirlingBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#StirlingBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#NonRenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">A StirlingBranch represents a heat engine that operates by cyclic compression and expansion of air or other gas (the working fluid) at different temperatures, such that there is a net conversion of heat energy to mechanical work. More specifically, the Stirling engine is a closed-cycle regenerative heat engine with a permanently gaseous working fluid.</rdfs:comment>
+        <rdfs:label xml:lang="en">StirlingBranch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#TriphasicInverter -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#TriphasicInverter">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#Inverter"/>
+        <rdfs:comment xml:lang="en">An Inverter can be a Monophasic  or a Triphasic.</rdfs:comment>
+        <rdfs:label xml:lang="en">TriphasicInverter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/ontomg#WindHybridBranch -->
+
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#WindHybridBranch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
+        <rdfs:comment xml:lang="en">WindHybridBranch represents the use of air flow through wind turbines to mechanically power generators for electric power.</rdfs:comment>
+        <rdfs:label xml:lang="en">WindHybridBranch</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+
