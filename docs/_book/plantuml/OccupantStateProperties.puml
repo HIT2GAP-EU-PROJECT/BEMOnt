@@ -1,6 +1,5 @@
 @startuml
 
-scale 0.35
 
 skinparam class {
   ArrowColor DarkBlue
