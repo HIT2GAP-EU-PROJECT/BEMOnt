@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "Hit2Gap Ontology-Sensor Representation";
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Aitor Corchero (aitor.corchero@eurecat.org)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Pierre Bourreau (pbourreau@nobatek.com)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Richard Chbeir (richard.chbeir@univ-pau.fr)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Yudith Cardinale (ycardinale@usb.ve)".];
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.

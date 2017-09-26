@@ -1,0 +1,52 @@
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Building sensors are represented using the generic “Semantic Sensor Network” (SSN) ontology [1]. This model (see Figure bellow), represents a building monitoring equipment as a system, a device, or a sensor. In detail, systems can be composed of systems, devices (or multiple devices could take part of the same system) and/or sensors, which can also be part of devices (or multiple sensors could take part of the same device).
+
+Sensor measurements (or ssn:Observation in the SSN ontology and in the data model), refer to measurements generated either by building devices or by people interacting with the building (e.g., changes in temperature set-points). The Open Geospatial Consortium (OGC) [2] defines the ‘Observation and Measurement’ standard model to represent sensor information. An Observation is characterized by:
+
+- the sensor performing the measure under the concept ssn:Sensor;
+- the object/property measured: ssn:Property; this typically referes to the physical value captured by the sensor (for instance, temperature, CO2 rate, etc.);
+- the context of the object being monitored or observed: ssn:FeatureOfInterest; this can, for instance, refer to a specific zone in the building; and
+- the specific measurement as a result of the observation (ssn:Result).
+
+Moreover, because the data storage solution deployed in the HIT2GAP solution is dual, with the use of a system dedicated to the storage of time series data, an observation must be associated with an external ID, which refers to the time series data stored in Mondas, in the current development.
+
+This model allows contextualizing all related sensor information, the type of information that is being observed as well as information regarding the sensor/device/system installed (thanks to the inheritance between elements, in particular ifc:Building, h2g:BuildingAppliance, ifc:SpatialElement, ontomg:MicroGrid, ifc:BuildingElement, and ssn:FeatureOfInterest. As we will see in the following sections, the ssn:FeatureOfInterest is fundamental for aligning the different ontologies, as it is used to characterize the object that are in close relation with the property measured by a sensor.
+
+The succession of observations can be analysed; it forms a time series that can be represented using a combination between the classes offered by the SSN ontology and the Quantity, Units, Dimensions, and Time (QUDT) ontology [3]; SSN ontology provides the mechanisms to specify the values of the time series; the QUDT ontology provides mechanisms for representing specific measures and data conversions.
+
+Time intervals and temporal parameters of the observations and time series have been represented using W3C-Time ontology [4]. This semantic model facilitates the representation, abstraction, and conversion of temporal measurements. In detail, the time:Instant and time:DateTimeInterval were used to enable an observation to represent single value at a certain time or to represent multiple values (i.e. time series) during certain period of time.
+
+This way to represent semantically the sensor information facilitates data integration over different building data sources, merge the information according to their measurements for instance, and enable data provenance of the information based on describing sensor information (type of sensor, measurements, throughput, etc.).
+
+</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org/&gt;</td></tr>
+<tr><td><b>index-html</b></td><td>&lt;http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>georss</b></td><td>&lt;http://www.georss.org/georss/&gt;</td></tr>
+<tr><td><b>gml</b></td><td>&lt;http://www.opengis.net/gml/&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>h2gba</b></td><td>&lt;http://hit2gap.eu/h2g/h2gBA#&gt;</td></tr>
+<tr><td><b>ssn</b></td><td>&lt;http://www.w3.org/ns/ssn/&gt;</td></tr>
+<tr><td><b>qudt-owl</b></td><td>&lt;http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#&gt;</td></tr>
+<tr><td><b>ifc2x3-final</b></td><td>&lt;http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>time</b></td><td>&lt;http://www.w3.org/2006/time#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://hit2gap.eu/h2g/h2gSensor#&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>sosa</b></td><td>&lt;http://www.w3.org/ns/sosa/&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
