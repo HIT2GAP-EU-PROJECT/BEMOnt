@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="" />
+    <list default="true" id="b682b9d4-d786-4a90-9319-b844b7a68b22" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_1/Basics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/ActionSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/DriverSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/NeedsSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_2/OccupantSpecification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/FeaturesInterest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.md" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/GridDescription.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/IntroductionBuildingInfrastructure.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Observation_Measurement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/Phenomenom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" afterPath="$PROJECT_DIR$/docs/_book/chapter_3/geo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/index.html" afterPath="$PROJECT_DIR$/docs/_book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_book/search_index.json" afterPath="$PROJECT_DIR$/docs/_book/search_index.json" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,26 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EconomicProperties.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/EconomicProperties.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FoI.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/FoI.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="geo.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/plantuml/geo.puml">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,62 +48,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OccupantRelationModel.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/OccupantRelationModel.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="640">
+                <caret line="12" column="275" lean-forward="false" selection-start-line="12" selection-start-column="275" selection-end-line="12" selection-end-column="275" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state>
+                  <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:920}" />
+                </js_state>
+              </second_editor>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OccupantStateProperties.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/OccupantStateProperties.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhysicProperties.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/PhysicProperties.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Property.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/Property.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SemanticSchemas.puml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/SemanticSchemas.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SensorRepresentation.puml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/plantuml/SensorRepresentation.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-              <folding />
+      <file leaf-file-name="GridDescription.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="84">
+                <caret line="3" column="95" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="95" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -190,9 +159,7 @@
         <option value="$PROJECT_DIR$/docs/plantuml/BuildingInfrastructure.puml" />
         <option value="$PROJECT_DIR$/docs/_book/chapter_2/IntroOccupantBehaviour.md" />
         <option value="$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
-        <option value="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/docs/README.md" />
         <option value="$PROJECT_DIR$/docs/plantuml/NeedsSpecificationModel.puml" />
         <option value="$PROJECT_DIR$/docs/plantuml/OccupantSpecificModel.puml" />
         <option value="$PROJECT_DIR$/docs/plantuml/DriversSpecificationModel.puml" />
@@ -205,6 +172,8 @@
         <option value="$PROJECT_DIR$/docs/plantuml/PhysicProperties.puml" />
         <option value="$PROJECT_DIR$/docs/plantuml/Property.puml" />
         <option value="$PROJECT_DIR$/docs/plantuml/SensorRepresentation.puml" />
+        <option value="$PROJECT_DIR$/docs/chapter_3/GridDescription.md" />
+        <option value="$PROJECT_DIR$/docs/README.md" />
       </list>
     </option>
   </component>
@@ -214,7 +183,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1889" />
     <option name="y" value="125" />
     <option name="width" value="1920" />
@@ -256,13 +225,7 @@
               <item name="HIT2GAPOnt" type="b2602c69:ProjectViewProjectNode" />
               <item name="HIT2GAPOnt" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HIT2GAPOnt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HIT2GAPOnt" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="plantuml" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter_3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -754,14 +717,7 @@
       <workItem from="1505380623147" duration="309000" />
       <workItem from="1506324149314" duration="798000" />
       <workItem from="1506330815322" duration="506000" />
-      <workItem from="1506409796061" duration="715000" />
-    </task>
-    <task id="LOCAL-00020" summary="Merge branch Building Infrastructure">
-      <created>1493819307965</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1493819307965</updated>
+      <workItem from="1506409796061" duration="1974000" />
     </task>
     <task id="LOCAL-00021" summary="Update of the Yudith considerations regarding the Onto_MG part">
       <created>1495465598973</created>
@@ -1099,11 +1055,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506410505788</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Update documentation with the ontology specific documention">
+      <created>1506414524923</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1506414524923</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113878000" />
+    <option name="totallyTimeSpent" value="115137000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1115,9 +1078,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1938" height="1218" extended-state="7" />
+    <frame x="1911" y="-9" width="1938" height="1218" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3780881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3780881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1127,7 +1091,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21401516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21401516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19602577" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -1183,7 +1147,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OWL implementation Drivers part (defined version) and the incorporation of the User and IfcActor part" />
     <MESSAGE value="Initial version of the OWL User Behaviour Ontology" />
     <MESSAGE value="Update some bug relation sensor with system" />
     <MESSAGE value="Initial version of the specific OWL documentation of user behaviour" />
@@ -1208,7 +1171,8 @@
     <MESSAGE value="Update the Gitbook documentation images" />
     <MESSAGE value="Update documentation with images" />
     <MESSAGE value="Update documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update documentation" />
+    <MESSAGE value="Update documentation with the ontology specific documention" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update documentation with the ontology specific documention" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1406,18 +1370,6 @@
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/img/h2geu_emblem.jpg" />
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/readme.md" />
     <entry file="file://$PROJECT_DIR$/owlSpecificationDoc/index-en.html" />
-    <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="567">
-            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter_1/Basics.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1450,19 +1402,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="399">
             <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="185" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="483">
-            <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="185" selection-end-line="10" selection-end-column="185" />
             <folding />
           </first_editor>
           <second_editor>
@@ -1640,6 +1579,34 @@
         <state relative-caret-position="42">
           <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter_3/GridDescription.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="84">
+            <caret line="3" column="95" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="95" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="640">
+            <caret line="12" column="275" lean-forward="false" selection-start-line="12" selection-start-column="275" selection-end-line="12" selection-end-column="275" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state>
+              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:920}" />
+            </js_state>
+          </second_editor>
         </state>
       </provider>
     </entry>
