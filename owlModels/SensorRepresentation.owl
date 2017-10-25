@@ -58,61 +58,22 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richard Chbeir (richard.chbeir@univ-pau.fr)</Literal>
     </Annotation>
     <Declaration>
-        <ObjectProperty IRI="wasLocated"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="time:Instant"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Observation"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="&apos;external_ID&apos;"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcSensorType"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
+        <Class IRI="http://www.opengis.net/gml/_Feature"/>
     </Declaration>
     <Declaration>
         <Class IRI="Hemisphere"/>
     </Declaration>
     <Declaration>
-        <Class IRI="MobileBuildingApplianceLocationObservation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Northerm"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc4:IfcSensor"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="time:DateTimeInterval"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="hasObservationResultTime"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="Geo_where"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="FeatureOfInterest"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="locatedInHemisphere"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:inXSDDateTime"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -127,13 +88,52 @@
         <ObjectProperty IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="wasLocated"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:Instant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Observation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="&apos;external_ID&apos;"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc2:IfcSensorType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.georss.org/georss/where"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MobileBuildingApplianceLocationObservation"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.opengis.net/gml/_Geometry"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.opengis.net/gml/_Feature"/>
+        <NamedIndividual IRI="Northern"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ifc4:IfcSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:DateTimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="Geo_where"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="locatedInHemisphere"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:inXSDDateTime"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="FeatureOfInterest"/>
@@ -260,7 +260,7 @@
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="Hemisphere"/>
-        <NamedIndividual IRI="Northerm"/>
+        <NamedIndividual IRI="Northern"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Hemisphere"/>
@@ -339,6 +339,11 @@ Q = nU.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MobileBuildingApplianceLocationObservation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Northern</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Northern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Observation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents.</Literal>
@@ -347,6 +352,11 @@ Q = nU.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Observation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Southern</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Southern</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
