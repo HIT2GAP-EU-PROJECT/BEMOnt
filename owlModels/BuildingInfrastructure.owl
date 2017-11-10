@@ -46,12 +46,12 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Aitor Corchero (aitor.corchero@eurecat.org)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This current version includes the initial version of the semantic model based on the diagrams generated.</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Yudith Cardinale (ycardinale@usb.ve)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This current version includes the initial version of the semantic model based on the diagrams generated.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
@@ -127,9 +127,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="Blinds"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Building"/>
     </Declaration>
     <Declaration>
         <Class IRI="BuildingType"/>
@@ -1302,13 +1299,6 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="Blinds"/>
         <Class IRI="WindowCoverings"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Building"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasType"/>
-            <Class IRI="BuildingType"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Bungalow"/>
