@@ -1,1456 +1,1046 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://hit2gap.eu/h2g/h2gProperty#"
+<rdf:RDF xmlns="http://hit2gap.eu/h2g/h2gProperty#"
+     xml:base="http://hit2gap.eu/h2g/h2gProperty"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://hit2gap.eu/h2g/h2gProperty#">
-    <Prefix name="" IRI="http://hit2gap.eu/h2g/h2gProperty#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="geo" IRI="http://www.opengis/net/gml/"/>
-    <Prefix name="h2g" IRI="http://hit2gap.eu/h2g#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
-    <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
-    <Prefix name="ifc4" IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#"/>
-    <Prefix name="qudt" IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
-    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <Prefix name="ontomg" IRI="http://hit2gap.eu/ontomg#"/>
-    <Prefix name="schema" IRI="http://schema.org/"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This current version includes the initial version of the semantic model based on the diagrams generated.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aitor Corchero (aitor.corchero@eurecat.org)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pierre Bourreau (pbourreau@nobatek.com)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:license"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://opensource.org/licenses/MIT</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This semantic model is focused on representing the phenomenon (or property), which provides a common vision about the general characteristics to be considered in the building. This model is an extension of the “ssn:Property” representation. Two main families of characteristics were considered: economic and physical properties.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (ycardinale@usb.ve)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hit2Gap Ontology-Property</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richard Chbeir (richard.chbeir@univ-pau.fr)</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="Flow"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AirQuality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DistributionElementState"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="WarmDrySummerContinental"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DiscreteState"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="WindOrientation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Color"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DrySummerSubarctic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Capacity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Pulse"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Rainfall"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AbsorbedIncidentRadiation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="TemperateOceanic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="IceCap"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Temperate"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssn:Property"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HotDrySummerContinental"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="TropicalMonsoon"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Tropical"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="State"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HotSummerMediterranean"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="LightRadiation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Velocity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedExtremelyColdSubarctic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HumidSubtropical"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="WarmSummerHumidContinental"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="WindSpeed"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Subartic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Conductivity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedWarmSummerHumidContinental"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HotDesert"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Visibility"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AbsorbedScatteredIncidentRadiation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Area"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Width"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Height"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Humidity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Inflow"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OccupantStateProperties"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Length"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PhysicalProperties"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Latitude"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Speed"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Radiation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasSpaceCapacity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Cost"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Outflow"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="TropicalSavanna"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Slope"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Transparency"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ProductionCapacity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="CrossSection"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Condensation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HotSemiArid"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Time"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Weight"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EconomicProperties"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="ColdSemiArid"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="FrostColdTundra"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SubpolarOceanic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedHotSummerHumidContinental"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Depth"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedSubartic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Intensity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Pressure"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HotSummerHumidContinental"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Altitude"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Polar"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MonsoonInfluencedHumidSubtropical"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Co2Rate"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MildSemiArid"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IncidentRadiation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TransmittedIncidentRadiation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Evaporation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Discharge"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Temperature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SubPolarOceanicWithDryWinters"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Position"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SpaceCapacity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Volume"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="TropicalRainforest"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Longitude"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Climate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Reflectivity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="CoolSummerMediterranean"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Tension"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="ColdDesert"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MildTundra"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="ExtremelyColdDrySummerSubarctic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Continental"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MildDesert"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ReflectedIncidentradiation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ContinousState"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Density"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="ExtremelyColdSubartic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Shape"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Streess"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:license"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Arid"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="WarnSummerMediterranean"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="TemperateOceanicWithDryWinters"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Investment"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="AbsorbedIncidentRadiation"/>
-        <Class IRI="IncidentRadiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AbsorbedScatteredIncidentRadiation"/>
-        <Class IRI="IncidentRadiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AirQuality"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Altitude"/>
-        <Class IRI="Position"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Area"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Arid"/>
-        <Class IRI="Climate"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Capacity"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Climate"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Co2Rate"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Color"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Condensation"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Conductivity"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Continental"/>
-        <Class IRI="Climate"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ContinousState"/>
-        <Class IRI="DistributionElementState"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Cost"/>
-        <Class IRI="EconomicProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="CrossSection"/>
-        <Class IRI="Shape"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Density"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Depth"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Discharge"/>
-        <Class IRI="Volume"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DiscreteState"/>
-        <Class IRI="DistributionElementState"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DistributionElementState"/>
-        <Class IRI="State"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="EconomicProperties"/>
-        <Class abbreviatedIRI="ssn:Property"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Evaporation"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Flow"/>
-        <Class IRI="Volume"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Height"/>
-        <Class IRI="Shape"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Humidity"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IncidentRadiation"/>
-        <Class IRI="Radiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Inflow"/>
-        <Class IRI="Flow"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Intensity"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Investment"/>
-        <Class IRI="EconomicProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Latitude"/>
-        <Class IRI="Position"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Length"/>
-        <Class IRI="Shape"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="LightRadiation"/>
-        <Class IRI="Radiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Longitude"/>
-        <Class IRI="Position"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="OccupantStateProperties"/>
-        <Class abbreviatedIRI="ssn:Property"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Outflow"/>
-        <Class IRI="Flow"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PhysicalProperties"/>
-        <Class abbreviatedIRI="ssn:Property"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Polar"/>
-        <Class IRI="Climate"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Position"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Pressure"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ProductionCapacity"/>
-        <Class IRI="Capacity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Pulse"/>
-        <Class IRI="OccupantStateProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Radiation"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Rainfall"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ReflectedIncidentradiation"/>
-        <Class IRI="IncidentRadiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Reflectivity"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Shape"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Slope"/>
-        <Class IRI="Shape"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SpaceCapacity"/>
-        <Class IRI="Capacity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Speed"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="State"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Streess"/>
-        <Class IRI="OccupantStateProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Temperate"/>
-        <Class IRI="Climate"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Temperature"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Tension"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Time"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TransmittedIncidentRadiation"/>
-        <Class IRI="IncidentRadiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Transparency"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Tropical"/>
-        <Class IRI="Climate"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Velocity"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Visibility"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Volume"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Weight"/>
-        <Class IRI="Shape"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Width"/>
-        <Class IRI="Shape"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="WindOrientation"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="WindSpeed"/>
-        <Class IRI="PhysicalProperties"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="Arid"/>
-        <NamedIndividual IRI="ColdDesert"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Arid"/>
-        <NamedIndividual IRI="ColdSemiArid"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="CoolSummerMediterranean"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="DrySummerSubarctic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="ExtremelyColdDrySummerSubarctic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="ExtremelyColdSubartic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Polar"/>
-        <NamedIndividual IRI="FrostColdTundra"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Arid"/>
-        <NamedIndividual IRI="HotDesert"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="HotDrySummerContinental"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Arid"/>
-        <NamedIndividual IRI="HotSemiArid"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="HotSummerHumidContinental"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="HotSummerMediterranean"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="HumidSubtropical"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Polar"/>
-        <NamedIndividual IRI="IceCap"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Arid"/>
-        <NamedIndividual IRI="MildDesert"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Arid"/>
-        <NamedIndividual IRI="MildSemiArid"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Polar"/>
-        <NamedIndividual IRI="MildTundra"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="MonsoonInfluencedExtremelyColdSubarctic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="MonsoonInfluencedHotSummerHumidContinental"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="MonsoonInfluencedHumidSubtropical"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="MonsoonInfluencedSubartic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="MonsoonInfluencedWarmSummerHumidContinental"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="SubPolarOceanicWithDryWinters"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="Subartic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="SubpolarOceanic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="TemperateOceanic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="TemperateOceanicWithDryWinters"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Tropical"/>
-        <NamedIndividual IRI="TropicalMonsoon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Tropical"/>
-        <NamedIndividual IRI="TropicalRainforest"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Tropical"/>
-        <NamedIndividual IRI="TropicalSavanna"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="WarmDrySummerContinental"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Continental"/>
-        <NamedIndividual IRI="WarmSummerHumidContinental"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Temperate"/>
-        <NamedIndividual IRI="WarnSummerMediterranean"/>
-    </ClassAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>AbsorbedIncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AbsorbedIncidentRadiation represents an observation of the  measure of the absorbed incident radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AbsorbedIncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AbsorbedIncidentRadiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>AbsorbedScatteredIncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AbsorbedScatteredIncidentRadiation represents an observation of the  measure of the absorbed scattered incident radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AbsorbedScatteredIncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AbsorbedScatteredIncidentRadiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>AirQuality</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AirQuality represents an observation of the  measure of the air quality in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AirQuality</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AirQuality</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Altitude</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Altitude represents an observation of the  measure of the position altitude  of an element in the building  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Altitude</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Altitude</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Area</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Area represents an observation of the  measure of the area.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Area</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Area</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Arid</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arid represents an observation of the arid climate in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Arid</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arid</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Capacity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Capacity represents an observation of the  measure of the capacity of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Capacity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Capacity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Climate</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Climate represents an observation of the climate  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Climate</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Climate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Co2Rate</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Co2Rate represents an observation of the  measure of the Co2 in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Co2Rate</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Co2Rate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Color</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Color represents an observation of the  value of the color of an elment in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Color</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Color</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Condensation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Condensation represents an observation of the  measure of the condensation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Condensation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Condensation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Conductivity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Conductivity represents an observation of the  measure of the conductivity of an element  in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Conductivity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Conductivity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Continental</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Continental represents an observation of the continental climate in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Continental</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Continental</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ContinousState</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents an observation of a continuous state.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ContinousState</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ContinousState</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Cost</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Costs captures the investment costs of the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Cost</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cost</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>CrossSection</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CrossSection represents an observation of the  cross section of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>CrossSection</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CrossSection</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Density</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Density represents an observation of the  measure of the density of an element  in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Density</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Density</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Depth</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depth represents an observation of the  measure of the depth of an element  in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Depth</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depth</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Discharge</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Discharge represents an observation of the  measure of the volume of a discharge in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Discharge</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Discharge</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DiscreteState</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents an observation of a discrete state.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DiscreteState</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DiscreteState</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DistributionElementState</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistributionElementState represents an observation of the  state of a distribution element in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DistributionElementState</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistributionElementState</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>EconomicProperties</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology allows one to represent water-related prices, energy bills, building investments, etc. These specific phenomena has been subdivided into: Cost and Investment.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EconomicProperties</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EconomicProperties</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Evaporation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evaporation represents an observation of the  measure of the evaporation in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Evaporation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evaporation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Flow</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Flow represents an observation of the  measure of the volume of a flow in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Flow</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Flow</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Height</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Height represents an observation of the  height of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Height</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Height</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Humidity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humidity represents an observation of the  measure of the humidity in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Humidity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humidity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>IncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IncidentRadiation represents an observation of the  measure of the incident radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IncidentRadiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Inflow</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Inflow represents an observation of the  measure of the volume of an input flow in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Inflow</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Inflow</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Intensity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Intensity represents an observation of the  measure of the intensity in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Intensity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Intensity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Investment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Investment represents the building investment aspects and information.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Investment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Investment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Latitude</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Latitude represents an observation of the  measure of the position latitude  of an element in the building  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Latitude</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Latitude</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Length</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Length represents an observation of the  length of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Length</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>LightRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LightRadiation represents an observation of the  measure of the light radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>LightRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LightRadiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Longitude</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">longitude represents an observation of the  measure of the position longitude  of an element in the building  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Longitude</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Longitude</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>OccupantStateProperties</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The occupant Properties describes the state of an occupant of the building. For example, this part of the ontology allows to represent the pulse and stress of an occupant.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OccupantStateProperties</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OccupantStateProperties</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Outflow</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Outflow represents an observation of the  measure of the volume of an output flow in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Outflow</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Outflow</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PhysicalProperties</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PhysicalProperties</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhysicProperties</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Polar</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Polar represents an observation of the polar climate in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Polar</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Polar</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Position</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Position represents an observation of the  measure of the position of an element in the building  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Position</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Position</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Pressure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pressure represents an observation of the  measure of the pressure in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Pressure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pressure</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ProductionCapacity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ProductionCapacity represents an observation of the  measure of the capacity of production of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ProductionCapacity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ProductionCapacity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Pulse</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pulse represents an observation of the  measure of the pulse of an occupant of the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Pulse</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pulse</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Radiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Radiation represents an observation of the  measure of the radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Radiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Radiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Rainfall</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rainfall represents an observation of the  measure of the rainfall.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Rainfall</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rainfall</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ReflectedIncidentradiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReflectedIncidentRadiation represents an observation of the  measure of the reflected incident radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ReflectedIncidentradiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReflectedIncidentRadiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Reflectivity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reflectivity represents an observation of the  reflectivity of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Reflectivity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reflectivity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Shape</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Shape represents an observation of the  measure of the shape of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Shape</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Shape</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Slope</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Slope represents an observation of the  slope of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Slope</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Slope</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SpaceCapacity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceCapacity represents an observation of the  measure of the capacity of the space  in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SpaceCapacity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceCapacity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Speed</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Speed represents an observation of the  measure of the speed of an elment in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Speed</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Speed</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>State</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">State represents an observation of the  state of an element in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>State</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">State</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Streess</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stress represents an observation of the  measure of the stress of an occupant of the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Streess</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stress</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Temperate</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temperate represents an observation of the temperate climate in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Temperate</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temperate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Temperature</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temperature represents an observation of the  measure of the temperature  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Temperature</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temperature</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Tension</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tension represents an observation of the  measure of the tension of an element in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Tension</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tension</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Time</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Time represents an observation of the  measure of the time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Time</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TransmittedIncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransmittedIncidentRadiation represents an observation of the  measure of the transmittedincident radiation  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TransmittedIncidentRadiation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransmittedIncidentRadiation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Transparency</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transparency represents an observation of the  measure of the transparence of an elment in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Transparency</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transparency</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Tropical</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tropical represents an observation of the tropical climate in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Tropical</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tropical</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Velocity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Velocity represents an observation of the  measure of the velocity of an elment in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Velocity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Velocity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Visibility</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Visibility represents an observation of the  measure of the visibility of an elment in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Visibility</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Visibility</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Volume</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Volume represents an observation of the  measure of the volume of an elment in the building in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Volume</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Volume</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Weight</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Weight represents an observation of the  weight of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Weight</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Weight</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Width</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Width represents an observation of the  width of an elment in the building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Width</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Width</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>WindOrientation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WindOrientation represents an observation of the  measure of the wind orientation in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>WindOrientation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WindOrientation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>WindSpeed</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WindSpeed represents an observation of the  measure of the wind speed  in a specific time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>WindSpeed</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WindSpeed</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssn:Property</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <AbbreviatedIRI>ssn:Property</AbbreviatedIRI>
-        <IRI>http://www.w3.org/ns/ssn/</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssn:Property</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Property</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://hit2gap.eu/h2g/h2gProperty#">
+        <dc:creator xml:lang="en">Aitor Corchero (aitor.corchero@eurecat.org)</dc:creator>
+        <dc:creator xml:lang="en">Pierre Bourreau (pbourreau@nobatek.com)</dc:creator>
+        <dc:creator xml:lang="en">Richard Chbeir (richard.chbeir@univ-pau.fr)</dc:creator>
+        <dc:creator xml:lang="en">Yudith Cardinale (ycardinale@usb.ve)</dc:creator>
+        <dc:description xml:lang="en">This semantic model is focused on representing the phenomenon (or property), which provides a common vision about the general characteristics to be considered in the building. This model is an extension of the “ssn:Property” representation. Two main families of characteristics were considered: economic and physical properties.</dc:description>
+        <dc:title xml:lang="en">Hit2Gap Ontology-Property</dc:title>
+        <terms:license xml:lang="en">https://opensource.org/licenses/MIT</terms:license>
+        <owl:versionInfo xml:lang="en">This current version includes the initial version of the semantic model based on the diagrams generated.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#hasSpaceCapacity -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gProperty#hasSpaceCapacity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#AbsorbedIncidentRadiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#AbsorbedIncidentRadiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation"/>
+        <rdfs:comment xml:lang="en">AbsorbedIncidentRadiation represents an observation of the  measure of the absorbed incident radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">AbsorbedIncidentRadiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#AbsorbedScatteredIncidentRadiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#AbsorbedScatteredIncidentRadiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation"/>
+        <rdfs:comment xml:lang="en">AbsorbedScatteredIncidentRadiation represents an observation of the  measure of the absorbed scattered incident radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">AbsorbedScatteredIncidentRadiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#AirQuality -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#AirQuality">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">AirQuality represents an observation of the  measure of the air quality in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">AirQuality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Altitude -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Altitude">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Position"/>
+        <rdfs:comment xml:lang="en">Altitude represents an observation of the  measure of the position altitude  of an element in the building  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Altitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Area -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Area">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Area represents an observation of the  measure of the area.</rdfs:comment>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Arid -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Arid">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Arid represents an observation of the arid climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Arid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Capacity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Capacity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Capacity represents an observation of the  measure of the capacity of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Capacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Climate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Climate">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Climate represents an observation of the climate  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Climate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Co2Rate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Co2Rate">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Co2Rate represents an observation of the  measure of the Co2 in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Co2Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Color -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Color">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Color represents an observation of the  value of the color of an elment in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Color</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Condensation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Condensation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Condensation represents an observation of the  measure of the condensation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Condensation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Conductivity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Conductivity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Conductivity represents an observation of the  measure of the conductivity of an element  in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Continental -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Continental">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Continental represents an observation of the continental climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Continental</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ContinousState -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinousState">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
+        <rdfs:comment xml:lang="en">Represents an observation of a continuous state.</rdfs:comment>
+        <rdfs:label xml:lang="en">ContinousState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Cost -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Cost">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#EconomicProperties"/>
+        <rdfs:comment xml:lang="en">Costs captures the investment costs of the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#CrossSection -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#CrossSection">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
+        <rdfs:comment xml:lang="en">CrossSection represents an observation of the  cross section of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">CrossSection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Density -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Density">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Density represents an observation of the  measure of the density of an element  in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Depth -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Depth">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Depth represents an observation of the  measure of the depth of an element  in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Depth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Discharge -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Discharge">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Volume"/>
+        <rdfs:comment xml:lang="en">Discharge represents an observation of the  measure of the volume of a discharge in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Discharge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DiscreteState -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DiscreteState">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
+        <rdfs:comment xml:lang="en">Represents an observation of a discrete state.</rdfs:comment>
+        <rdfs:label xml:lang="en">DiscreteState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DistributionElementState -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#State"/>
+        <rdfs:comment xml:lang="en">DistributionElementState represents an observation of the  state of a distribution element in the building.</rdfs:comment>
+        <rdfs:label>DistributionElementState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#EconomicProperties -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#EconomicProperties">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:comment xml:lang="en">The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology allows one to represent water-related prices, energy bills, building investments, etc. These specific phenomena has been subdivided into: Cost and Investment.</rdfs:comment>
+        <rdfs:label xml:lang="en">EconomicProperties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Evaporation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Evaporation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Evaporation represents an observation of the  measure of the evaporation in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaporation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Flow -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Flow">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Volume"/>
+        <rdfs:comment xml:lang="en">Flow represents an observation of the  measure of the volume of a flow in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Height -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Height">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
+        <rdfs:comment xml:lang="en">Height represents an observation of the  height of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Height</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Humidity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Humidity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Humidity represents an observation of the  measure of the humidity in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Radiation"/>
+        <rdfs:comment xml:lang="en">IncidentRadiation represents an observation of the  measure of the incident radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">IncidentRadiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Inflow -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Inflow">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Flow"/>
+        <rdfs:comment xml:lang="en">Inflow represents an observation of the  measure of the volume of an input flow in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Intensity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Intensity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Intensity represents an observation of the  measure of the intensity in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Intensity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Investment -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Investment">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#EconomicProperties"/>
+        <rdfs:comment xml:lang="en">Investment represents the building investment aspects and information.</rdfs:comment>
+        <rdfs:label xml:lang="en">Investment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Latitude -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Latitude">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Position"/>
+        <rdfs:comment xml:lang="en">Latitude represents an observation of the  measure of the position latitude  of an element in the building  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Latitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Length -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Length">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
+        <rdfs:comment xml:lang="en">Length represents an observation of the  length of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Length</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#LightRadiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#LightRadiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Radiation"/>
+        <rdfs:comment xml:lang="en">LightRadiation represents an observation of the  measure of the light radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">LightRadiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Longitude -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Longitude">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Position"/>
+        <rdfs:comment xml:lang="en">longitude represents an observation of the  measure of the position longitude  of an element in the building  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Longitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:comment xml:lang="en">The occupant Properties describes the state of an occupant of the building. For example, this part of the ontology allows to represent the pulse and stress of an occupant.</rdfs:comment>
+        <rdfs:label xml:lang="en">OccupantStateProperties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Outflow -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Outflow">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Flow"/>
+        <rdfs:comment xml:lang="en">Outflow represents an observation of the  measure of the volume of an output flow in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Outflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:comment xml:lang="en">Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="en">PhysicProperties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Polar -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Polar">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Polar represents an observation of the polar climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Polar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Position -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Position">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Position represents an observation of the  measure of the position of an element in the building  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Pressure -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Pressure">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Pressure represents an observation of the  measure of the pressure in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
+        <rdfs:comment xml:lang="en">ProductionCapacity represents an observation of the  measure of the capacity of production of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">ProductionCapacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Pulse -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Pulse">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties"/>
+        <rdfs:comment xml:lang="en">Pulse represents an observation of the  measure of the pulse of an occupant of the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pulse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Radiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Radiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Radiation represents an observation of the  measure of the radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Rainfall -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Rainfall">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Rainfall represents an observation of the  measure of the rainfall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rainfall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ReflectedIncidentradiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ReflectedIncidentradiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation"/>
+        <rdfs:comment xml:lang="en">ReflectedIncidentRadiation represents an observation of the  measure of the reflected incident radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">ReflectedIncidentRadiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Reflectivity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Reflectivity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Reflectivity represents an observation of the  reflectivity of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reflectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Shape -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Shape">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Shape represents an observation of the  measure of the shape of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Slope -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Slope">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
+        <rdfs:comment xml:lang="en">Slope represents an observation of the  slope of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Slope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
+        <rdfs:comment xml:lang="en">SpaceCapacity represents an observation of the  measure of the capacity of the space  in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">SpaceCapacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Speed -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Speed">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Speed represents an observation of the  measure of the speed of an elment in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#State -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#State">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">State represents an observation of the  state of an element in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Streess -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Streess">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties"/>
+        <rdfs:comment xml:lang="en">Stress represents an observation of the  measure of the stress of an occupant of the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Temperate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperate">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Temperate represents an observation of the temperate climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Temperature -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperature">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Temperature represents an observation of the  measure of the temperature  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Tension -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Tension">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Tension represents an observation of the  measure of the tension of an element in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Time -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Time">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Time represents an observation of the  measure of the time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#TransmittedIncidentRadiation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#TransmittedIncidentRadiation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#IncidentRadiation"/>
+        <rdfs:comment xml:lang="en">TransmittedIncidentRadiation represents an observation of the  measure of the transmittedincident radiation  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">TransmittedIncidentRadiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Transparency -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Transparency">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Transparency represents an observation of the  measure of the transparence of an elment in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Tropical -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Tropical">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Tropical represents an observation of the tropical climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tropical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Velocity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Velocity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Velocity represents an observation of the  measure of the velocity of an elment in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Velocity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Visibility -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Visibility">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Visibility represents an observation of the  measure of the visibility of an elment in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Visibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Volume -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Volume">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">Volume represents an observation of the  measure of the volume of an elment in the building in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Weight -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Weight">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
+        <rdfs:comment xml:lang="en">Weight represents an observation of the  weight of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Width -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Width">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
+        <rdfs:comment xml:lang="en">Width represents an observation of the  width of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WindOrientation -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindOrientation">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">WindOrientation represents an observation of the  measure of the wind orientation in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">WindOrientation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WindSpeed -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindSpeed">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:comment xml:lang="en">WindSpeed represents an observation of the  measure of the wind speed  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">WindSpeed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
+        <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ColdDesert -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#HotDesert -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#HotSemiArid -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#IceCap -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#IceCap">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MildDesert -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MildSemiArid -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MildTundra -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildTundra">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Subartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Subartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi -->
 
