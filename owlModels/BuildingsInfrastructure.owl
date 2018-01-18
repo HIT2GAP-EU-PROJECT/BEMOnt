@@ -76,6 +76,12 @@ The features of interest representation of the building are performed using stan
     <!-- http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit -->
 
     <owl:ObjectProperty rdf:about="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
+                <owl:someValuesFrom rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
+            </owl:Restriction>
+        </rdfs:domain>
         <rdfs:isDefinedBy xml:lang="en">http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit</rdfs:isDefinedBy>
     </owl:ObjectProperty>
     
@@ -503,6 +509,22 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Amplifier -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Amplifier">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Antenna -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Antenna">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Apartment -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Apartment">
@@ -569,6 +591,22 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Boiler -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Boiler">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Bridge -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Bridge">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#NetworkAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Bungalow -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Bungalow">
@@ -593,6 +631,14 @@ Q = nU.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
         <rdfs:comment xml:lang="en">Cafeteria is an instance of IfcSpace in the building representing a cafeteria.</rdfs:comment>
         <rdfs:label xml:lang="en">Cafeteria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Camera -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Camera">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
     </owl:Class>
     
 
@@ -645,11 +691,27 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#CoffeeMachine -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#CoffeeMachine">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#CommercialBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#CommercialBuilding">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
         <rdfs:label>CommercialBuilding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Computer -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Computer">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
     </owl:Class>
     
 
@@ -669,6 +731,14 @@ Q = nU.</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ConventionCenter">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#CommercialBuilding"/>
         <rdfs:label>ConventionCenter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Cooker -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Cooker">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </owl:Class>
     
 
@@ -702,6 +772,14 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Dishwasher -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Dishwasher">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#DrugStore -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DrugStore">
@@ -726,6 +804,38 @@ Q = nU.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal"/>
         <rdfs:comment xml:lang="en">An ElectricHeater represents an electrical device that converts electric current to heat.</rdfs:comment>
         <rdfs:label xml:lang="en">ElectricHeater</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#FS_Electric_Heater -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#FS_Electric_Heater">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#FS_Fan -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#FS_Fan">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#FS_Water_Cooler -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#FS_Water_Cooler">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#FS_Water_Heater -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#FS_Water_Heater">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </owl:Class>
     
 
@@ -759,6 +869,14 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Fax -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Fax">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Floor -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Floor">
@@ -769,12 +887,36 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Freezer -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Freezer">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Fridge -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Fridge">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Gas -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Gas">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
         <rdfs:comment xml:lang="en">Gas represents gas as a physical medium to produce energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Gateway -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Gateway">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
     </owl:Class>
     
 
@@ -803,6 +945,14 @@ Q = nU.</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Gym">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PublicBuilding"/>
         <rdfs:label>Gym</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Hand_Dryer -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Hand_Dryer">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </owl:Class>
     
 
@@ -845,6 +995,14 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Hub -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Hub">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#NetworkAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#IndustrialBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#IndustrialBuilding">
@@ -860,6 +1018,14 @@ Q = nU.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
         <rdfs:comment xml:lang="en">Kitchen is an instance of IfcSpace in the building representing a kitchen.</rdfs:comment>
         <rdfs:label xml:lang="en">Kitchen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Kitchen_Device -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Kitchen_Device">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </owl:Class>
     
 
@@ -909,11 +1075,43 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Microphone -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Microphone">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Microwave -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Microwave">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Modem -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Modem">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#MuseumGallery -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#MuseumGallery">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PublicBuilding"/>
         <rdfs:label>MuseumGallery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#NetworkAppliance -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#NetworkAppliance">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
     </owl:Class>
     
 
@@ -984,12 +1182,28 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Photocopier -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Photocopier">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#PhysicalMedium -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
         <rdfs:comment xml:lang="en">PhysicalMedium represents the physical element that is used to produce energy.</rdfs:comment>
         <rdfs:label xml:lang="en">PhysicalMedium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Player -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Player">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
     </owl:Class>
     
 
@@ -1012,6 +1226,22 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Printer -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Printer">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Projector -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Projector">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#PublicBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PublicBuilding">
@@ -1030,11 +1260,35 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Receiver -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Receiver">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Refrigerator -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Refrigerator">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#ReligiousBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ReligiousBuilding">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
         <rdfs:label>ReligiousBuilding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Repeater -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Repeater">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#NetworkAppliance"/>
     </owl:Class>
     
 
@@ -1064,6 +1318,22 @@ Q = nU.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
         <rdfs:comment xml:lang="en">Room is an instance of IfcSpace in the building representing a Room.</rdfs:comment>
         <rdfs:label xml:lang="en">Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Router -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Router">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#NetworkAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Scanner -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Scanner">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
     </owl:Class>
     
 
@@ -1115,6 +1385,14 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Smartphone_Station -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Smartphone_Station">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Steam -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Steam">
@@ -1154,6 +1432,22 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Switcher -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Switcher">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Telephone -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Telephone">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Toilets -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Toilets">
@@ -1182,6 +1476,22 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Tumble_Dryer -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Tumble_Dryer">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Tuner -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Tuner">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#University -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#University">
@@ -1191,11 +1501,27 @@ Q = nU.</rdfs:comment>
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Vending_Machine -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Vending_Machine">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Warehouse -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Warehouse">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#IndustrialBuilding"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warehouse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Washing_Machine -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Washing_Machine">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </owl:Class>
     
 
@@ -1235,6 +1561,14 @@ Q = nU.</rdfs:comment>
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowCoverings">
         <rdfs:comment xml:lang="en">A window covering is an element which covers a window in the building and is fully dependent on that window. The WindowCovering defines the occurrence of a covering type.</rdfs:comment>
         <rdfs:label xml:lang="en">WindowCoverings</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Display/screen -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Display/screen">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
     </owl:Class>
     
 
@@ -1319,7 +1653,6 @@ Q = nU.</rdfs:comment>
     <!-- http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Property"/>
         <rdfs:comment xml:lang="en">Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">PhysicalProperties</rdfs:label>
