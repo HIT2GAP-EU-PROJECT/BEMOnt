@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://hit2gap.eu/h2g#"
+     xml:base="http://hit2gap.eu/h2g/h2gOccupant#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://hit2gap.eu/h2g#">
+     ontologyIRI="http://hit2gap.eu/h2g/h2gOccupant#">
     <Prefix name="" IRI="http://hit2gap.eu/h2g#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="h2g" IRI="http://hit2gap.eu/h2g#"/>
@@ -58,160 +58,139 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states.</Literal>
     </Annotation>
     <Declaration>
-        <NamedIndividual IRI="Phone"/>
+        <Class IRI="ObservableProperty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="TimeBehaviour"/>
+        <ObjectProperty IRI="hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Function"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="numericValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComfortState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="prefers"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://hit2gap.eu/h2g/h2gSensor#externalID"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Male"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="VisualComfort"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/ActuableProperty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="provokes"/>
+        <Class IRI="ASHRAEAdaptiveComfort"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="associatedTo"/>
+        <DataProperty IRI="startWorktime"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasComfortRequirements"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ActivityModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ModelResult"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Context"/>
+        <Class IRI="OtherComfortEnvelope"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:observationResult"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="changes"/>
+        <Class IRI="BehaviourModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowState"/>
+        <ObjectProperty IRI="concerns"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasRole"/>
+        <NamedIndividual IRI="Female"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="performsAction"/>
+        <Class IRI="Driver"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="schema:license"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Feedback"/>
+        <ObjectProperty IRI="hasModelResult"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantPreferences"/>
+        <NamedIndividual IRI="Summer"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyIndiferent"/>
+        <Class IRI="Season"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BlindOpen"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BlindState"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Email"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Role"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasState"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DoorState"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Outdoor"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Needs"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="maxValue"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ASHRAEAdaptiveEnvelope"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Modality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Winter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OccupantAttitude"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="receivesAlerts"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Owner"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasContext"/>
+        <DataProperty IRI="lifestyle"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="SMS"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="endWorktime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyState"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="BuildingSimpleState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IAQ"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="jobType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Indoor"/>
     </Declaration>
     <Declaration>
         <Class IRI="DoorOpen"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Inaction"/>
+        <DataProperty IRI="resultTime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantDiscomfort"/>
+        <ObjectProperty IRI="hasGender"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="acts"/>
+        <Class abbreviatedIRI="ifc2:IfcDistributionControlElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantBehaviour"/>
+        <Class IRI="Indicator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Actions"/>
+        <Class IRI="ASHRAEAdaptiveEnvelope"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Autumn"/>
+        <Class IRI="Alert"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyState"/>
+        <Class IRI="OccupantCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="minValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BuildingComplexState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyProfligate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Context"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:QuantityValue"/>
@@ -220,79 +199,67 @@
         <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ASHRAEAdaptiveComfort"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SystemActions"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Manager"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isAssignedTo"/>
+        <Class IRI="ModelResult"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:abstract"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Report"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OtherComfortEnvelope"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="time:Instant"/>
+        <Class IRI="User"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOccupantAttitude"/>
+        <Class abbreviatedIRI="time:Instant"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BlindClose"/>
+        <Class IRI="Privacy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasStatus"/>
+        <Class IRI="EventModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ComfortState"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="concerns"/>
+        <DataProperty IRI="id"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Recommendation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Status"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="time:DateTimeInterval"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Constraints"/>
+        <Class IRI="ZoneOccupied"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantComfort"/>
+        <Class IRI="DoorClose"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasBehaviour"/>
+        <ObjectProperty IRI="hasOccupantCharacteristics"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isProvokedBy"/>
+        <Class IRI="EquipementModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Gender"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ZoneOccupancy"/>
+        <Class IRI="WindowsOpen"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
@@ -301,115 +268,136 @@
         <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasConstraints"/>
+        <NamedIndividual IRI="Technician"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcSpatialStructureElement"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasProbability"/>
+        <Class IRI="ZoneEmpty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Probability"/>
+        <NamedIndividual IRI="Spring"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AcousticComfort"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/Result"/>
     </Declaration>
     <Declaration>
+        <Class IRI="BuildingState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Role"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="lifestyle"/>
+        <Class IRI="DoorState"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Indoor"/>
+        <DataProperty IRI="name"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Notification"/>
+        <Class IRI="BlindClose"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Season"/>
+        <Class IRI="BlindOpen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantPreferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantAttitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WindowState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOccupantAttitude"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Summer"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <Class IRI="Feedback"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isStatedBy"/>
+        <ObjectProperty IRI="associatedTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="maxValue"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcActuatorType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="IAQ"/>
+        <ObjectProperty IRI="changes"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EquipementModel"/>
+        <ObjectProperty IRI="performsAction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BuildingComplexState"/>
+        <ObjectProperty IRI="receives"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EventModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ThermalComfort"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Privacy"/>
+        <ObjectProperty IRI="hasComfortRequirements"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasFunction"/>
+        <NamedIndividual IRI="Owner"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:unit"/>
+        <Class IRI="TimeBehaviour"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:observationResultTime"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:unit"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasIndicator"/>
+        <DataProperty IRI="age"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ObservableProperty"/>
+        <ObjectProperty IRI="assignedTo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="prefers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EnvironmentalBuildingFactors"/>
+        <Class IRI="VisualComfort"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BehaviourModel"/>
+        <NamedIndividual IRI="Male"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowsClose"/>
+        <Class IRI="SystemActions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Modality"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="ssn:hasSubsystem"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+        <NamedIndividual IRI="Phone"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="minValue"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
@@ -418,115 +406,118 @@
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/isPropertyOf"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyFrugal"/>
+        <ObjectProperty IRI="provokes"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
     </Declaration>
     <Declaration>
+        <Class IRI="EnergyFrugal"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="jobType"/>
+        <Class IRI="BlindState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Winter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Needs"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ISOAdaptiveComfort"/>
+        <NamedIndividual IRI="Email"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Outdoor"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcOccupant"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="endWorktime"/>
+        <AnnotationProperty abbreviatedIRI="schema:description"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="schema:description"/>
+        <Class IRI="WindowsClose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnergyIndiferent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Manager"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Technician"/>
+        <ObjectProperty IRI="hasIndicator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="assignedTo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Driver"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasModelResult"/>
+        <NamedIndividual IRI="Autumn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DoorClose"/>
+        <Class IRI="ISOAdaptiveComfort"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="receives"/>
+        <ObjectProperty IRI="acts"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ZoneOccupied"/>
+        <Class IRI="Actions"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="age"/>
+        <Class IRI="Constraints"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ThermalComfort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantDiscomfort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isStatedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Inaction"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isBasedOn"/>
+        <Class IRI="EnvironmentalBuildingFactors"/>
     </Declaration>
     <Declaration>
-        <Class IRI="User"/>
+        <Class IRI="OccupantBehaviour"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Status"/>
+        <ObjectProperty IRI="receivesAlerts"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="id"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="startWorktime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ZoneEmpty"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Indicator"/>
+        <Class IRI="Report"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcActor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantCharacteristics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Alert"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="numericValue"/>
+        <ObjectProperty IRI="hasContext"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="resultTime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Function"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasGender"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="name"/>
+        <Class IRI="ZoneOccupancy"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="time:DayOfWeek"/>
@@ -538,31 +529,40 @@
         <Class abbreviatedIRI="ifc2:IfcBuilding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="AcousticComfort"/>
+        <ObjectProperty IRI="hasRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProbability"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Female"/>
+        <Class IRI="Gender"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BuildingState"/>
+        <ObjectProperty IRI="hasConstraints"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAssignedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isProvokedBy"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="bibo:status"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOccupantCharacteristics"/>
+        <ObjectProperty IRI="hasBehaviour"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnergyProfligate"/>
+        <Class IRI="Probability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindowsOpen"/>
+        <Class IRI="Notification"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Spring"/>
+        <Class IRI="OccupantComfort"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
@@ -571,10 +571,10 @@
         <Class abbreviatedIRI="qudt:Unit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Recommendation"/>
+        <Class IRI="ActivityModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Event"/>
+        <ObjectProperty IRI="hasStatus"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
@@ -3083,5 +3083,5 @@ An observable Quality of an Event or Object.  That is, not a quality of an abstr
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
