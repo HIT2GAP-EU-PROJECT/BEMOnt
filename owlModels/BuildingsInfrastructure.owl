@@ -9,6 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://hit2gap.eu/h2g/h2gBI#">
+        <owl:imports rdf:resource="http://hit2gap.eu/h2g/h2gProperty#"/>
         <owl:versionInfo xml:lang="en">This current version includes the initial version of the semantic model based on the diagrams generated.</owl:versionInfo>
         <dc:creator xml:lang="en">Aitor Corchero (aitor.corchero@eurecat.org)</dc:creator>
         <dc:creator xml:lang="en">Pierre Bourreau (pbourreau@nobatek.com)</dc:creator>
@@ -216,6 +217,12 @@ The features of interest representation of the building are performed using stan
     <!-- http://hit2gap.eu/ontomg#hasA -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/ontomg#hasA">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+            </owl:Restriction>
+        </rdfs:domain>
         <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/ontomg#hasA</rdfs:isDefinedBy>
     </owl:ObjectProperty>
     
@@ -1193,6 +1200,12 @@ Q = nU.</rdfs:comment>
     <!-- http://hit2gap.eu/h2g/h2gBI#PhysicalMedium -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">PhysicalMedium represents the physical element that is used to produce energy.</rdfs:comment>
         <rdfs:label xml:lang="en">PhysicalMedium</rdfs:label>
     </owl:Class>
@@ -2803,6 +2816,19 @@ A unitary control element provides a housing for an aggregation of control or el
         <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcWasteTerminal</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">IfcWasteTerminal</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
