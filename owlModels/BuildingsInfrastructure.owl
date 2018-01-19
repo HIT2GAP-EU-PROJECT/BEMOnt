@@ -1193,7 +1193,6 @@ Q = nU.</rdfs:comment>
     <!-- http://hit2gap.eu/h2g/h2gBI#PhysicalMedium -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
         <rdfs:comment xml:lang="en">PhysicalMedium represents the physical element that is used to produce energy.</rdfs:comment>
         <rdfs:label xml:lang="en">PhysicalMedium</rdfs:label>
     </owl:Class>
