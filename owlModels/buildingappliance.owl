@@ -23,6 +23,7 @@
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Prefix name="ontomg" IRI="http://hit2gap.eu/ontomg#"/>
     <Prefix name="schema" IRI="http://schema.org/"/>
+    <Import>http://hit2gap.eu/h2g/h2gProperty#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aitor Corchero (aitor.corchero@eurecat.org)</Literal>
@@ -316,6 +317,13 @@
     <SubClassOf>
         <Class IRI="#Oil"/>
         <Class IRI="#PhysicalMedium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalMedium"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Radiation"/>
