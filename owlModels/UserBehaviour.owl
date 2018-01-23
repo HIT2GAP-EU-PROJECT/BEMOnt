@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://hit2gap.eu/h2g/h2gOccupant#">
-    <Prefix name="" IRI="http://hit2gap.eu/h2g#"/>
+    <Prefix name="" IRI="http://hit2gap.eu/h2g/h2gOccupant#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="h2g" IRI="http://hit2gap.eu/h2g#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -21,6 +21,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Prefix name="schema" IRI="http://schema.org/"/>
+    <Import>http://hit2gap.eu/h2g/h2gProperty#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This current version includes the initial version of the semantic model based on the diagrams generated.</Literal>
@@ -64,13 +65,13 @@
         <ObjectProperty IRI="hasFunction"/>
     </Declaration>
     <Declaration>
+        <Class IRI="ComfortState"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Function"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="numericValue"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ComfortState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="prefers"/>
@@ -199,10 +200,10 @@
         <ObjectProperty abbreviatedIRI="ssn:observedBy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
     </Declaration>
     <Declaration>
         <Class IRI="ModelResult"/>
@@ -241,10 +242,10 @@
         <Class IRI="Event"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Status"/>
+        <Class abbreviatedIRI="time:DateTimeInterval"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="time:DateTimeInterval"/>
+        <Class IRI="Status"/>
     </Declaration>
     <Declaration>
         <Class IRI="ZoneOccupied"/>
@@ -310,13 +311,13 @@
         <Class IRI="OccupantPreferences"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantAttitude"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="WindowState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOccupantAttitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OccupantAttitude"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
@@ -331,10 +332,10 @@
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="associatedTo"/>
+        <DataProperty IRI="maxValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="maxValue"/>
+        <ObjectProperty IRI="associatedTo"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ifc2:IfcActuatorType"/>
@@ -379,10 +380,10 @@
         <Class IRI="VisualComfort"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
+        <NamedIndividual IRI="Male"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Male"/>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
     </Declaration>
     <Declaration>
         <Class IRI="SystemActions"/>
@@ -418,10 +419,10 @@
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BlindState"/>
+        <NamedIndividual IRI="Winter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Winter"/>
+        <Class IRI="BlindState"/>
     </Declaration>
     <Declaration>
         <Class IRI="Needs"/>
@@ -481,10 +482,10 @@
         <Class IRI="ThermalComfort"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantDiscomfort"/>
+        <ObjectProperty IRI="isStatedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isStatedBy"/>
+        <Class IRI="OccupantDiscomfort"/>
     </Declaration>
     <Declaration>
         <Class IRI="Inaction"/>
@@ -493,10 +494,10 @@
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="EnvironmentalBuildingFactors"/>
+        <Class IRI="OccupantBehaviour"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OccupantBehaviour"/>
+        <Class IRI="EnvironmentalBuildingFactors"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="receivesAlerts"/>
@@ -532,10 +533,10 @@
         <ObjectProperty IRI="hasRole"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasProbability"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <ObjectProperty IRI="hasProbability"/>
     </Declaration>
     <Declaration>
         <Class IRI="Gender"/>
@@ -544,10 +545,10 @@
         <ObjectProperty IRI="hasConstraints"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isAssignedTo"/>
+        <ObjectProperty IRI="isProvokedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isProvokedBy"/>
+        <ObjectProperty IRI="isAssignedTo"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="bibo:status"/>
@@ -566,9 +567,6 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:Unit"/>
     </Declaration>
     <Declaration>
         <Class IRI="ActivityModel"/>
@@ -596,7 +594,7 @@
         <Class abbreviatedIRI="qudt:QuantityValue"/>
         <ObjectAllValuesFrom>
             <ObjectProperty abbreviatedIRI="qudt:unit"/>
-            <Class abbreviatedIRI="qudt:Unit"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1198,6 +1196,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Result"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
         </ObjectMinCardinality>
@@ -1462,19 +1467,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>qudt:QuantityValue</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quantity value</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>qudt:Unit</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter.
-
-More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U:
-Q = nU</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>qudt:Unit</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
