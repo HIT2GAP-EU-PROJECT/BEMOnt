@@ -337,7 +337,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#AirQuality -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#AirQuality">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">AirQuality represents an observation of the  measure of the air quality in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">AirQuality</rdfs:label>
     </owl:Class>
@@ -357,39 +357,9 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Area -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Area">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Area represents an observation of the  measure of the area.</rdfs:comment>
         <rdfs:label xml:lang="en">Area</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Arid -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Arid">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
-        <rdfs:comment xml:lang="en">Arid represents an observation of the arid climate in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Arid</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Capacity -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Capacity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
-        <rdfs:comment xml:lang="en">Capacity represents an observation of the  measure of the capacity of an elment in the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Capacity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Climate -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Climate">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
-        <rdfs:comment xml:lang="en">Climate represents an observation of the climate  in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Climate</rdfs:label>
     </owl:Class>
     
 
@@ -397,7 +367,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Co2Rate -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Co2Rate">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Co2Rate represents an observation of the  measure of the Co2 in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Co2Rate</rdfs:label>
     </owl:Class>
@@ -407,7 +377,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Color -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Color">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Color represents an observation of the  value of the color of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Color</rdfs:label>
     </owl:Class>
@@ -417,7 +387,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Condensation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Condensation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Condensation represents an observation of the  measure of the condensation  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Condensation</rdfs:label>
     </owl:Class>
@@ -427,29 +397,9 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Conductivity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Conductivity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Conductivity represents an observation of the  measure of the conductivity of an element  in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Conductivity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Continental -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Continental">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
-        <rdfs:comment xml:lang="en">Continental represents an observation of the continental climate in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Continental</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ContinousState -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinousState">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
-        <rdfs:comment xml:lang="en">Represents an observation of a continuous state.</rdfs:comment>
-        <rdfs:label xml:lang="en">ContinousState</rdfs:label>
     </owl:Class>
     
 
@@ -457,7 +407,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Cost -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Cost">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#EconomicProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#EconomicProperty"/>
         <rdfs:comment xml:lang="en">Costs captures the investment costs of the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Cost</rdfs:label>
     </owl:Class>
@@ -477,7 +427,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Density -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Density">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Density represents an observation of the  measure of the density of an element  in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Density</rdfs:label>
     </owl:Class>
@@ -487,7 +437,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Depth -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Depth">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Depth represents an observation of the  measure of the depth of an element  in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Depth</rdfs:label>
     </owl:Class>
@@ -504,32 +454,12 @@
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#DiscreteState -->
+    <!-- http://hit2gap.eu/h2g/h2gProperty#EconomicProperty -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DiscreteState">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
-        <rdfs:comment xml:lang="en">Represents an observation of a discrete state.</rdfs:comment>
-        <rdfs:label xml:lang="en">DiscreteState</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#DistributionElementState -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#State"/>
-        <rdfs:comment xml:lang="en">DistributionElementState represents an observation of the  state of a distribution element in the building.</rdfs:comment>
-        <rdfs:label>DistributionElementState</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#EconomicProperties -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#EconomicProperties">
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#EconomicProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
         <rdfs:comment xml:lang="en">The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology allows one to represent water-related prices, energy bills, building investments, etc. These specific phenomena has been subdivided into: Cost and Investment.</rdfs:comment>
-        <rdfs:label xml:lang="en">EconomicProperties</rdfs:label>
+        <rdfs:label xml:lang="en">Economic Property</rdfs:label>
     </owl:Class>
     
 
@@ -537,7 +467,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Evaporation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Evaporation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Evaporation represents an observation of the  measure of the evaporation in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Evaporation</rdfs:label>
     </owl:Class>
@@ -567,7 +497,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Humidity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Humidity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Humidity represents an observation of the  measure of the humidity in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Humidity</rdfs:label>
     </owl:Class>
@@ -597,7 +527,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Intensity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Intensity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Intensity represents an observation of the  measure of the intensity in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Intensity</rdfs:label>
     </owl:Class>
@@ -607,7 +537,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Investment -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Investment">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#EconomicProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#EconomicProperty"/>
         <rdfs:comment xml:lang="en">Investment represents the building investment aspects and information.</rdfs:comment>
         <rdfs:label xml:lang="en">Investment</rdfs:label>
     </owl:Class>
@@ -654,12 +584,12 @@
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties -->
+    <!-- http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties">
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
         <rdfs:comment xml:lang="en">The occupant Properties describes the state of an occupant of the building. For example, this part of the ontology allows to represent the pulse and stress of an occupant.</rdfs:comment>
-        <rdfs:label xml:lang="en">OccupantStateProperties</rdfs:label>
+        <rdfs:label xml:lang="en">Occupant State Property</rdfs:label>
     </owl:Class>
     
 
@@ -690,22 +620,12 @@
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties -->
+    <!-- http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties">
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
         <rdfs:comment xml:lang="en">Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).</rdfs:comment>
-        <rdfs:label xml:lang="en">PhysicProperties</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Polar -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Polar">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
-        <rdfs:comment xml:lang="en">Polar represents an observation of the polar climate in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Polar</rdfs:label>
+        <rdfs:label xml:lang="en">PhysicalProperty</rdfs:label>
     </owl:Class>
     
 
@@ -713,7 +633,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Position -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Position">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Position represents an observation of the  measure of the position of an element in the building  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Position</rdfs:label>
     </owl:Class>
@@ -723,19 +643,9 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Pressure -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Pressure">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Pressure represents an observation of the  measure of the pressure in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Pressure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
-        <rdfs:comment xml:lang="en">ProductionCapacity represents an observation of the  measure of the capacity of production of an elment in the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">ProductionCapacity</rdfs:label>
     </owl:Class>
     
 
@@ -743,7 +653,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Pulse -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Pulse">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty"/>
         <rdfs:comment xml:lang="en">Pulse represents an observation of the  measure of the pulse of an occupant of the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Pulse</rdfs:label>
     </owl:Class>
@@ -753,7 +663,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Radiation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Radiation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Radiation represents an observation of the  measure of the radiation  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
     </owl:Class>
@@ -763,7 +673,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Rainfall -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Rainfall">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Rainfall represents an observation of the  measure of the rainfall.</rdfs:comment>
         <rdfs:label xml:lang="en">Rainfall</rdfs:label>
     </owl:Class>
@@ -783,7 +693,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Reflectivity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Reflectivity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Reflectivity represents an observation of the  reflectivity of an elment in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Reflectivity</rdfs:label>
     </owl:Class>
@@ -793,7 +703,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Shape -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Shape">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Shape represents an observation of the  measure of the shape of an elment in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Shape</rdfs:label>
     </owl:Class>
@@ -810,32 +720,12 @@
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
-        <rdfs:comment xml:lang="en">SpaceCapacity represents an observation of the  measure of the capacity of the space  in the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">SpaceCapacity</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Speed -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Speed">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Speed represents an observation of the  measure of the speed of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Speed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#State -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#State">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
-        <rdfs:comment xml:lang="en">State represents an observation of the  state of an element in the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">State</rdfs:label>
     </owl:Class>
     
 
@@ -843,19 +733,9 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Streess -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Streess">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty"/>
         <rdfs:comment xml:lang="en">Stress represents an observation of the  measure of the stress of an occupant of the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Stress</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Temperate -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperate">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
-        <rdfs:comment xml:lang="en">Temperate represents an observation of the temperate climate in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Temperate</rdfs:label>
     </owl:Class>
     
 
@@ -863,7 +743,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Temperature -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperature">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Temperature represents an observation of the  measure of the temperature  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
     </owl:Class>
@@ -873,7 +753,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Tension -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Tension">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Tension represents an observation of the  measure of the tension of an element in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Tension</rdfs:label>
     </owl:Class>
@@ -883,7 +763,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Time -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Time">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Time represents an observation of the  measure of the time.</rdfs:comment>
         <rdfs:label xml:lang="en">Time</rdfs:label>
     </owl:Class>
@@ -903,19 +783,9 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Transparency -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Transparency">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Transparency represents an observation of the  measure of the transparence of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Transparency</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Tropical -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Tropical">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
-        <rdfs:comment xml:lang="en">Tropical represents an observation of the tropical climate in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Tropical</rdfs:label>
     </owl:Class>
     
 
@@ -923,7 +793,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Velocity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Velocity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Velocity represents an observation of the  measure of the velocity of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Velocity</rdfs:label>
     </owl:Class>
@@ -933,7 +803,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Visibility -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Visibility">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Visibility represents an observation of the  measure of the visibility of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Visibility</rdfs:label>
     </owl:Class>
@@ -943,7 +813,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Volume -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Volume">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Volume represents an observation of the  measure of the volume of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
@@ -973,7 +843,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#WindOrientation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindOrientation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">WindOrientation represents an observation of the  measure of the wind orientation in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">WindOrientation</rdfs:label>
     </owl:Class>
@@ -983,7 +853,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#WindSpeed -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindSpeed">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperties"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">WindSpeed represents an observation of the  measure of the wind speed  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">WindSpeed</rdfs:label>
     </owl:Class>
@@ -1014,6 +884,8 @@
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#AccelerationUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#AccelerationUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acceleration Unit</rdfs:label>
     </owl:Class>
     
 
@@ -1067,6 +939,8 @@
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#AngularAccelerationUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#AccelerationUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#AngularAccelerationUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angular Acceleration Unit</rdfs:label>
     </owl:Class>
     
 
@@ -1780,6 +1654,9 @@
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#LinearAccelerationUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#AccelerationUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Acceleration Unit</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Units_of_acceleration"/>
     </owl:Class>
     
 
@@ -2683,265 +2560,199 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ColdDesert -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdDesert">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdDesert"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotDesert -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDesert">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDesert"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotSemiArid -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSemiArid">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSemiArid"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#IceCap -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#IceCap">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#IceCap"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MildDesert -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildDesert">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildDesert"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MildSemiArid -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildSemiArid">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildSemiArid"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MildTundra -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildTundra">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildTundra"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#Subartic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Subartic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Subartic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental"/>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean">
-        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean"/>
     
 
 
@@ -3165,6 +2976,19 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#CentimeterPerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CentimeterPerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm/s^2</qudt:symbol>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#CentimeterPerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centimeter per Second Squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#ColonyFormingUnit -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#ColonyFormingUnit">
@@ -3383,6 +3207,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#DegreePerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreePerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AngularAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deg/(s^2)</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0174532925</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deg/(s^2)</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2170</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#DegreePerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree per Second Squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#DyneCentimeter -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DyneCentimeter">
@@ -3482,6 +3321,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#FootPerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#FootPerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft/s^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3048</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft/s^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0660</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#FootPerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot per Second Squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#FractionalArea -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#FractionalArea">
@@ -3505,6 +3359,20 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#FramePerSecond"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frame per Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Gal -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Gal">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gal</qudt:abbreviation>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gal</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0705</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Gal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gal</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Gal"/>
     </owl:NamedIndividual>
     
 
@@ -3584,6 +3452,22 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Grade"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Grade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Gravity -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Gravity">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.80665</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2100</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Gravity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gravity</rdfs:label>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Gravitation"/>
     </owl:NamedIndividual>
     
 
@@ -3695,6 +3579,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hz V^-1</qudt:symbol>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#HertzPerVolt"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hertz per Volt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#InchPerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#InchPerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in/s^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0254</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in/s^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1111</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#InchPerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inch per Second Squared</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3999,6 +3898,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#KnotPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KnotPerSecond">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kt/s</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5144444444444445</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kt/s</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2115</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#KnotPerSecond"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KnotPerSecond</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Launch -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Launch">
@@ -4148,6 +4062,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#MeterPerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#MeterPerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m/s^-2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m s^-2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1110</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#MeterPerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meter per Second Squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Micro -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Micro">
@@ -4158,6 +4087,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Micro"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Micro</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Micro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Microgravity -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Microgravity">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microG</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.80665E-6</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microG</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2110</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Microgravity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microgravity</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4188,6 +4132,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Milli"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milli</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Milli-"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Milligravity -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Milligravity">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mG</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.00980665</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mG</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2105</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Milligravity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milligravity</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4682,6 +4641,21 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
+    <!-- http://qudt.org/vocab/unit#RadianPerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#RadianPerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AngularAccelerationUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad/s^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad/s^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1565</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#RadianPerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radian per Second Squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Rem -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Rem">
@@ -4710,6 +4684,18 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Revolution"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Revolution</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Revolution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#RevolutionPerSecondSquared -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#RevolutionPerSecondSquared">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AngularAccelerationUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.28318531</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#RevolutionPerSecondSquared"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Revolution per Second Squared</rdfs:label>
     </owl:NamedIndividual>
     
 
