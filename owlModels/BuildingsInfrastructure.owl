@@ -245,6 +245,12 @@ The features of interest representation of the building are performed using stan
     
 
 
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#elevation_IfcBuildingStorey -->
+
+    <owl:ObjectProperty rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#elevation_IfcBuildingStorey"/>
+    
+
+
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#globalId_IfcRoot -->
 
     <owl:ObjectProperty rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#globalId_IfcRoot">
@@ -1662,7 +1668,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#propertyValue"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -2892,6 +2898,19 @@ EXAMPLEs of building elements are walls, beams, or doors, they are all physicall
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#elevation_IfcBuildingStorey"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcLengthMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#elevation_IfcBuildingStorey"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcLengthMeasure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.
