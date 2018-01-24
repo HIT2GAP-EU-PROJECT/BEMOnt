@@ -140,6 +140,12 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#propertyValue -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
+    
+
+
     <!-- http://qudt.org/schema/qudt#exactMatch -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt#exactMatch">
@@ -180,6 +186,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#propertyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gProperty#propertyValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -364,6 +378,36 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Arid -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Arid">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Arid represents an observation of the arid climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Arid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Capacity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Capacity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:comment xml:lang="en">Capacity represents an observation of the  measure of the capacity of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Capacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Climate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Climate">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:comment xml:lang="en">Climate represents an observation of the climate  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Climate</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Co2Rate -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Co2Rate">
@@ -400,6 +444,26 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Conductivity represents an observation of the  measure of the conductivity of an element  in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Continental -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Continental">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Continental represents an observation of the continental climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Continental</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ContinousState -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinousState">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
+        <rdfs:comment xml:lang="en">Represents an observation of a continuous state</rdfs:comment>
+        <rdfs:label xml:lang="en">ContinuousState.</rdfs:label>
     </owl:Class>
     
 
@@ -450,6 +514,26 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Volume"/>
         <rdfs:comment xml:lang="en">Discharge represents an observation of the  measure of the volume of a discharge in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Discharge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DiscreteState -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DiscreteState">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
+        <rdfs:comment xml:lang="en">Represents an observation of a discrete state.</rdfs:comment>
+        <rdfs:label xml:lang="en">DiscreteState.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DistributionElementState -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#State"/>
+        <rdfs:comment xml:lang="en">DistributionElementState represents an observation of the  state of a distribution element in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">DistributionElementState</rdfs:label>
     </owl:Class>
     
 
@@ -614,6 +698,12 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The phenomenon (or property) concept provides a common vision about the general characteristics to be considered in the building. This model is an extension of the “ssn:Property” representation. Three main families of characteristics were considered: economic, occupant state, and physical properties.</rdfs:comment>
         <rdfs:label xml:lang="en">Phenomenon Property</rdfs:label>
     </owl:Class>
@@ -626,6 +716,16 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
         <rdfs:comment xml:lang="en">Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">PhysicalProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Polar -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Polar">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Polar represents an observation of the polar climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Polar</rdfs:label>
     </owl:Class>
     
 
@@ -646,6 +746,16 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Pressure represents an observation of the  measure of the pressure in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ProductionCapacity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
+        <rdfs:comment xml:lang="en">ProductionCapacity represents an observation of the  measure of the capacity of production of an elment in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">ProductionCapacity</rdfs:label>
     </owl:Class>
     
 
@@ -720,6 +830,16 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#SpaceCapacity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Capacity"/>
+        <rdfs:comment xml:lang="en">SpaceCapacity represents an observation of the  measure of the capacity of the space  in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">SpaceCapacity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Speed -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Speed">
@@ -730,12 +850,32 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#State -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#State">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:comment xml:lang="en">State represents an observation of the  state of an element in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Streess -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Streess">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty"/>
         <rdfs:comment xml:lang="en">Stress represents an observation of the  measure of the stress of an occupant of the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Temperate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperate">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Temperate represents an observation of the temperate climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperate</rdfs:label>
     </owl:Class>
     
 
@@ -786,6 +926,16 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Transparency represents an observation of the  measure of the transparence of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Transparency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Tropical -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Tropical">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Climate"/>
+        <rdfs:comment xml:lang="en">Tropical represents an observation of the tropical climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tropical</rdfs:label>
     </owl:Class>
     
 
@@ -2560,199 +2710,265 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ColdDesert -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdDesert"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotDesert -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDesert"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotSemiArid -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSemiArid"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#IceCap -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#IceCap"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#IceCap">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MildDesert -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildDesert"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MildSemiArid -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildSemiArid"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Arid"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MildTundra -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildTundra"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildTundra">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Polar"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#Subartic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Subartic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Subartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Tropical"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Continental"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean -->
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean"/>
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Temperate"/>
+    </owl:NamedIndividual>
     
 
 
@@ -5055,6 +5271,20 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zetta</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Zetta-"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gProperty#propertyValue">
+        <rdfs:label xml:lang="en">Property Value</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
