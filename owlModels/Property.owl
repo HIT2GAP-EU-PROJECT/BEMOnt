@@ -1127,6 +1127,8 @@
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#AreaAngleUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#AreaAngleUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area Angle Unit</rdfs:label>
     </owl:Class>
     
 
@@ -1380,6 +1382,8 @@
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#CurvatureUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#CurvatureUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curvature Unit</rdfs:label>
     </owl:Class>
     
 
@@ -3205,6 +3209,22 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#Centipoise -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Centipoise">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cP</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cP</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0370</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Centipoise"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centipoise</rdfs:label>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Poise"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#ColonyFormingUnit -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#ColonyFormingUnit">
@@ -3434,6 +3454,38 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2170</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#DegreePerSecondSquared"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree per Second Squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Diopter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Diopter">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurvatureUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dioptre, or diopter, is a unit of measurement of the optical power of a lens or curved mirror, which is equal to the reciprocal of the focal length measured in metres (that is, 1/metres). For example, a 3 dioptre lens brings parallel rays of light to focus at 1/3 metre. The same unit is also sometimes used for other reciprocals of distance, particularly radii of curvature and the vergence of optical beams.
+
+Though the diopter is based on the SI-metric system it has not been included in the standard so that there is no international name or abbreviation for this unit of measurement—within the international system of units this unit for optical power would need to be specified explicitly as the inverse metre. [Wikipedia]</qudt:description>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2064</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Diopter"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diopter</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Dioptre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Dyne -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Dyne">
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dyn</qudt:abbreviation>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0560</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Dyne"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dyne</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Dyne"/>
     </owl:NamedIndividual>
     
 
@@ -4582,6 +4634,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#PascalSecond -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PascalSecond">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa-s</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa-s</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1330</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PascalSecond"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascal Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Pebi -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Pebi">
@@ -4748,6 +4815,22 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#Poise -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Poise">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1385</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Poise"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poise</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Poise"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#PoundForceFoot -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PoundForceFoot">
@@ -4778,6 +4861,36 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#PoundForceSecondPerSquareFoot -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PoundForceSecondPerSquareFoot">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lbf-s/ft^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">47.8802631</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lbf-s/ft^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1455.0</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PoundForceSecondPerSquareFoot"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound Force Second per Square Foot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#PoundForceSecondPerSquareInch -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PoundForceSecondPerSquareInch">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lbf-s/in^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6894.75789</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lbf-s/in^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1460</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PoundForceSecondPerSquareInch"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound Force Second per Square Inch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#PoundMole -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PoundMole">
@@ -4803,6 +4916,36 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1470</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PoundMoleDegreeFahrenheit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound Mole Degree Fahrenheit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#PoundPerFootHour -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PoundPerFootHour">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lb/(ft-hr)</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.133788732137649E-4</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lb/(ft-hr)</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1495</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PoundPerFootHour"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound per Foot Hour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#PoundPerFootSecond -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PoundPerFootSecond">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lb/(ft-s)</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.4881639435695537</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lb/(ft-s)</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1500</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PoundPerFootSecond"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound per Foot Second</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4975,6 +5118,21 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
+    <!-- http://qudt.org/vocab/unit#SlugPerFootSecond -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SlugPerFootSecond">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slug/(ft-s)</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">47.8802591863517</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slug/(ft-s)</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1655</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SlugPerFootSecond"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slug per Foot Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#SquareCoulombMeterPerJoule -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareCoulombMeterPerJoule">
@@ -5015,6 +5173,21 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1710</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareMeterKelvin"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Meter Kelvin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#SquareMeterSteradian -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareMeterSteradian">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaAngleUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^2-sr</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^2-sr</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1725</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareMeterSteradian"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Meter Steradian</rdfs:label>
     </owl:NamedIndividual>
     
 
