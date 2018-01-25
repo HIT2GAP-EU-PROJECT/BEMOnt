@@ -110,7 +110,7 @@ The features of interest representation of the building are performed using stan
     <!-- http://hit2gap.eu/h2g/h2gBI#contains -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#contains">
-        <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+        <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
     </owl:ObjectProperty>
     
 
@@ -155,6 +155,14 @@ The features of interest representation of the building are performed using stan
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasWindowCovering">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isContainedIn">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isContainedIn</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2852,7 +2860,7 @@ A unitary control element provides a housing for an aggregation of control or el
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2896,7 +2904,7 @@ EXAMPLEs of building elements are walls, beams, or doors, they are all physicall
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3649,7 +3657,7 @@ As an additional use agreement for standard slabs (i.e. slabs with constant thic
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingStorey"/>
             </owl:Restriction>
         </rdfs:subClassOf>
