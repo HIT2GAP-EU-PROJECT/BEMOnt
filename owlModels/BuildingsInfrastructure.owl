@@ -121,6 +121,12 @@ The features of interest representation of the building are performed using stan
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#hasH2GProperty -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasH2GProperty"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#hasLampType -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasLampType"/>
@@ -614,6 +620,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Arid -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Arid">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Climate"/>
+        <rdfs:comment xml:lang="en">Arid represents an observation of the arid climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Arid</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#AutomobileRepair -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AutomobileRepair">
@@ -771,6 +787,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Climate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Climate">
+        <rdfs:comment xml:lang="en">Climate represents an observation of the climate  in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Climate</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#CoffeeMachine -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#CoffeeMachine">
@@ -802,6 +827,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
         <rdfs:comment xml:lang="en">ConferenceRoom is an instance of IfcSpace in the building representing a conference room.</rdfs:comment>
         <rdfs:label xml:lang="en">ConferenceRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Continental -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Continental">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Climate"/>
+        <rdfs:comment xml:lang="en">Continental represents an observation of the continental climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Continental</rdfs:label>
     </owl:Class>
     
 
@@ -1305,6 +1340,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Polar -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Polar">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Climate"/>
+        <rdfs:comment xml:lang="en">Polar represents an observation of the polar climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Polar</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#PowerPlant -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PowerPlant">
@@ -1545,6 +1590,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Temperate -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Temperate">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Climate"/>
+        <rdfs:comment xml:lang="en">Temperate represents an observation of the temperate climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperate</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Toilets -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Toilets">
@@ -1569,6 +1624,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#TransportBuilding">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
         <rdfs:label>TransportBuilding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Tropical -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Tropical">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Climate"/>
+        <rdfs:comment xml:lang="en">Tropical represents an observation of the tropical climate in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tropical</rdfs:label>
     </owl:Class>
     
 
@@ -1688,6 +1753,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis/net/gml/_Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasH2GProperty"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gProperty#h2gProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
@@ -4113,6 +4184,12 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     <owl:Class rdf:about="http://www.opengis/net/gml/_Feature">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#locatedInClimate"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#Climate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gSensor#locatedInHemisphere"/>
                 <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#Hemisphere"/>
             </owl:Restriction>
@@ -4264,6 +4341,30 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#ColdDesert -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ColdDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ColdSemiArid -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ColdSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#CoolSummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#CoolSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#DeskLight -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#DeskLight">
@@ -4272,10 +4373,162 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#DrySummerSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#DrySummerSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#East -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#East">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Orientation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ExtremelyColdDrySummerSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ExtremelyColdDrySummerSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ExtremelyColdSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ExtremelyColdSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#FrostColdTundra -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#FrostColdTundra">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HotDesert -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HotDrySummerContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotDrySummerContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HotSemiArid -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HotSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HotSummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HumidSubtropical -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HumidSubtropical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#IceCap -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#IceCap">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MildDesert -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MildDesert">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MildSemiArid -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MildSemiArid">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MildTundra -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MildTundra">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedExtremelyColdSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedExtremelyColdSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedHotSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedHotSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedHumidsubtropical -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedHumidsubtropical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedSubartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedSubartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedWarmSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MonsoonInfluencedWarmSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
     </owl:NamedIndividual>
     
 
@@ -4332,6 +4585,100 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#South_West">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Orientation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Subartic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Subartic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SubpolarOceanic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#SubpolarOceanic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SubpolarOceanicWithDryWinters -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#SubpolarOceanicWithDryWinters">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TemperateOceanic -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TemperateOceanic">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TemperateOceanicWithDryWinters -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TemperateOceanicWithDryWinters">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TropicalMonsoon -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TropicalMonsoon">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TropicalRainforest -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TropicalRainforest">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TropicalSavanna -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TropicalSavanna">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WarmDrySummerContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#WarmDrySummerContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WarmDrySummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#WarmDrySummerMediterranean"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WarmSummerHumidContinental -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#WarmSummerHumidContinental">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Continental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WarmSummerMediterranean -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#WarmSummerMediterranean">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
     </owl:NamedIndividual>
     
 
