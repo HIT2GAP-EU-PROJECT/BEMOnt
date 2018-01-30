@@ -4167,22 +4167,22 @@ Additional classifications of the IfcZone, as provided by a national classificat
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gSensor#Northerm -->
+    <!-- http://hit2gap.eu/h2g/h2gSensor#Northern -->
 
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gSensor#Northerm">
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gSensor#Northern">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gSensor#Hemisphere"/>
-        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/h2g/h2gSensor#Northerm</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/h2g/h2gSensor#Northern</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gSensor#Southerm -->
+    <!-- http://hit2gap.eu/h2g/h2gSensor#Southern -->
 
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gSensor#Southerm">
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gSensor#Southern">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gSensor#Hemisphere"/>
-        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/h2g/h2gSensor#Southerm</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/h2g/h2gSensor#Southern</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
 

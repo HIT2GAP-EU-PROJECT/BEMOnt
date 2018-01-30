@@ -1043,10 +1043,10 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="West"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Northerm"/>
+        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Northern"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Southerm"/>
+        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Southern"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="ifc4:SOLARCOLLECTOR"/>
@@ -2816,11 +2816,11 @@ The features of interest representation of the building are performed using stan
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Hemisphere"/>
-        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Northerm"/>
+        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Northern"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Hemisphere"/>
-        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Southerm"/>
+        <NamedIndividual IRI="http://hit2gap.eu/h2g/h2gSensor#Southern"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="ifc4:IfcSolarDevice"/>
@@ -3688,8 +3688,8 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://hit2gap.eu/h2g/h2gSensor#Northerm</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Northerm</Literal>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Northern</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Northern</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3708,8 +3708,8 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://hit2gap.eu/h2g/h2gSensor#Southerm</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Southerm</Literal>
+        <IRI>http://hit2gap.eu/h2g/h2gSensor#Southern</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://hit2gap.eu/h2g/h2gSensor#Southern</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -2714,16 +2714,16 @@ Additional classifications of the IfcZone, as provided by a national classificat
                                             <http://hit2gap.eu/h2g/h2gBI#Orientation> .
 
 
-###  http://hit2gap.eu/h2g/h2gSensor#Northerm
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> rdf:type owl:NamedIndividual ,
+###  http://hit2gap.eu/h2g/h2gSensor#Northern
+<http://hit2gap.eu/h2g/h2gSensor#Northern> rdf:type owl:NamedIndividual ,
                                                     <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> ;
-                                           rdfs:isDefinedBy "http://hit2gap.eu/h2g/h2gSensor#Northerm"@en .
+                                           rdfs:isDefinedBy "http://hit2gap.eu/h2g/h2gSensor#Northern"@en .
 
 
-###  http://hit2gap.eu/h2g/h2gSensor#Southerm
-<http://hit2gap.eu/h2g/h2gSensor#Southerm> rdf:type owl:NamedIndividual ,
+###  http://hit2gap.eu/h2g/h2gSensor#Southern
+<http://hit2gap.eu/h2g/h2gSensor#Southern> rdf:type owl:NamedIndividual ,
                                                     <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> ;
-                                           rdfs:isDefinedBy "http://hit2gap.eu/h2g/h2gSensor#Southerm"@en .
+                                           rdfs:isDefinedBy "http://hit2gap.eu/h2g/h2gSensor#Southern"@en .
 
 
 ###  http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARCOLLECTOR
