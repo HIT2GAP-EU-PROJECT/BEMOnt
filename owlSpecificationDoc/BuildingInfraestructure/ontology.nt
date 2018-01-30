@@ -2291,15 +2291,15 @@ _:genid64 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 <http://hit2gap.eu/h2g/h2gBI#West> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://hit2gap.eu/h2g/h2gBI#West> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gBI#Orientation> .
 # 
-# http://hit2gap.eu/h2g/h2gSensor#Northerm
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://hit2gap.eu/h2g/h2gSensor#Northerm"@en .
+# http://hit2gap.eu/h2g/h2gSensor#Northern
+<http://hit2gap.eu/h2g/h2gSensor#Northern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g/h2gSensor#Northern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
+<http://hit2gap.eu/h2g/h2gSensor#Northern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://hit2gap.eu/h2g/h2gSensor#Northern"@en .
 # 
-# http://hit2gap.eu/h2g/h2gSensor#Southerm
-<http://hit2gap.eu/h2g/h2gSensor#Southerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://hit2gap.eu/h2g/h2gSensor#Southerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
-<http://hit2gap.eu/h2g/h2gSensor#Southerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://hit2gap.eu/h2g/h2gSensor#Southerm"@en .
+# http://hit2gap.eu/h2g/h2gSensor#Southern
+<http://hit2gap.eu/h2g/h2gSensor#Southern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g/h2gSensor#Southern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
+<http://hit2gap.eu/h2g/h2gSensor#Southern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://hit2gap.eu/h2g/h2gSensor#Southern"@en .
 # 
 # http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARCOLLECTOR
 <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARCOLLECTOR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

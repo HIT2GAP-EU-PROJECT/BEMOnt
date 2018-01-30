@@ -242,9 +242,9 @@ _:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://data.qudt.org/qu
 # #################################################################
 # 
 # 
-# http://hit2gap.eu/h2g/h2gSensor#Northerm
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
+# http://hit2gap.eu/h2g/h2gSensor#Northern
+<http://hit2gap.eu/h2g/h2gSensor#Northern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://hit2gap.eu/h2g/h2gSensor#Northern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
 # 
 # http://hit2gap.eu/h2g/h2gSensor#Southern
 <http://hit2gap.eu/h2g/h2gSensor#Southern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

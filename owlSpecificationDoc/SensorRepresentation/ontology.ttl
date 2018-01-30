@@ -249,8 +249,8 @@ Q = nU."""@en ;
 #    Individuals
 #################################################################
 
-###  http://hit2gap.eu/h2g/h2gSensor#Northerm
-<http://hit2gap.eu/h2g/h2gSensor#Northerm> rdf:type owl:NamedIndividual ,
+###  http://hit2gap.eu/h2g/h2gSensor#Northern
+<http://hit2gap.eu/h2g/h2gSensor#Northern> rdf:type owl:NamedIndividual ,
                                                     <http://hit2gap.eu/h2g/h2gSensor#Hemisphere> .
 
 

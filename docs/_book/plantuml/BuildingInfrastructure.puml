@@ -45,7 +45,7 @@ class Point <<geo>>
 class Polygon <<geo>>
 class Hemisphere <<hit2gap>>
 class Climate <<hit2gap>>
-class Northerm <<(I,orchid),hit2gap>>
+class Northern <<(I,orchid),hit2gap>>
 class Southern <<(I,orchid),hit2gap>>
 
 class Tropical <<(I,orchid),hit2gap>>
@@ -614,7 +614,7 @@ _Feature <|-- FeatureOfInterest
 _Feature <|-- System
 _Feature --> Hemisphere: hit2gap:locatedInHemisphere
 
-Hemisphere ..[#orchid] Northerm
+Hemisphere ..[#orchid] Northern
 Hemisphere ..[#orchid] Southern
 
 

@@ -439,10 +439,10 @@ Q = nU.</rdfs:comment>
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gSensor#Northerm -->
+    <!-- http://hit2gap.eu/h2g/h2gSensor#Northern -->
 
 
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gSensor#Northerm">
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gSensor#Northern">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gSensor#Hemisphere"/>
     </owl:NamedIndividual>
     
