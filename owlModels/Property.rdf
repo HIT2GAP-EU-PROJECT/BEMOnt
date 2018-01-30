@@ -141,12 +141,6 @@
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#propertyValue -->
-
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
-    
-
-
     <!-- http://qudt.org/schema/qudt#exactMatch -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt#exactMatch">
@@ -513,12 +507,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#EconomicProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology allows one to represent water-related prices, energy bills, building investments, etc. These specific phenomena has been subdivided into: Cost and Investment.</rdfs:comment>
         <rdfs:label xml:lang="en">Economic Property</rdfs:label>
     </owl:Class>
@@ -659,12 +647,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupancyCapacityProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The occupancy capacity property describes the capacity for occupants in the structural elements of the building. For example, this part of the ontology allows to represent the maximum occupancy capacity and the permanent occupancy in an  structural element of the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Occupancy Capacity Property</rdfs:label>
     </owl:Class>
@@ -685,12 +667,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The occupant state property describes the state of an occupant of the building. For example, this part of the ontology allows to represent the pulse and stress of an occupant.</rdfs:comment>
         <rdfs:label xml:lang="en">Occupant State Property</rdfs:label>
     </owl:Class>
@@ -727,6 +703,12 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The phenomenon (or property) concept provides a common vision about the general characteristics to be considered in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Phenomenon Property</rdfs:label>
     </owl:Class>
@@ -737,12 +719,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#propertyValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Physical properties represent all related physical aspects that can be observed: dimensional, volumetric, and radiation aspects that influence on the building and occupant behaviour. These phenomena support the alignment and fusion of specific observations based on general measurements (e.g. temperature, volume, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">PhysicalProperty</rdfs:label>
     </owl:Class>
@@ -1012,12 +988,6 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#h2gProperty -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#h2gProperty">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that can be intrinsic to and cannot exist without the entity (such as sensors and devices) or can be optional for some entities (such building elements).
 
 This model includes the “ssn:Property” representation and the phenomenon concepts that provide a common vision about the general characteristics to be considered in the building.</rdfs:comment>
@@ -2733,6 +2703,12 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#h2gProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:label xml:lang="en">Property</rdfs:label>
@@ -6380,20 +6356,6 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zetta</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Zetta-"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gProperty#propertyValue">
-        <rdfs:label xml:lang="en">Property Value</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 
