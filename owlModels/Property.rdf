@@ -988,6 +988,12 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#h2gProperty -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#h2gProperty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that can be intrinsic to and cannot exist without the entity (such as sensors and devices) or can be optional for some entities (such building elements).
 
 This model includes the “ssn:Property” representation and the phenomenon concepts that provide a common vision about the general characteristics to be considered in the building.</rdfs:comment>
@@ -2648,6 +2654,12 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gProperty#h2gProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2703,12 +2715,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#h2gProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:label xml:lang="en">Property</rdfs:label>
