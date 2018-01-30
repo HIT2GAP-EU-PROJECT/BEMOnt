@@ -1740,8 +1740,27 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#propertyValue"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#h2gProperty -->
+
+    <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gProperty#h2gProperty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -4251,7 +4270,20 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 

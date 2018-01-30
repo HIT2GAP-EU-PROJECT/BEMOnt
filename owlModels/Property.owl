@@ -721,12 +721,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#h2gProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gProperty#hasUnit"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The phenomenon (or property) concept provides a common vision about the general characteristics to be considered in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Phenomenon Property</rdfs:label>
     </owl:Class>
@@ -1012,12 +1006,6 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#h2gProperty -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#h2gProperty">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that can be intrinsic to and cannot exist without the entity (such as sensors and devices) or can be optional for some entities (such building elements).
 
 This model includes the “ssn:Property” representation and the phenomenon concepts that provide a common vision about the general characteristics to be considered in the building.</rdfs:comment>
@@ -1153,7 +1141,8 @@ This model includes the “ssn:Property” representation and the phenomenon con
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#AreaTemperatureUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#ThermodynamicsUnit"/>
-        <rdfs:label rdf:resource="http://qudt.org/schema/qudt#AreaTemperatureUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#AreaTemperatureUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area Temperature Unit</rdfs:label>
     </owl:Class>
     
 
@@ -1180,6 +1169,9 @@ This model includes the “ssn:Property” representation and the phenomenon con
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#AreaUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area Unit</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Units_of_area"/>
     </owl:Class>
     
 
@@ -2677,12 +2669,6 @@ This model includes the “ssn:Property” representation and the phenomenon con
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:label xml:lang="en">Feature of Interest</rdfs:label>
@@ -2976,24 +2962,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ColdDesert -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdDesert"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ColdSemiArid"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoolSummerMediterranean"/>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Cubic_Meter_per_Kelvin -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Cubic_Meter_per_Kelvin">
@@ -3197,12 +3165,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DrySummerSubarctic"/>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Electron_Volt_per_Kelvin -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Electron_Volt_per_Kelvin">
@@ -3216,24 +3178,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdDrySummerSubarctic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#ExtremelyColdSubartic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#FrostColdTundra"/>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Gram_Degree_Celsius -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Gram_Degree_Celsius">
@@ -3243,48 +3187,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</dtype:code>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gram Degree Celsius</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#HotDesert -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDesert"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotDrySummerContinental"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#HotSemiArid -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSemiArid"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerHumidContinental"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HotSummerMediterranean"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HumidSubtropical"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#IceCap -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#IceCap"/>
     
 
 
@@ -3547,54 +3449,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MildDesert -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildDesert"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MildSemiArid -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildSemiArid"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MildTundra -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MildTundra"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedExtremelyColdSubarctic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHotSummerHumidContinental"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedHumidSubtropical"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedSubartic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#MonsoonInfluencedWarmSummerHumidContinental"/>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Nutritional_Calorie -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Nutritional_Calorie">
@@ -3759,36 +3613,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubPolarOceanicWithDryWinters"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#Subartic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Subartic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#SubpolarOceanic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanic"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TemperateOceanicWithDryWinters"/>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Therm_EC -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Therm_EC">
@@ -3847,42 +3671,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalMonsoon"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalRainforest"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#TropicalSavanna"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmDrySummerContinental"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarmSummerHumidContinental"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean -->
-
-    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#WarnSummerMediterranean"/>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gProperty#Watt -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Watt">
@@ -3922,6 +3710,22 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/(m^2-K)</qudt:symbol>
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1955</dtype:code>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watt per Square Meter Kelvin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Acre -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Acre">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ac</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4046.8564224</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ac</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0040</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Acre"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acre</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Acre"/>
     </owl:NamedIndividual>
     
 
@@ -3968,6 +3772,22 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1600</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#ArcMinute"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arc Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Are -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Are">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0090</dtype:code>
+        <rdfs:label rdf:resource="http://qudt.org/vocab/unit#Are"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Are</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Are"/>
     </owl:NamedIndividual>
     
 
@@ -4028,6 +3848,22 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Ban"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ban</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Ban"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Barn -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Barn">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-28</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0115</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Barn"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barn</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Barn"/>
     </owl:NamedIndividual>
     
 
@@ -4171,6 +4007,19 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Centipoise"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centipoise</rdfs:label>
         <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Poise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#CircularMil -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CircularMil">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cmil</qudt:abbreviation>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cmil</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0385</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#CircularMil"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circular Mil</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4741,6 +4590,22 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2335</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#HeartBeatsPerMinute"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heart Beats per Minute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Hectare -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Hectare">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10000.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0785</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Hectare"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hectare</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Hectare"/>
     </owl:NamedIndividual>
     
 
@@ -5765,6 +5630,18 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
+    <!-- http://qudt.org/vocab/unit#PlankArea -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#PlankArea">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.61223E-70</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PlankArea"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plank Area</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Poise -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Poise">
@@ -6083,6 +5960,21 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
+    <!-- http://qudt.org/vocab/unit#SquareCentimeter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareCentimeter">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-4</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2038</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareCentimeter"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Centimeter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#SquareCoulombMeterPerJoule -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareCoulombMeterPerJoule">
@@ -6107,6 +5999,52 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deg^2</qudt:symbol>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareDegree"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square degree</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#SquareFoot -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareFoot">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.09290304</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1670</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareFoot"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Foot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#SquareInch -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareInch">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.4516E-4</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1700</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareInch"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Inch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#SquareMeter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareMeter">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1705</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareMeter"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Meter</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Square_metre"/>
     </owl:NamedIndividual>
     
 
@@ -6138,6 +6076,36 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1725</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareMeterSteradian"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Meter Steradian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#SquareMile -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareMile">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mi^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2589988.11</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mi^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1730</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareMile"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Mile</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#SquareYard -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SquareYard">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yd^2</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.83612736</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yd^2</qudt:symbol>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1735</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#SquareYard"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Yard</rdfs:label>
     </owl:NamedIndividual>
     
 
