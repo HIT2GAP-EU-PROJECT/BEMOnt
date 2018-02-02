@@ -67,6 +67,141 @@ The features of interest representation of the building are performed using stan
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum -->
+
+    <rdfs:Datatype rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum">
+        <rdfs:isDefinedBy rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
+        <rdfs:label xml:lang="en">IfcWindowTypeEnum</rdfs:label>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>LIGHTDOME</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>NOTDEFINED</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>SKYLIGHT</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>USERDEFINED</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>WINDOW</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypePartitioningEnum -->
+
+    <rdfs:Datatype rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypePartitioningEnum">
+        <rdfs:label rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypePartitioningEnum"/>
+        <rdfs:label xml:lang="en">IfcWindowTypePartitioningEnum</rdfs:label>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>DOUBLE_PANEL_HORIZONTAL</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>DOUBLE_PANEL_VERTICAL</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>NOTDEFINED</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>SINGLE_PANEL</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>TRIPLE_PANEL_BOTTOM</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>TRIPLE_PANEL_HORIZONTAL</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>TRIPLE_PANEL_LEFT</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>TRIPLE_PANEL_RIGHT</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>TRIPLE_PANEL_TOP</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>TRIPLE_PANEL_VERTICAL</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>USERDEFINED</rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -161,7 +296,22 @@ The features of interest representation of the building are performed using stan
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasWindowCovering">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#hasWindowGlazing -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasWindowGlazing">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#inContactWith -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#inContactWith"/>
     
 
 
@@ -411,11 +561,42 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#hasPartitioningType -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasPartitioningType"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#hasWindowType -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasWindowType">
+        <rdfs:range rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#isInside -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isInside">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#propertyValue -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#propertyValue">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">Property Value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#windowWallRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#windowWallRatio">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Window Wall Ratio</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -677,12 +858,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#Blinds -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#Blind -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Blinds">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
-        <rdfs:comment xml:lang="en">A Blind is an instance of a WindowCovering representing a window blind.</rdfs:comment>
-        <rdfs:label xml:lang="en">Blinds</rdfs:label>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Blind">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+        <rdfs:comment xml:lang="en">A Blind is a type of a WindowCovering representing a window blind.</rdfs:comment>
+        <rdfs:label xml:lang="en">Blind</rdfs:label>
     </owl:Class>
     
 
@@ -858,12 +1039,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#Curtains -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#Curtain -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Curtains">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
-        <rdfs:comment xml:lang="en">A Curtain is an instance of a WindowCovering representing window curtains.</rdfs:comment>
-        <rdfs:label xml:lang="en">Curtains</rdfs:label>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Curtain">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+        <rdfs:comment xml:lang="en">A Curtain is a type of a WindowCovering representing a window curtain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Curtain</rdfs:label>
     </owl:Class>
     
 
@@ -891,6 +1072,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Dishwasher">
         <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#DoubleGlazing -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DoubleGlazing">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazing"/>
+        <rdfs:comment xml:lang="en">It represents that glasses of the window are double</rdfs:comment>
+        <rdfs:label xml:lang="en">Double Glazing</rdfs:label>
     </owl:Class>
     
 
@@ -1489,12 +1680,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#Shades -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#Shade -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Shades">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
-        <rdfs:comment xml:lang="en">A Shade is an instance of a WindowCovering representing window shades.</rdfs:comment>
-        <rdfs:label xml:lang="en">Shades</rdfs:label>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Shade">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+        <rdfs:comment xml:lang="en">A Shade is a type of a WindowCovering representing a window shade.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shade</rdfs:label>
     </owl:Class>
     
 
@@ -1508,12 +1699,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#Shutters -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#Shutter -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Shutters">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
-        <rdfs:comment xml:lang="en">A Shutter is an instance of a WindowCovering representing window shutters.</rdfs:comment>
-        <rdfs:label xml:lang="en">Shutters</rdfs:label>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Shutter">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+        <rdfs:comment xml:lang="en">A Shutter is a type of a WindowCovering representing a window shutter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shutter</rdfs:label>
     </owl:Class>
     
 
@@ -1523,6 +1714,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Silo">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#AgriculturalBuilding"/>
         <rdfs:label>Silo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SimpleGlazing -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SimpleGlazing">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazing"/>
+        <rdfs:comment xml:lang="en">It represents that glasses of the window are simple</rdfs:comment>
+        <rdfs:label xml:lang="en">Simple Glazing</rdfs:label>
     </owl:Class>
     
 
@@ -1718,11 +1919,20 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#WindowCoverings -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#WindowCovering -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowCoverings">
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowCovering">
         <rdfs:comment xml:lang="en">A window covering is an element which covers a window in the building and is fully dependent on that window. The WindowCovering defines the occurrence of a covering type.</rdfs:comment>
-        <rdfs:label xml:lang="en">WindowCoverings</rdfs:label>
+        <rdfs:label xml:lang="en">Window Covering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WindowGlazing -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowGlazing">
+        <rdfs:comment xml:lang="en">A window glazing describes the type of glass of a window in the building and is fully dependent on that window. The WindowGlazing defines the occurrence of a glass type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Window Glazing</rdfs:label>
     </owl:Class>
     
 
@@ -2318,7 +2528,7 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#OpenClose"/>
-                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2808,7 +3018,7 @@ A unitary control element provides a housing for an aggregation of control or el
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#OpenClose"/>
-                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2873,7 +3083,6 @@ A unitary control element provides a housing for an aggregation of control or el
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
@@ -2928,6 +3137,24 @@ A unitary control element provides a housing for an aggregation of control or el
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#inContactWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
         <rdfs:comment xml:lang="en">The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system.
 
@@ -2941,7 +3168,6 @@ EXAMPLEs of building elements are walls, beams, or doors, they are all physicall
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingStorey">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
@@ -3230,6 +3456,7 @@ The door entity, IfcDoor, defines a particular occurrence of a door inserted in 
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:comment xml:lang="en">An element is a generalization of all components that make up an AEC product.
 Elements are physically existent objects, although they might be void elements, such as holes. Elements either remain permanently in the AEC product, or only temporarily, as formwork does. Elements can be either assembled on site or pre-manufactured and built in on site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement"/>
@@ -3602,7 +3829,6 @@ An IfcRampFlight connects the floor slab of zero to two different storeys (or pa
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
@@ -3694,7 +3920,6 @@ As an additional use agreement for standard slabs (i.e. slabs with constant thic
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
@@ -3741,6 +3966,13 @@ ObjectType holds the space type, i.e. usually the functional category of the spa
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatial element is the generalization of all spatial elements that might be used to define a spatial structure or to define spatial zones.
 
 a hierarchical spatial structure element as IfcSpatialStructureElement
@@ -3899,6 +4131,18 @@ An IfcStairFlight normally connects the floor slab of zero to two different stor
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWall">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isInside"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#windowWallRatio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWall"/>
         <rdfs:label xml:lang="en">IfcWall</rdfs:label>
@@ -3924,7 +4168,25 @@ An IfcStairFlight normally connects the floor slab of zero to two different stor
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasWindowCovering"/>
-                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoverings"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasWindowGlazing"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasPartitioningType"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypePartitioningEnum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasWindowType"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical and horizontal opening (e.g. skylights or light domes). It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels.

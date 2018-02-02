@@ -538,6 +538,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Height">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
         <rdfs:comment xml:lang="en">Height represents an observation of the  height of an elment in the building.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Surface represents an observation of the  surface of an elment in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Height</rdfs:label>
     </owl:Class>
     
@@ -1804,6 +1805,8 @@ This model includes the “ssn:Property” representation and the phenomenon con
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#LengthUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length Unit</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Units_of_length"/>
     </owl:Class>
     
 
@@ -5113,6 +5116,22 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3015</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#MegabitsPerSecond"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Megabit per Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Meter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Meter">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</qudt:symbol>
+        <qudt:uneceCommonCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTR</qudt:uneceCommonCode>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1090</dtype:code>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meter</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Metre"/>
     </owl:NamedIndividual>
     
 
