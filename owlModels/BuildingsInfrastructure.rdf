@@ -729,6 +729,46 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#AHUCoolingMethod -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AHUCoolingMethod">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#AHUDuct -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AHUDuct">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#AHUVolumeControl -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AHUVolumeControl">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Administration -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Administration">
@@ -757,12 +797,58 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#AirExchanger -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AirExchanger">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#AirHandlingUnit -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AirHandlingUnit">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUCoolingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDuct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUVolumeControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An AirHandlingUnit is a device used to regulate and circulate air as part of a heating, ventilating, and air-conditioning (HVAC) system.</rdfs:comment>
         <rdfs:label xml:lang="en">AirHandlingUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#AirHeatPump -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AirHeatPump">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatPump"/>
     </owl:Class>
     
 
@@ -884,6 +970,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Bungalow -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Bungalow">
@@ -939,12 +1031,28 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#CentralLight -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#CentralLight">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcLamp"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#ChilledBeams -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ChilledBeams">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
         <rdfs:comment xml:lang="en">A ChilledBeam is a type of convection HVAC system designed to heat or cool large buildings. Pipes of water are passed through a &quot;beam&quot; (a heat exchanger) either integrated into standard suspended ceiling systems or suspended a short distance from the ceiling of a room.</rdfs:comment>
         <rdfs:label xml:lang="en">ChilledBeams</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ChillerModel -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ChillerModel">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BuildingApplianceEnum"/>
     </owl:Class>
     
 
@@ -1039,6 +1147,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#CoolingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#CoolingCoil">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCoil"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Curtain -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Curtain">
@@ -1064,6 +1180,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
         <rdfs:comment xml:lang="en">Desk is an instance of IfcSpace in the building representing a desk.</rdfs:comment>
         <rdfs:label xml:lang="en">Desk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#DeskLight -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DeskLight">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcLamp"/>
     </owl:Class>
     
 
@@ -1095,6 +1219,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#DxCoolingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DxCoolingCoil">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#CoolingCoil"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#EducationalBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#EducationalBuilding">
@@ -1110,6 +1242,22 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal"/>
         <rdfs:comment xml:lang="en">An ElectricHeater represents an electrical device that converts electric current to heat.</rdfs:comment>
         <rdfs:label xml:lang="en">ElectricHeater</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ElectricHeatingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ElectricHeatingCoil">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatingCoil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ExhaustAirHeatPump -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ExhaustAirHeatPump">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatPump"/>
     </owl:Class>
     
 
@@ -1225,8 +1373,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Gas">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
-        <rdfs:comment xml:lang="en">Gas represents gas as a physical medium to produce energy.</rdfs:comment>
-        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#GasHeatingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#GasHeatingCoil">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatingCoil"/>
     </owl:Class>
     
 
@@ -1258,6 +1412,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#GroundHeatPump -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#GroundHeatPump">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatPump"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Gym -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Gym">
@@ -1282,6 +1444,22 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcPumpType"/>
         <rdfs:comment xml:lang="en">A HeatPump is a device that transfers heat energy from a source of heat to a destination called a &quot;heat sink&quot;. Heat pumps are designed to move thermal energy in the opposite direction of spontaneous heat transfer by absorbing heat from a cold space and releasing it to a warmer one. A heat pump uses a small amount of external power to accomplish the work of transferring energy from the heat source to the heat sink.</rdfs:comment>
         <rdfs:label xml:lang="en">HeatPump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HeatRecoveryVentilator -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#HeatRecoveryVentilator">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HeatingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#HeatingCoil">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCoil"/>
     </owl:Class>
     
 
@@ -1317,6 +1495,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Hub">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#NetworkAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Hybrid -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Hybrid">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatPump"/>
     </owl:Class>
     
 
@@ -1728,6 +1914,22 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#SmartPhone -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SmartPhone">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#Wearable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SmartWatch -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SmartWatch">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#Wearable"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Smartphone_Station -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Smartphone_Station">
@@ -1736,12 +1938,42 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#SolarElectric -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SolarElectric">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSolarDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SolarHeatPump -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SolarHeatPump">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatPump"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SolarThermal -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SolarThermal">
+        <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSolarDevice"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Steam -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Steam">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
-        <rdfs:comment xml:lang="en">Steam represents steam as a physical medium to produce energy.</rdfs:comment>
-        <rdfs:label xml:lang="en">Steam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#SteamHeatingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SteamHeatingCoil">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatingCoil"/>
     </owl:Class>
     
 
@@ -1899,12 +2131,36 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#WaterCoolingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WaterCoolingCoil">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#CoolingCoil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WaterHeatingCoil -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WaterHeatingCoil">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatingCoil"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#WaterPlant -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WaterPlant">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
         <rdfs:comment xml:lang="en">A WaterPlant represents a plant operated by pressure transmitted through a pipe by a liquid, such as water or oil.</rdfs:comment>
         <rdfs:label xml:lang="en">WaterPlant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#WaterSourceHeatPump -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WaterSourceHeatPump">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#HeatPump"/>
     </owl:Class>
     
 
@@ -2608,6 +2864,12 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
     <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcChiller">
         <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcChillerType"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasA"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#ChillerModel"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
         <rdfs:comment xml:lang="en">A chiller is a device used to remove heat from a liquid via a vapor-compression or absorption refrigeration cycle to cool a fluid, typically water or a mixture of water and glycol. The chilled fluid is then used to cool and dehumidify air in a building.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcChiller</rdfs:isDefinedBy>
@@ -4578,6 +4840,22 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#ChilledBeamMode -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ChilledBeamMode">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#ChilledWaterCool -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ChilledWaterCool">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUCoolingMethod"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#ColdDesert -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ColdDesert">
@@ -4590,6 +4868,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#ColdSemiArid">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Arid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Constant -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Constant">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUVolumeControl"/>
     </owl:NamedIndividual>
     
 
@@ -4610,6 +4896,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#DirectZone -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#DirectZone">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#DrySummerSubartic -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#DrySummerSubartic">
@@ -4618,10 +4912,34 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Dual -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Dual">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDuct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#DxCool -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#DxCool">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUCoolingMethod"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#East -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#East">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Orientation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Electrical -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Electrical">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod"/>
     </owl:NamedIndividual>
     
 
@@ -4646,6 +4964,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#FrostColdTundra">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Polar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Gas -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Gas">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod"/>
     </owl:NamedIndividual>
     
 
@@ -4686,6 +5012,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotSummerMediterranean">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Temperate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#HotWater -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#HotWater">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod"/>
     </owl:NamedIndividual>
     
 
@@ -4770,6 +5104,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#MultiZone -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#MultiZone">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#North -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#North">
@@ -4802,6 +5144,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Single -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Single">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDuct"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#South -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#South">
@@ -4822,6 +5172,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#South_West">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Orientation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Steam -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Steam">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUHeatingMethod"/>
     </owl:NamedIndividual>
     
 
@@ -4866,6 +5224,14 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Triple -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Triple">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDuct"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#TropicalMonsoon -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TropicalMonsoon">
@@ -4886,6 +5252,22 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TropicalSavanna">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#Tropical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Variable -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Variable">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUVolumeControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#VavZone -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#VavZone">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDeliveryMode"/>
     </owl:NamedIndividual>
     
 
@@ -4979,6 +5361,25 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
         <rdf:type rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSolarDevice"/>
         <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARTHERMAL</rdfs:isDefinedBy>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gBI#Gas">
+        <rdfs:comment xml:lang="en">Gas represents gas as a physical medium to produce energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gBI#Steam">
+        <rdfs:comment xml:lang="en">Steam represents steam as a physical medium to produce energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steam</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
