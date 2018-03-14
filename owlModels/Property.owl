@@ -3733,6 +3733,36 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#Afghani -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Afghani">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AFN</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Afghanistan</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">971</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Afghani"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afghani</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Afghani"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#AlgerianDinar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AlgerianDinar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DZD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Algeria</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">012</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#AlgerianDinar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algerian Dinar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Algerian_dinar"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#AmperePerJoule -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AmperePerJoule">
@@ -3795,6 +3825,51 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#ArgentinePeso -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#ArgentinePeso">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARS</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Argentina</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">032</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#ArgentinePeso"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentine Peso</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Argentine_peso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#ArmenianDram -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#ArmenianDram">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</qudt:currencyExponent>
+        <qudt:description>Armenia</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">051</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#ArmenianDram"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armenian Dram</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Armenian_dram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#ArubanGuilder -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#ArubanGuilder">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AWG</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aruba</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">533</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#ArubanGuilder"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aruban Guilder</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Aruban_florin"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#AtomicMassUnit -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AtomicMassUnit">
@@ -3840,6 +3915,96 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#AustralianDollar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AustralianDollar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AUD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Australia, Australian Antarctic Territory, Christmas Island, Cocos (Keeling) Islands, Heard and McDonald Islands, Kiribati, Nauru, Norfolk Island, Tuvalu</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">036</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#AustralianDollar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australian Dollar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Australian_dollar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#AzerbaijanianManat -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AzerbaijanianManat">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZN</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Azerbaijan</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">944</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#AzerbaijanianManat"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azerbaijanian Manat</rdfs:isDefinedBy>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Azerbaijani_manat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BahamianDollar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BahamianDollar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Bahamas</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">044</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BahamianDollar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahamian Dollar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bahamian_dollar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BahrainiDinar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BahrainiDinar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BHD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</qudt:currencyExponent>
+        <qudt:description>Bahrain</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">048</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BahrainiDinar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahraini Dinar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bahraini_dinar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Baht -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Baht">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">THB</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Thailand</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">764</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Baht"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baht</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Thai_baht"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Balboa -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Balboa">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PAB</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Panama</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">590</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Balboa"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balboa</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Balboa"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Ban -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Ban">
@@ -3851,6 +4016,36 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Ban"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ban</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Ban"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BangladeshiTaka -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BangladeshiTaka">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDT</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Bangladesh</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">050</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BangladeshiTaka"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladeshi Taka</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bangladeshi_taka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BarbadosDollar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BarbadosDollar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Barbados</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">052</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BarbadosDollar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barbados Dollar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Barbadian_dollar"/>
     </owl:NamedIndividual>
     
 
@@ -3887,6 +4082,51 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#BelarussianRuble -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BelarussianRuble">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BYR</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</qudt:currencyExponent>
+        <qudt:description>Belarus</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">974</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BelarussianRuble"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belarussian Ruble</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Belarusian_ruble"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BelizeDollar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BelizeDollar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BZD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Belize</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">084</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BelizeDollar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belize Dollar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Belize_dollar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BermudaDollar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BermudaDollar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BMD</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Bermuda</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">060</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BermudaDollar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bermuda Dollar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bermudian_dollar"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Bit -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Bit">
@@ -3917,6 +4157,50 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#BolivianMvdol -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BolivianMvdol">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOV</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Bolivia</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">984</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BolivianMvdol"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolivian Mvdol (Funds code)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#Boliviano -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Boliviano">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOB</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Bolivia</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">068</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Boliviano"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boliviano</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bolivian_boliviano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BrazilianReal -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BrazilianReal">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRL</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Brazil</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">986</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BrazilianReal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazilian Real</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Brazilian_real"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#Breath -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Breath">
@@ -3942,6 +4226,21 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://qudt.org/vocab/unit#BruneiDollar -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BruneiDollar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BND</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Brunei</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">096</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BruneiDollar"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brunei Dollar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Brunei_dollar"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit#BtuPerPoundMole -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BtuPerPoundMole">
@@ -3951,6 +4250,36 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0225</dtype:code>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BtuPerPoundMole"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTU per Pound Mole</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BulgarianLev -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BulgarianLev">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BGN</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qudt:currencyExponent>
+        <qudt:description>Bulgaria</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">975</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BulgarianLev"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian Lev</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bulgarian_lev"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit#BurundianFranc -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BurundianFranc">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIF</qudt:abbreviation>
+        <qudt:currencyExponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</qudt:currencyExponent>
+        <qudt:description>Burundi</qudt:description>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">108</dtype:code>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#BurundianFranc"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burundian Franc</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Burundian_franc"/>
     </owl:NamedIndividual>
     
 
