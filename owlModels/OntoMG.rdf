@@ -56,58 +56,52 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This semantic model is focused on describing microgrid elements.  In this model, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows, and the different building systems linked with that flows.</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="StirlingBranch"/>
+        <Class IRI="HydroPower"/>
     </Declaration>
     <Declaration>
-        <Class IRI="CoalBranch"/>
+        <Class IRI="SmallWindPower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RenewableBranch"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
-        <Class IRI="CHPBranch"/>
+        <Class IRI="SolarPower"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Biomass"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="SolarCell"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="MicroCHPBranch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SolarPowerBranch"/>
     </Declaration>
     <Declaration>
         <Class IRI="CIMConductingEquipement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PhotovoltaicBranch"/>
+        <Class IRI="Nuclear"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ReciprocatingBranch"/>
+        <Class IRI="Gas"/>
     </Declaration>
     <Declaration>
         <Class IRI="SmallWindTurbine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="FuelCellBranch"/>
+        <Class IRI="Coal"/>
     </Declaration>
     <Declaration>
         <Class IRI="Converter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BiomassBranch"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="AcDcConverter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="MicroturbinesBranch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="GasBranch"/>
+        <Class IRI="FuelCell"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -116,40 +110,25 @@
         <Class IRI="MonophasicInverter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NonRenewableDERBranch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="HydroPowerBranch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SolarHybridBranch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SmallWindPowerBranch"/>
+        <Class IRI="CHP"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WindHybridBranch"/>
+        <Class IRI="WindHybrid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MicroCHP"/>
     </Declaration>
     <Declaration>
         <Class IRI="RegulatingCondEq"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="NuclearBranch"/>
     </Declaration>
     <Declaration>
         <Class IRI="TriphasicInverter"/>
     </Declaration>
     <Declaration>
         <Class IRI="CIMRectifierInverter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="RenewableDERBranch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DieselGenerator"/>
     </Declaration>
     <Declaration>
         <Class IRI="BranchController"/>
@@ -161,37 +140,58 @@
         <ObjectProperty IRI="hasA"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Class IRI="Diesel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="OilBranch"/>
+        <Class IRI="Photovoltaic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Reciprocating"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
     </Declaration>
     <Declaration>
         <Class IRI="Microgrid"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BranchSwitch"/>
+        <Class IRI="Oil"/>
     </Declaration>
     <Declaration>
-        <Class IRI="InfraBranch"/>
+        <Class IRI="BranchSwitch"/>
     </Declaration>
     <Declaration>
         <Class IRI="Inverter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ELBranch"/>
+        <Class IRI="InfraBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MicroTurbine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stirling"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
+        <Class IRI="ELBranch"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ESBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SolarHybrid"/>
     </Declaration>
     <Declaration>
         <Class IRI="Branch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="GeoThermalBranch"/>
+        <Class IRI="NonRenewableBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Geothermal"/>
     </Declaration>
     <Declaration>
         <Class IRI="DERBranch"/>
@@ -201,8 +201,8 @@
         <Class IRI="Converter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="BiomassBranch"/>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="Biomass"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Branch"/>
@@ -223,12 +223,12 @@
         <Class IRI="CIMConductingEquipement"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="CHPBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="CHP"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="CoalBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="Coal"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Converter"/>
@@ -246,8 +246,8 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="DieselGenerator"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="Diesel"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ELBranch"/>
@@ -258,34 +258,20 @@
         <Class IRI="Branch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="FuelCellBranch"/>
-        <Class IRI="OilBranch"/>
+        <Class IRI="FuelCell"/>
+        <Class IRI="Oil"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="FuelCellBranch"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="hasA"/>
-            <Class IRI="Converter"/>
-        </ObjectAllValuesFrom>
+        <Class IRI="Gas"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="FuelCellBranch"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="hasA"/>
-            <Class IRI="DieselGenerator"/>
-        </ObjectAllValuesFrom>
+        <Class IRI="Geothermal"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="GasBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="GeoThermalBranch"/>
-        <Class IRI="RenewableDERBranch"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="HydroPowerBranch"/>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="HydroPower"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="InfraBranch"/>
@@ -296,8 +282,12 @@
         <Class IRI="Converter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="MicroCHPBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="MicroCHP"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MicroTurbine"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Microgrid"/>
@@ -307,54 +297,36 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="MicroturbinesBranch"/>
-        <Class IRI="RenewableDERBranch"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="MonophasicInverter"/>
         <Class IRI="Inverter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="NonRenewableBranch"/>
         <Class IRI="DERBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="NuclearBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="Nuclear"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="OilBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="Oil"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PhotovoltaicBranch"/>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="Photovoltaic"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="ReciprocatingBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="Reciprocating"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="RenewableBranch"/>
         <Class IRI="DERBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SmallWindPowerBranch"/>
-        <Class IRI="RenewableDERBranch"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SmallWindPowerBranch"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasA"/>
-            <Class IRI="SmallWindTurbine"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SmallWindPowerBranch"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="hasA"/>
-            <Class IRI="Converter"/>
-        </ObjectAllValuesFrom>
+        <Class IRI="SmallWindPower"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SmallWindTurbine"/>
@@ -365,38 +337,24 @@
         <Class IRI="RegulatingCondEq"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SolarHybridBranch"/>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="SolarHybrid"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SolarPowerBranch"/>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="SolarPower"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SolarPowerBranch"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasA"/>
-            <Class IRI="SolarCell"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SolarPowerBranch"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="hasA"/>
-            <Class IRI="Converter"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="StirlingBranch"/>
-        <Class IRI="NonRenewableDERBranch"/>
+        <Class IRI="Stirling"/>
+        <Class IRI="NonRenewableBranch"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="TriphasicInverter"/>
         <Class IRI="Inverter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="WindHybridBranch"/>
-        <Class IRI="RenewableDERBranch"/>
+        <Class IRI="WindHybrid"/>
+        <Class IRI="RenewableBranch"/>
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -407,16 +365,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AcDcConverter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AcDcConverter</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>BiomassBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BiomassBranch represents a  branch which produces energy by burning wood and other organic matter.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BiomassBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BiomassBranch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -450,16 +398,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>CHPBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CHPBranch represents a combined heat and power (CHP) branch, which uses  a heat engine or power station to generate electricity and useful heat at the same time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>CHPBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CHPBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>CIMConductingEquipement</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A ConductingEquipment concept, represents the parts of the power system that are designed to carry current. This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information
 model being part of the IEC 61970 standards.</Literal>
@@ -483,16 +421,6 @@ This concepts is from the  Common Information Model (CIM), which is a widely acc
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>CoalBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CoalBranch represents a  branch which uses coal  to generate energy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>CoalBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CoalBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Converter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.</Literal>
     </AnnotationAssertion>
@@ -510,16 +438,6 @@ This concepts is from the  Common Information Model (CIM), which is a widely acc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DERBranch</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DERBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DieselGenerator</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A DieselGenerator is the combination of a diesel engine with an electric generator (often an alternator) to generate electrical energy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DieselGenerator</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DieselGenerator</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -543,47 +461,6 @@ This concepts is from the  Common Information Model (CIM), which is a widely acc
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>FuelCellBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FuelCellBranch is an electrochemical energy conversion device. It produces electricity from external supplies of fuel (on the anode side) and oxidant (on the cathode side). These reacts in the presence of an electrolyte.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FuelCellBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FuelCellBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>GasBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GasBranch represents a  branch which uses gas  to generate energy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>GasBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GasBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>GeoThermalBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GeoThermalBranch represents a  branch which produces geothermal energy.
-Geothermal resources are reservoirs of hot water that exist at varying temperatures and depths below the Earth&apos;s surface.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>GeoThermalBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GeoThermalBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>HydroPowerBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HydroPowerBranch represents a  branch which produces energy derived from the energy of falling water or fast running water.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HydroPowerBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HydroPowerBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>InfraBranch</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An InfraBranch represents an infrastructure branch, where each has its own Branch Switch and Branch Controller.</Literal>
     </AnnotationAssertion>
@@ -604,16 +481,6 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>MicroCHPBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MicroCHPBranch represents a micro combined heat and power (CHP) branch, which uses  a heat engine or power station to generate electricity and useful heat at the same time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>MicroCHPBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MicroCHPBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Microgrid</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A microgrid is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows.</Literal>
     </AnnotationAssertion>
@@ -621,16 +488,6 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Microgrid</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Microgrid</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>MicroturbinesBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MicroturbinesBranch represents a  branch with a type of combustion turbine that produces both heat and electricity on a relatively small scale.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>MicroturbinesBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MicroturbinesBranch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -643,79 +500,9 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MonophasicInverter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>NonRenewableDERBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NonRenewableDERBranch represents the non-renewable distributed energy resource branches.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>NonRenewableDERBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NonRenewableDERBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>NuclearBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NuclearBranch represents a  branch, which uses nuclear energy to generate energy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>NuclearBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NuclearBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>OilBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OilBranch represents a  branch which uses oil to generate energy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OilBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OilBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PhotovoltaicBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A PhotovoltaicBranch represents a photovoltaic power system that directly converts solar energy into electricity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PhotovoltaicBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhotovoltaicBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ReciprocatingBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReciprocatingBranch is an engine that utilizes one or more pressure-driven pistons in order to convert back-and-forth motion into a rotating motion. The most common form of reciprocating engine used to generate electricity is the diesel engine, which is used in combination with an electric generator to form a diesel generator.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ReciprocatingBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReciprocatingBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>RegulatingCondEq</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RegulatingCondEq</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>RenewableDERBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RenewableDERBranch represents the renewable distributed energy resource branches.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>RenewableDERBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RenewableDERBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SmallWindPowerBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SmallWindPowerBranch represents a branch that uses air flow through wind turbines to mechanically generate electric power.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SmallWindPowerBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SmallWindPowerBranch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -729,36 +516,6 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SolarHybridBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A SolarHybridBranch represents a power system that the transforms  energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SolarHybridBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SolarHybridBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SolarPowerBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A SolarPowerBranch represents a power system that directly converts solar energy into electricity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SolarPowerBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SolarPowerBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>StirlingBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A StirlingBranch represents a heat engine that operates by cyclic compression and expansion of air or other gas (the working fluid) at different temperatures, such that there is a net conversion of heat energy to mechanical work. More specifically, the Stirling engine is a closed-cycle regenerative heat engine with a permanently gaseous working fluid.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>StirlingBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StirlingBranch</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>TriphasicInverter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Inverter can be a Monophasic  or a Triphasic.</Literal>
     </AnnotationAssertion>
@@ -766,16 +523,6 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TriphasicInverter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TriphasicInverter</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>WindHybridBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WindHybridBranch represents the use of air flow through wind turbines to mechanically power generators for electric power.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>WindHybridBranch</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WindHybridBranch</Literal>
     </AnnotationAssertion>
 </Ontology>
 

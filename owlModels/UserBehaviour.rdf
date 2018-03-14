@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://hit2gap.eu/h2g/h2gOccupant#"
-     xml:base="http://hit2gap.eu/h2g/h2gOccupant"
+<rdf:RDF xmlns="http://hit2gap.eu/h2g#"
+     xml:base="http://hit2gap.eu/h2g"
      xmlns:schema="http://schema.org/"
      xmlns:qudt="http://data.nasa.gov/qudt/owl/qudt#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -796,6 +796,12 @@
         <rdfs:comment xml:lang="en">Model that consist on modelling the occupant activity inside the building</rdfs:comment>
         <rdfs:label xml:lang="en">Activity Model</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gOccupant#Age -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gOccupant#Age"/>
     
 
 
