@@ -533,6 +533,16 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Frequency -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Frequency">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:comment xml:lang="en">Frequency represents an observation of the  measure of the rate of occurrence.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Height -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Height">

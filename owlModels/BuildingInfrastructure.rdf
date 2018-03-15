@@ -778,6 +778,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#AdvancedService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AdvancedService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
+        <rdfs:comment xml:lang="en">A Service that provides an advanced functionality and it is not composed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Advanced Service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#AgriculturalBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AgriculturalBuilding">
@@ -934,6 +944,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#BasicService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#BasicService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Service"/>
+        <rdfs:comment xml:lang="en">A Basic Service offers an elementary functionality.</rdfs:comment>
+        <rdfs:label xml:lang="en">Basic Service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Bathroom -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Bathroom">
@@ -947,7 +967,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#Blind -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Blind">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoveringType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
         <rdfs:comment xml:lang="en">A Blind is a type of a WindowCovering representing a window blind.</rdfs:comment>
         <rdfs:label xml:lang="en">Blind</rdfs:label>
     </owl:Class>
@@ -1102,6 +1122,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#ComposedService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ComposedService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Service"/>
+        <rdfs:comment xml:lang="en">A Composed Service offers a functionality that comprises the interaction of two or more elementary/composed services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Composed Service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Computer -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Computer">
@@ -1158,7 +1188,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#Curtain -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Curtain">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoveringType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
         <rdfs:comment xml:lang="en">A Curtain is a type of a WindowCovering representing a window curtain.</rdfs:comment>
         <rdfs:label xml:lang="en">Curtain</rdfs:label>
     </owl:Class>
@@ -1170,6 +1200,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DataCenter">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#IndustrialBuilding"/>
         <rdfs:label>DataCenter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#DataCollectionService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DataCollectionService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
+        <rdfs:comment xml:lang="en">A Service that provides data collection functionality</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Collection Service</rdfs:label>
     </owl:Class>
     
 
@@ -1203,7 +1243,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#DoubleGlazing -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DoubleGlazing">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazingType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazing"/>
         <rdfs:comment xml:lang="en">It represents that glasses of the window are double</rdfs:comment>
         <rdfs:label xml:lang="en">Double Glazing</rdfs:label>
     </owl:Class>
@@ -1749,6 +1789,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#PreprocessingService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PreprocessingService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
+        <rdfs:comment xml:lang="en">A Service that provides a data preprocessing functionality</rdfs:comment>
+        <rdfs:label xml:lang="en">Pre-processing Service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#PrimarySchool -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PrimarySchool">
@@ -1879,10 +1929,20 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Service -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Service">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
+        <rdfs:comment xml:lang="en">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Shade -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Shade">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoveringType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
         <rdfs:comment xml:lang="en">A Shade is a type of a WindowCovering representing a window shade.</rdfs:comment>
         <rdfs:label xml:lang="en">Shade</rdfs:label>
     </owl:Class>
@@ -1901,7 +1961,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#Shutter -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Shutter">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCoveringType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
         <rdfs:comment xml:lang="en">A Shutter is a type of a WindowCovering representing a window shutter.</rdfs:comment>
         <rdfs:label xml:lang="en">Shutter</rdfs:label>
     </owl:Class>
@@ -1920,7 +1980,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#SimpleGlazing -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SimpleGlazing">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazingType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazing"/>
         <rdfs:comment xml:lang="en">It represents that glasses of the window are simple</rdfs:comment>
         <rdfs:label xml:lang="en">Simple Glazing</rdfs:label>
     </owl:Class>
@@ -2188,15 +2248,21 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#WindowCoveringType -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#WindowCovering -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowCoveringType"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowCovering">
+        <rdfs:comment xml:lang="en">A window covering is an element which covers a window in the building and is fully dependent on that window. The WindowCovering defines the occurrence of a covering type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Window Covering</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#WindowGlazingType -->
+    <!-- http://hit2gap.eu/h2g/h2gBI#WindowGlazing -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowGlazingType"/>
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#WindowGlazing">
+        <rdfs:comment xml:lang="en">A window glazing describes the type of glass of a window in the building and is fully dependent on that window. The WindowGlazing defines the occurrence of a glass type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Window Glazing</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2791,6 +2857,12 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#OpenClose"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#OpenClose"/>
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindow"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3278,6 +3350,12 @@ A unitary control element provides a housing for an aggregation of control or el
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#OpenClose"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#OpenClose"/>
@@ -4422,6 +4500,18 @@ An IfcStairFlight normally connects the floor slab of zero to two different stor
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindow">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasWindowCovering"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowCovering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasWindowGlazing"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasPartitioningType"/>
