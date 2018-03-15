@@ -125,6 +125,12 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#hasPropertyValue -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gProperty#hasPropertyValue"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#hasSpaceCapacity -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gProperty#hasSpaceCapacity"/>
