@@ -1,0 +1,6 @@
+@prefix h2g_bi: <http://hit2gap.eu/h2g/h2gBI#> .
+
+[ruleContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
+[ruleIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
+
+
