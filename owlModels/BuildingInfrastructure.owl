@@ -277,6 +277,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAirToAirHeatRecoveryType"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="connects"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator"/>
     </Declaration>
     <Declaration>
@@ -394,10 +397,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="AirHeatPump"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFanType"/>
@@ -766,10 +769,10 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="hasWindowGlazing"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Shade"/>
+        <NamedIndividual IRI="Shutter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Shutter"/>
+        <NamedIndividual IRI="Shade"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARELECTRIC"/>
@@ -1150,6 +1153,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCovering"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="isConnectedTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://hit2gap.eu/ontomg#hasA"/>
     </Declaration>
     <Declaration>
@@ -1258,10 +1264,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="TemperateOceanicWithDryWinters"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRampFlight"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRampFlight"/>
+        <NamedIndividual IRI="TemperateOceanicWithDryWinters"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOutletType"/>
@@ -1279,10 +1285,10 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="East"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcChillerType"/>
+        <Class IRI="SolarHeatPump"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SolarHeatPump"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcChillerType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MonsoonInfluencedExtremelyColdSubartic"/>
@@ -3393,6 +3399,13 @@ The features of interest representation of the building are performed using stan
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="contains"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
     </SubClassOf>
@@ -3948,6 +3961,10 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="connects"/>
+        <ObjectProperty IRI="isConnectedTo"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="contains"/>
         <ObjectProperty IRI="isContainedIn"/>
