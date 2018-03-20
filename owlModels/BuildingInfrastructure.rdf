@@ -4450,7 +4450,7 @@ The IfcWindow defines a particular occurrence of a window inserted in the spatia
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
