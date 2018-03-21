@@ -1642,6 +1642,13 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="connects"/>
+            <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="contains"/>
             <Class IRI="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
         </ObjectSomeValuesFrom>
@@ -1675,6 +1682,13 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
         <Class IRI="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isLocatedIn"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
@@ -2548,6 +2562,13 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/ontomg#Microgrid"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="connects"/>
+            <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/ontomg#Microgrid"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://hit2gap.eu/ontomg#hasBranch"/>
             <Class IRI="http://hit2gap.eu/ontomg#Branch"/>
         </ObjectSomeValuesFrom>
@@ -2881,20 +2902,6 @@ The features of interest representation of the building are performed using stan
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="contains"/>
             <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingStorey"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="contains"/>
-            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="contains"/>
-            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3380,6 +3387,13 @@ The features of interest representation of the building are performed using stan
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isContainedIn"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpaceHeaterType"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal"/>
     </SubClassOf>
@@ -3406,13 +3420,6 @@ The features of interest representation of the building are performed using stan
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="isLocatedIn"/>
-            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
     </SubClassOf>
@@ -3424,6 +3431,13 @@ The features of interest representation of the building are performed using stan
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isContainedIn"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
     </SubClassOf>
@@ -3431,7 +3445,7 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="contains"/>
-            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3519,10 +3533,10 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="contains"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isContainedIn"/>
             <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
-        </ObjectSomeValuesFrom>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
@@ -3660,6 +3674,20 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
         <Class IRI="http://www.opengis/net/gml/_Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isConnectedTo"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isConnectedTo"/>
+            <Class IRI="http://hit2gap.eu/ontomg#Microgrid"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/ssn/System"/>

@@ -4283,6 +4283,12 @@ to be either an element itself, or an aggregation (complex) or a decomposition (
                 <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatial zone is a non-hierarchical and potentially overlapping decomposition of the project under some functional consideration. A spatial zone might be used to represent a thermal zone, a construction zone, a lighting zone, a usable area zone. A spatial zone might have its independent placement and shape representation.
 
 NOTE  The IfcSpatialZone is different to the IfcZone entity by allowing an own placement and shape representation, whereas IfcZone is only a grouping of IfcSpace&apos;s.</rdfs:comment>
