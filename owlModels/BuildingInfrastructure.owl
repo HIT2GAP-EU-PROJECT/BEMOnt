@@ -58,6 +58,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="Camera"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="frequency"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#MicroCHPBranch"/>
     </Declaration>
     <Declaration>
@@ -85,6 +88,9 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="DirectZone"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Temperate"/>
     </Declaration>
     <Declaration>
@@ -104,6 +110,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="Canteen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasObservationMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="ResidentialBuilding"/>
@@ -268,6 +277,9 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="Curtain"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Service"/>
     </Declaration>
     <Declaration>
@@ -287,6 +299,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCurtainWall"/>
@@ -472,6 +487,9 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="OutdoorLight"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="isStatic"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionCircuit"/>
     </Declaration>
     <Declaration>
@@ -575,6 +593,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasPartitioningType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="accuracy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="ColdSemiArid"/>
@@ -733,7 +754,13 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="South_East"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="measureValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://www.w3.org/2006/time#inXSDDateTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/isObservedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isContainedIn"/>
@@ -767,6 +794,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasWindowGlazing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="maxValue"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Shutter"/>
@@ -853,6 +883,9 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="produces"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="DoubleGlazing"/>
     </Declaration>
     <Declaration>
@@ -901,6 +934,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricMotorType"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="minValue"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#RenewableDERBranch"/>
     </Declaration>
     <Declaration>
@@ -932,6 +968,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="South"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
     </Declaration>
     <Declaration>
         <Class IRI="FS_Water_Cooler"/>
@@ -971,6 +1010,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="Radiation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
     </Declaration>
     <Declaration>
         <Class IRI="House"/>
@@ -1165,6 +1207,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="AirHandlingUnit"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="sensitivity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Tumble_Dryer"/>
     </Declaration>
     <Declaration>
@@ -1210,6 +1255,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="LampType"/>
     </Declaration>
     <Declaration>
+        <Datatype IRI="ObservationMethodEnum"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEvaporativeCoolerType"/>
     </Declaration>
     <Declaration>
@@ -1241,6 +1289,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcOutlet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="precision"/>
     </Declaration>
     <Declaration>
         <Datatype IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
@@ -1367,6 +1418,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDoor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="latency"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcUnitaryControlElement"/>
@@ -2168,6 +2222,10 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="PhysicalMedium"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PhysicalMedium"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
             <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
@@ -2400,6 +2458,13 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/isObservedBy"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
         <Class IRI="http://www.opengis/net/gml/_Feature"/>
     </SubClassOf>
@@ -2409,13 +2474,7 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-            <ObjectUnionOf>
-                <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
-                <Class IRI="http://www.w3.org/2006/time#Instant"/>
-            </ObjectUnionOf>
-        </ObjectSomeValuesFrom>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
@@ -2427,23 +2486,65 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-            <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-            <Class IRI="http://www.w3.org/2006/time#Instant"/>
-        </ObjectAllValuesFrom>
+        <DataAllValuesFrom>
+            <DataProperty IRI="accuracy"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
-            <Class IRI="http://www.w3.org/ns/sosa/Result"/>
-        </ObjectAllValuesFrom>
+        <DataAllValuesFrom>
+            <DataProperty IRI="frequency"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasObservationMethod"/>
+            <Datatype IRI="ObservationMethodEnum"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="latency"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="maxValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="minValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="precision"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="sensitivity"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
@@ -2802,14 +2903,6 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSanitaryTerminal"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"/>
@@ -3283,14 +3376,6 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
     </SubClassOf>
     <SubClassOf>
@@ -3657,8 +3742,11 @@ The features of interest representation of the building are performed using stan
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="measureValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
@@ -3667,9 +3755,27 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isLocatedIn"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
             <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
@@ -4004,6 +4110,14 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="contains"/>
         <ObjectProperty IRI="isContainedIn"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/isObservedBy"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="hasWindowCovering"/>
     </FunctionalObjectProperty>
@@ -4011,8 +4125,20 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="hasWindowGlazing"/>
     </FunctionalObjectProperty>
     <DataPropertyRange>
+        <DataProperty IRI="accuracy"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="floorLevel"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="frequency"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasObservationMethod"/>
+        <Datatype IRI="ObservationMethodEnum"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasWindowType"/>
@@ -4023,7 +4149,31 @@ The features of interest representation of the building are performed using stan
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="isStatic"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="latency"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="maxValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="minValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="precision"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="propertyValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="sensitivity"/>
         <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -4533,6 +4683,11 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Nursery</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nursery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ObservationMethodEnum</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation Method Enum</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7334,6 +7489,11 @@ The IfcWindow defines a particular occurrence of a window inserted in the spatia
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation Method Enum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypePartitioningEnum</IRI>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypePartitioningEnum</IRI>
     </AnnotationAssertion>
@@ -7743,6 +7903,11 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Result</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://www.w3.org/ns/sosa/Result</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The value 20 as the height of a certain tree together with the unit, e.g., Meter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.w3.org/ns/sosa/Sensor</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</Literal>
@@ -7768,6 +7933,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/sosa/madeBySensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">made by sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://www.w3.org/ns/sosa/madeBySensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an Observation and the Sensor which made the Observation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.w3.org/ns/sosa/madeObservation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/madeObservation</Literal>
@@ -7778,9 +7953,24 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/observedProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/observes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a Sensor and an ObservableProperty that it is capable of sensing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/sosa/observes</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.w3.org/ns/sosa/observes</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/sosa/observes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://www.w3.org/ns/sosa/observes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a Sensor and an ObservableProperty that it is capable of sensing.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7798,9 +7988,29 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation between some aspect of an entity and a Property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/forProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation between some aspect of an entity and a Property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://www.w3.org/ns/ssn/forProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -7812,6 +8022,33 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <IRI>http://www.w3.org/ns/ssn/hasSubSystem</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.w3.org/ns/ssn/hasSubSystem</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/ssn/isObservedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an ObservableProperty and the Sensor able to observe it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/isObservedBy</IRI>
+        <IRI>http://www.w3.org/ns/sosa/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/ssn/isObservedBy</IRI>
+        <IRI>http://www.w3.org/ns/ssn/isObservedBy</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://www.w3.org/ns/ssn/isObservedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between an ObservableProperty and the Sensor able to observe it.</Literal>
+    </AnnotationAssertion>
+    <DatatypeDefinition>
+        <Datatype IRI="ObservationMethodEnum"/>
+        <DataOneOf>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FREQUENCY</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ON_CHANGE</Literal>
+        </DataOneOf>
+    </DatatypeDefinition>
     <DatatypeDefinition>
         <Datatype IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
         <DataOneOf>
