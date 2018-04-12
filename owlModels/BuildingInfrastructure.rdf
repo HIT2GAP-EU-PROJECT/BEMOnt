@@ -64,6 +64,18 @@ The features of interest representation of the building are performed using stan
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -75,11 +87,37 @@ The features of interest representation of the building are performed using stan
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#ObservationMethodEnum -->
+
+    <rdfs:Datatype rdf:about="http://hit2gap.eu/h2g/h2gBI#ObservationMethodEnum">
+        <rdfs:label xml:lang="en">Observation Method Enum</rdfs:label>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>FREQUENCY</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ON_CHANGE</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum -->
 
     <rdfs:Datatype rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum">
         <rdfs:isDefinedBy rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
         <rdfs:label xml:lang="en">IfcWindowTypeEnum</rdfs:label>
+        <rdfs:label xml:lang="en">Observation Method Enum</rdfs:label>
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -236,6 +274,14 @@ The features of interest representation of the building are performed using stan
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#connects -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#connects">
+        <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#isConnectedTo"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#consumes -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#consumes"/>
@@ -312,6 +358,12 @@ The features of interest representation of the building are performed using stan
     <!-- http://hit2gap.eu/h2g/h2gBI#inContactWith -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#inContactWith"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isConnectedTo"/>
     
 
 
@@ -492,6 +544,16 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+        <rdfs:label xml:lang="en">made by sensor</rdfs:label>
+        <skos:definition xml:lang="en">Relation between an Observation and the Sensor which made the Observation.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/ns/sosa/madeObservation -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeObservation">
@@ -512,7 +574,11 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observes">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/isObservedBy"/>
+        <rdfs:comment xml:lang="en">Relation between a Sensor and an ObservableProperty that it is capable of sensing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/ns/sosa/observes</rdfs:isDefinedBy>
+        <skos:definition xml:lang="en">Relation between a Sensor and an ObservableProperty that it is capable of sensing.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -520,7 +586,11 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://www.w3.org/ns/ssn/forProperty -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty">
+        <rdfs:comment xml:lang="en">A relation between some aspect of an entity and a Property.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/ns/ssn/forProperty</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">for property</rdfs:label>
+        <skos:definition xml:lang="en">A relation between some aspect of an entity and a Property.</skos:definition>
+        <skos:example xml:lang="en">For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -541,6 +611,17 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://www.w3.org/ns/ssn/isObservedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isObservedBy">
+        <rdfs:comment xml:lang="en">Relation between an ObservableProperty and the Sensor able to observe it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/isObservedBy"/>
+        <skos:definition xml:lang="en">Relation between an ObservableProperty and the Sensor able to observe it.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -552,11 +633,35 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#accuracy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#floorLevel -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#floorLevel">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label xml:lang="en">floorLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#frequency -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#frequency">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#hasObservationMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#hasObservationMethod">
+        <rdfs:range rdf:resource="http://hit2gap.eu/h2g/h2gBI#ObservationMethodEnum"/>
     </owl:DatatypeProperty>
     
 
@@ -583,11 +688,65 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#isStatic -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isStatic">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#latency -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#latency">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#maxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#maxValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#measureValue -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#measureValue"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#minValue -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#minValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#precision -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#precision">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#propertyValue -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#propertyValue">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">Property Value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#sensitivity -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#sensitivity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
@@ -643,6 +802,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#connects"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
@@ -705,6 +870,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
@@ -1707,6 +1878,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#PhysicalMedium -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
@@ -2208,6 +2380,19 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isObservedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest">
@@ -2247,19 +2432,7 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
     <!-- http://hit2gap.eu/h2g/h2gSensor#Observation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gSensor#Observation">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval"/>
-                            <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
@@ -2268,20 +2441,56 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#accuracy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#frequency"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasObservationMethod"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#ObservationMethodEnum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#latency"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#maxValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#minValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#precision"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#sensitivity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2562,6 +2771,12 @@ Geothermal resources are reservoirs of hot water that exist at varying temperatu
 
     <owl:Class rdf:about="http://hit2gap.eu/ontomg#Microgrid">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#connects"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/ontomg#hasBranch"/>
@@ -3154,8 +3369,6 @@ IfcHeatExchanger is commonly used on water-side distribution systems to recover 
     <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor">
         <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</rdfs:isDefinedBy>
@@ -3273,6 +3486,12 @@ A unitary control element provides a housing for an aggregation of control or el
     
 
 
+    <!-- http://qudt.org/schema/qudt#Unit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#Unit"/>
+    
+
+
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType -->
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType">
@@ -3350,18 +3569,6 @@ A unitary control element provides a housing for an aggregation of control or el
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
                 <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingStorey"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4061,8 +4268,6 @@ An IfcRampFlight connects the floor slab of zero to two different storeys (or pa
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType -->
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:comment xml:lang="en">IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</rdfs:isDefinedBy>
@@ -4189,6 +4394,12 @@ As an additional use agreement for standard slabs (i.e. slabs with constant thic
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingStorey"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.
 
 A space is (if specified) associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. This is defined by the composition type attribute of the supertype IfcSpatialStructureElement which is interpreted as follow:
@@ -4230,6 +4441,12 @@ ObjectType holds the space type, i.e. usually the functional category of the spa
                 <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatial element is the generalization of all spatial elements that might be used to define a spatial structure or to define spatial zones.
 
 a hierarchical spatial structure element as IfcSpatialStructureElement
@@ -4256,6 +4473,12 @@ a spatial zone might have its independent placement and shape representation.</r
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialZone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatial structure element (IfcSpatialStructureElement) is the generalization of all spatial elements that might be used to define a spatial structure. That spatial structure is often used to provide a project structure to organize a building project.
 
 A spatial project structure might define as many levels of decomposition as necessary for the building project. Elements within the spatial project structure are:
@@ -4280,13 +4503,7 @@ to be either an element itself, or an aggregation (complex) or a decomposition (
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatial zone is a non-hierarchical and potentially overlapping decomposition of the project under some functional consideration. A spatial zone might be used to represent a thermal zone, a construction zone, a lighting zone, a usable area zone. A spatial zone might have its independent placement and shape representation.
@@ -4456,13 +4673,13 @@ The IfcWindow defines a particular occurrence of a window inserted in the spatia
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#contains"/>
-                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isContainedIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4752,7 +4969,7 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
     
 
 
@@ -4765,9 +4982,16 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
                 <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#measureValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/ns/sosa/Result</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Result</rdfs:label>
+        <skos:example xml:lang="en">The value 20 as the height of a certain tree together with the unit, e.g., Meter.</skos:example>
     </owl:Class>
     
 
@@ -4775,12 +4999,23 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     <!-- http://www.w3.org/ns/sosa/Sensor -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
                 <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</rdfs:comment>
@@ -4793,7 +5028,20 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
     <!-- http://www.w3.org/ns/ssn/System -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis/net/gml/_Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isConnectedTo"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBA#BuildingAppliance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isConnectedTo"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Microgrid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
