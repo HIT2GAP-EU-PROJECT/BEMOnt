@@ -1887,6 +1887,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isObservedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#globalId_IfcRoot"/>
                 <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcGloballyUniqueId"/>
             </owl:Restriction>
@@ -5000,6 +5006,12 @@ NOTE Corresponding STEP name: text, please refer to ISO/IS 10303-41:1994 for the
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
