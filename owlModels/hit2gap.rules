@@ -1,6 +1,9 @@
 @prefix h2g_bi: <http://hit2gap.eu/h2g/h2gBI#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/#> .
 
 [ruleContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
 [ruleIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
-
-
+[ruleMadeBySensor: (ssn:madeObservation owl:inverseOf ssn:madeBySensor) (?s ssn:madeObservation ?o) -> (?o ssn:madeBySensor ?s)]
+[ruleConnectedTo: (?s  ssn:madeObservation ?o) (?o ssn:hasFeatureOfInterest ?f) -> (?s h2g_bi:isConnectedTo ?f)]
+[ruleConnects: (h2g_bi:isConnectedTo owl:inverseOf h2g_bi:connects) (?s h2g_bi:isConnectedTo ?o) -> (?o h2g_bi:connects ?s)]
+[ruleLocated:  (?s h2g_bi:isConnectedTo ?f) (?f h2g_bi:isLocatedIn ?o) -> (?s h2g_bi:isLocatedIn ?o)]
