@@ -1435,6 +1435,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Electricity -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Electricity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#ExhaustAirHeatPump -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ExhaustAirHeatPump">
@@ -2398,6 +2406,18 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis/net/gml/_Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#connects"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">FeatureOfInterest is an extension of ssn#FeatureOfInterest  defined in SSN. We have extended it and made them equivalents.
 
 A feature is an abstraction of real world phenomena (thing, person, event, etc). The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</rdfs:comment>
@@ -2437,6 +2457,12 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4916,7 +4942,19 @@ The IfcRoot assigns the globally unique ID, and the ownership and history inform
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isConnectedTo"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isConnectedTo"/>
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/ontomg#Microgrid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

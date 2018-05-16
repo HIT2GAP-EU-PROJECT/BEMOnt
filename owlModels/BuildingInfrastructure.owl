@@ -2464,6 +2464,20 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.opengis/net/gml/_Feature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="connects"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isLocatedIn"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#MobileBuildingApplianceLocationObservation"/>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
     </SubClassOf>
@@ -2476,6 +2490,13 @@ The features of interest representation of the building are performed using stan
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
             <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3703,7 +3724,21 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.w3.org/ns/ssn/System"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="isConnectedTo"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isConnectedTo"/>
             <Class IRI="http://hit2gap.eu/ontomg#Microgrid"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isLocatedIn"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gSensor#FeatureOfInterest"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
