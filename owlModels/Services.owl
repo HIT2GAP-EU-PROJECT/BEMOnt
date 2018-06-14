@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://hit2gap.eu/h2g/Services#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://hit2gap.eu/h2g/Services#">
+    <Prefix name="dc" IRI="http://purl.org/dc/elemencts/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://hit2gap.eu/h2g/h2gProperty#</Import>
+    <Declaration>
+        <Class IRI="Output"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sampling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="valueType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="externalID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="valueUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComposedService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="producedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BasicService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Service"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimeSeries"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="BasicService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ComposedService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <Class IRI="Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Output"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="producedBy"/>
+            <Class IRI="Model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Output"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="producedBy"/>
+            <Class IRI="Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <Class IRI="Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="valueType"/>
+            <Class IRI="http://hit2gap.eu/h2g/h2gProperty#h2gProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="valueUnit"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="externalID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="sampling"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="description"/>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="name"/>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Model</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A model is a particular instance that can be used by a module to generate data. For instance, if the service implements regression algorithms, various models can be autoregression, SVR, neural networks,...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Model</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
