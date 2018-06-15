@@ -10,6 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elemencts/1.1/">
     <owl:Ontology rdf:about="http://hit2gap.eu/h2g/Services#">
+        <owl:imports rdf:resource="http://hit2gap.eu/h2g/h2gBI#"/>
         <owl:imports rdf:resource="http://hit2gap.eu/h2g/h2gProperty#"/>
     </owl:Ontology>
     
@@ -23,6 +24,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#localization -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#localization"/>
     
 
 
@@ -215,6 +222,12 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#TimeSeries">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#Output"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#localization"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#valueType"/>

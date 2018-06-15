@@ -6,12 +6,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://hit2gap.eu/h2g/Services#">
+    <Prefix name="" IRI="http://hit2gap.eu/h2g/Services#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elemencts/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://hit2gap.eu/h2g/h2gBI#</Import>
     <Import>http://hit2gap.eu/h2g/h2gProperty#</Import>
     <Declaration>
         <Class IRI="Output"/>
@@ -32,10 +36,13 @@
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="externalID"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="externalID"/>
+        <ObjectProperty IRI="localization"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="valueUnit"/>
@@ -44,10 +51,10 @@
         <Class IRI="Model"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ComposedService"/>
+        <ObjectProperty IRI="producedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="producedBy"/>
+        <Class IRI="ComposedService"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="description"/>
@@ -135,6 +142,13 @@
     <SubClassOf>
         <Class IRI="TimeSeries"/>
         <Class IRI="Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="localization"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="TimeSeries"/>
