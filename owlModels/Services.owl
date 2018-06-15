@@ -18,6 +18,9 @@
     <Import>http://hit2gap.eu/h2g/h2gBI#</Import>
     <Import>http://hit2gap.eu/h2g/h2gProperty#</Import>
     <Declaration>
+        <ObjectProperty IRI="model"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Output"/>
     </Declaration>
     <Declaration>
@@ -51,9 +54,6 @@
         <Class IRI="Model"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="producedBy"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="ComposedService"/>
     </Declaration>
     <Declaration>
@@ -61,6 +61,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="BasicService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="service"/>
     </Declaration>
     <Declaration>
         <Class IRI="Service"/>
@@ -107,16 +110,16 @@
     <SubClassOf>
         <Class IRI="Output"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="producedBy"/>
+            <ObjectProperty IRI="model"/>
             <Class IRI="Model"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Output"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="producedBy"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="service"/>
             <Class IRI="Service"/>
-        </ObjectSomeValuesFrom>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Service"/>
