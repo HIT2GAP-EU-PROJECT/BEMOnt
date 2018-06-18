@@ -27,15 +27,45 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/Services#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#hasOutput"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/Services#localization -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#localization"/>
     
 
 
-    <!-- http://hit2gap.eu/h2g/Services#producedBy -->
+    <!-- http://hit2gap.eu/h2g/Services#model -->
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#producedBy"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#model"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#parameters -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#parameters"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#partOfService -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#partOfService"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#service -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#service"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#usesModel -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#usesModel"/>
     
 
 
@@ -92,6 +122,18 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/Services#param_name -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/Services#param_name"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#param_value -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/Services#param_value"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/Services#sampling -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/Services#sampling"/>
@@ -125,6 +167,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#BasicService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#Service"/>
+        <rdfs:label>BasicService</rdfs:label>
     </owl:Class>
     
 
@@ -133,6 +176,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#ComposedService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#Service"/>
+        <rdfs:label>ComposedService</rdfs:label>
     </owl:Class>
     
 
@@ -141,6 +185,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#Event">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#Output"/>
+        <rdfs:label>Event</rdfs:label>
     </owl:Class>
     
 
@@ -148,6 +193,24 @@
     <!-- http://hit2gap.eu/h2g/Services#Model -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#Model">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#hasOutput"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#parameters"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#partOfService"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#description"/>
@@ -177,16 +240,37 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#Output">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#producedBy"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#model"/>
                 <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Model"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#producedBy"/>
-                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Service"/>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#service"/>
+                <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Service"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label>Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#Parameter -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#Parameter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#param_name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#param_value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Parameter</rdfs:label>
     </owl:Class>
     
 
@@ -194,6 +278,12 @@
     <!-- http://hit2gap.eu/h2g/Services#Service -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#usesModel"/>
+                <owl:someValuesFrom rdf:resource="http://hit2gap.eu/h2g/Services#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#description"/>
@@ -252,6 +342,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label>TimeSeries</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

@@ -18,19 +18,46 @@
     <Import>http://hit2gap.eu/h2g/h2gBI#</Import>
     <Import>http://hit2gap.eu/h2g/h2gProperty#</Import>
     <Declaration>
-        <ObjectProperty IRI="model"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Output"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="name"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Event"/>
+        <ObjectProperty IRI="partOfService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="param_name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Parameter"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="sampling"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="externalID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="valueUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Model"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="param_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="valueType"/>
@@ -39,19 +66,13 @@
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="externalID"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="usesModel"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="localization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="valueUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Model"/>
     </Declaration>
     <Declaration>
         <Class IRI="ComposedService"/>
@@ -63,10 +84,10 @@
         <Class IRI="BasicService"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="service"/>
+        <Class IRI="Service"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Service"/>
+        <ObjectProperty IRI="parameters"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="id"/>
@@ -85,6 +106,27 @@
     <SubClassOf>
         <Class IRI="Event"/>
         <Class IRI="Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasOutput"/>
+            <Class IRI="Output"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="parameters"/>
+            <Class IRI="Parameter"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="partOfService"/>
+            <Class IRI="Service"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Model"/>
@@ -120,6 +162,27 @@
             <ObjectProperty IRI="service"/>
             <Class IRI="Service"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Parameter"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="param_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Parameter"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="param_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="usesModel"/>
+            <Class IRI="Model"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Service"/>
@@ -194,6 +257,21 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BasicService</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BasicService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComposedService</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ComposedService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Event</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Model</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A model is a particular instance that can be used by a module to generate data. For instance, if the service implements regression algorithms, various models can be autoregression, SVR, neural networks,...</Literal>
@@ -204,6 +282,16 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Model</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Output</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Parameter</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Service</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</Literal>
@@ -212,6 +300,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Service</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TimeSeries</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TimeSeries</Literal>
     </AnnotationAssertion>
 </Ontology>
 

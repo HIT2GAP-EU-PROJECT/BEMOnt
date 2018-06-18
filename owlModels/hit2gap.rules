@@ -1,4 +1,5 @@
 @prefix h2g_bi: <http://hit2gap.eu/h2g/h2gBI#> .
+@prefix service: <http://hit2gap.eu/h2g/Services#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/#> .
 
 [ruleContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
@@ -7,3 +8,10 @@
 [ruleConnectedTo: (?s  ssn:madeObservation ?o) (?o ssn:hasFeatureOfInterest ?f) -> (?s h2g_bi:isConnectedTo ?f)]
 [ruleConnects: (h2g_bi:isConnectedTo owl:inverseOf h2g_bi:connects) (?s h2g_bi:isConnectedTo ?o) -> (?o h2g_bi:connects ?s)]
 [ruleLocated:  (?s h2g_bi:isConnectedTo ?f) (?f h2g_bi:isLocatedIn ?o) -> (?s h2g_bi:isLocatedIn ?o)]
+
+[ruleEqPartOfService1:  (?model service:partOfService ?service) -> (?service service:usesModel ?model)]
+[ruleEqPartOfService2:  (?service service:usesModel ?model) -> (?model service:partOfService ?service)]
+
+[ruleEqOutputs1:  (?model service:hasOutput ?output) -> (?output service:model ?model)]
+[ruleEqOutputs2:  (?output service:model ?model) -> (?model service:hasOutput ?output)]
+[ruleEqPartOfService2:  (?output service:model ?model) (?model service:partOfService ?service) -> (?output service:service ?service)]
