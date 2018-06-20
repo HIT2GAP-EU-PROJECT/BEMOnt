@@ -48,6 +48,9 @@
         <DataProperty IRI="param_value"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#entrypoint"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="service"/>
     </Declaration>
     <Declaration>
@@ -66,10 +69,10 @@
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+        <ObjectProperty IRI="usesModel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="usesModel"/>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="localization"/>
@@ -189,6 +192,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/hydra/core#entrypoint"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

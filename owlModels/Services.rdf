@@ -146,6 +146,12 @@
     
 
 
+    <!-- http://www.w3.org/ns/hydra/core#entrypoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/hydra/core#entrypoint"/>
+    
+
+
     <!-- http://www.w3.org/ns/hydra/core#title -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/hydra/core#title"/>
@@ -288,6 +294,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#description"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#entrypoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
