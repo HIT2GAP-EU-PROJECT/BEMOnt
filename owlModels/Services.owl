@@ -30,10 +30,10 @@
         <DataProperty IRI="param_name"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Parameter"/>
+        <DataProperty IRI="sampling"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="sampling"/>
+        <Class IRI="Parameter"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="externalID"/>
@@ -254,6 +254,14 @@
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasOutput"/>
+        <ObjectProperty IRI="model"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="partOfService"/>
+        <ObjectProperty IRI="usesModel"/>
+    </InverseObjectProperties>
     <SubDataPropertyOf>
         <DataProperty IRI="description"/>
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>

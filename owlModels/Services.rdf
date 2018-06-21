@@ -29,7 +29,9 @@
 
     <!-- http://hit2gap.eu/h2g/Services#hasOutput -->
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#hasOutput"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#hasOutput">
+        <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g/Services#model"/>
+    </owl:ObjectProperty>
     
 
 
@@ -53,7 +55,9 @@
 
     <!-- http://hit2gap.eu/h2g/Services#partOfService -->
 
-    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#partOfService"/>
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#partOfService">
+        <owl:inverseOf rdf:resource="http://hit2gap.eu/h2g/Services#usesModel"/>
+    </owl:ObjectProperty>
     
 
 
