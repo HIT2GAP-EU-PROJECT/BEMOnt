@@ -523,6 +523,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Energy">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label>Energy</rdfs:label>
     </owl:Class>
     
 

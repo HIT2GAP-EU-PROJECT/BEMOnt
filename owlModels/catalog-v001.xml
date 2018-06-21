@@ -3,21 +3,21 @@
     <uri id="Imports Wizard Entry" name="http://hit2gap.eu/h2g/h2gBI#" uri="BuildingInfrastructure.rdf"/>
     <uri id="User Entered Import Resolution" name="http://hit2gap.eu/h2g/h2gProperty#" uri="Property.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g" uri="UserBehaviour.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g/Services" uri="Services.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g/Services#" uri="Services.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="duplicate:http://hit2gap.eu/h2g/h2gBA" uri="buildingappliance.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="duplicate:http://hit2gap.eu/h2g/h2gBA" uri="BuildingAppliance.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g/h2gBI" uri="BuildingInfrastructure.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g/h2gBI#" uri="BuildingInfrastructure.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="duplicate:http://hit2gap.eu/h2g/h2gProperty" uri="Property.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="duplicate:http://hit2gap.eu/h2g/h2gProperty" uri="Property.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g/h2gSensor" uri="SensorRepresentation.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/h2g/h2gSensor#" uri="SensorRepresentation.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://hit2gap.eu/ontomg#" uri="OntoMG.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://qudt.org/1.1/vocab/unit" uri="qudt/unit.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://qudt.org/schema/qudt" uri="qudt/qudt.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://www.w3.org/ns/sosa/" uri="sosa.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529567479817" name="http://www.w3.org/ns/ssn/" uri="ssn.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g" uri="UserBehaviour.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/Services" uri="Services.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/Services#" uri="Services.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="duplicate:http://hit2gap.eu/h2g/h2gBA" uri="buildingappliance.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="duplicate:http://hit2gap.eu/h2g/h2gBA" uri="BuildingAppliance.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/h2gBI" uri="BuildingInfrastructure.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/h2gBI#" uri="BuildingInfrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/h2gProperty" uri="Property.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/h2gProperty#" uri="Property.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/h2gSensor" uri="SensorRepresentation.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/h2g/h2gSensor#" uri="SensorRepresentation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://hit2gap.eu/ontomg#" uri="OntoMG.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://qudt.org/1.1/vocab/unit" uri="qudt/unit.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://qudt.org/schema/qudt" uri="qudt/qudt.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://www.w3.org/ns/sosa/" uri="sosa.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529614470745" name="http://www.w3.org/ns/ssn/" uri="ssn.rdf"/>
     </group>
 </catalog>
