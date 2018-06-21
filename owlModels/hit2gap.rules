@@ -12,6 +12,6 @@
 [ruleEqPartOfService1: (service:partOfService owl:inverseOf service:usesModel) (?model service:partOfService ?service) -> (?service service:usesModel ?model)]
 [ruleEqPartOfService2: (service:partOfService owl:inverseOf service:usesModel) (?service service:usesModel ?model) -> (?model service:partOfService ?service)]
 
-[ruleEqOutputs1: (?service:model owl:inverseOf ?service:hasOutput) (?model service:hasOutput ?output) -> (?output service:model ?model)]
-[ruleEqOutputs2: (?service:model owl:inverseOf ?service:hasOutput) (?output service:model ?model) -> (?model service:hasOutput ?output)]
+[ruleEqOutputs1: (service:model owl:inverseOf service:hasOutput) (?model service:hasOutput ?output) -> (?output service:model ?model)]
+[ruleEqOutputs2: (service:model owl:inverseOf service:hasOutput) (?output service:model ?model) -> (?model service:hasOutput ?output)]
 [ruleTransServiceOutput:  (?output service:model ?model) (?model service:partOfService ?service) -> (?output service:service ?service)]
