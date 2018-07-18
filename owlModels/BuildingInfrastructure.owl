@@ -64,6 +64,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://hit2gap.eu/ontomg#MicroCHPBranch"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="parentSite"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="MeasureInputOutput"/>
     </Declaration>
     <Declaration>
@@ -4070,6 +4073,13 @@ The features of interest representation of the building are performed using stan
     <FunctionalObjectProperty>
         <ObjectProperty IRI="hasWindowGlazing"/>
     </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="parentSite"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="parentSite"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+        </ObjectAllValuesFrom>
+    </ObjectPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="accuracy"/>
         <Datatype abbreviatedIRI="xsd:double"/>

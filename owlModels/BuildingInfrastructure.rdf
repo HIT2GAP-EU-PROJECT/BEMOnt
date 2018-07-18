@@ -387,6 +387,19 @@ The features of interest representation of the building are performed using stan
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#parentSite -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#parentSite">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#parentSite"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#produces -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#produces"/>
