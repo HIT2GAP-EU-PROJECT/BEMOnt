@@ -954,7 +954,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AdvancedService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
         <rdfs:comment xml:lang="en">A Service that provides an advanced functionality and it is not composed.</rdfs:comment>
-        <rdfs:label xml:lang="en">Advanced Service</rdfs:label>
+        <rdfs:label xml:lang="en">AdvancedService</rdfs:label>
     </owl:Class>
     
 
@@ -1120,7 +1120,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#BasicService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Service"/>
         <rdfs:comment xml:lang="en">A Basic Service offers an elementary functionality.</rdfs:comment>
-        <rdfs:label xml:lang="en">Basic Service</rdfs:label>
+        <rdfs:label xml:lang="en">BasicService</rdfs:label>
     </owl:Class>
     
 
@@ -1288,7 +1288,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ComposedService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Service"/>
         <rdfs:comment xml:lang="en">A Composed Service offers a functionality that comprises the interaction of two or more elementary/composed services.</rdfs:comment>
-        <rdfs:label xml:lang="en">Composed Service</rdfs:label>
+        <rdfs:label xml:lang="en">ComposedService</rdfs:label>
     </owl:Class>
     
 
@@ -1360,7 +1360,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DataCollectionService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
         <rdfs:comment xml:lang="en">A Service that provides data collection functionality</rdfs:comment>
-        <rdfs:label xml:lang="en">Data Collection Service</rdfs:label>
+        <rdfs:label xml:lang="en">DataCollectionService</rdfs:label>
     </owl:Class>
     
 
@@ -1944,7 +1944,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PreprocessingService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
         <rdfs:comment xml:lang="en">A Service that provides a data preprocessing functionality</rdfs:comment>
-        <rdfs:label xml:lang="en">Pre-processing Service</rdfs:label>
+        <rdfs:label xml:lang="en">PreProcessingService</rdfs:label>
     </owl:Class>
     
 
