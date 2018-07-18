@@ -324,6 +324,11 @@
         <IRI>TimeSeries</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TimeSeries</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://hit2gap.eu/h2g/h2gProperty#Energy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 

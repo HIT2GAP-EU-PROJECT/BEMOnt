@@ -360,6 +360,20 @@
         </rdfs:subClassOf>
         <rdfs:label>TimeSeries</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://hit2gap.eu/h2g/h2gProperty#Energy">
+        <rdfs:label>Energy</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
