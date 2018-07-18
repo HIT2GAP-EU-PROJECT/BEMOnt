@@ -21,5 +21,5 @@
 [ruleTransServiceOutput: (?output services:model ?model) (?model services:partOfService ?service) -> (?output services:service ?service)]
 
 [ruleReflParentSite: (?o rdf:type ifc:IfcSite) -> (?o h2g_bi:parentSite ?o)]
-[ruleTransContainsParentSite: (?o h2g_bi:isContainedIn ?s) (?s h2g_bi:parent_site ?q) -> (?o h2g_bi:parent_site ?q)]
-[ruleTransLocatedParentSite: (?o h2g_bi:isLocatedIn ?s) (?s h2g_bi:parent_site ?q) -> (?o h2g_bi:parent_site ?q)]
+[ruleTransContainsParentSite: (?o h2g_bi:isContainedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
+[ruleTransLocatedParentSite: (?o h2g_bi:isLocatedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
