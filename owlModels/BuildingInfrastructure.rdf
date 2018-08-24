@@ -764,6 +764,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#uValue -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#uValue"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#windowWallRatio -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#windowWallRatio">
@@ -962,16 +968,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#AdvancedService -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AdvancedService">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
-        <rdfs:comment xml:lang="en">A Service that provides an advanced functionality and it is not composed.</rdfs:comment>
-        <rdfs:label xml:lang="en">AdvancedService</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gBI#AgriculturalBuilding -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#AgriculturalBuilding">
@@ -1124,16 +1120,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Barn">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#AgriculturalBuilding"/>
         <rdfs:label>Barn</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gBI#BasicService -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#BasicService">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Service"/>
-        <rdfs:comment xml:lang="en">A Basic Service offers an elementary functionality.</rdfs:comment>
-        <rdfs:label xml:lang="en">BasicService</rdfs:label>
     </owl:Class>
     
 
@@ -1296,16 +1282,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#ComposedService -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#ComposedService">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Service"/>
-        <rdfs:comment xml:lang="en">A Composed Service offers a functionality that comprises the interaction of two or more elementary/composed services.</rdfs:comment>
-        <rdfs:label xml:lang="en">ComposedService</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gBI#Computer -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Computer">
@@ -1364,16 +1340,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DataCenter">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#IndustrialBuilding"/>
         <rdfs:label>DataCenter</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gBI#DataCollectionService -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#DataCollectionService">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
-        <rdfs:comment xml:lang="en">A Service that provides data collection functionality</rdfs:comment>
-        <rdfs:label xml:lang="en">DataCollectionService</rdfs:label>
     </owl:Class>
     
 
@@ -1952,16 +1918,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gBI#PreprocessingService -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PreprocessingService">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#BasicService"/>
-        <rdfs:comment xml:lang="en">A Service that provides a data preprocessing functionality</rdfs:comment>
-        <rdfs:label xml:lang="en">PreProcessingService</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://hit2gap.eu/h2g/h2gBI#PrimarySchool -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#PrimarySchool">
@@ -2088,16 +2044,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#SecondarySchool">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#EducationalBuilding"/>
         <rdfs:label>SecondarySchool</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gBI#Service -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Service">
-        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
-        <rdfs:comment xml:lang="en">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</rdfs:comment>
-        <rdfs:label xml:lang="en">Service</rdfs:label>
     </owl:Class>
     
 
@@ -4598,6 +4544,12 @@ An IfcStairFlight normally connects the floor slab of zero to two different stor
 
     <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWall">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuildingElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#uValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isInside"/>

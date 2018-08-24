@@ -283,9 +283,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://qudt.org/schema/qudt#Unit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Service"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionElement"/>
     </Declaration>
     <Declaration>
@@ -368,9 +365,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcBurner"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ComposedService"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
@@ -593,6 +587,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasPartitioningType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="uValue"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="accuracy"/>
@@ -887,9 +884,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MildTundra"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PreprocessingService"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#SmallWindTurbine"/>
@@ -1225,9 +1219,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://hit2gap.eu/ontomg#GasBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BasicService"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Telephone"/>
     </Declaration>
     <Declaration>
@@ -1292,9 +1283,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Datatype IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AdvancedService"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
@@ -1364,9 +1352,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="Dishwasher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataCollectionService"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasOrientation"/>
@@ -1777,10 +1762,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="PublicBuilding"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="AdvancedService"/>
-        <Class IRI="BasicService"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="AgriculturalBuilding"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
     </SubClassOf>
@@ -1872,10 +1853,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="AgriculturalBuilding"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="BasicService"/>
-        <Class IRI="Service"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="Bathroom"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
@@ -1940,10 +1917,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="ComposedService"/>
-        <Class IRI="Service"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="Computer"/>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCommunicationAppliance"/>
     </SubClassOf>
@@ -1970,10 +1943,6 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="DataCenter"/>
         <Class IRI="IndustrialBuilding"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataCollectionService"/>
-        <Class IRI="BasicService"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Desk"/>
@@ -2259,10 +2228,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="IndustrialBuilding"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PreprocessingService"/>
-        <Class IRI="BasicService"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="PrimarySchool"/>
         <Class IRI="EducationalBuilding"/>
     </SubClassOf>
@@ -2321,10 +2286,6 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="SecondarySchool"/>
         <Class IRI="EducationalBuilding"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Service"/>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcRoot"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Shop"/>
@@ -3537,6 +3498,13 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWall"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="uValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWall"/>
         <DataAllValuesFrom>
             <DataProperty IRI="isInside"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
@@ -4248,16 +4216,6 @@ The features of interest representation of the building are performed using stan
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Administration</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>AdvancedService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Service that provides an advanced functionality and it is not composed.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AdvancedService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AdvancedService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AgriculturalBuilding</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AgriculturalBuilding</Literal>
@@ -4326,16 +4284,6 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Barn</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Barn</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>BasicService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Basic Service offers an elementary functionality.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BasicService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BasicService</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4424,16 +4372,6 @@ The features of interest representation of the building are performed using stan
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ComposedService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Composed Service offers a functionality that comprises the interaction of two or more elementary/composed services.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ComposedService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ComposedService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>ConferenceRoom</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConferenceRoom is an instance of IfcSpace in the building representing a conference room.</Literal>
     </AnnotationAssertion>
@@ -4461,16 +4399,6 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DataCenter</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DataCenter</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DataCollectionService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Service that provides data collection functionality</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataCollectionService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DataCollectionService</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4723,16 +4651,6 @@ The features of interest representation of the building are performed using stan
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PowerPlant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PreprocessingService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Service that provides a data preprocessing functionality</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PreprocessingService</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PreProcessingService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PrimarySchool</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PrimarySchool</Literal>
@@ -4781,16 +4699,6 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SecondarySchool</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SecondarySchool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Service</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Service</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Service</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
