@@ -173,6 +173,14 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/Services#AdvancedService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#AdvancedService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#BasicService"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/Services#BasicService -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#BasicService">
@@ -187,6 +195,14 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#ComposedService">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#Service"/>
         <rdfs:label>ComposedService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#DataCollectionService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#DataCollectionService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#BasicService"/>
     </owl:Class>
     
 
@@ -281,6 +297,14 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#PreProcessingService -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/Services#PreProcessingService">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/Services#BasicService"/>
     </owl:Class>
     
 

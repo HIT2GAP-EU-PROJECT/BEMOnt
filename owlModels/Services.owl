@@ -42,13 +42,22 @@
         <ObjectProperty IRI="valueUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="PreProcessingService"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Model"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="param_value"/>
     </Declaration>
     <Declaration>
+        <Class IRI="DataCollectionService"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#entrypoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AdvancedService"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="service"/>
@@ -99,12 +108,20 @@
         <Class IRI="TimeSeries"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="AdvancedService"/>
+        <Class IRI="BasicService"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="BasicService"/>
         <Class IRI="Service"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ComposedService"/>
         <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataCollectionService"/>
+        <Class IRI="BasicService"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Event"/>
@@ -179,6 +196,10 @@
             <DataProperty IRI="param_value"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PreProcessingService"/>
+        <Class IRI="BasicService"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Service"/>
