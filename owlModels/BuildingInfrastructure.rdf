@@ -1425,7 +1425,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#EducationalBuilding">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Educational Building</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EducationalBuilding</rdfs:label>
     </owl:Class>
     
 
@@ -5454,6 +5454,14 @@ The IfcRoot assigns the globally unique ID, and the ownership and history inform
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#Triple">
         <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#AHUDuct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TripleGlazing -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gBI#TripleGlazing">
+        <rdf:type rdf:resource="http://hit2gap.eu/h2g/h2gBI#WindowGlazingType"/>
     </owl:NamedIndividual>
     
 

@@ -133,6 +133,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="FS_Fan"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="TripleGlazing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"/>
     </Declaration>
     <Declaration>
@@ -151,10 +154,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Office"/>
+        <Class IRI="Nursery"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Nursery"/>
+        <Class IRI="Office"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="floorLevel"/>
@@ -169,10 +172,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="Bathroom"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DeskLight"/>
+        <Class IRI="http://hit2gap.eu/ontomg#MicroturbinesBranch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#MicroturbinesBranch"/>
+        <Class IRI="DeskLight"/>
     </Declaration>
     <Declaration>
         <Class IRI="WaterPlant"/>
@@ -232,10 +235,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="PublicBuilding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDamperType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDamperType"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gBA#StaticBuildingAppliance"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="North_West"/>
@@ -247,10 +250,10 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="inContactWith"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
+        <Class IRI="Warehouse"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Warehouse"/>
+        <Class IRI="http://hit2gap.eu/h2g/h2gBA#Monitoring"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
@@ -298,10 +301,10 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCurtainWall"/>
@@ -340,19 +343,19 @@ The features of interest representation of the building are performed using stan
         <Class IRI="ConventionCenter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Gym"/>
+        <Class IRI="TransportBuilding"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="TransportBuilding"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
+        <Class IRI="Gym"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSpaceHeater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcZone"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal"/>
@@ -427,10 +430,13 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcPumpType"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="PhysicalMedium"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcPumpType"/>
+        <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
     </Declaration>
     <Declaration>
         <Class IRI="DataCenter"/>
@@ -440,9 +446,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="NetworkAppliance"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
     </Declaration>
     <Declaration>
         <Class IRI="Desk"/>
@@ -670,10 +673,10 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="SimpleGlazing"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Class IRI="http://www.opengis/net/gml/_Geometry"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.opengis/net/gml/_Geometry"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="ChilledBeamMode"/>
@@ -712,10 +715,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAirToAirHeatRecover"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasH2GProperty"/>
+        <ObjectProperty IRI="hasWindowCovering"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasWindowCovering"/>
+        <ObjectProperty IRI="hasH2GProperty"/>
     </Declaration>
     <Declaration>
         <Class IRI="FanCoilUnit"/>
@@ -775,13 +778,13 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="HotSemiArid"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#elevation_IfcBuildingStorey"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="windowWallRatio"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="WarmDrySummerContinental"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#elevation_IfcBuildingStorey"/>
     </Declaration>
     <Declaration>
         <Class IRI="OpenSpace"/>
@@ -796,13 +799,13 @@ The features of interest representation of the building are performed using stan
         <DataProperty IRI="maxValue"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARELECTRIC"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Shutter"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Shade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#SOLARELECTRIC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MonsoonInfluencedHumidsubtropical"/>
@@ -820,10 +823,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.opengis/net/gml/LinearRing"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="HotWater"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricGeneratorType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricGeneratorType"/>
+        <NamedIndividual IRI="HotWater"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricFlowStorageDevice"/>
@@ -946,10 +949,10 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="MonsoonInfluencedWarmSummerHumidContinental"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Microphone"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialStructureElement"/>
+        <Class IRI="Microphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.opengis/net/gml/Point"/>
@@ -1201,10 +1204,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="AirHandlingUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Tumble_Dryer"/>
+        <DataProperty IRI="sensitivity"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="sensitivity"/>
+        <Class IRI="Tumble_Dryer"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRoof"/>
@@ -1216,10 +1219,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcHeatExchanger"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://hit2gap.eu/ontomg#GasBranch"/>
+        <Class IRI="ChilledBeams"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ChilledBeams"/>
+        <Class IRI="http://hit2gap.eu/ontomg#GasBranch"/>
     </Declaration>
     <Declaration>
         <Class IRI="BasicService"/>
@@ -1264,10 +1267,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#MobileBuildingApplianceLocationObservation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <NamedIndividual IRI="Dual"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Dual"/>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
@@ -1309,10 +1312,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRampFlight"/>
+        <NamedIndividual IRI="TemperateOceanicWithDryWinters"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="TemperateOceanicWithDryWinters"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcRampFlight"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOutletType"/>
@@ -1399,10 +1402,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="BarRestaurant"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isLocatedIn"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCoolingTowerType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcCoolingTowerType"/>
+        <ObjectProperty IRI="isLocatedIn"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Electrical"/>
@@ -1414,10 +1417,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDoor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcUnitaryControlElement"/>
+        <DataProperty IRI="latency"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="latency"/>
+        <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcUnitaryControlElement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="HotSummerMediterranean"/>
@@ -1450,10 +1453,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Subartic"/>
+        <DataProperty IRI="isInside"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="isInside"/>
+        <NamedIndividual IRI="Subartic"/>
     </Declaration>
     <Declaration>
         <Class IRI="Farmhouse"/>
@@ -1483,10 +1486,10 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="DxCool"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Triple"/>
+        <NamedIndividual IRI="HotDrySummerContinental"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="HotDrySummerContinental"/>
+        <NamedIndividual IRI="Triple"/>
     </Declaration>
     <Declaration>
         <Class IRI="Freezer"/>
@@ -1513,10 +1516,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="WaterCoolingCoil"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WaterSourceHeatPump"/>
+        <Class IRI="Switcher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Switcher"/>
+        <Class IRI="WaterSourceHeatPump"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.opengis/net/gml/Envelope"/>
@@ -3984,6 +3987,10 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="Triple"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="WindowGlazingType"/>
+        <NamedIndividual IRI="TripleGlazing"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="Tropical"/>
         <NamedIndividual IRI="TropicalMonsoon"/>
     </ClassAssertion>
@@ -4483,7 +4490,7 @@ The features of interest representation of the building are performed using stan
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>EducationalBuilding</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Educational Building</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">EducationalBuilding</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
