@@ -1,7 +1,7 @@
 @prefix h2g_bi: <http://hit2gap.eu/h2g/h2gBI#> .
 @prefix services: <http://hit2gap.eu/h2g/Services#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/#> .
-@prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final>
+@prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#> .
 
 [ruleInvContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
 [ruleInvIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
@@ -20,6 +20,6 @@
 
 [ruleTransServiceOutput: (?output services:model ?model) (?model services:partOfService ?service) -> (?output services:service ?service)]
 
-[ruleReflParentSite: (?o rdf:type ifc:IfcSite) -> (?o h2g_bi:parentSite ?o)]
+[ruleReflParentSite: (?o rdf:type ?o_cls) (?o_cls rdfs:subClassOf* ifc:IfcSite) -> (?o h2g_bi:parentSite ?o)]
 [ruleTransContainsParentSite: (?o h2g_bi:isContainedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
 [ruleTransLocatedParentSite: (?o h2g_bi:isLocatedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
