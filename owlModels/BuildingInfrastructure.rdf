@@ -1128,6 +1128,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#BaseSlab">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+        <rdfs:label>BaseSlab</rdfs:label>
     </owl:Class>
     
 
@@ -1533,6 +1534,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#FloorSlab">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+        <rdfs:label>FloorSlab</rdfs:label>
     </owl:Class>
     
 
@@ -2033,6 +2035,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Roof">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+        <rdfs:label>Roof</rdfs:label>
     </owl:Class>
     
 
