@@ -310,6 +310,9 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#locatedInHemisphere"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Roof"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="FS_Electric_Heater"/>
     </Declaration>
     <Declaration>
@@ -637,6 +640,9 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://www.georss.org/georss/where"/>
     </Declaration>
     <Declaration>
+        <Class IRI="FloorSlab"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcValveType"/>
     </Declaration>
     <Declaration>
@@ -704,6 +710,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MildSemiArid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BaseSlab"/>
     </Declaration>
     <Declaration>
         <Class IRI="Balcony"/>
@@ -1853,6 +1862,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="AgriculturalBuilding"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="BaseSlab"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Bathroom"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
@@ -2037,6 +2050,10 @@ The features of interest representation of the building are performed using stan
             <DataProperty IRI="floorLevel"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FloorSlab"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Freezer"/>
@@ -2270,6 +2287,10 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="RestRoom"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Roof"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Room"/>
