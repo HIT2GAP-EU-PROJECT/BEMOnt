@@ -1124,6 +1124,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#BaseSlab -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#BaseSlab">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+        <rdfs:label>BaseSlab</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Bathroom -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Bathroom">
@@ -1517,6 +1526,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Floor is an instance of a story in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Floor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#FloorSlab -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#FloorSlab">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+        <rdfs:label>FloorSlab</rdfs:label>
     </owl:Class>
     
 
@@ -2009,6 +2027,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
         <rdfs:comment xml:lang="en">RestRoom is an instance of IfcSpace in the building representing a rest room.</rdfs:comment>
         <rdfs:label xml:lang="en">RestRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Roof -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Roof">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+        <rdfs:label>Roof</rdfs:label>
     </owl:Class>
     
 

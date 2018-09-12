@@ -313,6 +313,9 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#locatedInHemisphere"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Roof"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="FS_Electric_Heater"/>
     </Declaration>
     <Declaration>
@@ -640,6 +643,9 @@ The features of interest representation of the building are performed using stan
         <ObjectProperty IRI="http://www.georss.org/georss/where"/>
     </Declaration>
     <Declaration>
+        <Class IRI="FloorSlab"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcValveType"/>
     </Declaration>
     <Declaration>
@@ -707,6 +713,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MildSemiArid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BaseSlab"/>
     </Declaration>
     <Declaration>
         <Class IRI="Balcony"/>
@@ -1865,6 +1874,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="AgriculturalBuilding"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="BaseSlab"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Bathroom"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
@@ -2049,6 +2062,10 @@ The features of interest representation of the building are performed using stan
             <DataProperty IRI="floorLevel"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FloorSlab"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Freezer"/>
@@ -2294,6 +2311,10 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="RestRoom"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Roof"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSlab"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Room"/>
@@ -4314,6 +4335,11 @@ The features of interest representation of the building are performed using stan
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Barn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BaseSlab</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BaseSlab</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Bathroom</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bathroom is an instance of IfcSpace in the building representing a bathroom.</Literal>
@@ -4487,6 +4513,11 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Floor</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Floor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FloorSlab</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FloorSlab</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4727,6 +4758,11 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>RestRoom</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RestRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Roof</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Roof</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
