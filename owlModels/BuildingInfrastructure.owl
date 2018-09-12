@@ -142,6 +142,9 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="TropicalRainforest"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Parking"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="GasHeatingCoil"/>
     </Declaration>
     <Declaration>
@@ -850,6 +853,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElementComponent"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Laboratory"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Apartment"/>
     </Declaration>
     <Declaration>
@@ -1103,6 +1109,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionFlowElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TechnicalArea"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#ESBranch"/>
@@ -1460,6 +1469,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="transports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OfficeBuilding"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MildDesert"/>
@@ -2127,6 +2139,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricAppliance"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Laboratory"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Library"/>
         <Class IRI="PublicBuilding"/>
     </SubClassOf>
@@ -2175,11 +2191,19 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="OfficeBuilding"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Oil"/>
         <Class IRI="PhysicalMedium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OpenSpace"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Parking"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
     <SubClassOf>
@@ -2342,6 +2366,10 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="Switcher"/>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TechnicalArea"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Telephone"/>
@@ -4531,6 +4559,11 @@ The features of interest representation of the building are performed using stan
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Kitchen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Laboratory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Laboratory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>LampType</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LampType determines the type of the lamp.</Literal>
@@ -4591,6 +4624,11 @@ The features of interest representation of the building are performed using stan
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Office</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OfficeBuilding</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OfficeBuilding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Oil</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Oil represents oil as a physical medium to produce energy.</Literal>
@@ -4619,6 +4657,11 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Orientation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Orientation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Parking</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parking</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4744,6 +4787,11 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SwimmingCenter</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SwimmingCenter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TechnicalArea</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TechnicalArea</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
