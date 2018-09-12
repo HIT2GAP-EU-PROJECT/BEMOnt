@@ -1720,6 +1720,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Laboratory -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Laboratory">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+        <rdfs:label>Laboratory</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#LampType -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#LampType">
@@ -1834,6 +1843,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#OfficeBuilding -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#OfficeBuilding">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcBuilding"/>
+        <rdfs:label>OfficeBuilding</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Oil -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Oil">
@@ -1859,6 +1877,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Orientation">
         <rdfs:comment xml:lang="en">Orientation determines the orientation of the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Orientation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#Parking -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Parking">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+        <rdfs:label>Parking</rdfs:label>
     </owl:Class>
     
 
@@ -2167,6 +2194,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#Stockroom -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Stockroom">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+        <rdfs:label>Stockroom</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#Subterranean -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Subterranean">
@@ -2190,6 +2226,15 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Switcher">
         <rdfs:subClassOf rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAudioVisualAppliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#TechnicalArea -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#TechnicalArea">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+        <rdfs:label>TechnicalArea</rdfs:label>
     </owl:Class>
     
 

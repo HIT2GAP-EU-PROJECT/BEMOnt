@@ -436,9 +436,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="PhysicalMedium"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="DataCenter"/>
     </Declaration>
     <Declaration>
@@ -446,6 +443,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <Class IRI="NetworkAppliance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://hit2gap.eu/h2g/h2gSensor#hasObservationResultTime"/>
     </Declaration>
     <Declaration>
         <Class IRI="Desk"/>
@@ -713,6 +713,9 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MildSemiArid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stockroom"/>
     </Declaration>
     <Declaration>
         <Class IRI="BaseSlab"/>
@@ -1456,10 +1459,10 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="isInside"/>
+        <NamedIndividual IRI="Subartic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Subartic"/>
+        <DataProperty IRI="isInside"/>
     </Declaration>
     <Declaration>
         <Class IRI="Farmhouse"/>
@@ -2375,6 +2378,10 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="SteamPlant"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Stockroom"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Subterranean"/>
@@ -4808,6 +4815,11 @@ The features of interest representation of the building are performed using stan
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SteamPlant</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SteamPlant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Stockroom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stockroom</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
