@@ -588,7 +588,6 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Humidity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Humidity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Humidity"/>
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Humidity represents an observation of the  measure of the humidity in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Humidity</rdfs:label>
@@ -687,7 +686,6 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#LigthningProperty -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
     </owl:Class>
     
@@ -989,7 +987,6 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Temperature -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperature">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Temperature represents an observation of the  measure of the temperature  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>

@@ -1756,10 +1756,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Humidity"/>
-        <Class IRI="Humidity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Humidity"/>
         <Class IRI="PhysicalProperty"/>
     </SubClassOf>
     <SubClassOf>
@@ -1797,10 +1793,6 @@
     <SubClassOf>
         <Class IRI="LightRadiation"/>
         <Class IRI="Radiation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="LigthningProperty"/>
-        <Class IRI="ClimateProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="LigthningProperty"/>
@@ -1935,10 +1927,6 @@
     <SubClassOf>
         <Class IRI="Streess"/>
         <Class IRI="OccupantStateProperty"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Temperature"/>
-        <Class IRI="ClimateProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Temperature"/>
