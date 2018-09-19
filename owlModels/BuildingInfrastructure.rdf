@@ -115,9 +115,7 @@ The features of interest representation of the building are performed using stan
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum -->
 
     <rdfs:Datatype rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum">
-        <rdfs:isDefinedBy rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum"/>
         <rdfs:label xml:lang="en">IfcWindowTypeEnum</rdfs:label>
-        <rdfs:label xml:lang="en">Observation Method Enum</rdfs:label>
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -707,6 +705,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#isOutdoor -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isOutdoor"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#isStatic -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isStatic">
@@ -748,12 +752,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#onValueChange -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#onValueChange"/>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gBI#outdoorAmbiance -->
-
-    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#outdoorAmbiance"/>
     
 
 
@@ -998,7 +996,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#Air -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Air">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Ambiant"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
         <rdfs:comment xml:lang="en">Air represents air as a physical medium to produce energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Air</rdfs:label>
     </owl:Class>
@@ -1066,20 +1064,6 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Airport">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#TransportBuilding"/>
         <rdfs:label>Airport</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://hit2gap.eu/h2g/h2gBI#Ambiant -->
-
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Ambiant">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#outdoorAmbiance"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1790,7 +1774,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#Light -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Light">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Ambiant"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
         <rdfs:comment xml:lang="en">Radiation represents radiation as a physical medium to produce energy.</rdfs:comment>
         <rdfs:label>Light</rdfs:label>
     </owl:Class>
@@ -2405,7 +2389,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <!-- http://hit2gap.eu/h2g/h2gBI#Water -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Water">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#Ambiant"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
         <rdfs:comment xml:lang="en">Water represents water as a physical medium to produce energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Water</rdfs:label>
     </owl:Class>
@@ -2562,6 +2546,12 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isIndex"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isOutdoor"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>

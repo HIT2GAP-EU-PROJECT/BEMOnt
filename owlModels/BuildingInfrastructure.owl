@@ -475,6 +475,9 @@ The features of interest representation of the building are performed using stan
         <NamedIndividual IRI="West"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="isOutdoor"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcCompressor"/>
     </Declaration>
     <Declaration>
@@ -911,9 +914,6 @@ The features of interest representation of the building are performed using stan
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="DoubleGlazing"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Ambiant"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://hit2gap.eu/ontomg#SmallWindTurbine"/>
@@ -1375,9 +1375,6 @@ The features of interest representation of the building are performed using stan
         <Class IRI="DxCoolingCoil"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="outdoorAmbiance"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="DrySummerSubartic"/>
     </Declaration>
     <Declaration>
@@ -1812,7 +1809,7 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Air"/>
-        <Class IRI="Ambiant"/>
+        <Class IRI="PhysicalMedium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="AirExchanger"/>
@@ -1864,17 +1861,6 @@ The features of interest representation of the building are performed using stan
     <SubClassOf>
         <Class IRI="Airport"/>
         <Class IRI="TransportBuilding"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Ambiant"/>
-        <Class IRI="PhysicalMedium"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Ambiant"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="outdoorAmbiance"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Amplifier"/>
@@ -2204,7 +2190,7 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Light"/>
-        <Class IRI="Ambiant"/>
+        <Class IRI="PhysicalMedium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="LogisticPlatform"/>
@@ -2493,7 +2479,7 @@ The features of interest representation of the building are performed using stan
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Water"/>
-        <Class IRI="Ambiant"/>
+        <Class IRI="PhysicalMedium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WaterCoolingCoil"/>
@@ -2577,6 +2563,13 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="isIndex"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="isOutdoor"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -7508,19 +7501,9 @@ The IfcWindow defines a particular occurrence of a window inserted in the spatia
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcWindow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum</IRI>
-        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IfcWindowTypeEnum</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcWindowTypeEnum</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation Method Enum</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
