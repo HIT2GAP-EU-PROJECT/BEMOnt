@@ -372,7 +372,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Area -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Area">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#GeometryProperty"/>
         <rdfs:comment xml:lang="en">Area represents an observation of the  measure of the area.</rdfs:comment>
         <rdfs:label xml:lang="en">Area</rdfs:label>
     </owl:Class>
@@ -389,10 +389,18 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ClimateProperty -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Co2Rate -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Co2Rate">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#AirQuality"/>
         <rdfs:comment xml:lang="en">Co2Rate represents an observation of the  measure of the Co2 in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Co2Rate</rdfs:label>
     </owl:Class>
@@ -412,7 +420,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Condensation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Condensation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#MatterStateChange"/>
         <rdfs:comment xml:lang="en">Condensation represents an observation of the  measure of the condensation  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Condensation</rdfs:label>
     </owl:Class>
@@ -472,7 +480,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Depth -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Depth">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
         <rdfs:comment xml:lang="en">Depth represents an observation of the  measure of the depth of an element  in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Depth</rdfs:label>
     </owl:Class>
@@ -482,7 +490,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Discharge -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Discharge">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Volume"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Velocity"/>
         <rdfs:comment xml:lang="en">Discharge represents an observation of the  measure of the volume of a discharge in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Discharge</rdfs:label>
     </owl:Class>
@@ -514,7 +522,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#EconomicProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
         <rdfs:comment xml:lang="en">The Economic phenomena makes reference to all monetary and investment aspects that could affect the building domains. For example, this part of the ontology allows one to represent water-related prices, energy bills, building investments, etc. These specific phenomena has been subdivided into: Cost and Investment.</rdfs:comment>
-        <rdfs:label xml:lang="en">Economic Property</rdfs:label>
+        <rdfs:label xml:lang="en">EconomicProperty</rdfs:label>
     </owl:Class>
     
 
@@ -531,7 +539,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Evaporation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Evaporation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#MatterStateChange"/>
         <rdfs:comment xml:lang="en">Evaporation represents an observation of the  measure of the evaporation in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Evaporation</rdfs:label>
     </owl:Class>
@@ -541,7 +549,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Flow -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Flow">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Volume"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Velocity"/>
         <rdfs:comment xml:lang="en">Flow represents an observation of the  measure of the volume of a flow in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow</rdfs:label>
     </owl:Class>
@@ -551,9 +559,17 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Frequency -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Frequency">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Time"/>
         <rdfs:comment xml:lang="en">Frequency represents an observation of the  measure of the rate of occurrence.</rdfs:comment>
         <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#GeometryProperty -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#GeometryProperty">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
     </owl:Class>
     
 
@@ -572,9 +588,19 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Humidity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Humidity">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Humidity"/>
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Humidity represents an observation of the  measure of the humidity in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Humidity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Illuminance -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Illuminance">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty"/>
+        <rdfs:label>Illuminance</rdfs:label>
     </owl:Class>
     
 
@@ -619,6 +645,15 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Irradiance -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Irradiance">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty"/>
+        <rdfs:label>Irradiance</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Latitude -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Latitude">
@@ -649,6 +684,15 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#LigthningProperty -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Longitude -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Longitude">
@@ -659,12 +703,46 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MatterMovement -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MatterMovement">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#MatterStateChange -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MatterStateChange">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#MaxOccupancy -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MaxOccupancy">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupancyCapacityProperty"/>
         <rdfs:comment xml:lang="en">Max Occupancy represents an observation of the  measure of the maximum capacity of occupants in a structiral element of the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Max Occupancy</rdfs:label>
+        <rdfs:label xml:lang="en">MaxOccupancy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#NbEntries -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#NbEntries">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Presence"/>
+        <rdfs:label>NbEntries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#NbExit -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#NbExit">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Presence"/>
+        <rdfs:label>NbExit</rdfs:label>
     </owl:Class>
     
 
@@ -674,7 +752,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupancyCapacityProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
         <rdfs:comment xml:lang="en">The occupancy capacity property describes the capacity for occupants in the structural elements of the building. For example, this part of the ontology allows to represent the maximum occupancy capacity and the permanent occupancy in an  structural element of the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Occupancy Capacity Property</rdfs:label>
+        <rdfs:label xml:lang="en">OccupancyCapacityProperty</rdfs:label>
     </owl:Class>
     
 
@@ -684,7 +762,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhenomenonProperty"/>
         <rdfs:comment xml:lang="en">The occupant Properties describes characteristics related to the state of an occupant and the capacity for occupants in the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Occupant Property</rdfs:label>
+        <rdfs:label xml:lang="en">OccupantProperty</rdfs:label>
     </owl:Class>
     
 
@@ -694,7 +772,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#OccupantStateProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
         <rdfs:comment xml:lang="en">The occupant state property describes the state of an occupant of the building. For example, this part of the ontology allows to represent the pulse and stress of an occupant.</rdfs:comment>
-        <rdfs:label xml:lang="en">Occupant State Property</rdfs:label>
+        <rdfs:label xml:lang="en">OccupantStateProperty</rdfs:label>
     </owl:Class>
     
 
@@ -714,7 +792,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#PermanentOccupancy">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupancyCapacityProperty"/>
         <rdfs:comment xml:lang="en">Permanent Occupancy represents an observation of the  measure of the permanent number of occupants  in a structiral element of the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Permanent Occupancy</rdfs:label>
+        <rdfs:label xml:lang="en">PermanentOccupancy</rdfs:label>
     </owl:Class>
     
 
@@ -736,7 +814,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The phenomenon (or property) concept provides a common vision about the general characteristics to be considered in the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Phenomenon Property</rdfs:label>
+        <rdfs:label xml:lang="en">PhenomenonProperty</rdfs:label>
     </owl:Class>
     
 
@@ -765,6 +843,15 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Power">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Presence -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Presence">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
+        <rdfs:label>Presence</rdfs:label>
     </owl:Class>
     
 
@@ -802,7 +889,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Radiation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Radiation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty"/>
         <rdfs:comment xml:lang="en">Radiation represents an observation of the  measure of the radiation  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
     </owl:Class>
@@ -812,7 +899,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Rainfall -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Rainfall">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
         <rdfs:comment xml:lang="en">Rainfall represents an observation of the  measure of the rainfall.</rdfs:comment>
         <rdfs:label xml:lang="en">Rainfall</rdfs:label>
     </owl:Class>
@@ -842,7 +929,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Shape -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Shape">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#GeometryProperty"/>
         <rdfs:comment xml:lang="en">Shape represents an observation of the  measure of the shape of an elment in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Shape</rdfs:label>
     </owl:Class>
@@ -872,7 +959,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Speed -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Speed">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#MatterMovement"/>
         <rdfs:comment xml:lang="en">Speed represents an observation of the  measure of the speed of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Speed</rdfs:label>
     </owl:Class>
@@ -902,6 +989,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Temperature -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Temperature">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
         <rdfs:comment xml:lang="en">Temperature represents an observation of the  measure of the temperature  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
@@ -952,7 +1040,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Velocity -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Velocity">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#MatterMovement"/>
         <rdfs:comment xml:lang="en">Velocity represents an observation of the  measure of the velocity of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Velocity</rdfs:label>
     </owl:Class>
@@ -972,7 +1060,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#Volume -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Volume">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#GeometryProperty"/>
         <rdfs:comment xml:lang="en">Volume represents an observation of the  measure of the volume of an elment in the building in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
@@ -1002,9 +1090,17 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#WindOrientation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindOrientation">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#WindProperty"/>
         <rdfs:comment xml:lang="en">WindOrientation represents an observation of the  measure of the wind orientation in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">WindOrientation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WindProperty -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindProperty">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
     </owl:Class>
     
 
@@ -1012,7 +1108,7 @@
     <!-- http://hit2gap.eu/h2g/h2gProperty#WindSpeed -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindSpeed">
-        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#WindProperty"/>
         <rdfs:comment xml:lang="en">WindSpeed represents an observation of the  measure of the wind speed  in a specific time.</rdfs:comment>
         <rdfs:label xml:lang="en">WindSpeed</rdfs:label>
     </owl:Class>
@@ -1326,7 +1422,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.</dc:description>
         <rdfs:comment xml:lang="en">A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#DimensionlessUnit"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimensionless Unit</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DimensionlessUnit</rdfs:label>
     </owl:Class>
     
 
@@ -2013,7 +2109,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Resource Unit is a unit for measuring the amount of various types of resources.</dc:description>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Resource Unit is a unit for measuring the amount of various types of resources.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#ResourceUnit"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource Unit</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ResourceUnit</rdfs:label>
     </owl:Class>
     
 
@@ -2415,7 +2511,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
         <rdfs:comment xml:lang="en">An actuatable quality (property, characteristic) of a FeatureOfInterest.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
-        <rdfs:label xml:lang="en">Actuatable Property</rdfs:label>
+        <rdfs:label xml:lang="en">ActuatableProperty</rdfs:label>
         <skos:definition xml:lang="en">An actuatable quality (property, characteristic) of a FeatureOfInterest.</skos:definition>
         <skos:example xml:lang="en">A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its ActuatableProperty.</skos:example>
     </owl:Class>
@@ -2458,7 +2554,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
         <rdfs:comment xml:lang="en">An observable quality (property, characteristic) of a FeatureOfInterest.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">Observable Property</rdfs:label>
+        <rdfs:label xml:lang="en">ObservableProperty</rdfs:label>
         <skos:definition xml:lang="en">An observable quality (property, characteristic) of a FeatureOfInterest.</skos:definition>
         <skos:example xml:lang="en">The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted.</skos:example>
     </owl:Class>

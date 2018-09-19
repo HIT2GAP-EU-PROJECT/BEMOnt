@@ -130,6 +130,9 @@
         <Class abbreviatedIRI="qudt:HeatFlowRateUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="LigthningProperty"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="qudt:TurbidityUnit"/>
     </Declaration>
     <Declaration>
@@ -161,6 +164,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Zebi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Illuminance"/>
     </Declaration>
     <Declaration>
         <Class IRI="Width"/>
@@ -322,6 +328,9 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#PerTeslaSecond"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Irradiance"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="qudt:CapacitanceUnit"/>
     </Declaration>
     <Declaration>
@@ -338,6 +347,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Centimeter_Second_Degree_Celsius"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MatterMovement"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -820,6 +832,9 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Afghani"/>
     </Declaration>
     <Declaration>
+        <Class IRI="ClimateProperty"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Kilowatt"/>
     </Declaration>
     <Declaration>
@@ -1040,6 +1055,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreePerSecondSquared"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GeometryProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasSpaceCapacity"/>
@@ -1390,6 +1408,9 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFootHour"/>
     </Declaration>
     <Declaration>
+        <Class IRI="MatterStateChange"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Roentgen"/>
     </Declaration>
     <Declaration>
@@ -1403,6 +1424,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#ArcMinute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NbExit"/>
     </Declaration>
     <Declaration>
         <Class IRI="Radiation"/>
@@ -1483,10 +1507,19 @@
         <Class IRI="Depth"/>
     </Declaration>
     <Declaration>
+        <Class IRI="WindProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NbEntries"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="qudt:FinancialUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Dalton"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Presence"/>
     </Declaration>
     <Declaration>
         <Class IRI="Pressure"/>
@@ -1635,15 +1668,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Area"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="GeometryProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Capacity"/>
         <Class IRI="PhysicalProperty"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Co2Rate"/>
+        <Class IRI="ClimateProperty"/>
         <Class IRI="PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Co2Rate"/>
+        <Class IRI="AirQuality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Color"/>
@@ -1651,7 +1688,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Condensation"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="MatterStateChange"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Conductivity"/>
@@ -1675,11 +1712,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Depth"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="Shape"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Discharge"/>
-        <Class IRI="Volume"/>
+        <Class IRI="Velocity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DiscreteState"/>
@@ -1699,14 +1736,18 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Evaporation"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="MatterStateChange"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Flow"/>
-        <Class IRI="Volume"/>
+        <Class IRI="Velocity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Frequency"/>
+        <Class IRI="Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GeometryProperty"/>
         <Class IRI="PhysicalProperty"/>
     </SubClassOf>
     <SubClassOf>
@@ -1715,7 +1756,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Humidity"/>
+        <Class IRI="Humidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Humidity"/>
         <Class IRI="PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Illuminance"/>
+        <Class IRI="LigthningProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="IncidentRadiation"/>
@@ -1734,6 +1783,10 @@
         <Class IRI="EconomicProperty"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Irradiance"/>
+        <Class IRI="LigthningProperty"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Latitude"/>
         <Class IRI="Position"/>
     </SubClassOf>
@@ -1746,12 +1799,36 @@
         <Class IRI="Radiation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="LigthningProperty"/>
+        <Class IRI="ClimateProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LigthningProperty"/>
+        <Class IRI="PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Longitude"/>
         <Class IRI="Position"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="MatterMovement"/>
+        <Class IRI="PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MatterStateChange"/>
+        <Class IRI="PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="MaxOccupancy"/>
         <Class IRI="OccupancyCapacityProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NbEntries"/>
+        <Class IRI="Presence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NbExit"/>
+        <Class IRI="Presence"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OccupancyCapacityProperty"/>
@@ -1804,6 +1881,10 @@
         <Class IRI="PhysicalProperty"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Presence"/>
+        <Class IRI="OccupantProperty"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Pressure"/>
         <Class IRI="PhysicalProperty"/>
     </SubClassOf>
@@ -1817,11 +1898,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Radiation"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="LigthningProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Rainfall"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="ClimateProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ReflectedIncidentradiation"/>
@@ -1833,7 +1914,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Shape"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="GeometryProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Slope"/>
@@ -1845,7 +1926,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Speed"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="MatterMovement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="State"/>
@@ -1854,6 +1935,10 @@
     <SubClassOf>
         <Class IRI="Streess"/>
         <Class IRI="OccupantStateProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Temperature"/>
+        <Class IRI="ClimateProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Temperature"/>
@@ -1877,7 +1962,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Velocity"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="MatterMovement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Visibility"/>
@@ -1885,7 +1970,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Volume"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="GeometryProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Weight"/>
@@ -1897,11 +1982,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WindOrientation"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="WindProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WindProperty"/>
+        <Class IRI="ClimateProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WindSpeed"/>
-        <Class IRI="PhysicalProperty"/>
+        <Class IRI="WindProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="h2gProperty"/>
@@ -9492,7 +9581,7 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>EconomicProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Economic Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EconomicProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9555,6 +9644,11 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humidity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Illuminance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Illuminance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>IncidentRadiation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IncidentRadiation represents an observation of the  measure of the incident radiation  in a specific time.</Literal>
@@ -9593,6 +9687,11 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Investment</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Investment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Irradiance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Irradiance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9642,7 +9741,17 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>MaxOccupancy</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Max Occupancy</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MaxOccupancy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NbEntries</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NbEntries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NbExit</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NbExit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9652,7 +9761,7 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OccupancyCapacityProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Occupancy Capacity Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OccupancyCapacityProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9662,7 +9771,7 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OccupantProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Occupant Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OccupantProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9672,7 +9781,7 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OccupantStateProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Occupant State Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OccupantStateProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9692,7 +9801,7 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PermanentOccupancy</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Permanent Occupancy</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PermanentOccupancy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9702,7 +9811,7 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PhenomenonProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phenomenon Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhenomenonProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9723,6 +9832,11 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Position</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Presence</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Presence</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -10269,7 +10383,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>qudt:DimensionlessUnit</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Dimensionless Unit</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DimensionlessUnit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -10704,7 +10818,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>qudt:ResourceUnit</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Resource Unit</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ResourceUnit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -14069,7 +14183,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/ns/sosa/ActuatableProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuatable Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActuatableProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:definition"/>
@@ -14119,7 +14233,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/ns/sosa/ObservableProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observable Property</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ObservableProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:definition"/>
