@@ -27,6 +27,9 @@
         <ObjectProperty IRI="partOfService"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="installedOn"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="param_name"/>
     </Declaration>
     <Declaration>
@@ -45,10 +48,13 @@
         <Class IRI="PreProcessingService"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="param_value"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Model"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="param_value"/>
+        <DataProperty IRI="hasFrontend"/>
     </Declaration>
     <Declaration>
         <Class IRI="DataCollectionService"/>
@@ -78,10 +84,10 @@
         <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="usesModel"/>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+        <ObjectProperty IRI="usesModel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="localization"/>
@@ -210,6 +216,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Service"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="installedOn"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -235,6 +248,13 @@
             <DataProperty IRI="id"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasFrontend"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="TimeSeries"/>

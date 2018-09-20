@@ -35,6 +35,12 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/Services#installedOn -->
+
+    <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#installedOn"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/Services#localization -->
 
     <owl:ObjectProperty rdf:about="http://hit2gap.eu/h2g/Services#localization"/>
@@ -107,6 +113,12 @@
     <!-- http://hit2gap.eu/h2g/Services#externalID -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/Services#externalID"/>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/Services#hasFrontend -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/Services#hasFrontend"/>
     
 
 
@@ -320,6 +332,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#installedOn"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#description"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -340,6 +358,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#id"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/Services#hasFrontend"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</rdfs:comment>
