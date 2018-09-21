@@ -1687,11 +1687,28 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Unit</rdfs:label>
     </owl:Class>
     
+	
+	<!-- http://qudt.org/schema/qudt#OpticsUnit -->
 
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#OpticsUnit">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light Unit</rdfs:label>
+    </owl:Class>
+	
+	<!-- http://qudt.org/schema/qudt#PhotometryUnit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#PhotometryUnit">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#OpticsUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photometry Unit</rdfs:label>
+    </owl:Class>
 
     <!-- http://qudt.org/schema/qudt#IlluminanceUnit -->
 
-    <owl:Class rdf:about="http://qudt.org/schema/qudt#IlluminanceUnit"/>
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#IlluminanceUnit">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#PhotometryUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Illuminance Unit</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Units_of_illuminance"/>
+    </owl:Class>
     
 
 
@@ -1943,13 +1960,6 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Momentum Unit</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- http://qudt.org/schema/qudt#OpticsUnit -->
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt#OpticsUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit"/>
-    </owl:Class>
     
 
 
