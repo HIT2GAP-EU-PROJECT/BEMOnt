@@ -2602,6 +2602,17 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#GigaJoule -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#GigaJoule">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#EnergyAndWorkUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E9</qudt:conversionMultiplier>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GJ</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GigaJoule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#HectoPascal -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#HectoPascal">
@@ -2610,6 +2621,27 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</qudt:conversionMultiplier>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hPa</qudt:symbol>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HectoPascal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#JoulePerSquareCentimeter -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#JoulePerSquareCentimeter">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#EnergyPerAreaUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/cm^2</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joule per Square Centimeter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#KiloJoulePerKilogram -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#KiloJoulePerKilogram">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificEnergyUnit"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</qudt:symbol>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kJ/kg</qudt:symbol>
     </owl:NamedIndividual>
     
 
@@ -2632,6 +2664,16 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</qudt:conversionMultiplier>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWh</qudt:symbol>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Megawatthour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#PartsPerMillion -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#PartsPerMillion">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DimensionlessUnit"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ppm</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts per Million</rdfs:label>
     </owl:NamedIndividual>
     
 
