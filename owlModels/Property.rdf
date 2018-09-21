@@ -1248,19 +1248,6 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bending Moment Or Torque Unit</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Units_of_torque"/>
     </owl:Class>
-    
-
-
-    <!-- http://qudt.org/schema/qudt#BinaryPrefixUnit -->
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt#BinaryPrefixUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#PrefixUnit"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binary Prefix Unit</rdfs:label>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:Class>
-    
-
 
     <!-- http://qudt.org/schema/qudt#BiomedicalUnit -->
 
@@ -2841,9 +2828,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_Foot_per_Square_Foot_Hour_Degree -->
+    <!-- http://qudt.org/vocab/unit#BTU_FootPerSquare_Foot_Hour_Degree -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_Foot_per_Square_Foot_Hour_Degree">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_FootPerSquare_Foot_Hour_Degree">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalConductivityUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTU Foot per Square Foot Hour Degree</rdfs:label>
     </owl:NamedIndividual>
@@ -2864,27 +2851,27 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_Inch_per_Square_Foot_Hour_Degree -->
+    <!-- http://qudt.org/vocab/unit#BTU_InchPerSquare_Foot_Hour_Degree -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_Inch_per_Square_Foot_Hour_Degree">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_InchPerSquare_Foot_Hour_Degree">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalConductivityUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTU Inch per Square Foot Hour Degree</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_Inch_per_Square_Foot_Second_Degree -->
+    <!-- http://qudt.org/vocab/unit#BTU_InchPerSquare_Foot_Second_Degree -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_Inch_per_Square_Foot_Second_Degree">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_InchPerSquare_Foot_Second_Degree">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalConductivityUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTU Inch per Square Foot Second Degree</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Degree_Fahrenheit -->
+    <!-- http://qudt.org/vocab/unit#BTUPerDegree_Fahrenheit -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Degree_Fahrenheit">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerDegree_Fahrenheit">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/degF</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/degF</qudt:symbol>
@@ -2894,9 +2881,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Degree_Rankine -->
+    <!-- http://qudt.org/vocab/unit#BTUPerDegree_Rankine -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Degree_Rankine">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerDegree_Rankine">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/degR</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/degR</qudt:symbol>
@@ -2906,9 +2893,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Hour -->
+    <!-- http://qudt.org/vocab/unit#BTUPerHour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerHour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/hr</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.29307107</qudt:conversionMultiplier>
@@ -2921,9 +2908,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Pound_Degree_Fahrenheit -->
+    <!-- http://qudt.org/vocab/unit#BTUPerPound_Degree_Fahrenheit -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Pound_Degree_Fahrenheit">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerPound_Degree_Fahrenheit">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/(lb-degF)</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/(lb-degF)</qudt:symbol>
@@ -2933,9 +2920,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Pound_Degree_Rankine -->
+    <!-- http://qudt.org/vocab/unit#BTUPerPound_Degree_Rankine -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Pound_Degree_Rankine">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerPound_Degree_Rankine">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/(lb-degR)</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/(lb-degR)</qudt:symbol>
@@ -2945,9 +2932,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Pound_Mole_Degree_Fahrenheit -->
+    <!-- http://qudt.org/vocab/unit#BTUPerPound_Mole_Degree_Fahrenheit -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Pound_Mole_Degree_Fahrenheit">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerPound_Mole_Degree_Fahrenheit">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#MolarHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/(lb-mol-degF)</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/(lb-mol-degF)</qudt:symbol>
@@ -2957,9 +2944,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Second -->
+    <!-- http://qudt.org/vocab/unit#BTUPerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Btu/s</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1055.05585262</qudt:conversionMultiplier>
@@ -2971,18 +2958,18 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Square_Foot_Hour_Degree -->
+    <!-- http://qudt.org/vocab/unit#BTUPerSquare_Foot_Hour_Degree -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Square_Foot_Hour_Degree">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerSquare_Foot_Hour_Degree">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#CoefficientOfHeatTransferUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTU per Square Foot Hour Degree</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://qudt.org/vocab/unit#BTU_per_Square_Foot_Second_Degree -->
+    <!-- http://qudt.org/vocab/unit#BTUPerSquare_Foot_Second_Degree -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTU_per_Square_Foot_Second_Degree">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#BTUPerSquare_Foot_Second_Degree">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#CoefficientOfHeatTransferUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTU per Square Foot Second Degree</rdfs:label>
     </owl:NamedIndividual>
@@ -3360,18 +3347,18 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Calorie_per_Centimeter_Second_Degree -->
+    <!-- http://qudt.org/vocab/unit#CaloriePerCentimeter_Second_Degree -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Calorie_per_Centimeter_Second_Degree">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CaloriePerCentimeter_Second_Degree">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalConductivityUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calorie per Centimeter Second Degree</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://qudt.org/vocab/unit#Calorie_per_Gram_Degree_Celsius -->
+    <!-- http://qudt.org/vocab/unit#CaloriePerGram_Degree_Celsius -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Calorie_per_Gram_Degree_Celsius">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CaloriePerGram_Degree_Celsius">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kcal/(gm-degC)</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kcal/(gm-degC)</qudt:symbol>
@@ -3545,9 +3532,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Cubic_Meter_per_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#Cubic_MeterPerKelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Cubic_Meter_per_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Cubic_MeterPerKelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumeThermalExpansionUnit"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -3704,9 +3691,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Celsius -->
+    <!-- http://qudt.org/vocab/unit#DegreeCelsius -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Celsius">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeCelsius">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperatureUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -3719,9 +3706,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Celsius_Centimeter -->
+    <!-- http://qudt.org/vocab/unit#DegreeCelsius_Centimeter -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Celsius_Centimeter">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeCelsius_Centimeter">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthTemperatureUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm-degC</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm-degC</qudt:symbol>
@@ -3730,9 +3717,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Celsius_per_Hour -->
+    <!-- http://qudt.org/vocab/unit#DegreeCelsiusPerHour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Celsius_per_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeCelsiusPerHour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC / hr</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC / hr</qudt:symbol>
@@ -3741,9 +3728,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Celsius_per_Minute -->
+    <!-- http://qudt.org/vocab/unit#DegreeCelsiusPerMinute -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Celsius_per_Minute">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeCelsiusPerMinute">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC / m</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC / m</qudt:symbol>
@@ -3752,9 +3739,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Celsius_per_Second -->
+    <!-- http://qudt.org/vocab/unit#DegreeCelsiusPerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Celsius_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeCelsiusPerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC / s</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC / s</qudt:symbol>
@@ -3763,9 +3750,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Centigrade -->
+    <!-- http://qudt.org/vocab/unit#DegreeCentigrade -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Centigrade">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeCentigrade">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperatureUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DegC</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DegC</qudt:symbol>
@@ -3776,9 +3763,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Fahrenheit -->
+    <!-- http://qudt.org/vocab/unit#DegreeFahrenheit -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Fahrenheit">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeFahrenheit">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperatureUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5555555555555556</qudt:conversionMultiplier>
@@ -3790,9 +3777,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Fahrenheit_Hour -->
+    <!-- http://qudt.org/vocab/unit#DegreeFahrenheit_Hour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Fahrenheit_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeFahrenheit_Hour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalResistivityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF-hr</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF-hr</qudt:symbol>
@@ -3802,9 +3789,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Fahrenheit_Hour_per_BTU -->
+    <!-- http://qudt.org/vocab/unit#DegreeFahrenheit_HourPerBTU -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Fahrenheit_Hour_per_BTU">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeFahrenheit_HourPerBTU">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalResistanceUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF-hr/Btu</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF-hr/Btu</qudt:symbol>
@@ -3814,9 +3801,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Fahrenheit_per_Hour -->
+    <!-- http://qudt.org/vocab/unit#DegreeFahrenheitPerHour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Fahrenheit_per_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeFahrenheitPerHour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF / h</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF / h</qudt:symbol>
@@ -3825,9 +3812,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Fahrenheit_per_Minute -->
+    <!-- http://qudt.org/vocab/unit#DegreeFahrenheitPerMinute -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Fahrenheit_per_Minute">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeFahrenheitPerMinute">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF / m</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF / m</qudt:symbol>
@@ -3836,9 +3823,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Fahrenheit_per_Second -->
+    <!-- http://qudt.org/vocab/unit#DegreeFahrenheitPerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Fahrenheit_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeFahrenheitPerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF / s</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF / s</qudt:symbol>
@@ -3847,9 +3834,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Rankine -->
+    <!-- http://qudt.org/vocab/unit#DegreeRankine -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Rankine">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeRankine">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperatureUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5555555555555556</qudt:conversionMultiplier>
@@ -3861,9 +3848,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Rankine_per_Hour -->
+    <!-- http://qudt.org/vocab/unit#DegreeRankinePerHour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Rankine_per_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeRankinePerHour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR / h</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR / h</qudt:symbol>
@@ -3872,9 +3859,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Rankine_per_Minute -->
+    <!-- http://qudt.org/vocab/unit#DegreeRankinePerMinute -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Rankine_per_Minute">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeRankinePerMinute">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR / m</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR / m</qudt:symbol>
@@ -3883,9 +3870,9 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
-    <!-- http://qudt.org/vocab/unit#Degree_Rankine_per_Second -->
+    <!-- http://qudt.org/vocab/unit#DegreeRankinePerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Degree_Rankine_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#DegreeRankinePerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR / s</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degR / s</qudt:symbol>
@@ -3955,9 +3942,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Electron_Volt_per_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#Electron_VoltPerKelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Electron_Volt_per_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Electron_VoltPerKelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eV K^-1</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.6021765314E-19</qudt:conversionMultiplier>
@@ -3992,36 +3979,7 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Exa"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exa</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Exa-"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/unit#Exbi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Exbi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.52921504606846976E17</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ei</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Exbi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exbi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/unit#Femto -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Femto">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DecimalPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-15</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Femto"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Femto</rdfs:label>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Femto-"/>
-    </owl:NamedIndividual>
-    
+    </owl:NamedIndividual>  
 
 
     <!-- http://qudt.org/vocab/unit#Flight -->
@@ -4092,19 +4050,6 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Gal"/>
     </owl:NamedIndividual>
     
-
-
-    <!-- http://qudt.org/vocab/unit#Gibi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Gibi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.073741824E9</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gi</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Gibi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:NamedIndividual>
     
 
 
@@ -4482,9 +4427,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Joule_per_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#JoulePerKelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Joule_per_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerKelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/K</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -4495,9 +4440,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Joule_per_Kilogram_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#JoulePerKilogram_Kelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Joule_per_Kilogram_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerKilogram_Kelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/(kg-K)</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -4509,9 +4454,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Joule_per_Kilogram_Kelvin_per_Cubic_Meter -->
+    <!-- http://qudt.org/vocab/unit#JoulePerKilogram_KelvinPerCubic_Meter -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Joule_per_Kilogram_Kelvin_per_Cubic_Meter">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerKilogram_KelvinPerCubic_Meter">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificHeatVolumeUnit"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -4522,9 +4467,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Joule_per_Kilogram_Kelvin_per_Pascal -->
+    <!-- http://qudt.org/vocab/unit#JoulePerKilogram_KelvinPerPascal -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Joule_per_Kilogram_Kelvin_per_Pascal">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerKilogram_KelvinPerPascal">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificHeatPressureUnit"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -4535,9 +4480,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Joule_per_Mole_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#JoulePerMole_Kelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Joule_per_Mole_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerMole_Kelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#MolarHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/(mol-K)</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -4593,9 +4538,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kelvin_per_Hour -->
+    <!-- http://qudt.org/vocab/unit#KelvinPerHour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kelvin_per_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KelvinPerHour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K / h</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3600.0</qudt:conversionMultiplier>
@@ -4606,9 +4551,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kelvin_per_Minute -->
+    <!-- http://qudt.org/vocab/unit#KelvinPerMinute -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kelvin_per_Minute">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KelvinPerMinute">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K / m</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">60.0</qudt:conversionMultiplier>
@@ -4619,9 +4564,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kelvin_per_Second -->
+    <!-- http://qudt.org/vocab/unit#KelvinPerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kelvin_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KelvinPerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#TemperaturePerTimeUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K / s</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -4632,9 +4577,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kelvin_per_Watt -->
+    <!-- http://qudt.org/vocab/unit#KelvinPerWatt -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kelvin_per_Watt">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KelvinPerWatt">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalResistanceUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K/W</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -4643,20 +4588,7 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0945</dtype:code>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kelvin per Watt</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/unit#Kibi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kibi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1024.0</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ki</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Kibi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kibi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:NamedIndividual>
+   
     
 
 
@@ -4727,9 +4659,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kilocalorie_per_Minute -->
+    <!-- http://qudt.org/vocab/unit#KilocaloriePerMinute -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kilocalorie_per_Minute">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KilocaloriePerMinute">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kcal/min</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">69.7333333</qudt:conversionMultiplier>
@@ -4741,9 +4673,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kilocalorie_per_Mole_Degree_Celsius -->
+    <!-- http://qudt.org/vocab/unit#KilocaloriePerMole_Degree_Celsius -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kilocalorie_per_Mole_Degree_Celsius">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KilocaloriePerMole_Degree_Celsius">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#MolarHeatCapacityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kcal/(mol-degC)</qudt:abbreviation>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kcal/(mol-degC)</qudt:symbol>
@@ -4753,9 +4685,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Kilocalorie_per_Second -->
+    <!-- http://qudt.org/vocab/unit#KilocaloriePerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Kilocalorie_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KilocaloriePerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kcal/s</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4184.0</qudt:conversionMultiplier>
@@ -4901,21 +4833,6 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mach</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Mach"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/unit#Mebi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Mebi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1048576.0</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mi</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Mebi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mebi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://qudt.org/vocab/unit#Mega -->
@@ -5074,9 +4991,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Meter_Kelvin_per_Watt -->
+    <!-- http://qudt.org/vocab/unit#Meter_KelvinPerWatt -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Meter_Kelvin_per_Watt">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Meter_KelvinPerWatt">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalResistivityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K-m/W</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -5088,9 +5005,9 @@ Though the diopter is based on the SI-metric system it has not been included in 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Meter_per_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#MeterPerKelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Meter_per_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#MeterPerKelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearThermalExpansionUnit"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -5411,21 +5328,7 @@ Though the diopter is based on the SI-metric system it has not been included in 
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#PascalSecond"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascal Second</rdfs:label>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://qudt.org/vocab/unit#Pebi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Pebi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.25899906842624E14</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pi</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Pebi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pebi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://qudt.org/vocab/unit#PerCubicMeter -->
@@ -6113,9 +6016,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Square_Foot_Hour_Degree_Fahrenheit_per_BTU -->
+    <!-- http://qudt.org/vocab/unit#Square_Foot_Hour_Degree_FahrenheitPerBTU -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Foot_Hour_Degree_Fahrenheit_per_BTU">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Foot_Hour_Degree_FahrenheitPerBTU">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalInsulanceUnit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Foot Hour Degree Fahrenheit per BTU</rdfs:label>
     </owl:NamedIndividual>
@@ -6134,9 +6037,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Square_Foot_per_BTU_Inch -->
+    <!-- http://qudt.org/vocab/unit#Square_FootPerBTU_Inch -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Foot_per_BTU_Inch">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_FootPerBTU_Inch">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalResistivityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft^2/(Btu-in)</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.00346673589</qudt:conversionMultiplier>
@@ -6148,9 +6051,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Square_Foot_per_Hour -->
+    <!-- http://qudt.org/vocab/unit#Square_FootPerHour -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Foot_per_Hour">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_FootPerHour">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalDiffusivityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft^2/hr</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.58064E-5</qudt:conversionMultiplier>
@@ -6162,9 +6065,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Square_Meter_Kelvin_per_Watt -->
+    <!-- http://qudt.org/vocab/unit#Square_Meter_KelvinPerWatt -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Meter_Kelvin_per_Watt">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Meter_KelvinPerWatt">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalInsulanceUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(K^2)m/W</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -6176,9 +6079,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Square_Meter_per_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#Square_MeterPerKelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Meter_per_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_MeterPerKelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#AreaThermalExpansionUnit"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -6189,9 +6092,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Square_Meter_per_Second -->
+    <!-- http://qudt.org/vocab/unit#Square_MeterPerSecond -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_Meter_per_Second">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Square_MeterPerSecond">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalDiffusivityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^2 s^-1</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -6231,22 +6134,6 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steradian</rdfs:label>
         <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Steradian"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/unit#Tebi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Tebi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.099511627776E12</qudt:conversionMultiplier>
-        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ti</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Tebi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tebi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
-    </owl:NamedIndividual>
-    
-
 
     <!-- http://qudt.org/vocab/unit#Tera -->
 
@@ -6446,9 +6333,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Watt_per_Meter_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#WattPerMeter_Kelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Watt_per_Meter_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#WattPerMeter_Kelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermalConductivityUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/(m*K)</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -6460,9 +6347,9 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     
 
 
-    <!-- http://qudt.org/vocab/unit#Watt_per_Square_Meter_Kelvin -->
+    <!-- http://qudt.org/vocab/unit#WattPerSquare_Meter_Kelvin -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Watt_per_Square_Meter_Kelvin">
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#WattPerSquare_Meter_Kelvin">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#CoefficientOfHeatTransferUnit"/>
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/(m^2-K)</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
@@ -6484,90 +6371,254 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W-hr</qudt:symbol>
         <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925</dtype:code>
     </owl:NamedIndividual>
+        
     
 
 
-    <!-- http://qudt.org/vocab/unit#Yobi -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Yobi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.2089258196146292E24</qudt:conversionMultiplier>
+	
+	
+	<!-- http://qudt.org/vocab/unit#Pascal -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Pascal">
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/ -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#PressureOrStressUnit"/>
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/-->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1325</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yi</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Yobi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yobi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascal</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Pascal"/>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#AtmosphereStandard -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AtmosphereStandard">
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/ -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#PressureOrStressUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atm</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0100</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">101325.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atm</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard Atmosphere</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://qudt.org/vocab/unit#Yocto -->
+    <!-- http://qudt.org/vocab/unit#AtmosphereTechnical -->
 
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Yocto">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DecimalPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-24</qudt:conversionMultiplier>
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#AtmosphereTechnical">
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/ -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#PressureOrStressUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0105</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">98066.5</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Yocto"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yocto</rdfs:label>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Yocto-"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Atmosphere</rdfs:label>
     </owl:NamedIndividual>
-    
+	
+	<!-- http://qudt.org/vocab/unit#Bar -->
 
-
-    <!-- http://qudt.org/vocab/unit#Yotta -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Yotta">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DecimalPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E24</qudt:conversionMultiplier>
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Bar">
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/ -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#PressureOrStressUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bar</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0110</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100000.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Yotta"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yotta</rdfs:label>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Yotta-"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bar</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bar</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Bar"/>
     </owl:NamedIndividual>
-    
+	
+	<!-- http://qudt.org/vocab/unit#CubicMeterPerHour -->
 
-
-    <!-- http://qudt.org/vocab/unit#Zebi -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Zebi">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#BinaryPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.1805916207174113E21</qudt:conversionMultiplier>
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CubicMeterPerHour">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumePerTimeUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3/h</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.777777777777778E-4</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zi</qudt:symbol>
-        <rdfs:label rdf:resource="http://qudt.org/vocab/unit#Zebi"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zebi</rdfs:label>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Binary_prefix"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3/h</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Meter per Hour</rdfs:label>
     </owl:NamedIndividual>
-    
+	
+	<!-- http://qudt.org/vocab/unit#CubicMeterPerSecond -->
 
-
-    <!-- http://qudt.org/vocab/unit#Zepto -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Zepto">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DecimalPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-21</qudt:conversionMultiplier>
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CubicMeterPerSecond">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumePerTimeUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3/s</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0455</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Zepto"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zepto</rdfs:label>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Zepto-"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3/s</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Meter per Second</rdfs:label>
     </owl:NamedIndividual>
-    
+	
+	<!-- http://qudt.org/vocab/unit#MeterPerSecond -->
 
-
-    <!-- http://qudt.org/vocab/unit#Zetta -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Zetta">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt#DecimalPrefixUnit"/>
-        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E21</qudt:conversionMultiplier>
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#MeterPerSecond">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LinearVelocityUnit"/>
+<!--         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m/s</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1105</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z</qudt:symbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/vocab/unit#Zetta"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zetta</rdfs:label>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Zetta-"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m s^-1</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meter per Second</rdfs:label>
     </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#KilogramPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#KilogramPerSecond">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#MassPerTimeUnit"/>
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg/s</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1005</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg/s</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilogram per Second</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#Ampere -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Ampere">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#ElectricCurrentUnit"/>
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIBaseUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0050</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ampere</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Ampere"/>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#Volt -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Volt">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#EnergyPerElectricChargeUnit"/>
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1905</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volt</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Volt"/>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#Millimeter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Millimeter">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^-3</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1093</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millimeter</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Millimetre"/>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#CubicMillimeter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#CubicMillimeter">
+<!--         <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumeUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm^3</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0453</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-9</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Millimeter</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#Lux -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Lux">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#IlluminanceUnit"/>
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lx</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1080</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lx</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lux</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Lux"/>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#JoulePerSquareMeter -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerSquareMeter">
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/ -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#EnergyPerAreaUnit"/>
+        <!-- rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/ -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/m^2</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0920</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/m^2</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joule per Square Meter</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#JoulePerKilogram -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#JoulePerKilogram">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIDerivedUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificEnergyUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/kg</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0900</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J/kg</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joule per Kilogram</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#Hour -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#Hour">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#TimeUnit"/>
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#UsedWithSIUnit"/> -->
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hr</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0830</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3600.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hr</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hour</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Hour"/>
+    </owl:NamedIndividual>
+	
+	<!-- http://qudt.org/vocab/unit#SecondTime -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit#SecondTime">
+        <!-- <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIBaseUnit"/> -->
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#TimeUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</qudt:abbreviation>
+        <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1615</qudt:code>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Second</rdfs:label>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Second"/>
+    </owl:NamedIndividual>
+	
 </rdf:RDF>
 
 
