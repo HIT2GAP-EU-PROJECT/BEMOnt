@@ -1687,20 +1687,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Unit</rdfs:label>
     </owl:Class>
     
-	
-	<!-- http://qudt.org/schema/qudt#OpticsUnit -->
 
-    <owl:Class rdf:about="http://qudt.org/schema/qudt#OpticsUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light Unit</rdfs:label>
-    </owl:Class>
-	
-	<!-- http://qudt.org/schema/qudt#PhotometryUnit -->
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt#PhotometryUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#OpticsUnit"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photometry Unit</rdfs:label>
-    </owl:Class>
 
     <!-- http://qudt.org/schema/qudt#IlluminanceUnit -->
 
@@ -1960,6 +1947,14 @@ This model includes the “ssn:Property” representation and the phenomenon con
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Momentum Unit</rdfs:label>
     </owl:Class>
     
+
+
+    <!-- http://qudt.org/schema/qudt#OpticsUnit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#OpticsUnit">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light Unit</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1983,6 +1978,7 @@ This model includes the “ssn:Property” representation and the phenomenon con
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt#PhotometryUnit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#OpticsUnit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photometry Unit</rdfs:label>
     </owl:Class>
     
 
@@ -2652,6 +2648,17 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SpecificEnergyUnit"/>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</qudt:symbol>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kJ/kg</qudt:symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#LiterPerMinute -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#LiterPerMinute">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumePerTimeUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">16.66666667</qudt:conversionMultiplier>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l/mn</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liter per Minute</rdfs:label>
     </owl:NamedIndividual>
     
 

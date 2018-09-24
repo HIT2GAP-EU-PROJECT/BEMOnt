@@ -1639,6 +1639,9 @@
         <Class abbreviatedIRI="qudt:ThermalResistanceUnit"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="LiterPerMinute"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Mega"/>
     </Declaration>
     <Declaration>
@@ -2757,6 +2760,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="qudt:SpecificEnergyUnit"/>
         <NamedIndividual IRI="KiloJoulePerKilogram"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:VolumePerTimeUnit"/>
+        <NamedIndividual IRI="LiterPerMinute"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="qudt:VolumePerTimeUnit"/>
@@ -3891,6 +3898,16 @@
         <DataProperty abbreviatedIRI="qudt:symbol"/>
         <NamedIndividual IRI="KiloJoulePerKilogram"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">kJ/kg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:conversionMultiplier"/>
+        <NamedIndividual IRI="LiterPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">16.66666667</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:symbol"/>
+        <NamedIndividual IRI="LiterPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">l/mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="qudt:conversionMultiplier"/>
@@ -10020,6 +10037,11 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>LightRadiation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LightRadiation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LiterPerMinute</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Liter per Minute</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
