@@ -403,6 +403,16 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Cloudiness -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Cloudiness">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloudiness represents the percentage of clouds in a surface of the sky</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloudiness</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Co2Rate -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Co2Rate">

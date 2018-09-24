@@ -988,6 +988,9 @@
         <Class abbreviatedIRI="qudt:HumanUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Cloudiness"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#HertzPerTesla"/>
     </Declaration>
     <Declaration>
@@ -1716,6 +1719,10 @@
     <SubClassOf>
         <Class IRI="ClimateProperty"/>
         <Class IRI="PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cloudiness"/>
+        <Class IRI="ClimateProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Co2Rate"/>
@@ -9752,6 +9759,16 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Capacity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Cloudiness</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cloudiness represents the percentage of clouds in a surface of the sky</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cloudiness</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cloudiness</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
