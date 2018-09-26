@@ -483,6 +483,14 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DegreeDays -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DegreeDays">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Density -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Density">
@@ -2615,6 +2623,16 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#DegreeDay -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DegreeDay">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#ThermodynamicsUnit"/>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">°D</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree Day</rdfs:label>
+    </owl:NamedIndividual>
     
 
 

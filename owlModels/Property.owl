@@ -196,6 +196,9 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Flight"/>
     </Declaration>
     <Declaration>
+        <Class IRI="DegreeDays"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundMoleDegreeFahrenheit"/>
     </Declaration>
     <Declaration>
@@ -1684,6 +1687,9 @@
         <AnnotationProperty abbreviatedIRI="qudt:code"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="DegreeDay"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="dtype:code"/>
     </Declaration>
     <Declaration>
@@ -1751,6 +1757,10 @@
     <SubClassOf>
         <Class IRI="CrossSection"/>
         <Class IRI="Shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DegreeDays"/>
+        <Class IRI="PhysicalProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Density"/>
@@ -2752,6 +2762,10 @@
         <Class IRI="http://www.w3.org/ns/ssn/Property"/>
         <Class IRI="h2gProperty"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:ThermodynamicsUnit"/>
+        <NamedIndividual IRI="DegreeDay"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="qudt:EnergyAndWorkUnit"/>
         <NamedIndividual IRI="GigaJoule"/>
@@ -3861,6 +3875,11 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#NewtonMeter"/>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Joule"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:symbol"/>
+        <NamedIndividual IRI="DegreeDay"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">°D</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="qudt:conversionMultiplier"/>
         <NamedIndividual IRI="GigaJoule"/>
@@ -9839,6 +9858,11 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CrossSection</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CrossSection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DegreeDay</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Degree Day</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
