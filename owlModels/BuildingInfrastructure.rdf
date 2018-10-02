@@ -1804,6 +1804,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#MeetingRoom">
         <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MeetingRoom</rdfs:label>
     </owl:Class>
     
 
