@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://hit2gap.eu/h2g/h2gBI#"
      xml:base="http://hit2gap.eu/h2g/h2gBI"
+     xmlns:qudt="http://qudt.org/schema/qudt#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -1795,6 +1796,14 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#MallSupermarket">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#CommercialBuilding"/>
         <rdfs:label>MallSupermarket</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gBI#MeetingRoom -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#MeetingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpace"/>
     </owl:Class>
     
 
