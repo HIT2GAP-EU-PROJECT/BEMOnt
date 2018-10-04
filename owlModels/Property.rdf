@@ -487,6 +487,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DegreeDays">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DegreeDays</rdfs:label>
     </owl:Class>
     
 
@@ -865,6 +866,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Power">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power</rdfs:label>
     </owl:Class>
     
 
