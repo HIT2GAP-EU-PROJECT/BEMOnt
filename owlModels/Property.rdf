@@ -399,6 +399,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClimateProperty</rdfs:label>
     </owl:Class>
     
 
@@ -595,6 +596,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#GeometryProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeometryProperty</rdfs:label>
     </owl:Class>
     
 
@@ -712,6 +714,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LightningProperty</rdfs:label>
     </owl:Class>
     
 
@@ -730,6 +733,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MatterMovement">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MatterMovement</rdfs:label>
     </owl:Class>
     
 
@@ -738,6 +742,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MatterStateChange">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MatterStateChange</rdfs:label>
     </owl:Class>
     
 
@@ -1124,6 +1129,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WindProperty</rdfs:label>
     </owl:Class>
     
 
