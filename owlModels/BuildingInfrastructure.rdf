@@ -1883,6 +1883,7 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gBI#Object">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gBI#PhysicalMedium"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object</rdfs:label>
     </owl:Class>
     
 
