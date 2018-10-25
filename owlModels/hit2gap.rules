@@ -1,14 +1,16 @@
 @prefix h2g_bi: <http://hit2gap.eu/h2g/h2gBI#> .
 @prefix services: <http://hit2gap.eu/h2g/Services#> .
+@prefix pty: <http://hit2gap.eu/h2g/h2gProperty#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/#> .
 @prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#> .
 
 [ruleInvContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
-[ruleInvIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
+[ruleTransIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
 
-[ruleInvMadeBySensor: (ssn:madeObservation owl:inverseOf ssn:madeBySensor) (?s ssn:madeObservation ?o) -> (?o ssn:madeBySensor ?s)]
+[ruleInvMadeBySensor: (sosa:madeObservation owl:inverseOf sosa:madeBySensor) (?s sosa:madeObservation ?o) -> (?o sosa:madeBySensor ?s)]
 
-[ruleConnectedTo: (?s  ssn:madeObservation ?o) (?o ssn:hasFeatureOfInterest ?f) -> (?s h2g_bi:isConnectedTo ?f)]
+[ruleConnectedTo: (?s  sosa:madeObservation ?o) (?o sosa:hasFeatureOfInterest ?f) -> (?s h2g_bi:isConnectedTo ?f)]
 [ruleConnects: (h2g_bi:isConnectedTo owl:inverseOf h2g_bi:connects) (?s h2g_bi:isConnectedTo ?o) -> (?o h2g_bi:connects ?s)]
 [ruleLocated:  (?s h2g_bi:isConnectedTo ?f) (?f h2g_bi:isLocatedIn ?o) -> (?s h2g_bi:isLocatedIn ?o)]
 
@@ -23,3 +25,5 @@
 [ruleReflParentSite: (?o rdf:type ifc:IfcSite) -> (?o h2g_bi:parentSite ?o)]
 [ruleTransContainsParentSite: (?o h2g_bi:isContainedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
 [ruleTransLocatedParentSite: (?o h2g_bi:isLocatedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
+
+[ruleHemisphere: (?s ifc:latitude ?p) greaterThan(?p, 0) -> (?s pty:locatedInHemisphere pty:Northern)]
