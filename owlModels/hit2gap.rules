@@ -8,7 +8,8 @@
 [ruleInvContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
 [ruleTransIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
 
-[ruleInvMadeBySensor: (sosa:madeObservation owl:inverseOf sosa:madeBySensor) (?s sosa:madeObservation ?o) -> (?o sosa:madeBySensor ?s)]
+[ruleInvMadeBySensor1: (sosa:madeObservation owl:inverseOf sosa:madeBySensor) (?s sosa:madeObservation ?o) -> (?o sosa:madeBySensor ?s)]
+[ruleInvMadeBySensor2: (sosa:madeObservation owl:inverseOf sosa:madeBySensor) (?s sosa:madeBySensor ?o) -> (?o sosa:madeObservation ?s)]
 
 [ruleConnectedTo: (?s  sosa:madeObservation ?o) (?o sosa:hasFeatureOfInterest ?f) -> (?s h2g_bi:isConnectedTo ?f)]
 [ruleConnects: (h2g_bi:isConnectedTo owl:inverseOf h2g_bi:connects) (?s h2g_bi:isConnectedTo ?o) -> (?o h2g_bi:connects ?s)]
