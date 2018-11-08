@@ -4,20 +4,23 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/#> .
 @prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#> .
 
-[ruleInvContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
-[ruleTransIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
+[invContains: (h2g_bi:contains owl:inverseOf h2g_bi:isContainedIn) (?s h2g_bi:contains ?o) -> (?o h2g_bi:isContainedIn ?s)]
+[transIsLocatedIn: (?s h2g_bi:isLocatedIn ?o) (?o h2g_bi:isContainedIn ?p) -> (?s h2g_bi:isLocatedIn ?p)]
+[transHasFOI: (?s sosa:hasFeatureOfInterest ?o) (?o h2g_bi:isContainedIn ?p) -> (?s sosa:hasFeatureOfInterest ?p)]
 
-[ruleEqPartOfService1: (services:partOfService owl:inverseOf services:usesModel) (?service services:usesModel ?model) -> (?model services:partOfService ?service)]
-[ruleEqPartOfService2: (services:partOfService owl:inverseOf services:usesModel) (?model services:partOfService ?service) -> (?service services:usesModel ?model)]
+[incRPartOfService: (services:partOfService owl:inverseOf services:usesModel) (?service services:usesModel ?model)
+    -> (?model services:partOfService ?service)]
+[incLPartOfService: (services:partOfService owl:inverseOf services:usesModel) (?model services:partOfService ?service)
+    -> (?service services:usesModel ?model)]
 
-[ruleEqOutputs1: (services:hasOutput owl:inverseOf services:model) (?model services:hasOutput ?output) -> (?output services:model ?model)]
-[ruleEqOutputs2: (services:hasOutput owl:inverseOf services:model) (?output services:model ?model) -> (?model services:hasOutput ?output)]
+[incROutputs1: (services:hasOutput owl:inverseOf services:model) (?model services:hasOutput ?output) -> (?output services:model ?model)]
+[incLOutputs2: (services:hasOutput owl:inverseOf services:model) (?output services:model ?model) -> (?model services:hasOutput ?output)]
 
-[ruleTransServiceOutput: (?output services:model ?model) (?model services:partOfService ?service) -> (?output services:service ?service)]
+[transServiceOutput: (?output services:model ?model) (?model services:partOfService ?service) -> (?output services:service ?service)]
 
-[ruleReflParentSite: (?o rdf:type ifc:IfcSite) -> (?o h2g_bi:parentSite ?o)]
-[ruleTransContainsParentSite: (?o h2g_bi:isContainedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
-[ruleTransLocatedParentSite: (?o h2g_bi:isLocatedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
-[ruleParentSiteMeasure: (?m sosa:madeBySensor ?s) (?s h2g_bi:parentSite ?p) -> (?m h2g_bi:parentSite ?p)]
+[reflParentSite: (?o rdf:type ifc:IfcSite) -> (?o h2g_bi:parentSite ?o)]
+[transContainsParentSite: (?o h2g_bi:isContainedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
+[transLocatedParentSite: (?o h2g_bi:isLocatedIn ?s) (?s h2g_bi:parentSite ?q) -> (?o h2g_bi:parentSite ?q)]
+[transParentSiteMeasure: (?m sosa:madeBySensor ?s) (?s h2g_bi:parentSite ?p) -> (?m h2g_bi:parentSite ?p)]
 
-# [ruleHemisphere: (?s ifc:latitude ?p) greaterThan(?p, 0) -> (?s pty:locatedInHemisphere pty:Northern)]
+# [infHemisphere: (?s ifc:latitude ?p) greaterThan(?p, 0) -> (?s pty:locatedInHemisphere pty:Northern)]
