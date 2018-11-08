@@ -712,6 +712,12 @@ Longitudes are measured relative to the geodetic zero meridian, nominally the sa
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gBI#isSetPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isSetPoint"/>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gBI#isStatic -->
 
     <owl:DatatypeProperty rdf:about="http://hit2gap.eu/h2g/h2gBI#isStatic">
@@ -2591,6 +2597,12 @@ A feature is an abstraction of real world phenomena (thing, person, event, etc).
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#hasObservationMethod"/>
                 <owl:allValuesFrom rdf:resource="http://hit2gap.eu/h2g/h2gBI#ObservationMethodEnum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://hit2gap.eu/h2g/h2gBI#isSetPoint"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
