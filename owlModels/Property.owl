@@ -88,10 +88,10 @@
         <Class abbreviatedIRI="qudt:AreaUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Capacity"/>
+        <Class abbreviatedIRI="qudt:VolumeThermalExpansionUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:VolumeThermalExpansionUnit"/>
+        <Class IRI="Capacity"/>
     </Declaration>
     <Declaration>
         <Class IRI="Pulse"/>
@@ -118,10 +118,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Person"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:VolumeUnit"/>
+        <Class abbreviatedIRI="qudt:ElectricityAndMagnetismUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:ElectricityAndMagnetismUnit"/>
+        <Class abbreviatedIRI="qudt:VolumeUnit"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:HeatFlowRateUnit"/>
@@ -172,10 +172,10 @@
         <Class IRI="Height"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#MoleDegreeCelsius"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKelvin"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKelvin"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MoleDegreeCelsius"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#KnotPerSecond"/>
@@ -193,13 +193,13 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#NumberPerYear"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Flight"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundMoleDegreeFahrenheit"/>
     </Declaration>
     <Declaration>
         <Class IRI="DegreeDays"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundMoleDegreeFahrenheit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Flight"/>
     </Declaration>
     <Declaration>
         <Class IRI="Slope"/>
@@ -229,10 +229,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCentigrade"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerDegree_Fahrenheit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#NewtonMeter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#NewtonMeter"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerDegree_Fahrenheit"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:MagneticFieldStrengthUnit"/>
@@ -241,10 +241,10 @@
         <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Frequency"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MeterPerKelvin"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#MeterPerKelvin"/>
+        <Class IRI="Frequency"/>
     </Declaration>
     <Declaration>
         <Class IRI="Power"/>
@@ -256,10 +256,10 @@
         <Class abbreviatedIRI="qudt:LinearMomentumUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:DataRateUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareCoulombMeterPerJoule"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareCoulombMeterPerJoule"/>
+        <Class abbreviatedIRI="qudt:DataRateUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#WattPerMeter_Kelvin"/>
@@ -304,6 +304,9 @@
         <Class abbreviatedIRI="qudt:PlaneAngleUnit"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerSquare_Foot_Hour_Degree"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Kilo"/>
     </Declaration>
     <Declaration>
@@ -311,9 +314,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:RF-PowerUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerSquare_Foot_Hour_Degree"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Volt"/>
@@ -616,10 +616,10 @@
         <Class abbreviatedIRI="qudt:PowerPerElectricChargeUnit"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="qudt:string1024"/>
+        <Class abbreviatedIRI="qudt:RadiometryUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:RadiometryUnit"/>
+        <Datatype abbreviatedIRI="qudt:string1024"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:PrefixUnit"/>
@@ -748,10 +748,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Centipoise"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerPound_Mole_Degree_Fahrenheit"/>
+        <Class abbreviatedIRI="qudt:BendingMomentOrTorqueUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:BendingMomentOrTorqueUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerPound_Mole_Degree_Fahrenheit"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:ResistanceUnit"/>
@@ -790,10 +790,10 @@
         <Class abbreviatedIRI="qudt:ConductanceUnit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="PartsPerMillion"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MinuteAngle"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#MinuteAngle"/>
+        <NamedIndividual IRI="PartsPerMillion"/>
     </Declaration>
     <Declaration>
         <Class IRI="Volume"/>
@@ -803,6 +803,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Longitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Movement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Boliviano"/>
@@ -886,10 +889,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Millimeter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchPerSecondSquared"/>
+        <Class abbreviatedIRI="qudt:EnergyAndWorkUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:EnergyAndWorkUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchPerSecondSquared"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#BruneiDollar"/>
@@ -904,10 +907,10 @@
         <Class IRI="PhysicalProperty"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:RespiratoryRateUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#NephelometricTurbidityUnit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#NephelometricTurbidityUnit"/>
+        <Class abbreviatedIRI="qudt:RespiratoryRateUnit"/>
     </Declaration>
     <Declaration>
         <Class IRI="WindOrientation"/>
@@ -946,13 +949,13 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareYard"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtomicNumber"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.w3.org/ns/ssn/Property"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:AngularMomentumUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtomicNumber"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:MassPerLengthUnit"/>
@@ -976,10 +979,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Kelvin"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:AreaTimeTemperatureUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Rem"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Rem"/>
+        <Class abbreviatedIRI="qudt:AreaTimeTemperatureUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#BTU_InchPerSquare_Foot_Second_Degree"/>
@@ -1102,13 +1105,13 @@
         <DataProperty abbreviatedIRI="qudt:conversionMultiplier"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="qudt:ElectricChargeUnit"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="qudt:ThermodynamicsUnit"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:MagneticFluxUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:ElectricChargeUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Cubic_MeterPerKelvin"/>
@@ -1135,10 +1138,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#HertzPerKelvin"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundForceFoot"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Revolution"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Revolution"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundForceFoot"/>
     </Declaration>
     <Declaration>
         <Class IRI="Altitude"/>
@@ -1165,19 +1168,19 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#FramePerSecond"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Thermochemical_Calorie"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#WattSquareMeter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#WattSquareMeter"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Thermochemical_Calorie"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:AngleUnit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#BtuPerPoundMole"/>
+        <Class IRI="Energy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Energy"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#BtuPerPoundMole"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Planck_Temperature"/>
@@ -1186,10 +1189,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#OunceForceInch"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:EventUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundForceSecondPerSquareInch"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundForceSecondPerSquareInch"/>
+        <Class abbreviatedIRI="qudt:EventUnit"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:TimeAreaUnit"/>
@@ -1225,10 +1228,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SpaceCapacity"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Curie"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Curie"/>
+        <Class IRI="SpaceCapacity"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:HeartRateUnit"/>
@@ -1249,10 +1252,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#BTUPerDegree_Rankine"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Deca"/>
+        <Class abbreviatedIRI="qudt:LinearAccelerationUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:LinearAccelerationUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Deca"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerSecond"/>
@@ -1384,10 +1387,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#BTU_FootPerSquare_Foot_Hour_Degree"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:MolarHeatCapacityUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#HeartBeatsPerMinute"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#HeartBeatsPerMinute"/>
+        <Class abbreviatedIRI="qudt:MolarHeatCapacityUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#BelizeDollar"/>
@@ -1471,10 +1474,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#MegaElectronVoltPerCentimeter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#MeterPerSecondSquared"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#HertzPerVolt"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#HertzPerVolt"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MeterPerSecondSquared"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="KiloJoulePerKilogram"/>
@@ -1483,10 +1486,10 @@
         <Class abbreviatedIRI="qudt:ScienceAndEngineeringUnit"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="qudt:conversionOffset"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Number"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#Number"/>
+        <DataProperty abbreviatedIRI="qudt:conversionOffset"/>
     </Declaration>
     <Declaration>
         <Class IRI="CrossSection"/>
@@ -1507,10 +1510,10 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#BTU_Foot"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="qudt:literal"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PerTeslaMeter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#PerTeslaMeter"/>
+        <DataProperty abbreviatedIRI="qudt:literal"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:ForcePerLengthUnit"/>
@@ -1555,10 +1558,10 @@
         <Class IRI="WindProperty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NbEntries"/>
+        <Class abbreviatedIRI="qudt:FinancialUnit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:FinancialUnit"/>
+        <Class IRI="NbEntries"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Dalton"/>
@@ -1582,13 +1585,13 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerSecondSquared"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareMeterKelvin"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#CentimeterPerSecondSquared"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#MillionDollarsPerFlight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareMeterKelvin"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
@@ -1869,6 +1872,10 @@
     <SubClassOf>
         <Class IRI="MaxOccupancy"/>
         <Class IRI="OccupancyCapacityProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Movement"/>
+        <Class IRI="OccupantProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="NbEntries"/>
@@ -10113,6 +10120,11 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Megawatthour</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Megawatthour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Movement</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Movement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -399,7 +399,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClimateProperty</rdfs:label>
     </owl:Class>
     
 
@@ -459,7 +458,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinousState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
         <rdfs:comment xml:lang="en">Represents an observation of a continuous state</rdfs:comment>
-        <rdfs:label xml:lang="en">ContinuousState</rdfs:label>
+        <rdfs:label xml:lang="en">ContinuousState.</rdfs:label>
     </owl:Class>
     
 
@@ -488,7 +487,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DegreeDays">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DegreeDays</rdfs:label>
     </owl:Class>
     
 
@@ -528,7 +526,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DiscreteState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
         <rdfs:comment xml:lang="en">Represents an observation of a discrete state.</rdfs:comment>
-        <rdfs:label xml:lang="en">DiscreteState</rdfs:label>
+        <rdfs:label xml:lang="en">DiscreteState.</rdfs:label>
     </owl:Class>
     
 
@@ -596,7 +594,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#GeometryProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeometryProperty</rdfs:label>
     </owl:Class>
     
 
@@ -714,7 +711,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#LigthningProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LightningProperty</rdfs:label>
     </owl:Class>
     
 
@@ -733,7 +729,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MatterMovement">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MatterMovement</rdfs:label>
     </owl:Class>
     
 
@@ -742,7 +737,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#MatterStateChange">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MatterStateChange</rdfs:label>
     </owl:Class>
     
 
@@ -753,6 +747,15 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupancyCapacityProperty"/>
         <rdfs:comment xml:lang="en">Max Occupancy represents an observation of the  measure of the maximum capacity of occupants in a structiral element of the building.</rdfs:comment>
         <rdfs:label xml:lang="en">MaxOccupancy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Movement -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Movement">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
+        <rdfs:label xml:lang="en">Movement</rdfs:label>
     </owl:Class>
     
 
@@ -871,7 +874,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Power">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power</rdfs:label>
     </owl:Class>
     
 
@@ -1129,7 +1131,6 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindProperty">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#ClimateProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WindProperty</rdfs:label>
     </owl:Class>
     
 
