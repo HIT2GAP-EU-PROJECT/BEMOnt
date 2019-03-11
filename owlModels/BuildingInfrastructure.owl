@@ -380,6 +380,9 @@ The features of interest representation of the building are performed using stan
         <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="isAmbient"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Refrigerator"/>
     </Declaration>
     <Declaration>
@@ -2569,6 +2572,13 @@ The features of interest representation of the building are performed using stan
             <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
             <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="isAmbient"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://hit2gap.eu/h2g/h2gSensor#Observation"/>
