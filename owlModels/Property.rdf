@@ -423,6 +423,16 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#CoefficientOfPerformance -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#CoefficientOfPerformance">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Energy"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COP</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coefficient of Performance</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Color -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Color">
@@ -957,6 +967,15 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#RunningTime -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#RunningTime">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Time"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RunningTime</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Shape -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Shape">
@@ -1113,6 +1132,15 @@
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#Shape"/>
         <rdfs:comment xml:lang="en">Width represents an observation of the  width of an elment in the building.</rdfs:comment>
         <rdfs:label xml:lang="en">Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#WindDirection -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#WindDirection">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#WindProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WindDirection</rdfs:label>
     </owl:Class>
     
 
@@ -2635,6 +2663,40 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#CubicMeter -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CubicMeter">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumeUnit"/>
+        <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3</qudt:abbreviation>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Meter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#CubicMeterPerDay -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CubicMeterPerDay">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumePerTimeUnit"/>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3/d</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Meter per Day</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#CubicMeterPerMonth -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#CubicMeterPerMonth">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#VolumePerTimeUnit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents an amount of time, a duration for some event.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Meter per Month</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#DegreeDay -->
 
     <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#DegreeDay">
@@ -2718,6 +2780,30 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</qudt:conversionMultiplier>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWh</qudt:symbol>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Megawatthour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Millivolt -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Millivolt">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#EnergyPerElectricChargeUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <dtype:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mV</dtype:code>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millivolt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Milliwatt -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Milliwatt">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
+        <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
+        <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mW</qudt:symbol>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milliwatt</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3769,7 +3855,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm^3</qudt:abbreviation>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-9</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^3</qudt:symbol>
+        <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm^3</qudt:symbol>
         <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0453</qudt:code>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubic Millimeter</rdfs:label>
     </owl:NamedIndividual>
