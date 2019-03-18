@@ -468,7 +468,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinousState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
         <rdfs:comment xml:lang="en">Represents an observation of a continuous state</rdfs:comment>
-        <rdfs:label xml:lang="en">ContinuousState.</rdfs:label>
+        <rdfs:label xml:lang="en">ContinuousState</rdfs:label>
     </owl:Class>
     
 
@@ -536,7 +536,7 @@
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#DiscreteState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
         <rdfs:comment xml:lang="en">Represents an observation of a discrete state.</rdfs:comment>
-        <rdfs:label xml:lang="en">DiscreteState.</rdfs:label>
+        <rdfs:label xml:lang="en">DiscreteState</rdfs:label>
     </owl:Class>
     
 
