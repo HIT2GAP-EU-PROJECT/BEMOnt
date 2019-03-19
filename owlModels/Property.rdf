@@ -570,6 +570,15 @@
     
 
 
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Enthalpy -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Enthalpy">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#PhysicalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enthalpy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://hit2gap.eu/h2g/h2gProperty#Evaporation -->
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Evaporation">
@@ -2780,6 +2789,15 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</qudt:conversionMultiplier>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWh</qudt:symbol>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Megawatthour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://hit2gap.eu/h2g/h2gProperty#Millibar -->
+
+    <owl:NamedIndividual rdf:about="http://hit2gap.eu/h2g/h2gProperty#Millibar">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#PressureOrStressUnit"/>
+        <rdfs:label xml:lang="en">Millibar</rdfs:label>
     </owl:NamedIndividual>
     
 
