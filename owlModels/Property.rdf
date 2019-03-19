@@ -463,9 +463,9 @@
     
 
 
-    <!-- http://hit2gap.eu/h2g/h2gProperty#ContinousState -->
+    <!-- http://hit2gap.eu/h2g/h2gProperty#ContinuousState -->
 
-    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinousState">
+    <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#ContinuousState">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#DistributionElementState"/>
         <rdfs:comment xml:lang="en">Represents an observation of a continuous state</rdfs:comment>
         <rdfs:label xml:lang="en">ContinuousState</rdfs:label>

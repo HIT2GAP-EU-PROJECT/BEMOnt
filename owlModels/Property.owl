@@ -394,7 +394,7 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Micro"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ContinousState"/>
+        <Class IRI="ContinuousState"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Breath"/>
@@ -1784,7 +1784,7 @@
         <Class IRI="PhysicalProperty"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="ContinousState"/>
+        <Class IRI="ContinuousState"/>
         <Class IRI="DistributionElementState"/>
     </SubClassOf>
     <SubClassOf>
@@ -9978,12 +9978,12 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ContinousState</IRI>
+        <IRI>ContinuousState</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents an observation of a continuous state</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ContinousState</IRI>
+        <IRI>ContinuousState</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ContinuousState</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
