@@ -394,9 +394,6 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Micro"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ContinuousState"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Breath"/>
     </Declaration>
     <Declaration>
@@ -781,13 +778,13 @@
         <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicMeterPerMole"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Discharge"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#Are"/>
     </Declaration>
     <Declaration>
         <Class IRI="OccupancyCapacityProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Discharge"/>
     </Declaration>
     <Declaration>
         <Class IRI="Temperature"/>
@@ -1058,6 +1055,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="qudt:SpecificHeatPressureUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ContinuousState"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheit_HourPerBTU"/>
