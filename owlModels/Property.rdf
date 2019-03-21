@@ -774,7 +774,7 @@
 
     <owl:Class rdf:about="http://hit2gap.eu/h2g/h2gProperty#Movement">
         <rdfs:subClassOf rdf:resource="http://hit2gap.eu/h2g/h2gProperty#OccupantProperty"/>
-        <rdfs:label xml:lang="en">Movement</rdfs:label>
+        <rdfs:label>Movement</rdfs:label>
     </owl:Class>
     
 
