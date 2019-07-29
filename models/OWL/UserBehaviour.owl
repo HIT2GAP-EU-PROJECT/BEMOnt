@@ -1,0 +1,1209 @@
+Prefix(:=<http://bemserver.org#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(bem:=<http://bemserver.org#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(ssn:=<http://purl.oclc.org/NET/ssnx/ssn#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(ifc2:=<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#>)
+Prefix(qudt:=<http://data.nasa.gov/qudt/owl/qudt#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
+Prefix(schema:=<http://schema.org/>)
+
+
+Ontology(<http://bemserver.org/occupant#>
+Import(<http://bemserver.org/property#>)
+Annotation(dc:contributor "Gulben Calis (gulbencalis@gmail.com)"@en)
+Annotation(dc:contributor "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en)
+Annotation(dc:creator "Aitor Corchero (aitor.corchero@eurecat.org)"@en)
+Annotation(dc:creator "Pierre Bourreau (pbourreau@nobatek.com)"@en)
+Annotation(dc:creator "Yudith Cardinale (yudith.cardinale@gmail.com)"@en)
+Annotation(dc:description "This semantic model is focused on describing the occupants behaviour inside a building. For that, the proposed semantic model is based on the idetification of Drivers Needs and Actions for each occupant to make underestandable the occupant-building interaction and different comfort states."@en)
+Annotation(dc:title "Hit2Gap Ontology-User Behavior"@en)
+Annotation(<http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"@en)
+Annotation(owl:versionInfo "This current version includes the initial version of the semantic model based on the diagrams generated."@en)
+
+Declaration(Class(qudt:QuantityValue))
+Declaration(Class(<http://bemserver.org/occupant#ASHRAEAdaptiveComfort>))
+Declaration(Class(<http://bemserver.org/occupant#ASHRAEAdaptiveEnvelope>))
+Declaration(Class(<http://bemserver.org/occupant#AcousticComfort>))
+Declaration(Class(<http://bemserver.org/occupant#Actions>))
+Declaration(Class(<http://bemserver.org/occupant#ActivityModel>))
+Declaration(Class(<http://bemserver.org/occupant#Age>))
+Declaration(Class(<http://bemserver.org/occupant#Alert>))
+Declaration(Class(<http://bemserver.org/occupant#BehaviourModel>))
+Declaration(Class(<http://bemserver.org/occupant#BlindClose>))
+Declaration(Class(<http://bemserver.org/occupant#BlindOpen>))
+Declaration(Class(<http://bemserver.org/occupant#BlindState>))
+Declaration(Class(<http://bemserver.org/occupant#BuildingComplexState>))
+Declaration(Class(<http://bemserver.org/occupant#BuildingSimpleState>))
+Declaration(Class(<http://bemserver.org/occupant#BuildingState>))
+Declaration(Class(<http://bemserver.org/occupant#ComfortState>))
+Declaration(Class(<http://bemserver.org/occupant#Constraints>))
+Declaration(Class(<http://bemserver.org/occupant#Context>))
+Declaration(Class(<http://bemserver.org/occupant#DoorClose>))
+Declaration(Class(<http://bemserver.org/occupant#DoorOpen>))
+Declaration(Class(<http://bemserver.org/occupant#DoorState>))
+Declaration(Class(<http://bemserver.org/occupant#Driver>))
+Declaration(Class(<http://bemserver.org/occupant#EnergyFrugal>))
+Declaration(Class(<http://bemserver.org/occupant#EnergyIndiferent>))
+Declaration(Class(<http://bemserver.org/occupant#EnergyProfligate>))
+Declaration(Class(<http://bemserver.org/occupant#EnergyState>))
+Declaration(Class(<http://bemserver.org/occupant#EnvironmentalBuildingFactors>))
+Declaration(Class(<http://bemserver.org/occupant#EquipementModel>))
+Declaration(Class(<http://bemserver.org/occupant#Event>))
+Declaration(Class(<http://bemserver.org/occupant#EventModel>))
+Declaration(Class(<http://bemserver.org/occupant#Feedback>))
+Declaration(Class(<http://bemserver.org/occupant#Function>))
+Declaration(Class(<http://bemserver.org/occupant#Gender>))
+Declaration(Class(<http://bemserver.org/occupant#IAQ>))
+Declaration(Class(<http://bemserver.org/occupant#ISOAdaptiveComfort>))
+Declaration(Class(<http://bemserver.org/occupant#Inaction>))
+Declaration(Class(<http://bemserver.org/occupant#Indicator>))
+Declaration(Class(<http://bemserver.org/occupant#Indoor>))
+Declaration(Class(<http://bemserver.org/occupant#Modality>))
+Declaration(Class(<http://bemserver.org/occupant#ModelResult>))
+Declaration(Class(<http://bemserver.org/occupant#Needs>))
+Declaration(Class(<http://bemserver.org/occupant#Notification>))
+Declaration(Class(<http://bemserver.org/occupant#ObservableProperty>))
+Declaration(Class(<http://bemserver.org/occupant#OccupantAttitude>))
+Declaration(Class(<http://bemserver.org/occupant#OccupantBehaviour>))
+Declaration(Class(<http://bemserver.org/occupant#OccupantCharacteristics>))
+Declaration(Class(<http://bemserver.org/occupant#OccupantComfort>))
+Declaration(Class(<http://bemserver.org/occupant#OccupantDiscomfort>))
+Declaration(Class(<http://bemserver.org/occupant#OccupantPreferences>))
+Declaration(Class(<http://bemserver.org/occupant#OtherComfortEnvelope>))
+Declaration(Class(<http://bemserver.org/occupant#Outdoor>))
+Declaration(Class(<http://bemserver.org/occupant#Privacy>))
+Declaration(Class(<http://bemserver.org/occupant#Probability>))
+Declaration(Class(<http://bemserver.org/occupant#Recommendation>))
+Declaration(Class(<http://bemserver.org/occupant#Report>))
+Declaration(Class(<http://bemserver.org/occupant#Role>))
+Declaration(Class(<http://bemserver.org/occupant#Season>))
+Declaration(Class(<http://bemserver.org/occupant#Status>))
+Declaration(Class(<http://bemserver.org/occupant#SystemActions>))
+Declaration(Class(<http://bemserver.org/occupant#ThermalComfort>))
+Declaration(Class(<http://bemserver.org/occupant#TimeBehaviour>))
+Declaration(Class(<http://bemserver.org/occupant#User>))
+Declaration(Class(<http://bemserver.org/occupant#VisualComfort>))
+Declaration(Class(<http://bemserver.org/occupant#WindowState>))
+Declaration(Class(<http://bemserver.org/occupant#WindowsClose>))
+Declaration(Class(<http://bemserver.org/occupant#WindowsOpen>))
+Declaration(Class(<http://bemserver.org/occupant#ZoneEmpty>))
+Declaration(Class(<http://bemserver.org/occupant#ZoneOccupancy>))
+Declaration(Class(<http://bemserver.org/occupant#ZoneOccupied>))
+Declaration(Class(<http://bemserver.org/sensor#FeatureOfInterest>))
+Declaration(Class(<http://bemserver.org/sensor#Observation>))
+Declaration(Class(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator>))
+Declaration(Class(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor>))
+Declaration(Class(ifc2:IfcActor))
+Declaration(Class(ifc2:IfcActuatorType))
+Declaration(Class(ifc2:IfcBuilding))
+Declaration(Class(ifc2:IfcDistributionControlElement))
+Declaration(Class(ifc2:IfcOccupant))
+Declaration(Class(ifc2:IfcSensorType))
+Declaration(Class(ifc2:IfcSpatialStructureElement))
+Declaration(Class(time:DateTimeInterval))
+Declaration(Class(time:DayOfWeek))
+Declaration(Class(time:Instant))
+Declaration(Class(<http://www.w3.org/ns/sosa/ActuableProperty>))
+Declaration(Class(<http://www.w3.org/ns/sosa/Actuation>))
+Declaration(Class(<http://www.w3.org/ns/sosa/Actuator>))
+Declaration(Class(<http://www.w3.org/ns/sosa/Result>))
+Declaration(Class(<http://www.w3.org/ns/sosa/Sensor>))
+Declaration(Class(<http://www.w3.org/ns/ssn/Property>))
+Declaration(Class(<http://www.w3.org/ns/ssn/System>))
+Declaration(Class(foaf:Person))
+Declaration(ObjectProperty(qudt:unit))
+Declaration(ObjectProperty(<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#acts>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#assignedTo>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#associatedTo>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#changes>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#concerns>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasBehaviour>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasComfortRequirements>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasConstraints>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasContext>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasFunction>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasGender>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasIndicator>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasModelResult>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasOccupantAttitude>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasOccupantCharacteristics>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasProbability>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasRole>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasState>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#hasStatus>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#isAssignedTo>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#isBasedOn>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#isProvokedBy>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#isStatedBy>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#performsAction>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#prefers>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#provokes>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#receives>))
+Declaration(ObjectProperty(<http://bemserver.org/occupant#receivesAlerts>))
+Declaration(ObjectProperty(ssn:hasSubsystem))
+Declaration(ObjectProperty(ssn:observationResult))
+Declaration(ObjectProperty(ssn:observationResultTime))
+Declaration(ObjectProperty(ssn:observedBy))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/actsOnProperty>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/hasFeatureOfInterest>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/hasResult>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/isActedBy>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/isResultOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/madeActuation>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/madeByActuator>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/madeBySensor>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/madeObservation>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/sosa/observedProperty>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/ssn/forProperty>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/ssn/hasSubSystem>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/ssn/isPropertyOf>))
+Declaration(DataProperty(<http://bemserver.org/occupant#age>))
+Declaration(DataProperty(<http://bemserver.org/occupant#endWorktime>))
+Declaration(DataProperty(<http://bemserver.org/occupant#id>))
+Declaration(DataProperty(<http://bemserver.org/occupant#jobType>))
+Declaration(DataProperty(<http://bemserver.org/occupant#lifestyle>))
+Declaration(DataProperty(<http://bemserver.org/occupant#maxValue>))
+Declaration(DataProperty(<http://bemserver.org/occupant#minValue>))
+Declaration(DataProperty(<http://bemserver.org/occupant#name>))
+Declaration(DataProperty(<http://bemserver.org/occupant#numericValue>))
+Declaration(DataProperty(<http://bemserver.org/occupant#resultTime>))
+Declaration(DataProperty(<http://bemserver.org/occupant#startWorktime>))
+Declaration(DataProperty(<http://bemserver.org/sensor#externalID>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Autumn>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Email>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Female>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Male>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Manager>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Owner>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Phone>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#SMS>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Spring>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Summer>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Technician>))
+Declaration(NamedIndividual(<http://bemserver.org/occupant#Winter>))
+Declaration(AnnotationProperty(dc:abstract))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(dc:creator))
+Declaration(AnnotationProperty(dc:date))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:identifier))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(bibo:status))
+Declaration(AnnotationProperty(schema:description))
+Declaration(AnnotationProperty(schema:license))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: qudt:unit (unit)
+
+AnnotationAssertion(rdfs:label qudt:unit "unit"@en)
+SubObjectPropertyOf(qudt:unit owl:topObjectProperty)
+
+# Object Property: <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> (<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> "http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"@en)
+
+# Object Property: <http://bemserver.org/occupant#acts> (acts)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#acts> "Relation to define that an iser acto ober certain device changing their behaviour."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#acts> "acts"@en)
+SubObjectPropertyOf(<http://bemserver.org/occupant#acts> owl:topObjectProperty)
+
+# Object Property: <http://bemserver.org/occupant#assignedTo> (assigned to)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#assignedTo> "Relation between the context and indoor or outddor factors."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#assignedTo> "assigned to"@en)
+InverseObjectProperties(<http://bemserver.org/occupant#assignedTo> <http://bemserver.org/occupant#isAssignedTo>)
+
+# Object Property: <http://bemserver.org/occupant#associatedTo> (associated to)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#associatedTo> "Relation between the context and certain sensor output"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#associatedTo> "associated to"@en)
+
+# Object Property: <http://bemserver.org/occupant#changes> (changes)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#changes> "The relation to represent the result of an action in terms of changing something inside the buildign (system, sensors, etc)."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#changes> "changes"@en)
+
+# Object Property: <http://bemserver.org/occupant#concerns> (concerns)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#concerns> "Relation focused on depicting the link between the users and the corresponding feedback"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#concerns> "concerns"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasBehaviour> (has behaviour)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasBehaviour> "relation focused on indicating that certain user have defined certain behaviour"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasBehaviour> "has behaviour"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasComfortRequirements> (has comfort requirements)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasComfortRequirements> "The relation to represent that a user has certain comfort requirements to be satisfied"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasComfortRequirements> "has comfort requirements"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasConstraints> (has constraints)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasConstraints> "the relation to represent that an event have a set of contraints"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasConstraints> "has constraints"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasContext> (has context)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasContext> "Indicate the relation between an event and certain context"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasContext> "has context"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasFunction> (has Function)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasFunction> "Property to define in the Drivers several functions to measure the comfort."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasFunction> "has Function"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasGender> (has gender)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasGender> "property to associate to the users their corresponding gender"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasGender> "has gender"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasIndicator> (has indicator)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasIndicator> "has indicator"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasIndicator> "property to indicate to the drivers the associations to certain indicators."@en)
+
+# Object Property: <http://bemserver.org/occupant#hasModelResult> (has model result)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasModelResult> "property to link the drivers with certain model results."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasModelResult> "has model result"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasOccupantAttitude> (has occupant attitude)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasOccupantAttitude> "object property to represent the occupant attitude of the building occupants."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasOccupantAttitude> "has occupant attitude"@en)
+ObjectPropertyDomain(<http://bemserver.org/occupant#hasOccupantAttitude> ifc2:IfcOccupant)
+ObjectPropertyRange(<http://bemserver.org/occupant#hasOccupantAttitude> <http://bemserver.org/occupant#OccupantAttitude>)
+
+# Object Property: <http://bemserver.org/occupant#hasOccupantCharacteristics> (has occuant characteristics)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasOccupantCharacteristics> "property to define the association between users and their daily activities"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasOccupantCharacteristics> "has occuant characteristics"@en)
+SubObjectPropertyOf(<http://bemserver.org/occupant#hasOccupantCharacteristics> owl:topObjectProperty)
+ObjectPropertyDomain(<http://bemserver.org/occupant#hasOccupantCharacteristics> ifc2:IfcOccupant)
+ObjectPropertyRange(<http://bemserver.org/occupant#hasOccupantCharacteristics> <http://bemserver.org/occupant#OccupantCharacteristics>)
+
+# Object Property: <http://bemserver.org/occupant#hasProbability> (has probability)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasProbability> "property to represent the probability of happen certain event"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasProbability> "has probability"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasRole> (has role)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasRole> "property to associate the building occupants to certain role"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasRole> "has role"@en)
+
+# Object Property: <http://bemserver.org/occupant#hasState> (has state)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasState> "property to asign to the building systems certain associated abstract state"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasState> "has state"@en)
+SubObjectPropertyOf(<http://bemserver.org/occupant#hasState> owl:topObjectProperty)
+InverseObjectProperties(<http://bemserver.org/occupant#hasState> <http://bemserver.org/occupant#isStatedBy>)
+ObjectPropertyRange(<http://bemserver.org/occupant#hasState> <http://bemserver.org/occupant#BuildingState>)
+
+# Object Property: <http://bemserver.org/occupant#hasStatus> (has status)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#hasStatus> "property to represent the asignment to the driver of certain status"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#hasStatus> "has status"@en)
+
+# Object Property: <http://bemserver.org/occupant#isAssignedTo> (<http://bemserver.org/occupant#isAssignedTo>)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#isAssignedTo> "is assigned to"@en)
+
+# Object Property: <http://bemserver.org/occupant#isBasedOn> (is Based on)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#isBasedOn> "is Based on"@en)
+
+# Object Property: <http://bemserver.org/occupant#isProvokedBy> (is provoked by)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#isProvokedBy> "is provoked by"@en)
+InverseObjectProperties(<http://bemserver.org/occupant#isProvokedBy> <http://bemserver.org/occupant#provokes>)
+
+# Object Property: <http://bemserver.org/occupant#isStatedBy> (is stated by)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#isStatedBy> "is stated by"@en)
+
+# Object Property: <http://bemserver.org/occupant#performsAction> (perform action)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#performsAction> "perform action"@en)
+ObjectPropertyDomain(<http://bemserver.org/occupant#performsAction> ifc2:IfcOccupant)
+ObjectPropertyRange(<http://bemserver.org/occupant#performsAction> <http://bemserver.org/occupant#Actions>)
+
+# Object Property: <http://bemserver.org/occupant#prefers> (prefers)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#prefers> "property to link user with modalitites"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#prefers> "prefers"@en)
+
+# Object Property: <http://bemserver.org/occupant#provokes> (provokes)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#provokes> "provokes"@en)
+
+# Object Property: <http://bemserver.org/occupant#receives> (receives)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#receives> "property to represent the action of receiving notification from the system according t certain building anomalies"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#receives> "receives"@en)
+
+# Object Property: <http://bemserver.org/occupant#receivesAlerts> (receives alerts)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#receivesAlerts> "relation to represent the recepcion of alerts to certain users"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#receivesAlerts> "receives alerts"@en)
+ObjectPropertyDomain(<http://bemserver.org/occupant#receivesAlerts> ifc2:IfcDistributionControlElement)
+ObjectPropertyRange(<http://bemserver.org/occupant#receivesAlerts> <http://bemserver.org/occupant#Alert>)
+
+# Object Property: ssn:hasSubsystem (has subsystem)
+
+AnnotationAssertion(rdfs:comment ssn:hasSubsystem "Haspart relation between a system and its parts."@en)
+AnnotationAssertion(rdfs:label ssn:hasSubsystem "has subsystem"@en)
+
+# Object Property: ssn:observationResult (observation result)
+
+AnnotationAssertion(rdfs:comment ssn:observationResult "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property."@en)
+AnnotationAssertion(rdfs:label ssn:observationResult "observation result"@en)
+
+# Object Property: ssn:observationResultTime (observation result time)
+
+AnnotationAssertion(rdfs:comment ssn:observationResultTime "The result time shall describe the time when the result became available, typically when the procedure associated with the observation was completed For some observations this is identical to the phenomenonTime. However, there are important cases where they differ.[O&M]"@en)
+AnnotationAssertion(rdfs:label ssn:observationResultTime "observation result time"@en)
+
+# Object Property: ssn:observedBy (observed by)
+
+AnnotationAssertion(rdfs:label ssn:observedBy "observed by"@en)
+
+# Object Property: <http://www.w3.org/ns/sosa/actsOnProperty> (acts on property)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/actsOnProperty> "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/actsOnProperty> "acts on property"@en)
+InverseObjectProperties(<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/ns/sosa/isActedBy>)
+
+# Object Property: <http://www.w3.org/ns/sosa/hasFeatureOfInterest> (has feature of interest)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/hasFeatureOfInterest> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/hasFeatureOfInterest> "has feature of interest"@en)
+
+# Object Property: <http://www.w3.org/ns/sosa/hasResult> (has result)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/hasResult> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/hasResult> "has result"@en)
+InverseObjectProperties(<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/isResultOf>)
+
+# Object Property: <http://www.w3.org/ns/sosa/isActedBy> (is acted by)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/isActedBy> "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/isActedBy> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/isActedBy> "is acted by"@en)
+
+# Object Property: <http://www.w3.org/ns/sosa/isResultOf> (is result of)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/isResultOf> "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/isResultOf> "is result of"@en)
+
+# Object Property: <http://www.w3.org/ns/sosa/madeActuation> (made actuation)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/madeActuation> "Relation between an Actuator and the Actuation it has made."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/madeActuation> "made actuation"@en)
+InverseObjectProperties(<http://www.w3.org/ns/sosa/madeActuation> <http://www.w3.org/ns/sosa/madeByActuator>)
+
+# Object Property: <http://www.w3.org/ns/sosa/madeByActuator> (made by actuator)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/madeByActuator> "Relation linking an Actuation to the Actuator that made that Actuation."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/madeByActuator> "http://www.w3.org/ns/sosa/"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/madeByActuator> "made by actuator"@en)
+
+# Object Property: <http://www.w3.org/ns/sosa/madeBySensor> (made by Sensor)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/madeBySensor> "Relation between an Observation and the Sensor which made the Observation."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/madeBySensor> "http://www.w3.org/ns/sosa/madeBySensor"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/madeBySensor> "made by Sensor"@en)
+InverseObjectProperties(<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/ns/sosa/madeObservation>)
+
+# Object Property: <http://www.w3.org/ns/sosa/madeObservation> (made by observation)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/madeObservation> "Relation between a Sensor and an Observation made by the Sensor"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/madeObservation> "made by observation"@en)
+
+# Object Property: <http://www.w3.org/ns/sosa/observedProperty> (<http://www.w3.org/ns/sosa/observedProperty>)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/observedProperty> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/observedProperty> "http://www.w3.org/ns/sosa/observedProperty"@en)
+
+# Object Property: <http://www.w3.org/ns/ssn/forProperty> (for property)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/ssn/forProperty> "A relation between some aspect of an entity and a Property."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/ssn/forProperty> "http://www.w3.org/ns/ssn/"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/ssn/forProperty> "for property"@en)
+
+# Object Property: <http://www.w3.org/ns/ssn/hasSubSystem> (hasSubSystem)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/ssn/hasSubSystem> "Relation between a System and its component parts."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/ssn/hasSubSystem> "http://www.w3.org/ns/ssn/hasSubSystem"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/ssn/hasSubSystem> "hasSubSystem"@en)
+
+# Object Property: <http://www.w3.org/ns/ssn/isPropertyOf> (is property of)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/ssn/isPropertyOf> "http://www.w3.org/ns/ssn/isPropertyOf"@en)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://bemserver.org/occupant#age> (age)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#age> "Data property to define the age of certain building occupant"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#age> "age"@en)
+DataPropertyRange(<http://bemserver.org/occupant#age> xsd:double)
+
+# Data Property: <http://bemserver.org/occupant#endWorktime> (end of work time)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#endWorktime> "proeprty to define the date time of end of wrok"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#endWorktime> "end of work time"@en)
+DataPropertyRange(<http://bemserver.org/occupant#endWorktime> xsd:dateTime)
+
+# Data Property: <http://bemserver.org/occupant#id> (id)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#id> "text representation of the ids"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#id> "id"@en)
+DataPropertyRange(<http://bemserver.org/occupant#id> xsd:string)
+
+# Data Property: <http://bemserver.org/occupant#jobType> (job type)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#jobType> "text definition of the job type"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#jobType> "job type"@en)
+DataPropertyRange(<http://bemserver.org/occupant#jobType> xsd:string)
+
+# Data Property: <http://bemserver.org/occupant#lifestyle> (lifestyle)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#lifestyle> "lifestyle"@en)
+SubDataPropertyOf(<http://bemserver.org/occupant#lifestyle> owl:topDataProperty)
+DataPropertyRange(<http://bemserver.org/occupant#lifestyle> xsd:string)
+
+# Data Property: <http://bemserver.org/occupant#maxValue> (maximun value)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#maxValue> "maximun value marked as an upper threshold measure"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#maxValue> "maximun value"@en)
+SubDataPropertyOf(<http://bemserver.org/occupant#maxValue> owl:topDataProperty)
+DataPropertyRange(<http://bemserver.org/occupant#maxValue> xsd:double)
+
+# Data Property: <http://bemserver.org/occupant#minValue> (minimun value)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#minValue> "minimun value marked as the lower limit of the threshold"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#minValue> "minimun value"@en)
+DataPropertyRange(<http://bemserver.org/occupant#minValue> xsd:double)
+
+# Data Property: <http://bemserver.org/occupant#name> (name)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#name> "name of the instances (text field)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#name> "name"@en)
+DataPropertyRange(<http://bemserver.org/occupant#name> xsd:string)
+
+# Data Property: <http://bemserver.org/occupant#numericValue> (numeric value)
+
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#numericValue> "numeric value"@en)
+DataPropertyRange(<http://bemserver.org/occupant#numericValue> xsd:double)
+
+# Data Property: <http://bemserver.org/occupant#resultTime> (result time)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#resultTime> "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.")
+AnnotationAssertion(rdfs:isDefinedBy <http://bemserver.org/occupant#resultTime> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#resultTime> "result time")
+
+# Data Property: <http://bemserver.org/occupant#startWorktime> (start of work time)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#startWorktime> "property to define the date time of start of wrok"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#startWorktime> "start of work time"@en)
+SubDataPropertyOf(<http://bemserver.org/occupant#startWorktime> owl:topDataProperty)
+DataPropertyRange(<http://bemserver.org/occupant#startWorktime> xsd:dateTime)
+
+# Data Property: <http://bemserver.org/sensor#externalID> (externalID)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/sensor#externalID> "Data proeprty to define the external ID regaring the time series stored in Mondas"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://bemserver.org/sensor#externalID> "http://bemserver.org/sensor#externalID"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/sensor#externalID> "externalID"@en)
+DataPropertyRange(<http://bemserver.org/sensor#externalID> xsd:anyURI)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: qudt:QuantityValue (Quantity value)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityValue "A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck's constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27."@en)
+AnnotationAssertion(rdfs:label qudt:QuantityValue "Quantity value"@en)
+SubClassOf(qudt:QuantityValue ObjectAllValuesFrom(qudt:unit <http://qudt.org/schema/qudt#Unit>))
+SubClassOf(qudt:QuantityValue ObjectExactCardinality(1 qudt:unit))
+SubClassOf(qudt:QuantityValue DataAllValuesFrom(<http://bemserver.org/occupant#numericValue> xsd:double))
+SubClassOf(qudt:QuantityValue DataExactCardinality(1 <http://bemserver.org/occupant#numericValue>))
+
+# Class: <http://bemserver.org/occupant#ASHRAEAdaptiveComfort> (ASHRAE Adaptive Comfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ASHRAEAdaptiveComfort> "The ASHRAE Adaptive Comfort is a standard that provides minimum requirements for acceptable thermal indoor environments. It establishes the ranges of indoor environmental conditions that are acceptable to achieve thermal comfort for occupants. It was first published in 1966, and since 2004 has been updated periodically by a technical committee of industry experts in ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers). The most recent version of the standard was published in 2013."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ASHRAEAdaptiveComfort> "ASHRAE Adaptive Comfort"@en)
+SubClassOf(<http://bemserver.org/occupant#ASHRAEAdaptiveComfort> <http://bemserver.org/occupant#ThermalComfort>)
+
+# Class: <http://bemserver.org/occupant#ASHRAEAdaptiveEnvelope> (ASHRAE Adaptive Envelope)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ASHRAEAdaptiveEnvelope> "Standard that includes prescriptive requirements for the following:
+- Building Envelope: minimum wall insulation, minimum roof insulation, roof reflectance, minimum glazing performance
+  - HVAC: minimum equipment efficiency, minimum system features, limitation on reheat, limitation on fan power
+  - Domestic Hot Water: minimum equipment efficiency, minimum system features
+  - Power: transformer efficiency, automatic receptacle controls, energy monitoring
+  - Lighting: maximum indoor lighting power density (LPD, expressed in Watts/Sq.Ft.), minimum lighting controls, exterior lighting, parking garage lighting
+  - Other Equipment: electric motors, potable water booster pumps, elevators, and escalators"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ASHRAEAdaptiveEnvelope> "ASHRAE Adaptive Envelope"@en)
+SubClassOf(<http://bemserver.org/occupant#ASHRAEAdaptiveEnvelope> <http://bemserver.org/occupant#ThermalComfort>)
+
+# Class: <http://bemserver.org/occupant#AcousticComfort> (Acoustic Comfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#AcousticComfort> "The acoustic comfort refers to the models to measure the level of background noise within an aceptable range."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#AcousticComfort> "Acoustic Comfort"@en)
+SubClassOf(<http://bemserver.org/occupant#AcousticComfort> <http://bemserver.org/occupant#Needs>)
+
+# Class: <http://bemserver.org/occupant#Actions> (Actions)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Actions> "Actions are the specific building interactions performed by the building occupants. This actions can be caused by an initial discomfort or event as an occupant event. Nevertheless, the actions are connected with the drivers at time as the user changes a parameter in the building facilities. Moreover, the actions also has some influence over the needs due to this actions commonly are performed to satisfy user comfort requirements."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Actions> "Actions"@en)
+SubClassOf(<http://bemserver.org/occupant#Actions> <http://www.w3.org/ns/sosa/Actuation>)
+
+# Class: <http://bemserver.org/occupant#ActivityModel> (Activity Model)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ActivityModel> "Model that consist on modelling the occupant activity inside the building"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ActivityModel> "Activity Model"@en)
+SubClassOf(<http://bemserver.org/occupant#ActivityModel> <http://bemserver.org/occupant#Driver>)
+
+# Class: <http://bemserver.org/occupant#Alert> (Alert)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Alert> "Defined as the quick to notice any unusual and potentially dangerous or difficult circumstances concerning the building state."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Alert> "Alert"@en)
+SubClassOf(<http://bemserver.org/occupant#Alert> <http://bemserver.org/occupant#Notification>)
+
+# Class: <http://bemserver.org/occupant#BehaviourModel> (Behavioural Model)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BehaviourModel> "As variables that serve to measure the habits and activities inside the building. Defined to register and contextualise the occupant events (building interactions with the different systems)."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BehaviourModel> "Behavioural Model"@en)
+SubClassOf(<http://bemserver.org/occupant#BehaviourModel> <http://bemserver.org/occupant#Driver>)
+SubClassOf(<http://bemserver.org/occupant#BehaviourModel> ObjectUnionOf(ObjectSomeValuesFrom(<http://bemserver.org/occupant#isBasedOn> <http://bemserver.org/occupant#OccupantBehaviour>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#isBasedOn> <http://bemserver.org/occupant#TimeBehaviour>)))
+
+# Class: <http://bemserver.org/occupant#BlindClose> (Blind Close)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BlindClose> "Determines that the corresponding blind is close"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BlindClose> "Blind Close"@en)
+SubClassOf(<http://bemserver.org/occupant#BlindClose> <http://bemserver.org/occupant#BlindState>)
+DisjointClasses(<http://bemserver.org/occupant#BlindClose> <http://bemserver.org/occupant#BlindOpen>)
+
+# Class: <http://bemserver.org/occupant#BlindOpen> (Blind Open)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BlindOpen> "Determines that the corresponding blind is open"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BlindOpen> "Blind Open"@en)
+SubClassOf(<http://bemserver.org/occupant#BlindOpen> <http://bemserver.org/occupant#BlindState>)
+
+# Class: <http://bemserver.org/occupant#BlindState> (Blind State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BlindState> "Refers to the state that a blind could achieve (Open or Closed)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BlindState> "Blind State"@en)
+SubClassOf(<http://bemserver.org/occupant#BlindState> <http://bemserver.org/occupant#BuildingSimpleState>)
+
+# Class: <http://bemserver.org/occupant#BuildingComplexState> (Building Complex State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BuildingComplexState> "In reference to the complex states, this refers as the states that require for the combination of different facilities to determine an overall state. For example, one complex state is the determination of the energy state of the building that can be energy efficient state or energy inefficient state considering anomalous energy consumption (e.g., thermostat on at same time as the windows are open)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BuildingComplexState> "Building Complex State"@en)
+SubClassOf(<http://bemserver.org/occupant#BuildingComplexState> <http://bemserver.org/occupant#BuildingState>)
+
+# Class: <http://bemserver.org/occupant#BuildingSimpleState> (Building Simple State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BuildingSimpleState> "The building simple state refers to specific status of some building elements that highly impacts in the detection of building anomalies even related with energy or user comfort."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BuildingSimpleState> "Building Simple State"@en)
+SubClassOf(<http://bemserver.org/occupant#BuildingSimpleState> <http://bemserver.org/occupant#BuildingState>)
+
+# Class: <http://bemserver.org/occupant#BuildingState> (Building State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#BuildingState> "The building state allows to conextualise and determine the building facilities status. This building state determinaton has been divided into simple building states and complex building states."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#BuildingState> "Building State"@en)
+SubClassOf(<http://bemserver.org/occupant#BuildingState> ObjectSomeValuesFrom(<http://bemserver.org/occupant#isStatedBy> ObjectUnionOf(ifc2:IfcBuilding <http://www.w3.org/ns/ssn/System>)))
+
+# Class: <http://bemserver.org/occupant#ComfortState> (Comfort State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ComfortState> "Comfort state is defined as the ocupant state according to the current building situation."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ComfortState> "Comfort State"@en)
+SubClassOf(<http://bemserver.org/occupant#ComfortState> <http://bemserver.org/occupant#BuildingComplexState>)
+
+# Class: <http://bemserver.org/occupant#Constraints> (Constraints)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Constraints> "Event that limits the action of something."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Constraints> "Constraints"@en)
+SubClassOf(<http://bemserver.org/occupant#Constraints> <http://bemserver.org/occupant#Event>)
+
+# Class: <http://bemserver.org/occupant#Context> (Context)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Context> "Context in which applies the action"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Context> "Context"@en)
+SubClassOf(<http://bemserver.org/occupant#Context> <http://bemserver.org/occupant#Event>)
+SubClassOf(<http://bemserver.org/occupant#Context> ObjectSomeValuesFrom(<http://bemserver.org/occupant#isAssignedTo> ObjectUnionOf(<http://bemserver.org/occupant#Indoor> <http://bemserver.org/occupant#Outdoor>)))
+
+# Class: <http://bemserver.org/occupant#DoorClose> (Door Close)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#DoorClose> "Determines that the corresponding door is close"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#DoorClose> "Door Close"@en)
+SubClassOf(<http://bemserver.org/occupant#DoorClose> <http://bemserver.org/occupant#DoorState>)
+DisjointClasses(<http://bemserver.org/occupant#DoorClose> <http://bemserver.org/occupant#DoorOpen>)
+
+# Class: <http://bemserver.org/occupant#DoorOpen> (Door Open)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#DoorOpen> "Determines that the corresponding door is open"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#DoorOpen> "Door Open"@en)
+SubClassOf(<http://bemserver.org/occupant#DoorOpen> <http://bemserver.org/occupant#DoorState>)
+
+# Class: <http://bemserver.org/occupant#DoorState> (Door State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#DoorState> "Determines that the corresponding state of the Door (Open or Close)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#DoorState> "Door State"@en)
+SubClassOf(<http://bemserver.org/occupant#DoorState> <http://bemserver.org/occupant#BuildingSimpleState>)
+
+# Class: <http://bemserver.org/occupant#Driver> (Driver)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Driver> "Drivers represent the environmental factors from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Driver> "Driver"@en)
+SubClassOf(<http://bemserver.org/occupant#Driver> <http://bemserver.org/sensor#Observation>)
+SubClassOf(<http://bemserver.org/occupant#Driver> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasFunction> <http://bemserver.org/occupant#Function>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasIndicator> <http://bemserver.org/occupant#Indicator>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasModelResult> <http://bemserver.org/occupant#ModelResult>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasStatus> <http://bemserver.org/occupant#Status>)))
+
+# Class: <http://bemserver.org/occupant#EnergyFrugal> (Energy Frugal)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EnergyFrugal> "Is the quality of being frugal, sparing, thrifty, prudent or economical in the consumption of consumable resources such as food, time or money, and avoiding waste, lavishness or extravagance"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EnergyFrugal> "Energy Frugal"@en)
+SubClassOf(<http://bemserver.org/occupant#EnergyFrugal> <http://bemserver.org/occupant#OccupantAttitude>)
+
+# Class: <http://bemserver.org/occupant#EnergyIndiferent> (Energy Indiferent)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EnergyIndiferent> "Occupant trend to have no preference or being uninterested about building energy consumption and efficiency."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EnergyIndiferent> "Energy Indiferent"@en)
+SubClassOf(<http://bemserver.org/occupant#EnergyIndiferent> <http://bemserver.org/occupant#OccupantAttitude>)
+
+# Class: <http://bemserver.org/occupant#EnergyProfligate> (Energy Profligate)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EnergyProfligate> "Occupant that is recklessly, extravagant or wasteful in the use of resources."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EnergyProfligate> "Energy Profligate"@en)
+SubClassOf(<http://bemserver.org/occupant#EnergyProfligate> <http://bemserver.org/occupant#OccupantAttitude>)
+
+# Class: <http://bemserver.org/occupant#EnergyState> (Energy State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EnergyState> "Energy state is the combination of different direct measures or simple state measures to determine energy inefficiencies."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EnergyState> "Energy State"@en)
+SubClassOf(<http://bemserver.org/occupant#EnergyState> <http://bemserver.org/occupant#BuildingComplexState>)
+
+# Class: <http://bemserver.org/occupant#EnvironmentalBuildingFactors> (Environmental Building Factors)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EnvironmentalBuildingFactors> "Environmental Building Factors refers to the building inddor and outdor fixeed conditions for comfort and discomfort."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EnvironmentalBuildingFactors> "Environmental Building Factors"@en)
+
+# Class: <http://bemserver.org/occupant#EquipementModel> (Equipement Model)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EquipementModel> "Class for measuring the building features and the environmental factors including indoor and outdoor parameters."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EquipementModel> "Equipement Model"@en)
+SubClassOf(<http://bemserver.org/occupant#EquipementModel> <http://bemserver.org/occupant#Driver>)
+SubClassOf(<http://bemserver.org/occupant#EquipementModel> ObjectSomeValuesFrom(<http://bemserver.org/occupant#isBasedOn> <http://bemserver.org/occupant#EnvironmentalBuildingFactors>))
+
+# Class: <http://bemserver.org/occupant#Event> (Event)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Event> "Circumstances that may be driving occupant actions such as waking up, sleeping, leaving for work or returning from lunch"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Event> "Event"@en)
+SubClassOf(<http://bemserver.org/occupant#Event> ObjectUnionOf(ObjectSomeValuesFrom(<http://bemserver.org/occupant#associatedTo> <http://www.w3.org/ns/sosa/Result>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasConstraints> <http://bemserver.org/occupant#Constraints>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasContext> <http://bemserver.org/occupant#Context>) ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasProbability> <http://bemserver.org/occupant#Probability>)))
+
+# Class: <http://bemserver.org/occupant#EventModel> (Event Model)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#EventModel> "Defined to register the events that can be detected from the sensor readings."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#EventModel> "Event Model"@en)
+SubClassOf(<http://bemserver.org/occupant#EventModel> <http://bemserver.org/occupant#Driver>)
+SubClassOf(<http://bemserver.org/occupant#EventModel> ObjectSomeValuesFrom(<http://bemserver.org/occupant#isBasedOn> <http://bemserver.org/occupant#Event>))
+
+# Class: <http://bemserver.org/occupant#Feedback> (Feedback)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Feedback> "In building domain, Feedback is the actor retrofit with information regarding buildn state."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Feedback> "Feedback"@en)
+SubClassOf(<http://bemserver.org/occupant#Feedback> <http://bemserver.org/occupant#Actions>)
+
+# Class: <http://bemserver.org/occupant#Function> (Function)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Function> "Is the model function to determine indoor and outdoor environmental building factors."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Function> "Function"@en)
+
+# Class: <http://bemserver.org/occupant#Gender> (Gender)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Gender> "The Gender is is the range of characteristics pertaining to, and differentiating between, masculinity and femininity"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Gender> "Gender"@en)
+
+# Class: <http://bemserver.org/occupant#IAQ> (IAQ)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#IAQ> "The IAQ corresponds to the types of measurements to determine the inddor environmental health."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#IAQ> "IAQ"@en)
+SubClassOf(<http://bemserver.org/occupant#IAQ> <http://bemserver.org/occupant#Needs>)
+
+# Class: <http://bemserver.org/occupant#ISOAdaptiveComfort> (ISO Adaptive Comfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ISOAdaptiveComfort> "This International Standard covering the evaluation of moderate thermal environments was developed in parallel with the revised ASHRAE) standard 55 and is one of a series of ISO documents specifying methods for the measurement and evaluation of the moderate and extreme thermal environments to which human beings are exposed (ISO 7243, ISO 7933 and ISO/TR 11079, all three dealing with extreme environmental conditions, are others in the series)."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ISOAdaptiveComfort> "ISO Adaptive Comfort"@en)
+SubClassOf(<http://bemserver.org/occupant#ISOAdaptiveComfort> <http://bemserver.org/occupant#ThermalComfort>)
+
+# Class: <http://bemserver.org/occupant#Inaction> (Inaction)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Inaction> "Refers to the performance of any action in the building."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Inaction> "Inaction"@en)
+SubClassOf(<http://bemserver.org/occupant#Inaction> <http://bemserver.org/occupant#Actions>)
+
+# Class: <http://bemserver.org/occupant#Indicator> (Indicator)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Indicator> "Complementing the Driver information, the indicator refers to the optimal measure that indicates the state or level of something."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Indicator> "Indicator"@en)
+
+# Class: <http://bemserver.org/occupant#Indoor> (Indoor)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Indoor> "Considering the environmental factors and the context definition, the indoor class refers to those events that occur inside the building."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Indoor> "Indoor"@en)
+
+# Class: <http://bemserver.org/occupant#Modality> (Modality)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Modality> "Refers to the notification mode to the users. This notification could be via SMS, e-mail or telephone"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Modality> "Modality"@en)
+
+# Class: <http://bemserver.org/occupant#ModelResult> (Model Result)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ModelResult> "Model result is defined by the outputs of applying several user behaviour model according to the collected data."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ModelResult> "Model Result"@en)
+
+# Class: <http://bemserver.org/occupant#Needs> (Needs)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Needs> "Needs represent the physical and non-physical requirements of the occupant's inside world that must be met in order to ensure the satisfaction of the occupant with their environment"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Needs> "Needs"@en)
+
+# Class: <http://bemserver.org/occupant#Notification> (Notification)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Notification> "The Notification refers to the mechanims to provide highlighted information to the building users."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Notification> "Notification"@en)
+
+# Class: <http://bemserver.org/occupant#ObservableProperty> (Observable Property)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ObservableProperty> "An observable quality (property, characteristic) of a FeatureOfInterest."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://bemserver.org/occupant#ObservableProperty> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ObservableProperty> "Observable Property"@en)
+SubClassOf(<http://bemserver.org/occupant#ObservableProperty> <http://www.w3.org/ns/ssn/Property>)
+
+# Class: <http://bemserver.org/occupant#OccupantAttitude> (Occupant Attitude)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OccupantAttitude> "Specific occupant attitude inside the building"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OccupantAttitude> "Occupant Attitude"@en)
+
+# Class: <http://bemserver.org/occupant#OccupantBehaviour> (Occupant Behaviour)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OccupantBehaviour> "Occupant behaviour influences building systems by movement or actions and further determines the building environment and energy consumption. Both the building environment and energy consumption in turn affect occupant behaviour through psychological, physiological and economic factors together with several external factors like comfort and culture."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OccupantBehaviour> "Occupant Behaviour"@en)
+SubClassOf(<http://bemserver.org/occupant#OccupantBehaviour> <http://bemserver.org/occupant#Actions>)
+
+# Class: <http://bemserver.org/occupant#OccupantCharacteristics> (Occupant Characteristics)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OccupantCharacteristics> "The occupant characteristics refers to the daily or most common activities that building occupants performs inside the building (e.g start or end work)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OccupantCharacteristics> "Occupant Characteristics"@en)
+SubClassOf(<http://bemserver.org/occupant#OccupantCharacteristics> DataAllValuesFrom(<http://bemserver.org/occupant#endWorktime> xsd:dateTime))
+SubClassOf(<http://bemserver.org/occupant#OccupantCharacteristics> DataAllValuesFrom(<http://bemserver.org/occupant#startWorktime> xsd:dateTime))
+
+# Class: <http://bemserver.org/occupant#OccupantComfort> (Occupant Comfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OccupantComfort> "Occupamt comfort is the occupant satisfaction with the building situation (thermal, lighting, etc) considering their specific comfrt ranges and parameters."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OccupantComfort> "Occupant Comfort"@en)
+SubClassOf(<http://bemserver.org/occupant#OccupantComfort> <http://bemserver.org/occupant#ComfortState>)
+DisjointClasses(<http://bemserver.org/occupant#OccupantComfort> <http://bemserver.org/occupant#OccupantDiscomfort>)
+
+# Class: <http://bemserver.org/occupant#OccupantDiscomfort> (Occupant Discomfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OccupantDiscomfort> "Occupamt discomfort will occur when building do not satisfy user requirements (comparison between needs and drivers)."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OccupantDiscomfort> "Occupant Discomfort"@en)
+SubClassOf(<http://bemserver.org/occupant#OccupantDiscomfort> <http://bemserver.org/occupant#ComfortState>)
+SubClassOf(<http://bemserver.org/occupant#OccupantDiscomfort> ObjectSomeValuesFrom(<http://bemserver.org/occupant#isProvokedBy> <http://bemserver.org/occupant#Actions>))
+
+# Class: <http://bemserver.org/occupant#OccupantPreferences> (Occupant Preferences)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OccupantPreferences> "The occupant preferences refers to the building occupants prefeerences regarding the comfort sempsation."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OccupantPreferences> "Occupant Preferences"@en)
+SubClassOf(<http://bemserver.org/occupant#OccupantPreferences> <http://bemserver.org/occupant#Needs>)
+SubClassOf(<http://bemserver.org/occupant#OccupantPreferences> DataAllValuesFrom(<http://bemserver.org/occupant#id> xsd:string))
+SubClassOf(<http://bemserver.org/occupant#OccupantPreferences> DataAllValuesFrom(<http://bemserver.org/occupant#maxValue> xsd:double))
+SubClassOf(<http://bemserver.org/occupant#OccupantPreferences> DataAllValuesFrom(<http://bemserver.org/occupant#minValue> xsd:double))
+
+# Class: <http://bemserver.org/occupant#OtherComfortEnvelope> (Other Comfort Envelope)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#OtherComfortEnvelope> "Other kind of standards that could appear or considered within the measurement and assessment of the thermal comfort."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#OtherComfortEnvelope> "Other Comfort Envelope"@en)
+SubClassOf(<http://bemserver.org/occupant#OtherComfortEnvelope> <http://bemserver.org/occupant#ThermalComfort>)
+
+# Class: <http://bemserver.org/occupant#Outdoor> (Outdoor)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Outdoor> "Considering the environmental factors and the context definition, the outdoor class refers to those events that occur outside the building."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Outdoor> "Outdoor"@en)
+
+# Class: <http://bemserver.org/occupant#Privacy> (Privacy)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Privacy> "The privacy refers to need of privacy associated to the user information and the need to maintain outside views."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Privacy> "Privacy"@en)
+SubClassOf(<http://bemserver.org/occupant#Privacy> <http://bemserver.org/occupant#Needs>)
+
+# Class: <http://bemserver.org/occupant#Probability> (Probability)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Probability> "Likelihood measure to occur certain action"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Probability> "Probability"@en)
+SubClassOf(<http://bemserver.org/occupant#Probability> <http://bemserver.org/occupant#Event>)
+
+# Class: <http://bemserver.org/occupant#Recommendation> (Recommendation)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Recommendation> "The recomendation refers to the suggestions or proposals to improve the building efficiency or comfort."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Recommendation> "Recommendation"@en)
+SubClassOf(<http://bemserver.org/occupant#Recommendation> <http://bemserver.org/occupant#Notification>)
+
+# Class: <http://bemserver.org/occupant#Report> (Report)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Report> "Type of occupant feedback based on the building actor feedback using specific documants."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Report> "Report"@en)
+SubClassOf(<http://bemserver.org/occupant#Report> <http://bemserver.org/occupant#Feedback>)
+
+# Class: <http://bemserver.org/occupant#Role> (Role)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Role> "Depending on the interactions and the building type, the occupants interact with the building according to their capacities to perform building actions, as for example, seeing the building thermostats (ssn:Device) or actuating over the temperature fan coils (ifc:Actuator). At this point, it is interesting to consider that the occupants only perform such interactions if building managers permit them according to the building policies."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Role> "Role"@en)
+
+# Class: <http://bemserver.org/occupant#Season> (Season)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Season> "It represent the season"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Season> "Season"@en)
+SubClassOf(<http://bemserver.org/occupant#Season> <http://bemserver.org/occupant#TimeBehaviour>)
+
+# Class: <http://bemserver.org/occupant#Status> (Status)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#Status> "State of the driver"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#Status> "Status"@en)
+
+# Class: <http://bemserver.org/occupant#SystemActions> (System Actions)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#SystemActions> "System Actions are the intereactions between the different occupants and the building using the different building systems to modify the building states towards more comfortable states."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#SystemActions> "System Actions"@en)
+SubClassOf(<http://bemserver.org/occupant#SystemActions> <http://bemserver.org/occupant#Actions>)
+SubClassOf(<http://bemserver.org/occupant#SystemActions> ObjectSomeValuesFrom(<http://www.w3.org/ns/sosa/madeActuation> ifc2:IfcDistributionControlElement))
+SubClassOf(<http://bemserver.org/occupant#SystemActions> ObjectSomeValuesFrom(<http://www.w3.org/ns/sosa/madeActuation> ifc2:IfcSpatialStructureElement))
+
+# Class: <http://bemserver.org/occupant#ThermalComfort> (Thermal Comfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ThermalComfort> "Thermal Comfort is defined by the models to determine suitable indoor temperature associated to the user comfort.")
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ThermalComfort> "Thermal Comfort")
+SubClassOf(<http://bemserver.org/occupant#ThermalComfort> <http://bemserver.org/occupant#Needs>)
+
+# Class: <http://bemserver.org/occupant#TimeBehaviour> (Time Behaviour)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#TimeBehaviour> "The time of day and the day of the week are fundamental to the presence and location of occupants in a building. Some personal habits are time-driven, for example opening windows when first arriving at work or closing windows before leaving the office, or turning on lights when first arriving and turning off lights before leaving."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#TimeBehaviour> "Time Behaviour"@en)
+
+# Class: <http://bemserver.org/occupant#User> (User)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#User> "Type of actor that corresponds to the BEMServer user."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#User> "User"@en)
+SubClassOf(<http://bemserver.org/occupant#User> ifc2:IfcActor)
+SubClassOf(<http://bemserver.org/occupant#User> ObjectSomeValuesFrom(<http://bemserver.org/occupant#concerns> <http://bemserver.org/occupant#Feedback>))
+SubClassOf(<http://bemserver.org/occupant#User> ObjectSomeValuesFrom(<http://bemserver.org/occupant#prefers> <http://bemserver.org/occupant#Modality>))
+SubClassOf(<http://bemserver.org/occupant#User> ObjectSomeValuesFrom(<http://bemserver.org/occupant#receives> <http://bemserver.org/occupant#Notification>))
+
+# Class: <http://bemserver.org/occupant#VisualComfort> (Visual Comfort)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#VisualComfort> "Visual comfort criteria measure the ability of an individual to carry out tasks comfortably in terms of their photo-sensory perception of their environment.  They are dependent on many factors including: light intensity, direction of light source, reflection of surfaces, contrast of surfaces, the nature of the task being undertaken and the photo-sensory response of the eye.  International recommendations exist that specify the minimum level of illuminance required to provide visual comfort for various tasks and locations. As with thermal comfort temperatures, these light levels were derived experimentally and reflect an average person engaged in a specific activity within a defined environment."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#VisualComfort> "Visual Comfort"@en)
+SubClassOf(<http://bemserver.org/occupant#VisualComfort> <http://bemserver.org/occupant#Needs>)
+
+# Class: <http://bemserver.org/occupant#WindowState> (Window State)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#WindowState> "Determines the state of the specific window (Open or Close)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#WindowState> "Window State"@en)
+SubClassOf(<http://bemserver.org/occupant#WindowState> <http://bemserver.org/occupant#BuildingSimpleState>)
+
+# Class: <http://bemserver.org/occupant#WindowsClose> (Windows Close)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#WindowsClose> "Determines that the corresponding Window is close"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#WindowsClose> "Windows Close"@en)
+SubClassOf(<http://bemserver.org/occupant#WindowsClose> <http://bemserver.org/occupant#WindowState>)
+DisjointClasses(<http://bemserver.org/occupant#WindowsClose> <http://bemserver.org/occupant#WindowsOpen>)
+
+# Class: <http://bemserver.org/occupant#WindowsOpen> (Windows Open)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#WindowsOpen> "Determines that the corresponding windows is open"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#WindowsOpen> "Windows Open"@en)
+SubClassOf(<http://bemserver.org/occupant#WindowsOpen> <http://bemserver.org/occupant#WindowState>)
+
+# Class: <http://bemserver.org/occupant#ZoneEmpty> (Zone Empty)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ZoneEmpty> "Determines the corrresponding building space have nobody inside (empty room)"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ZoneEmpty> "Zone Empty"@en)
+SubClassOf(<http://bemserver.org/occupant#ZoneEmpty> <http://bemserver.org/occupant#ZoneOccupancy>)
+DisjointClasses(<http://bemserver.org/occupant#ZoneEmpty> <http://bemserver.org/occupant#ZoneOccupied>)
+
+# Class: <http://bemserver.org/occupant#ZoneOccupancy> (Zone Occupancy)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ZoneOccupancy> "Determines the number of people that are in a specific building space. In an abstract way, it determines wether the building space is empty or occupied."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ZoneOccupancy> "Zone Occupancy"@en)
+SubClassOf(<http://bemserver.org/occupant#ZoneOccupancy> <http://bemserver.org/occupant#BuildingSimpleState>)
+
+# Class: <http://bemserver.org/occupant#ZoneOccupied> (Zone Occupied)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/occupant#ZoneOccupied> "Determines the corresponding building space have someone inside. Thus, the specific building space have one or more people inside."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/occupant#ZoneOccupied> "Zone Occupied"@en)
+SubClassOf(<http://bemserver.org/occupant#ZoneOccupied> <http://bemserver.org/occupant#ZoneOccupancy>)
+
+# Class: <http://bemserver.org/sensor#FeatureOfInterest> (Feature of Interest)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/sensor#FeatureOfInterest> "A feature is an abstraction of real world phenomena (thing, person, event, etc)."@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/sensor#FeatureOfInterest> "Feature of Interest"@en)
+
+# Class: <http://bemserver.org/sensor#Observation> (Observation)
+
+AnnotationAssertion(rdfs:comment <http://bemserver.org/sensor#Observation> "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc."@en)
+AnnotationAssertion(rdfs:comment <http://bemserver.org/sensor#Observation> "Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://bemserver.org/sensor#Observation> "http://bemserver.org/sensor#Observation"@en)
+AnnotationAssertion(rdfs:label <http://bemserver.org/sensor#Observation> "Observation"@en)
+SubClassOf(<http://bemserver.org/sensor#Observation> ObjectSomeValuesFrom(<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://bemserver.org/sensor#FeatureOfInterest>))
+SubClassOf(<http://bemserver.org/sensor#Observation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/Result>))
+SubClassOf(<http://bemserver.org/sensor#Observation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/ns/sosa/Sensor>))
+SubClassOf(<http://bemserver.org/sensor#Observation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/ns/ssn/Property>))
+SubClassOf(<http://bemserver.org/sensor#Observation> ObjectMinCardinality(1 <http://www.w3.org/ns/sosa/hasResult>))
+SubClassOf(<http://bemserver.org/sensor#Observation> DataExactCardinality(1 <http://bemserver.org/occupant#resultTime>))
+
+# Class: <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> (IfcActuator)
+
+AnnotationAssertion(rdfs:comment <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator>)
+AnnotationAssertion(rdfs:label <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> "IfcActuator"@en)
+EquivalentClasses(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> ifc2:IfcActuatorType)
+SubClassOf(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator> <http://www.w3.org/ns/sosa/Actuator>)
+
+# Class: <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> (IfcSensor)
+
+AnnotationAssertion(rdfs:comment <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> "http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"@en)
+AnnotationAssertion(rdfs:label <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> "IfcSensor"@en)
+EquivalentClasses(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> ifc2:IfcSensorType)
+EquivalentClasses(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/ns/sosa/Sensor>)
+SubClassOf(<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/ns/sosa/Sensor>)
+
+# Class: ifc2:IfcActor (IfcActor)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcActor "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model."@en)
+AnnotationAssertion(rdfs:isDefinedBy ifc2:IfcActor "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActor"@en)
+AnnotationAssertion(rdfs:label ifc2:IfcActor "IfcActor"@en)
+EquivalentClasses(ifc2:IfcActor foaf:Person)
+SubClassOf(ifc2:IfcActor ObjectSomeValuesFrom(<http://bemserver.org/occupant#acts> <http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator>))
+SubClassOf(ifc2:IfcActor ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasRole> <http://bemserver.org/occupant#Role>))
+SubClassOf(ifc2:IfcActor ObjectAllValuesFrom(<http://bemserver.org/occupant#hasGender> <http://bemserver.org/occupant#Gender>))
+SubClassOf(ifc2:IfcActor DataSomeValuesFrom(<http://bemserver.org/occupant#id> xsd:string))
+SubClassOf(ifc2:IfcActor DataSomeValuesFrom(<http://bemserver.org/occupant#name> xsd:string))
+
+# Class: ifc2:IfcActuatorType (IfcActuatorType)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcActuatorType "IfcActuatorType is defined in IFC2X3. We made it equivalent to IfcActuator defined in IFC4."@en)
+AnnotationAssertion(rdfs:isDefinedBy ifc2:IfcActuatorType "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType"@en)
+AnnotationAssertion(rdfs:label ifc2:IfcActuatorType "IfcActuatorType"@en)
+SubClassOf(ifc2:IfcActuatorType <http://www.w3.org/ns/sosa/Actuator>)
+
+# Class: ifc2:IfcBuilding (IfcBuilding)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcBuilding "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en)
+AnnotationAssertion(rdfs:isDefinedBy ifc2:IfcBuilding ifc2:IfcBuilding)
+AnnotationAssertion(rdfs:label ifc2:IfcBuilding "IfcBuilding"@en)
+SubClassOf(ifc2:IfcBuilding <http://bemserver.org/sensor#FeatureOfInterest>)
+
+# Class: ifc2:IfcDistributionControlElement (IfcDistributionControlElement)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcDistributionControlElement "IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system."@en)
+AnnotationAssertion(rdfs:isDefinedBy ifc2:IfcDistributionControlElement "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcDistributionControlElement"@en)
+AnnotationAssertion(rdfs:label ifc2:IfcDistributionControlElement "IfcDistributionControlElement"@en)
+SubClassOf(ifc2:IfcDistributionControlElement <http://www.w3.org/ns/sosa/Actuator>)
+
+# Class: ifc2:IfcOccupant (IfcOccupant)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcOccupant "IfcOccupant is a type of actor that defines the form of occupancy of a property."@en)
+AnnotationAssertion(rdfs:isDefinedBy ifc2:IfcOccupant "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcOccupant"@en)
+AnnotationAssertion(rdfs:label ifc2:IfcOccupant "IfcOccupant"@en)
+SubClassOf(ifc2:IfcOccupant <http://bemserver.org/occupant#User>)
+SubClassOf(ifc2:IfcOccupant ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasBehaviour> <http://bemserver.org/occupant#OccupantBehaviour>))
+SubClassOf(ifc2:IfcOccupant ObjectSomeValuesFrom(<http://bemserver.org/occupant#hasComfortRequirements> <http://bemserver.org/occupant#Needs>))
+SubClassOf(ifc2:IfcOccupant DataSomeValuesFrom(<http://bemserver.org/occupant#age> xsd:string))
+SubClassOf(ifc2:IfcOccupant DataSomeValuesFrom(<http://bemserver.org/occupant#jobType> xsd:string))
+SubClassOf(ifc2:IfcOccupant DataSomeValuesFrom(<http://bemserver.org/occupant#lifestyle> xsd:string))
+
+# Class: ifc2:IfcSensorType (ifc2:IfcSensorType)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcSensorType "IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4."@en)
+AnnotationAssertion(rdfs:isDefinedBy ifc2:IfcSensorType "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"@en)
+
+# Class: ifc2:IfcSpatialStructureElement (IfcSpatialStructureElement)
+
+AnnotationAssertion(rdfs:comment ifc2:IfcSpatialStructureElement "A spatial structure element (IfcSpatialStructureElement) is the generalization of all spatial elements that might be used to define a spatial structure. That spatial structure is often used to provide a project structure to organize a building project."@en)
+AnnotationAssertion(rdfs:label ifc2:IfcSpatialStructureElement "IfcSpatialStructureElement"@en)
+
+# Class: time:DateTimeInterval (Date Time Interval)
+
+AnnotationAssertion(rdfs:comment time:DateTimeInterval "It enables compact representation of an interval corresponding to a single element in a date-time description (i.e. a specified year, month, week, day, hour, minute, second)"@en)
+AnnotationAssertion(rdfs:label time:DateTimeInterval "Date Time Interval"@en)
+SubClassOf(time:DateTimeInterval <http://bemserver.org/occupant#TimeBehaviour>)
+
+# Class: time:DayOfWeek (Day Of Week)
+
+AnnotationAssertion(rdfs:comment time:DayOfWeek "Correpondence to the seven days used in the Gregorian calendar, and using the English names :Sunday, :Monday, :Tuesday, :Wednesday, :Thursday, :Friday, :Saturday."@en)
+AnnotationAssertion(rdfs:label time:DayOfWeek "Day Of Week"@en)
+SubClassOf(time:DayOfWeek <http://bemserver.org/occupant#TimeBehaviour>)
+
+# Class: time:Instant (Instant)
+
+AnnotationAssertion(rdfs:comment time:Instant "A temporal entity with zero extent or duration."@en)
+AnnotationAssertion(rdfs:label time:Instant "Instant"@en)
+SubClassOf(time:Instant <http://bemserver.org/occupant#TimeBehaviour>)
+
+# Class: <http://www.w3.org/ns/sosa/ActuableProperty> (Actuable Property)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/ActuableProperty> "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/ActuableProperty> "Actuable Property"@en)
+SubClassOf(<http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/ns/ssn/Property>)
+
+# Class: <http://www.w3.org/ns/sosa/Actuation> (Actuation)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/Actuation> "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/Actuation> "Actuation"@en)
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/ns/sosa/ActuableProperty>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://bemserver.org/sensor#FeatureOfInterest>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/Result>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/ns/sosa/Actuator>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectMinCardinality(1 <http://www.w3.org/ns/sosa/actsOnProperty>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectMinCardinality(1 <http://www.w3.org/ns/sosa/hasResult>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectExactCardinality(1 <http://www.w3.org/ns/sosa/hasFeatureOfInterest>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> ObjectExactCardinality(1 <http://www.w3.org/ns/sosa/madeByActuator>))
+SubClassOf(<http://www.w3.org/ns/sosa/Actuation> DataExactCardinality(1 <http://bemserver.org/occupant#resultTime>))
+
+# Class: <http://www.w3.org/ns/sosa/Actuator> (Actuator)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/Actuator> "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/Actuator> "Actuator"@en)
+SubClassOf(<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/ns/ssn/System>)
+
+# Class: <http://www.w3.org/ns/sosa/Result> (Result)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/Result> "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/Result> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/Result> "http://www.w3.org/ns/sosa/Result"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/Result> "Result"@en)
+SubClassOf(<http://www.w3.org/ns/sosa/Result> ObjectAllValuesFrom(<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> <http://qudt.org/schema/qudt#Unit>))
+SubClassOf(<http://www.w3.org/ns/sosa/Result> ObjectMinCardinality(1 <http://www.w3.org/ns/sosa/isResultOf>))
+
+# Class: <http://www.w3.org/ns/sosa/Sensor> (Sensor)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/sosa/Sensor> "Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/ns/sosa/>)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/sosa/Sensor> "http://www.w3.org/ns/sosa/Sensor"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/sosa/Sensor> "Sensor"@en)
+SubClassOf(<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/ns/ssn/System>)
+
+# Class: <http://www.w3.org/ns/ssn/Property> (Property)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/ssn/Property> "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.
+
+An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/ssn/Property> "http://www.w3.org/ns/ssn/Property"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/ssn/Property> "Property"@en)
+SubClassOf(<http://www.w3.org/ns/ssn/Property> ObjectAllValuesFrom(<http://www.w3.org/ns/ssn/isPropertyOf> <http://bemserver.org/sensor#FeatureOfInterest>))
+
+# Class: <http://www.w3.org/ns/ssn/System> (System)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/ssn/System> "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/ssn/System> "http://www.w3.org/ns/ssn/System"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/ssn/System> "System"@en)
+SubClassOf(<http://www.w3.org/ns/ssn/System> ObjectAllValuesFrom(<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/ns/ssn/System>))
+SubClassOf(<http://www.w3.org/ns/ssn/System> ObjectAllValuesFrom(ObjectInverseOf(<http://www.w3.org/ns/ssn/hasSubSystem>) <http://www.w3.org/ns/ssn/System>))
+
+# Class: foaf:Person (Person)
+
+AnnotationAssertion(rdfs:comment foaf:Person "A person"@en)
+AnnotationAssertion(rdfs:isDefinedBy foaf:Person "http://xmlns.com/foaf/0.1/"@en)
+AnnotationAssertion(rdfs:label foaf:Person "Person"@en)
+SubClassOf(foaf:Person <http://www.w3.org/ns/sosa/Actuator>)
+SubClassOf(foaf:Person ObjectAllValuesFrom(<http://www.w3.org/ns/sosa/madeActuation> ObjectUnionOf(<http://bemserver.org/occupant#Feedback> <http://bemserver.org/occupant#OccupantBehaviour>)))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://bemserver.org/occupant#Autumn> (<http://bemserver.org/occupant#Autumn>)
+
+ClassAssertion(<http://bemserver.org/occupant#Season> <http://bemserver.org/occupant#Autumn>)
+
+# Individual: <http://bemserver.org/occupant#Email> (<http://bemserver.org/occupant#Email>)
+
+ClassAssertion(<http://bemserver.org/occupant#Modality> <http://bemserver.org/occupant#Email>)
+
+# Individual: <http://bemserver.org/occupant#Female> (<http://bemserver.org/occupant#Female>)
+
+ClassAssertion(<http://bemserver.org/occupant#Gender> <http://bemserver.org/occupant#Female>)
+
+# Individual: <http://bemserver.org/occupant#Male> (<http://bemserver.org/occupant#Male>)
+
+ClassAssertion(<http://bemserver.org/occupant#Gender> <http://bemserver.org/occupant#Male>)
+
+# Individual: <http://bemserver.org/occupant#Manager> (<http://bemserver.org/occupant#Manager>)
+
+ClassAssertion(<http://bemserver.org/occupant#Role> <http://bemserver.org/occupant#Manager>)
+
+# Individual: <http://bemserver.org/occupant#Owner> (<http://bemserver.org/occupant#Owner>)
+
+ClassAssertion(<http://bemserver.org/occupant#Role> <http://bemserver.org/occupant#Owner>)
+
+# Individual: <http://bemserver.org/occupant#Phone> (<http://bemserver.org/occupant#Phone>)
+
+ClassAssertion(<http://bemserver.org/occupant#Modality> <http://bemserver.org/occupant#Phone>)
+
+# Individual: <http://bemserver.org/occupant#SMS> (<http://bemserver.org/occupant#SMS>)
+
+ClassAssertion(<http://bemserver.org/occupant#Modality> <http://bemserver.org/occupant#SMS>)
+
+# Individual: <http://bemserver.org/occupant#Spring> (<http://bemserver.org/occupant#Spring>)
+
+ClassAssertion(<http://bemserver.org/occupant#Season> <http://bemserver.org/occupant#Spring>)
+
+# Individual: <http://bemserver.org/occupant#Summer> (<http://bemserver.org/occupant#Summer>)
+
+ClassAssertion(<http://bemserver.org/occupant#Season> <http://bemserver.org/occupant#Summer>)
+
+# Individual: <http://bemserver.org/occupant#Technician> (<http://bemserver.org/occupant#Technician>)
+
+ClassAssertion(<http://bemserver.org/occupant#Role> <http://bemserver.org/occupant#Technician>)
+
+# Individual: <http://bemserver.org/occupant#Winter> (<http://bemserver.org/occupant#Winter>)
+
+ClassAssertion(<http://bemserver.org/occupant#Season> <http://bemserver.org/occupant#Winter>)
+
+
+DisjointClasses(<http://bemserver.org/occupant#ActivityModel> <http://bemserver.org/occupant#BehaviourModel> <http://bemserver.org/occupant#EquipementModel> <http://bemserver.org/occupant#EventModel>)
+)

@@ -12,10 +12,10 @@ skinparam classAttributeFontColor  Green
 
 class Property <<ssn>>
 
-class EconomicProperties <<hit2gap>>
+class EconomicProperties <<bem>>
 
-class Cost <<hit2gap>>
-class Investment <<hit2gap>>
+class Cost <<bem>>
+class Investment <<bem>>
 
 Property <|-- EconomicProperties
 

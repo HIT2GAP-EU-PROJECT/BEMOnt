@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://bemserver.org/services#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://bemserver.org/services#">
+    <Prefix name="" IRI="http://bemserver.org/services#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elemencts/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://bemserver.org/building#</Import>
+    <Import>http://bemserver.org/property#</Import>
+    <Declaration>
+        <Class IRI="Output"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="partOfService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="installedOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="param_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sampling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Parameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="externalID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="valueUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PreProcessingService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="param_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Model"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFrontend"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DataCollectionService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#entrypoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AdvancedService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="valueType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="usesModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="localization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComposedService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BasicService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="parameters"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimeSeries"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="AdvancedService"/>
+        <Class IRI="BasicService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BasicService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ComposedService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataCollectionService"/>
+        <Class IRI="BasicService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <Class IRI="Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasOutput"/>
+            <Class IRI="Output"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="parameters"/>
+            <Class IRI="Parameter"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="partOfService"/>
+            <Class IRI="Service"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Output"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="model"/>
+            <Class IRI="Model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Output"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="service"/>
+            <Class IRI="Service"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Parameter"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="param_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Parameter"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="param_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PreProcessingService"/>
+        <Class IRI="BasicService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="usesModel"/>
+            <Class IRI="Model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="installedOn"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/hydra/core#entrypoint"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasFrontend"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <Class IRI="Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="localization"/>
+            <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="valueType"/>
+            <Class IRI="http://bemserver.org/property#property"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="valueUnit"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="externalID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSeries"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="sampling"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasOutput"/>
+        <ObjectProperty IRI="model"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="partOfService"/>
+        <ObjectProperty IRI="usesModel"/>
+    </InverseObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="description"/>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#description"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="name"/>
+        <DataProperty IRI="http://www.w3.org/ns/hydra/core#title"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BasicService</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BasicService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComposedService</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ComposedService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Event</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Model</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A model is a particular instance that can be used by a module to generate data. For instance, if the service implements regression algorithms, various models can be autoregression, SVR, neural networks,...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Model</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Output</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Parameter</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TimeSeries</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TimeSeries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://bemserver.org/property#Energy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

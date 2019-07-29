@@ -15,10 +15,10 @@ skinparam classAttributeFontColor  Green
 
 class Property <<ssn>>
 
-class OccupantStateProperties <<hit2gap>>
+class OccupantStateProperties <<bem>>
 
-class Stress <<hit2gap>>
-class Pulse <<hit2gap>>
+class Stress <<bem>>
+class Pulse <<bem>>
 
 Property <|-- OccupantStateProperties
 

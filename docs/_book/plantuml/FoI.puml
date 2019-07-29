@@ -22,11 +22,11 @@ class Observation <<ssn>>  {
   externalStorageID xsd:string
 }
 
-class MobileBuildingApplianceLocationObservation <<hit2gap>>
+class MobileBuildingApplianceLocationObservation <<bem>>
 
 class IfcBuilding <<ifc>>
 class IfcElement <<ifc>>
-class IfcSpatialElement <<h2gifc4>>
+class IfcSpatialElement <<ifc4>>
 class Microgrid <<ontomg>>
 class IfcSpatialStructureElement <<ifc>>{
   hasSpatialStructureCapacity: xsd:double;
@@ -36,7 +36,7 @@ class IfcElementComponent <<ifc>>
 class IfcDistributionControlElement <<ifc>>
 class IfcDistributionFlowElement <<ifc>>
 class IfcZone <<ifc>>
-class IfcSpatialZone <<h2gifc4>>
+class IfcSpatialZone <<ifc4>>
 
 class IfcFlowInstrument <<ifc4>>
 class IfcFlowInstrumentType <<ifc>>
@@ -49,9 +49,9 @@ class IfcTankType <<ifc>>
 class IfcSensor <<ifc4>>
 class IfcSensorType <<ifc>>
 
-class IfcProtectiveDeviceTrippingUnit <<h2gifc4>>
+class IfcProtectiveDeviceTrippingUnit <<ifc4>>
 
-class IfcUnitaryControlElement <<h2gifc4>>
+class IfcUnitaryControlElement <<ifc4>>
 class IfcFlowTerminal <<ifc>>
 
 class IfcFlowStorageDevice <<ifc>>
@@ -66,18 +66,18 @@ class IfcFlowController <<ifc>>
 
 class IfcFlowMovingDevice <<ifc>>
 
-class BuildingAppliance <<hit2gap>>
-class BuildingType <<hit2gap>>
-class StaticBuildingAppliance <<hit2gap>>
-class MobileBuildingAppliance <<hit2gap>>
+class BuildingAppliance <<bem>>
+class BuildingType <<bem>>
+class StaticBuildingAppliance <<bem>>
+class MobileBuildingAppliance <<bem>>
 
-class Monitoring <<hit2gap>>
-class Wereable <<hit2gap>>
+class Monitoring <<bem>>
+class Wereable <<bem>>
 
-class Smartwatch <<hit2gap>>
-class Smartphone <<hit2gap>>
+class Smartwatch <<bem>>
+class Smartphone <<bem>>
 
-class Meter <<hit2gap>>
+class Meter <<bem>>
 
 class IfcActuator <<ifc4>>
 class IfcActuatorType <<ifc>>
@@ -95,37 +95,37 @@ class BranchController <<ontomg>>
 /'
   Building types class definition
 '/
-class Agricultural <<hit2gap>>
-class Commercial <<hit2gap>>
-class Residential  <<hit2gap>>
-class Educational <<hit2gap>>
-class Industrial <<hit2gap>>
-class Religious <<hit2gap>>
-class Public <<hit2gap>>
-class Transports <<hit2gap>>
+class Agricultural <<bem>>
+class Commercial <<bem>>
+class Residential  <<bem>>
+class Educational <<bem>>
+class Industrial <<bem>>
+class Religious <<bem>>
+class Public <<bem>>
+class Transports <<bem>>
 
 /'
   Building Zones types definition
 '/
 
-class Room <<hit2gap>>
-class Floor <<hit2gap>>
-class OpenSpace <<hit2gap>>
-class Desk <<hit2gap>>
-class Subterranean <<hit2gap>>
-class Ground <<hit2gap>>
+class Room <<bem>>
+class Floor <<bem>>
+class OpenSpace <<bem>>
+class Desk <<bem>>
+class Subterranean <<bem>>
+class Ground <<bem>>
 
 class IfcDistributionElement <<ifc>>
-class DistributionElementState <<hit2gap>>
-class DiscreteState <<hit2gap>>
-class ContinousState <<hit2gap>>
+class DistributionElementState <<bem>>
+class DiscreteState <<bem>>
+class ContinousState <<bem>>
 
 class IfcBuildingStorey <<ifc>>
 class IfcSite <<ifc>>
 class IfcSpace <<ifc>>
-class SpaceCapacity <<hit2gap>>
+class SpaceCapacity <<bem>>
 
-class Orientation <<hit2gap>>
+class Orientation <<bem>>
 
 class North <<(I,orchid),hit2gap>>
 class South <<(I,orchid),hit2gap>>
@@ -141,13 +141,13 @@ class South_West <<(I,orchid),hit2gap>>
   Definition of the types of Physical Medium
 '/
 
-class PhysicalMedium <<hit2gap>>
-class Oil <<hit2gap>>
-class Gas <<hit2gap>>
-class Water <<hit2gap>>
-class Air <<hit2gap>>
-class Steam <<hit2gap>>
-class Radiation <<hit2gap>>
+class PhysicalMedium <<bem>>
+class Oil <<bem>>
+class Gas <<bem>>
+class Water <<bem>>
+class Air <<bem>>
+class Steam <<bem>>
+class Radiation <<bem>>
 
 /'
   Definition of the types of FoIs

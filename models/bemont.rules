@@ -1,0 +1,26 @@
+@prefix bldg: <http://bemserver.org/building#> .
+@prefix services: <http://bemserver.org/services#> .
+@prefix pty: <http://bemserver.org/property#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#> .
+
+[invContains: (bldg:contains owl:inverseOf bldg:isContainedIn) (?s bldg:contains ?o) -> (?o bldg:isContainedIn ?s)]
+[transIsLocatedIn: (?s bldg:isLocatedIn ?o) (?o bldg:isContainedIn ?p) -> (?s bldg:isLocatedIn ?p)]
+[transHasFOI: (?s sosa:hasFeatureOfInterest ?o) (?o bldg:isContainedIn ?p) -> (?s sosa:hasFeatureOfInterest ?p)]
+
+[incRPartOfService: (services:partOfService owl:inverseOf services:usesModel) (?service services:usesModel ?model)
+    -> (?model services:partOfService ?service)]
+[incLPartOfService: (services:partOfService owl:inverseOf services:usesModel) (?model services:partOfService ?service)
+    -> (?service services:usesModel ?model)]
+
+[incROutputs1: (services:hasOutput owl:inverseOf services:model) (?model services:hasOutput ?output) -> (?output services:model ?model)]
+[incLOutputs2: (services:hasOutput owl:inverseOf services:model) (?output services:model ?model) -> (?model services:hasOutput ?output)]
+
+[transServiceOutput: (?output services:model ?model) (?model services:partOfService ?service) -> (?output services:service ?service)]
+
+[reflParentSite: (?o rdf:type ifc:IfcSite) -> (?o bldg:parentSite ?o)]
+[transContainsParentSite: (?o bldg:isContainedIn ?s) (?s bldg:parentSite ?q) -> (?o bldg:parentSite ?q)]
+[transLocatedParentSite: (?o bldg:isLocatedIn ?s) (?s bldg:parentSite ?q) -> (?o bldg:parentSite ?q)]
+[transParentSiteMeasure: (?m sosa:madeBySensor ?s) (?s bldg:parentSite ?p) -> (?m bldg:parentSite ?p)]
+
+# [infHemisphere: (?s ifc:latitude ?p) greaterThan(?p, 0) -> (?s pty:locatedInHemisphere pty:Northern)]

@@ -1,0 +1,261 @@
+<http://bemserver.org/services#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bemserver.org/services#> <http://www.w3.org/2002/07/owl#imports> <http://bemserver.org/building#> .
+<http://bemserver.org/services#> <http://www.w3.org/2002/07/owl#imports> <http://bemserver.org/property#> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/services#hasOutput
+<http://bemserver.org/services#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bemserver.org/services#hasOutput> <http://www.w3.org/2002/07/owl#inverseOf> <http://bemserver.org/services#model> .
+# 
+# http://bemserver.org/services#installedOn
+<http://bemserver.org/services#installedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#localization
+<http://bemserver.org/services#localization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#model
+<http://bemserver.org/services#model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#parameters
+<http://bemserver.org/services#parameters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#partOfService
+<http://bemserver.org/services#partOfService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bemserver.org/services#partOfService> <http://www.w3.org/2002/07/owl#inverseOf> <http://bemserver.org/services#usesModel> .
+# 
+# http://bemserver.org/services#service
+<http://bemserver.org/services#service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#usesModel
+<http://bemserver.org/services#usesModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#valueType
+<http://bemserver.org/services#valueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/services#valueUnit
+<http://bemserver.org/services#valueUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/services#description
+<http://bemserver.org/services#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bemserver.org/services#description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/hydra/core#description> .
+# 
+# http://bemserver.org/services#externalID
+<http://bemserver.org/services#externalID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bemserver.org/services#hasFrontend
+<http://bemserver.org/services#hasFrontend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bemserver.org/services#id
+<http://bemserver.org/services#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bemserver.org/services#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bemserver.org/services#name
+<http://bemserver.org/services#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bemserver.org/services#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/hydra/core#title> .
+# 
+# http://bemserver.org/services#param_name
+<http://bemserver.org/services#param_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bemserver.org/services#param_value
+<http://bemserver.org/services#param_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bemserver.org/services#sampling
+<http://bemserver.org/services#sampling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/hydra/core#description
+<http://www.w3.org/ns/hydra/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/hydra/core#entrypoint
+<http://www.w3.org/ns/hydra/core#entrypoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/hydra/core#title
+<http://www.w3.org/ns/hydra/core#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/property#property
+<http://bemserver.org/property#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bemserver.org/services#AdvancedService
+<http://bemserver.org/services#AdvancedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#AdvancedService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#BasicService> .
+# 
+# http://bemserver.org/services#BasicService
+<http://bemserver.org/services#BasicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#BasicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#Service> .
+<http://bemserver.org/services#BasicService> <http://www.w3.org/2000/01/rdf-schema#label> "BasicService" .
+# 
+# http://bemserver.org/services#ComposedService
+<http://bemserver.org/services#ComposedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#ComposedService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#Service> .
+<http://bemserver.org/services#ComposedService> <http://www.w3.org/2000/01/rdf-schema#label> "ComposedService" .
+# 
+# http://bemserver.org/services#DataCollectionService
+<http://bemserver.org/services#DataCollectionService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#DataCollectionService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#BasicService> .
+# 
+# http://bemserver.org/services#Event
+<http://bemserver.org/services#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#Output> .
+<http://bemserver.org/services#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# 
+# http://bemserver.org/services#Model
+<http://bemserver.org/services#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#hasOutput> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bemserver.org/services#Output> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#parameters> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bemserver.org/services#Parameter> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#partOfService> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bemserver.org/services#Service> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#description> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#id> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#name> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "A model is a particular instance that can be used by a module to generate data. For instance, if the service implements regression algorithms, various models can be autoregression, SVR, neural networks,..."@en .
+<http://bemserver.org/services#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model"@en .
+# 
+# http://bemserver.org/services#Output
+<http://bemserver.org/services#Output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#Output> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#model> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bemserver.org/services#Model> .
+<http://bemserver.org/services#Output> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#service> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bemserver.org/services#Service> .
+<http://bemserver.org/services#Output> <http://www.w3.org/2000/01/rdf-schema#label> "Output" .
+# 
+# http://bemserver.org/services#Parameter
+<http://bemserver.org/services#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#param_name> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#param_value> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter" .
+# 
+# http://bemserver.org/services#PreProcessingService
+<http://bemserver.org/services#PreProcessingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#PreProcessingService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#BasicService> .
+# 
+# http://bemserver.org/services#Service
+<http://bemserver.org/services#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#usesModel> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bemserver.org/services#Model> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#installedOn> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/hydra/core#description> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/hydra/core#entrypoint> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/hydra/core#title> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#id> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#hasFrontend> .
+_:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type."@en .
+<http://bemserver.org/services#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+# 
+# http://bemserver.org/services#TimeSeries
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/services#Output> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#localization> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#valueType> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bemserver.org/property#property> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#valueUnit> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://qudt.org/schema/qudt#Unit> .
+<http://qudt.org/schema/qudt#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#externalID> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/services#sampling> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bemserver.org/services#TimeSeries> <http://www.w3.org/2000/01/rdf-schema#label> "TimeSeries" .
+# 
+# http://qudt.org/schema/qudt#Unit
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://bemserver.org/property#Energy> <http://www.w3.org/2000/01/rdf-schema#label> "Energy" .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

@@ -31,10 +31,10 @@ class NonRenewableDERBranch <<ontomg>>
 class RenewableDERBranch <<ontomg>>
 class SolarPowerBranch <<ontomg>>
 class SmallWindPowerBranch <<ontomg>>
-class MicroturbinesBranch <<hit2gap>>
-class SolarHybridBranch <<hit2gap>>
-class WindHybridBranch <<hit2gap>>
-class PhotovoltaicBranch <<hit2gap>>
+class MicroturbinesBranch <<bem>>
+class SolarHybridBranch <<bem>>
+class WindHybridBranch <<bem>>
+class PhotovoltaicBranch <<bem>>
 
 
 class Converter <<ontomg>>
@@ -51,20 +51,20 @@ class TriphasicInverter <<ontomg>>
 class ConductingEquipement <<cim>>
 class RectifierInverter <<cim>>
 
-class HydroPowerBranch <<hit2gap>>
-class GeoThermalBranch <<hit2gap>>
-class BiomassBranch <<hit2gap>>
-class OilBranch <<hit2gap>>
-class GasBranch <<hit2gap>>
-class CoalBranch <<hit2gap>>
-class NuclearBranch <<hit2gap>>
-class MicroCHPPPowerBranch <<hit2gap>>
-class ReciprocatingBranch <<hit2gap>>
-class StirlingBranch <<hit2gap>>
+class HydroPowerBranch <<bem>>
+class GeoThermalBranch <<bem>>
+class BiomassBranch <<bem>>
+class OilBranch <<bem>>
+class GasBranch <<bem>>
+class CoalBranch <<bem>>
+class NuclearBranch <<bem>>
+class MicroCHPPPowerBranch <<bem>>
+class ReciprocatingBranch <<bem>>
+class StirlingBranch <<bem>>
 
-class IfcDistributionCircuit <<h2gifc4>>
+class IfcDistributionCircuit <<ifc4>>
 
-class IfcDistributionSystem <<h2gifc4>>
+class IfcDistributionSystem <<ifc4>>
 class IfcSystem <<ifc>>
 class IfcDistributionElement <<ifc>>
 class IfcFlowController <<ifc>>
@@ -77,9 +77,9 @@ class IfcEnergyConversionDevice <<ifc>>
 class Property <<ssn>>
 class FeatureOfInterest <<ssn>>
 
-EconomicProperties <<hit2gap>>
-PhysicsProperties <<hit2gap>>
-class OccupantStateProperties <<hit2gap>>
+EconomicProperties <<bem>>
+PhysicsProperties <<bem>>
+class OccupantStateProperties <<bem>>
 
 /'
     Incorporation of micro-grid description to the building

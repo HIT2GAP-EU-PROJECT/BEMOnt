@@ -1,0 +1,279 @@
+<http://bemserver.org/sensor#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bemserver.org/sensor#> <http://www.w3.org/2002/07/owl#imports> <http://bemserver.org/property#> .
+<http://bemserver.org/sensor#> <http://www.w3.org/2002/07/owl#imports> <http://www.opengis.net/gml/> .
+<http://bemserver.org/sensor#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
+<http://bemserver.org/sensor#> <http://purl.org/dc/elements/1.1/creator> "Aitor Corchero (aitor.corchero@eurecat.org)"@en .
+<http://bemserver.org/sensor#> <http://purl.org/dc/elements/1.1/creator> "Pierre Bourreau (pbourreau@nobatek.com)"@en .
+<http://bemserver.org/sensor#> <http://purl.org/dc/elements/1.1/creator> "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en .
+<http://bemserver.org/sensor#> <http://purl.org/dc/elements/1.1/creator> "Yudith Cardinale (ycardinale@usb.ve)"@en .
+<http://bemserver.org/sensor#> <http://purl.org/dc/elements/1.1/description> "This semantic model is focused on describing the sensor representation inside a building. This model  represents the building electrical elements as either a system, a device, or a sensor. In detail, systems can be composed of systems, devices (or multiple devices could take part of the same system), or sensors, which can also take part of devices (or multiple sensors could take part of the same device).  To do so, we align SSN and IFC, with HIT2GAP ontology."@en .
+<http://bemserver.org/sensor#> <http://purl.org/dc/elements/1.1/title> "Hit2Gap Ontology-Sensor Representation"@en .
+<http://bemserver.org/sensor#> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"@en .
+<http://bemserver.org/sensor#> <http://www.w3.org/2002/07/owl#versionInfo> "This current version includes the initial version of the semantic model based on the diagrams generated."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/sensor#Geo_where
+<http://bemserver.org/sensor#Geo_where> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/sensor#hasObservationResultTime
+<http://bemserver.org/sensor#hasObservationResultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/sensor#locatedInHemisphere
+<http://bemserver.org/sensor#locatedInHemisphere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bemserver.org/sensor#wasLocated
+<http://bemserver.org/sensor#wasLocated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"@en .
+# 
+# http://www.georss.org/georss/where
+<http://www.georss.org/georss/where> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.georss.org/georss/where> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.georss.org/georss/where"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/sensor#'external_ID'
+<http://bemserver.org/sensor#'external_ID'> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bemserver.org/sensor#'external_ID'> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.w3.org/2006/time#inXSDDateTime
+<http://www.w3.org/2006/time#inXSDDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/time#inXSDDateTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2006/time#inXSDDateTime"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/appliance#MobileBuildingAppliance
+<http://bemserver.org/appliance#MobileBuildingAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/appliance#MobileBuildingAppliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#wasLocated> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation> .
+<http://bemserver.org/appliance#MobileBuildingAppliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Mobile Building Appliances represent  mobile appliances inside the building."@en .
+<http://bemserver.org/appliance#MobileBuildingAppliance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://bemserver.org/appliance#MobileBuildingAppliance"@en .
+<http://bemserver.org/appliance#MobileBuildingAppliance> <http://www.w3.org/2000/01/rdf-schema#label> "MobileBuildingAppliance"@en .
+# 
+# http://bemserver.org/sensor#FeatureOfInterest
+<http://bemserver.org/sensor#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/sensor#FeatureOfInterest> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://bemserver.org/sensor#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/gml/_Feature> .
+<http://bemserver.org/sensor#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "FeatureOfInterest"@en .
+<http://bemserver.org/sensor#FeatureOfInterest> <http://www.w3.org/2002/07/owl#priorVersion> "FeatureOfInterest is an extension of ssn#FeatureOfInterest  defined in SSN. We have extended it and made them equivalents."@en .
+# 
+# http://bemserver.org/sensor#Hemisphere
+<http://bemserver.org/sensor#Hemisphere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/sensor#Hemisphere> <http://www.w3.org/2000/01/rdf-schema#comment> "Hemisphere denotes the hemisphere of a feature."@en .
+<http://bemserver.org/sensor#Hemisphere> <http://www.w3.org/2000/01/rdf-schema#label> "Hemisphere"@en .
+# 
+# http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation
+<http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bemserver.org/sensor#Observation> .
+<http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "This observation specifies a particular location of a mobile building appliance in a specific time."@en .
+<http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation> <http://www.w3.org/2000/01/rdf-schema#label> "MobileBuildingApplianceLocationObservation"@en .
+# 
+# http://bemserver.org/sensor#Observation
+<http://bemserver.org/sensor#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bemserver.org/sensor#Observation> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/sosa/Observation> .
+<http://bemserver.org/sensor#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#hasObservationResultTime> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#DateTimeInterval> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Instant> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://bemserver.org/sensor#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents."@en .
+<http://bemserver.org/sensor#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+# 
+# http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor"@en .
+<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor> <http://www.w3.org/2000/01/rdf-schema#label> "IfcSensor"@en .
+# 
+# http://qudt.org/schema/qudt#Unit
+<http://qudt.org/schema/qudt#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4."@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"@en .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType> <http://www.w3.org/2000/01/rdf-schema#label> "IfcSensorType"@en .
+# 
+# http://www.opengis.net/gml/_Feature
+<http://www.opengis.net/gml/_Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/gml/_Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#locatedInHemisphere> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bemserver.org/sensor#Hemisphere> .
+<http://www.opengis.net/gml/_Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.georss.org/georss/where> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/gml/_Geometry> .
+<http://www.opengis.net/gml/_Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "_Feature is taken from  the GeoRSS Feature Model. The model provides a general feature property which can be used to characterize any appropriate content as a geographic feature. Specific subproperties such as <where> associate the discerned feature with one of a limited number of  geometry types which provide a numerical representation for analysis and visualization. Other subproperties describe additional commonly used feature attributes such as feature name and feature type."@en .
+<http://www.opengis.net/gml/_Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/_Feature> .
+<http://www.opengis.net/gml/_Feature> <http://www.w3.org/2000/01/rdf-schema#label> "_Feature"@en .
+# 
+# http://www.opengis.net/gml/_Geometry
+<http://www.opengis.net/gml/_Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/gml/_Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "GeoRSS feature model allows the description of rectangles, points, lines, and polygons as geometric representation properties of discerned geographic features. Simple Features' geometric representations consist of point and multipoint, curve (a.k.a. line) and multicurve, surface (polygon) and multisurface."@en .
+<http://www.opengis.net/gml/_Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/_Geometry> .
+<http://www.opengis.net/gml/_Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "_Geometry"@en .
+# 
+# http://www.w3.org/2006/time#DateTimeInterval
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#inXSDDateTime> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "It enables compact representation of an interval corresponding to a single element in a date-time description (i.e. a specified year, month, week, day, hour, minute, second)"@en .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2006/time#DateTimeInterval"@en .
+<http://www.w3.org/2006/time#DateTimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "DateTimeInterval"@en .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#inXSDDateTime> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with zero extent or duration."@en .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2006/time#Instant"@en .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant"@en .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/gml/_Feature> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#hasObservationResultTime> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#DateTimeInterval> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Instant> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#hasObservationResultTime> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#DateTimeInterval> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#hasObservationResultTime> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Instant> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://bemserver.org/sensor#'external_ID'> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.w3.org/ns/sosa/Result
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://qudt.org/schema/qudt#Unit> .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+# 
+# http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/gml/_Feature> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://bemserver.org/sensor#Northern
+<http://bemserver.org/sensor#Northern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bemserver.org/sensor#Northern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bemserver.org/sensor#Hemisphere> .
+<http://bemserver.org/sensor#Northern> <http://www.w3.org/2000/01/rdf-schema#label> "Northern" .
+# 
+# http://bemserver.org/sensor#Southern
+<http://bemserver.org/sensor#Southern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bemserver.org/sensor#Southern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bemserver.org/sensor#Hemisphere> .
+<http://bemserver.org/sensor#Southern> <http://www.w3.org/2000/01/rdf-schema#label> "Southern" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.opengis.net/gml/Envelope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/Envelope> .
+<http://www.opengis.net/gml/Envelope> <http://www.w3.org/2000/01/rdf-schema#label> "Envelope"@en .
+# 
+<http://www.opengis.net/gml/LineString> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/LinearString> .
+<http://www.opengis.net/gml/LineString> <http://www.w3.org/2000/01/rdf-schema#label> "LineString"@en .
+# 
+<http://www.opengis.net/gml/LinearRing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/LinearRing> .
+<http://www.opengis.net/gml/LinearRing> <http://www.w3.org/2000/01/rdf-schema#label> "LinearRing"@en .
+# 
+<http://www.opengis.net/gml/Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point contains a single coordinate pair. The coordinate pair contains a latitude value and a longitude value in that order. The preferred serialization of this uses a space to separate the two values."@en .
+<http://www.opengis.net/gml/Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/Point> .
+<http://www.opengis.net/gml/Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
+# 
+<http://www.opengis.net/gml/Polygon> <http://www.w3.org/2000/01/rdf-schema#comment> "A polygon contains at least four coordinate pairs. Each pair contains a latitude value and a longitude value in that order. The preferred serialization of this uses a space to separate the two values. Pairs are separated from each other by a space. The last coordinate pair must be identical to the first."@en .
+<http://www.opengis.net/gml/Polygon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis/net/gml/Polygon> .
+<http://www.opengis.net/gml/Polygon> <http://www.w3.org/2000/01/rdf-schema#label> "Polygon"@en .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

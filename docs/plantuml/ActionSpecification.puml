@@ -41,7 +41,7 @@ class OccupantDiscomfort <<HIT2GAP>>{
 
 }
 
-class WindowCoverings <<hit2gap>> 
+class WindowCoverings <<bem>> 
 
 
 class IfcActuator <<ifc4>>

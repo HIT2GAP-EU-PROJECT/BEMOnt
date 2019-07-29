@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://hit2gap.eu/ontomg#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://hit2gap.eu/ontomg#">
+    <Prefix name="" IRI="http://hit2gap.eu/ontomg#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="geo" IRI="http://www.opengis/net/gml/"/>
+    <Prefix name="bem" IRI="http://bemserver.org#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
+    <Prefix name="ifc2" IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"/>
+    <Prefix name="ifc4" IRI="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#"/>
+    <Prefix name="qudt" IRI="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="ontomg" IRI="http://hit2gap.eu/ontomg#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Khouloud Salameh (khouloud.salameh@gmail.com)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://opensource.org/licenses/MIT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pierre Bourreau (pbourreau@nobatek.com)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aitor Corchero (aitor.corchero@eurecat.org)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richard Chbeir (richard.chbeir@univ-pau.fr)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hit2Gap Ontology-OntoMG</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Yudith Cardinale (ycardinale@usb.ve)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This semantic model is focused on describing microgrid elements.  In this model, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows, and the different building systems linked with that flows.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="HydroPower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SmallWindPower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RenewableBranch"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SolarPower"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Biomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SolarCell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CIMConductingEquipement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Nuclear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SmallWindTurbine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Coal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Converter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AcDcConverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FuelCell"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MonophasicInverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CHP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WindHybrid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MicroCHP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RegulatingCondEq"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TriphasicInverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CIMRectifierInverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BranchController"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isComposedOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Diesel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Photovoltaic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Reciprocating"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Microgrid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Oil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BranchSwitch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Inverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InfraBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MicroTurbine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stirling"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ELBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ESBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SolarHybrid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Branch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NonRenewableBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Geothermal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DERBranch"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="AcDcConverter"/>
+        <Class IRI="Converter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Branch"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasA"/>
+            <Class IRI="BranchController"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Branch"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isComposedOf"/>
+            <Class IRI="Branch"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BranchController"/>
+        <Class IRI="CIMConductingEquipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CHP"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coal"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Converter"/>
+        <Class IRI="CIMRectifierInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DERBranch"/>
+        <Class IRI="Branch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DERBranch"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasA"/>
+            <Class IRI="BranchSwitch"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Diesel"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ELBranch"/>
+        <Class IRI="Branch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ESBranch"/>
+        <Class IRI="Branch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FuelCell"/>
+        <Class IRI="Oil"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gas"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Geothermal"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HydroPower"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InfraBranch"/>
+        <Class IRI="Branch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Inverter"/>
+        <Class IRI="Converter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MicroCHP"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MicroTurbine"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Microgrid"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasBranch"/>
+            <Class IRI="Branch"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MonophasicInverter"/>
+        <Class IRI="Inverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NonRenewableBranch"/>
+        <Class IRI="DERBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nuclear"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Oil"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Photovoltaic"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Reciprocating"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RenewableBranch"/>
+        <Class IRI="DERBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SmallWindPower"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SmallWindTurbine"/>
+        <Class IRI="RegulatingCondEq"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SolarCell"/>
+        <Class IRI="RegulatingCondEq"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SolarHybrid"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SolarPower"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Stirling"/>
+        <Class IRI="NonRenewableBranch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TriphasicInverter"/>
+        <Class IRI="Inverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WindHybrid"/>
+        <Class IRI="RenewableBranch"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AcDcConverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AcDcConverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AcDcConverter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Branch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A branch is an energy consumer or producer that has a specific energy load over a certain time span (called energyprofile).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Branch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Branch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BranchController</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Branch Controller is the manager of  branch operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BranchController</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BranchController</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BranchSwitch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Branch Switch is responsible of turning on/off a branch.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BranchSwitch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BranchSwitch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CIMConductingEquipement</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A ConductingEquipment concept, represents the parts of the power system that are designed to carry current. This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information
+model being part of the IEC 61970 standards.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CIMConductingEquipement</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CIMConductingEquipement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CIMRectifierInverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A CIMRectifierInverter concept, represents the parts of the power system that are designed to inverte/rectify current.  
+An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.
+This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information model being part of the IEC 61970 standards.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CIMRectifierInverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CIMRectifierInverter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Converter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Converter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Converter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DERBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DERBranch represents a distributed energy resource branch, which consists of renewable or nonrenewable energy sources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DERBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DERBranch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ELBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Electrical Load Branch is an electrical component or branch that consumes electric power. It mainly consists of electrical appliance components.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ELBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ELBranch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ESBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy storage systems play an essential role in stabilizing the power system, improving the quality of power supply, and achieving power peak shaving. The energy storage branch consists mainly of the energy storage device (e.g., flywheel, super-capacitor) and a converter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ESBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ESBranch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>InfraBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An InfraBranch represents an infrastructure branch, where each has its own Branch Switch and Branch Controller.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>InfraBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">InfraBranch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Inverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC. An inverter can be a Monophasic  or a Triphasic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Inverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Inverter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Microgrid</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A microgrid is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Microgrid</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Microgrid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MonophasicInverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Inverter can be a Monophasic  or a Triphasic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MonophasicInverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MonophasicInverter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RegulatingCondEq</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RegulatingCondEq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SmallWindTurbine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SmallWindTurbine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SolarCell</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SolarCell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TriphasicInverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Inverter can be a Monophasic  or a Triphasic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TriphasicInverter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TriphasicInverter</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

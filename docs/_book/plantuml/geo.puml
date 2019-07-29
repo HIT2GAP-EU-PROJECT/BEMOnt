@@ -24,7 +24,7 @@ class _Feature <<geo>>
 class _Geometry <<geo>>
 class Point <<geo>>
 class Polygon <<geo>>
-class Hemisphere <<hit2gap>>
+class Hemisphere <<bem>>
 class Northern <<(I,orchid),hit2gap>>
 class Southern <<(I,orchid),hit2gap>>
 

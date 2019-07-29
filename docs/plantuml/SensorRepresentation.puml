@@ -22,8 +22,8 @@ class Observation <<ssn>> {
   externalStorageID xsd:string
 }
 
-class MobileBuildingApplianceLocationObservation <<hit2gap>>
-class MobileBuildingAppliance <<hit2gap>>
+class MobileBuildingApplianceLocationObservation <<bem>>
+class MobileBuildingAppliance <<bem>>
 
 class FeatureOfInterest <<ssn>>
 class Property <<ssn>>

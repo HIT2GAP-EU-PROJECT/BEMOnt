@@ -1,0 +1,275 @@
+Prefix(:=<http://hit2gap.eu/ontomg#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(geo:=<http://www.opengis/net/gml/>)
+Prefix(bem:=<http://bemserver.org#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(ssn:=<http://purl.oclc.org/NET/ssnx/ssn#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(ifc2:=<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#>)
+Prefix(ifc4:=<http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#>)
+Prefix(qudt:=<http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
+Prefix(ontomg:=<http://hit2gap.eu/ontomg#>)
+Prefix(schema:=<http://schema.org/>)
+
+
+Ontology(<http://hit2gap.eu/ontomg#>
+Annotation(dc:contributor "Aitor Corchero (aitor.corchero@eurecat.org)"@en)
+Annotation(dc:contributor "Pierre Bourreau (pbourreau@nobatek.com)"@en)
+Annotation(dc:contributor "Yudith Cardinale (ycardinale@usb.ve)"@en)
+Annotation(dc:creator "Khouloud Salameh (khouloud.salameh@gmail.com)"@en)
+Annotation(dc:creator "Richard Chbeir (richard.chbeir@univ-pau.fr)"@en)
+Annotation(dc:description "This semantic model is focused on describing microgrid elements.  In this model, the grid (micro-grid) is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows, and the different building systems linked with that flows."@en)
+Annotation(dc:title "Hit2Gap Ontology-OntoMG"@en)
+Annotation(<http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"@en)
+
+Declaration(Class(ontomg:AcDcConverter))
+Declaration(Class(ontomg:Biomass))
+Declaration(Class(ontomg:Branch))
+Declaration(Class(ontomg:BranchController))
+Declaration(Class(ontomg:BranchSwitch))
+Declaration(Class(ontomg:CHP))
+Declaration(Class(ontomg:CIMConductingEquipement))
+Declaration(Class(ontomg:CIMRectifierInverter))
+Declaration(Class(ontomg:Coal))
+Declaration(Class(ontomg:Converter))
+Declaration(Class(ontomg:DERBranch))
+Declaration(Class(ontomg:Diesel))
+Declaration(Class(ontomg:ELBranch))
+Declaration(Class(ontomg:ESBranch))
+Declaration(Class(ontomg:FuelCell))
+Declaration(Class(ontomg:Gas))
+Declaration(Class(ontomg:Geothermal))
+Declaration(Class(ontomg:HydroPower))
+Declaration(Class(ontomg:InfraBranch))
+Declaration(Class(ontomg:Inverter))
+Declaration(Class(ontomg:MicroCHP))
+Declaration(Class(ontomg:MicroTurbine))
+Declaration(Class(ontomg:Microgrid))
+Declaration(Class(ontomg:MonophasicInverter))
+Declaration(Class(ontomg:NonRenewableBranch))
+Declaration(Class(ontomg:Nuclear))
+Declaration(Class(ontomg:Oil))
+Declaration(Class(ontomg:Photovoltaic))
+Declaration(Class(ontomg:Reciprocating))
+Declaration(Class(ontomg:RegulatingCondEq))
+Declaration(Class(ontomg:RenewableBranch))
+Declaration(Class(ontomg:SmallWindPower))
+Declaration(Class(ontomg:SmallWindTurbine))
+Declaration(Class(ontomg:SolarCell))
+Declaration(Class(ontomg:SolarHybrid))
+Declaration(Class(ontomg:SolarPower))
+Declaration(Class(ontomg:Stirling))
+Declaration(Class(ontomg:TriphasicInverter))
+Declaration(Class(ontomg:WindHybrid))
+Declaration(ObjectProperty(ontomg:hasA))
+Declaration(ObjectProperty(ontomg:hasBranch))
+Declaration(ObjectProperty(ontomg:isComposedOf))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(dc:creator))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: ontomg:AcDcConverter (AcDcConverter)
+
+AnnotationAssertion(rdfs:comment ontomg:AcDcConverter "An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC."@en)
+AnnotationAssertion(rdfs:label ontomg:AcDcConverter "AcDcConverter"@en)
+SubClassOf(ontomg:AcDcConverter ontomg:Converter)
+
+# Class: ontomg:Biomass (ontomg:Biomass)
+
+SubClassOf(ontomg:Biomass ontomg:RenewableBranch)
+
+# Class: ontomg:Branch (Branch)
+
+AnnotationAssertion(rdfs:comment ontomg:Branch "A branch is an energy consumer or producer that has a specific energy load over a certain time span (called energyprofile)."@en)
+AnnotationAssertion(rdfs:label ontomg:Branch "Branch"@en)
+SubClassOf(ontomg:Branch ObjectSomeValuesFrom(ontomg:hasA ontomg:BranchController))
+SubClassOf(ontomg:Branch ObjectSomeValuesFrom(ontomg:isComposedOf ontomg:Branch))
+
+# Class: ontomg:BranchController (BranchController)
+
+AnnotationAssertion(rdfs:comment ontomg:BranchController "A Branch Controller is the manager of  branch operations."@en)
+AnnotationAssertion(rdfs:label ontomg:BranchController "BranchController"@en)
+SubClassOf(ontomg:BranchController ontomg:CIMConductingEquipement)
+
+# Class: ontomg:BranchSwitch (BranchSwitch)
+
+AnnotationAssertion(rdfs:comment ontomg:BranchSwitch "The Branch Switch is responsible of turning on/off a branch."@en)
+AnnotationAssertion(rdfs:label ontomg:BranchSwitch "BranchSwitch"@en)
+
+# Class: ontomg:CHP (ontomg:CHP)
+
+SubClassOf(ontomg:CHP ontomg:NonRenewableBranch)
+
+# Class: ontomg:CIMConductingEquipement (CIMConductingEquipement)
+
+AnnotationAssertion(rdfs:comment ontomg:CIMConductingEquipement "A ConductingEquipment concept, represents the parts of the power system that are designed to carry current. This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information
+model being part of the IEC 61970 standards."@en)
+AnnotationAssertion(rdfs:label ontomg:CIMConductingEquipement "CIMConductingEquipement"@en)
+
+# Class: ontomg:CIMRectifierInverter (CIMRectifierInverter)
+
+AnnotationAssertion(rdfs:comment ontomg:CIMRectifierInverter "A CIMRectifierInverter concept, represents the parts of the power system that are designed to inverte/rectify current.  
+An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC.
+This concepts is from the  Common Information Model (CIM), which is a widely accepted energy information model being part of the IEC 61970 standards."@en)
+AnnotationAssertion(rdfs:label ontomg:CIMRectifierInverter "CIMRectifierInverter"@en)
+
+# Class: ontomg:Coal (ontomg:Coal)
+
+SubClassOf(ontomg:Coal ontomg:NonRenewableBranch)
+
+# Class: ontomg:Converter (Converter)
+
+AnnotationAssertion(rdfs:comment ontomg:Converter "An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC."@en)
+AnnotationAssertion(rdfs:label ontomg:Converter "Converter"@en)
+SubClassOf(ontomg:Converter ontomg:CIMRectifierInverter)
+
+# Class: ontomg:DERBranch (DERBranch)
+
+AnnotationAssertion(rdfs:comment ontomg:DERBranch "DERBranch represents a distributed energy resource branch, which consists of renewable or nonrenewable energy sources."@en)
+AnnotationAssertion(rdfs:label ontomg:DERBranch "DERBranch"@en)
+SubClassOf(ontomg:DERBranch ontomg:Branch)
+SubClassOf(ontomg:DERBranch ObjectSomeValuesFrom(ontomg:hasA ontomg:BranchSwitch))
+
+# Class: ontomg:Diesel (ontomg:Diesel)
+
+SubClassOf(ontomg:Diesel ontomg:NonRenewableBranch)
+
+# Class: ontomg:ELBranch (ELBranch)
+
+AnnotationAssertion(rdfs:comment ontomg:ELBranch "An Electrical Load Branch is an electrical component or branch that consumes electric power. It mainly consists of electrical appliance components."@en)
+AnnotationAssertion(rdfs:label ontomg:ELBranch "ELBranch"@en)
+SubClassOf(ontomg:ELBranch ontomg:Branch)
+
+# Class: ontomg:ESBranch (ESBranch)
+
+AnnotationAssertion(rdfs:comment ontomg:ESBranch "Energy storage systems play an essential role in stabilizing the power system, improving the quality of power supply, and achieving power peak shaving. The energy storage branch consists mainly of the energy storage device (e.g., flywheel, super-capacitor) and a converter."@en)
+AnnotationAssertion(rdfs:label ontomg:ESBranch "ESBranch"@en)
+SubClassOf(ontomg:ESBranch ontomg:Branch)
+
+# Class: ontomg:FuelCell (ontomg:FuelCell)
+
+SubClassOf(ontomg:FuelCell ontomg:Oil)
+
+# Class: ontomg:Gas (ontomg:Gas)
+
+SubClassOf(ontomg:Gas ontomg:NonRenewableBranch)
+
+# Class: ontomg:Geothermal (ontomg:Geothermal)
+
+SubClassOf(ontomg:Geothermal ontomg:RenewableBranch)
+
+# Class: ontomg:HydroPower (ontomg:HydroPower)
+
+SubClassOf(ontomg:HydroPower ontomg:RenewableBranch)
+
+# Class: ontomg:InfraBranch (InfraBranch)
+
+AnnotationAssertion(rdfs:comment ontomg:InfraBranch "An InfraBranch represents an infrastructure branch, where each has its own Branch Switch and Branch Controller."@en)
+AnnotationAssertion(rdfs:label ontomg:InfraBranch "InfraBranch"@en)
+SubClassOf(ontomg:InfraBranch ontomg:Branch)
+
+# Class: ontomg:Inverter (Inverter)
+
+AnnotationAssertion(rdfs:comment ontomg:Inverter "An inverter and a rectifier perform opposite functions in electronic circuits. Both act as electric power converters; a rectifier changes current from alternating current (AC) to direct current (DC), while an inverter converts DC to AC. An inverter can be a Monophasic  or a Triphasic."@en)
+AnnotationAssertion(rdfs:label ontomg:Inverter "Inverter"@en)
+SubClassOf(ontomg:Inverter ontomg:Converter)
+
+# Class: ontomg:MicroCHP (ontomg:MicroCHP)
+
+SubClassOf(ontomg:MicroCHP ontomg:NonRenewableBranch)
+
+# Class: ontomg:MicroTurbine (ontomg:MicroTurbine)
+
+SubClassOf(ontomg:MicroTurbine ontomg:RenewableBranch)
+
+# Class: ontomg:Microgrid (Microgrid)
+
+AnnotationAssertion(rdfs:comment ontomg:Microgrid "A microgrid is based on several branches that link the building infrastructure with the generated building renewable flows, non-renewable flows and the different building systems linked with that flows."@en)
+AnnotationAssertion(rdfs:label ontomg:Microgrid "Microgrid"@en)
+SubClassOf(ontomg:Microgrid ObjectSomeValuesFrom(ontomg:hasBranch ontomg:Branch))
+
+# Class: ontomg:MonophasicInverter (MonophasicInverter)
+
+AnnotationAssertion(rdfs:comment ontomg:MonophasicInverter "An Inverter can be a Monophasic  or a Triphasic."@en)
+AnnotationAssertion(rdfs:label ontomg:MonophasicInverter "MonophasicInverter"@en)
+SubClassOf(ontomg:MonophasicInverter ontomg:Inverter)
+
+# Class: ontomg:NonRenewableBranch (ontomg:NonRenewableBranch)
+
+SubClassOf(ontomg:NonRenewableBranch ontomg:DERBranch)
+
+# Class: ontomg:Nuclear (ontomg:Nuclear)
+
+SubClassOf(ontomg:Nuclear ontomg:NonRenewableBranch)
+
+# Class: ontomg:Oil (ontomg:Oil)
+
+SubClassOf(ontomg:Oil ontomg:NonRenewableBranch)
+
+# Class: ontomg:Photovoltaic (ontomg:Photovoltaic)
+
+SubClassOf(ontomg:Photovoltaic ontomg:RenewableBranch)
+
+# Class: ontomg:Reciprocating (ontomg:Reciprocating)
+
+SubClassOf(ontomg:Reciprocating ontomg:NonRenewableBranch)
+
+# Class: ontomg:RegulatingCondEq (RegulatingCondEq)
+
+AnnotationAssertion(rdfs:label ontomg:RegulatingCondEq "RegulatingCondEq"@en)
+
+# Class: ontomg:RenewableBranch (ontomg:RenewableBranch)
+
+SubClassOf(ontomg:RenewableBranch ontomg:DERBranch)
+
+# Class: ontomg:SmallWindPower (ontomg:SmallWindPower)
+
+SubClassOf(ontomg:SmallWindPower ontomg:RenewableBranch)
+
+# Class: ontomg:SmallWindTurbine (SmallWindTurbine)
+
+AnnotationAssertion(rdfs:label ontomg:SmallWindTurbine "SmallWindTurbine"@en)
+SubClassOf(ontomg:SmallWindTurbine ontomg:RegulatingCondEq)
+
+# Class: ontomg:SolarCell (SolarCell)
+
+AnnotationAssertion(rdfs:label ontomg:SolarCell "SolarCell"@en)
+SubClassOf(ontomg:SolarCell ontomg:RegulatingCondEq)
+
+# Class: ontomg:SolarHybrid (ontomg:SolarHybrid)
+
+SubClassOf(ontomg:SolarHybrid ontomg:RenewableBranch)
+
+# Class: ontomg:SolarPower (ontomg:SolarPower)
+
+SubClassOf(ontomg:SolarPower ontomg:RenewableBranch)
+
+# Class: ontomg:Stirling (ontomg:Stirling)
+
+SubClassOf(ontomg:Stirling ontomg:NonRenewableBranch)
+
+# Class: ontomg:TriphasicInverter (TriphasicInverter)
+
+AnnotationAssertion(rdfs:comment ontomg:TriphasicInverter "An Inverter can be a Monophasic  or a Triphasic."@en)
+AnnotationAssertion(rdfs:label ontomg:TriphasicInverter "TriphasicInverter"@en)
+SubClassOf(ontomg:TriphasicInverter ontomg:Inverter)
+
+# Class: ontomg:WindHybrid (ontomg:WindHybrid)
+
+SubClassOf(ontomg:WindHybrid ontomg:RenewableBranch)
+
+
+)

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />   
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://bemserver.org/building#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://bemserver.org/building#","name":"Hit2Gap Ontology-Building Infrastructure", "headline":"Features of interest are real world representations of the building. They comprise building infrastructure and the corresponding building elements (mechanical and electrical elements, furniture, etc.).
+
+To adapt the SSN ontology to the building domain, the ifcOwl which is the web semantic ontology for the Industry Foundation Class (IFC), has been incorporated. This semantic model permits to link the proposed ontology with the BIM notation.
+
+To do so, the feature of interest class of SSN has been linked (hierarchically) with the concepts Ifc:Building, Ifc:BuildingElement, and Ifc:BuildingAppliance. Each building pertains to a specific type (through the "hasType" semantic relation). Considering their infrastructure, each building contains several real work zones (Ifc:Zone). These zones can be rooms, floors, desk, etc. Moreover, different views of a building can be used: infrastructure to represent the floors, rooms...; but also an electric view (to represent the electric appliances inside the building), fluid view (to represent the possible flow of water/gas inside the building), etc.
+Over these abstracted views, the different building elements are represented: building systems ("Flow Instruments", "Protective Devices", “Unitary Control Elements"), sensors and building appliance for monitoring and controlling the building, occupants’ devices, etc.
+The features of interest representation of the building are performed using standard building modelling (IFC and BIM). Moreover, this semantic model ensures the information compatibility and sharing with these models. A part of this, the building infrastructure and their corresponding zones and devices are modelled and linked with their corresponding information, aspect that facilitates data querying based on the corresponding feature of interests.", "datePublished":"Thu Jul 25 17:13:10 CEST 2019", "version":"This current version includes the initial version of the semantic model based on the diagrams generated.", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Aitor Corchero (aitor.corchero@eurecat.org)"},{"@type":"Person","name":"Pierre Bourreau (pbourreau@nobatek.com)"},{"@type":"Person","name":"Richard Chbeir (richard.chbeir@univ-pau.fr)"},{"@type":"Person","name":"Yudith Cardinale (ycardinale@usb.ve)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+		}
+		t = t.replace(' back to ToC','');
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container"><div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Hit2Gap Ontology-Building Infrastructure</h1>
+<dt>Revision:</dt>
+<dd>This current version includes the initial version of the semantic model based on the diagrams generated.</dd>
+<dl><dt>Authors:</dt>
+<dd>Aitor Corchero (aitor.corchero@eurecat.org)</dd><dd>Pierre Bourreau (pbourreau@nobatek.com)</dd><dd>Richard Chbeir (richard.chbeir@univ-pau.fr)</dd><dd>Yudith Cardinale (ycardinale@usb.ve)</dd></dl>
+
+<dl><dt>Download serialization:</dt><dd><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></img></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples"></img></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></img></a> </span></dd></dl><dl><dt>License: </dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src ="https://img.shields.io/badge/License-license name goes here-blue.svg" alt="https://opensource.org/licenses/MIT"></img></a>
+</dd></dl><dl><a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a></dl><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+</body> 
+</html>

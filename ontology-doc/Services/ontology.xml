@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bemserver.org/services#"
+     xml:base="http://bemserver.org/services"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://bemserver.org/services#">
+        <owl:imports rdf:resource="http://bemserver.org/building#"/>
+        <owl:imports rdf:resource="http://bemserver.org/property#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bemserver.org/services#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#hasOutput">
+        <owl:inverseOf rdf:resource="http://bemserver.org/services#model"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bemserver.org/services#installedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#installedOn"/>
+    
+
+
+    <!-- http://bemserver.org/services#localization -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#localization"/>
+    
+
+
+    <!-- http://bemserver.org/services#model -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#model"/>
+    
+
+
+    <!-- http://bemserver.org/services#parameters -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#parameters"/>
+    
+
+
+    <!-- http://bemserver.org/services#partOfService -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#partOfService">
+        <owl:inverseOf rdf:resource="http://bemserver.org/services#usesModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bemserver.org/services#service -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#service"/>
+    
+
+
+    <!-- http://bemserver.org/services#usesModel -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#usesModel"/>
+    
+
+
+    <!-- http://bemserver.org/services#valueType -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#valueType"/>
+    
+
+
+    <!-- http://bemserver.org/services#valueUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/services#valueUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bemserver.org/services#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/hydra/core#description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bemserver.org/services#externalID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#externalID"/>
+    
+
+
+    <!-- http://bemserver.org/services#hasFrontend -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#hasFrontend"/>
+    
+
+
+    <!-- http://bemserver.org/services#id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bemserver.org/services#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/hydra/core#title"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bemserver.org/services#param_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#param_name"/>
+    
+
+
+    <!-- http://bemserver.org/services#param_value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#param_value"/>
+    
+
+
+    <!-- http://bemserver.org/services#sampling -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/services#sampling"/>
+    
+
+
+    <!-- http://www.w3.org/ns/hydra/core#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/hydra/core#description"/>
+    
+
+
+    <!-- http://www.w3.org/ns/hydra/core#entrypoint -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/hydra/core#entrypoint"/>
+    
+
+
+    <!-- http://www.w3.org/ns/hydra/core#title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/hydra/core#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bemserver.org/property#property -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/property#property"/>
+    
+
+
+    <!-- http://bemserver.org/services#AdvancedService -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#AdvancedService">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#BasicService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#BasicService -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#BasicService">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BasicService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#ComposedService -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#ComposedService">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComposedService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#DataCollectionService -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#DataCollectionService">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#BasicService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#Event -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#Event">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#Output"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#Model -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#Model">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#hasOutput"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/services#Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#parameters"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/services#Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#partOfService"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/services#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A model is a particular instance that can be used by a module to generate data. For instance, if the service implements regression algorithms, various models can be autoregression, SVR, neural networks,...</rdfs:comment>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#Output -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#Output">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#model"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/services#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#service"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/services#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#Parameter -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#Parameter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#param_name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#param_value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#PreProcessingService -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#PreProcessingService">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#BasicService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#Service -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#usesModel"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/services#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#installedOn"/>
+                <owl:allValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#entrypoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/hydra/core#title"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#id"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#hasFrontend"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A service defined in HIT2GAP can provide one or more functionalities. In case of multiple functionalities, they should be part of the same category, and thus each service can only support functionalities of only one category type. When a service offers functionalities of a certain category, it will be tagged in its description with the same category type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/services#TimeSeries -->
+
+
+    <owl:Class rdf:about="http://bemserver.org/services#TimeSeries">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/services#Output"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#localization"/>
+                <owl:someValuesFrom rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#valueType"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/property#property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#valueUnit"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#externalID"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/services#sampling"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeSeries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt#Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#Unit"/>
+    
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite -->
+
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSite"/>
+    
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement -->
+
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSpatialElement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://bemserver.org/property#Energy">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

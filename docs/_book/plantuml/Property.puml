@@ -17,23 +17,23 @@ skinparam classAttributeFontColor  Green
 '/
 
 class Property <<ssn>>
-class EconomicProperties <<hit2gap>>
-class PhysicProperties <<hit2gap>>
-class OccupantStateProperties <<hit2gap>>
+class EconomicProperties <<bem>>
+class PhysicProperties <<bem>>
+class OccupantStateProperties <<bem>>
 
-class Stress <<hit2gap>>
-class Pulse <<hit2gap>>
+class Stress <<bem>>
+class Pulse <<bem>>
 
-class Cost <<hit2gap>>
-class Investment <<hit2gap>>
+class Cost <<bem>>
+class Investment <<bem>>
 
-class Climate <<hit2gap>>
-class Tropical <<hit2gap>>
+class Climate <<bem>>
+class Tropical <<bem>>
 class TropicalRainforest <<(I,orchid),hit2gap>>
 class TropicalMonsoon <<(I,orchid),hit2gap>>
 class TropicalSavanna <<(I,orchid),hit2gap>>
 
-class Arid <<hit2gap>>
+class Arid <<bem>>
 class HotDesert <<(I,orchid),hit2gap>>
 class ColdDesert <<(I,orchid),hit2gap>>
 class MildDesert <<(I,orchid),hit2gap>>
@@ -41,7 +41,7 @@ class HotSemiArid <<(I,orchid),hit2gap>>
 class ColdSemiArid <<(I,orchid),hit2gap>>
 class MildSemiArid <<(I,orchid),hit2gap>>
 
-class Temperate <<hit2gap>>
+class Temperate <<bem>>
 class HumidSubtropical <<(I,orchid),hit2gap>>
 class TemperateOceanic <<(I,orchid),hit2gap>>
 class SubpolarOceanic <<(I,orchid),hit2gap>>
@@ -53,7 +53,7 @@ class WarnSummerMediterranean <<(I,orchid),hit2gap>>
 class CoolSummerMediterranean <<(I,orchid),hit2gap>>
 
 
-class Continental <<hit2gap>>
+class Continental <<bem>>
 class HotSummerHumidContinental <<(I,orchid),hit2gap>>
 class WarmSummerHumidContinental <<(I,orchid),hit2gap>>
 class Subartic <<(I,orchid),hit2gap>>
@@ -67,71 +67,71 @@ class WarmDrySummerContinental <<(I,orchid),hit2gap>>
 class DrySummerSubarctic <<(I,orchid),hit2gap>>  
 class ExtremelyColdDrySummerSubarctic <<(I,orchid),hit2gap>>  
 
-class Polar <<hit2gap>>
+class Polar <<bem>>
 class MildTundra <<(I,orchid),hit2gap>>
 class FrostColdTundra <<(I,orchid),hit2gap>>
 class IceCap <<(I,orchid),hit2gap>>
 
-class Air <<hit2gap>>
-class Water <<hit2gap>>
-class Wind <<hit2gap>>
-class WindOrientation <<hit2gap>>
-class WindSpeed <<hit2gap>>
-class Steam <<hit2gap>>
-class State <<hit2gap>>
-class Area <<hit2gap>>
-class Capacity <<hit2gap>>
-class ProductionCapacity <<hit2gap>>
-class Color <<hit2gap>>
-class Conductivity <<hit2gap>>
-class Co2Rate <<hit2gap>>
-class Density <<hit2gap>>
-class Humidity <<hit2gap>>
-class Depth <<hit2gap>>
-class EquivalentDepth <<hit2gap>>
-class Energy <<hit2gap>>
-class ElectricEnergy <<hit2gap>>
-class HeatFluxEnergy <<hit2gap>>
-class Evaporation <<hit2gap>>
-class Condensation <<hit2gap>>
-class Medium <<hit2gap>>
-class Precipitation <<hit2gap>>
-class Pressure <<hit2gap>>
-class Position <<hit2gap>>
-class Longitude <<hit2gap>>
-class Latitude <<hit2gap>>
-class Altitude <<hit2gap>>
-class Radiation <<hit2gap>>
-class LightRadiation <<hit2gap>>
-class IncidentRadiation <<hit2gap>>
-class AbsorbedIncidentRadiation <<hit2gap>>
-class ReflectedIncidentradiation <<hit2gap>>
-class AbsorbedScatteredIncidentRadiation <<hit2gap>>
-class TransmittedIncidentRadiation <<hit2gap>>
-class Tension <<hit2gap>>
-class Rainfall <<hit2gap>>
-class Reflectivity <<hit2gap>>
-class Shape <<hit2gap>>
-class CrossSection <<hit2gap>>
-class Height <<hit2gap>>
-class Length <<hit2gap>>
-class Slope <<hit2gap>>
-class Weight <<hit2gap>>
-class Width <<hit2gap>>
-class Intensity <<hit2gap>>
-class Speed <<hit2gap>>
-class Temperature  <<hit2gap>>
-class Time <<hit2gap>>
-class Transparency <<hit2gap>>
-class Velocity <<hit2gap>>
-class Visibility <<hit2gap>>
-class Volume <<hit2gap>>
-class Discharge <<hit2gap>>
-class Flow <<hit2gap>>
-class Inflow <<hit2gap>>
-class Outflow <<hit2gap>>
-class AirMedium <<hit2gap>>
-class AirQuality <<hit2gap>>
+class Air <<bem>>
+class Water <<bem>>
+class Wind <<bem>>
+class WindOrientation <<bem>>
+class WindSpeed <<bem>>
+class Steam <<bem>>
+class State <<bem>>
+class Area <<bem>>
+class Capacity <<bem>>
+class ProductionCapacity <<bem>>
+class Color <<bem>>
+class Conductivity <<bem>>
+class Co2Rate <<bem>>
+class Density <<bem>>
+class Humidity <<bem>>
+class Depth <<bem>>
+class EquivalentDepth <<bem>>
+class Energy <<bem>>
+class ElectricEnergy <<bem>>
+class HeatFluxEnergy <<bem>>
+class Evaporation <<bem>>
+class Condensation <<bem>>
+class Medium <<bem>>
+class Precipitation <<bem>>
+class Pressure <<bem>>
+class Position <<bem>>
+class Longitude <<bem>>
+class Latitude <<bem>>
+class Altitude <<bem>>
+class Radiation <<bem>>
+class LightRadiation <<bem>>
+class IncidentRadiation <<bem>>
+class AbsorbedIncidentRadiation <<bem>>
+class ReflectedIncidentradiation <<bem>>
+class AbsorbedScatteredIncidentRadiation <<bem>>
+class TransmittedIncidentRadiation <<bem>>
+class Tension <<bem>>
+class Rainfall <<bem>>
+class Reflectivity <<bem>>
+class Shape <<bem>>
+class CrossSection <<bem>>
+class Height <<bem>>
+class Length <<bem>>
+class Slope <<bem>>
+class Weight <<bem>>
+class Width <<bem>>
+class Intensity <<bem>>
+class Speed <<bem>>
+class Temperature  <<bem>>
+class Time <<bem>>
+class Transparency <<bem>>
+class Velocity <<bem>>
+class Visibility <<bem>>
+class Volume <<bem>>
+class Discharge <<bem>>
+class Flow <<bem>>
+class Inflow <<bem>>
+class Outflow <<bem>>
+class AirMedium <<bem>>
+class AirQuality <<bem>>
 /'
   Definition of the properties hierarchy
 '/

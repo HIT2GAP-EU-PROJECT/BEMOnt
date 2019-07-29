@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bemserver.org/appliance#"
+     xml:base="http://bemserver.org/appliance"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://bemserver.org/appliance#">
+        <owl:imports rdf:resource="http://bemserver.org/property#"/>
+        <dc:creator xml:lang="en">Aitor Corchero (aitor.corchero@eurecat.org)</dc:creator>
+        <owl:versionInfo xml:lang="en">This current version includes the initial version of the semantic model based on the diagrams generated.</owl:versionInfo>
+        <dc:description xml:lang="en">This semantic model is focused on describing bulding appliances. For that, the proposed semantic model is based on the idetification of Static Building Appliances and Mobile Building Appliances and their relations with the devices that consume, produce, transport, store energy.</dc:description>
+        <dc:creator xml:lang="en">Pierre Bourreau (pbourreau@nobatek.com)</dc:creator>
+        <terms:license xml:lang="en">https://opensource.org/licenses/MIT</terms:license>
+        <dc:creator xml:lang="en">Yudith Cardinale (ycardinale@usb.ve)</dc:creator>
+        <dc:title xml:lang="en">Hit2Gap Ontology-Building Appliances</dc:title>
+        <dc:creator xml:lang="en">Richard Chbeir (richard.chbeir@univ-pau.fr)</dc:creator>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://bemserver.org/appliance##InputOutput -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##InputOutput"/>
+
+
+
+    <!-- http://bemserver.org/appliance##MeasureInputOutput -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##MeasureInputOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://bemserver.org/appliance##consumes -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##consumes"/>
+
+
+
+    <!-- http://bemserver.org/appliance##contains -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://bemserver.org/appliance##controls -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##controls"/>
+
+
+
+    <!-- http://bemserver.org/appliance##isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##isLocatedIn"/>
+
+
+
+    <!-- http://bemserver.org/appliance##produces -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##produces"/>
+
+
+
+    <!-- http://bemserver.org/appliance##stores -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##stores"/>
+
+
+
+    <!-- http://bemserver.org/appliance##tranports -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##tranports"/>
+
+
+
+    <!-- http://bemserver.org/appliance##wasLocated -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/appliance##wasLocated"/>
+
+
+
+    <!-- http://www.w3.org/ns/ssn/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://bemserver.org/appliance##age -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##age">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property to define the age of certain building occupant</rdfs:comment>
+        <rdfs:label xml:lang="en">age</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://bemserver.org/appliance##hasSetPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##hasSetPoint">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">hasSetPoint is a property to indicate if the device has set point (used with measure)</rdfs:comment>
+        <rdfs:label xml:lang="en">hasSetPoint</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://bemserver.org/appliance##id -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##id"/>
+
+
+
+    <!-- http://bemserver.org/appliance##lifestyle -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##lifestyle"/>
+
+
+
+    <!-- http://bemserver.org/appliance##name -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##name"/>
+
+
+
+    <!-- http://bemserver.org/appliance##&apos;end_of_work_time&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##&apos;end_of_work_time&apos;"/>
+
+
+
+    <!-- http://bemserver.org/appliance##&apos;external_ID&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##&apos;external_ID&apos;"/>
+
+
+
+    <!-- http://bemserver.org/appliance##&apos;job_type&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##&apos;job_type&apos;"/>
+
+
+
+    <!-- http://bemserver.org/appliance##&apos;maximun_value&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##&apos;maximun_value&apos;"/>
+
+
+
+    <!-- http://bemserver.org/appliance##&apos;minimun_value&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##&apos;minimun_value&apos;"/>
+
+
+
+    <!-- http://bemserver.org/appliance##&apos;start_of_work_time&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/appliance##&apos;start_of_work_time&apos;"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://bemserver.org/appliance#Wearable -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance#Wearable">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##MobileBuildingAppliance"/>
+        <rdfs:comment xml:lang="en">Wearable is a building appliance representing a wereable device such as smartwatches and smartphones.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wearable</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Air -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Air">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+        <rdfs:comment xml:lang="en">Air can be consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##BuildingAppliance -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##BuildingAppliance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##contains"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##BuildingAppliance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Building Appliances represent the static and mobile appliances inside the building. Several devices and IFC specific devices has been categorised and included.</rdfs:comment>
+        <rdfs:label xml:lang="en">BuildingAppliance</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Gas -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Gas">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+        <rdfs:comment xml:lang="en">Gas can be consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Meter -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Meter">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">A Meter is a device which measures the integral, with respect to time, of the power in an electric circuit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##MobileBuildingAppliance -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##MobileBuildingAppliance">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##BuildingAppliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##wasLocated"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Mobile Building Appliances represent  mobile appliances inside the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">MobileBuildingAppliance</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Monitoring -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Monitoring">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##MeasureInputOutput"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##BuildingAppliance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Monitoring is a static building appliance for monitoring and controlling the building, occupants’ devices, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Monitoring</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Oil -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Oil">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+        <rdfs:comment xml:lang="en">Oil can be consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Oil</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##PhysicalMedium -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##PhysicalMedium">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/property#PhenomenonProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Physical Medium represents the element consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">PhysicalMedium</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Radiation -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Radiation">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+        <rdfs:comment xml:lang="en">Radiation can be consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Radiation</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##StaticBuildingAppliance -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##StaticBuildingAppliance">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##BuildingAppliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##wasLocated"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Static Building Appliances represent static appliances inside the building. Several devices and IFC specific devices has been categorised and included.</rdfs:comment>
+        <rdfs:label xml:lang="en">StaticBuildingAppliance</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Steam -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Steam">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+        <rdfs:comment xml:lang="en">Steam can be consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steam</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/appliance##Water -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance##Water">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+        <rdfs:comment xml:lang="en">Water can be consumed or produced for an energy generation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/property#PhenomenonProperty -->
+
+    <owl:Class rdf:about="http://bemserver.org/property#PhenomenonProperty"/>
+
+
+
+    <!-- http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation -->
+
+    <owl:Class rdf:about="http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/sensor#Observation"/>
+        <rdfs:comment xml:lang="en">This observation specifies a particular location of a mobile building appliance in a specific time.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MobileBuildingApplianceLocationObservation</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://bemserver.org/sensor#Observation -->
+
+    <owl:Class rdf:about="http://bemserver.org/sensor#Observation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##&apos;external_ID&apos;"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents.
+An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://bemserver.org/sensor#Observation</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://hit2gap.eu/ontomg#BranchController -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#BranchController">
+        <rdfs:comment xml:lang="en">A Branch Controller is the manager of  branch operations. A branch is an energy consumer or producer that has a specific energy load over a certain time span.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/ontomg#BranchController</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BranchController</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://hit2gap.eu/ontomg#ELBranch -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#ELBranch">
+        <rdfs:comment xml:lang="en">An Electrical Load Branch is an electrical component or branch that consumes electric power. It mainly consists of electrical appliance components.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/ontomg#ELBranch</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ELBranch</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://hit2gap.eu/ontomg#ESBranch -->
+
+    <owl:Class rdf:about="http://hit2gap.eu/ontomg#ESBranch">
+        <rdfs:comment xml:lang="en">Energy storage systems play an essential role in stabilizing the power system, improving the quality of power supply, and achieving power peak shaving. The energy storage branch consists mainly of the energy storage device (e.g., flywheel, super-capacitor) and a converter.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://hit2gap.eu/ontomg#ESBranch</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ESBranch</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator -->
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator">
+        <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType"/>
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcActuator</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcActuator</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAlarm -->
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAlarm">
+        <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAlarmType"/>
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">An alarm is a device that signals the existence of a condition or situation that is outside the boundaries of normal expectation or that activates such a device. Alarms include the provision of break glass buttons and manual pull boxes that are used to activate alarms.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcAlarm</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcAlarm</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricFlowStorageDevice -->
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricFlowStorageDevice">
+        <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricFlowStorageDeviceType"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#ESBranch"/>
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
+        <rdfs:comment xml:lang="en">An electric flow storage device is a device in which electrical energy is stored and from which energy may be progressively released.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcElectricFlowStorageDevice</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcElectricFlowStorageDevice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor -->
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor">
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcSensor</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank -->
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank">
+        <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTankType"/>
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
+        <rdfs:comment xml:lang="en">A tank is a vessel or container in which a fluid or gas is stored for later use.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcTank</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcTank</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:isDefinedBy xml:lang="en">http://purl.oclc.org/NET/ssnx/ssn#Sensor</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">IfcActuatorType is defined in IFC2X3. We made it equivalent to IfcActuator defined in IFC4.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcActuatorType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcActuatorType</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAlarmType -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAlarmType">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">IfcAlarmType is defined in IFC2X3. We made it equivalent to IfcAlarm defined in IFC4.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcAlarmType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcAlarmType</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricFlowStorageDeviceType -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricFlowStorageDeviceType">
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#ESBranch"/>
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
+        <rdfs:comment xml:lang="en">IfcElectricFlowStorageDeviceType is defined in IFC2X3. We made it equivalent to IfcElectricFlowStorageDevice defined in IFC4.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcElectricFlowStorageDeviceType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcElectricFlowStorageDeviceType</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#ELBranch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##consumes"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##produces"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##hasSetPoint"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">IfcEnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system. Its type is defined by IfcEnergyConversionDeviceType or its subtypes.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcEnergyConversionDevice</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcEnergyConversionDevice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowController -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowController">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#BranchController"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##controls"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">IfcFlowController defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays. Its type is defined by IfcFlowControllerType or subtypes.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowController</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcFlowController</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowMovingDevice -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowMovingDevice">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:subClassOf rdf:resource="http://hit2gap.eu/ontomg#ELBranch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##tranports"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">IfcFlowMovingDevice defines the occurrence of an apparatus used to distribute, circulate, or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system. Its type is defined by IfcFlowMovingDeviceType or its subtypes.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowMovingDevice</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcFlowMovingDevice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##stores"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">IfcFlowStorageDevice defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank). Its type is defined by IfcFlowStorageDeviceType or its subtypes.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcFlowStorageDevice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##consumes"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/appliance##contains"/>
+                <owl:someValuesFrom rdf:resource="http://bemserver.org/appliance##PhysicalMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">IfcFlowTerminal defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment. Its type is defined by IfcFlowTerminalType or its subtypes.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTerminal</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcFlowTerminal</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTreatmentDevice -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTreatmentDevice">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##StaticBuildingAppliance"/>
+        <rdfs:comment xml:lang="en">IfcFlowTreatmentDevice defines the occurrence of a device typically used to remove unwanted matter from a fluid, either liquid or gas, and typically participates in a flow distribution system. Its type is defined by IfcFlowTreatmentDeviceType or its subtypes.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowTreatmentDevice</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcFlowTreatmentDevice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/appliance##Monitoring"/>
+        <rdfs:comment xml:lang="en">IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcSensorType</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTankType -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTankType">
+        <rdfs:subClassOf rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcFlowStorageDevice"/>
+        <rdfs:comment xml:lang="en">IfcTankType is defined in IFC2X3. We made it equivalent to IfcTank defined in IFC4.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcTankType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcTankType</rdfs:label>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://bemserver.org/appliance##Smartphone -->
+
+    <owl:NamedIndividual rdf:about="http://bemserver.org/appliance##Smartphone">
+        <rdf:type rdf:resource="http://bemserver.org/appliance#Wearable"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://bemserver.org/appliance##Smartwatch -->
+
+    <owl:NamedIndividual rdf:about="http://bemserver.org/appliance##Smartwatch">
+        <rdf:type rdf:resource="http://bemserver.org/appliance#Wearable"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->

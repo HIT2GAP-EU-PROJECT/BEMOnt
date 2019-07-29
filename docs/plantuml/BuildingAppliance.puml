@@ -12,22 +12,22 @@ skinparam dpi 300
 skinparam stereotypeCBackgroundColor Wheat
 skinparam classAttributeFontColor  Green
 
-class BuildingAppliance <<hit2gap>>
+class BuildingAppliance <<bem>>
 
-class StaticBuildingAppliance <<hit2gap>>
-class MobileBuildingAppliance <<hit2gap>>
+class StaticBuildingAppliance <<bem>>
+class MobileBuildingAppliance <<bem>>
 
 class Observation <<ssn>>  {
   externalStorageID xsd:string
 }
 
-class MobileBuildingApplianceLocationObservation <<hit2gap>>
+class MobileBuildingApplianceLocationObservation <<bem>>
 
 class IfcFlowTerminal <<ifc>>
-class Monitoring <<hit2gap>>
-class Wereable <<hit2gap>>
-class Smartwatch <<hit2gap>>
-class Smartphone <<hit2gap>>
+class Monitoring <<bem>>
+class Wereable <<bem>>
+class Smartwatch <<bem>>
+class Smartphone <<bem>>
 
 class IfcZone <<ifc>>
 class IfcActuator <<ifc4>>
@@ -40,7 +40,7 @@ class IfcAlarmType <<ifc>>
 class IfcSensor <<ifc4>>
 class IfcSensorType <<ifc>>
 
-class Meter <<hit2gap>>
+class Meter <<bem>>
 
 class IfcFlowStorageDevice <<ifc>>
 class IfcFlowMovingDevice <<ifc>>
@@ -61,13 +61,13 @@ class ESBranch <<ontomg>>
 class BranchController <<ontomg>>
 
 
-class PhysicalMedium <<hit2gap>>
-class Oil <<hit2gap>>
-class Gas <<hit2gap>>
-class Water <<hit2gap>>
-class Air <<hit2gap>>
-class Steam <<hit2gap>>
-class Radiation <<hit2gap>>
+class PhysicalMedium <<bem>>
+class Oil <<bem>>
+class Gas <<bem>>
+class Water <<bem>>
+class Air <<bem>>
+class Steam <<bem>>
+class Radiation <<bem>>
 
 BuildingAppliance <|-- StaticBuildingAppliance 
 BuildingAppliance <|-- MobileBuildingAppliance 

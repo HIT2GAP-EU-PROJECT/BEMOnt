@@ -9,7 +9,7 @@ In modelling terms, actions are strongly connected with the building state that 
 - **Complex building states** refer to the states that require for the combination of different facilities to determine an overall state. For example, one complex state is the determination of the energy state of the building that can be energy efficient state or energy inefficient state considering anomalous energy consumption (e.g., thermostat on at the same time as some windows are open). Similarly, comfort state determination corresponds to building complex state. In that sense, occupant discomfort will occur when the building does not satisfy user
 requirements (comparison between needs and drivers).
 
-Therefore, the building and the systems are linked with the h2g:BuildingState class to identify and categorize the current building situation. 
+Therefore, the building and the systems are linked with the bem:BuildingState class to identify and categorize the current building situation. 
 
 <div style="text-align:center">
 

@@ -1,6 +1,6 @@
 ## Driver Specification
 
-Drivers represent the stimulating factors that provoke energy occupant behavior. Hence, the drivers corresponds with the measurements of building systems that interacts with the different occupants. Therefore, h2g:Drivers are the glue between actions and an occupant needs.
+Drivers represent the stimulating factors that provoke energy occupant behavior. Hence, the drivers corresponds with the measurements of building systems that interacts with the different occupants. Therefore, bem:Drivers are the glue between actions and an occupant needs.
 
 The corresponding class in the data model is a member of observation (ssn:Observation), as it is made of each of the observations required for simulating a user behaviour. Four different kind of drivers are considered:
 

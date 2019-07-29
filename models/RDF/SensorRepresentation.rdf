@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bemserver.org/sensor#"
+     xml:base="http://bemserver.org/sensor"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:bem="http://bemserver.org#"
+     xmlns:geo="http://www.opengis/net/gml/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:ifc2="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#"
+     xmlns:ifc4="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#"
+     xmlns:qudt="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:qudt1="http://qudt.org/schema/qudt#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ontomg="http://hit2gap.eu/ontomg#"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://bemserver.org/sensor#">
+        <owl:imports rdf:resource="http://bemserver.org/property#"/>
+        <owl:imports rdf:resource="http://www.opengis.net/gml/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <dc:creator xml:lang="en">Aitor Corchero (aitor.corchero@eurecat.org)</dc:creator>
+        <dc:creator xml:lang="en">Pierre Bourreau (pbourreau@nobatek.com)</dc:creator>
+        <dc:creator xml:lang="en">Richard Chbeir (richard.chbeir@univ-pau.fr)</dc:creator>
+        <dc:creator xml:lang="en">Yudith Cardinale (ycardinale@usb.ve)</dc:creator>
+        <dc:description xml:lang="en">This semantic model is focused on describing the sensor representation inside a building. This model  represents the building electrical elements as either a system, a device, or a sensor. In detail, systems can be composed of systems, devices (or multiple devices could take part of the same system), or sensors, which can also take part of devices (or multiple sensors could take part of the same device).  To do so, we align SSN and IFC, with HIT2GAP ontology.</dc:description>
+        <dc:title xml:lang="en">Hit2Gap Ontology-Sensor Representation</dc:title>
+        <terms:license xml:lang="en">https://opensource.org/licenses/MIT</terms:license>
+        <owl:versionInfo xml:lang="en">This current version includes the initial version of the semantic model based on the diagrams generated.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bemserver.org/sensor#Geo_where -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/sensor#Geo_where"/>
+    
+
+
+    <!-- http://bemserver.org/sensor#hasObservationResultTime -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/sensor#hasObservationResultTime"/>
+    
+
+
+    <!-- http://bemserver.org/sensor#locatedInHemisphere -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/sensor#locatedInHemisphere"/>
+    
+
+
+    <!-- http://bemserver.org/sensor#wasLocated -->
+
+    <owl:ObjectProperty rdf:about="http://bemserver.org/sensor#wasLocated"/>
+    
+
+
+    <!-- http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit">
+        <rdfs:isDefinedBy xml:lang="en">http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.georss.org/georss/where -->
+
+    <owl:ObjectProperty rdf:about="http://www.georss.org/georss/where">
+        <rdfs:isDefinedBy xml:lang="en">http://www.georss.org/georss/where</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bemserver.org/sensor#&apos;external_ID&apos; -->
+
+    <owl:DatatypeProperty rdf:about="http://bemserver.org/sensor#&apos;external_ID&apos;">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime">
+        <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/2006/time#inXSDDateTime</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bemserver.org/appliance#MobileBuildingAppliance -->
+
+    <owl:Class rdf:about="http://bemserver.org/appliance#MobileBuildingAppliance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#wasLocated"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Mobile Building Appliances represent  mobile appliances inside the building.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://bemserver.org/appliance#MobileBuildingAppliance</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MobileBuildingAppliance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/sensor#FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://bemserver.org/sensor#FeatureOfInterest">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/gml/_Feature"/>
+        <rdfs:label xml:lang="en">FeatureOfInterest</rdfs:label>
+        <owl:priorVersion xml:lang="en">FeatureOfInterest is an extension of ssn#FeatureOfInterest  defined in SSN. We have extended it and made them equivalents.</owl:priorVersion>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/sensor#Hemisphere -->
+
+    <owl:Class rdf:about="http://bemserver.org/sensor#Hemisphere">
+        <rdfs:comment xml:lang="en">Hemisphere denotes the hemisphere of a feature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hemisphere</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation -->
+
+    <owl:Class rdf:about="http://bemserver.org/sensor#MobileBuildingApplianceLocationObservation">
+        <rdfs:subClassOf rdf:resource="http://bemserver.org/sensor#Observation"/>
+        <rdfs:comment xml:lang="en">This observation specifies a particular location of a mobile building appliance in a specific time.</rdfs:comment>
+        <rdfs:label xml:lang="en">MobileBuildingApplianceLocationObservation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bemserver.org/sensor#Observation -->
+
+    <owl:Class rdf:about="http://bemserver.org/sensor#Observation">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#hasObservationResultTime"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Observation is an extension of ssn#Observation  defined in SSN. We have extended it and made them equivalents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor -->
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor">
+        <owl:equivalentClass rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ifcowl.openbimstandards.org/IFC4_ADD2/index.html#IfcSensor</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcSensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType -->
+
+    <owl:Class rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment xml:lang="en">IfcSensorType is defined in IFC2X3. We made it equivalent to IfcSensor defined in IFC4.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcSensorType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IfcSensorType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/gml/_Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/gml/_Feature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#locatedInHemisphere"/>
+                <owl:allValuesFrom rdf:resource="http://bemserver.org/sensor#Hemisphere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.georss.org/georss/where"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/gml/_Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">_Feature is taken from  the GeoRSS Feature Model. The model provides a general feature property which can be used to characterize any appropriate content as a geographic feature. Specific subproperties such as &lt;where&gt; associate the discerned feature with one of a limited number of  geometry types which provide a numerical representation for analysis and visualization. Other subproperties describe additional commonly used feature attributes such as feature name and feature type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/_Feature"/>
+        <rdfs:label xml:lang="en">_Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/gml/_Geometry -->
+
+    <owl:Class rdf:about="http://www.opengis.net/gml/_Geometry">
+        <rdfs:comment xml:lang="en">GeoRSS feature model allows the description of rectangles, points, lines, and polygons as geometric representation properties of discerned geographic features. Simple Features&apos; geometric representations consist of point and multipoint, curve (a.k.a. line) and multicurve, surface (polygon) and multisurface.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/_Geometry"/>
+        <rdfs:label xml:lang="en">_Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It enables compact representation of an interval corresponding to a single element in a date-time description (i.e. a specified year, month, week, day, hour, minute, second)</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/2006/time#DateTimeInterval</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">DateTimeInterval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/2006/time#Instant</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/gml/_Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#hasObservationResultTime"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#hasObservationResultTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#hasObservationResultTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bemserver.org/sensor#&apos;external_ID&apos;"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#hasUnit"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/gml/_Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bemserver.org/sensor#Northern -->
+
+    <owl:NamedIndividual rdf:about="http://bemserver.org/sensor#Northern">
+        <rdf:type rdf:resource="http://bemserver.org/sensor#Hemisphere"/>
+        <rdfs:label>Northern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bemserver.org/sensor#Southern -->
+
+    <owl:NamedIndividual rdf:about="http://bemserver.org/sensor#Southern">
+        <rdf:type rdf:resource="http://bemserver.org/sensor#Hemisphere"/>
+        <rdfs:label>Southern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/gml/Envelope">
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/Envelope"/>
+        <rdfs:label xml:lang="en">Envelope</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.opengis.net/gml/LineString">
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/LinearString"/>
+        <rdfs:label xml:lang="en">LineString</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.opengis.net/gml/LinearRing">
+        <rdfs:label xml:lang="en">LinearRing</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/LinearRing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.opengis.net/gml/Point">
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/Point"/>
+        <rdfs:comment xml:lang="en">A point contains a single coordinate pair. The coordinate pair contains a latitude value and a longitude value in that order. The preferred serialization of this uses a space to separate the two values.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.opengis.net/gml/Polygon">
+        <rdfs:label xml:lang="en">Polygon</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis/net/gml/Polygon"/>
+        <rdfs:comment xml:lang="en">A polygon contains at least four coordinate pairs. Each pair contains a latitude value and a longitude value in that order. The preferred serialization of this uses a space to separate the two values. Pairs are separated from each other by a space. The last coordinate pair must be identical to the first.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

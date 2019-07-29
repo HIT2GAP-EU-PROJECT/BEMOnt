@@ -2,7 +2,7 @@
 
 Needs represent the requirements that has to be satisfied to ensure the occupants comfort in the building.
 
-Within the elaborated semantic model, needs are related with the different occupant preferences considering, for each preference, maximum and minimum values. The occupant preferences refer to the level of luminosity, noise, and temperature with the possibility to expand it in case of necessity. Moreover, the class h2g:Needs is also aligned to the level of privacy of the information and opinion of the occupants.
+Within the elaborated semantic model, needs are related with the different occupant preferences considering, for each preference, maximum and minimum values. The occupant preferences refer to the level of luminosity, noise, and temperature with the possibility to expand it in case of necessity. Moreover, the class bem:Needs is also aligned to the level of privacy of the information and opinion of the occupants.
 
 <div style="text-align:center">
 <img src="http://www.plantuml.com/plantuml/png/DSbB2i8m403Gg-W1cW6NxaIA7z0MMmyG9wCTI2OXCy7hrutRzxOi65kWLkDcCIkw1wZ-wpviItirfOfPZCGSvWJdoxmx7SQkVtRZOxZsn_bFWnWahqOLGaQ54hrOIn7kH46dGiXlHc-SvPO3HLT-kG80"/>

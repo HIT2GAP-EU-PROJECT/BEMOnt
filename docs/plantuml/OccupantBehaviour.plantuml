@@ -63,16 +63,16 @@ class Observation <<SSN>> {
   externalStorageID xsd:string
 }
 
-class MobileBuildingApplianceLocationObservation <<hit2gap>>
-class MobileBuildingAppliance <<hit2gap>>
+class MobileBuildingApplianceLocationObservation <<bem>>
+class MobileBuildingAppliance <<bem>>
 
 class Property <<SSN>> {
 
 }
 
-class EconomicProperties <<hit2gap>>
-class PhysicProperties <<hit2gap>>
-class OccupantStateProperties <<hit2gap>>
+class EconomicProperties <<bem>>
+class PhysicProperties <<bem>>
+class OccupantStateProperties <<bem>>
 
 class SensorOutput <<SSN>>{
 
@@ -103,7 +103,7 @@ class SamplingFeatures <<OGC>>{
 
 }
 
-class IfcSpatialZone <<h2gifc4>>{
+class IfcSpatialZone <<ifc4>>{
 
 }
 
