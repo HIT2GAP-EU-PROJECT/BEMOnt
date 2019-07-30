@@ -19,7 +19,7 @@ To run the project, you only need to fork it or download it into your local mach
 - [Protege/Protege Web](http://protege.stanford.edu/).
 - [TopBraid Composer Community edition or higher](http://www.topquadrant.com/tools/ide-topbraid-composer-maestro-edition/).
 
-## Descritpion
+## Description
 
 - The models contain the ontology files, splitted in two (for OWL or RDF files). The bemont.rules is the inference file associated to the BEMOnt. It has been used and tested on Jena.
 - The ontology-docs folder contain the online documentation of the ontology generated with widoco.
