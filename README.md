@@ -19,9 +19,15 @@ To run the project, you only need to fork it or download it into your local mach
 - [Protege/Protege Web](http://protege.stanford.edu/).
 - [TopBraid Composer Community edition or higher](http://www.topquadrant.com/tools/ide-topbraid-composer-maestro-edition/).
 
+## Descritpion
+
+- The models contain the ontology files, splitted in two (for OWL or RDF files). The bemont.rules is the inference file associated to the BEMOnt. It has been used and tested on Jena.
+- The ontology-docs folder contain the online documentation of the ontology generated with widoco.
+- The docs folder contain some additional documentation associated to BEMOnt.
+
 ## Installing
 
-For running the ontology, we recommend to use the IDEs mentioned in the section Getting Started. Moreover, if you want to publish the ontology or use it for public consumption and inference. We recomend to use a [Semantic Repository or Graph data base](https://www.w3.org/2001/sw/wiki/Category:Triple_Store)
+For running the ontology, we recommend to use the IDEs mentioned in the Getting Started section. Moreover, if you want to publish the ontology or use it for public consumption and inference, we recomend to use a [Semantic Repository or Graph data base](https://www.w3.org/2001/sw/wiki/Category:Triple_Store)
 
 ## Built With
 
@@ -39,11 +45,17 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **[Pierre Bourreau]()** - Initial author
 - **[Gulben Calis]()** - Initial author
-- **[Judith Cardinale]()** - Initial author
+- **[Yudith Cardinale]()** - Initial author
 - **[Richard Chbeir]()** - Initial author
 - **[Aitor Corchero](https://github.com/aolite)** - Intial author
 
 See also the list of [contributors](https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/blob/master/CONTRIBUTORS.md) who participated in this project.
+
+## How to cite?
+
+If you wish to cite, or find additional information on the BEMOnt ontology, please use the following:
+
+Chbeir R. et al. (2019) [*OntoH2G: A Semantic Model to Represent Building Infrastructure and Occupant Interactions*](https://link.springer.com/chapter/10.1007/978-3-030-04293-6_15). In: Kaparaju P., Howlett R., Littlewood J., Ekanyake C., Vlacic L. (eds) Sustainability in Energy and Buildings 2018. KES-SEB 2018. Smart Innovation, Systems and Technologies, vol 131. Springer, Cham
 
 ## License
 This work is licensed under a [MIT License](BEMOnt/LICENSE).
