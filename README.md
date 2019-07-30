@@ -1,16 +1,16 @@
-# HIT2GAPOnt
+# BEMOnt
 
-[![CircleCI](https://circleci.com/gh/HIT2GAP-EU-PROJECT/HIT2GAPOnt.svg?style=shield&circle-token)](https://circleci.com/gh/HIT2GAP-EU-PROJECT/HIT2GAPOnt)
+[![CircleCI](https://circleci.com/gh/HIT2GAP-EU-PROJECT/BEMOnt.svg?style=shield&circle-token)](https://circleci.com/gh/HIT2GAP-EU-PROJECT/BEMOnt)
 <a href="https://zenhub.com"><img src="https://cdn.rawgit.com/ZenHubIO/support/master/zenhub-badge.svg"></a>
-<a href="https://hit2gap-eu-project.github.io/HIT2GAPOnt/"><img src="https://rawgit.com/aleen42/badges/master/src/gitbook.svg"></a>
+<a href="https://hit2gap-eu-project.github.io/BEMOnt/"><img src="https://rawgit.com/aleen42/badges/master/src/gitbook.svg"></a>
 
-Hit2Gap Ontology is focused on establising a common data model and semantic knolwedge management for buildings, including their interecction with the occupants. Whith this aim, the proposed ontology will take into consideration the following aspects:
+BEMont (formerly **HIT2GAPOnt**) is focused on establising a common data model and semantic knolwedge management for buildings, including their interecction with the occupants. Whith this aim, the proposed ontology will take into consideration the following aspects:
 
-- **Building infrastructure data models and semantic representation** ([Building Infrastructure Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/master/owlSpecificationDoc/BuildingInfraestructure/index-en.html)): As mechanims to represent the different systems and infrastructure involved in BIM and required for the performance of the project tools (building simulation tols, building behaviour tools, visualization tools, etc).
+- **Building infrastructure data models and semantic representation** ([Building Infrastructure Ontology](https://rawgit.com/HIT2GAP-EU-PROJECT/BEMOnt/master/owlSpecificationDoc/BuildingInfraestructure/index-en.html)): As mechanims to represent the different systems and infrastructure involved in BIM and required for the performance of the project tools (building simulation tols, building behaviour tools, visualization tools, etc).
 
-- **User Behaviour data models and semantic representation** ([User Behaviour Ontology](https://cdn.rawgit.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/gh-pages/owlSpecificationDoc/index-en.html)): This part of the ontology is aimed at representing building occupants DNA (Drivers, Needs and Actions). This type of modelling will serve to represent the user-building interaction not only in form of activities but also considering comfort parameters and other aspects that motivate users to perform buildign actions.
+- **User Behaviour data models and semantic representation** ([User Behaviour Ontology](https://cdn.rawgit.com/HIT2GAP-EU-PROJECT/BEMOnt/gh-pages/owlSpecificationDoc/index-en.html)): This part of the ontology is aimed at representing building occupants DNA (Drivers, Needs and Actions). This type of modelling will serve to represent the user-building interaction not only in form of activities but also considering comfort parameters and other aspects that motivate users to perform buildign actions.
 
-Therefore and since semantic representation, HIT2GAP project will harmonise all inforamtion related to buildings monitoring and control activities (management activities), considering the user as an important aspect to adjust energy according to their preferences.
+Therefore and since semantic representation, HIT2GAP project will harmonise all information related to buildings monitoring and control activities (management activities), considering the user as an important aspect to adjust energy according to their preferences.
 
 ## Getting Started
 
@@ -37,7 +37,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-
 - **[Pierre Bourreau]()** - Initial author
 - **[Gulben Calis]()** - Initial author
 - **[Judith Cardinale]()** - Initial author
@@ -47,4 +46,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 See also the list of [contributors](https://github.com/HIT2GAP-EU-PROJECT/HIT2GAPOnt/blob/master/CONTRIBUTORS.md) who participated in this project.
 
 ## License
-This work is licensed under a [MIT License](HIT2GAPOnt/LICENSE).
+This work is licensed under a [MIT License](BEMOnt/LICENSE).
