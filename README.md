@@ -1,8 +1,6 @@
 # BEMOnt
 
 [![CircleCI](https://circleci.com/gh/HIT2GAP-EU-PROJECT/BEMOnt.svg?style=shield&circle-token)](https://circleci.com/gh/HIT2GAP-EU-PROJECT/BEMOnt)
-<a href="https://zenhub.com"><img src="https://cdn.rawgit.com/ZenHubIO/support/master/zenhub-badge.svg"></a>
-<a href="https://hit2gap-eu-project.github.io/BEMOnt/"><img src="https://rawgit.com/aleen42/badges/master/src/gitbook.svg"></a>
 
 BEMont (formerly **HIT2GAPOnt**) is focused on establising a common data model and semantic knolwedge management for buildings, including their interecction with the occupants. Whith this aim, the proposed ontology will take into consideration the following aspects:
 
