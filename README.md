@@ -1,4 +1,4 @@
-# BEMOnt
+# BEMOnt (formerly HIT2GAPOnt)
 
 [![CircleCI](https://circleci.com/gh/HIT2GAP-EU-PROJECT/BEMOnt.svg?style=shield&circle-token)](https://circleci.com/gh/HIT2GAP-EU-PROJECT/BEMOnt)
 
