@@ -1,0 +1,55 @@
+@prefix : <#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tdb: <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix ja: <http://jena.hpl.hp.com/2005/11/Assembler#> .
+
+[] rdf:type fuseki:Server ;
+ fuseki:services (
+ <#bemservice>
+ ) .
+
+## ---------------------------------------------------------------
+## Service with only SPARQL query on an inference model.
+## Inference model base data in TDB.
+
+<#bemservice> rdf:type fuseki:Service ;
+ fuseki:name "bemserver" ;
+ fuseki:serviceQuery "query" ;
+ fuseki:serviceUpdate "update" ;
+ fuseki:serviceUpload "upload" ;
+ fuseki:serviceReadWriteGraphStore "data" ;
+ fuseki:serviceReadGraphStore "get" ;
+ fuseki:dataset <#dataset>  ;
+ .
+
+<#dataset> rdf:type ja:RDFDataset ;
+    ja:defaultGraph <#model> ;
+    . 
+
+<#model> a ja:InfModel ;
+    ja:baseModel <#tdbGraph> ;
+    ja:content <#ontProperties> , <#ontBuilding>, <#ontSensor>, <#ontService>, <#ontUserBehaviour>, <#ontSosa>, <#ontSSN>;
+    ja:reasoner [
+        ja:reasonerURL <http://jena.hpl.hp.com/2003/GenericRuleReasoner> ;
+        ja:rulesFrom <file:./bemont.rules>
+    ] ;
+    .
+
+<#tdbGraph> rdf:type tdb:GraphTDB ;
+    tdb:dataset <#tdbDataset> ;
+    .
+
+<#tdbDataset> rdf:type tdb:DatasetTDB ;
+    tdb:location "/fuseki/databases/bemserver" ;
+    .
+
+# Ontology files
+<#ontProperties> ja:externalContent <file:/bemserver/models/Property.rdf> .
+<#ontBuilding> ja:externalContent <file:/bemserver/models/BuildingInfrastructure.rdf> .
+<#ontSensor> ja:externalContent <file:/bemserver/models/SensorRepresentation.rdf> .
+<#ontService> ja:externalContent <file:/bemserver/models/Services.rdf> .
+<#ontUserBehaviour> ja:externalContent <file:/bemserver/models/UserBehaviour.rdf> .
+<#ontSosa> ja:externalContent <file:/bemserver/models/sosa.rdf> .
+<#ontSSN> ja:externalContent <file:/bemserver/models/ssn.rdf> .
