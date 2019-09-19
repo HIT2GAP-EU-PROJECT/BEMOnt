@@ -30,10 +30,10 @@
 
 <#model> a ja:InfModel ;
     ja:baseModel <#tdbGraph> ;
-    ja:content <#ontProperties> , <#ontBuilding>, <#ontSensor>, <#ontService>, <#ontUserBehaviour>, <#ontSosa>, <#ontSSN>;
+    ja:content <#ontProperties> , <#ontBuilding>, <#ontSensor>, <#ontService>, <#ontUserBehaviour>, <#ontSosa>, <#ontSSN> ;
     ja:reasoner [
         ja:reasonerURL <http://jena.hpl.hp.com/2003/GenericRuleReasoner> ;
-        ja:rulesFrom <file:./bemont.rules>
+        ja:rulesFrom <file:/fuseki/configuration/bemont.rules>
     ] ;
     .
 
@@ -46,10 +46,10 @@
     .
 
 # Ontology files
-<#ontProperties> ja:externalContent <file:/bemserver/models/Property.rdf> .
-<#ontBuilding> ja:externalContent <file:/bemserver/models/BuildingInfrastructure.rdf> .
-<#ontSensor> ja:externalContent <file:/bemserver/models/SensorRepresentation.rdf> .
-<#ontService> ja:externalContent <file:/bemserver/models/Services.rdf> .
-<#ontUserBehaviour> ja:externalContent <file:/bemserver/models/UserBehaviour.rdf> .
-<#ontSosa> ja:externalContent <file:/bemserver/models/sosa.rdf> .
-<#ontSSN> ja:externalContent <file:/bemserver/models/ssn.rdf> .
+<#ontProperties> ja:externalContent <file:/fuseki/configuration/models/Property.rdf> .
+<#ontBuilding> ja:externalContent <file:/fuseki/configuration/models/BuildingInfrastructure.rdf> .
+<#ontSensor> ja:externalContent <file:/fuseki/configuration/models/SensorRepresentation.rdf> .
+<#ontService> ja:externalContent <file:/fuseki/configuration/models/Services.rdf> .
+<#ontUserBehaviour> ja:externalContent <file:/fuseki/configuration/models/UserBehaviour.rdf> .
+<#ontSosa> ja:externalContent <file:/fuseki/configuration/models/sosa.rdf> .
+<#ontSSN> ja:externalContent <file:/fuseki/configuration/models/ssn.rdf> .
