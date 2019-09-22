@@ -30,7 +30,6 @@
 
 <#model> a ja:InfModel ;
     ja:baseModel <#tdbGraph> ;
-    ja:content <#ontProperties> , <#ontBuilding>, <#ontSensor>, <#ontService>, <#ontUserBehaviour>, <#ontSosa>, <#ontSSN> ;
     ja:reasoner [
         ja:reasonerURL <http://jena.hpl.hp.com/2003/GenericRuleReasoner> ;
         ja:rulesFrom <file:/fuseki/configuration/bemont.rules>
@@ -44,12 +43,3 @@
 <#tdbDataset> rdf:type tdb:DatasetTDB ;
     tdb:location "/fuseki/databases/bemserver" ;
     .
-
-# Ontology files
-<#ontProperties> ja:externalContent <file:/fuseki/configuration/models/Property.rdf> .
-<#ontBuilding> ja:externalContent <file:/fuseki/configuration/models/BuildingInfrastructure.rdf> .
-<#ontSensor> ja:externalContent <file:/fuseki/configuration/models/SensorRepresentation.rdf> .
-<#ontService> ja:externalContent <file:/fuseki/configuration/models/Services.rdf> .
-<#ontUserBehaviour> ja:externalContent <file:/fuseki/configuration/models/UserBehaviour.rdf> .
-<#ontSosa> ja:externalContent <file:/fuseki/configuration/models/sosa.rdf> .
-<#ontSSN> ja:externalContent <file:/fuseki/configuration/models/ssn.rdf> .
