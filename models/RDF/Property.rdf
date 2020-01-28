@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://bemserver.org/property#"
      xml:base="http://bemserver.org/property"
-     xmlns:qudt="http://qudt.org/schema/qudt#"
-     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:dtype="http://www.linkedmodel.org/schema/dtype#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:qudt="http://qudt.org/schema/qudt#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+     xmlns:dtype="http://www.linkedmodel.org/schema/dtype#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://bemserver.org/property#">
-        <owl:versionInfo xml:lang="en">This current version includes the initial version of the semantic model based on the diagrams generated.</owl:versionInfo>
-        <dc:description xml:lang="en">This semantic model is focused on representing the phenomenon (or property), which provides a common vision about the general characteristics to be considered in the building. This model is an extension of the “ssn:Property” representation. Three main families of characteristics were considered: economic, occupant state, and physical properties.</dc:description>
         <dc:creator xml:lang="en">Aitor Corchero (aitor.corchero@eurecat.org)</dc:creator>
         <dc:creator xml:lang="en">Pierre Bourreau (pbourreau@nobatek.com)</dc:creator>
-        <terms:license xml:lang="en">https://opensource.org/licenses/MIT</terms:license>
-        <dc:description xml:lang="en">skos:definition</dc:description>
-        <dc:creator xml:lang="en">Yudith Cardinale (ycardinale@usb.ve)</dc:creator>
-        <dc:title xml:lang="en">Hit2Gap Ontology- Phenomenon Property</dc:title>
         <dc:creator xml:lang="en">Richard Chbeir (richard.chbeir@univ-pau.fr)</dc:creator>
+        <dc:creator xml:lang="en">Yudith Cardinale (ycardinale@usb.ve)</dc:creator>
+        <dc:description xml:lang="en">This semantic model is focused on representing the phenomenon (or property), which provides a common vision about the general characteristics to be considered in the building. This model is an extension of the “ssn:Property” representation. Three main families of characteristics were considered: economic, occupant state, and physical properties.</dc:description>
+        <dc:description xml:lang="en">skos:definition</dc:description>
+        <dc:title xml:lang="en">Hit2Gap Ontology- Phenomenon Property</dc:title>
+        <terms:license xml:lang="en">https://opensource.org/licenses/MIT</terms:license>
+        <owl:versionInfo xml:lang="en">This current version includes the initial version of the semantic model based on the diagrams generated.</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -497,6 +497,7 @@
 
     <owl:Class rdf:about="http://bemserver.org/property#DegreeDays">
         <rdfs:subClassOf rdf:resource="http://bemserver.org/property#PhysicalProperty"/>
+        <rdfs:label>DegreeDays</rdfs:label>
     </owl:Class>
     
 
@@ -765,7 +766,7 @@
     <owl:Class rdf:about="http://bemserver.org/property#MaxOccupancy">
         <rdfs:subClassOf rdf:resource="http://bemserver.org/property#OccupancyCapacityProperty"/>
         <rdfs:comment xml:lang="en">Max Occupancy represents an observation of the  measure of the maximum capacity of occupants in a structiral element of the building.</rdfs:comment>
-        <rdfs:label xml:lang="en">MaxOccupancy</rdfs:label>
+        <rdfs:label>MaxOccupancy</rdfs:label>
     </owl:Class>
     
 
@@ -893,6 +894,7 @@
 
     <owl:Class rdf:about="http://bemserver.org/property#Power">
         <rdfs:subClassOf rdf:resource="http://bemserver.org/property#PhysicalProperty"/>
+        <rdfs:label xml:lang="en">Power</rdfs:label>
     </owl:Class>
     
 
@@ -1035,12 +1037,12 @@
     
 
 
-    <!-- http://bemserver.org/property#Streess -->
+    <!-- http://bemserver.org/property#Stress -->
 
-    <owl:Class rdf:about="http://bemserver.org/property#Streess">
+    <owl:Class rdf:about="http://bemserver.org/property#Stress">
         <rdfs:subClassOf rdf:resource="http://bemserver.org/property#OccupantStateProperty"/>
         <rdfs:comment xml:lang="en">Stress represents an observation of the  measure of the stress of an occupant of the building in a specific time.</rdfs:comment>
-        <rdfs:label xml:lang="en">Stress</rdfs:label>
+        <rdfs:label>Stress</rdfs:label>
     </owl:Class>
     
 
@@ -6871,5 +6873,5 @@ The radian is represented by the symbol &quot;rad&quot; or, more rarely, by the 
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
